@@ -3,6 +3,8 @@ import FAQ from "@/components/marketing/faq";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 const SIGNUP_URL = `${APP_URL}/auth/login?screen_hint=signup&returnTo=/dashboard`;
+const SIGNUP_PRO = `${APP_URL}/auth/login?screen_hint=signup&returnTo=/dashboard/settings?plan=pro`;
+const SIGNUP_BIZ = `${APP_URL}/auth/login?screen_hint=signup&returnTo=/dashboard/settings?plan=business`;
 
 function CheckIcon() {
   return (
@@ -411,7 +413,7 @@ export default function MarketingPage() {
                 <li><CheckIcon /> Saved templates</li>
                 <li><CheckIcon /> Priority generation</li>
               </ul>
-              <a href={SIGNUP_URL} className="btn btn-primary">Start Free Trial</a>
+              <a href={SIGNUP_PRO} className="btn btn-primary">Start Free Trial</a>
             </div>
             <div className="pricing-card">
               <div className="plan-name">Business</div>
@@ -426,7 +428,7 @@ export default function MarketingPage() {
                 <li><CheckIcon /> Custom domains</li>
                 <li><CheckIcon /> Saved templates</li>
               </ul>
-              <a href={SIGNUP_URL} className="btn btn-secondary">Get Started</a>
+              <a href={SIGNUP_BIZ} className="btn btn-secondary">Get Started</a>
             </div>
           </div>
         </div>
