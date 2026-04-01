@@ -120,13 +120,33 @@ export default function MarketingPage() {
                   <div className="browser-url">pitchboost.ai/dashboard</div>
                 </div>
                 <div className="browser-content">
-                  <div style={{ height: 300, background: "linear-gradient(135deg, #f0f7f7, #e8f0f0)", display: "flex", alignItems: "center", justifyContent: "center", padding: 32 }}>
-                    <div style={{ textAlign: "center", color: "#6b7280" }}>
-                      <div style={{ marginBottom: 12 }}>
-                        <Image src="/icon.png" alt="" width={64} height={64} />
+                  <div style={{ background: "#f8f9fb", padding: "20px 24px", minHeight: 300 }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 20 }}>
+                      <div>
+                        <div style={{ fontWeight: 700, fontSize: 18, color: "#0f172a" }}>Dashboard</div>
+                        <div style={{ fontSize: 12, color: "#64748b" }}>Welcome back, Sarah</div>
                       </div>
-                      <div style={{ fontWeight: 600, color: "#1F6B6B" }}>Deal Dashboard</div>
-                      <div style={{ fontSize: 13, marginTop: 4 }}>Your brand, your data, one workspace</div>
+                      <div style={{ background: "linear-gradient(135deg, #1F6B6B, #E8665A)", color: "white", padding: "8px 16px", borderRadius: 8, fontSize: 12, fontWeight: 600 }}>+ New Deal</div>
+                    </div>
+                    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 12, marginBottom: 20 }}>
+                      {[["Active Deals", "6"], ["Total Decks", "12"], ["Published", "8"]].map(([label, val]) => (
+                        <div key={label} style={{ background: "white", border: "1px solid #e2e8f0", borderRadius: 10, padding: "14px 16px" }}>
+                          <div style={{ fontSize: 11, color: "#64748b" }}>{label}</div>
+                          <div style={{ fontSize: 22, fontWeight: 800, color: "#0f172a" }}>{val}</div>
+                        </div>
+                      ))}
+                    </div>
+                    <div style={{ background: "white", border: "1px solid #e2e8f0", borderRadius: 10, padding: "14px 16px" }}>
+                      <div style={{ fontWeight: 600, fontSize: 13, color: "#0f172a", marginBottom: 12 }}>Recent Deals</div>
+                      {[["Series B Capital Raise", "Acme Corp", "3 decks"], ["Q4 Investor Update", "Beacon Fund", "2 decks"], ["Growth Equity Pitch", "NovaTech", "1 deck"]].map(([name, co, decks]) => (
+                        <div key={name} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "10px 0", borderTop: "1px solid #f1f5f9" }}>
+                          <div>
+                            <div style={{ fontWeight: 600, fontSize: 12, color: "#0f172a" }}>{name}</div>
+                            <div style={{ fontSize: 11, color: "#94a3b8" }}>{co} &middot; {decks}</div>
+                          </div>
+                          <div style={{ fontSize: 11, color: "#1F6B6B", fontWeight: 500 }}>active</div>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -157,17 +177,40 @@ export default function MarketingPage() {
                   <div className="browser-url">pitchboost.ai/deck/edit</div>
                 </div>
                 <div className="browser-content">
-                  <div style={{ height: 300, background: "linear-gradient(135deg, #e8f0f0, #f5eae9)", display: "flex", alignItems: "center", justifyContent: "center", padding: 32 }}>
-                    <div style={{ textAlign: "center", color: "#6b7280" }}>
-                      <div style={{ marginBottom: 12 }}>
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#1F6B6B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                          <path d="M2 17l10 5 10-5" />
-                          <path d="M2 12l10 5 10-5" />
-                        </svg>
+                  <div style={{ background: "#f8f9fb", padding: "20px 24px", minHeight: 300 }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 16 }}>
+                      <div style={{ fontWeight: 700, fontSize: 16, color: "#0f172a" }}>Series B Capital Raise</div>
+                      <div style={{ display: "flex", gap: 8 }}>
+                        <div style={{ background: "white", border: "1px solid #e2e8f0", padding: "6px 14px", borderRadius: 8, fontSize: 11, fontWeight: 600, color: "#0f172a" }}>PDF</div>
+                        <div style={{ background: "linear-gradient(135deg, #1F6B6B, #E8665A)", color: "white", padding: "6px 14px", borderRadius: 8, fontSize: 11, fontWeight: 600 }}>Publish</div>
                       </div>
-                      <div style={{ fontWeight: 600, color: "#1F6B6B" }}>AI Slide Generation</div>
-                      <div style={{ fontSize: 13, marginTop: 4 }}>Professional decks in seconds</div>
+                    </div>
+                    {/* Slide 1 */}
+                    <div style={{ background: "white", border: "1px solid #e2e8f0", borderRadius: 10, marginBottom: 12, overflow: "hidden" }}>
+                      <div style={{ display: "flex", justifyContent: "space-between", padding: "8px 14px", borderBottom: "1px solid #f1f5f9", fontSize: 11, color: "#94a3b8" }}>
+                        <span>Slide 1 &middot; Title</span>
+                        <span style={{ color: "#cbd5e1" }}>Edit</span>
+                      </div>
+                      <div style={{ background: "linear-gradient(135deg, #4338ca, #7c3aed)", padding: "28px 24px", color: "white" }}>
+                        <div style={{ fontSize: 10, opacity: 0.7, marginBottom: 4 }}>ACME CORP</div>
+                        <div style={{ fontSize: 16, fontWeight: 700, marginBottom: 6 }}>Series B Capital Raise</div>
+                        <div style={{ fontSize: 10, opacity: 0.6 }}>Scaling next-gen infrastructure for enterprise clients</div>
+                      </div>
+                    </div>
+                    {/* Slide 2 */}
+                    <div style={{ background: "white", border: "1px solid #e2e8f0", borderRadius: 10, overflow: "hidden" }}>
+                      <div style={{ display: "flex", justifyContent: "space-between", padding: "8px 14px", borderBottom: "1px solid #f1f5f9", fontSize: 11, color: "#94a3b8" }}>
+                        <span>Slide 2 &middot; The Problem</span>
+                        <span style={{ color: "#cbd5e1" }}>Edit</span>
+                      </div>
+                      <div style={{ padding: "20px 24px" }}>
+                        <div style={{ fontSize: 13, fontWeight: 700, color: "#0f172a", marginBottom: 8 }}>Enterprise Infrastructure Is Broken</div>
+                        <div style={{ display: "flex", gap: 12 }}>
+                          {["68% report downtime", "3.2M avg. annual cost", "Manual scaling"].map(s => (
+                            <div key={s} style={{ flex: 1, background: "#f8f9fb", borderRadius: 6, padding: "10px 12px", fontSize: 10, color: "#64748b", textAlign: "center" }}>{s}</div>
+                          ))}
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -194,19 +237,45 @@ export default function MarketingPage() {
               <div className="browser-frame">
                 <div className="browser-bar">
                   <div className="browser-dots"><span /><span /><span /></div>
-                  <div className="browser-url">yourcompany.pitchboost.ai/deck</div>
+                  <div className="browser-url">pitchboost.ai/analytics</div>
                 </div>
                 <div className="browser-content">
-                  <div style={{ height: 300, background: "linear-gradient(135deg, #f5eae9, #fce8e6)", display: "flex", alignItems: "center", justifyContent: "center", padding: 32 }}>
-                    <div style={{ textAlign: "center", color: "#6b7280" }}>
-                      <div style={{ marginBottom: 12 }}>
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#E8665A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
-                          <circle cx="12" cy="12" r="3" />
-                        </svg>
+                  <div style={{ background: "#f8f9fb", padding: "20px 24px", minHeight: 300 }}>
+                    <div style={{ fontWeight: 700, fontSize: 16, color: "#0f172a", marginBottom: 4 }}>Analytics</div>
+                    <div style={{ fontSize: 12, color: "#64748b", marginBottom: 16 }}>Track performance across all your decks</div>
+                    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: 10, marginBottom: 16 }}>
+                      {[["Total Views", "247", "#0f172a"], ["Unique Viewers", "83", "#0f172a"], ["Avg. Time", "2m 34s", "#1F6B6B"], ["Completion", "72%", "#1F6B6B"]].map(([label, val, color]) => (
+                        <div key={label} style={{ background: "white", border: "1px solid #e2e8f0", borderRadius: 10, padding: "12px 14px" }}>
+                          <div style={{ fontSize: 10, color: "#64748b" }}>{label}</div>
+                          <div style={{ fontSize: 18, fontWeight: 800, color }}>{val}</div>
+                        </div>
+                      ))}
+                    </div>
+                    {/* Chart area */}
+                    <div style={{ background: "white", border: "1px solid #e2e8f0", borderRadius: 10, padding: "14px 16px", marginBottom: 14 }}>
+                      <div style={{ fontWeight: 600, fontSize: 12, color: "#0f172a", marginBottom: 12 }}>Views Over Time</div>
+                      <div style={{ display: "flex", alignItems: "flex-end", gap: 6, height: 60 }}>
+                        {[20, 35, 28, 45, 52, 38, 65, 48, 72, 58, 80, 63].map((h, i) => (
+                          <div key={i} style={{ flex: 1, background: `linear-gradient(to top, #1F6B6B, #2A8A8A)`, borderRadius: "3px 3px 0 0", height: `${h}%`, opacity: 0.7 + (i * 0.025) }} />
+                        ))}
                       </div>
-                      <div style={{ fontWeight: 600, color: "#E8665A" }}>Live Analytics</div>
-                      <div style={{ fontSize: 13, marginTop: 4 }}>Know who&apos;s viewing in real time</div>
+                      <div style={{ display: "flex", justifyContent: "space-between", fontSize: 9, color: "#94a3b8", marginTop: 6 }}>
+                        <span>Mar 1</span><span>Mar 31</span>
+                      </div>
+                    </div>
+                    {/* Deck table */}
+                    <div style={{ background: "white", border: "1px solid #e2e8f0", borderRadius: 10, padding: "14px 16px" }}>
+                      <div style={{ fontWeight: 600, fontSize: 12, color: "#0f172a", marginBottom: 10 }}>Deck Performance</div>
+                      {[["Series B Pitch", "142 views", "2m 48s"], ["Q4 Update", "68 views", "1m 52s"], ["Growth Equity", "37 views", "3m 12s"]].map(([name, views, time]) => (
+                        <div key={name} style={{ display: "flex", justifyContent: "space-between", padding: "8px 0", borderTop: "1px solid #f1f5f9", fontSize: 11 }}>
+                          <span style={{ fontWeight: 500, color: "#0f172a" }}>{name}</span>
+                          <div style={{ display: "flex", gap: 16 }}>
+                            <span style={{ color: "#64748b" }}>{views}</span>
+                            <span style={{ color: "#64748b" }}>{time}</span>
+                            <span style={{ color: "#1F6B6B", fontWeight: 500 }}>published</span>
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>
