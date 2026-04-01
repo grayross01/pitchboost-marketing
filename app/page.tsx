@@ -2,6 +2,7 @@ import Image from "next/image";
 import FAQ from "@/components/marketing/faq";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
+const SIGNUP_URL = `${APP_URL}/auth/login?screen_hint=signup&returnTo=/dashboard`;
 
 function CheckIcon() {
   return (
@@ -57,7 +58,7 @@ export default function MarketingPage() {
           </p>
 
           <div className="hero-actions fade-up fade-up-delay-3">
-            <a href={`${APP_URL}/auth/signup`} className="btn btn-primary btn-lg">
+            <a href={SIGNUP_URL} className="btn btn-primary btn-lg">
               Start Building Free
             </a>
             <a href="#how-it-works" className="btn btn-ghost btn-lg">
@@ -325,7 +326,7 @@ export default function MarketingPage() {
                 <li><CheckIcon /> PDF export</li>
                 <li><CheckIcon /> Shareable links</li>
               </ul>
-              <a href={`${APP_URL}/auth/signup`} className="btn btn-secondary">Get Started</a>
+              <a href={SIGNUP_URL} className="btn btn-secondary">Get Started</a>
             </div>
             <div className="pricing-card featured">
               <div className="pricing-badge">Most Popular</div>
@@ -341,7 +342,7 @@ export default function MarketingPage() {
                 <li><CheckIcon /> Saved templates</li>
                 <li><CheckIcon /> Priority generation</li>
               </ul>
-              <a href={`${APP_URL}/auth/signup`} className="btn btn-primary">Start Free Trial</a>
+              <a href={SIGNUP_URL} className="btn btn-primary">Start Free Trial</a>
             </div>
             <div className="pricing-card">
               <div className="plan-name">Business</div>
@@ -356,7 +357,7 @@ export default function MarketingPage() {
                 <li><CheckIcon /> Custom domains</li>
                 <li><CheckIcon /> Saved templates</li>
               </ul>
-              <a href={`${APP_URL}/auth/signup`} className="btn btn-secondary">Get Started</a>
+              <a href={SIGNUP_URL} className="btn btn-secondary">Get Started</a>
             </div>
           </div>
         </div>
@@ -419,7 +420,7 @@ export default function MarketingPage() {
           <div className="cta-box fade-up">
             <h2>Ready to build your next pitch deck?</h2>
             <p>Join dealmakers using PitchBoost to create professional presentations in minutes, not days.</p>
-            <a href={`${APP_URL}/auth/signup`} className="btn btn-primary btn-lg">Start Building Free</a>
+            <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Start Building Free</a>
           </div>
         </div>
       </section>

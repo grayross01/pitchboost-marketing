@@ -5,6 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
+const LOGIN_URL = `${APP_URL}/auth/login`;
+const SIGNUP_URL = `${APP_URL}/auth/login?screen_hint=signup&returnTo=/dashboard`;
 
 function smoothScrollTo(hash: string) {
   const id = hash.replace("#", "");
@@ -57,8 +59,8 @@ export default function MarketingNavbar() {
           </div>
 
           <div className="nav-actions">
-            <a href={`${APP_URL}/auth/login`} className="btn btn-secondary">Log In</a>
-            <a href={`${APP_URL}/auth/signup`} className="btn btn-primary">Get Started</a>
+            <a href={LOGIN_URL} className="btn btn-secondary">Log In</a>
+            <a href={SIGNUP_URL} className="btn btn-primary">Get Started</a>
           </div>
 
           <button className="mobile-toggle" id="mobileToggle" aria-label="Open menu" onClick={() => setMobileOpen(true)}>
@@ -73,8 +75,8 @@ export default function MarketingNavbar() {
         <a href="#how-it-works" className="mobile-menu-link" onClick={(e) => handleHash(e, "#how-it-works")}>How It Works</a>
         <a href="#pricing" className="mobile-menu-link" onClick={(e) => handleHash(e, "#pricing")}>Pricing</a>
 
-        <a href={`${APP_URL}/auth/login`} className="btn btn-secondary" onClick={closeMobile}>Log In</a>
-        <a href={`${APP_URL}/auth/signup`} className="btn btn-primary" onClick={closeMobile}>Get Started</a>
+        <a href={LOGIN_URL} className="btn btn-secondary" onClick={closeMobile}>Log In</a>
+        <a href={SIGNUP_URL} className="btn btn-primary" onClick={closeMobile}>Get Started</a>
       </div>
     </>
   );
