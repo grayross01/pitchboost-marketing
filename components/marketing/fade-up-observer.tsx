@@ -16,7 +16,19 @@ export default function FadeUpObserver() {
       { root: null, rootMargin: "0px 0px -60px 0px", threshold: 0.1 }
     );
 
-    document.querySelectorAll(".fade-up").forEach((el) => observer.observe(el));
+    const fadeEls = document.querySelectorAll(".fade-up");
+    fadeEls.forEach((el) => observer.observe(el));
+
+    // Immediately reveal elements already in the viewport on page load
+    requestAnimationFrame(() => {
+      fadeEls.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          el.classList.add("visible");
+          observer.unobserve(el);
+        }
+      });
+    });
 
     const formatNumber = (n: number) => {
       if (n >= 1000000) return (n / 1000000).toFixed(0) + "M+";
