@@ -56,6 +56,7 @@ export default function MarketingNavbar() {
           <div className="nav-links">
             <a href="#how-it-works" onClick={(e) => handleHash(e, "#how-it-works")}>How It Works</a>
             <a href="#pricing" onClick={(e) => handleHash(e, "#pricing")}>Pricing</a>
+            <Link href="/blog">Blog</Link>
           </div>
 
           <div className="nav-actions">
@@ -74,6 +75,7 @@ export default function MarketingNavbar() {
 
         <a href="#how-it-works" className="mobile-menu-link" onClick={(e) => handleHash(e, "#how-it-works")}>How It Works</a>
         <a href="#pricing" className="mobile-menu-link" onClick={(e) => handleHash(e, "#pricing")}>Pricing</a>
+        <Link href="/blog" className="mobile-menu-link" onClick={closeMobile}>Blog</Link>
 
         <a href={LOGIN_URL} className="btn btn-secondary" onClick={closeMobile}>Log In</a>
         <a href={SIGNUP_URL} className="btn btn-primary" onClick={closeMobile}>Get Started</a>

@@ -7,6 +7,7 @@ const SIGNUP_URL = `${APP_URL}/auth/login?screen_hint=signup&returnTo=/dashboard
 const PRODUCT_LINKS = [
   { label: "How It Works", href: "/#how-it-works" },
   { label: "Pricing", href: "/#pricing" },
+  { label: "Blog", href: "/blog" },
 ] as const;
 
 const COMPANY_LINKS = [
