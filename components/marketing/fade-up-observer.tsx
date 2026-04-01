@@ -1,0 +1,63 @@
+"use client";
+
+import { useEffect } from "react";
+
+export default function FadeUpObserver() {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { root: null, rootMargin: "0px 0px -60px 0px", threshold: 0.1 }
+    );
+
+    document.querySelectorAll(".fade-up").forEach((el) => observer.observe(el));
+
+    const formatNumber = (n: number) => {
+      if (n >= 1000000) return (n / 1000000).toFixed(0) + "M+";
+      if (n >= 1000) return n.toLocaleString() + "+";
+      return n.toString();
+    };
+
+    const animateCounter = (el: Element, target: number) => {
+      const duration = 2000;
+      const start = performance.now();
+      const tick = (now: number) => {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = Math.round(eased * target);
+        el.textContent = formatNumber(current);
+        if (progress < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    };
+
+    const statsBar = document.querySelector(".hero-stats-bar");
+    if (statsBar) {
+      const statsObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              statsBar.querySelectorAll("[data-count]").forEach((el) => {
+                animateCounter(el, parseInt((el as HTMLElement).dataset.count!, 10));
+              });
+              statsObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.3 }
+      );
+      statsObserver.observe(statsBar);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  return null;
+}
