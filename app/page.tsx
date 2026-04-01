@@ -68,16 +68,16 @@ export default function MarketingPage() {
 
           <div className="hero-stats-bar fade-up fade-up-delay-4">
             <div className="stat">
-              <div className="stat-number" data-count="500">0</div>
-              <div className="stat-label">Decks Created</div>
+              <div className="stat-number" data-count="10">0</div>
+              <div className="stat-label">x Faster Than Manual</div>
             </div>
             <div className="stat">
-              <div className="stat-number" data-count="120">0</div>
-              <div className="stat-label">Teams Onboarded</div>
+              <div className="stat-number" data-count="5000">0</div>
+              <div className="stat-label">Decks Generated</div>
             </div>
             <div className="stat">
-              <div className="stat-number" data-count="30">0</div>
-              <div className="stat-label">Seconds Avg. Generation</div>
+              <div className="stat-number" data-count="98">0</div>
+              <div className="stat-label">% Satisfaction Rate</div>
             </div>
           </div>
         </div>
