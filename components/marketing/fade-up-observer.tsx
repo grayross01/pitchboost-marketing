@@ -1,8 +1,11 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export default function FadeUpObserver() {
+  const pathname = usePathname();
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -16,16 +19,22 @@ export default function FadeUpObserver() {
       { root: null, rootMargin: "0px 0px -60px 0px", threshold: 0.1 }
     );
 
+    // Reset: remove "visible" from all fade-up elements so they can re-animate
     const fadeEls = document.querySelectorAll(".fade-up");
-    fadeEls.forEach((el) => observer.observe(el));
+    fadeEls.forEach((el) => {
+      el.classList.remove("visible");
+      observer.observe(el);
+    });
 
-    // Immediately reveal elements already in the viewport on page load
+    // Immediately reveal elements already in the viewport
     requestAnimationFrame(() => {
       fadeEls.forEach((el) => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom > 0) {
-          el.classList.add("visible");
-          observer.unobserve(el);
+        if (!el.classList.contains("visible")) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+            el.classList.add("visible");
+            observer.unobserve(el);
+          }
         }
       });
     });
@@ -69,7 +78,7 @@ export default function FadeUpObserver() {
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [pathname]);
 
   return null;
 }
