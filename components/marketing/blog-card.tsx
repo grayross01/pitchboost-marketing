@@ -5,7 +5,7 @@ import BlogTag from "./blog-tag";
 
 export default function BlogCard({ post }: { post: BlogPostMeta }) {
   return (
-    <Link href={`/blog/${post.slug}`} className="blog-card fade-up">
+    <Link href={`/blog/${post.slug}`} className="blog-card">
       <div className="blog-card-meta">
         <time dateTime={post.date}>{formatDate(post.date)}</time>
         <span className="blog-meta-sep">&middot;</span>
