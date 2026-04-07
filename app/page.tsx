@@ -49,14 +49,15 @@ export default function MarketingPage() {
           </div>
 
           <h1 className="fade-up fade-up-delay-1">
-            Create Deal Decks That{" "}
-            <span className="gradient-text">Close</span>
+            Your Strengths. Their Pain Points.{" "}
+            <span className="gradient-text">One Perfect Deck.</span>
           </h1>
 
           <p className="fade-up fade-up-delay-2">
-            PitchBoost uses AI to generate stunning, interactive pitch decks
-            from your deal info and brand assets. Publish, share, and track
-            engagement — all in one platform.
+            PitchBoost learns your deal info and brand assets, then builds
+            a deck that highlights the capabilities most relevant to each
+            prospect — tailored to their industry, their pain points, and
+            the way they buy.
           </p>
 
           <div className="hero-actions fade-up fade-up-delay-3">
@@ -489,8 +490,8 @@ export default function MarketingPage() {
       <section className="mkt-section cta-section">
         <div className="mkt-container">
           <div className="cta-box fade-up">
-            <h2>Ready to build your next pitch deck?</h2>
-            <p>Join dealmakers using PitchBoost to create professional presentations in minutes, not days.</p>
+            <h2>Stop sending the same deck twice</h2>
+            <p>Every prospect has different pain points. Start building deal decks that speak directly to each one.</p>
             <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Start Building Free</a>
           </div>
         </div>

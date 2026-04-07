@@ -922,7 +922,7 @@ body {
 
 /* --- CTA Section --- */
 .marketing .cta-section {
-  background: var(--ds-dark);
+  background: linear-gradient(135deg, #1F6B6B, #2A8A8A, #E8665A);
   color: white;
   position: relative;
   overflow: hidden;
@@ -935,7 +935,7 @@ body {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(ellipse at center, rgba(31, 107, 107, 0.15), transparent 70%);
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.08), transparent 70%);
   pointer-events: none;
 }
 
@@ -943,7 +943,7 @@ body {
   position: relative;
   z-index: 2;
   text-align: center;
-  max-width: 650px;
+  max-width: 750px;
   margin: 0 auto;
 }
 
@@ -963,7 +963,7 @@ body {
 
 .marketing .cta-box .btn-primary {
   background: white;
-  color: var(--ds-dark);
+  color: #1F6B6B;
   font-weight: 700;
 }
 

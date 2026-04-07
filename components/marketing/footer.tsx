@@ -27,7 +27,7 @@ export default function MarketingFooter() {
               PitchBoost
             </Link>
             <p>
-              AI-powered pitch deck builder for dealmakers. Create stunning,
+              AI-powered pitch deck builder for dealmakers. Create personalized,
               interactive presentations from your deal info and brand assets,
               publish them instantly, and track viewer engagement.
             </p>
