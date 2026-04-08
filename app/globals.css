@@ -407,30 +407,35 @@ body {
   margin-bottom: 64px;
 }
 
-.marketing .hero-stats-bar {
+.marketing .hero-proof-bar {
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 48px;
+  gap: 24px;
   margin-top: 64px;
-  padding-top: 48px;
+  padding: 20px 32px;
   border-top: 1px solid var(--ds-border);
 }
 
-.marketing .hero-stats-bar .stat {
-  text-align: center;
-}
-
-.marketing .hero-stats-bar .stat-number {
-  font-size: 2rem;
-  font-weight: 800;
+.marketing .proof-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
   color: var(--ds-dark);
-  font-family: var(--font-inter, 'Inter'), -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: -0.01em;
 }
 
-.marketing .hero-stats-bar .stat-label {
-  font-size: 0.85rem;
-  color: var(--ds-text-light);
-  margin-top: 4px;
+.marketing .proof-icon {
+  color: var(--ds-teal);
+  font-size: 1rem;
+}
+
+.marketing .proof-sep {
+  width: 1px;
+  height: 20px;
+  background: var(--ds-border);
 }
 
 /* --- How It Works / Step Showcase --- */
@@ -1274,6 +1279,128 @@ body {
   margin: 28px 0;
 }
 
+/* --- Use Cases --- */
+.marketing .use-cases-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.marketing .use-case-card {
+  background: white;
+  border: 1px solid var(--ds-border);
+  border-radius: var(--ds-radius-xl);
+  padding: 48px;
+  transition: var(--ds-transition);
+}
+
+.marketing .use-case-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.marketing .use-case-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(31, 107, 107, 0.1);
+  color: var(--ds-teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.marketing .use-case-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ds-teal);
+}
+
+.marketing .use-case-card h2 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--ds-dark);
+  margin-bottom: 12px;
+  line-height: 1.25;
+  font-family: var(--font-inter, 'Inter'), -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.marketing .use-case-desc {
+  font-size: 1.05rem;
+  color: var(--ds-text-light);
+  line-height: 1.7;
+  max-width: 800px;
+  margin-bottom: 32px;
+}
+
+.marketing .use-case-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.marketing .use-case-pain,
+.marketing .use-case-outcome {
+  padding: 28px;
+  border-radius: var(--ds-radius-lg);
+}
+
+.marketing .use-case-pain {
+  background: var(--ds-bg-light);
+}
+
+.marketing .use-case-outcome {
+  background: rgba(31, 107, 107, 0.04);
+  border: 1px solid rgba(31, 107, 107, 0.12);
+}
+
+.marketing .use-case-pain h3,
+.marketing .use-case-outcome h3 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 16px;
+  color: var(--ds-dark);
+}
+
+.marketing .use-case-pain ul,
+.marketing .use-case-outcome ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.marketing .use-case-pain li,
+.marketing .use-case-outcome li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--ds-text);
+  line-height: 1.5;
+}
+
+.marketing .use-case-pain li svg,
+.marketing .use-case-outcome li svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.marketing .use-case-outcome li svg {
+  color: var(--ds-teal);
+}
+
 /* --- Animations --- */
 .marketing .fade-up {
   opacity: 0;
@@ -1315,8 +1442,8 @@ body {
   .marketing .hero p { font-size: 1.05rem; }
   .marketing .hero-actions { flex-direction: column; gap: 12px; }
   .marketing .hero-actions .btn { width: 100%; }
-  .marketing .hero-stats-bar { flex-wrap: wrap; gap: 24px; }
-  .marketing .hero-stats-bar .stat { flex: 1; min-width: 120px; }
+  .marketing .hero-proof-bar { flex-wrap: wrap; gap: 16px; }
+  .marketing .proof-sep { display: none; }
   .marketing .section-header h2 { font-size: 1.85rem; }
   .marketing .nav-links, .marketing .nav-actions { display: none; }
   .marketing .mobile-toggle { display: flex; }
@@ -1327,6 +1454,9 @@ body {
   .marketing .pricing-card:last-child { grid-column: span 1; max-width: 100%; }
   .marketing .blog-grid { grid-template-columns: 1fr; }
   .marketing .blog-hero h1 { font-size: 2rem; }
+  .marketing .use-case-columns { grid-template-columns: 1fr; }
+  .marketing .use-case-card { padding: 28px; }
+  .marketing .use-case-card h2 { font-size: 1.4rem; }
   .marketing .footer-grid { grid-template-columns: 1fr; gap: 24px; }
   .marketing .footer-brand { grid-column: span 1; }
   .marketing .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
@@ -1342,8 +1472,8 @@ body {
   .marketing .hero h1 { font-size: 1.85rem; }
   .marketing .section-header h2 { font-size: 1.5rem; }
   .marketing .btn-lg { padding: 14px 28px; font-size: 0.95rem; }
-  .marketing .hero-stats-bar { gap: 16px; }
-  .marketing .hero-stats-bar .stat-number { font-size: 1.5rem; }
+  .marketing .hero-proof-bar { gap: 12px; }
+  .marketing .proof-item { font-size: 0.85rem; }
   .marketing .pricing-card { padding: 32px 24px; }
   .marketing .pricing-card .plan-price { font-size: 2.75rem; }
   .marketing .testimonial-card { padding: 24px; }

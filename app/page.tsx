@@ -44,7 +44,7 @@ export default function MarketingPage() {
                   display: "inline-block",
                 }}
               />
-              AI-Powered Pitch Deck Builder
+              AI-Powered Pitch Decks for Dealmakers
             </div>
           </div>
 
@@ -69,18 +69,20 @@ export default function MarketingPage() {
             </a>
           </div>
 
-          <div className="hero-stats-bar fade-up fade-up-delay-4">
-            <div className="stat">
-              <div className="stat-number" data-count="10">0</div>
-              <div className="stat-label">x Faster Than Manual</div>
+          <div className="hero-proof-bar fade-up fade-up-delay-4">
+            <div className="proof-item">
+              <span className="proof-icon">◎</span>
+              <span>One deck per prospect</span>
             </div>
-            <div className="stat">
-              <div className="stat-number" data-count="5000">0</div>
-              <div className="stat-label">Decks Generated</div>
+            <div className="proof-sep" />
+            <div className="proof-item">
+              <span className="proof-icon">◎</span>
+              <span>Your brand, their language</span>
             </div>
-            <div className="stat">
-              <div className="stat-number" data-count="98">0</div>
-              <div className="stat-label">% Satisfaction Rate</div>
+            <div className="proof-sep" />
+            <div className="proof-item">
+              <span className="proof-icon">◎</span>
+              <span>Know who&apos;s reading</span>
             </div>
           </div>
         </div>
@@ -289,7 +291,7 @@ export default function MarketingPage() {
       </section>
 
       {/* ── Features ── */}
-      <section className="mkt-section" style={{ background: "var(--ds-bg-light)" }}>
+      <section id="features" className="mkt-section" style={{ background: "var(--ds-bg-light)" }}>
         <div className="mkt-container">
           <div className="section-header fade-up">
             <div className="section-label"><span>Features</span></div>

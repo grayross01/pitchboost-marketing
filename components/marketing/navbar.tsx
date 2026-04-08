@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -20,6 +21,8 @@ function smoothScrollTo(hash: string) {
 export default function MarketingNavbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -38,10 +41,15 @@ export default function MarketingNavbar() {
   }, []);
 
   function handleHash(e: React.MouseEvent<HTMLAnchorElement>, hash: string) {
+    if (!isHome) return; // let the browser navigate to /#hash
     e.preventDefault();
     closeMobile();
     smoothScrollTo(hash);
     window.history.pushState(null, "", hash);
+  }
+
+  function hashHref(hash: string) {
+    return isHome ? hash : `/${hash}`;
   }
 
   return (
@@ -54,8 +62,10 @@ export default function MarketingNavbar() {
           </Link>
 
           <div className="nav-links">
-            <a href="#how-it-works" onClick={(e) => handleHash(e, "#how-it-works")}>How It Works</a>
-            <a href="#pricing" onClick={(e) => handleHash(e, "#pricing")}>Pricing</a>
+            <a href={hashHref("#features")} onClick={(e) => handleHash(e, "#features")}>Features</a>
+            <a href={hashHref("#how-it-works")} onClick={(e) => handleHash(e, "#how-it-works")}>How It Works</a>
+            <a href={hashHref("#pricing")} onClick={(e) => handleHash(e, "#pricing")}>Pricing</a>
+            <Link href="/use-cases">Use Cases</Link>
             <Link href="/blog">Blog</Link>
           </div>
 
@@ -73,8 +83,10 @@ export default function MarketingNavbar() {
       <div className={`mobile-menu${mobileOpen ? " active" : ""}`} id="mobileMenu">
         <button className="mobile-menu-close" id="mobileClose" aria-label="Close menu" onClick={closeMobile}>&times;</button>
 
-        <a href="#how-it-works" className="mobile-menu-link" onClick={(e) => handleHash(e, "#how-it-works")}>How It Works</a>
-        <a href="#pricing" className="mobile-menu-link" onClick={(e) => handleHash(e, "#pricing")}>Pricing</a>
+        <a href={hashHref("#features")} className="mobile-menu-link" onClick={(e) => handleHash(e, "#features")}>Features</a>
+        <a href={hashHref("#how-it-works")} className="mobile-menu-link" onClick={(e) => handleHash(e, "#how-it-works")}>How It Works</a>
+        <a href={hashHref("#pricing")} className="mobile-menu-link" onClick={(e) => handleHash(e, "#pricing")}>Pricing</a>
+        <Link href="/use-cases" className="mobile-menu-link" onClick={closeMobile}>Use Cases</Link>
         <Link href="/blog" className="mobile-menu-link" onClick={closeMobile}>Blog</Link>
 
         <a href={LOGIN_URL} className="btn btn-secondary" onClick={closeMobile}>Log In</a>
