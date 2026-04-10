@@ -2,9 +2,9 @@ import Image from "next/image";
 import FAQ from "@/components/marketing/faq";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
-const SIGNUP_URL = `${APP_URL}/auth/login?screen_hint=signup&returnTo=/dashboard`;
-const SIGNUP_PRO = `${APP_URL}/auth/login?screen_hint=signup&returnTo=/dashboard/settings?plan=pro`;
-const SIGNUP_BIZ = `${APP_URL}/auth/login?screen_hint=signup&returnTo=/dashboard/settings?plan=business`;
+const SIGNUP_URL = `${APP_URL}/signup`;
+const SIGNUP_PRO = `${APP_URL}/signup`;
+const SIGNUP_BIZ = `${APP_URL}/signup`;
 
 function CheckIcon() {
   return (
