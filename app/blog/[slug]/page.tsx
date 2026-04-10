@@ -6,7 +6,7 @@ import { getAllSlugs, getPostBySlug, formatDate } from "@/lib/blog";
 import BlogTag from "@/components/marketing/blog-tag";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
-const SIGNUP_URL = `${APP_URL}/auth/login?screen_hint=signup&returnTo=/dashboard`;
+const SIGNUP_URL = `${APP_URL}/signup`;
 
 interface Props {
   params: Promise<{ slug: string }>;

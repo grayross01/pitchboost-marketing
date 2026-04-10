@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
-const SIGNUP_URL = `${APP_URL}/auth/login?screen_hint=signup&returnTo=/dashboard`;
+const SIGNUP_URL = `${APP_URL}/signup`;
 
 export const metadata: Metadata = {
   title: "Use Cases — PitchBoost",

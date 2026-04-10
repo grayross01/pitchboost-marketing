@@ -6,8 +6,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
-const LOGIN_URL = `${APP_URL}/auth/login`;
-const SIGNUP_URL = `${APP_URL}/auth/login?screen_hint=signup&returnTo=/dashboard`;
+const LOGIN_URL = `${APP_URL}/login`;
+const SIGNUP_URL = `${APP_URL}/signup`;
 
 function smoothScrollTo(hash: string) {
   const id = hash.replace("#", "");
