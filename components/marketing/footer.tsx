@@ -5,8 +5,10 @@ const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 const SIGNUP_URL = `${APP_URL}/signup`;
 
 const PRODUCT_LINKS = [
+  { label: "Features", href: "/#features" },
   { label: "How It Works", href: "/#how-it-works" },
   { label: "Pricing", href: "/#pricing" },
+  { label: "Use Cases", href: "/use-cases" },
   { label: "Blog", href: "/blog" },
 ] as const;
 

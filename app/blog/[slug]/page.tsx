@@ -22,13 +22,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return {};
 
   return {
-    title: `${post.title} — PitchBoost Blog`,
+    title: post.title,
     description: post.description,
     openGraph: {
       title: post.title,
       description: post.description,
       type: "article",
-      url: `https://pitchboost.ai/blog/${post.slug}`,
       publishedTime: post.date,
       authors: [post.author],
       tags: post.tags,

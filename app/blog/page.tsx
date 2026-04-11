@@ -3,16 +3,9 @@ import { getAllPosts } from "@/lib/blog";
 import BlogCard from "@/components/marketing/blog-card";
 
 export const metadata: Metadata = {
-  title: "Blog — PitchBoost | AI Pitch Deck & Deal Deck Insights",
+  title: "Blog | AI Pitch Deck & Deal Deck Insights",
   description:
-    "Expert guides on creating AI-powered pitch decks, deal decks, and investor presentations. Tips, best practices, and industry insights.",
-  openGraph: {
-    title: "PitchBoost Blog — AI Pitch Deck & Deal Deck Insights",
-    description:
-      "Expert guides on creating AI-powered pitch decks, deal decks, and investor presentations.",
-    type: "website",
-    url: "https://pitchboost.ai/blog",
-  },
+    "Expert guides on creating personalized pitch decks and deal decks. Tips, best practices, and insights for B2B sales teams, agencies, and dealmakers.",
 };
 
 export default function BlogIndexPage() {

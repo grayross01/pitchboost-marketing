@@ -26,9 +26,23 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "PitchBoost — AI-Powered Deal Decks",
+  title: {
+    default: "PitchBoost — AI-Powered Personalized Pitch Decks",
+    template: "%s — PitchBoost",
+  },
   description:
-    "Create stunning, interactive pitch decks powered by AI. Upload your brand assets, describe your deal, and get a professional presentation in minutes.",
+    "PitchBoost builds personalized pitch decks that map your strengths to each prospect's pain points. Tailored to their industry, their needs, and the way they buy.",
+  metadataBase: new URL("https://pitchboost.ai"),
+  openGraph: {
+    type: "website",
+    siteName: "PitchBoost",
+    title: "PitchBoost — AI-Powered Personalized Pitch Decks",
+    description:
+      "PitchBoost builds personalized pitch decks that map your strengths to each prospect's pain points. Tailored to their industry, their needs, and the way they buy.",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({

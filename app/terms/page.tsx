@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Terms of Service — PitchBoost",
-  description: "Terms and conditions for using PitchBoost.",
+  title: "Terms of Service",
+  description: "Terms and conditions for using PitchBoost. Read our full terms of service agreement.",
 };
 
 export default function TermsPage() {

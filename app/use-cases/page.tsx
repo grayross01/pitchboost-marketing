@@ -4,7 +4,7 @@ const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 const SIGNUP_URL = `${APP_URL}/signup`;
 
 export const metadata: Metadata = {
-  title: "Use Cases — PitchBoost",
+  title: "Use Cases",
   description:
     "See how B2B sales teams, agencies, SaaS companies, and consultancies use PitchBoost to create personalized pitch decks that win deals.",
 };

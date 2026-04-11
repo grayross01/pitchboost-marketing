@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — PitchBoost",
-  description: "How PitchBoost collects, uses, and protects your data.",
+  title: "Privacy Policy",
+  description: "How PitchBoost collects, uses, and protects your personal data. Read our full privacy policy.",
 };
 
 export default function PrivacyPage() {
