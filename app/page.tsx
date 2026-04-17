@@ -437,6 +437,71 @@ export default function MarketingPage() {
         </div>
       </section>
 
+      {/* ── Cost Savings ── */}
+      <section className="mkt-section" style={{ background: "var(--ds-bg-light)" }}>
+        <div className="mkt-container">
+          <div className="section-header fade-up">
+            <div className="section-label"><span>Why PitchBoost pays for itself</span></div>
+            <h2>Replace your entire pitch stack for a fraction of the cost</h2>
+            <p>Real numbers on what dealmakers spend — and what they save by switching.</p>
+          </div>
+
+          <div className="fade-up" style={{ overflowX: "auto" }}>
+            <table style={{ width: "100%", borderCollapse: "collapse", border: "1px solid var(--ds-border)", borderRadius: 12, overflow: "hidden", fontSize: 14 }}>
+              <thead>
+                <tr style={{ background: "var(--ds-bg-subtle)" }}>
+                  {["What you're replacing", "Freelancer (design only)", "Agency (full deck)", "With PitchBoost"].map(h => (
+                    <th key={h} style={{ padding: "11px 18px", textAlign: "left", fontWeight: 600, fontSize: 12, color: "var(--ds-text-secondary)", borderBottom: "1px solid var(--ds-border)" }}>{h}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ["Deck creation (per deck)", "$500–$1,500", "$3,000–$8,000", "Included in your plan"],
+                  ["Turnaround time", "3–5 business days", "1–2 weeks", "Under 60 seconds"],
+                  ["Revision rounds", "Hourly rate each round", "2–5 rounds, billed per change", "Edit instantly, anytime"],
+                  ["Brand consistency", "Manual briefing every time", "Re-brief every engagement", "Upload once, auto-applied"],
+                  ["Viewer analytics", "Not included", "Not included", "Built in on Pro & Business"],
+                ].map(([item, freelance, agency, pb]) => (
+                  <tr key={item} style={{ borderBottom: "1px solid var(--ds-border)" }}>
+                    <td style={{ padding: "13px 18px", color: "var(--ds-text-primary)", fontWeight: 500 }}>{item}</td>
+                    <td style={{ padding: "13px 18px", color: "var(--ds-text-tertiary)", textDecoration: "line-through" }}>{freelance}</td>
+                    <td style={{ padding: "13px 18px", color: "var(--ds-text-tertiary)", textDecoration: "line-through" }}>{agency}</td>
+                    <td style={{ padding: "13px 18px", color: "#1F6B6B", fontWeight: 600 }}>{pb}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div className="fade-up" style={{ marginTop: 24, background: "var(--ds-bg-subtle)", border: "1px solid var(--ds-border)", borderRadius: 16, padding: "28px 40px", display: "flex", alignItems: "center", justifyContent: "center", gap: 40, flexWrap: "wrap" }}>
+            <div style={{ textAlign: "center" }}>
+              <div style={{ fontSize: 11, textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--ds-text-secondary)", marginBottom: 6 }}>Freelancer per deck</div>
+              <div style={{ fontSize: 22, fontWeight: 700, textDecoration: "line-through", color: "var(--ds-text-tertiary)" }}>$500–$1,500</div>
+            </div>
+            <div style={{ fontSize: 20, color: "var(--ds-text-tertiary)" }}>·</div>
+            <div style={{ textAlign: "center" }}>
+              <div style={{ fontSize: 11, textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--ds-text-secondary)", marginBottom: 6 }}>Agency per deck</div>
+              <div style={{ fontSize: 22, fontWeight: 700, textDecoration: "line-through", color: "var(--ds-text-tertiary)" }}>$3,000–$8,000</div>
+            </div>
+            <div style={{ fontSize: 20, color: "var(--ds-text-tertiary)" }}>→</div>
+            <div style={{ textAlign: "center" }}>
+              <div style={{ fontSize: 11, textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--ds-text-secondary)", marginBottom: 6 }}>PitchBoost Pro</div>
+              <div style={{ fontSize: 28, fontWeight: 700, color: "var(--ds-text-primary)" }}>$29<span style={{ fontSize: 15, fontWeight: 400, color: "var(--ds-text-secondary)" }}>/mo</span></div>
+            </div>
+            <div style={{ fontSize: 20, color: "var(--ds-text-tertiary)" }}>=</div>
+            <div style={{ textAlign: "center" }}>
+              <div style={{ fontSize: 11, textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--ds-text-secondary)", marginBottom: 6 }}>You save per deck</div>
+              <div style={{ fontSize: 28, fontWeight: 700, background: "linear-gradient(135deg, #1F6B6B, #E8665A)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>$470–$7,970+</div>
+            </div>
+          </div>
+
+          <p className="fade-up" style={{ textAlign: "center", fontSize: 12, color: "var(--ds-text-tertiary)", marginTop: 12 }}>
+            Pricing based on industry research from Slidebean, Presentation Geeks, and PitchDeckCreators — 2025 averages.
+          </p>
+        </div>
+      </section>
+
       {/* ── Testimonials ── */}
       <section className="mkt-section" style={{ background: "var(--ds-bg-light)" }}>
         <div className="mkt-container">
