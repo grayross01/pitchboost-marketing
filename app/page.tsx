@@ -95,9 +95,9 @@ export default function MarketingPage() {
             <div className="section-label">
               <span>How It Works</span>
             </div>
-            <h2>From deal info to polished deck in minutes</h2>
+            <h2>From brief to polished sales asset in minutes</h2>
             <p>
-              Three simple steps to a professional, branded pitch deck — no
+              Three simple steps to a professional, branded deck or one-sheet — no
               design skills required.
             </p>
           </div>
@@ -143,7 +143,7 @@ export default function MarketingPage() {
                     </div>
                     <div style={{ background: "white", border: "1px solid #e2e8f0", borderRadius: 10, padding: "14px 16px" }}>
                       <div style={{ fontWeight: 600, fontSize: 13, color: "#0f172a", marginBottom: 12 }}>Recent Deals</div>
-                      {[["Series B Capital Raise", "Acme Corp", "3 decks"], ["Q4 Investor Update", "Beacon Fund", "2 decks"], ["Growth Equity Pitch", "NovaTech", "1 deck"]].map(([name, co, decks]) => (
+                      {[["Q2 Enterprise Proposal", "Acme Corp", "3 decks"], ["Partnership One-Sheet", "Meridian Group", "2 decks"], ["Product Capabilities Deck", "NovaTech", "1 deck"]].map(([name, co, decks]) => (
                         <div key={name} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "10px 0", borderTop: "1px solid #f1f5f9" }}>
                           <div>
                             <div style={{ fontWeight: 600, fontSize: 12, color: "#0f172a" }}>{name}</div>
@@ -165,8 +165,8 @@ export default function MarketingPage() {
               <div className="step-number">2</div>
               <h3>Generate with AI</h3>
               <p>
-                Describe what you need — &quot;Create a 10-slide investment
-                overview&quot; — and AI builds a complete deck with your
+                Describe what you need — &quot;Create a one-sheet for our
+                enterprise prospects&quot; — and AI builds a complete deck with your
                 branding, data, and messaging.
               </p>
               <ul className="step-highlights">
@@ -184,7 +184,7 @@ export default function MarketingPage() {
                 <div className="browser-content">
                   <div style={{ background: "#f8f9fb", padding: "20px 24px", minHeight: 300 }}>
                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 16 }}>
-                      <div style={{ fontWeight: 700, fontSize: 16, color: "#0f172a" }}>Series B Capital Raise</div>
+                      <div style={{ fontWeight: 700, fontSize: 16, color: "#0f172a" }}>Acme Corp — Enterprise Proposal</div>
                       <div style={{ display: "flex", gap: 8 }}>
                         <div style={{ background: "white", border: "1px solid #e2e8f0", padding: "6px 14px", borderRadius: 8, fontSize: 11, fontWeight: 600, color: "#0f172a" }}>PDF</div>
                         <div style={{ background: "linear-gradient(135deg, #1F6B6B, #E8665A)", color: "white", padding: "6px 14px", borderRadius: 8, fontSize: 11, fontWeight: 600 }}>Publish</div>
@@ -198,8 +198,8 @@ export default function MarketingPage() {
                       </div>
                       <div style={{ background: "linear-gradient(135deg, #4338ca, #7c3aed)", padding: "28px 24px", color: "white" }}>
                         <div style={{ fontSize: 10, opacity: 0.7, marginBottom: 4 }}>ACME CORP</div>
-                        <div style={{ fontSize: 16, fontWeight: 700, marginBottom: 6 }}>Series B Capital Raise</div>
-                        <div style={{ fontSize: 10, opacity: 0.6 }}>Scaling next-gen infrastructure for enterprise clients</div>
+                        <div style={{ fontSize: 16, fontWeight: 700, marginBottom: 6 }}>Enterprise Solutions Overview</div>
+                        <div style={{ fontSize: 10, opacity: 0.6 }}>Tailored capabilities for your team&apos;s needs</div>
                       </div>
                     </div>
                     {/* Slide 2 */}
@@ -209,9 +209,9 @@ export default function MarketingPage() {
                         <span style={{ color: "#cbd5e1" }}>Edit</span>
                       </div>
                       <div style={{ padding: "20px 24px" }}>
-                        <div style={{ fontSize: 13, fontWeight: 700, color: "#0f172a", marginBottom: 8 }}>Enterprise Infrastructure Is Broken</div>
+                        <div style={{ fontSize: 13, fontWeight: 700, color: "#0f172a", marginBottom: 8 }}>Your Team Deserves Better Tools</div>
                         <div style={{ display: "flex", gap: 12 }}>
-                          {["68% report downtime", "3.2M avg. annual cost", "Manual scaling"].map(s => (
+                          {["87% say onboarding is too slow", "$2.4M avg. cost of poor tooling", "Siloed workflows"].map(s => (
                             <div key={s} style={{ flex: 1, background: "#f8f9fb", borderRadius: 6, padding: "10px 12px", fontSize: 10, color: "#64748b", textAlign: "center" }}>{s}</div>
                           ))}
                         </div>
@@ -271,7 +271,7 @@ export default function MarketingPage() {
                     {/* Deck table */}
                     <div style={{ background: "white", border: "1px solid #e2e8f0", borderRadius: 10, padding: "14px 16px" }}>
                       <div style={{ fontWeight: 600, fontSize: 12, color: "#0f172a", marginBottom: 10 }}>Deck Performance</div>
-                      {[["Series B Pitch", "142 views", "2m 48s"], ["Q4 Update", "68 views", "1m 52s"], ["Growth Equity", "37 views", "3m 12s"]].map(([name, views, time]) => (
+                      {[["Acme Corp Proposal", "142 views", "2m 48s"], ["Partnership One-Sheet", "68 views", "1m 52s"], ["NovaTech Overview", "37 views", "3m 12s"]].map(([name, views, time]) => (
                         <div key={name} style={{ display: "flex", justifyContent: "space-between", padding: "8px 0", borderTop: "1px solid #f1f5f9", fontSize: 11 }}>
                           <span style={{ fontWeight: 500, color: "#0f172a" }}>{name}</span>
                           <div style={{ display: "flex", gap: 16 }}>
