@@ -33,15 +33,20 @@ export const metadata: Metadata = {
   description:
     "PitchBoost builds personalized pitch decks that map your strengths to each prospect's pain points. Tailored to their industry, their needs, and the way they buy.",
   metadataBase: new URL("https://pitchboost.ai"),
+  icons: {
+    icon: "/icon.png",
+  },
   openGraph: {
     type: "website",
     siteName: "PitchBoost",
     title: "PitchBoost — AI-Powered Personalized Pitch Decks",
     description:
       "PitchBoost builds personalized pitch decks that map your strengths to each prospect's pain points. Tailored to their industry, their needs, and the way they buy.",
+    images: [{ url: "/og-image.png", width: 1310, height: 820, alt: "PitchBoost" }],
   },
   twitter: {
     card: "summary_large_image",
+    images: ["/og-image.png"],
   },
 };
 
