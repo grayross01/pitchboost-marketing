@@ -33,6 +33,9 @@ export const metadata: Metadata = {
   description:
     "PitchBoost builds personalized pitch decks that map your strengths to each prospect's pain points. Tailored to their industry, their needs, and the way they buy.",
   metadataBase: new URL("https://pitchboost.ai"),
+  alternates: {
+    canonical: "https://pitchboost.ai",
+  },
   icons: {
     icon: "/icon.png",
   },
