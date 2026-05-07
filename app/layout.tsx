@@ -45,11 +45,11 @@ export const metadata: Metadata = {
     title: "PitchBoost — AI-Powered Personalized Pitch Decks",
     description:
       "PitchBoost builds personalized pitch decks that map your strengths to each prospect's pain points. Tailored to their industry, their needs, and the way they buy.",
-    images: [{ url: "/og-image.png", width: 1310, height: 820, alt: "PitchBoost" }],
+    images: [{ url: "https://pitchboost.ai/og-image.png", width: 1310, height: 820, alt: "PitchBoost" }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["/og-image.png"],
+    images: ["https://pitchboost.ai/og-image.png"],
   },
 };
 
