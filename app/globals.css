@@ -95,8 +95,13 @@ body {
   margin: 0 auto 64px;
 }
 
+.marketing .section-header.wide-header {
+  max-width: none;
+  width: 100%;
+}
+
 .marketing .section-header h2 {
-  font-size: 2.75rem;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
   font-weight: 800;
   line-height: 1.15;
   margin-bottom: 16px;
@@ -255,6 +260,132 @@ body {
   padding: 10px 24px;
   font-size: 0.875rem;
 }
+
+/* ── Nav Dropdown ── */
+.marketing .nav-industry-trigger {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #334155;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+}
+.marketing .nav-industry-trigger:hover { color: var(--ds-dark); }
+.marketing .nav-industry-trigger svg { transition: transform 0.2s; }
+.marketing .nav-industry-trigger.open svg { transform: rotate(180deg); }
+
+.marketing .nav-dropdown-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 998;
+}
+.marketing .nav-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  background: white;
+  border: 1px solid var(--ds-border);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  padding: 24px 28px;
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  gap: 8px 32px;
+  min-width: 680px;
+}
+.marketing .nav-dropdown-group-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ds-text-tertiary);
+  padding: 4px 0 8px;
+  border-bottom: 1px solid var(--ds-border);
+  margin-bottom: 4px;
+  grid-column: span 1;
+}
+.marketing .nav-dropdown a {
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ds-text-primary);
+  text-decoration: none;
+  transition: background 0.12s, color 0.12s;
+  line-height: 1.3;
+}
+.marketing .nav-dropdown a:hover {
+  background: var(--ds-bg-light);
+  color: #1F6B6B;
+}
+.marketing .nav-dropdown-footer {
+  grid-column: 1 / -1;
+  border-top: 1px solid var(--ds-border);
+  padding-top: 14px;
+  margin-top: 8px;
+  display: flex;
+  justify-content: flex-end;
+}
+.marketing .nav-dropdown-footer a {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: #1F6B6B !important;
+  padding: 0 !important;
+  background: none !important;
+}
+
+/* Mobile industry expand */
+.marketing .mobile-industry-toggle {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--ds-dark);
+  padding: 12px 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+.marketing .mobile-industry-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 0 0 8px 16px;
+}
+.marketing .mobile-industry-list a {
+  font-size: 1rem;
+  color: var(--ds-text-secondary);
+  padding: 6px 0;
+  text-decoration: none;
+  display: block;
+}
+
+/* Industry card (index page) */
+.marketing .industry-card {
+  background: var(--ds-bg-light);
+  border: 1px solid var(--ds-border);
+  border-radius: 16px;
+  padding: 28px 32px;
+  height: 100%;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  cursor: pointer;
+}
+.marketing .industry-card:hover {
+  border-color: #1F6B6B;
+  box-shadow: 0 4px 16px rgba(31,107,107,0.08);
+}
 .marketing .mobile-toggle {
   display: none;
   flex-direction: column;
@@ -369,7 +500,7 @@ body {
 }
 
 .marketing .hero h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 24px;
@@ -948,13 +1079,14 @@ body {
   position: relative;
   z-index: 2;
   text-align: center;
-  max-width: 750px;
+  max-width: 860px;
   margin: 0 auto;
 }
 
 .marketing .cta-box h2 {
-  font-size: 2.75rem;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
   font-weight: 800;
+  line-height: 1.2;
   margin-bottom: 16px;
   font-family: var(--font-inter, 'Inter'), -apple-system, BlinkMacSystemFont, sans-serif;
 }
@@ -1420,8 +1552,7 @@ body {
 
 /* --- Responsive: 1024px --- */
 @media (max-width: 1024px) {
-  .marketing .hero h1 { font-size: 3rem; }
-  .marketing .section-header h2 { font-size: 2.25rem; }
+  .marketing .hero h1 { font-size: 2.5rem; }
   .marketing .step-showcase { grid-template-columns: 1fr; gap: 40px; }
   .marketing .step-showcase.reverse { direction: ltr; }
   .marketing .features-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1430,7 +1561,7 @@ body {
   .marketing .pricing-card:last-child { grid-column: span 2; max-width: 400px; margin: 0 auto; }
   .marketing .blog-grid { grid-template-columns: repeat(2, 1fr); }
   .marketing .blog-hero h1 { font-size: 2.25rem; }
-  .marketing .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .marketing .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 32px; }
   .marketing .footer-brand { grid-column: span 2; max-width: 100%; }
 }
 
@@ -1444,7 +1575,6 @@ body {
   .marketing .hero-actions .btn { width: 100%; }
   .marketing .hero-proof-bar { flex-wrap: wrap; gap: 16px; }
   .marketing .proof-sep { display: none; }
-  .marketing .section-header h2 { font-size: 1.85rem; }
   .marketing .nav-links, .marketing .nav-actions { display: none; }
   .marketing .mobile-toggle { display: flex; }
   .marketing .features-grid { grid-template-columns: 1fr; }
@@ -1460,7 +1590,6 @@ body {
   .marketing .footer-grid { grid-template-columns: 1fr; gap: 24px; }
   .marketing .footer-brand { grid-column: span 1; }
   .marketing .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
-  .marketing .cta-box h2 { font-size: 2rem; }
   .marketing .legal-hero h1 { font-size: 2rem; }
 }
 
@@ -1470,13 +1599,11 @@ body {
   .marketing .mkt-section { padding: 48px 0; }
   .marketing .hero { padding: 100px 0 48px; }
   .marketing .hero h1 { font-size: 1.85rem; }
-  .marketing .section-header h2 { font-size: 1.5rem; }
   .marketing .btn-lg { padding: 14px 28px; font-size: 0.95rem; }
   .marketing .hero-proof-bar { gap: 12px; }
   .marketing .proof-item { font-size: 0.85rem; }
   .marketing .pricing-card { padding: 32px 24px; }
   .marketing .pricing-card .plan-price { font-size: 2.75rem; }
   .marketing .testimonial-card { padding: 24px; }
-  .marketing .cta-box h2 { font-size: 1.65rem; }
   .marketing .footer { padding: 48px 0 32px; }
 }

@@ -1,5 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 import FAQ from "@/components/marketing/faq";
+import { INDUSTRIES } from "@/lib/industries";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 const SIGNUP_URL = `${APP_URL}/signup`;
@@ -49,7 +51,7 @@ export default function MarketingPage() {
           </div>
 
           <h1 className="fade-up fade-up-delay-1">
-            Your Strengths. Their Pain Points.{" "}
+            Your Strengths. Their Pain Points.<br />
             <span className="gradient-text">One Perfect Deck.</span>
           </h1>
 
@@ -342,6 +344,33 @@ export default function MarketingPage() {
               <h3>PDF Export</h3>
               <p>Need a file for email or print? Export any deck to a high-quality PDF in one click.</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Industries We Serve ── */}
+      <section className="mkt-section">
+        <div className="mkt-container">
+          <div className="section-header fade-up">
+            <div className="section-label"><span>By Industry</span></div>
+            <h2>Pitch decks and sales materials for your industry</h2>
+            <p>Whether you&apos;re closing enterprise software deals or winning a home renovation bid, PitchBoost builds the deck.</p>
+          </div>
+          <div className="fade-up" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: 14, marginTop: 48 }}>
+            {INDUSTRIES.map((ind) => (
+              <Link key={ind.slug} href={`/industries/${ind.slug}`} style={{ textDecoration: "none" }}>
+                <div className="industry-card" style={{ padding: "20px 22px", borderRadius: 14 }}>
+                  <div style={{ width: 40, height: 40, borderRadius: 10, background: "linear-gradient(135deg, rgba(31,107,107,0.1), rgba(232,102,90,0.08))", display: "flex", alignItems: "center", justifyContent: "center", color: "#1F6B6B", marginBottom: 12 }}>
+                    {ind.icon}
+                  </div>
+                  <div style={{ fontWeight: 600, fontSize: 14, color: "var(--ds-text-primary)", marginBottom: 4 }}>{ind.navLabel}</div>
+                  <div style={{ fontSize: 12, color: "#1F6B6B", fontWeight: 500 }}>See how it works →</div>
+                </div>
+              </Link>
+            ))}
+          </div>
+          <div className="fade-up" style={{ textAlign: "center", marginTop: 32 }}>
+            <Link href="/industries" className="btn btn-secondary">View all industries</Link>
           </div>
         </div>
       </section>
