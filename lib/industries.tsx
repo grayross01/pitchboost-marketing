@@ -16,6 +16,7 @@ export interface Industry {
   whoItsFor: string[];
   faqs: { q: string; a: string }[];
   ctaHeadline: string;
+  sampleDeckUrl?: string;
   industryTerm: string;
   shortLabel: string;
   shortLabelPlural: string;
@@ -568,6 +569,7 @@ export const INDUSTRIES: Industry[] = [
       },
     ],
     ctaHeadline: "Ready to pitch new clients with an agency deck built around their brief — not a credentials pack from your last pitch?",
+    sampleDeckUrl: "https://app.pitchboost.ai/p/agency/sample",
     industryTerm: "proposal",
     shortLabel: "agency",
     shortLabelPlural: "agencies",

@@ -102,10 +102,13 @@ export default async function IndustryPage({ params }: Props) {
             <p>Generated from real credentials — tailored to a specific prospect, ready in under 60 seconds.</p>
           </div>
           <div className="fade-up" style={{ marginTop: 48, borderRadius: 16, overflow: "hidden", border: "1px solid var(--ds-border)", background: "var(--ds-bg-light)", minHeight: 520, display: "flex", alignItems: "center", justifyContent: "center" }}>
-            {/* Replace with iframe embed: <iframe src="YOUR_DECK_URL" width="100%" height="520" frameBorder="0" allowFullScreen /> */}
-            <div style={{ textAlign: "center", color: "var(--ds-text-tertiary)", padding: 40 }}>
-              <div style={{ fontSize: 13 }}>Deck embed coming soon</div>
-            </div>
+            {industry.sampleDeckUrl ? (
+              <iframe src={industry.sampleDeckUrl} width="100%" height="520" frameBorder="0" allowFullScreen style={{ display: "block" }} />
+            ) : (
+              <div style={{ textAlign: "center", color: "var(--ds-text-tertiary)", padding: 40 }}>
+                <div style={{ fontSize: 13 }}>Deck embed coming soon</div>
+              </div>
+            )}
           </div>
           <p style={{ textAlign: "center", fontSize: 12, color: "var(--ds-text-tertiary)", marginTop: 16 }}>
             Interactive {industryTerm} — built with PitchBoost in under 60 seconds.
