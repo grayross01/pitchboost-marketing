@@ -1623,6 +1623,16 @@ body {
   .marketing .footer-brand { grid-column: span 2; max-width: 100%; }
 }
 
+/* --- Nav collapses earlier than the rest of mobile layout --- */
+/* Logo + 5 desktop nav links + 2 action buttons can't comfortably fit  */
+/* below ~960px — and pinch-zoom on tablets shrinks effective space     */
+/* further, causing Blog and Log In to overlap. Hide the inline nav     */
+/* sooner and surface the hamburger / mobile menu instead.              */
+@media (max-width: 960px) {
+  .marketing .nav-links, .marketing .nav-actions { display: none; }
+  .marketing .mobile-toggle { display: flex; }
+}
+
 /* --- Responsive: 768px --- */
 @media (max-width: 768px) {
   .marketing .mkt-section { padding: 64px 0; }
@@ -1633,8 +1643,8 @@ body {
   .marketing .hero-actions .btn { width: 100%; }
   .marketing .hero-proof-bar { flex-wrap: wrap; gap: 16px; }
   .marketing .proof-sep { display: none; }
-  .marketing .nav-links, .marketing .nav-actions { display: none; }
-  .marketing .mobile-toggle { display: flex; }
+  .marketing .section-header h2 { font-size: 1.85rem; }
+  /* nav-links/nav-actions hide handled by the 960px breakpoint above */
   .marketing .features-grid { grid-template-columns: 1fr; }
   .marketing .comparison-grid { grid-template-columns: 1fr; }
   .marketing .testimonials-grid { grid-template-columns: 1fr; }
