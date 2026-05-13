@@ -90,7 +90,7 @@ export default function MarketingNavbar() {
             PitchBoost
           </Link>
 
-          <div className="nav-links" style={{ position: "relative" }}>
+          <div className="nav-links" style={{ position: "absolute", left: "50%", transform: "translateX(-50%)" }}>
             <a href={hashHref("#features")} onClick={(e) => handleHash(e, "#features")}>Features</a>
             <a href={hashHref("#how-it-works")} onClick={(e) => handleHash(e, "#how-it-works")}>How It Works</a>
             <a href={hashHref("#pricing")} onClick={(e) => handleHash(e, "#pricing")}>Pricing</a>
