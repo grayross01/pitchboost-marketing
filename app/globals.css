@@ -239,7 +239,7 @@ body {
 .marketing .nav-links {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 40px;
 }
 .marketing .nav-links a {
   font-size: 0.9375rem;
