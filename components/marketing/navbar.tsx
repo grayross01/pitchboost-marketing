@@ -81,6 +81,28 @@ export default function MarketingNavbar() {
     return isHome ? hash : `/${hash}`;
   }
 
+  const navItemStyle: React.CSSProperties = {
+    display: "block",
+    padding: "18px 24px",
+    fontSize: "1rem",
+    fontWeight: 600,
+    color: "var(--ds-dark)",
+    textDecoration: "none",
+    borderBottom: "1px solid var(--ds-border)",
+  };
+
+  const subItemStyle: React.CSSProperties = {
+    display: "flex",
+    alignItems: "center",
+    gap: 10,
+    padding: "12px 24px 12px 36px",
+    fontSize: "0.875rem",
+    fontWeight: 500,
+    color: "var(--ds-text-secondary)",
+    textDecoration: "none",
+    borderBottom: "1px solid var(--ds-border)",
+  };
+
   return (
     <>
       <nav className={`navbar${scrolled ? " scrolled" : ""}`} id="navbar">
@@ -149,18 +171,35 @@ export default function MarketingNavbar() {
         </div>
       </nav>
 
-      <div className={`mobile-menu${mobileOpen ? " active" : ""}`} id="mobileMenu">
-        <button className="mobile-menu-close" id="mobileClose" aria-label="Close menu" onClick={closeMobile}>&times;</button>
+      <div
+        id="mobileMenu"
+        style={{
+          display: mobileOpen ? "flex" : "none",
+          position: "fixed", top: 0, left: 0, right: 0, bottom: 0,
+          background: "white", zIndex: 1001,
+          flexDirection: "column", alignItems: "stretch",
+          overflowY: "auto",
+        }}
+      >
+        {/* Header */}
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 24px", height: 72, borderBottom: "1px solid var(--ds-border)", flexShrink: 0 }}>
+          <Link href="/" className="nav-logo" onClick={closeMobile} style={{ fontSize: 16 }}>
+            <Image src="/icon.png" alt="PitchBoost" width={28} height={28} priority />
+            PitchBoost
+          </Link>
+          <button onClick={closeMobile} aria-label="Close menu" style={{ background: "none", border: "none", fontSize: "1.75rem", cursor: "pointer", color: "var(--ds-dark)", lineHeight: 1, padding: "4px 8px" }}>&times;</button>
+        </div>
 
-        <a href={hashHref("#features")} className="mobile-menu-link" onClick={(e) => handleHash(e, "#features")}>Features</a>
-        <a href={hashHref("#how-it-works")} className="mobile-menu-link" onClick={(e) => handleHash(e, "#how-it-works")}>How It Works</a>
-        <a href={hashHref("#pricing")} className="mobile-menu-link" onClick={(e) => handleHash(e, "#pricing")}>Pricing</a>
+        {/* Nav links */}
+        <a href={hashHref("#features")} onClick={(e) => handleHash(e, "#features")} style={navItemStyle}>Features</a>
+        <a href={hashHref("#how-it-works")} onClick={(e) => handleHash(e, "#how-it-works")} style={navItemStyle}>How It Works</a>
+        <a href={hashHref("#pricing")} onClick={(e) => handleHash(e, "#pricing")} style={navItemStyle}>Pricing</a>
 
-        {/* Mobile industries expand */}
+        {/* By Industry */}
         <button
-          className="mobile-industry-toggle"
           onClick={() => setMobileIndustriesOpen((v) => !v)}
           aria-expanded={mobileIndustriesOpen}
+          style={{ ...navItemStyle, display: "flex", justifyContent: "space-between", alignItems: "center", background: "none", border: "none", borderBottom: "1px solid var(--ds-border)", cursor: "pointer", fontFamily: "inherit" }}
         >
           By Industry
           <span style={{ transition: "transform 0.2s", display: "inline-block", transform: mobileIndustriesOpen ? "rotate(180deg)" : "none" }}>
@@ -169,22 +208,26 @@ export default function MarketingNavbar() {
         </button>
 
         {mobileIndustriesOpen && (
-          <div className="mobile-industry-list">
+          <div style={{ background: "var(--ds-bg-light)", borderBottom: "1px solid var(--ds-border)" }}>
             {INDUSTRIES.map((ind) => (
-              <Link key={ind.slug} href={`/industries/${ind.slug}`} onClick={closeMobile}>
+              <Link key={ind.slug} href={`/industries/${ind.slug}`} onClick={closeMobile} style={subItemStyle}>
+                <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#1F6B6B", flexShrink: 0, display: "inline-block" }} />
                 {ind.navLabel}
               </Link>
             ))}
-            <Link href="/industries" onClick={closeMobile} style={{ fontWeight: 600, color: "#1F6B6B", marginTop: 4 }}>
-              View all →
+            <Link href="/industries" onClick={closeMobile} style={{ ...subItemStyle, fontWeight: 700, color: "#1F6B6B" }}>
+              View all industries →
             </Link>
           </div>
         )}
 
-        <Link href="/blog" className="mobile-menu-link" onClick={closeMobile}>Blog</Link>
+        <Link href="/blog" onClick={closeMobile} style={navItemStyle}>Blog</Link>
 
-        <a href={LOGIN_URL} className="btn btn-secondary" onClick={closeMobile}>Log In</a>
-        <a href={SIGNUP_URL} className="btn btn-primary" onClick={closeMobile}>Get Started</a>
+        {/* Buttons */}
+        <div style={{ padding: "24px 24px 40px", display: "flex", flexDirection: "column", gap: 12, marginTop: "auto" }}>
+          <a href={LOGIN_URL} className="btn btn-secondary" onClick={closeMobile} style={{ width: "100%", textAlign: "center" }}>Log In</a>
+          <a href={SIGNUP_URL} className="btn btn-primary" onClick={closeMobile} style={{ width: "100%", textAlign: "center", color: "white" }}>Get Started</a>
+        </div>
       </div>
     </>
   );

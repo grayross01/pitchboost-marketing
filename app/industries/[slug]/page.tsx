@@ -124,7 +124,7 @@ export default async function IndustryPage({ params }: Props) {
             <h2>Common {shortLabel} sales materials — and where most fall short</h2>
             <p>Most {shortLabelPlural} rely on a mix of documents to win new business. The challenge is making each one feel like it was built for the specific client in the room.</p>
           </div>
-          <div className="fade-up" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 20, marginTop: 48 }}>
+          <div className="fade-up" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20, marginTop: 48 }}>
             {industry.salesMaterials.map(({ name, description }) => (
               <div key={name} style={{ background: "var(--ds-bg)", border: "1px solid var(--ds-border)", borderRadius: 14, padding: "22px 26px" }}>
                 <h3 style={{ fontSize: 15, fontWeight: 700, color: "var(--ds-text-primary)", marginBottom: 8 }}>{name}</h3>
