@@ -17,6 +17,8 @@ export interface Industry {
   faqs: { q: string; a: string }[];
   ctaHeadline: string;
   industryTerm: string;
+  shortLabel: string;
+  shortLabelPlural: string;
   salesMaterials: { name: string; description: string }[];
   whatToInclude: string[];
 }
@@ -117,6 +119,8 @@ export const INDUSTRIES: Industry[] = [
     ],
     ctaHeadline: "Stop sending the same sales deck to every prospect. Build a personalized B2B pitch for your next deal — free.",
     industryTerm: "sales deck",
+    shortLabel: "B2B",
+    shortLabelPlural: "B2B sales teams",
     salesMaterials: [
       { name: "Sales pitch deck", description: "A slide-based presentation covering the problem, your solution, proof points, and next steps — typically 10–15 slides used in discovery calls or formal presentations." },
       { name: "Discovery deck", description: "A lighter format used to walk a prospect through key questions and your initial read on their situation — often sent ahead of a formal proposal to set the agenda." },
@@ -228,6 +232,8 @@ export const INDUSTRIES: Industry[] = [
     ],
     ctaHeadline: "Stop losing enterprise deals to generic product overviews. Generate a tailored SaaS pitch deck for your next buyer — free.",
     industryTerm: "sales deck",
+    shortLabel: "SaaS",
+    shortLabelPlural: "SaaS companies",
     salesMaterials: [
       { name: "Enterprise pitch deck", description: "A solution-focused presentation for C-suite or VP-level buyers, centered on business outcomes rather than product features — typically used in formal evaluation processes." },
       { name: "Demo deck", description: "A slide walkthrough used during or after a product demo — covering use cases, workflow fit, and customer outcomes relevant to this specific buyer." },
@@ -339,6 +345,8 @@ export const INDUSTRIES: Industry[] = [
     ],
     ctaHeadline: "Ready to pitch investors, customers, and partners with a startup deck that actually reflects your traction?",
     industryTerm: "pitch deck",
+    shortLabel: "startup",
+    shortLabelPlural: "startups",
     salesMaterials: [
       { name: "Investor pitch deck", description: "A 10–15 slide presentation covering problem, solution, market size, traction, team, and the ask — used in VC meetings, angel rounds, and accelerator applications." },
       { name: "Customer demo deck", description: "A solution-focused slide deck used during or after a product demo — tailored to the specific buyer's pain points and how your product addresses them." },
@@ -445,7 +453,9 @@ export const INDUSTRIES: Industry[] = [
       },
     ],
     ctaHeadline: "Ready to send sponsorship pitch decks that connect your audience to each brand's goals — and close more deals?",
-    industryTerm: "sponsorship proposal",
+    industryTerm: "proposal",
+    shortLabel: "sponsorship",
+    shortLabelPlural: "sponsorship and media teams",
     salesMaterials: [
       { name: "Media kit", description: "A brand overview document covering your audience size, demographics, engagement rates, and content formats — typically the first thing a potential sponsor asks for." },
       { name: "Sponsorship proposal", description: "A tailored pitch connecting your audience and platform to a specific brand's marketing goals — with package options, activation ideas, and expected ROI." },
@@ -558,7 +568,9 @@ export const INDUSTRIES: Industry[] = [
       },
     ],
     ctaHeadline: "Ready to pitch new clients with an agency deck built around their brief — not a credentials pack from your last pitch?",
-    industryTerm: "credentials deck",
+    industryTerm: "proposal",
+    shortLabel: "agency",
+    shortLabelPlural: "agencies",
     salesMaterials: [
       { name: "Credentials / capabilities deck", description: "A curated presentation of your agency's relevant experience, team, and approach — tailored to the prospective client's industry and brief rather than a general capabilities overview." },
       { name: "Project proposal", description: "A formal response to a brief or RFP covering your strategic approach, timeline, deliverables, team, and investment — used in competitive pitches and formal reviews." },
@@ -666,6 +678,8 @@ export const INDUSTRIES: Industry[] = [
     ],
     ctaHeadline: "Ready to win more mandates with consulting proposals that prove you understand the client before the first meeting?",
     industryTerm: "proposal",
+    shortLabel: "consulting",
+    shortLabelPlural: "consultancies",
     salesMaterials: [
       { name: "Engagement proposal", description: "A tailored document covering your diagnosis of the client's situation, your recommended approach, timeline, team, and investment — the primary sales document in most consulting pitches." },
       { name: "Capability statement", description: "A concise overview of your firm's relevant practice areas, methodologies, and credentials — used in RFP responses or as an introductory leave-behind." },
@@ -772,7 +786,9 @@ export const INDUSTRIES: Industry[] = [
       },
     ],
     ctaHeadline: "Ready to win more preferred vendor agreements with recruiting pitch decks tailored to each client's talent needs?",
-    industryTerm: "capabilities presentation",
+    industryTerm: "pitch deck",
+    shortLabel: "recruiting",
+    shortLabelPlural: "recruiting agencies",
     salesMaterials: [
       { name: "Recruiting capabilities deck", description: "A tailored presentation of your agency's sector specialization, sourcing methodology, placement track record, and team — built around the prospective client's specific hiring needs." },
       { name: "Service proposal", description: "A formal document covering your approach to their open roles, your sourcing process, timeline expectations, and fee structure — used when a company wants a structured pitch before committing to an agency." },
@@ -879,7 +895,9 @@ export const INDUSTRIES: Industry[] = [
       },
     ],
     ctaHeadline: "Ready to win more corporate training programs with proposals that prove your methodology fits each client's team?",
-    industryTerm: "program proposal",
+    industryTerm: "proposal",
+    shortLabel: "coaching and training",
+    shortLabelPlural: "coaches and trainers",
     salesMaterials: [
       { name: "Corporate program proposal", description: "A tailored pitch connecting your coaching or training methodology to a specific company's team challenges and development goals — the primary document used to win corporate engagements." },
       { name: "Capability statement", description: "A concise overview of your programs, credentials, and past client outcomes — used as an introductory document or leave-behind when prospecting new corporate relationships." },
@@ -992,7 +1010,9 @@ export const INDUSTRIES: Industry[] = [
       },
     ],
     ctaHeadline: "Ready to win more bids with contractor proposals that look as professional as your work — built in 60 seconds?",
-    industryTerm: "estimate",
+    industryTerm: "proposal",
+    shortLabel: "contractor",
+    shortLabelPlural: "contractors",
     salesMaterials: [
       { name: "Project proposal / estimate", description: "A professional document covering scope of work, materials, timeline, and pricing — the primary document homeowners and property owners use to choose between contractors." },
       { name: "Scope of work document", description: "A detailed breakdown of what the job includes — and what it doesn't — used to set clear expectations, prevent scope creep, and protect both parties." },
@@ -1100,6 +1120,8 @@ export const INDUSTRIES: Industry[] = [
     ],
     ctaHeadline: "Ready to move more commercial deals forward with pitch materials built for owners, tenants, and investment committees?",
     industryTerm: "pitch deck",
+    shortLabel: "CRE",
+    shortLabelPlural: "CRE brokers and investors",
     salesMaterials: [
       { name: "Property overview / offering deck", description: "A polished presentation of a listing or investment opportunity — covering property highlights, financials, market context, and the deal thesis — circulated across tenants, investors, and ownership groups." },
       { name: "Listing presentation", description: "A pitch to win a new listing assignment — showing the owner why your brokerage team, market knowledge, and strategy will achieve the best outcome for their asset." },
@@ -1207,6 +1229,8 @@ export const INDUSTRIES: Industry[] = [
     ],
     ctaHeadline: "Ready to convert more prospects into long-term clients with financial advisor presentations built around their situation?",
     industryTerm: "presentation",
+    shortLabel: "financial advisor",
+    shortLabelPlural: "financial advisors",
     salesMaterials: [
       { name: "Prospect presentation", description: "A tailored pitch deck for an initial or follow-up meeting with a prospective client — covering their financial situation, your investment philosophy, firm credentials, and why you're the right advisor for their goals." },
       { name: "Investment philosophy deck", description: "A focused presentation of how your firm thinks about investing — asset allocation, risk management, manager selection — used to help prospects understand your approach before committing." },
@@ -1314,6 +1338,8 @@ export const INDUSTRIES: Industry[] = [
     ],
     ctaHeadline: "Ready to move more donors and funders to act with grant proposals and pitch decks built for each audience?",
     industryTerm: "pitch deck",
+    shortLabel: "nonprofit",
+    shortLabelPlural: "nonprofits",
     salesMaterials: [
       { name: "Donor presentation", description: "A tailored pitch for an individual major donor meeting — covering your mission, programs, impact metrics, and the specific initiative you're asking them to fund." },
       { name: "Grant pitch deck", description: "A visual presentation that accompanies or replaces a written grant narrative — used with foundations that accept or prefer presentation-based applications or introductory meetings." },
