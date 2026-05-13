@@ -82,10 +82,10 @@ export default async function IndustryPage({ params }: Props) {
           </p>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 16, marginTop: 36, flexWrap: "wrap" }}>
             <a href={SIGNUP_URL} className="btn btn-primary btn-lg">
-              Generate your {industry.navLabel.toLowerCase()} deck
+              Generate your {industry.navLabel.toLowerCase()} {industry.industryTerm}
             </a>
             <a href="#sample-deck" className="btn btn-ghost btn-lg">
-              See a sample deck
+              See a sample {industry.industryTerm}
             </a>
           </div>
         </div>
@@ -96,7 +96,7 @@ export default async function IndustryPage({ params }: Props) {
         <div className="mkt-container">
           <div className="section-header wide-header fade-up">
             <div className="section-label"><span>See it in action</span></div>
-            <h2>A real {industry.navLabel.toLowerCase()} pitch deck built with PitchBoost</h2>
+            <h2>A real {industry.navLabel.toLowerCase()} {industry.industryTerm} built with PitchBoost</h2>
             <p>Generated from real credentials — tailored to a specific prospect, ready in under 60 seconds.</p>
           </div>
           <div className="fade-up" style={{ marginTop: 48, borderRadius: 16, overflow: "hidden", border: "1px solid var(--ds-border)", background: "var(--ds-bg-light)", minHeight: 520, display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -106,22 +106,41 @@ export default async function IndustryPage({ params }: Props) {
             </div>
           </div>
           <p style={{ textAlign: "center", fontSize: 12, color: "var(--ds-text-tertiary)", marginTop: 16 }}>
-            Interactive deck — built with PitchBoost in under 60 seconds.
+            Interactive {industry.industryTerm} — built with PitchBoost in under 60 seconds.
           </p>
         </div>
       </section>
 
-      {/* ── Pain Points ── */}
+      {/* ── Common Sales Materials ── */}
       <section className="mkt-section" style={{ background: "var(--ds-bg-light)" }}>
         <div className="mkt-container">
           <div className="section-header wide-header fade-up">
+            <div className="section-label"><span>Sales materials</span></div>
+            <h2>Common {industry.navLabel.toLowerCase()} sales materials — and where most fall short</h2>
+            <p>Most {industry.navLabel.toLowerCase()} professionals rely on a mix of documents to win new business. The challenge is making each one feel like it was built for the room.</p>
+          </div>
+          <div className="fade-up" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 20, marginTop: 48 }}>
+            {industry.salesMaterials.map(({ name, description }) => (
+              <div key={name} style={{ background: "var(--ds-bg)", border: "1px solid var(--ds-border)", borderRadius: 14, padding: "22px 26px" }}>
+                <h3 style={{ fontSize: 15, fontWeight: 700, color: "var(--ds-text-primary)", marginBottom: 8 }}>{name}</h3>
+                <p style={{ fontSize: 13, color: "var(--ds-text-secondary)", lineHeight: 1.65, margin: 0 }}>{description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Why Generic Fails ── */}
+      <section className="mkt-section">
+        <div className="mkt-container">
+          <div className="section-header wide-header fade-up">
             <div className="section-label"><span>The problem</span></div>
-            <h2>Why most {industry.navLabel.toLowerCase()} pitch decks don&apos;t land</h2>
-            <p>It&apos;s rarely about the quality of your work or your offering. It&apos;s about how you present it.</p>
+            <h2>Why generic {industry.industryTerm}s lose deals</h2>
+            <p>It&apos;s rarely about the quality of your work or your offering. It&apos;s about how well the materials reflect the specific situation in the room.</p>
           </div>
           <div className="fade-up" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 24, marginTop: 48 }}>
             {industry.painPoints.map(({ title, body }) => (
-              <div key={title} style={{ background: "var(--ds-bg)", border: "1px solid var(--ds-border)", borderRadius: 16, padding: "28px 32px" }}>
+              <div key={title} style={{ background: "var(--ds-bg-light)", border: "1px solid var(--ds-border)", borderRadius: 16, padding: "28px 32px" }}>
                 <div style={{ display: "flex", alignItems: "flex-start", gap: 12, marginBottom: 12 }}>
                   <XIcon />
                   <h3 style={{ fontSize: 16, fontWeight: 700, color: "var(--ds-text-primary)", margin: 0 }}>{title}</h3>
@@ -133,13 +152,38 @@ export default async function IndustryPage({ params }: Props) {
         </div>
       </section>
 
-      {/* ── How It Works ── */}
+      {/* ── What to Include ── */}
+      <section className="mkt-section" style={{ background: "var(--ds-bg-light)" }}>
+        <div className="mkt-container">
+          <div className="section-header wide-header fade-up">
+            <div className="section-label"><span>What to include</span></div>
+            <h2>What to include in a strong {industry.navLabel.toLowerCase()} {industry.industryTerm}</h2>
+            <p>The difference between a {industry.industryTerm} that wins and one that gets &ldquo;we&apos;ll think about it&rdquo; comes down to specificity. Here&apos;s what needs to be in there.</p>
+          </div>
+          <div className="fade-up" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 16, marginTop: 48, maxWidth: 900, margin: "48px auto 0" }}>
+            {industry.whatToInclude.map((item) => (
+              <div key={item} style={{ display: "flex", alignItems: "flex-start", gap: 12, background: "var(--ds-bg)", border: "1px solid var(--ds-border)", borderRadius: 12, padding: "16px 20px" }}>
+                <CheckIcon />
+                <span style={{ fontSize: 14, color: "var(--ds-text-primary)", lineHeight: 1.6 }}>{item}</span>
+              </div>
+            ))}
+          </div>
+          <div className="fade-up" style={{ textAlign: "center", marginTop: 40 }}>
+            <p style={{ fontSize: 15, color: "var(--ds-text-secondary)", marginBottom: 20 }}>
+              PitchBoost pulls all of this from your existing credentials and the prospect&apos;s context — automatically.
+            </p>
+            <a href={SIGNUP_URL} className="btn btn-primary">Build your first {industry.industryTerm} free</a>
+          </div>
+        </div>
+      </section>
+
+      {/* ── How PitchBoost Helps ── */}
       <section id="how-it-works" className="mkt-section">
         <div className="mkt-container">
-          <div className="section-header fade-up">
-            <div className="section-label"><span>How it works</span></div>
-            <h2>Generate a tailored pitch deck in three steps</h2>
-            <p>No design skills. No starting from scratch. No generic templates.</p>
+          <div className="section-header wide-header fade-up">
+            <div className="section-label"><span>How PitchBoost helps</span></div>
+            <h2>How PitchBoost builds your {industry.navLabel.toLowerCase()} {industry.industryTerm}</h2>
+            <p>No design tools. No starting from a blank slide. No generic templates you have to gut and rebuild for every prospect.</p>
           </div>
           <div className="fade-up" style={{ display: "flex", flexDirection: "column", gap: 24, maxWidth: 720, margin: "48px auto 0" }}>
             {industry.howItWorks.map(({ step, title, body }) => (
@@ -155,42 +199,23 @@ export default async function IndustryPage({ params }: Props) {
         </div>
       </section>
 
-      {/* ── Outcomes + Who It's For ── */}
+      {/* ── Who It's For ── */}
       <section className="mkt-section" style={{ background: "var(--ds-bg-light)" }}>
         <div className="mkt-container">
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 64, alignItems: "start" }}>
-            <div className="fade-up">
-              <div className="section-label" style={{ marginBottom: 16 }}><span>What you get</span></div>
-              <h2 style={{ marginBottom: 16 }}>Everything you need to pitch faster and win more</h2>
-              <p style={{ color: "var(--ds-text-secondary)", marginBottom: 32, lineHeight: 1.7 }}>
-                PitchBoost handles the deck so you can focus on the work — and the relationships — that actually grow your business.
-              </p>
-              <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: 14, marginBottom: 36 }}>
-                {industry.outcomes.map((o) => (
-                  <li key={o} style={{ display: "flex", alignItems: "flex-start", gap: 12, fontSize: 15, color: "var(--ds-text-primary)" }}>
-                    <CheckIcon />
-                    <span>{o}</span>
-                  </li>
-                ))}
-              </ul>
-              <a href={SIGNUP_URL} className="btn btn-primary">
-                Start building free
-              </a>
-            </div>
-            <div className="fade-up">
-              <div className="section-label" style={{ marginBottom: 16 }}><span>Who it&apos;s for</span></div>
-              <h2 style={{ marginBottom: 16 }}>Built for {industry.label.toLowerCase()}</h2>
-              <p style={{ color: "var(--ds-text-secondary)", marginBottom: 28, lineHeight: 1.7 }}>
-                Whether you&apos;re a solo operator or part of a large team, PitchBoost adapts to how you pitch.
-              </p>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
-                {industry.whoItsFor.map((type) => (
-                  <span key={type} style={{ background: "var(--ds-bg)", border: "1px solid var(--ds-border)", borderRadius: 100, padding: "6px 14px", fontSize: 13, color: "var(--ds-text-secondary)", fontWeight: 500 }}>
-                    {type}
-                  </span>
-                ))}
-              </div>
-            </div>
+          <div className="section-header wide-header fade-up">
+            <div className="section-label"><span>Who it&apos;s for</span></div>
+            <h2>Built for {industry.label.toLowerCase()}</h2>
+            <p>Whether you&apos;re a solo operator or managing a full team, PitchBoost adapts to how your business pitches — and scales as you grow.</p>
+          </div>
+          <div className="fade-up" style={{ display: "flex", flexWrap: "wrap", gap: 12, justifyContent: "center", marginTop: 40 }}>
+            {industry.whoItsFor.map((type) => (
+              <span key={type} style={{ background: "var(--ds-bg)", border: "1px solid var(--ds-border)", borderRadius: 100, padding: "8px 18px", fontSize: 14, color: "var(--ds-text-secondary)", fontWeight: 500 }}>
+                {type}
+              </span>
+            ))}
+          </div>
+          <div style={{ textAlign: "center", marginTop: 40 }}>
+            <a href={SIGNUP_URL} className="btn btn-primary">Start building free</a>
           </div>
         </div>
       </section>
@@ -200,7 +225,7 @@ export default async function IndustryPage({ params }: Props) {
         <div className="mkt-container">
           <div className="section-header wide-header fade-up">
             <div className="section-label"><span>FAQ</span></div>
-            <h2>Questions about using PitchBoost for {industry.navLabel.toLowerCase()}</h2>
+            <h2>Questions about {industry.navLabel.toLowerCase()} {industry.industryTerm}s and PitchBoost</h2>
           </div>
           <div className="fade-up" style={{ maxWidth: 720, margin: "48px auto 0", display: "flex", flexDirection: "column", gap: 16 }}>
             {industry.faqs.map(({ q, a }) => (
@@ -219,10 +244,10 @@ export default async function IndustryPage({ params }: Props) {
           <div className="cta-box">
             <h2>{industry.ctaHeadline}</h2>
             <p>
-              Stop adapting generic templates. Generate your first tailored pitch deck free — no design skills required, no credit card needed.
+              Stop adapting generic templates. Generate your first tailored {industry.industryTerm} free — no design skills required, no credit card needed.
             </p>
             <a href={SIGNUP_URL} className="btn btn-primary btn-lg">
-              Generate your {industry.navLabel.toLowerCase()} deck free
+              Generate your {industry.navLabel.toLowerCase()} {industry.industryTerm} free
             </a>
           </div>
         </div>

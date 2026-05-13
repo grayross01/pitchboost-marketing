@@ -16,6 +16,9 @@ export interface Industry {
   whoItsFor: string[];
   faqs: { q: string; a: string }[];
   ctaHeadline: string;
+  industryTerm: string;
+  salesMaterials: { name: string; description: string }[];
+  whatToInclude: string[];
 }
 
 export const INDUSTRIES: Industry[] = [
@@ -103,8 +106,33 @@ export const INDUSTRIES: Industry[] = [
         q: "Can I track whether prospects have viewed my sales deck?",
         a: "Yes, on Pro and Business plans. You'll see who opened the deck, which slides they spent the most time on, and when they came back for a second look — so your follow-up timing is always right.",
       },
+      {
+        q: "Is PitchBoost a B2B sales deck template or an AI sales deck generator?",
+        a: "It's both — and neither, exactly. PitchBoost isn't a static B2B sales deck template you fill out manually, and it isn't a generic AI tool that produces the same output every time. It generates a personalized sales presentation based on your company's specific capabilities and each prospect's specific situation — so every deck feels purpose-built, not recycled from your last deal.",
+      },
+      {
+        q: "How do I explain our pricing to a prospect without losing the deal?",
+        a: "The way you frame pricing matters as much as the number itself. PitchBoost helps you build a pricing narrative that connects your investment to the prospect's specific pain points, expected ROI, and the cost of not acting — shifting the conversation from 'that's expensive' to 'that makes sense.'",
+      },
     ],
     ctaHeadline: "Stop sending the same sales deck to every prospect. Build a personalized B2B pitch for your next deal — free.",
+    industryTerm: "sales deck",
+    salesMaterials: [
+      { name: "Sales pitch deck", description: "A slide-based presentation covering the problem, your solution, proof points, and next steps — typically 10–15 slides used in discovery calls or formal presentations." },
+      { name: "Discovery deck", description: "A lighter format used to walk a prospect through key questions and your initial read on their situation — often sent ahead of a formal proposal to set the agenda." },
+      { name: "One-pager / leave-behind", description: "A single-page summary of your solution designed to be shared with buying committee members who weren't in the original meeting." },
+      { name: "Business case / ROI deck", description: "A financial justification document showing how your solution maps to revenue impact, cost reduction, or risk mitigation — used to justify budget to a CFO or procurement team." },
+      { name: "Proposal document", description: "A formal written proposal covering scope, timeline, investment, and terms — often the document that gets forwarded to legal or procurement before a decision." },
+    ],
+    whatToInclude: [
+      "The prospect's specific pain points mapped to your solution — not a generic feature list",
+      "Relevant case studies from companies with similar challenges, team size, or industry",
+      "Your differentiation from the alternatives they're likely evaluating",
+      "A clear ROI or business case framed in terms they care about: revenue, cost, or risk",
+      "Pricing context — not just a number, but why the investment makes sense relative to the problem",
+      "A specific, low-friction next step that creates momentum without pressure",
+      "Social proof: customer logos, quotes, or review ratings relevant to their industry or use case",
+    ],
   },
 
   {
@@ -189,8 +217,33 @@ export const INDUSTRIES: Industry[] = [
         q: "Can my whole sales team use PitchBoost?",
         a: "Yes. Business plan accounts support team collaboration so AEs, SEs, and sales managers all work from the same brand assets and product content — generating consistent, personalized pitch decks for every enterprise prospect.",
       },
+      {
+        q: "Is there an AI pitch deck maker for SaaS companies?",
+        a: "Yes — that's exactly what PitchBoost is built for. You upload your platform's capabilities, integration details, and customer case studies once. Then for each enterprise deal, you describe the prospect's company structure and specific challenges. PitchBoost generates a tailored SaaS sales deck that connects your product to their exact situation — in under 60 seconds. No SaaS pitch deck template to fill out manually, no starting from scratch for every deal.",
+      },
+      {
+        q: "How do I present SaaS pricing to an enterprise buyer without losing them?",
+        a: "Enterprise buyers don't evaluate SaaS pricing in isolation — they evaluate it against their current cost structure and expected ROI. PitchBoost helps you build a pricing slide that contextualizes your subscription cost in terms of efficiency gained, headcount avoided, or revenue impact — so the conversation shifts from sticker shock to justified investment.",
+      },
     ],
     ctaHeadline: "Stop losing enterprise deals to generic product overviews. Generate a tailored SaaS pitch deck for your next buyer — free.",
+    industryTerm: "sales deck",
+    salesMaterials: [
+      { name: "Enterprise pitch deck", description: "A solution-focused presentation for C-suite or VP-level buyers, centered on business outcomes rather than product features — typically used in formal evaluation processes." },
+      { name: "Demo deck", description: "A slide walkthrough used during or after a product demo — covering use cases, workflow fit, and customer outcomes relevant to this specific buyer." },
+      { name: "Business case / ROI deck", description: "A financial justification tool showing how your platform reduces cost, improves efficiency, or grows revenue — used to get budget approved by a CFO or procurement committee." },
+      { name: "Security & compliance overview", description: "A one-pager or deck covering data handling, certifications (SOC 2, ISO 27001, GDPR), and infrastructure — required reading for enterprise security reviews." },
+      { name: "Competitive comparison deck", description: "A side-by-side analysis showing how your platform stacks up against the alternatives the prospect is evaluating — used to anchor the buying decision in your favor." },
+    ],
+    whatToInclude: [
+      "How your platform solves the specific workflow problem this buyer faces — not a general product tour",
+      "Integration details relevant to their existing tech stack and current tools",
+      "A business case or ROI calculation tied to their team size, volume, or current process cost",
+      "Customer case studies from companies in the same industry or of similar scale",
+      "Implementation timeline and onboarding process — enterprise buyers need to know what adoption actually looks like",
+      "Security, compliance, and data handling details if they're enterprise or operate in a regulated industry",
+      "Pricing narrative — not just a number, but how the cost maps to the value they'll realize",
+    ],
   },
 
   {
@@ -275,8 +328,33 @@ export const INDUSTRIES: Industry[] = [
         q: "Can I save my best startup pitch deck as a template?",
         a: "Yes. Once you have a deck format that works well — for investor pitches, customer demos, or partner conversations — save it as a template. You can generate new tailored versions from that foundation without rebuilding from scratch each time.",
       },
+      {
+        q: "Is there an AI pitch deck maker for startups?",
+        a: "Yes — PitchBoost is designed for exactly this. You input your startup's story, traction, product, and differentiators once. For each meeting — investor, customer, or partner — you describe who you're pitching and their specific situation. PitchBoost generates a tailored startup pitch deck in under 60 seconds, no startup pitch deck template required.",
+      },
+      {
+        q: "How do I explain our pricing or business model to investors and customers in the same deck?",
+        a: "You don't have to — that's the point. PitchBoost lets you generate separate decks for each audience from the same underlying assets. Your investor deck frames the business model around market opportunity and unit economics. Your customer deck frames pricing around value delivered to their specific situation. Same company, different rooms, different decks.",
+      },
     ],
     ctaHeadline: "Ready to pitch investors, customers, and partners with a startup deck that actually reflects your traction?",
+    industryTerm: "pitch deck",
+    salesMaterials: [
+      { name: "Investor pitch deck", description: "A 10–15 slide presentation covering problem, solution, market size, traction, team, and the ask — used in VC meetings, angel rounds, and accelerator applications." },
+      { name: "Customer demo deck", description: "A solution-focused slide deck used during or after a product demo — tailored to the specific buyer's pain points and how your product addresses them." },
+      { name: "Partnership deck", description: "A deck that frames your startup as a compelling partner for distribution, integration, or co-selling relationships — focused on mutual fit and shared upside." },
+      { name: "One-pager / executive summary", description: "A single-page overview of your startup — market, solution, traction, and ask — used as a leave-behind or cold outreach follow-up." },
+      { name: "Company narrative deck", description: "A longer-form storytelling deck used for PR, speaking submissions, or conference presentations — built around your founding story and vision." },
+    ],
+    whatToInclude: [
+      "Your traction and proof points — numbers, milestones, and customer names that establish credibility",
+      "Market opportunity sizing — TAM, SAM, and why now is the right moment",
+      "Product differentiation — what you do that the incumbent or alternative doesn't",
+      "Team credentials — why your team is the right one to build this company",
+      "Competitive landscape — and why you win in the specific scenario you're targeting",
+      "Funding ask and use of proceeds (investor decks) or value proposition and pricing (customer decks)",
+      "Customer proof — quotes, case studies, or logos that reduce perceived risk",
+    ],
   },
 
   {
@@ -357,8 +435,33 @@ export const INDUSTRIES: Industry[] = [
         q: "Can I track whether a brand's team has viewed my sponsorship deck?",
         a: "Yes, on Pro and Business plans. You'll see who on the brand's marketing team opened the deck, which sponsorship packages they spent time reviewing, and when they came back — so you follow up when engagement is highest.",
       },
+      {
+        q: "Is there an AI sponsorship proposal maker for media companies and creators?",
+        a: "Yes — PitchBoost is built for exactly this. You upload your audience demographics, engagement data, and past campaign performance once. For each brand pitch, you describe the sponsor's marketing goals. PitchBoost generates a tailored sponsorship proposal in under 60 seconds that connects your audience to their specific objectives — no sponsorship deck template to manually customize for every brand.",
+      },
+      {
+        q: "How do I make my media kit or sponsorship proposal stand out from the competition?",
+        a: "Generic media kits list your numbers. Winning sponsorship proposals connect those numbers to what the brand is actually trying to achieve. PitchBoost builds sponsorship proposals that frame your audience in terms of the sponsor's specific campaign goals, brand fit, and expected activation ROI — so every pitch feels like it was written specifically for that brand.",
+      },
     ],
     ctaHeadline: "Ready to send sponsorship pitch decks that connect your audience to each brand's goals — and close more deals?",
+    industryTerm: "sponsorship proposal",
+    salesMaterials: [
+      { name: "Media kit", description: "A brand overview document covering your audience size, demographics, engagement rates, and content formats — typically the first thing a potential sponsor asks for." },
+      { name: "Sponsorship proposal", description: "A tailored pitch connecting your audience and platform to a specific brand's marketing goals — with package options, activation ideas, and expected ROI." },
+      { name: "Rate card", description: "A structured pricing document showing your sponsorship tiers, ad formats, and audience reach by package — used to anchor pricing conversations." },
+      { name: "Campaign results deck", description: "A post-campaign performance report showing a sponsor what they got for their investment — used to drive renewals and upsells." },
+      { name: "Audience insights deck", description: "A deeper dive into your audience data — psychographics, purchasing behavior, brand affinities — used to prove fit with a specific sponsor's target customer." },
+    ],
+    whatToInclude: [
+      "Audience demographics and psychographics — not just reach, but who those people actually are",
+      "Engagement metrics that prove your audience pays attention, not just follows",
+      "The brand's specific marketing objective and how your platform addresses it",
+      "Sponsorship packages with clear deliverables, formats, and pricing",
+      "Past brand partnerships and campaign outcomes that demonstrate ROI",
+      "Brand alignment rationale — why your audience is this sponsor's target customer",
+      "Exclusivity options and category protection if relevant to the sponsor",
+    ],
   },
 
   // ── SERVICES & PROFESSIONALS ─────────────────────────────────────────────
@@ -445,8 +548,33 @@ export const INDUSTRIES: Industry[] = [
         q: "Can I see which clients have viewed my pitch deck?",
         a: "Yes, on Pro and Business plans. You'll see which prospective clients opened the deck, which slides they spent time on, and when they viewed it — so you can follow up at exactly the right moment.",
       },
+      {
+        q: "Is there an AI pitch deck maker for agencies and creative studios?",
+        a: "Yes — PitchBoost is built for this exact problem. You upload your agency's credentials, case studies, and capabilities once. For each new business pitch, you describe the prospective client and their brief. PitchBoost generates a tailored agency credentials deck in under 60 seconds that's built around their industry and objectives — not a generic agency pitch deck template with the last client's logo swapped out.",
+      },
+      {
+        q: "How do we present our services to a new client without leading with a 40-slide credentials dump?",
+        a: "Lead with their problem, not your portfolio. PitchBoost structures every agency pitch deck around the prospective client's specific brief — opening with their challenge, then demonstrating relevance through your most applicable case studies and credentials. You still show your work. You just show it in the context of what they're trying to solve.",
+      },
     ],
     ctaHeadline: "Ready to pitch new clients with an agency deck built around their brief — not a credentials pack from your last pitch?",
+    industryTerm: "credentials deck",
+    salesMaterials: [
+      { name: "Credentials / capabilities deck", description: "A curated presentation of your agency's relevant experience, team, and approach — tailored to the prospective client's industry and brief rather than a general capabilities overview." },
+      { name: "Project proposal", description: "A formal response to a brief or RFP covering your strategic approach, timeline, deliverables, team, and investment — used in competitive pitches and formal reviews." },
+      { name: "Case study deck", description: "A focused presentation of your most relevant past work — showing results, process, and context that proves you can solve this client's specific problem." },
+      { name: "Process and methodology deck", description: "A walkthrough of how your agency works — discovery, strategy, creative, and delivery — used to set expectations and differentiate your approach from other agencies." },
+      { name: "SOW / project brief", description: "A formal statement of work covering scope, timeline, deliverables, and terms — the document that turns a won pitch into a signed engagement." },
+    ],
+    whatToInclude: [
+      "Relevant past work tailored to the client's industry — not your general portfolio",
+      "Your strategic approach to their specific brief or problem",
+      "Team bios for the people who will actually do the work",
+      "Awards, recognition, or industry credentials that establish credibility in their space",
+      "Your process and what working with your agency actually looks like",
+      "Timeline, deliverables, and investment — with enough detail to feel credible, not overwhelming",
+      "Client references or testimonials from comparable engagements",
+    ],
   },
 
   {
@@ -527,8 +655,33 @@ export const INDUSTRIES: Industry[] = [
         q: "Can I save engagement proposals as templates for specific practice areas?",
         a: "Yes. If you have a proposal format that works well for digital transformation engagements, or for pitching your analytics practice specifically, save it as a template. Generate new tailored proposals from that foundation for every future client.",
       },
+      {
+        q: "Is there an AI consulting proposal generator for professional services firms?",
+        a: "Yes — PitchBoost is built for this. You upload your firm's methodology, practice areas, and case studies once. For each prospect, you describe their industry, org structure, and the business challenge they're facing. PitchBoost generates a tailored consulting proposal in under 60 seconds — no consulting proposal template to manually fill out for every engagement.",
+      },
+      {
+        q: "How do we explain our consulting methodology to a prospect who's never worked with a firm like ours?",
+        a: "PitchBoost structures your proposal so the methodology follows the problem — not the other way around. Instead of opening with 'here's how we work,' the deck opens with a diagnosis of the client's specific situation, then introduces your approach as the right response to that situation. It's the difference between a consultant who pitches their framework and one who already understands your business.",
+      },
     ],
     ctaHeadline: "Ready to win more mandates with consulting proposals that prove you understand the client before the first meeting?",
+    industryTerm: "proposal",
+    salesMaterials: [
+      { name: "Engagement proposal", description: "A tailored document covering your diagnosis of the client's situation, your recommended approach, timeline, team, and investment — the primary sales document in most consulting pitches." },
+      { name: "Capability statement", description: "A concise overview of your firm's relevant practice areas, methodologies, and credentials — used in RFP responses or as an introductory leave-behind." },
+      { name: "Case study deck", description: "A focused presentation of your most relevant past engagements — showing the problem, your approach, and the outcome — used to establish credibility before the formal proposal." },
+      { name: "Methodology overview", description: "A deeper explanation of your firm's frameworks and approach — used with clients who want to understand how you work before committing to an engagement." },
+      { name: "Diagnostic summary", description: "A pre-proposal document summarizing your read on the client's situation — used after a discovery conversation to demonstrate how well you've listened before presenting your solution." },
+    ],
+    whatToInclude: [
+      "A clear diagnosis of the client's specific situation — showing you've done your homework before the pitch",
+      "Your methodology and framework — explained in terms of their problem, not your standard process",
+      "Relevant past engagements at similar companies or in the same industry",
+      "The team who will actually do the work — bios, relevant experience, and why this team for this engagement",
+      "Project timeline and key deliverables — specific enough to feel credible",
+      "Investment and ROI framing — connecting your fees to the business impact of the work",
+      "References or testimonials from clients who faced comparable challenges",
+    ],
   },
 
   {
@@ -609,8 +762,33 @@ export const INDUSTRIES: Industry[] = [
         q: "Can I save my best-performing recruiting pitch decks as templates?",
         a: "Yes. If a particular pitch format works well for tech company clients or executive search engagements, save it as a template and generate new tailored versions for every future prospective client.",
       },
+      {
+        q: "Is there an AI pitch deck maker for recruiting and staffing agencies?",
+        a: "Yes — PitchBoost is built for exactly this use case. You upload your agency's specializations, sector focus, and placement track record once. For each new client pitch, you describe the company's open roles and talent challenges. PitchBoost generates a tailored recruiting capabilities presentation in under 60 seconds — no staffing agency pitch deck template to manually customize for every prospect.",
+      },
+      {
+        q: "How do we present our recruiting services to a company that's never used a staffing agency before?",
+        a: "Start with their specific talent problem, not your agency's credentials. PitchBoost structures recruiting pitches so the opening frames the client's hiring challenge — role difficulty, time-to-fill risk, or growth pressure — before introducing your agency's approach as the answer. It's the difference between pitching a service and demonstrating you already understand the problem.",
+      },
     ],
     ctaHeadline: "Ready to win more preferred vendor agreements with recruiting pitch decks tailored to each client's talent needs?",
+    industryTerm: "capabilities presentation",
+    salesMaterials: [
+      { name: "Recruiting capabilities deck", description: "A tailored presentation of your agency's sector specialization, sourcing methodology, placement track record, and team — built around the prospective client's specific hiring needs." },
+      { name: "Service proposal", description: "A formal document covering your approach to their open roles, your sourcing process, timeline expectations, and fee structure — used when a company wants a structured pitch before committing to an agency." },
+      { name: "Market mapping report", description: "A preview of available talent in the client's target function or geography — used to demonstrate your pipeline depth and justify engaging your agency on a search." },
+      { name: "Candidate slate presentation", description: "A structured presentation of shortlisted candidates — profiles, fit rationale, and interview readiness — used to move active searches through the hiring process." },
+      { name: "Terms of business document", description: "A formal agreement covering your fee model, guarantee terms, replacement policy, and exclusivity provisions — the document that formalizes the client relationship." },
+    ],
+    whatToInclude: [
+      "Your specialization in the client's specific sector, function, or seniority level",
+      "Placement track record — roles filled, time-to-fill benchmarks, and retention rates",
+      "Your sourcing methodology — how you find candidates the client can't find on their own",
+      "Active talent pipeline relevant to their open roles or target profiles",
+      "Client references from companies with comparable hiring challenges",
+      "Fee structure and guarantee terms — explained clearly, not buried in fine print",
+      "Your team's relevant experience — who will actually be working the search",
+    ],
   },
 
   {
@@ -691,8 +869,33 @@ export const INDUSTRIES: Industry[] = [
         q: "Can I save proposal formats for different engagement types?",
         a: "Yes. Save your best executive coaching proposal, your corporate training pitch, and your speaking engagement deck as separate templates. Generate new tailored versions for every prospective client from those starting points.",
       },
+      {
+        q: "Is there an AI proposal generator for coaches, trainers, and speakers?",
+        a: "Yes — PitchBoost is built for this. You upload your methodology, program formats, outcomes data, and testimonials once. For each new corporate client, you describe their team, industry, and development goals. PitchBoost generates a tailored coaching or training proposal in under 60 seconds — no coaching proposal template to manually adapt for every company you pitch.",
+      },
+      {
+        q: "How do I explain the ROI of coaching or training to a corporate buyer?",
+        a: "Corporate L&D buyers are increasingly expected to justify investments in measurable terms. PitchBoost helps you frame your programs in the outcomes language that resonates with HR leaders and C-suite sponsors — reduced turnover, faster leadership development, improved team performance — connecting your methodology to the metrics they're being held to.",
+      },
     ],
     ctaHeadline: "Ready to win more corporate training programs with proposals that prove your methodology fits each client's team?",
+    industryTerm: "program proposal",
+    salesMaterials: [
+      { name: "Corporate program proposal", description: "A tailored pitch connecting your coaching or training methodology to a specific company's team challenges and development goals — the primary document used to win corporate engagements." },
+      { name: "Capability statement", description: "A concise overview of your programs, credentials, and past client outcomes — used as an introductory document or leave-behind when prospecting new corporate relationships." },
+      { name: "Outcomes and impact deck", description: "A presentation of measurable results from your past programs — client retention improvements, leadership pipeline growth, team performance gains — used to justify the investment to HR and C-suite buyers." },
+      { name: "Speaker one-pager", description: "A single-page overview of your speaking topics, audience fit, past engagements, and booking details — used with conference organizers and speaker bureaus." },
+      { name: "Case study deck", description: "A detailed account of a past program — the client's challenge, your approach, and the outcome — used to build credibility with prospects facing similar situations." },
+    ],
+    whatToInclude: [
+      "A diagnosis of the client's specific team challenge or development goal — not a generic program overview",
+      "Your methodology and why it addresses their particular situation",
+      "Measurable outcomes from comparable programs — data, not just testimonials",
+      "Testimonials or case studies from clients in similar industries or at similar company stages",
+      "Program options — engagement formats, durations, delivery methods (in-person, virtual, hybrid)",
+      "Investment and pricing — framed relative to the business impact of the development goal",
+      "Your credentials, certifications, and why you're the right fit for this team",
+    ],
   },
 
   // ── INDUSTRY VERTICALS ───────────────────────────────────────────────────
@@ -779,8 +982,33 @@ export const INDUSTRIES: Industry[] = [
         q: "Can I export my proposal as a PDF for clients who prefer a file?",
         a: "Yes, one-click PDF export is available on all plans. Send a link, a PDF, or both — whatever the client prefers.",
       },
+      {
+        q: "Is there an AI proposal maker for contractors and home service businesses?",
+        a: "Yes — PitchBoost is built for this. You set up your business profile with your services, past project photos, certifications, and warranty information once. For each new job, you describe the project scope and what the client cares about. PitchBoost generates a professional contractor proposal in under 60 seconds — no contractor proposal template to fill out for every bid.",
+      },
+      {
+        q: "How do I turn a basic quote into a proposal that actually wins the job?",
+        a: "A quote is just a number. A winning contractor proposal explains the process, shows proof of past work, clarifies what's included, and makes the client feel like they're choosing a professional — not just a price. PitchBoost turns your scope of work and project details into a client-ready proposal that sells your business, not just your price.",
+      },
     ],
     ctaHeadline: "Ready to win more bids with contractor proposals that look as professional as your work — built in 60 seconds?",
+    industryTerm: "estimate",
+    salesMaterials: [
+      { name: "Project proposal / estimate", description: "A professional document covering scope of work, materials, timeline, and pricing — the primary document homeowners and property owners use to choose between contractors." },
+      { name: "Scope of work document", description: "A detailed breakdown of what the job includes — and what it doesn't — used to set clear expectations, prevent scope creep, and protect both parties." },
+      { name: "Company credentials overview", description: "A brief presentation of your business — licensing, insurance, years in business, certifications, and guarantees — used to build trust before a client signs anything." },
+      { name: "Past project portfolio", description: "A visual showcase of comparable past work — photos, before-and-afters, and brief descriptions — used to help clients visualize the result and trust your execution." },
+      { name: "Material comparison guide", description: "A side-by-side breakdown of material options — composite vs. pressure-treated, different fixture grades — with pros, cons, and pricing, so clients feel informed rather than sold to." },
+    ],
+    whatToInclude: [
+      "A clear scope of work — what's included, what's not, and what the finished product looks like",
+      "Materials specified by name and grade — with options where relevant so the client can choose",
+      "Project timeline with realistic milestones and any dependencies",
+      "Before-and-after photos from comparable past projects in a similar style or scope",
+      "Licensing, insurance, and any relevant certifications that reduce the client's risk",
+      "Pricing breakdown and payment schedule — transparent enough to justify, not so detailed it invites nickel-and-diming",
+      "Warranty and guarantee terms — one of the most overlooked elements in contractor proposals",
+    ],
   },
 
   {
@@ -861,8 +1089,33 @@ export const INDUSTRIES: Industry[] = [
         q: "Can I include market data and comparable transactions?",
         a: "Yes. Upload your market comps, transaction data, and submarket analysis when setting up your property or deal. PitchBoost incorporates them into every relevant pitch deck — so your materials reflect your market expertise, not just the property specs.",
       },
+      {
+        q: "Is there an AI pitch deck maker for commercial real estate brokers?",
+        a: "Yes — PitchBoost is built for exactly this. You upload your brokerage credentials, market expertise, and transaction history once. For each deal, you describe the property, the target audience, and the key selling points. PitchBoost generates a tailored CRE pitch deck in under 60 seconds — no commercial real estate presentation template to manually customize for every listing or investment memo.",
+      },
+      {
+        q: "How do I create a property presentation that moves through an investment committee without getting stalled?",
+        a: "Investment committees stall on materials that require too much interpretation. PitchBoost builds CRE pitch decks that front-load the deal thesis, present financials clearly, and frame market context in terms of the investment decision — so every stakeholder who reviews the materials understands the opportunity without needing a broker on the call to explain it.",
+      },
     ],
     ctaHeadline: "Ready to move more commercial deals forward with pitch materials built for owners, tenants, and investment committees?",
+    industryTerm: "pitch deck",
+    salesMaterials: [
+      { name: "Property overview / offering deck", description: "A polished presentation of a listing or investment opportunity — covering property highlights, financials, market context, and the deal thesis — circulated across tenants, investors, and ownership groups." },
+      { name: "Listing presentation", description: "A pitch to win a new listing assignment — showing the owner why your brokerage team, market knowledge, and strategy will achieve the best outcome for their asset." },
+      { name: "Tenant pitch package", description: "Materials assembled to attract a specific tenant to a space — coverage area profile, co-tenancy highlights, site data, and deal structure — tailored to the tenant's business model and site criteria." },
+      { name: "Investment memo (OM)", description: "A formal offering memorandum for an investment sale — covering deal overview, financials, market analysis, and return projections — distributed to qualified investors." },
+      { name: "Market update deck", description: "A periodic presentation of submarket conditions, recent transactions, and forward-looking analysis — used to stay front of mind with investor and owner clients between active assignments." },
+    ],
+    whatToInclude: [
+      "Property or deal highlights — the most compelling facts about this opportunity, front-loaded",
+      "Market comps and submarket analysis that prove your pricing and positioning are grounded",
+      "Financial projections and return analysis — modeled to the buyer or investor's typical deal criteria",
+      "Your brokerage's transaction history in this market or product type — relevant experience builds trust",
+      "Tenant or buyer profile — who this deal is right for and why",
+      "Process and timeline — what the transaction looks like from LOI through close",
+      "Visibility into which stakeholders have reviewed the materials so you know who to call",
+    ],
   },
 
   {
@@ -943,8 +1196,33 @@ export const INDUSTRIES: Industry[] = [
         q: "Can I use PitchBoost for existing client communications, not just new prospect pitches?",
         a: "Yes. Beyond prospect presentations, advisors use PitchBoost to generate quarterly review decks, portfolio commentary presentations, and planning meeting materials — all tailored to individual client situations and branded to the firm.",
       },
+      {
+        q: "Is there an AI pitch deck maker for financial advisors and RIAs?",
+        a: "Yes — PitchBoost is built for this. You upload your firm's investment philosophy, team credentials, AUM profile, and service model once. For each prospect, you describe their financial situation and goals. PitchBoost generates a tailored financial advisor presentation in under 60 seconds — no financial advisor pitch deck template to manually customize for every prospect meeting.",
+      },
+      {
+        q: "How do I explain my investment philosophy to a prospect who's comparing multiple advisors?",
+        a: "Most advisor pitches say the same things: long-term focus, fiduciary standard, personalized service. PitchBoost helps you connect your investment philosophy to the prospect's specific situation — their goals, risk tolerance, and the financial decisions they're actually facing — so your philosophy feels like an answer to their questions, not a generic value statement that every other advisor says too.",
+      },
     ],
     ctaHeadline: "Ready to convert more prospects into long-term clients with financial advisor presentations built around their situation?",
+    industryTerm: "presentation",
+    salesMaterials: [
+      { name: "Prospect presentation", description: "A tailored pitch deck for an initial or follow-up meeting with a prospective client — covering their financial situation, your investment philosophy, firm credentials, and why you're the right advisor for their goals." },
+      { name: "Investment philosophy deck", description: "A focused presentation of how your firm thinks about investing — asset allocation, risk management, manager selection — used to help prospects understand your approach before committing." },
+      { name: "Firm credentials overview", description: "A structured overview of your firm — AUM, team, investment process, client profile, and performance history — used in competitive evaluations or advisor searches." },
+      { name: "Financial plan overview", description: "A visual summary of a prospect's or client's financial plan — goals, projections, gap analysis, and recommended actions — used to make complex plans tangible and actionable." },
+      { name: "Annual review deck", description: "A client-specific presentation covering portfolio performance, progress toward goals, and recommended adjustments — used to strengthen existing relationships and demonstrate ongoing value." },
+    ],
+    whatToInclude: [
+      "The prospect's specific financial situation and goals — their stage of life, risk profile, and what they're trying to achieve",
+      "Your investment philosophy — explained in response to their situation, not as a standalone statement",
+      "Firm credentials — AUM, years in business, team experience, and any regulatory recognitions",
+      "Your service model and what the client relationship actually looks like day-to-day",
+      "Fee structure and transparency — clearly explained in terms of what the client receives in return",
+      "Performance history or portfolio approach — framed relative to their goals and risk tolerance",
+      "Differentiation from the advisors or alternatives they're likely comparing you to",
+    ],
   },
 
   {
@@ -1025,8 +1303,33 @@ export const INDUSTRIES: Industry[] = [
         q: "Is PitchBoost affordable for a nonprofit operating on a lean budget?",
         a: "PitchBoost starts free and Pro is $29/month — a fraction of what even a single hour of agency design time costs. For nonprofits pitching multiple funders, the time and money saved on materials creation typically justifies the cost many times over.",
       },
+      {
+        q: "Is there an AI pitch deck maker for nonprofits and social impact organizations?",
+        a: "Yes — PitchBoost is built for exactly this. You upload your organization's mission, programs, impact data, and financials once. For each funder, donor, or corporate partner, you describe their giving priorities. PitchBoost generates a tailored nonprofit pitch deck in under 60 seconds — no nonprofit presentation template to manually adapt for every grant application or donor meeting.",
+      },
+      {
+        q: "How do we tell our mission's story differently for individual donors vs. foundations vs. corporate partners?",
+        a: "Each audience needs a different frame on the same story. Individual donors respond to human impact and legacy. Foundations want theory of change and measurable outcomes. Corporate partners want brand alignment and CSR fit. PitchBoost lets you generate a tailored pitch for each audience from the same underlying program and impact data — so you're always speaking the right language without starting over every time.",
+      },
     ],
     ctaHeadline: "Ready to move more donors and funders to act with grant proposals and pitch decks built for each audience?",
+    industryTerm: "pitch deck",
+    salesMaterials: [
+      { name: "Donor presentation", description: "A tailored pitch for an individual major donor meeting — covering your mission, programs, impact metrics, and the specific initiative you're asking them to fund." },
+      { name: "Grant pitch deck", description: "A visual presentation that accompanies or replaces a written grant narrative — used with foundations that accept or prefer presentation-based applications or introductory meetings." },
+      { name: "Impact report deck", description: "A funder-facing presentation of what their previous investment achieved — outcomes data, beneficiary stories, financial stewardship, and what's next — used to drive renewals and deepen relationships." },
+      { name: "Corporate partnership proposal", description: "A pitch connecting your mission to a corporation's CSR goals, employee engagement priorities, and brand values — used to secure multi-year partnerships and in-kind support." },
+      { name: "Event sponsorship pitch", description: "A tailored deck showing a sponsor what they get from supporting your event — audience reach, brand exposure, activation options, and alignment with their marketing objectives." },
+    ],
+    whatToInclude: [
+      "Your mission and theory of change — clearly explained in terms of outcomes, not just activities",
+      "Impact metrics — specific, measurable results that demonstrate your programs work",
+      "The specific initiative or funding need — what the money will do and why it matters now",
+      "Connection to the funder's priorities — why this organization and this initiative fits their giving focus",
+      "Financial transparency — how you steward resources and what overhead looks like in context",
+      "Beneficiary stories or testimonials that make the impact real and human",
+      "A specific ask with clear allocation — funders want to know exactly what their investment funds",
+    ],
   },
 ];
 
