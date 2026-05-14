@@ -1615,8 +1615,8 @@ body {
   .marketing .step-showcase.reverse { direction: ltr; }
   .marketing .features-grid { grid-template-columns: repeat(2, 1fr); }
   .marketing .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
-  .marketing .pricing-grid { grid-template-columns: repeat(2, 1fr); }
-  .marketing .pricing-card:last-child { grid-column: span 2; max-width: 400px; margin: 0 auto; }
+  .marketing .pricing-grid { grid-template-columns: 1fr; max-width: 480px; }
+  .marketing .pricing-card:last-child { grid-column: span 1; max-width: 100%; }
   .marketing .blog-grid { grid-template-columns: repeat(2, 1fr); }
   .marketing .blog-hero h1 { font-size: 2.25rem; }
   .marketing .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 32px; }
@@ -1647,6 +1647,7 @@ body {
   /* nav-links/nav-actions hide handled by the 960px breakpoint above */
   .marketing .features-grid { grid-template-columns: 1fr; }
   .marketing .comparison-grid { grid-template-columns: 1fr; }
+  .marketing .compare-two-col { grid-template-columns: 1fr !important; }
   .marketing .testimonials-grid { grid-template-columns: 1fr; }
   .marketing .pricing-grid { grid-template-columns: 1fr; }
   .marketing .pricing-card:last-child { grid-column: span 1; max-width: 100%; }
