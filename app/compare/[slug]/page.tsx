@@ -96,7 +96,7 @@ export default async function ComparePage({ params }: Props) {
       {/* ── Verdict ── */}
       <section className="mkt-section">
         <div className="mkt-container">
-          <div className="compare-two-col" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 32, maxWidth: 860, margin: "0 auto" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 32, maxWidth: 860, margin: "0 auto" }}>
             <div style={{ background: "var(--ds-bg-light)", border: "2px solid #1F6B6B", borderRadius: 16, padding: "28px 32px" }}>
               <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "#1F6B6B", marginBottom: 10 }}>PitchBoost</div>
               <p style={{ fontSize: 14, color: "var(--ds-text-secondary)", lineHeight: 1.7, margin: 0 }}>{competitor.verdict}</p>
@@ -169,7 +169,7 @@ export default async function ComparePage({ params }: Props) {
             <div className="section-label"><span>Who it&apos;s for</span></div>
             <h2>Which tool is right for you?</h2>
           </div>
-          <div className="fade-up compare-two-col" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 32, maxWidth: 820, margin: "48px auto 0" }}>
+          <div className="fade-up" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 32, maxWidth: 820, margin: "48px auto 0" }}>
             <div style={{ background: "var(--ds-bg)", border: "2px solid #1F6B6B", borderRadius: 16, padding: "28px 32px" }}>
               <h3 style={{ fontSize: 16, fontWeight: 700, color: "#1F6B6B", marginBottom: 20 }}>Choose PitchBoost if you…</h3>
               <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
