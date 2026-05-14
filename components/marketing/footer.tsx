@@ -12,6 +12,12 @@ const PRODUCT_LINKS = [
   { label: "Get Started", href: SIGNUP_URL },
 ] as const;
 
+const COMPARE_LINKS = [
+  { label: "PitchBoost vs Gamma", href: "/compare/pitchboost-vs-gamma" },
+  { label: "PitchBoost vs Beautiful.ai", href: "/compare/pitchboost-vs-beautiful-ai" },
+  { label: "PitchBoost vs Pitch", href: "/compare/pitchboost-vs-pitch" },
+] as const;
+
 const COMPANY_LINKS = [
   { label: "Contact", href: "mailto:support@pitchboost.ai" },
   { label: "Privacy Policy", href: "/privacy" },
@@ -33,7 +39,7 @@ export default function MarketingFooter() {
   return (
     <footer className="footer">
       <div className="mkt-container">
-        <div className="footer-grid" style={{ gridTemplateColumns: "2fr 1fr 1fr 1fr" }}>
+        <div className="footer-grid" style={{ gridTemplateColumns: "2fr 1fr 1fr 1fr 1fr" }}>
           <div className="footer-brand">
             <Link href="/" className="nav-logo" style={{ color: "white" }}>
               <Image src="/icon.png" alt="PitchBoost" width={28} height={28} />
@@ -66,6 +72,20 @@ export default function MarketingFooter() {
               ))}
               <li>
                 <Link href="/industries" style={{ fontWeight: 600 }}>View all →</Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="footer-col">
+            <h4>Compare</h4>
+            <ul>
+              {COMPARE_LINKS.map(({ label, href }) => (
+                <li key={label}>
+                  <Link href={href}>{label}</Link>
+                </li>
+              ))}
+              <li>
+                <Link href="/compare" style={{ fontWeight: 600 }}>View all →</Link>
               </li>
             </ul>
           </div>
