@@ -772,19 +772,11 @@ body {
   line-height: 1.7;
 }
 
-.marketing .feature-icon.blue {
-  background: rgba(31, 107, 107, 0.12);
-  color: #1F6B6B;
-}
-
-.marketing .feature-icon.purple {
-  background: rgba(42, 138, 138, 0.12);
-  color: #2A8A8A;
-}
-
+.marketing .feature-icon.blue,
+.marketing .feature-icon.purple,
 .marketing .feature-icon.pink {
-  background: rgba(72, 170, 160, 0.12);
-  color: #48AAA0;
+  background: linear-gradient(135deg, rgba(31,107,107,0.14), rgba(42,138,138,0.08));
+  color: #1F6B6B;
 }
 
 /* --- Comparison --- */
