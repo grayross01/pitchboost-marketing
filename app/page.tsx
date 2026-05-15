@@ -42,7 +42,7 @@ export default function MarketingPage() {
 
           <div className="hero-actions fade-up fade-up-delay-3">
             <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Start Building Free</a>
-            <a href="#how-it-works" className="btn btn-ghost btn-lg">See How It Works</a>
+            <a href="#sample-deck" className="btn btn-ghost btn-lg">View Sample Deck</a>
           </div>
 
           <div className="hero-proof-bar fade-up fade-up-delay-4">
@@ -59,6 +59,41 @@ export default function MarketingPage() {
             <div className="proof-item">
               <span className="proof-icon">◎</span>
               <span>Know who engaged and follow up with confidence</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Sample Deck ── */}
+      <section id="sample-deck" className="mkt-section" style={{ background: "var(--ds-bg-light)" }}>
+        <div className="mkt-container">
+          <div className="section-header fade-up">
+            <div className="section-label"><span>See it in action</span></div>
+            <h2>A real PitchBoost deck — built for a specific prospect</h2>
+          </div>
+          <div className="fade-up" style={{ maxWidth: 820, margin: "0 auto" }}>
+            <p style={{ fontSize: 15, color: "var(--ds-text-secondary)", lineHeight: 1.7, textAlign: "center", marginBottom: 32 }}>
+              This sample deck was generated from a fictional B2B SaaS company profile and a specific prospect scenario. It shows how PitchBoost turns brand context, prospect priorities, and deal notes into a personalized sales deck — ready to send.
+            </p>
+            <div style={{ borderRadius: 16, overflow: "hidden", border: "1px solid var(--ds-border)", background: "var(--ds-bg)", minHeight: 560 }}>
+              <iframe
+                src="https://app.pitchboost.ai/p/gong/sample"
+                width="100%"
+                height="560"
+                frameBorder="0"
+                allowFullScreen
+                style={{ display: "block" }}
+              />
+            </div>
+            <div style={{ textAlign: "center", marginTop: 20 }}>
+              <a
+                href="https://app.pitchboost.ai/p/gong/sample"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ fontSize: 14, fontWeight: 600, color: "#1F6B6B", textDecoration: "none" }}
+              >
+                View full sample deck →
+              </a>
             </div>
           </div>
         </div>
