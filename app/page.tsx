@@ -78,11 +78,11 @@ export default function MarketingPage() {
             <p style={{ fontSize: 13, color: "var(--ds-text-tertiary)", lineHeight: 1.6, textAlign: "center", marginBottom: 32 }}>
               This sample is not affiliated with or endorsed by Gong.
             </p>
-            <div style={{ borderRadius: 16, overflow: "hidden", border: "1px solid var(--ds-border)", background: "var(--ds-bg)", minHeight: 560 }}>
+            <div style={{ borderRadius: 16, overflow: "hidden", border: "1px solid var(--ds-border)", background: "var(--ds-bg)", minHeight: 720 }}>
               <iframe
                 src="https://app.pitchboost.ai/p/gong/sample"
                 width="100%"
-                height="560"
+                height="720"
                 frameBorder="0"
                 allowFullScreen
                 style={{ display: "block" }}
