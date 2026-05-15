@@ -71,7 +71,7 @@ export default function MarketingPage() {
             <div className="section-label"><span>See it in action</span></div>
             <h2>A real PitchBoost deck — built for a specific prospect</h2>
           </div>
-          <div className="fade-up" style={{ maxWidth: 820, margin: "0 auto" }}>
+          <div className="fade-up">
             <p style={{ fontSize: 15, color: "var(--ds-text-secondary)", lineHeight: 1.7, textAlign: "center", marginBottom: 12 }}>
               This is a fictional sample deck showing how PitchBoost could tailor a sales presentation for a B2B SaaS prospect like Gong — pulling in brand context, prospect priorities, and deal notes to produce a personalized deck ready to send.
             </p>
