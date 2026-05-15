@@ -282,13 +282,6 @@ export default function MarketingPage() {
                 title: "Contractors and service businesses",
                 body: "A polished, specific proposal signals professionalism and attention to detail before the job even starts — and wins more bids because of it.",
               },
-              {
-                icon: (
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><line x1="19" y1="8" x2="19" y2="14" /><line x1="22" y1="11" x2="16" y2="11" /></svg>
-                ),
-                title: "Partnerships and sponsorship teams",
-                body: "Build custom sponsorship proposals and partnership decks that speak to each partner&apos;s specific goals and audience.",
-              },
             ].map(({ icon, title, body }) => (
               <div key={title} style={{ background: "var(--ds-bg)", border: "1px solid var(--ds-border)", borderRadius: 16, padding: "24px 28px" }}>
                 <div style={{ width: 44, height: 44, borderRadius: 12, background: "linear-gradient(135deg, rgba(31,107,107,0.1), rgba(232,102,90,0.08))", display: "flex", alignItems: "center", justifyContent: "center", color: "#1F6B6B", marginBottom: 16 }}>
@@ -344,17 +337,11 @@ export default function MarketingPage() {
               {
                 color: "purple",
                 icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg>,
-                title: "Hosted interactive deck links",
-                body: "Send a link, not a file. Your prospect gets a clean, interactive experience — and you know the moment they open it.",
+                title: "Share as a link or export to PDF",
+                body: "Send a branded interactive link your prospect opens in the browser, or export a PDF for email and print — whichever fits the situation.",
               },
               {
                 color: "pink",
-                icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" /><polyline points="16 6 12 2 8 6" /><line x1="12" y1="2" x2="12" y2="15" /></svg>,
-                title: "PDF export",
-                body: "Export any deck to a high-quality PDF for email attachments, printing, or offline sharing.",
-              },
-              {
-                color: "blue",
                 icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" /></svg>,
                 title: "Viewer analytics",
                 body: "Know which slides your prospect spent time on before you pick up the phone. Follow up with the right message, at the right moment.",
