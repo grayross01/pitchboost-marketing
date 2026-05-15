@@ -72,8 +72,11 @@ export default function MarketingPage() {
             <h2>A real PitchBoost deck — built for a specific prospect</h2>
           </div>
           <div className="fade-up" style={{ maxWidth: 820, margin: "0 auto" }}>
-            <p style={{ fontSize: 15, color: "var(--ds-text-secondary)", lineHeight: 1.7, textAlign: "center", marginBottom: 32 }}>
-              This sample deck was generated from a fictional B2B SaaS company profile and a specific prospect scenario. It shows how PitchBoost turns brand context, prospect priorities, and deal notes into a personalized sales deck — ready to send.
+            <p style={{ fontSize: 15, color: "var(--ds-text-secondary)", lineHeight: 1.7, textAlign: "center", marginBottom: 12 }}>
+              This is a fictional sample deck showing how PitchBoost could tailor a sales presentation for a B2B SaaS prospect like Gong — pulling in brand context, prospect priorities, and deal notes to produce a personalized deck ready to send.
+            </p>
+            <p style={{ fontSize: 13, color: "var(--ds-text-tertiary)", lineHeight: 1.6, textAlign: "center", marginBottom: 32 }}>
+              This sample is not affiliated with or endorsed by Gong.
             </p>
             <div style={{ borderRadius: 16, overflow: "hidden", border: "1px solid var(--ds-border)", background: "var(--ds-bg)", minHeight: 560 }}>
               <iframe
