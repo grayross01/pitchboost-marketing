@@ -37,7 +37,7 @@ export default function MarketingPage() {
           </h1>
 
           <p className="fade-up fade-up-delay-2">
-            PitchBoost builds personalized pitch decks for specific prospects, deals, and use cases — so your materials reflect their priorities, not a generic template.
+            PitchBoost builds personalized pitch decks, presentations, and proposals for specific prospects, deals, and use cases — so your materials reflect their priorities, not a generic template.
           </p>
 
           <div className="hero-actions fade-up fade-up-delay-3">
@@ -108,7 +108,7 @@ export default function MarketingPage() {
           <div className="section-header fade-up">
             <div className="section-label"><span>How It Works</span></div>
             <h2>From deal notes to a deck worth sending</h2>
-            <p>Three steps to a pitch deck that speaks directly to your prospect — not a generic template with their name dropped in.</p>
+            <p>Three steps to a presentation that speaks directly to your prospect — not a generic template with their name dropped in.</p>
           </div>
 
           {/* Step 1 */}

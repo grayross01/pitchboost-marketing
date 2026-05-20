@@ -932,6 +932,7 @@ export const INDUSTRIES: Industry[] = [
     heroHeadline: "Professional contractor proposals that win more bids",
     heroSubhead:
       "In home services, the best work doesn't always win the job — the best presentation does. PitchBoost helps you create a professional, branded proposal for every project that shows clients exactly why they should choose you over the competition.",
+    sampleDeckUrl: "https://app.pitchboost.ai/p/sample/chicago-roofing",
     painPoints: [
       {
         title: "You're losing bids to contractors who look more polished on paper",

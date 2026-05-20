@@ -6,7 +6,7 @@ const SIGNUP_URL = `${APP_URL}/signup`;
 export const metadata: Metadata = {
   title: "Use Cases",
   description:
-    "See how B2B sales teams, agencies, SaaS companies, and consultancies use PitchBoost to create personalized pitch decks that win deals.",
+    "See how B2B sales teams, agencies, SaaS companies, and consultancies use PitchBoost to create personalized pitch decks, presentations, and proposals that win deals.",
 };
 
 const USE_CASES = [
@@ -38,9 +38,9 @@ const USE_CASES = [
   {
     id: "agencies",
     label: "Agencies",
-    headline: "Pitch prospective clients with decks that speak their language",
+    headline: "Win new clients with proposals that speak their language",
     description:
-      "When you're pitching a new client, the deck needs to feel like it was built just for them. PitchBoost maps your agency's services to what each prospect actually needs — so every pitch feels bespoke without the hours of research and design.",
+      "When you're pitching a new client, the proposal needs to feel like it was built just for them. PitchBoost maps your agency's services to what each prospect actually needs — so every proposal feels bespoke without the hours of research and design.",
     painPoints: [
       "Every pitch deck starts from scratch or a stale template",
       "Designers are bottlenecked with deck requests",
@@ -61,7 +61,7 @@ const USE_CASES = [
   {
     id: "saas",
     label: "SaaS Companies",
-    headline: "Turn every enterprise prospect into a tailored pitch",
+    headline: "Turn every enterprise prospect into a tailored presentation",
     description:
       "Enterprise deals demand more than a product overview. PitchBoost builds a deck that positions your platform as the answer to each prospect's specific challenges — so your AEs walk into every call with a pitch that already resonates.",
     painPoints: [
@@ -87,7 +87,7 @@ const USE_CASES = [
     label: "Consultancies & Professional Services",
     headline: "Show every prospect you already understand their business",
     description:
-      "When you're pitching an engagement, demonstrating that you get the client's world is half the battle. PitchBoost connects your expertise to each prospect's specific situation — so you walk in looking prepared, not generic.",
+      "When you're pitching or proposing an engagement, demonstrating that you get the client's world is half the battle. PitchBoost connects your expertise to each prospect's specific situation — so you walk in looking prepared, not generic.",
     painPoints: [
       "Proposals and pitch decks require hours of prospect research",
       "Hard to personalize at scale when pitching multiple prospects",
