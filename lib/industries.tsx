@@ -39,6 +39,7 @@ export const INDUSTRIES: Industry[] = [
     heroHeadline: "B2B sales pitch decks personalized for every prospect, in 60 seconds",
     heroSubhead:
       "Your reps know the prospect. PitchBoost builds the deck. Generate a tailored sales pitch for every deal — pulled from your product's capabilities and mapped to that buyer's specific pain points — before they even get on the call.",
+    sampleDeckUrl: "https://app.pitchboost.ai/p/sample/klaviyo-us-dollarshaveclub-com",
     painPoints: [
       {
         title: "Every rep sends the same generic sales deck",
@@ -152,6 +153,7 @@ export const INDUSTRIES: Industry[] = [
     heroHeadline: "SaaS pitch decks tailored to every enterprise buyer's situation",
     heroSubhead:
       "Enterprise buyers don't want a product overview — they want to see how your platform solves their specific problem. PitchBoost builds a tailored SaaS pitch deck for every prospect, from your product capabilities, in under 60 seconds.",
+    sampleDeckUrl: "https://app.pitchboost.ai/p/sample/klaviyo-us-dollarshaveclub-com",
     painPoints: [
       {
         title: "One product deck for vastly different buyer personas",
