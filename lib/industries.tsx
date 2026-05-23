@@ -267,6 +267,7 @@ export const INDUSTRIES: Industry[] = [
     heroHeadline: "Startup pitch decks that look enterprise-grade without the enterprise budget",
     heroSubhead:
       "Startups pitch investors, customers, and partners simultaneously — often with the same founder doing all three. PitchBoost generates a polished, branded pitch deck for any audience in under 60 seconds, so you spend time building the company, not building slides.",
+    sampleDeckUrl: "https://app.pitchboost.ai/p/sample/playground-goddardschool-com",
     painPoints: [
       {
         title: "You're pitching investors, customers, and partners with the same deck",
