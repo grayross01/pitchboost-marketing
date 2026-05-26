@@ -99,7 +99,7 @@ export default async function IndustryPage({ params }: Props) {
           <div className="section-header wide-header fade-up">
             <div className="section-label"><span>See it in action</span></div>
             <h2>A real {shortLabel} {industryTerm}, built with PitchBoost</h2>
-            <p>Generated from real credentials — tailored to a specific prospect, ready in under 60 seconds.</p>
+            <p>Personalized to a specific prospect and their business — generated in under 60 seconds.</p>
           </div>
           <div className="fade-up" style={{ marginTop: 48, borderRadius: 16, overflow: "hidden", border: "1px solid var(--ds-border)", background: "var(--ds-bg-light)", minHeight: 520, display: "flex", alignItems: "center", justifyContent: "center" }}>
             {industry.sampleDeckUrl ? (
