@@ -53,7 +53,7 @@ export default function MarketingPage() {
             <div className="proof-sep" />
             <div className="proof-item">
               <span className="proof-icon">◎</span>
-              <span>Your brand, credentials, and supporting docs</span>
+              <span>Your brand, case studies, and supporting docs</span>
             </div>
             <div className="proof-sep" />
             <div className="proof-item">
