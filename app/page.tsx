@@ -287,7 +287,7 @@ export default function MarketingPage() {
         <div className="mkt-container">
           <div className="section-header fade-up">
             <div className="section-label"><span>Who It&apos;s For</span></div>
-            <h2>Built for people who pitch, but don&apos;t have a deck team</h2>
+            <h2>Built for people who pitch, but don&apos;t have a design team</h2>
             <p>Generic decks lose deals. PitchBoost gives anyone who pitches the ability to show up with materials that feel built for the specific person, company, or opportunity they&apos;re trying to win.</p>
           </div>
           <div className="fade-up" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 20, marginTop: 48 }}>
