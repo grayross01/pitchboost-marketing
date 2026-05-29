@@ -176,7 +176,7 @@ export default function AIDeckBuilderPage() {
             </div>
           </div>
           <h1 style={{ fontSize: "clamp(1.9rem, 3.8vw, 2.75rem)", fontWeight: 800, color: "var(--ds-dark)", maxWidth: 820, margin: "0 auto 20px", lineHeight: 1.15, fontFamily: "var(--font-inter, 'Inter'), sans-serif" }}>
-            The AI deck builder that writes for this deal, not every deal
+            Personalized pitch decks, presentations, and proposals that close more deals
           </h1>
           <p style={{ color: "var(--ds-text-light)", fontSize: "1.1rem", maxWidth: 640, margin: "0 auto 36px", lineHeight: 1.7 }}>
             Describe your prospect, your opportunity, and your goals. PitchBoost generates a fully structured pitch deck, presentation, or proposal in under 60 seconds — with copy written for this specific buyer, not a template you have to gut and rewrite.
