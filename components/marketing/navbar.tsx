@@ -135,7 +135,7 @@ export default function MarketingNavbar() {
               </button>
 
               {activeDropdown === "features" && (
-                <div className="nav-dropdown">
+                <div className="nav-dropdown" style={{ gridTemplateColumns: "auto auto auto" }}>
                   {FEATURE_GROUPS.map((group) => (
                     <div key={group.label}>
                       <div className="nav-dropdown-group-label">{group.label}</div>
