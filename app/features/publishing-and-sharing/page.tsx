@@ -125,7 +125,7 @@ export default function PublishingAndSharingPage() {
             Publish a branded interactive link, export to PDF or PowerPoint, host on your own domain, and control exactly who can access it. Every format, every privacy setting — from the same place you built the deck.
           </p>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 16, flexWrap: "wrap" }}>
-            <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Start Building Free</a>
+            <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Publish Your First Deck Free</a>
           </div>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 40, marginTop: 48, flexWrap: "wrap" }}>
             {["Link, PDF, or PPT", "Your domain, your brand", "Public, private, or password-protected"].map((item) => (
@@ -223,7 +223,7 @@ export default function PublishingAndSharingPage() {
           <div className="cta-box fade-up">
             <h2>Built, published, and in their inbox — in minutes.</h2>
             <p>Generate your first personalized pitch deck free and share it as a branded link, PDF, or PowerPoint.</p>
-            <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Start Building Free</a>
+            <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Publish Your First Deck Free</a>
           </div>
         </div>
       </section>

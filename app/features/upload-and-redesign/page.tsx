@@ -142,7 +142,7 @@ export default function UploadAndRedesignPage() {
             You have a deck with good content — it just doesn&apos;t look the part. Upload your existing PPT or PPTX and PitchBoost redesigns it with your brand, cleans up the layout, and personalizes it for your specific prospect — without starting over.
           </p>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 16, flexWrap: "wrap" }}>
-            <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Try It Free</a>
+            <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Upload Your Deck Free</a>
             <Link href="/features/ai-deck-builder" className="btn btn-ghost btn-lg">Build from scratch instead</Link>
           </div>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 40, marginTop: 48, flexWrap: "wrap" }}>
@@ -279,7 +279,7 @@ export default function UploadAndRedesignPage() {
           <div className="cta-box fade-up">
             <h2>Your best deck is the one you already have — polished.</h2>
             <p>Upload your existing presentation and get back a version that&apos;s branded, clean, and ready to send.</p>
-            <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Try It Free</a>
+            <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Upload Your Deck Free</a>
           </div>
         </div>
       </section>

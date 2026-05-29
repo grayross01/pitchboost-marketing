@@ -128,7 +128,7 @@ export default function TeamAndPermissionsPage() {
             Add unlimited team members with the right roles for their needs. Share brand assets, templates, and image libraries across the workspace. And for advanced users, connect PitchBoost to your own AI tooling via the API or MCP server.
           </p>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 16, flexWrap: "wrap" }}>
-            <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Start Building Free</a>
+            <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Set Up Your Team Free</a>
           </div>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 40, marginTop: 48, flexWrap: "wrap" }}>
             {["Unlimited team members", "Roles suited to every access level", "API and MCP server access"].map((item) => (
@@ -236,7 +236,7 @@ export default function TeamAndPermissionsPage() {
           <div className="cta-box fade-up">
             <h2>Your whole team. One platform. Better pitches.</h2>
             <p>Start free and add your team when you&apos;re ready. No per-seat limits on the Business plan.</p>
-            <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Start Building Free</a>
+            <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Set Up Your Team Free</a>
           </div>
         </div>
       </section>

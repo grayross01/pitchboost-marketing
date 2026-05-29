@@ -180,7 +180,7 @@ export default function BrandAndImagesPage() {
           <div className="cta-box fade-up">
             <h2>Look like a team that has its act together.</h2>
             <p>Set up your brand kit once and every deck your team builds will reflect it — automatically.</p>
-            <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Start Building Free</a>
+            <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Set Up Your Brand Kit Free</a>
           </div>
         </div>
       </section>

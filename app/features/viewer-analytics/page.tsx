@@ -129,7 +129,7 @@ export default function ViewerAnalyticsPage() {
             Every time someone opens your deck, PitchBoost tracks who viewed it, which slides held their attention, how long they spent, and when they came back. Follow up with the right message at exactly the right moment — based on what they actually read.
           </p>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 16, flexWrap: "wrap" }}>
-            <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Start Building Free</a>
+            <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Start Tracking Free</a>
           </div>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 40, marginTop: 48, flexWrap: "wrap" }}>
             {["Who opened it and when", "Slide-by-slide time tracking", "Return visit notifications"].map((item) => (
@@ -233,7 +233,7 @@ export default function ViewerAnalyticsPage() {
           <div className="cta-box fade-up">
             <h2>Follow up smarter. Close more deals.</h2>
             <p>Build your first personalized deck free and see exactly how it lands — every view, every slide, every return visit.</p>
-            <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Start Building Free</a>
+            <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Start Tracking Free</a>
           </div>
         </div>
       </section>
