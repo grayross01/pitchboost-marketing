@@ -144,7 +144,7 @@ export default function OutputTypesPage() {
             </div>
           </div>
           <h1 style={{ fontSize: "clamp(1.9rem, 3.8vw, 2.75rem)", fontWeight: 800, color: "var(--ds-dark)", maxWidth: 780, margin: "0 auto 20px", lineHeight: 1.15, fontFamily: "var(--font-inter, 'Inter'), sans-serif" }}>
-            The right format for every deal — built for the specific conversation
+            The right format for every deal and every conversation
           </h1>
           <p style={{ color: "var(--ds-text-light)", fontSize: "1.1rem", maxWidth: 620, margin: "0 auto 36px", lineHeight: 1.7 }}>
             Different opportunities call for different materials. PitchBoost builds pitch decks, sales presentations, business proposals, one-sheets, and buyer FAQs — each structured for its purpose and personalized to the prospect in front of you.

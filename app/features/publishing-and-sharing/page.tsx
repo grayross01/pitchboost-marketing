@@ -119,7 +119,7 @@ export default function PublishingAndSharingPage() {
             </div>
           </div>
           <h1 style={{ fontSize: "clamp(1.9rem, 3.8vw, 2.75rem)", fontWeight: 800, color: "var(--ds-dark)", maxWidth: 780, margin: "0 auto 20px", lineHeight: 1.15, fontFamily: "var(--font-inter, 'Inter'), sans-serif" }}>
-            Share your deck the way that wins this deal
+            Professional delivery for every pitch, proposal, and presentation
           </h1>
           <p style={{ color: "var(--ds-text-light)", fontSize: "1.1rem", maxWidth: 620, margin: "0 auto 36px", lineHeight: 1.7 }}>
             Publish a branded interactive link, export to PDF or PowerPoint, host on your own domain, and control exactly who can access it. Every format, every privacy setting — from the same place you built the deck.

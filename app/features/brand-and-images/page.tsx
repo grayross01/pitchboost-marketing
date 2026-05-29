@@ -95,7 +95,7 @@ export default function BrandAndImagesPage() {
             </div>
           </div>
           <h1 style={{ fontSize: "clamp(1.9rem, 3.8vw, 2.75rem)", fontWeight: 800, color: "var(--ds-dark)", maxWidth: 760, margin: "0 auto 20px", lineHeight: 1.15, fontFamily: "var(--font-inter, 'Inter'), sans-serif" }}>
-            Every deck, on-brand — without anyone having to think about it
+            One brand kit. Every deck automatically consistent.
           </h1>
           <p style={{ color: "var(--ds-text-light)", fontSize: "1.1rem", maxWidth: 600, margin: "0 auto 36px", lineHeight: 1.7 }}>
             Upload your brand kit and image library once. PitchBoost applies them to every deck your team builds — automatically — so you never have a rep send something off-brand, and every presentation looks like it came from the same place.
