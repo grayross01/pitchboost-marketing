@@ -295,7 +295,7 @@ body {
   border: 1px solid var(--ds-border);
   border-radius: 16px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-  padding: 24px 28px;
+  padding: 24px 28px 28px;
   display: grid;
   grid-template-columns: repeat(3, 200px);
   gap: 8px 32px;
