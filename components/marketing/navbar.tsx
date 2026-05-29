@@ -5,12 +5,14 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { INDUSTRIES, INDUSTRY_GROUPS } from "@/lib/industries";
+import { FEATURES, FEATURE_GROUPS } from "@/lib/features";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 const LOGIN_URL = `${APP_URL}/login`;
 const SIGNUP_URL = `${APP_URL}/signup`;
 
 const industryMap = Object.fromEntries(INDUSTRIES.map((i) => [i.slug, i]));
+const featureMap = Object.fromEntries(FEATURES.map((f) => [f.slug, f]));
 
 function smoothScrollTo(hash: string) {
   const id = hash.replace("#", "");
@@ -29,12 +31,13 @@ function ChevronDown({ size = 14 }: { size?: number }) {
   );
 }
 
+type ActiveDropdown = "features" | "industry" | null;
+
 export default function MarketingNavbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [mobileIndustriesOpen, setMobileIndustriesOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const [activeDropdown, setActiveDropdown] = useState<ActiveDropdown>(null);
+  const [mobileSection, setMobileSection] = useState<"features" | "industry" | null>(null);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const pathname = usePathname();
   const isHome = pathname === "/";
@@ -52,21 +55,21 @@ export default function MarketingNavbar() {
   }, [mobileOpen]);
 
   useEffect(() => {
-    setDropdownOpen(false);
+    setActiveDropdown(null);
     setMobileOpen(false);
   }, [pathname]);
 
-  function openDropdown() {
+  function openDropdown(name: ActiveDropdown) {
     if (closeTimer.current) clearTimeout(closeTimer.current);
-    setDropdownOpen(true);
+    setActiveDropdown(name);
   }
   function scheduleClose() {
-    closeTimer.current = setTimeout(() => setDropdownOpen(false), 120);
+    closeTimer.current = setTimeout(() => setActiveDropdown(null), 120);
   }
 
   const closeMobile = useCallback(() => {
     setMobileOpen(false);
-    setMobileIndustriesOpen(false);
+    setMobileSection(null);
   }, []);
 
   function handleHash(e: React.MouseEvent<HTMLAnchorElement>, hash: string) {
@@ -103,6 +106,10 @@ export default function MarketingNavbar() {
     borderBottom: "1px solid var(--ds-border)",
   };
 
+  const dot = (
+    <span style={{ display: "inline-block", width: 6, height: 6, borderRadius: "50%", background: "#1F6B6B", marginRight: 9, flexShrink: 0, verticalAlign: "middle", position: "relative", top: -1 }} />
+  );
+
   return (
     <>
       <nav className={`navbar${scrolled ? " scrolled" : ""}`} id="navbar">
@@ -113,25 +120,57 @@ export default function MarketingNavbar() {
           </Link>
 
           <div className="nav-links" style={{ position: "absolute", left: "50%", transform: "translateX(-50%)" }}>
-            <a href={hashHref("#features")} onClick={(e) => handleHash(e, "#features")}>Features</a>
-            <a href={hashHref("#how-it-works")} onClick={(e) => handleHash(e, "#how-it-works")}>How It Works</a>
+
+            {/* Features dropdown */}
+            <div
+              style={{ position: "relative" }}
+              onMouseEnter={() => openDropdown("features")}
+              onMouseLeave={scheduleClose}
+            >
+              <button
+                className={`nav-industry-trigger${activeDropdown === "features" ? " open" : ""}`}
+                aria-expanded={activeDropdown === "features"}
+              >
+                Features <ChevronDown />
+              </button>
+
+              {activeDropdown === "features" && (
+                <div className="nav-dropdown">
+                  {FEATURE_GROUPS.map((group) => (
+                    <div key={group.label}>
+                      <div className="nav-dropdown-group-label">{group.label}</div>
+                      {group.slugs.map((slug) => {
+                        const feat = featureMap[slug];
+                        if (!feat) return null;
+                        return (
+                          <Link key={slug} href={`/features/${slug}`} onClick={() => setActiveDropdown(null)}>
+                            {dot}
+                            {feat.navLabel}
+                          </Link>
+                        );
+                      })}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+
             <a href={hashHref("#pricing")} onClick={(e) => handleHash(e, "#pricing")}>Pricing</a>
 
             {/* By Industry dropdown */}
             <div
-              ref={dropdownRef}
               style={{ position: "relative" }}
-              onMouseEnter={openDropdown}
+              onMouseEnter={() => openDropdown("industry")}
               onMouseLeave={scheduleClose}
             >
               <button
-                className={`nav-industry-trigger${dropdownOpen ? " open" : ""}`}
-                aria-expanded={dropdownOpen}
+                className={`nav-industry-trigger${activeDropdown === "industry" ? " open" : ""}`}
+                aria-expanded={activeDropdown === "industry"}
               >
                 By Industry <ChevronDown />
               </button>
 
-              {dropdownOpen && (
+              {activeDropdown === "industry" && (
                 <div className="nav-dropdown">
                   {INDUSTRY_GROUPS.map((group) => (
                     <div key={group.label}>
@@ -140,8 +179,8 @@ export default function MarketingNavbar() {
                         const ind = industryMap[slug];
                         if (!ind) return null;
                         return (
-                          <Link key={slug} href={`/industries/${slug}`} onClick={() => setDropdownOpen(false)}>
-                            <span style={{ display: "inline-block", width: 6, height: 6, borderRadius: "50%", background: "#1F6B6B", marginRight: 9, flexShrink: 0, verticalAlign: "middle", position: "relative", top: -1 }} />
+                          <Link key={slug} href={`/industries/${slug}`} onClick={() => setActiveDropdown(null)}>
+                            {dot}
                             {ind.navLabel}
                           </Link>
                         );
@@ -149,7 +188,7 @@ export default function MarketingNavbar() {
                     </div>
                   ))}
                   <div className="nav-dropdown-footer">
-                    <Link href="/industries" onClick={() => setDropdownOpen(false)}>
+                    <Link href="/industries" onClick={() => setActiveDropdown(null)}>
                       View all industries →
                     </Link>
                   </div>
@@ -157,7 +196,6 @@ export default function MarketingNavbar() {
               )}
             </div>
 
-            <Link href="/blog">Blog</Link>
           </div>
 
           <div className="nav-actions">
@@ -171,6 +209,7 @@ export default function MarketingNavbar() {
         </div>
       </nav>
 
+      {/* ── Mobile menu ── */}
       <div
         id="mobileMenu"
         style={{
@@ -181,7 +220,6 @@ export default function MarketingNavbar() {
           overflowY: "auto",
         }}
       >
-        {/* Header */}
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 24px", height: 72, borderBottom: "1px solid var(--ds-border)", flexShrink: 0 }}>
           <Link href="/" className="nav-logo" onClick={closeMobile} style={{ fontSize: 16 }}>
             <Image src="/icon.png" alt="PitchBoost" width={28} height={28} priority />
@@ -190,24 +228,44 @@ export default function MarketingNavbar() {
           <button onClick={closeMobile} aria-label="Close menu" style={{ background: "none", border: "none", fontSize: "1.75rem", cursor: "pointer", color: "var(--ds-dark)", lineHeight: 1, padding: "4px 8px" }}>&times;</button>
         </div>
 
-        {/* Nav links */}
-        <a href={hashHref("#features")} onClick={(e) => handleHash(e, "#features")} style={navItemStyle}>Features</a>
-        <a href={hashHref("#how-it-works")} onClick={(e) => handleHash(e, "#how-it-works")} style={navItemStyle}>How It Works</a>
-        <a href={hashHref("#pricing")} onClick={(e) => handleHash(e, "#pricing")} style={navItemStyle}>Pricing</a>
-
-        {/* By Industry */}
+        {/* Features accordion */}
         <button
-          onClick={() => setMobileIndustriesOpen((v) => !v)}
-          aria-expanded={mobileIndustriesOpen}
+          onClick={() => setMobileSection((v) => v === "features" ? null : "features")}
+          aria-expanded={mobileSection === "features"}
           style={{ ...navItemStyle, display: "flex", justifyContent: "space-between", alignItems: "center", background: "none", border: "none", borderBottom: "1px solid var(--ds-border)", cursor: "pointer", fontFamily: "inherit" }}
         >
-          By Industry
-          <span style={{ transition: "transform 0.2s", display: "inline-block", transform: mobileIndustriesOpen ? "rotate(180deg)" : "none" }}>
+          Features
+          <span style={{ transition: "transform 0.2s", display: "inline-block", transform: mobileSection === "features" ? "rotate(180deg)" : "none" }}>
             <ChevronDown size={16} />
           </span>
         </button>
 
-        {mobileIndustriesOpen && (
+        {mobileSection === "features" && (
+          <div style={{ background: "var(--ds-bg-light)", borderBottom: "1px solid var(--ds-border)" }}>
+            {FEATURES.map((feat) => (
+              <Link key={feat.slug} href={`/features/${feat.slug}`} onClick={closeMobile} style={subItemStyle}>
+                <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#1F6B6B", flexShrink: 0, display: "inline-block" }} />
+                {feat.navLabel}
+              </Link>
+            ))}
+          </div>
+        )}
+
+        <a href={hashHref("#pricing")} onClick={(e) => handleHash(e, "#pricing")} style={navItemStyle}>Pricing</a>
+
+        {/* By Industry accordion */}
+        <button
+          onClick={() => setMobileSection((v) => v === "industry" ? null : "industry")}
+          aria-expanded={mobileSection === "industry"}
+          style={{ ...navItemStyle, display: "flex", justifyContent: "space-between", alignItems: "center", background: "none", border: "none", borderBottom: "1px solid var(--ds-border)", cursor: "pointer", fontFamily: "inherit" }}
+        >
+          By Industry
+          <span style={{ transition: "transform 0.2s", display: "inline-block", transform: mobileSection === "industry" ? "rotate(180deg)" : "none" }}>
+            <ChevronDown size={16} />
+          </span>
+        </button>
+
+        {mobileSection === "industry" && (
           <div style={{ background: "var(--ds-bg-light)", borderBottom: "1px solid var(--ds-border)" }}>
             {INDUSTRIES.map((ind) => (
               <Link key={ind.slug} href={`/industries/${ind.slug}`} onClick={closeMobile} style={subItemStyle}>
@@ -221,9 +279,6 @@ export default function MarketingNavbar() {
           </div>
         )}
 
-        <Link href="/blog" onClick={closeMobile} style={navItemStyle}>Blog</Link>
-
-        {/* Buttons */}
         <div style={{ padding: "24px 24px 40px", display: "flex", flexDirection: "column", gap: 12, marginTop: "auto" }}>
           <a href={LOGIN_URL} className="btn btn-secondary" onClick={closeMobile} style={{ width: "100%", textAlign: "center" }}>Log In</a>
           <a href={SIGNUP_URL} className="btn btn-primary" onClick={closeMobile} style={{ width: "100%", textAlign: "center", color: "white" }}>Get Started</a>

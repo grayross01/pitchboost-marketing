@@ -5,11 +5,19 @@ const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 const SIGNUP_URL = `${APP_URL}/signup`;
 
 const PRODUCT_LINKS = [
-  { label: "Features", href: "/#features" },
-  { label: "How It Works", href: "/#how-it-works" },
   { label: "Pricing", href: "/#pricing" },
   { label: "Blog", href: "/blog" },
   { label: "Get Started", href: SIGNUP_URL },
+] as const;
+
+const FEATURE_LINKS = [
+  { label: "AI Deck Builder", href: "/features/ai-deck-builder" },
+  { label: "Upload & Redesign", href: "/features/upload-and-redesign" },
+  { label: "Templates & Saved Slides", href: "/features/templates-and-slides" },
+  { label: "Brand & Image Library", href: "/features/brand-and-images" },
+  { label: "Publishing & Sharing", href: "/features/publishing-and-sharing" },
+  { label: "Viewer Analytics", href: "/features/viewer-analytics" },
+  { label: "Team & Permissions", href: "/features/team-and-permissions" },
 ] as const;
 
 const COMPARE_LINKS = [
@@ -39,7 +47,7 @@ export default function MarketingFooter() {
   return (
     <footer className="footer">
       <div className="mkt-container">
-        <div className="footer-grid" style={{ gridTemplateColumns: "2fr 1fr 1fr 1fr 1fr" }}>
+        <div className="footer-grid" style={{ gridTemplateColumns: "2fr 1fr 1fr 1fr 1fr 1fr" }}>
           <div className="footer-brand">
             <Link href="/" className="nav-logo" style={{ color: "white" }}>
               <Image src="/icon.png" alt="PitchBoost" width={28} height={28} />
@@ -49,6 +57,17 @@ export default function MarketingFooter() {
               AI-powered pitch deck builder for anyone who pitches. Create personalized,
               branded presentations in under 60 seconds, publish instantly, and track viewer engagement.
             </p>
+          </div>
+
+          <div className="footer-col">
+            <h4>Features</h4>
+            <ul>
+              {FEATURE_LINKS.map(({ label, href }) => (
+                <li key={label}>
+                  <Link href={href}>{label}</Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
           <div className="footer-col">
