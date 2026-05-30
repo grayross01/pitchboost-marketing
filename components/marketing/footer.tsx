@@ -18,6 +18,7 @@ const FEATURE_LINKS = [
   { label: "Publishing & Sharing", href: "/features/publishing-and-sharing" },
   { label: "Viewer Analytics", href: "/features/viewer-analytics" },
   { label: "Team & Permissions", href: "/features/team-and-permissions" },
+  { label: "API & MCP", href: "/features/api-and-mcp" },
 ] as const;
 
 const COMPARE_LINKS = [

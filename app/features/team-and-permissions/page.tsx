@@ -7,11 +7,11 @@ const SIGNUP_URL = `${APP_URL}/signup`;
 export const metadata: Metadata = {
   title: "Team & Permissions — Collaborative Pitch Deck Software for Teams | PitchBoost",
   description:
-    "Add unlimited team members with the right roles for their access level. Share brand assets, templates, and image libraries across your team. Connect to your own AI tooling via the API and MCP server.",
+    "Add unlimited team members with the right roles for their access level. Share brand assets, templates, and image libraries across your whole team from one workspace.",
   openGraph: {
     title: "Team & Permissions — Collaborative Pitch Deck Software for Teams | PitchBoost",
     description:
-      "Add unlimited team members, share brand assets and templates, and connect PitchBoost to your own AI tooling via API.",
+      "Add unlimited team members, assign roles, and share brand assets and templates across your whole team.",
     images: [{ url: "https://pitchboost.ai/og-image.png", width: 1310, height: 820 }],
   },
 };
@@ -52,15 +52,6 @@ const FEATURES = [
       </svg>
     ),
   },
-  {
-    title: "API and MCP server",
-    body: "Advanced users can connect PitchBoost to their own AI tooling via the API or MCP server. Trigger deck generation, pull analytics, and integrate PitchBoost into existing workflows — without leaving the tools your team already uses.",
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" />
-      </svg>
-    ),
-  },
 ];
 
 const ROLES = [
@@ -77,24 +68,24 @@ const ROLES = [
   {
     role: "Viewer",
     description: "Read-only access for stakeholders who need to review and share decks without editing them — managers reviewing output, clients with workspace access, or external collaborators.",
-    capabilities: ["View and share existing decks", "Access analytics for decks they&apos;re shared on", "No editing or generation capabilities", "No access to billing or team settings"],
+    capabilities: ["View and share existing decks", "Access analytics for decks they're shared on", "No editing or generation capabilities", "No access to billing or team settings"],
   },
 ];
 
 const BULLETS = [
   "Unlimited team members on Business plan",
   "Three roles: admin, member, and viewer",
-  "Shared brand kit, template library, and slide library",
+  "Shared brand kit across the whole workspace",
+  "Shared template library and saved slide library",
   "Per-deck permissions and sharing controls",
-  "REST API for programmatic deck generation and management",
-  "MCP server for AI-native integrations",
+  "Centralized analytics across all team decks",
 ];
 
 const RELATED = [
   { label: "Brand & Image Library", desc: "Shared brand assets across your team", href: "/features/brand-and-images" },
   { label: "Templates & Saved Slides", desc: "Shared libraries your team builds from", href: "/features/templates-and-slides" },
   { label: "Viewer Analytics", desc: "Track engagement across all your decks", href: "/features/viewer-analytics" },
-  { label: "Publishing & Sharing", desc: "Control who can access each deck", href: "/features/publishing-and-sharing" },
+  { label: "API & MCP", desc: "Integrate PitchBoost into your AI stack", href: "/features/api-and-mcp" },
 ];
 
 export default function TeamAndPermissionsPage() {
@@ -102,7 +93,7 @@ export default function TeamAndPermissionsPage() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: "Team & Permissions — Collaborative Pitch Deck Software for Teams",
-    description: "Add unlimited team members, share brand assets and templates, and connect PitchBoost to your own AI tooling via API.",
+    description: "Add unlimited team members, assign roles, and share brand assets and templates across your whole team.",
     url: "https://pitchboost.ai/features/team-and-permissions",
     publisher: { "@type": "Organization", name: "PitchBoost", url: "https://pitchboost.ai" },
   };
@@ -124,14 +115,14 @@ export default function TeamAndPermissionsPage() {
           <h1 style={{ fontSize: "clamp(1.9rem, 3.8vw, 2.75rem)", fontWeight: 800, color: "var(--ds-dark)", maxWidth: 760, margin: "0 auto 20px", lineHeight: 1.15, fontFamily: "var(--font-inter, 'Inter'), sans-serif" }}>
             Give your whole team the tools to pitch and present well
           </h1>
-          <p style={{ color: "var(--ds-text-light)", fontSize: "1.1rem", maxWidth: 620, margin: "0 auto 36px", lineHeight: 1.7 }}>
-            Add unlimited team members with the right roles for their needs. Share brand assets, templates, and image libraries across the workspace. And for advanced users, connect PitchBoost to your own AI tooling via the API or MCP server.
+          <p style={{ color: "var(--ds-text-light)", fontSize: "1.1rem", maxWidth: 600, margin: "0 auto 36px", lineHeight: 1.7 }}>
+            Add unlimited team members with the right roles for their needs. Share brand assets, templates, and image libraries across the workspace so everyone pitches from the same approved foundation — without managing permissions deal by deal.
           </p>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 16, flexWrap: "wrap" }}>
             <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Set Up Your Team Free</a>
           </div>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 40, marginTop: 48, flexWrap: "wrap" }}>
-            {["Unlimited team members", "Roles suited to every access level", "API and MCP server access"].map((item) => (
+            {["Unlimited team members", "Three roles for every access level", "Shared libraries across the workspace"].map((item) => (
               <div key={item} style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 14, color: "var(--ds-text-secondary)", fontWeight: 500 }}>
                 <span style={{ width: 7, height: 7, borderRadius: "50%", background: "#1F6B6B", display: "inline-block", flexShrink: 0 }} />
                 {item}
@@ -182,7 +173,7 @@ export default function TeamAndPermissionsPage() {
                   {capabilities.map((c) => (
                     <div key={c} style={{ display: "flex", alignItems: "flex-start", gap: 10 }}>
                       <CheckIcon />
-                      <span style={{ fontSize: 13, color: "var(--ds-text-secondary)", lineHeight: 1.5 }} dangerouslySetInnerHTML={{ __html: c }} />
+                      <span style={{ fontSize: 13, color: "var(--ds-text-secondary)", lineHeight: 1.5 }}>{c}</span>
                     </div>
                   ))}
                 </div>

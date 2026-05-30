@@ -48,12 +48,17 @@ export const FEATURES: FeatureMeta[] = [
   {
     slug: "team-and-permissions",
     navLabel: "Team & Permissions",
-    shortDescription: "Roles, access levels, unlimited members, and API access",
+    shortDescription: "Roles, access levels, and unlimited team members",
+  },
+  {
+    slug: "api-and-mcp",
+    navLabel: "API & MCP",
+    shortDescription: "Build pitch decks and proposals from Claude or your own AI stack",
   },
 ];
 
 export const FEATURE_GROUPS: FeatureGroup[] = [
   { label: "Build", slugs: ["ai-deck-builder", "upload-and-redesign", "output-types"] },
   { label: "Brand & Content", slugs: ["templates-and-slides", "brand-and-images"] },
-  { label: "Share & Scale", slugs: ["publishing-and-sharing", "viewer-analytics", "team-and-permissions"] },
+  { label: "Share & Scale", slugs: ["publishing-and-sharing", "viewer-analytics", "team-and-permissions", "api-and-mcp"] },
 ];

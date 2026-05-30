@@ -111,6 +111,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://pitchboost.ai/features/api-and-mcp</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://pitchboost.ai/compare</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
