@@ -58,7 +58,7 @@ export const FEATURES: FeatureMeta[] = [
 ];
 
 export const FEATURE_GROUPS: FeatureGroup[] = [
-  { label: "Build", slugs: ["ai-deck-builder", "upload-and-redesign", "output-types"] },
+  { label: "Build", slugs: ["ai-deck-builder", "upload-and-redesign", "output-types", "api-and-mcp"] },
   { label: "Brand & Content", slugs: ["templates-and-slides", "brand-and-images"] },
-  { label: "Share & Scale", slugs: ["publishing-and-sharing", "viewer-analytics", "team-and-permissions", "api-and-mcp"] },
+  { label: "Share & Scale", slugs: ["publishing-and-sharing", "viewer-analytics", "team-and-permissions"] },
 ];
