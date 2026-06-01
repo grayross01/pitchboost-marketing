@@ -181,6 +181,66 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://pitchboost.ai/blog/presentation-generation-api</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pitchboost.ai/blog/automate-pitch-deck-creation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pitchboost.ai/blog/claude-pitch-deck-generator</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pitchboost.ai/blog/best-ai-presentation-makers</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pitchboost.ai/blog/best-ai-pitch-deck-generators</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pitchboost.ai/blog/ai-deck-design</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pitchboost.ai/blog/text-to-ppt</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pitchboost.ai/blog/ai-sales-pitch-generator</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pitchboost.ai/blog/ai-proposal-generator</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pitchboost.ai/blog/can-chatgpt-make-slides</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pitchboost.ai/blog/gamma-for-presentations</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pitchboost.ai/blog/how-to-create-interactive-powerpoint</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://pitchboost.ai/privacy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

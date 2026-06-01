@@ -1,0 +1,82 @@
+---
+title: "Using Claude to Generate Pitch Decks: MCP Server Setup and What You Get"
+description: "How to use Claude as a pitch deck generator using the MCP protocol — and what you actually get back compared to prompting Claude directly."
+date: "2026-02-05"
+author: "PitchBoost Team"
+tags: ["Claude", "MCP", "AI"]
+---
+
+Claude can do a lot. It can write slide content, outline a presentation structure, draft a narrative for a pitch. What it can't do on its own is produce a finished, branded, shareable pitch deck — the kind you'd actually send to a prospect or investor.
+
+That's where connecting Claude to a dedicated presentation tool via MCP changes what's possible.
+
+## What Is MCP and Why Does It Matter for Presentations?
+
+MCP — Model Context Protocol — is an open standard that lets AI assistants like Claude connect to external tools and services. Instead of being limited to generating text, Claude can call out to specialized systems: search tools, databases, design tools, code environments, and presentation platforms.
+
+For pitch deck generation, this matters because the hard parts of a deck aren't the words — they're everything else. Applying your brand. Formatting slides correctly. Hosting the output somewhere shareable. Tracking whether the prospect actually opened it. Claude doesn't do any of that natively. An MCP server that connects Claude to a presentation platform does.
+
+When Claude has access to a presentation tool through MCP, you can describe what you need in plain language and get back something that functions like a real sales asset — not just a bulleted list of slide ideas.
+
+## What You Can Do with Claude as a Presentation Tool
+
+Once a presentation MCP server is connected to Claude, the interaction is conversational. You describe the deal, the prospect, and the goal — and Claude handles the rest.
+
+Some examples of what that looks like in practice:
+
+- "Build a pitch deck for a discovery call with Meridian Health, a 300-person regional health system focused on reducing readmission rates. We're pitching our care coordination platform."
+- "Generate a one-page sales leave-behind for our agency services, targeting e-commerce brands doing $10M to $50M in revenue."
+- "Create a proposal for a 6-month consulting engagement with Apex Manufacturing covering lean process implementation and training."
+
+Claude uses that context to generate a deck through the connected presentation platform — selecting the right output format, structuring the content for the deal type, and returning a finished, shareable link.
+
+No template-filling. No slide-by-slide editing. Just a description and a finished deck.
+
+## What You Get Back vs. Prompting Claude Directly
+
+This is the question worth being direct about. If you ask Claude to write a pitch deck without MCP, you get text. Maybe a slide-by-slide outline with bullet points. That's useful as a starting point, but it's not a pitch deck — it's raw material.
+
+When Claude calls PitchBoost through the MCP server, what comes back is:
+
+- **A fully formatted, branded deck** — your logo, colors, and fonts applied automatically using your brand kit
+- **A hosted, shareable link** — not a file attachment, a URL the prospect opens in their browser
+- **Viewer analytics** — tracking on who opened it, which slides they engaged with, and when they came back
+- **The right structure for the deal type** — pitch decks, proposals, one-sheets, and buyer FAQs are structured differently, and the right format is selected based on what you describe
+
+The output quality also reflects years of refinement on what works in real sales presentations — not generic AI slide content, but a structure and voice built around how deals actually get won.
+
+See the [PitchBoost API and MCP server page](/features/api-and-mcp) for a full overview of what the integration covers.
+
+## Who This Is For
+
+**AI-native sales teams.** If your team is already using Claude for research, writing, or prospecting, connecting it to a presentation tool through MCP is a natural extension. The workflow stays in the same place; you just get a deck at the end of it.
+
+**Developers and AI builders.** If you're building internal AI tooling for sales or client services, the MCP server gives you presentation generation as a tool your agents can call — without building a slide creation system from scratch.
+
+**Individual sellers who live in Claude.** If Claude is your primary working environment, using it as a pitch deck generator means staying in one place instead of switching tools every time you need to put together a presentation.
+
+This is different from the use case for the [REST API](/features/api-and-mcp), which is better suited to automated, high-volume workflows triggered from CRM data or outbound sequences. MCP is for human-in-the-loop workflows where someone is actively directing the AI.
+
+## Agentic Presentation Creation
+
+One underexplored use case: agentic workflows where Claude does the research and the deck generation in a single session.
+
+You point Claude at a company — website, LinkedIn, recent news — and ask it to build a pitch deck for a meeting with that company. Claude researches the prospect, identifies relevant pain points and context, and calls PitchBoost to generate a personalized deck based on what it found. The whole process can run in minutes with minimal human input.
+
+This is what "AI tool calling for presentations" looks like in practice: not just using AI to write slide content, but using AI to orchestrate the entire deck creation process from research to finished output.
+
+## Setting Up the PitchBoost MCP Server
+
+Connecting PitchBoost to Claude as a presentation tool requires adding the MCP server to your Claude configuration. The setup process is designed to be accessible even for non-developers — once the server endpoint is configured, anyone using that Claude instance can generate decks through natural language.
+
+For teams using Cursor, Windsurf, or other MCP-compatible development environments, the same server works across tools. Build the connection once and it's available wherever MCP is supported.
+
+The output is identical regardless of which tool initiates the generation — the same branded, structured deck you'd get building in the PitchBoost app directly.
+
+## LLM Presentation Generation: The Broader Picture
+
+Using Claude as a pitch deck generator is one specific implementation of a broader shift: LLMs becoming the interface layer for specialized business tools. Rather than switching between a dozen different applications, you describe what you need in natural language and the right tool gets called automatically.
+
+For presentations, this shift is particularly meaningful. Deck creation has historically been one of the most manual, time-consuming parts of the sales workflow. When Claude can handle it through a single conversational prompt — with the output going directly to a shareable link with tracking — the friction essentially disappears.
+
+The [AI deck builder](/features/ai-deck-builder) covers what this looks like when you're working inside the PitchBoost app directly. The MCP server extends the same capability into whatever AI environment you're already working in.
