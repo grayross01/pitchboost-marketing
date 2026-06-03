@@ -1213,6 +1213,14 @@ body {
   color: white;
 }
 
+.marketing .footer-social-link {
+  color: rgba(255, 255, 255, 0.5);
+  transition: color 0.2s;
+}
+.marketing .footer-social-link:hover {
+  color: white;
+}
+
 .marketing .footer-bottom {
   display: flex;
   align-items: center;
