@@ -14,9 +14,27 @@ function CheckIcon() {
   );
 }
 
+const softwareSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "PitchBoost",
+  url: "https://pitchboost.ai",
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Web",
+  description: "AI-powered pitch deck builder that generates personalized, branded presentations, proposals, and sales decks in under 60 seconds.",
+  offers: {
+    "@type": "AggregateOffer",
+    priceCurrency: "USD",
+    lowPrice: "0",
+    offerCount: "3",
+  },
+  publisher: { "@type": "Organization", name: "PitchBoost", url: "https://pitchboost.ai" },
+};
+
 export default function MarketingPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }} />
       {/* ── Hero ── */}
       <section className="hero">
         <div className="hero-orb" />

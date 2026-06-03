@@ -41,23 +41,41 @@ export default async function BlogPostPage({ params }: Props) {
   const post = getPostBySlug(slug);
   if (!post) notFound();
 
+  const postUrl = `https://pitchboost.ai/blog/${slug}`;
+
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     headline: post.title,
     description: post.description,
+    url: postUrl,
     datePublished: post.date,
-    author: { "@type": "Person", name: post.author },
-    publisher: { "@type": "Organization", name: "PitchBoost" },
-    ...(post.image && { image: post.image }),
+    dateModified: post.date,
+    author: { "@type": "Organization", name: "PitchBoost", url: "https://pitchboost.ai" },
+    publisher: {
+      "@type": "Organization",
+      name: "PitchBoost",
+      url: "https://pitchboost.ai",
+      logo: { "@type": "ImageObject", url: "https://pitchboost.ai/icon.png" },
+    },
+    mainEntityOfPage: { "@type": "WebPage", "@id": postUrl },
+    image: post.image || "https://pitchboost.ai/og-image.png",
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://pitchboost.ai" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://pitchboost.ai/blog" },
+      { "@type": "ListItem", position: 3, name: post.title, item: postUrl },
+    ],
   };
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <section className="blog-hero">
         <div className="mkt-container">

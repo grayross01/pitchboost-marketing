@@ -53,6 +53,28 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "PitchBoost",
+  url: "https://pitchboost.ai",
+  logo: "https://pitchboost.ai/icon.png",
+  description: "AI-powered pitch deck builder for sales teams, agencies, and anyone who pitches. Generate personalized, branded presentations in under 60 seconds.",
+  sameAs: [
+    "https://www.linkedin.com/company/pitchboost-ai",
+    "https://www.instagram.com/pitchboost.ai/",
+    "https://www.facebook.com/people/PitchBoost/61574324925190/",
+  ],
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "PitchBoost",
+  url: "https://pitchboost.ai",
+  publisher: { "@type": "Organization", name: "PitchBoost", url: "https://pitchboost.ai" },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -63,6 +85,8 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${inter.variable}`}
     >
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
       <Script
         id="gtm-script"
         strategy="afterInteractive"
