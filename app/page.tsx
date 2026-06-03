@@ -48,17 +48,17 @@ export default function MarketingPage() {
           <div className="hero-proof-bar fade-up fade-up-delay-4">
             <div className="proof-item">
               <span className="proof-icon">◎</span>
-              <span>Relevant to this prospect, not every prospect</span>
+              <span>Relevant to this prospect,<br />not every prospect</span>
             </div>
             <div className="proof-sep" />
             <div className="proof-item">
               <span className="proof-icon">◎</span>
-              <span>Your brand, case studies, and supporting docs</span>
+              <span>Your brand, case studies,<br />and supporting docs</span>
             </div>
             <div className="proof-sep" />
             <div className="proof-item">
               <span className="proof-icon">◎</span>
-              <span>Know who engaged and follow up with confidence</span>
+              <span>Know who engaged and<br />follow up with confidence</span>
             </div>
           </div>
         </div>
