@@ -27,43 +27,17 @@ export default async function OgImage({ params }: { params: Promise<{ slug: stri
           fontFamily: "sans-serif",
         }}
       >
-        {/* Logo / brand */}
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: 12,
-            marginBottom: "auto",
-          }}
-        >
-          <div
-            style={{
-              background: "#1F6B6B",
-              borderRadius: 10,
-              width: 40,
-              height: 40,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <div style={{ color: "white", fontSize: 22, fontWeight: 700, lineHeight: 1 }}>P</div>
-          </div>
-          <span style={{ color: "white", fontSize: 22, fontWeight: 600, letterSpacing: "-0.02em" }}>
-            PitchBoost
-          </span>
-        </div>
-
         {/* Title */}
         <div
           style={{
             color: "white",
-            fontSize: title.length > 60 ? 44 : 52,
+            fontSize: title.length > 60 ? 52 : 62,
             fontWeight: 700,
             lineHeight: 1.15,
             letterSpacing: "-0.03em",
-            marginBottom: 24,
-            maxWidth: 900,
+            marginBottom: 32,
+            maxWidth: 1000,
+            marginTop: "auto",
           }}
         >
           {title}
@@ -73,9 +47,9 @@ export default async function OgImage({ params }: { params: Promise<{ slug: stri
         <div
           style={{
             color: "rgba(255,255,255,0.65)",
-            fontSize: 24,
+            fontSize: 28,
             lineHeight: 1.4,
-            maxWidth: 820,
+            maxWidth: 900,
             marginBottom: 48,
           }}
         >
