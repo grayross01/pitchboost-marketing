@@ -109,7 +109,7 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
 
         <div style={{ textAlign: "center", paddingBottom: 20 }}>
-          <Link href="/blog" style={{ color: "var(--ds-teal)", textDecoration: "none", fontWeight: 500 }}>
+          <Link href="/blog" style={{ color: "var(--ds-text-secondary)", textDecoration: "none", fontWeight: 500 }}>
             &larr; Back to all articles
           </Link>
         </div>

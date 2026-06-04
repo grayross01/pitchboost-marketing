@@ -1434,12 +1434,12 @@ body {
   line-height: 1.85;
   margin-bottom: 8px;
 }
-.marketing .blog-content a {
+.marketing .blog-content a:not(.btn) {
   color: var(--ds-teal);
   text-decoration: underline;
   text-underline-offset: 2px;
 }
-.marketing .blog-content a:hover {
+.marketing .blog-content a:not(.btn):hover {
   color: var(--ds-teal-light);
 }
 .marketing .blog-content blockquote {
