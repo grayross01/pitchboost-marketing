@@ -1442,6 +1442,12 @@ body {
 .marketing .blog-content a:not(.btn):hover {
   color: var(--ds-teal-light);
 }
+.marketing .blog-content .btn {
+  text-decoration: none;
+}
+.marketing .blog-content .btn-primary {
+  color: white;
+}
 .marketing .blog-content blockquote {
   border-left: 4px solid var(--ds-teal);
   margin: 32px 0;
