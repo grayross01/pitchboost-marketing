@@ -847,8 +847,8 @@ body {
 .marketing .feature-icon.blue,
 .marketing .feature-icon.purple,
 .marketing .feature-icon.pink {
-  background: linear-gradient(135deg, rgba(31,107,107,0.14), rgba(42,138,138,0.08));
-  color: #1F6B6B;
+  background: rgba(42,138,138,0.2);
+  color: #4db8b8;
 }
 
 /* --- Comparison --- */
