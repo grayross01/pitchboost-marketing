@@ -178,6 +178,20 @@ body {
   transform: translateY(-2px);
 }
 
+.marketing .btn-primary-animated {
+  background: linear-gradient(135deg, #1F6B6B, #2A8A8A, #E8665A, #2A8A8A, #1F6B6B);
+  background-size: 300% 300%;
+  animation: gradient-shift 8s ease infinite;
+  box-shadow: 0 4px 20px rgba(31, 107, 107, 0.35);
+}
+
+.marketing .btn-primary-animated:hover {
+  background: linear-gradient(135deg, #1F6B6B, #2A8A8A, #E8665A, #2A8A8A, #1F6B6B);
+  background-size: 300% 300%;
+  box-shadow: 0 8px 30px rgba(31, 107, 107, 0.5);
+  transform: translateY(-2px);
+}
+
 .marketing .btn-secondary {
   background: var(--ds-bg-light);
   color: var(--ds-text);

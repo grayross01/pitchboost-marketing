@@ -182,7 +182,7 @@ export default function AIDeckBuilderPage() {
             Describe your prospect, your opportunity, and your goals. PitchBoost generates a fully structured pitch deck, presentation, or proposal in under 60 seconds — with copy written for this specific buyer, not a template you have to gut and rewrite.
           </p>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 16, flexWrap: "wrap" }}>
-            <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Start Building Free</a>
+            <a href={SIGNUP_URL} className="btn btn-primary btn-primary-animated btn-lg">Start Building Free</a>
             <Link href="/#sample-deck" className="btn btn-ghost btn-lg">See a sample deck</Link>
           </div>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 40, marginTop: 48, flexWrap: "wrap" }}>
@@ -335,7 +335,7 @@ export default function AIDeckBuilderPage() {
           <div className="cta-box fade-up">
             <h2>Stop sending the same deck twice.</h2>
             <p>Generate your first personalized pitch deck, presentation, or proposal free — no design skills required, no credit card needed.</p>
-            <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Start Building Free</a>
+            <a href={SIGNUP_URL} className="btn btn-primary btn-primary-animated btn-lg">Start Building Free</a>
           </div>
         </div>
       </section>
