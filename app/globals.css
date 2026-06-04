@@ -71,11 +71,23 @@ body {
 }
 
 /* --- Typography --- */
+@keyframes gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
 .marketing .gradient-text {
-  background: var(--ds-gradient);
+  background: linear-gradient(135deg, #1F6B6B, #2A8A8A, #E8665A, #2A8A8A, #1F6B6B);
+  background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  animation: gradient-shift 6s ease infinite;
 }
 
 /* --- Layout --- */
@@ -767,17 +779,45 @@ body {
   gap: 28px;
 }
 
+.marketing .features-section {
+  background: #0d0d1a;
+}
+
+.marketing .features-section .section-header h2 {
+  color: #ffffff;
+}
+
+.marketing .features-section .section-header p {
+  color: rgba(255,255,255,0.6);
+}
+
+.marketing .features-section .section-label {
+  background: rgba(255,255,255,0.07);
+  border-color: rgba(255,255,255,0.12);
+}
+
+.marketing .features-section .section-label span {
+  background: linear-gradient(135deg, #2A8A8A, #E8665A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .marketing .feature-card {
-  background: white;
-  border: 1px solid var(--ds-border);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
   border-radius: var(--ds-radius-lg);
   padding: 36px 32px;
   transition: var(--ds-transition);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .marketing .feature-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--ds-shadow-lg);
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.18);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
 }
 
 .marketing .feature-icon {
@@ -794,13 +834,13 @@ body {
 .marketing .feature-card h3 {
   font-size: 1.15rem;
   font-weight: 700;
-  color: var(--ds-dark);
+  color: #ffffff;
   margin-bottom: 10px;
 }
 
 .marketing .feature-card p {
   font-size: 0.9rem;
-  color: var(--ds-text-light);
+  color: rgba(255,255,255,0.55);
   line-height: 1.7;
 }
 
@@ -1642,6 +1682,11 @@ body {
 }
 
 /* --- Animations --- */
+.marketing .deck-float {
+  animation: float 5s ease-in-out infinite;
+  will-change: transform;
+}
+
 .marketing .fade-up {
   opacity: 0;
   transform: translateY(30px);

@@ -96,7 +96,7 @@ export default function MarketingPage() {
             <p style={{ fontSize: 13, color: "var(--ds-text-tertiary)", lineHeight: 1.6, textAlign: "center", marginBottom: 32 }}>
               This sample is not affiliated with or endorsed by Gong.
             </p>
-            <div style={{ borderRadius: 16, overflow: "hidden", border: "1px solid var(--ds-border)", background: "var(--ds-bg)", minHeight: 720 }}>
+            <div className="deck-float" style={{ borderRadius: 16, overflow: "hidden", border: "1px solid var(--ds-border)", background: "var(--ds-bg)", minHeight: 720 }}>
               <iframe
                 src="https://app.pitchboost.ai/p/gong/sample"
                 width="100%"
@@ -357,7 +357,7 @@ export default function MarketingPage() {
       </section>
 
       {/* ── Features ── */}
-      <section id="features" className="mkt-section">
+      <section id="features" className="mkt-section features-section">
         <div className="mkt-container">
           <div className="section-header fade-up">
             <div className="section-label"><span>Features</span></div>
