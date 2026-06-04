@@ -779,45 +779,22 @@ body {
   gap: 28px;
 }
 
-.marketing .mkt-section.features-section {
-  background: #0d0d1a;
-}
-
-.marketing .features-section .section-header h2 {
-  color: #ffffff;
-}
-
-.marketing .features-section .section-header p {
-  color: rgba(255,255,255,0.6);
-}
-
-.marketing .features-section .section-label {
-  background: rgba(255,255,255,0.07);
-  border-color: rgba(255,255,255,0.12);
-}
-
-.marketing .features-section .section-label span {
-  background: linear-gradient(135deg, #2A8A8A, #E8665A);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
 .marketing .feature-card {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.75);
+  border: 1px solid rgba(31,107,107,0.12);
   border-radius: var(--ds-radius-lg);
   padding: 36px 32px;
   transition: var(--ds-transition);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
 }
 
 .marketing .feature-card:hover {
   transform: translateY(-4px);
-  background: rgba(255,255,255,0.08);
-  border-color: rgba(255,255,255,0.18);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  background: rgba(255,255,255,0.95);
+  border-color: rgba(31,107,107,0.25);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
 }
 
 .marketing .feature-icon {
@@ -834,21 +811,21 @@ body {
 .marketing .feature-card h3 {
   font-size: 1.15rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--ds-dark);
   margin-bottom: 10px;
 }
 
 .marketing .feature-card p {
   font-size: 0.9rem;
-  color: rgba(255,255,255,0.55);
+  color: var(--ds-text-light);
   line-height: 1.7;
 }
 
 .marketing .feature-icon.blue,
 .marketing .feature-icon.purple,
 .marketing .feature-icon.pink {
-  background: rgba(42,138,138,0.2);
-  color: #4db8b8;
+  background: linear-gradient(135deg, rgba(31,107,107,0.12), rgba(42,138,138,0.07));
+  color: #1F6B6B;
 }
 
 /* --- Comparison --- */
