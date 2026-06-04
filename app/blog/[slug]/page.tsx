@@ -94,6 +94,15 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
       </section>
 
+      <div className="blog-hero-image">
+        <img
+          src={`/blog/${slug}/opengraph-image`}
+          alt={post.title}
+          width={1200}
+          height={630}
+        />
+      </div>
+
       <article className="blog-content">
         <MDXRemote source={post.content} />
 

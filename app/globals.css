@@ -1302,6 +1302,18 @@ body {
 }
 
 /* --- Blog --- */
+.marketing .blog-hero-image {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 24px 48px;
+}
+.marketing .blog-hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  display: block;
+}
 .marketing .blog-hero {
   padding: 140px 0 60px;
   background: var(--ds-bg-light);
