@@ -489,44 +489,65 @@ body {
 }
 
 /* --- Hero --- */
+@keyframes aurora-1 {
+  0%   { transform: translate(0, 0) scale(1); }
+  33%  { transform: translate(80px, -60px) scale(1.08); }
+  66%  { transform: translate(-40px, 80px) scale(0.95); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+@keyframes aurora-2 {
+  0%   { transform: translate(0, 0) scale(1); }
+  33%  { transform: translate(-70px, 50px) scale(1.1); }
+  66%  { transform: translate(60px, -40px) scale(0.92); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+@keyframes aurora-3 {
+  0%   { transform: translate(-50%, -50%) scale(1); }
+  50%  { transform: translate(-50%, -50%) scale(1.2); }
+  100% { transform: translate(-50%, -50%) scale(1); }
+}
+
 .marketing .hero {
   position: relative;
   padding: 160px 0 100px;
   overflow: hidden;
-  background: linear-gradient(180deg, var(--ds-bg) 0%, var(--ds-bg-light) 100%);
+  background: #0d0d1a;
 }
 
 .marketing .hero-orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.5;
   pointer-events: none;
 }
 
 .marketing .hero-orb:nth-child(1) {
-  width: 600px;
-  height: 600px;
-  background: rgba(31, 107, 107, 0.15);
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(31,107,107,0.55) 0%, transparent 70%);
+  filter: blur(60px);
   top: -200px;
   right: -100px;
+  animation: aurora-1 14s ease-in-out infinite;
 }
 
 .marketing .hero-orb:nth-child(2) {
-  width: 500px;
-  height: 500px;
-  background: rgba(42, 138, 138, 0.12);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(42,138,138,0.4) 0%, transparent 70%);
+  filter: blur(80px);
   bottom: -150px;
   left: -100px;
+  animation: aurora-2 18s ease-in-out infinite;
 }
 
 .marketing .hero-orb:nth-child(3) {
-  width: 300px;
-  height: 300px;
-  background: rgba(232, 102, 90, 0.1);
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(232,102,90,0.35) 0%, transparent 70%);
+  filter: blur(70px);
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  animation: aurora-3 10s ease-in-out infinite;
 }
 
 .marketing .hero .mkt-container {
@@ -540,13 +561,13 @@ body {
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 24px;
-  color: var(--ds-dark);
+  color: #ffffff;
   font-family: var(--font-inter, 'Inter'), -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .marketing .hero p {
   font-size: 1.25rem;
-  color: var(--ds-text-light);
+  color: rgba(255,255,255,0.65);
   max-width: 600px;
   margin: 0 auto 40px;
   line-height: 1.7;
@@ -557,12 +578,12 @@ body {
   align-items: center;
   gap: 8px;
   padding: 8px 20px;
-  background: var(--ds-gradient-soft);
-  border: 1px solid rgba(31, 107, 107, 0.15);
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.15);
   border-radius: 100px;
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--ds-teal);
+  color: rgba(255,255,255,0.85);
   margin-bottom: 32px;
 }
 
@@ -581,7 +602,7 @@ body {
   gap: 24px;
   margin-top: 64px;
   padding: 20px 32px;
-  border-top: 1px solid var(--ds-border);
+  border-top: 1px solid rgba(255,255,255,0.1);
 }
 
 .marketing .proof-item {
@@ -591,19 +612,19 @@ body {
   white-space: nowrap;
   font-size: 0.95rem;
   font-weight: 600;
-  color: var(--ds-dark);
+  color: rgba(255,255,255,0.75);
   letter-spacing: -0.01em;
 }
 
 .marketing .proof-icon {
-  color: var(--ds-teal);
+  color: #2A8A8A;
   font-size: 1rem;
 }
 
 .marketing .proof-sep {
   width: 1px;
   height: 20px;
-  background: var(--ds-border);
+  background: rgba(255,255,255,0.15);
 }
 
 /* --- How It Works / Step Showcase --- */
