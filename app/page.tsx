@@ -368,46 +368,52 @@ export default function MarketingPage() {
             {[
               {
                 color: "blue",
+                href: "/features/ai-deck-builder",
                 icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z" /><path d="M2 17l10 5 10-5" /><path d="M2 12l10 5 10-5" /></svg>,
                 title: "AI-generated pitch decks",
                 body: "Describe your opportunity and get a fully structured deck with copy written for this specific prospect — not a blank template to fill in.",
               },
               {
                 color: "purple",
+                href: "/features/brand-and-images",
                 icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="13.5" cy="6.5" r="2.5" /><path d="M17 2H7a5 5 0 0 0-5 5v10a5 5 0 0 0 5 5h10a5 5 0 0 0 5-5V7a5 5 0 0 0-5-5z" /></svg>,
                 title: "Brand-aware content and design",
                 body: "Every deck looks like it came from your team — your logo, your colors, your voice — without any manual design work.",
               },
               {
                 color: "pink",
+                href: "/features/templates-and-slides",
                 icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /></svg>,
                 title: "Prospect-specific messaging",
                 body: "The difference between a deck that gets a response and one that gets ghosted is whether it sounds like it was written for them. PitchBoost makes that the default.",
               },
               {
                 color: "blue",
+                href: "/features/upload-and-redesign",
                 icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" /><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" /></svg>,
                 title: "AI slide-by-slide editing",
                 body: "If a slide isn't landing the way you want, rewrite it with AI guidance — without touching the rest of the deck.",
               },
               {
                 color: "purple",
+                href: "/features/output-types",
                 icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg>,
                 title: "Share as a link or export to PDF",
                 body: "Send a branded interactive link your prospect opens in the browser, or export a PDF for email and print — whichever fits the situation.",
               },
               {
                 color: "pink",
+                href: "/features/viewer-analytics",
                 icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" /></svg>,
                 title: "Viewer analytics",
                 body: "Know which slides your prospect spent time on before you pick up the phone. Follow up with the right message, at the right moment.",
               },
-            ].map(({ color, icon, title, body }) => (
-              <div key={title} className="feature-card">
+            ].map(({ color, href, icon, title, body }) => (
+              <Link key={title} href={href} className="feature-card">
                 <div className={`feature-icon ${color}`}>{icon}</div>
                 <h3>{title}</h3>
                 <p>{body}</p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

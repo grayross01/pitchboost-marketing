@@ -779,6 +779,12 @@ body {
   gap: 28px;
 }
 
+.marketing a.feature-card {
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
 .marketing .feature-card {
   background: rgba(255,255,255,0.75);
   border: 1px solid rgba(31,107,107,0.12);
