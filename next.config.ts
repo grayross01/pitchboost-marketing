@@ -34,6 +34,27 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async headers() {
+    return [
+      {
+        // RFC 8288 Link headers so agents can discover the API catalog + docs
+        // from the homepage response.
+        source: "/",
+        headers: [
+          {
+            key: "Link",
+            value:
+              '</.well-known/api-catalog>; rel="api-catalog", </features/api-and-mcp>; rel="service-doc", </openapi.json>; rel="service-desc"',
+          },
+        ],
+      },
+      {
+        // RFC 9727: the API catalog must be served as a linkset.
+        source: "/.well-known/api-catalog",
+        headers: [{ key: "Content-Type", value: "application/linkset+json" }],
+      },
+    ];
+  },
 };
 
 export default nextConfig;

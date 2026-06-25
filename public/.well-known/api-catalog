@@ -1,0 +1,22 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://app.pitchboost.ai/api/v1",
+      "service-desc": [
+        { "href": "https://pitchboost.ai/openapi.json", "type": "application/json" }
+      ],
+      "service-doc": [
+        { "href": "https://pitchboost.ai/features/api-and-mcp", "type": "text/html" }
+      ]
+    },
+    {
+      "anchor": "https://app.pitchboost.ai/api/mcp",
+      "service-desc": [
+        { "href": "https://pitchboost.ai/.well-known/mcp/server-card.json", "type": "application/json" }
+      ],
+      "service-doc": [
+        { "href": "https://pitchboost.ai/features/api-and-mcp", "type": "text/html" }
+      ]
+    }
+  ]
+}
