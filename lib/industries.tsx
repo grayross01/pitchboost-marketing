@@ -1230,6 +1230,7 @@ export const INDUSTRIES: Industry[] = [
       },
     ],
     ctaHeadline: "Ready to walk into every listing appointment with a presentation built to win the seller's signature?",
+    sampleDeckUrl: "https://app.pitchboost.ai/p/real-estate/sample",
     industryTerm: "listing presentation",
     shortLabel: "real estate",
     shortLabelPlural: "real estate agents",
