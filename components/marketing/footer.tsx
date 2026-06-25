@@ -41,6 +41,7 @@ const INDUSTRY_LINKS = [
   { label: "Startups", href: "/industries/startups" },
   { label: "Home Services", href: "/industries/home-services" },
   { label: "Commercial Real Estate", href: "/industries/commercial-real-estate" },
+  { label: "Real Estate Agents", href: "/industries/real-estate-agents" },
   { label: "Consultancies", href: "/industries/consultancies" },
   { label: "Nonprofits", href: "/industries/nonprofits" },
 ] as const;
