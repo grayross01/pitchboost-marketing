@@ -1143,6 +1143,115 @@ export const INDUSTRIES: Industry[] = [
   },
 
   {
+    slug: "real-estate-agents",
+    navLabel: "Real Estate Agents",
+    label: "Real Estate Agents",
+    navGroup: "verticals",
+    icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9 21v-6h6v6"/></svg>,
+    metaTitle: "Real Estate Listing Presentation Software: Win More Listings | PitchBoost",
+    metaDescription:
+      "PitchBoost helps real estate agents build a polished listing presentation for every appointment in under 60 seconds. Paste a Zillow or Redfin link to autofill the home, walk in with a deck tailored to the seller, and see the moment they open it. Win more listings without rebuilding your slides every weekend.",
+    heroHeadline: "Win the listing before you walk in the door",
+    heroSubhead:
+      "Sellers interview two or three agents before they sign, and your listing presentation is the one thing they keep, forward to their spouse, and compare side by side. PitchBoost builds a polished, tailored presentation for every appointment: the pricing story, the marketing plan, and your track record, formatted to the home and the seller, in under a minute.",
+    painPoints: [
+      {
+        title: "The same generic listing template, on every appointment, against every competitor",
+        body: "The canned template from your brokerage looks like the canned template the agent before you used. Sellers can tell when they are looking at a fill-in-the-blank deck, and a generic presentation makes a generic impression on the one day you need to stand out.",
+      },
+      {
+        title: "Building a real presentation for each home eats your evenings and weekends",
+        body: "A presentation that actually fits the property, the neighborhood comps, and the seller's situation takes a couple of hours to assemble. Between showings, calls, and paperwork, that time comes out of your nights, so most appointments get a rushed version of your best work.",
+      },
+      {
+        title: "You hand over a PDF and never know if the seller opened it",
+        body: "You email the pre-listing package or the follow-up and then go quiet. You cannot tell whether the seller read it, showed it to their partner, or never opened the attachment, so your follow-up is a guess instead of a well-timed nudge.",
+      },
+    ],
+    howItWorks: [
+      {
+        step: "1",
+        title: "Set up your agent brand once",
+        body: "Add your headshot, brokerage, logo, sales stats, recent sales, and reviews. PitchBoost keeps your story ready so you are never rebuilding the same five slides before every appointment.",
+      },
+      {
+        step: "2",
+        title: "Drop in the property and the seller",
+        body: "Paste a Zillow or Redfin link and PitchBoost pulls the photos and property details automatically, or enter them yourself. Tell it the seller's priorities and your pricing strategy, and it writes a listing presentation built around this home, with a photo-led cover that looks like the property's own brochure.",
+      },
+      {
+        step: "3",
+        title: "Present live, then send a link that tracks",
+        body: "Walk through it on a tablet or a screen, then leave the seller a branded link instead of a PDF. See when they open it, how long they spend, and which sections they revisit, so your follow-up call lands at exactly the right moment.",
+      },
+    ],
+    outcomes: [
+      "A tailored listing presentation for every appointment in under 60 seconds",
+      "Walk in looking like the most prepared agent the seller will meet",
+      "Pull a property's photos and details straight from a Zillow or Redfin link",
+      "Know the moment a seller opens your presentation, and what they reread",
+      "One consistent, on-brand look across listings, buyers, and follow-ups",
+      "Win more listings without giving up your evenings to slide decks",
+    ],
+    whoItsFor: [
+      "Residential listing agents",
+      "Buyer's agents running buyer consultations",
+      "Real estate teams and team leads",
+      "New agents building a professional first impression",
+      "Luxury and high-end residential specialists",
+      "Brokerages standardizing their agents' presentations",
+      "Property managers pitching new owners",
+      "Real estate coaches sharing a repeatable system",
+    ],
+    faqs: [
+      {
+        q: "What kinds of real estate presentations can PitchBoost create?",
+        a: "Listing presentations, pricing and CMA presentations, pre-listing packages, buyer consultation decks, just-listed and just-sold property features, open house brochures, and post-appointment follow-ups. Each one is formatted for the audience and the specific home or buyer.",
+      },
+      {
+        q: "Is this better than the listing presentation template from my brokerage?",
+        a: "A template gives you a layout you still fill in by hand for every seller, and it ends up looking like the version every other agent uses. PitchBoost writes the content for you around this property, these comps, and this seller's priorities, so each presentation reads like it was made for that appointment instead of pulled off a shelf.",
+      },
+      {
+        q: "Can I pull a property's photos and details in automatically?",
+        a: "Yes. Paste a Zillow or Redfin link and PitchBoost imports the listing photos and property details, then builds the presentation around them with a photo-led cover. You can also enter or upload everything yourself.",
+      },
+      {
+        q: "Can I see whether the seller actually opened my presentation?",
+        a: "Yes, on Pro and Business plans. You will see when the seller opened the link, how long they spent, and which sections they came back to, so you can time your follow-up instead of guessing.",
+      },
+      {
+        q: "Is there an AI listing presentation maker for real estate agents?",
+        a: "Yes, that is exactly what PitchBoost is. You set up your agent brand and track record once. For each appointment you paste the property link or describe the home and the seller, and PitchBoost generates a tailored listing presentation in under 60 seconds, with no template to rebuild for every seller.",
+      },
+      {
+        q: "How do I win more listings against agents who discount their commission?",
+        a: "You win on demonstrated value rather than price, and value has to be visible in the first few minutes. PitchBoost front-loads your pricing rationale, your marketing plan, and proof from comparable sales you have closed, so the seller sees why your representation is worth it before the conversation ever turns to commission.",
+      },
+    ],
+    ctaHeadline: "Ready to walk into every listing appointment with a presentation built to win the seller's signature?",
+    industryTerm: "listing presentation",
+    shortLabel: "real estate",
+    shortLabelPlural: "real estate agents",
+    salesMaterials: [
+      { name: "Listing presentation", description: "The deck you present at the appointment to win the listing: your pricing story, marketing plan, recent sales, and reviews, tailored to the home and the seller in front of you." },
+      { name: "Pricing / CMA presentation", description: "A clear walkthrough of comparable sales and pricing strategy that justifies the number you are recommending, framed around the seller's goals and timeline instead of a wall of raw comps." },
+      { name: "Pre-listing package", description: "Materials you send before the appointment so the seller arrives already impressed: your background, your process, and what working with you looks like." },
+      { name: "Buyer consultation deck", description: "A presentation for buyer clients covering your search process, the local market, financing steps, and what to expect, so buyers commit to working with you exclusively." },
+      { name: "Just listed / just sold feature", description: "A polished property feature for a new listing or a recent win, ready to share with your sphere and farm area to generate the next appointment." },
+    ],
+    whatToInclude: [
+      "A photo-led cover that makes the home look like the listing it deserves to be",
+      "Your pricing rationale and the comparable sales behind it, told as a story rather than a spreadsheet",
+      "A concrete marketing plan: photography, staging, online syndication, and your reach",
+      "Your recent sales and reviews in this area, so the seller trusts you can deliver",
+      "What working with you looks like, step by step from listing to close",
+      "Clear next steps and a timeline so the seller knows what happens after they sign",
+      "Visibility into when the seller opens the presentation so you follow up at the right moment",
+    ],
+  },
+
+  {
     slug: "financial-advisors",
     navLabel: "Financial Advisors",
     label: "Financial Advisors & Wealth Management",
@@ -1372,7 +1481,7 @@ export const INDUSTRY_GROUPS = [
   },
   {
     label: "Industry Verticals",
-    slugs: ["home-services", "commercial-real-estate", "financial-advisors", "nonprofits"],
+    slugs: ["home-services", "commercial-real-estate", "real-estate-agents", "financial-advisors", "nonprofits"],
   },
 ] as const;
 
