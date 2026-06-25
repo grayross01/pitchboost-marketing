@@ -1,0 +1,64 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "PitchBoost API",
+    "version": "1.0.0",
+    "description": "Generate PitchBoost decks programmatically. Authenticate with a Bearer API key (pb_live_...), created at https://app.pitchboost.ai/dashboard/settings/api-keys. An MCP server with the same auth is available at https://app.pitchboost.ai/api/mcp."
+  },
+  "servers": [{ "url": "https://app.pitchboost.ai" }],
+  "security": [{ "apiKey": [] }],
+  "components": {
+    "securitySchemes": {
+      "apiKey": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "PitchBoost API key (pb_live_...)."
+      }
+    }
+  },
+  "paths": {
+    "/api/v1/decks": {
+      "post": {
+        "summary": "Generate a deck",
+        "description": "Generate and publish a deck from a prompt. Returns a shareable link.",
+        "operationId": "createDeck",
+        "security": [{ "apiKey": [] }],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["prompt"],
+                "properties": {
+                  "prompt": { "type": "string", "maxLength": 4000, "description": "What the deck should cover." },
+                  "kind": { "type": "string", "description": "Deck type, e.g. pitch_deck. Defaults to pitch_deck." },
+                  "deal_id": { "type": "integer", "description": "Optional existing deal to attach the deck to." }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Deck created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "share_url": { "type": "string" },
+                    "edit_url": { "type": "string" },
+                    "deck_id": { "type": "integer" },
+                    "deal_id": { "type": "integer" }
+                  }
+                }
+              }
+            }
+          },
+          "401": { "description": "Missing or invalid Bearer API key." }
+        }
+      }
+    }
+  }
+}

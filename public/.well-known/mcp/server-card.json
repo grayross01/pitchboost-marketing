@@ -1,0 +1,19 @@
+{
+  "serverInfo": {
+    "name": "pitchboost",
+    "version": "1.0.0",
+    "description": "Generate and read personalized PitchBoost decks and sales presentations."
+  },
+  "transport": {
+    "type": "streamable-http",
+    "endpoint": "https://app.pitchboost.ai/api/mcp"
+  },
+  "capabilities": { "tools": {} },
+  "authentication": {
+    "type": "http",
+    "scheme": "bearer",
+    "tokenPrefix": "pb_live_",
+    "instructions": "Create a PitchBoost API key at https://app.pitchboost.ai/dashboard/settings/api-keys and pass it as a Bearer token."
+  },
+  "documentation": "https://pitchboost.ai/features/api-and-mcp"
+}
