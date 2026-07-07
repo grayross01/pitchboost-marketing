@@ -12,7 +12,7 @@ export default function TermsPage() {
       <section className="legal-hero">
         <div className="mkt-container">
           <h1>Terms of Service</h1>
-          <p>Last updated: March 29, 2026</p>
+          <p>Last updated: July 6, 2026</p>
         </div>
       </section>
 
@@ -76,7 +76,27 @@ export default function TermsPage() {
           period. AI credit top-ups are non-refundable once used.
         </p>
 
-        <h2>6. Service Availability</h2>
+        <h2>6. Referral Program</h2>
+        <p>
+          Referrers earn a commission on payments made by customers who sign up
+          through their referral link. Commissions accrue on eligible referrals
+          only. The following are not eligible for compensation and any accrued
+          commissions from them may be withheld or reversed: referrals of
+          accounts you own or control (self-referrals, including alias email
+          addresses); referrals generated through paid advertising of any kind,
+          including ads bidding on PitchBoost or confusingly similar terms;
+          and referrals obtained through spam, misleading claims, or incentives
+          not authorized by us in writing.
+        </p>
+        <p>
+          Payouts are made periodically once your accrued balance passes the
+          stated minimum. We may review referrals before paying and may
+          suspend or terminate referral participation for abuse. Commission
+          rates may change prospectively for new referrals; changes do not
+          reduce the rate on referrals already made.
+        </p>
+
+        <h2>7. Service Availability</h2>
         <p>
           We strive for high availability but do not guarantee uninterrupted
           access. We may perform maintenance or updates that temporarily affect
@@ -84,7 +104,7 @@ export default function TermsPage() {
           with reasonable notice.
         </p>
 
-        <h2>7. Limitation of Liability</h2>
+        <h2>8. Limitation of Liability</h2>
         <p>
           To the maximum extent permitted by law, PitchBoost shall not be liable
           for any indirect, incidental, special, consequential, or punitive
@@ -97,7 +117,7 @@ export default function TermsPage() {
           preceding the claim.
         </p>
 
-        <h2>8. Termination</h2>
+        <h2>9. Termination</h2>
         <p>
           We may suspend or terminate your account if you violate these terms.
           You may delete your account at any time. Upon termination, your right
@@ -106,14 +126,14 @@ export default function TermsPage() {
           <Link href="/privacy">Privacy Policy</Link>.
         </p>
 
-        <h2>9. Changes to Terms</h2>
+        <h2>10. Changes to Terms</h2>
         <p>
           We may update these terms from time to time. We will notify you of
           material changes via email or through the Service. Continued use after
           changes constitutes acceptance of the updated terms.
         </p>
 
-        <h2>10. Contact</h2>
+        <h2>11. Contact</h2>
         <p>
           For questions about these terms, contact us at{" "}
           <a href="mailto:legal@pitchboost.ai">legal@pitchboost.ai</a>.
