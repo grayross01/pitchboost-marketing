@@ -1257,6 +1257,115 @@ export const INDUSTRIES: Industry[] = [
   },
 
   {
+    slug: "real-estate-brokerages",
+    navLabel: "Brokerages & Teams",
+    label: "Real Estate Brokerages & Teams",
+    navGroup: "verticals",
+    icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>,
+    metaTitle: "Listing Presentation Software for Real Estate Brokerages & Teams | PitchBoost",
+    metaDescription:
+      "Give every agent in your office listing presentations that look like your top producer built them. PitchBoost keeps the whole brokerage on-brand, shows you which presentations get opened, and gets new agents pitching like veterans in week one.",
+    heroHeadline: "Every agent in your office, pitching like your top producer",
+    heroSubhead:
+      "Your brand is only as strong as the worst presentation that leaves the office. PitchBoost gives every agent on your roster a listing presentation built from the same brand kit, generated for each seller in about a minute, with tracking so you know what is actually getting used and opened.",
+    painPoints: [
+      {
+        title: "Every agent builds their own materials, and it shows",
+        body: "One agent runs a polished deck, another prints an MLS sheet, a third improvises at the kitchen table. Sellers see all of it as your brand. Quality that depends on which agent showed up is not a brand standard, it is a coin flip.",
+      },
+      {
+        title: "New agents lose winnable listings while they learn to pitch",
+        body: "The listing appointments a rookie loses in their first six months are the most expensive part of recruiting them. Training agents to assemble presentations by hand eats your trainers' time and still produces uneven results.",
+      },
+      {
+        title: "You have no idea which presentations get used or opened",
+        body: "You pay for tools, templates, and training, then the office goes quiet. You cannot see who actually presents with them, whether sellers open what gets sent, or which agents need coaching before the next appointment.",
+      },
+    ],
+    howItWorks: [
+      {
+        step: "1",
+        title: "Set the office brand once",
+        body: "Logo, colors, office production stats, compliance line. PitchBoost holds the standard so every presentation that leaves the office carries it, no matter who hit generate.",
+      },
+      {
+        step: "2",
+        title: "Agents generate per-listing presentations in about a minute",
+        body: "An agent pastes the listing link or describes the seller and gets a presentation tailored to that property and neighborhood, on your brand, with their own bio and production. No design skills, no template wrangling.",
+      },
+      {
+        step: "3",
+        title: "Track what happens after the appointment",
+        body: "Presentations go out as tracked links. Agents see when a seller re-opens their presentation and follow up at the right moment. You see, across the office, what is getting used and what is winning.",
+      },
+    ],
+    outcomes: [
+      "One brand standard on every presentation that leaves the office",
+      "New agents deliver top-producer-quality presentations in their first week",
+      "Trainers coach on pitching instead of assembling slides",
+      "Office-wide visibility into which presentations get opened and re-read",
+      "A recruiting story: join us, and this is the toolkit you get on day one",
+      "More listings won per agent without adding marketing headcount",
+    ],
+    whoItsFor: [
+      "Broker-owners of independent brokerages",
+      "Managing brokers at franchise offices",
+      "Team leads running listing teams",
+      "Brokerage trainers and productivity coaches",
+      "Office administrators and marketing coordinators",
+      "Transaction coordinators supporting multiple agents",
+      "Recruiting-focused brokers building their roster",
+    ],
+    faqs: [
+      {
+        q: "Can my whole office use PitchBoost under one brand?",
+        a: "Yes. Set the brokerage brand kit once (logo, colors, office stats, compliance line) and every agent's presentations are generated on it. Agents personalize their own bio, headshot, and production numbers without being able to drift off-brand.",
+      },
+      {
+        q: "Do agents share presentations or does each agent get their own?",
+        a: "Each agent generates their own presentation per listing appointment, tailored to that seller and property. What is shared is the standard: the brand kit, the office's proof points, and the structure that wins. The result is variety in the pitch, consistency in the brand.",
+      },
+      {
+        q: "Can I see what agents are actually doing with it?",
+        a: "Yes. Presentations are shared as tracked links, so agents see when a seller opens and re-reads their presentation, and the office can see which presentations are going out and getting engagement. It turns 'did you follow up' from a guess into a report.",
+      },
+      {
+        q: "How fast can a brand-new agent be ready for a listing appointment?",
+        a: "The same day they join. A new agent pastes the listing link, and PitchBoost generates a presentation carrying the office brand, the office's track record, and a professional structure. The rookie walks in with materials indistinguishable from your veterans'.",
+      },
+      {
+        q: "Is this a template my agents fill in?",
+        a: "No. Templates give agents a layout and leave the hard part, the writing, to them. PitchBoost generates the actual content per listing: the property story, the neighborhood context, the marketing plan, the pricing approach. Agents review and tweak instead of assembling from scratch.",
+      },
+      {
+        q: "Can we use PitchBoost as a recruiting tool?",
+        a: "Brokers do, in two ways. First as a perk in the recruiting pitch: join us and get a listing-presentation engine your current office does not have. Second, literally: generate a recruiting presentation aimed at the agent you want, the same way agents generate presentations aimed at sellers.",
+      },
+    ],
+    ctaHeadline: "Ready to put a top-producer listing presentation in every agent's hands, on one brand standard?",
+    sampleDeckUrl: "https://app.pitchboost.ai/p/real-estate/sample",
+    industryTerm: "listing presentation",
+    shortLabel: "brokerage",
+    shortLabelPlural: "brokerages and teams",
+    salesMaterials: [
+      { name: "Listing presentation", description: "The office workhorse: a per-property presentation any agent generates for a listing appointment, carrying the brokerage brand, the office track record, and the agent's own bio and production." },
+      { name: "Buyer presentation", description: "A buyer-consultation presentation covering the process, the market, and why working with your office beats going it alone. Standardizes the buyer-agreement conversation across the roster." },
+      { name: "Pre-listing package", description: "Sent before the appointment so the seller arrives already sold on the office: track record, marketing approach, and what to expect. Tracked, so the agent knows it was read before they knock." },
+      { name: "Agent recruiting deck", description: "A presentation aimed at an agent you want on the roster: your office's value proposition, tools, splits story, and culture, tailored to the recruit the way listing presentations are tailored to sellers." },
+      { name: "Market update presentation", description: "A periodic neighborhood or market-conditions deck agents send to their sphere between transactions, keeping the office brand in front of past clients and future sellers." },
+    ],
+    whatToInclude: [
+      "The office brand kit: logo, colors, and the compliance line your state requires on marketing",
+      "Office production stats: closed volume, days on market, list-to-sale ratio, sides",
+      "The individual agent's bio, headshot, and personal production alongside the office story",
+      "Your marketing plan for listings, spelled out step by step so sellers see the machine",
+      "Neighborhood expertise and recent nearby sales that prove local command",
+      "Client reviews and testimonials attributed to real names",
+      "A clear next-steps close: what the seller signs and what happens in the first week",
+    ],
+  },
+
+  {
     slug: "financial-advisors",
     navLabel: "Financial Advisors",
     label: "Financial Advisors & Wealth Management",
@@ -1486,7 +1595,7 @@ export const INDUSTRY_GROUPS = [
   },
   {
     label: "Industry Verticals",
-    slugs: ["home-services", "commercial-real-estate", "real-estate-agents", "financial-advisors", "nonprofits"],
+    slugs: ["home-services", "commercial-real-estate", "real-estate-agents", "real-estate-brokerages", "financial-advisors", "nonprofits"],
   },
 ] as const;
 
