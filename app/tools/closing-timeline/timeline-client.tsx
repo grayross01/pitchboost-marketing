@@ -134,7 +134,9 @@ export default function TimelineClient() {
 
   async function copyShareLink() {
     if (!milestones) return;
-    const url = `https://pitchboost.ai/tools/closing-timeline?d=${encodeShare(title, milestones)}`;
+    // Client links point at the QUIET /t/timeline view (no navbar, no
+    // signup CTAs): a buyer or seller should see a document, not a pitch.
+    const url = `https://pitchboost.ai/t/timeline?d=${encodeShare(title, milestones)}`;
     try {
       await navigator.clipboard.writeText(url);
       setCopied(true);
