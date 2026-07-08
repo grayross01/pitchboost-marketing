@@ -295,11 +295,15 @@ export default function TimelineClient() {
               </button>
             )}
 
-            {/* Output bar */}
+            {/* Output bar. On a SHARED view (someone opened a client link in
+                the legacy ?d= format) the copy button is hidden: a client
+                re-copying a copy link was a confusing loop. */}
             <div className="pb-no-print" style={{ display: "flex", gap: 10, flexWrap: "wrap", marginTop: 22, paddingTop: 18, borderTop: "1px solid #eef1f5" }}>
-              <button className="btn btn-primary" onClick={copyShareLink}>
-                {copied ? "Link copied" : "Copy client link"}
-              </button>
+              {!fromShare && (
+                <button className="btn btn-primary" onClick={copyShareLink}>
+                  {copied ? "Link copied" : "Copy client link"}
+                </button>
+              )}
               <button className="btn btn-ghost" onClick={downloadIcs}>
                 Add all to calendar (.ics)
               </button>
