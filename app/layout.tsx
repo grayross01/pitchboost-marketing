@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import MarketingNavbar from "@/components/marketing/navbar";
 import MarketingFooter from "@/components/marketing/footer";
+import ChromeGate from "@/components/marketing/chrome-gate";
 import FadeUpObserver from "@/components/marketing/fade-up-observer";
 
 const GTM_ID = "GTM-TGJD79J4";
@@ -110,9 +111,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           />
         </noscript>
         <div className="marketing">
-          <MarketingNavbar />
+          <ChromeGate>
+            <MarketingNavbar />
+          </ChromeGate>
           {children}
-          <MarketingFooter />
+          <ChromeGate>
+            <MarketingFooter />
+          </ChromeGate>
           <FadeUpObserver />
         </div>
       </body>
