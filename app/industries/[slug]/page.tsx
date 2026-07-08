@@ -53,6 +53,12 @@ export default async function IndustryPage({ params }: Props) {
 
   const { shortLabel, shortLabelPlural, industryTerm } = industry;
 
+  // Vertical deep link: industries with a signupIntent send new users into
+  // the matching in-app intake (the app reads ?intent= via its proxy).
+  const signupUrl = industry.signupIntent
+    ? `${SIGNUP_URL}?intent=${encodeURIComponent(industry.signupIntent)}`
+    : SIGNUP_URL;
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -105,7 +111,7 @@ export default async function IndustryPage({ params }: Props) {
             {industry.heroSubhead}
           </p>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 16, marginTop: 36, flexWrap: "wrap" }}>
-            <a href={SIGNUP_URL} className="btn btn-primary btn-lg">
+            <a href={signupUrl} className="btn btn-primary btn-lg">
               Generate your {shortLabel} {industryTerm}
             </a>
             <a href="#sample-deck" className="btn btn-ghost btn-lg">
@@ -199,7 +205,7 @@ export default async function IndustryPage({ params }: Props) {
             <p style={{ fontSize: 15, color: "var(--ds-text-secondary)", marginBottom: 20 }}>
               PitchBoost pulls all of this from your existing credentials and the prospect&apos;s context — automatically.
             </p>
-            <a href={SIGNUP_URL} className="btn btn-primary">Build your first {industryTerm} free</a>
+            <a href={signupUrl} className="btn btn-primary">Build your first {industryTerm} free</a>
           </div>
         </div>
       </section>
@@ -242,7 +248,7 @@ export default async function IndustryPage({ params }: Props) {
             ))}
           </div>
           <div style={{ textAlign: "center", marginTop: 40 }}>
-            <a href={SIGNUP_URL} className="btn btn-primary">Start building free</a>
+            <a href={signupUrl} className="btn btn-primary">Start building free</a>
           </div>
         </div>
       </section>
@@ -273,7 +279,7 @@ export default async function IndustryPage({ params }: Props) {
             <p>
               Stop adapting generic templates. Generate your first tailored {industryTerm} free — no design skills required, no credit card needed.
             </p>
-            <a href={SIGNUP_URL} className="btn btn-primary btn-lg">
+            <a href={signupUrl} className="btn btn-primary btn-lg">
               Generate your {shortLabel} {industryTerm} free
             </a>
           </div>

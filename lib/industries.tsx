@@ -17,6 +17,10 @@ export interface Industry {
   faqs: { q: string; a: string }[];
   ctaHeadline: string;
   sampleDeckUrl?: string;
+  /** Appended to app signup CTAs as ?intent=<value>. The app routes the
+   *  new user into the matching vertical intake (e.g. "listing" sends
+   *  real estate signups to the listing-presentation flow). */
+  signupIntent?: string;
   industryTerm: string;
   shortLabel: string;
   shortLabelPlural: string;
@@ -1235,6 +1239,7 @@ export const INDUSTRIES: Industry[] = [
     ],
     ctaHeadline: "Ready to walk into every listing appointment with a presentation built to win the seller's signature?",
     sampleDeckUrl: "https://app.pitchboost.ai/p/real-estate/sample",
+    signupIntent: "listing",
     industryTerm: "listing presentation",
     shortLabel: "real estate",
     shortLabelPlural: "real estate agents",
@@ -1344,6 +1349,7 @@ export const INDUSTRIES: Industry[] = [
     ],
     ctaHeadline: "Ready to put a top-producer listing presentation in every agent's hands, on one brand standard?",
     sampleDeckUrl: "https://app.pitchboost.ai/p/real-estate/sample",
+    signupIntent: "listing",
     industryTerm: "listing presentation",
     shortLabel: "brokerage",
     shortLabelPlural: "brokerages and teams",
