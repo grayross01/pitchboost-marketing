@@ -53,14 +53,36 @@ function daysFromToday(iso: string): number {
   return Math.round((d.getTime() - today.getTime()) / 86400000);
 }
 
+// Optional agent branding carried in the share payload. Kept short (single
+// letters) because the whole timeline lives in the URL. `c` is a hex color
+// only, so it's safe to drop straight into inline styles on the shared view.
+interface Branding {
+  n?: string; // agent name
+  o?: string; // brokerage / org
+  p?: string; // phone
+  c?: string; // accent hex
+}
+
+const HEX = /^#[0-9a-fA-F]{3,8}$/;
+
 // ---- Share-link encoding (mirrored in the PitchBoost app repo:
-// src/lib/closing-timeline.ts encodeTimelineShare) ----
-function encodeShare(title: string, milestones: Milestone[]): string {
-  const payload = JSON.stringify({ t: title, m: milestones.map((m) => [m.name, m.date]) });
+// src/lib/closing-timeline.ts encodeTimelineShare). Adding the optional `b`
+// branding object is backward compatible: older/other decoders ignore it. ----
+function encodeShare(title: string, milestones: Milestone[], branding?: Branding): string {
+  const b: Branding = {};
+  if (branding?.n?.trim()) b.n = branding.n.trim().slice(0, 60);
+  if (branding?.o?.trim()) b.o = branding.o.trim().slice(0, 60);
+  if (branding?.p?.trim()) b.p = branding.p.trim().slice(0, 40);
+  if (branding?.c && HEX.test(branding.c)) b.c = branding.c;
+  const payload = JSON.stringify({
+    t: title,
+    m: milestones.map((m) => [m.name, m.date]),
+    ...(Object.keys(b).length ? { b } : {}),
+  });
   return btoa(unescape(encodeURIComponent(payload))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
 }
 
-function decodeShare(encoded: string): { title: string; milestones: Milestone[] } | null {
+function decodeShare(encoded: string): { title: string; milestones: Milestone[]; branding?: Branding } | null {
   try {
     const b64 = encoded.replace(/-/g, "+").replace(/_/g, "/");
     const json = decodeURIComponent(escape(atob(b64)));
@@ -70,7 +92,16 @@ function decodeShare(encoded: string): { title: string; milestones: Milestone[] 
       .filter((row: unknown) => Array.isArray(row) && typeof row[0] === "string" && /^\d{4}-\d{2}-\d{2}$/.test(String(row[1])))
       .slice(0, 40)
       .map((row: [string, string], i: number) => ({ id: i + 1, name: String(row[0]).slice(0, 80), date: row[1] }));
-    return { title: typeof data.t === "string" ? data.t.slice(0, 120) : "", milestones };
+    const raw = data.b && typeof data.b === "object" ? data.b : null;
+    const branding: Branding | undefined = raw
+      ? {
+          n: typeof raw.n === "string" ? raw.n.slice(0, 60) : undefined,
+          o: typeof raw.o === "string" ? raw.o.slice(0, 60) : undefined,
+          p: typeof raw.p === "string" ? raw.p.slice(0, 40) : undefined,
+          c: typeof raw.c === "string" && HEX.test(raw.c) ? raw.c : undefined,
+        }
+      : undefined;
+    return { title: typeof data.t === "string" ? data.t.slice(0, 120) : "", milestones, branding };
   } catch {
     return null;
   }
@@ -104,6 +135,11 @@ export default function TimelineClient() {
   const [fromShare, setFromShare] = useState(false);
   const [email, setEmail] = useState("");
   const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
+  // Optional agent branding shown on the client's shared copy.
+  const [brandName, setBrandName] = useState("");
+  const [brokerage, setBrokerage] = useState("");
+  const [phone, setPhone] = useState("");
+  const [accent, setAccent] = useState("#0e5a64");
 
   // Shared-link mode: hydrate the whole timeline from ?d= on first load.
   useEffect(() => {
@@ -114,6 +150,10 @@ export default function TimelineClient() {
       setTitle(decoded.title);
       setMilestones(decoded.milestones);
       setFromShare(true);
+      if (decoded.branding?.n) setBrandName(decoded.branding.n);
+      if (decoded.branding?.o) setBrokerage(decoded.branding.o);
+      if (decoded.branding?.p) setPhone(decoded.branding.p);
+      if (decoded.branding?.c) setAccent(decoded.branding.c);
     }
   }, []);
 
@@ -158,7 +198,7 @@ export default function TimelineClient() {
     if (!milestones) return;
     // Client links point at the QUIET /t/timeline view (no navbar, no
     // signup CTAs): a buyer or seller should see a document, not a pitch.
-    const url = `https://pitchboost.ai/t/timeline?d=${encodeShare(title, milestones)}`;
+    const url = `https://pitchboost.ai/t/timeline?d=${encodeShare(title, milestones, { n: brandName, o: brokerage, p: phone, c: accent })}`;
     try {
       await navigator.clipboard.writeText(url);
       setCopied(true);
@@ -242,6 +282,41 @@ export default function TimelineClient() {
                 <input className="pbtl-input" style={{ marginTop: 6 }} type="date" value={closing} onChange={(e) => setClosing(e.target.value)} />
               </label>
             </div>
+            <details style={{ marginTop: 16 }}>
+              <summary style={{ cursor: "pointer", fontSize: "0.85rem", fontWeight: 600, color: "var(--ds-dark)" }}>
+                Add your branding (optional): it shows on the client&apos;s copy
+              </summary>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 14, marginTop: 14 }}>
+                <label style={{ fontSize: "0.85rem", fontWeight: 600, color: "var(--ds-dark)" }}>
+                  Your name
+                  <input className="pbtl-input" style={{ marginTop: 6 }} placeholder="Jane Agent" value={brandName} maxLength={60} onChange={(e) => setBrandName(e.target.value)} />
+                </label>
+                <label style={{ fontSize: "0.85rem", fontWeight: 600, color: "var(--ds-dark)" }}>
+                  Brokerage
+                  <input className="pbtl-input" style={{ marginTop: 6 }} placeholder="Keller Williams" value={brokerage} maxLength={60} onChange={(e) => setBrokerage(e.target.value)} />
+                </label>
+                <label style={{ fontSize: "0.85rem", fontWeight: 600, color: "var(--ds-dark)" }}>
+                  Phone
+                  <input className="pbtl-input" style={{ marginTop: 6 }} placeholder="(555) 123-4567" value={phone} maxLength={40} onChange={(e) => setPhone(e.target.value)} />
+                </label>
+                <label style={{ fontSize: "0.85rem", fontWeight: 600, color: "var(--ds-dark)" }}>
+                  Accent color
+                  <input
+                    type="color"
+                    style={{ marginTop: 6, display: "block", width: 56, height: 38, border: "1px solid #d8dee6", borderRadius: 8, background: "#fff", cursor: "pointer", padding: 2 }}
+                    value={accent}
+                    onChange={(e) => setAccent(e.target.value)}
+                  />
+                </label>
+              </div>
+              <p style={{ fontSize: "0.75rem", color: "var(--ds-text-light)", marginTop: 10 }}>
+                Want your headshot and logo too, plus automatic reminders?{" "}
+                <a href="https://app.pitchboost.ai/signup?intent=listing" style={{ color: "var(--ds-primary, #0e5a64)", fontWeight: 600 }}>
+                  Do it in PitchBoost
+                </a>
+                .
+              </p>
+            </details>
             <button
               className="btn btn-primary"
               style={{ marginTop: 16, opacity: acceptance && closing && emailValid ? 1 : 0.5 }}
