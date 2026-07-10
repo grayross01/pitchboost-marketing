@@ -256,6 +256,29 @@ export default function RealEstateLandingPage() {
         </div>
       </section>
 
+      {/* ── Free tools ── */}
+      <section className="mkt-section">
+        <div className="mkt-container">
+          <div className="section-header fade-up">
+            <div className="section-label"><span>Free, no signup</span></div>
+            <h2>Free tools you can use on your next appointment</h2>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 18 }}>
+            {[
+              { href: "/tools/open-house-sign-in", t: "Open house sign-in + QR", d: "Print one QR for the door. Visitors scan, sign in, and every lead is emailed to you." },
+              { href: "/tools/closing-timeline", t: "Closing timeline generator", d: "Two dates in, every deadline out. Share a clean, branded timeline with your client." },
+              { href: "/tools/seller-net-sheet", t: "Seller net sheet calculator", d: "Show a seller what they net. Enter the numbers, hand over a branded breakdown." },
+            ].map((x, i) => (
+              <a key={i} href={x.href} className="fade-up" style={{ textDecoration: "none", ...cardStyle }}>
+                <h3 style={{ fontSize: "1.05rem", fontWeight: 800, color: "var(--ds-dark)" }}>{x.t}</h3>
+                <p style={{ fontSize: 14, color: "var(--ds-text-light)", lineHeight: 1.65, marginTop: 8 }}>{x.d}</p>
+                <span style={{ display: "inline-block", marginTop: 12, fontSize: "0.9rem", fontWeight: 600, color: "#1F6B6B" }}>Open the tool →</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── FAQ ── */}
       <section className="mkt-section" style={{ background: "var(--ds-bg-light)" }}>
         <div className="mkt-container" style={{ maxWidth: 780 }}>
