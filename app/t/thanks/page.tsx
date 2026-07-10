@@ -91,7 +91,9 @@ export default async function ThanksPage({ searchParams }: { searchParams: Promi
           <div style={{ marginTop: 28, paddingTop: 20, borderTop: "1px solid #eef1f5" }}>
             <div style={{ fontWeight: 700, color: "var(--ds-dark)", fontSize: "0.95rem" }}>Know someone buying or selling?</div>
             <p style={{ fontSize: "0.9rem", color: "var(--ds-text-light)", marginTop: 4, lineHeight: 1.6 }}>
-              The best compliment is an introduction. Send them my way{data.p ? ` at ${data.p}` : ""} and I&apos;ll take great care of them.
+              {data.p
+                ? `The best compliment is an introduction. Send them my way at ${data.p} and I'll take great care of them.`
+                : "The best compliment is an introduction. Send them my way and I'll take great care of them."}
             </p>
           </div>
         </div>
