@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import QRCode from "qrcode";
+import { trackLead } from "@/lib/analytics";
 
 /**
  * Free open-house sign-in tool: the highest-value realtor lead magnet. The
@@ -43,6 +44,7 @@ export default function OpenHouseClient() {
         setState("error");
         return;
       }
+      trackLead("open_house_setup");
       const url = `${APP_URL}/oh/${data.token}`;
       setSignInUrl(url);
       const dataUrl = await QRCode.toDataURL(url, { width: 640, margin: 1, color: { dark: "#101828", light: "#ffffff" } });

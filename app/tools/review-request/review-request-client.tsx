@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { trackLead } from "@/lib/analytics";
 
 /**
  * Free "thank-you + review + referral" tool: the post-close flywheel as a
@@ -40,6 +41,7 @@ export default function ReviewRequestClient() {
   const canCreate = emailValid && name.trim() && reviewValid;
 
   async function captureLead() {
+    trackLead("review_request");
     try {
       await fetch(`${APP_URL}/api/public/tool-lead`, {
         method: "POST",

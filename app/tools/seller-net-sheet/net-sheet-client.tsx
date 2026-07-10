@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { trackLead } from "@/lib/analytics";
 
 /**
  * Free seller net-sheet calculator: a realtor lead magnet. Enter the sale
@@ -54,6 +55,7 @@ export default function NetSheetClient() {
   }, [salePrice, commissionPct, costs]);
 
   async function captureLead() {
+    trackLead("seller_net_sheet");
     try {
       await fetch(`${APP_URL}/api/public/tool-lead`, {
         method: "POST",

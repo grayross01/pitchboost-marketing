@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { trackLead } from "@/lib/analytics";
 
 /**
  * Free closing-timeline generator: the realtor lead magnet. Enter the
@@ -162,6 +163,7 @@ export default function TimelineClient() {
   // Fire-and-forget with keepalive: a capture hiccup must never stop a
   // realtor from getting their timeline.
   async function captureLead() {
+    trackLead("closing_timeline");
     try {
       await fetch(`${APP_URL}/api/public/timeline-lead`, {
         method: "POST",
