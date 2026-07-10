@@ -6,10 +6,12 @@ import { useEffect, useMemo, useState } from "react";
  * Free closing-timeline generator: the realtor lead magnet. Enter the
  * contract acceptance and closing dates, get every standard deadline
  * (editable), then share it with a client, print it, or drop every date
- * into a calendar via .ics. No signup, no storage: the shareable link
- * carries the whole timeline base64url-encoded in ?d=, so a timeline made
- * here (or in the PitchBoost app, which emits the same URLs) renders for
- * anyone who opens it.
+ * into a calendar via .ics. Generating requires an email (captured as a
+ * lead via the app's /api/public/timeline-lead); the timeline itself is
+ * still storageless: the shareable link carries the whole timeline
+ * base64url-encoded in ?d=, so a timeline made here (or in the PitchBoost
+ * app, which emits the same URLs) renders for anyone who opens it. The
+ * shared-link view (?d=) is NOT gated.
  */
 
 type Milestone = { id: number; name: string; date: string };
@@ -100,6 +102,8 @@ export default function TimelineClient() {
   const [nextId, setNextId] = useState(100);
   const [copied, setCopied] = useState(false);
   const [fromShare, setFromShare] = useState(false);
+  const [email, setEmail] = useState("");
+  const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
 
   // Shared-link mode: hydrate the whole timeline from ?d= on first load.
   useEffect(() => {
@@ -113,8 +117,26 @@ export default function TimelineClient() {
     }
   }, []);
 
+  // Lead capture: the tool now requires an email to generate. Send it (with
+  // the dates for context) to the app so the lead lands in `timeline_leads`.
+  // Fire-and-forget with keepalive: a capture hiccup must never stop a
+  // realtor from getting their timeline.
+  async function captureLead() {
+    try {
+      await fetch(`${APP_URL}/api/public/timeline-lead`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: email.trim(), title, acceptance, closing }),
+        keepalive: true,
+      });
+    } catch {
+      /* non-blocking */
+    }
+  }
+
   function generate() {
-    if (!acceptance || !closing) return;
+    if (!acceptance || !closing || !emailValid) return;
+    void captureLead();
     setMilestones(defaultMilestones(acceptance, closing));
   }
 
@@ -180,7 +202,7 @@ export default function TimelineClient() {
           <p style={{ color: "var(--ds-text-light)", fontSize: "1.05rem", maxWidth: 620, margin: "12px auto 0", lineHeight: 1.7 }}>
             Two dates in, every deadline out: earnest money, inspection, appraisal, financing,
             walkthrough, closing. Edit anything, send it to your client, or add it all to your
-            calendar. Free, no signup.
+            calendar. Free to use, no account needed.
           </p>
         </div>
       </section>
@@ -189,6 +211,23 @@ export default function TimelineClient() {
         {/* Inputs */}
         {!fromShare && (
           <div className="pb-no-print" style={{ background: "#fff", border: "1px solid #e5e9ef", borderRadius: 14, padding: 22, marginBottom: 26 }}>
+            <label style={{ display: "block", fontSize: "0.85rem", fontWeight: 600, color: "var(--ds-dark)", marginBottom: 16 }}>
+              Your email
+              <input
+                className="pbtl-input"
+                style={{ marginTop: 6 }}
+                type="email"
+                inputMode="email"
+                autoComplete="email"
+                placeholder="you@brokerage.com"
+                value={email}
+                maxLength={254}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <span style={{ display: "block", marginTop: 6, fontSize: "0.75rem", fontWeight: 400, color: "var(--ds-text-light)" }}>
+                Required to generate. We&apos;ll only use it to share new realtor tools, never spam.
+              </span>
+            </label>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 14 }}>
               <label style={{ fontSize: "0.85rem", fontWeight: 600, color: "var(--ds-dark)" }}>
                 Property or client (optional)
@@ -205,8 +244,8 @@ export default function TimelineClient() {
             </div>
             <button
               className="btn btn-primary"
-              style={{ marginTop: 16, opacity: acceptance && closing ? 1 : 0.5 }}
-              disabled={!acceptance || !closing}
+              style={{ marginTop: 16, opacity: acceptance && closing && emailValid ? 1 : 0.5 }}
+              disabled={!acceptance || !closing || !emailValid}
               onClick={generate}
             >
               {milestones ? "Regenerate standard deadlines" : "Generate timeline"}
