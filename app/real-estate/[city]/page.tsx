@@ -102,6 +102,7 @@ export default async function CityPage({ params }: Props) {
               { href: "/tools/open-house-sign-in", t: "Open house sign-in + QR", d: "Print one QR for the door. Visitors scan, sign in, and every lead is emailed to you." },
               { href: "/tools/closing-timeline", t: "Closing timeline generator", d: "Two dates in, every deadline out. Share a clean, branded timeline with your client." },
               { href: "/tools/seller-net-sheet", t: "Seller net sheet calculator", d: "Show a seller what they net. Enter the numbers, hand over a branded breakdown." },
+              { href: "/tools/review-request", t: "Thank-you & review request", d: "Just closed? Send a branded thank-you with a one-tap review button and a referral ask." },
             ].map((x, i) => (
               <a key={i} href={x.href} className="fade-up" style={{ textDecoration: "none", ...card }}>
                 <h3 style={{ fontSize: "1.05rem", fontWeight: 800, color: "var(--ds-dark)" }}>{x.t}</h3>

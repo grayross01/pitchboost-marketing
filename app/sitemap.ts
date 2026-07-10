@@ -27,6 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/tools/open-house-sign-in", changeFrequency: "monthly", priority: 0.7 },
     { path: "/tools/closing-timeline", changeFrequency: "monthly", priority: 0.7 },
     { path: "/tools/seller-net-sheet", changeFrequency: "monthly", priority: 0.7 },
+    { path: "/tools/review-request", changeFrequency: "monthly", priority: 0.7 },
     { path: "/blog", changeFrequency: "weekly", priority: 0.7 },
     { path: "/privacy", changeFrequency: "yearly", priority: 0.3 },
     { path: "/terms", changeFrequency: "yearly", priority: 0.3 },

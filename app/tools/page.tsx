@@ -27,6 +27,12 @@ const TOOLS = [
     desc: "Show a seller what they'll actually net. Enter the numbers, get a branded breakdown to hand over on the spot.",
     tag: "Win the listing",
   },
+  {
+    href: "/tools/review-request",
+    title: "Thank-you & review request",
+    desc: "Just closed? Send a branded thank-you with a one-tap review button and a warm referral ask. Reviews and referrals grow your business.",
+    tag: "After the close",
+  },
 ];
 
 export default function ToolsIndexPage() {
