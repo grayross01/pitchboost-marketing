@@ -3,6 +3,7 @@ import { INDUSTRIES } from "@/lib/industries";
 import { COMPETITORS } from "@/lib/competitors";
 import { FEATURES } from "@/lib/features";
 import { getAllSlugs } from "@/lib/blog";
+import { CITIES } from "@/lib/cities";
 
 const BASE = "https://pitchboost.ai";
 
@@ -21,6 +22,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/industries", changeFrequency: "monthly", priority: 0.9 },
     { path: "/compare", changeFrequency: "monthly", priority: 0.8 },
     { path: "/use-cases", changeFrequency: "monthly", priority: 0.6 },
+    { path: "/real-estate", changeFrequency: "monthly", priority: 0.9 },
+    { path: "/tools", changeFrequency: "monthly", priority: 0.7 },
+    { path: "/tools/open-house-sign-in", changeFrequency: "monthly", priority: 0.7 },
+    { path: "/tools/closing-timeline", changeFrequency: "monthly", priority: 0.7 },
+    { path: "/tools/seller-net-sheet", changeFrequency: "monthly", priority: 0.7 },
     { path: "/blog", changeFrequency: "weekly", priority: 0.7 },
     { path: "/privacy", changeFrequency: "yearly", priority: 0.3 },
     { path: "/terms", changeFrequency: "yearly", priority: 0.3 },
@@ -43,6 +49,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
   for (const slug of getAllSlugs()) {
     entries.push({ url: `${BASE}/blog/${slug}`, changeFrequency: "monthly", priority: 0.6 });
+  }
+  for (const c of CITIES) {
+    entries.push({ url: `${BASE}/real-estate/${c.slug}`, changeFrequency: "monthly", priority: 0.7 });
   }
 
   return entries;
