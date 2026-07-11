@@ -34,6 +34,17 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    // Short, ad-friendly aliases for the comparison pages. The canonical pages
+    // live at /compare/pitchboost-vs-<name>; these let /compare/<name> (the form
+    // used in Google Ads and often guessed by people and LLMs) resolve to them.
+    return [
+      { source: "/compare/gamma", destination: "/compare/pitchboost-vs-gamma", permanent: true },
+      { source: "/compare/beautiful-ai", destination: "/compare/pitchboost-vs-beautiful-ai", permanent: true },
+      { source: "/compare/pitch", destination: "/compare/pitchboost-vs-pitch", permanent: true },
+      { source: "/compare/tome", destination: "/compare/pitchboost-vs-tome", permanent: true },
+    ];
+  },
   async headers() {
     return [
       {

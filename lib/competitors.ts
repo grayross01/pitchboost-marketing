@@ -239,6 +239,74 @@ export const COMPETITORS: Competitor[] = [
     ],
     ctaHeadline: "Try the Pitch alternative built for fast, personalized sales decks",
   },
+  {
+    slug: "pitchboost-vs-tome",
+    name: "Tome",
+    metaTitle: "PitchBoost vs Tome: The Tome Alternative for Making Pitch Decks (2026)",
+    metaDescription: "Tome retired its AI presentation product to focus on sales research. If you still need to generate and send a pitch deck or proposal, see why PitchBoost is the Tome alternative built for creating decks.",
+    heroHeadline: "PitchBoost vs Tome: The Alternative for Actually Making the Deck",
+    heroSubhead: "Tome moved away from presentations and now focuses on AI account research and meeting prep. If your goal is still to create and send a polished, personalized pitch deck, PitchBoost is the alternative built for that.",
+    verdict: "Tome retired its AI presentation product in 2025 and repositioned as an AI sales assistant for account research, meeting preparation, and deal personalization. It is a capable research tool, but it no longer generates the finished deck you send to a prospect. If creating and sharing a tailored pitch deck or proposal is the job, PitchBoost is the purpose-built alternative.",
+    competitorSummary: "Tome is now an AI sales assistant focused on account research, meeting preparation, and deal personalization, under the tagline 'make deals, not decks.' It scans company data, CRM records, and call notes to brief sales teams before a meeting. Its earlier AI presentation product was sunset in 2025.",
+    pitchboostPricing: "Free plan available. Pro: $29/mo. Business: $79/mo.",
+    competitorPricing: "Pro around $16/mo billed annually. Enterprise: custom.",
+    features: [
+      { label: "AI-generated pitch decks", pitchboost: true, competitor: "Retired" },
+      { label: "Personalized per prospect or deal", pitchboost: true, competitor: "Research only" },
+      { label: "Purpose-built for sending a deck", pitchboost: true, competitor: false },
+      { label: "Shareable links with viewer analytics", pitchboost: true, competitor: "Partial" },
+      { label: "PDF and PPTX export", pitchboost: true, competitor: false },
+      { label: "Free plan available", pitchboost: true, competitor: "Trial" },
+      { label: "AI account research and meeting prep", pitchboost: false, competitor: true },
+      { label: "Built for small teams and solo operators", pitchboost: true, competitor: "Partial" },
+    ],
+    keyDifferences: [
+      {
+        title: "Tome stopped making decks",
+        body: "In 2025 Tome retired its AI presentation product and pivoted to sales research and meeting preparation. That is a real change in what the tool does: it now briefs you before a meeting rather than producing the deck you present. PitchBoost is built around the opposite outcome, turning your inputs and the prospect's context into a finished, on-brand deck you can send.",
+      },
+      {
+        title: "The research vs. the finished deliverable",
+        body: "Tome is strong at pulling together account context from company data and your CRM. PitchBoost takes the context you already have and produces the actual pitch deck, proposal, or listing presentation, complete with copy, layout, and your branding. One prepares you for the conversation; the other creates the material the conversation runs on.",
+      },
+      {
+        title: "You can still send and track it",
+        body: "Because PitchBoost produces the deck, it also publishes it as a trackable link and shows you who opened it and which slides they read. If you used Tome to make and share presentations, that is the workflow PitchBoost keeps, and the one Tome no longer offers.",
+      },
+    ],
+    pitchboostBestFor: [
+      "Anyone who needs to create and send a pitch deck",
+      "Sales teams pitching specific prospects",
+      "Agencies and consultants writing proposals",
+      "Real estate agents building listing presentations",
+      "Former Tome users who still need to make decks",
+    ],
+    competitorBestFor: [
+      "Sales teams that want AI account research",
+      "Reps preparing for a specific meeting",
+      "Teams that want deal briefs from CRM data",
+      "Users who no longer need to build presentations",
+    ],
+    faqs: [
+      {
+        q: "Does Tome still make presentations?",
+        a: "No. Tome retired its AI presentation product in 2025 and now focuses on AI account research and meeting preparation for sales teams. If you need to create an actual deck, you need a different tool.",
+      },
+      {
+        q: "What is the best Tome alternative for making decks?",
+        a: "PitchBoost is a strong Tome alternative if your goal is to generate and send a deck. It creates a personalized, on-brand pitch deck, proposal, or listing presentation from your inputs, then publishes it as a trackable link.",
+      },
+      {
+        q: "Can PitchBoost do account research like Tome?",
+        a: "PitchBoost drafts your deck from the context you provide and does light web research at generation time, but it is not a standalone CRM research tool. If deep pre-meeting account research is your main need, Tome is built for that. If creating the deck is the job, PitchBoost is.",
+      },
+      {
+        q: "How does PitchBoost compare to Tome on price?",
+        a: "PitchBoost has a free plan and a Pro plan at $29/mo. Tome's current sales-research product is around $16/mo billed annually, with custom Enterprise pricing. They price similarly, but they now do different jobs.",
+      },
+    ],
+    ctaHeadline: "Try the Tome alternative built for creating and sending decks",
+  },
 ];
 
 export function getCompetitor(slug: string): Competitor | undefined {

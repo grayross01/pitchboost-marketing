@@ -5,7 +5,7 @@ const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 const SIGNUP_URL = `${APP_URL}/signup`;
 
 const PRODUCT_LINKS = [
-  { label: "Pricing", href: "/#pricing" },
+  { label: "Pricing", href: "/pricing" },
   { label: "Templates", href: `${APP_URL}/templates` },
   { label: "Blog", href: "/blog" },
   { label: "Get Started", href: SIGNUP_URL },

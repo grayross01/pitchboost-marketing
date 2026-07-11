@@ -14,15 +14,6 @@ const SIGNUP_URL = `${APP_URL}/signup`;
 const industryMap = Object.fromEntries(INDUSTRIES.map((i) => [i.slug, i]));
 const featureMap = Object.fromEntries(FEATURES.map((f) => [f.slug, f]));
 
-function smoothScrollTo(hash: string) {
-  const id = hash.replace("#", "");
-  const el = document.getElementById(id);
-  if (el) {
-    const top = el.getBoundingClientRect().top + window.scrollY - 80;
-    window.scrollTo({ top, behavior: "smooth" });
-  }
-}
-
 function ChevronDown({ size = 14 }: { size?: number }) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -40,7 +31,6 @@ export default function MarketingNavbar() {
   const [mobileSection, setMobileSection] = useState<"features" | "industry" | null>(null);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const pathname = usePathname();
-  const isHome = pathname === "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -71,18 +61,6 @@ export default function MarketingNavbar() {
     setMobileOpen(false);
     setMobileSection(null);
   }, []);
-
-  function handleHash(e: React.MouseEvent<HTMLAnchorElement>, hash: string) {
-    if (!isHome) return;
-    e.preventDefault();
-    closeMobile();
-    smoothScrollTo(hash);
-    window.history.pushState(null, "", hash);
-  }
-
-  function hashHref(hash: string) {
-    return isHome ? hash : `/${hash}`;
-  }
 
   const navItemStyle: React.CSSProperties = {
     display: "block",
@@ -155,7 +133,7 @@ export default function MarketingNavbar() {
               )}
             </div>
 
-            <a href={hashHref("#pricing")} onClick={(e) => handleHash(e, "#pricing")}>Pricing</a>
+            <Link href="/pricing">Pricing</Link>
 
             {/* By Industry dropdown */}
             <div
@@ -251,7 +229,7 @@ export default function MarketingNavbar() {
           </div>
         )}
 
-        <a href={hashHref("#pricing")} onClick={(e) => handleHash(e, "#pricing")} style={navItemStyle}>Pricing</a>
+        <Link href="/pricing" onClick={closeMobile} style={navItemStyle}>Pricing</Link>
 
         {/* By Industry accordion */}
         <button
