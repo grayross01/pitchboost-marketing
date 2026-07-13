@@ -18,7 +18,7 @@ import { trackLead } from "@/lib/analytics";
 type Milestone = { id: number; name: string; date: string };
 
 const APP_URL = "https://app.pitchboost.ai";
-const SIGNUP_URL = `${APP_URL}/signup?intent=listing`;
+const SIGNUP_URL = `${APP_URL}/signup?intent=listing&utm_source=pitchboost&utm_medium=lead_magnet&utm_campaign=closing_timeline`;
 
 /** Standard deadlines as day offsets. A = acceptance, C = closing. All
  *  editable in the UI; regional/contract variance is expected. */
@@ -313,7 +313,7 @@ export default function TimelineClient() {
               </div>
               <p style={{ fontSize: "0.75rem", color: "var(--ds-text-light)", marginTop: 10 }}>
                 Want your headshot and logo too, plus automatic reminders?{" "}
-                <a href="https://app.pitchboost.ai/signup?intent=listing" style={{ color: "var(--ds-primary, #0e5a64)", fontWeight: 600 }}>
+                <a href="https://app.pitchboost.ai/signup?intent=listing&utm_source=pitchboost&utm_medium=lead_magnet&utm_campaign=closing_timeline" style={{ color: "var(--ds-primary, #0e5a64)", fontWeight: 600 }}>
                   Do it in PitchBoost
                 </a>
                 .

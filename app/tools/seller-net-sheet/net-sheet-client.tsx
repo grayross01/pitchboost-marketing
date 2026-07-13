@@ -178,7 +178,7 @@ export default function NetSheetClient() {
           <p style={{ color: "rgba(255,255,255,0.75)", fontSize: "0.92rem", maxWidth: 480, margin: "8px auto 16px", lineHeight: 1.6 }}>
             PitchBoost turns a listing link into a polished, on-brand listing presentation in about a minute.
           </p>
-          <a href={`${APP_URL}/signup?intent=listing`} className="btn btn-primary">Build a listing presentation free</a>
+          <a href={`${APP_URL}/signup?intent=listing&utm_source=pitchboost&utm_medium=lead_magnet&utm_campaign=seller_net_sheet`} className="btn btn-primary">Build a listing presentation free</a>
         </div>
       </div>
     </>

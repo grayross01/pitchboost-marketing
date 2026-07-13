@@ -136,7 +136,7 @@ export default function OpenHouseClient() {
             </div>
             <p className="pb-no-print" style={{ textAlign: "center", fontSize: "0.85rem", color: "var(--ds-text-light)", marginTop: 16, lineHeight: 1.6 }}>
               Every sign-in is emailed to you. Want them to flow into a pipeline with follow-up reminders and tracking?{" "}
-              <a href={`${APP_URL}/signup?intent=listing`} style={{ color: "var(--ds-primary, #0e5a64)", fontWeight: 600 }}>Do it in PitchBoost</a>.
+              <a href={`${APP_URL}/signup?intent=listing&utm_source=pitchboost&utm_medium=lead_magnet&utm_campaign=open_house`} style={{ color: "var(--ds-primary, #0e5a64)", fontWeight: 600 }}>Do it in PitchBoost</a>.
             </p>
           </>
         )}

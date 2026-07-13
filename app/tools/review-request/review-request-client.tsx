@@ -132,7 +132,7 @@ export default function ReviewRequestClient() {
             </div>
             <p style={{ fontSize: "0.8rem", color: "var(--ds-text-light)", marginTop: 12, lineHeight: 1.6 }}>
               Text or email it to your client the day you close.{" "}
-              <a href={`${APP_URL}/signup?intent=listing`} style={{ color: "var(--ds-primary, #0e5a64)", fontWeight: 600 }}>Track who opens it in PitchBoost</a>.
+              <a href={`${APP_URL}/signup?intent=listing&utm_source=pitchboost&utm_medium=lead_magnet&utm_campaign=review_request`} style={{ color: "var(--ds-primary, #0e5a64)", fontWeight: 600 }}>Track who opens it in PitchBoost</a>.
             </p>
           </div>
         )}
