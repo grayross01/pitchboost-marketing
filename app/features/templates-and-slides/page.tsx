@@ -5,11 +5,12 @@ const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 const SIGNUP_URL = `${APP_URL}/signup`;
 
 export const metadata: Metadata = {
-  title: "Templates & Saved Slides — Reuse Your Best Work | PitchBoost",
+  alternates: { canonical: "/features/templates-and-slides" },
+  title: "Templates & Saved Slides: Reuse Your Best Work",
   description:
     "Save any deck as a reusable template or save individual slides to a library. Build once, reuse for every new prospect — with AI personalization applied each time.",
   openGraph: {
-    title: "Templates & Saved Slides — Reuse Your Best Work | PitchBoost",
+    title: "Templates & Saved Slides: Reuse Your Best Work",
     description:
       "Save any deck as a reusable template or save individual slides to a library. Build once, reuse for every new prospect.",
     images: [{ url: "https://pitchboost.ai/og-image.png", width: 1310, height: 820 }],
@@ -98,9 +99,20 @@ export default function TemplatesAndSlidesPage() {
     publisher: { "@type": "Organization", name: "PitchBoost", url: "https://pitchboost.ai" },
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://pitchboost.ai" },
+      { "@type": "ListItem", position: 2, name: "Features", item: "https://pitchboost.ai/#features" },
+      { "@type": "ListItem", position: 3, name: "Templates & Saved Slides", item: "https://pitchboost.ai/features/templates-and-slides" },
+    ],
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Hero */}
       <section style={{ padding: "120px 0 80px", background: "var(--ds-bg-light)", textAlign: "center" }}>

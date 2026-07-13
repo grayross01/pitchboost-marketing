@@ -2,9 +2,16 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { INDUSTRIES, getIndustry } from "@/lib/industries";
+import { FEATURES } from "@/lib/features";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 const SIGNUP_URL = `${APP_URL}/signup`;
+
+const featureMap = Object.fromEntries(FEATURES.map((f) => [f.slug, f]));
+
+// Industries with a real-estate flavor get extra cross-links (free tools +
+// the listing-software roundup) in the Related section below.
+const REAL_ESTATE_SLUGS = ["real-estate-agents", "commercial-real-estate"];
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -21,6 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: industry.metaTitle,
     description: industry.metaDescription,
+    alternates: { canonical: `/industries/${slug}` },
     openGraph: {
       title: industry.metaTitle,
       description: industry.metaDescription,
@@ -58,6 +66,27 @@ export default async function IndustryPage({ params }: Props) {
   const signupUrl = industry.signupIntent
     ? `${SIGNUP_URL}?intent=${encodeURIComponent(industry.signupIntent)}`
     : SIGNUP_URL;
+
+  // Cross-links to related product pages, a comparison, and the blog. Real
+  // estate industries also surface the free agent tools and listing roundup.
+  const isRealEstate = REAL_ESTATE_SLUGS.includes(slug);
+  const relatedFeatureSlugs = isRealEstate
+    ? ["ai-deck-builder", "output-types", "viewer-analytics"]
+    : ["ai-deck-builder", "viewer-analytics", "publishing-and-sharing"];
+  const relatedLinks: { href: string; label: string; desc: string }[] = [
+    ...relatedFeatureSlugs
+      .map((s) => featureMap[s])
+      .filter(Boolean)
+      .map((f) => ({ href: `/features/${f.slug}`, label: f.navLabel, desc: f.shortDescription })),
+    { href: "/compare/pitchboost-vs-gamma", label: "PitchBoost vs Gamma", desc: "See how PitchBoost compares to Gamma for pitch and sales decks." },
+    { href: "/blog", label: "From the blog", desc: "Guides on pitch decks, sales presentations, and outreach." },
+  ];
+  if (isRealEstate) {
+    relatedLinks.push(
+      { href: "/tools", label: "Free tools for agents", desc: "Open house sign-in, seller net sheet, and closing timeline." },
+      { href: "/best-listing-presentation-software", label: "Best listing presentation software", desc: "An honest 2026 roundup of listing presentation tools." },
+    );
+  }
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -266,6 +295,27 @@ export default async function IndustryPage({ params }: Props) {
                 <h3 style={{ fontSize: 15, fontWeight: 700, color: "var(--ds-text-primary)", marginBottom: 10 }}>{q}</h3>
                 <p style={{ fontSize: 14, color: "var(--ds-text-secondary)", lineHeight: 1.7, margin: 0 }}>{a}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Related ── */}
+      <section className="mkt-section" style={{ background: "var(--ds-bg-light)" }}>
+        <div className="mkt-container">
+          <div className="section-header wide-header fade-up">
+            <div className="section-label"><span>Keep exploring</span></div>
+            <h2>Related pages</h2>
+          </div>
+          <div className="fade-up" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 16, marginTop: 48, maxWidth: 900, marginLeft: "auto", marginRight: "auto" }}>
+            {relatedLinks.map(({ href, label, desc }) => (
+              <Link key={href} href={href} style={{ display: "block", background: "var(--ds-bg)", border: "1px solid var(--ds-border)", borderRadius: 14, padding: "20px 22px", textDecoration: "none" }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10 }}>
+                  <h3 style={{ fontSize: 15, fontWeight: 700, color: "var(--ds-text-primary)", margin: 0 }}>{label}</h3>
+                  <span style={{ color: "#1F6B6B", flexShrink: 0, fontWeight: 700 }} aria-hidden>→</span>
+                </div>
+                <p style={{ fontSize: 13, color: "var(--ds-text-secondary)", lineHeight: 1.6, margin: "8px 0 0" }}>{desc}</p>
+              </Link>
             ))}
           </div>
         </div>

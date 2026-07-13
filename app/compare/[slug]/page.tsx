@@ -21,6 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: competitor.metaTitle,
     description: competitor.metaDescription,
+    alternates: { canonical: `/compare/${slug}` },
     openGraph: {
       title: competitor.metaTitle,
       description: competitor.metaDescription,

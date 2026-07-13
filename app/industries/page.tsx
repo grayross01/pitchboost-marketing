@@ -3,6 +3,7 @@ import Link from "next/link";
 import { INDUSTRIES, INDUSTRY_GROUPS } from "@/lib/industries";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/industries" },
   title: "Pitch Deck Software by Industry | PitchBoost",
   description:
     "PitchBoost works for B2B sales teams, agencies, startups, contractors, commercial real estate, nonprofits, and more. See how teams in your industry use PitchBoost to create professional pitch decks and win more business.",
@@ -11,8 +12,22 @@ export const metadata: Metadata = {
 const industryMap = Object.fromEntries(INDUSTRIES.map((i) => [i.slug, i]));
 
 export default function IndustriesPage() {
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Pitch Deck Software by Industry",
+    itemListElement: INDUSTRIES.map((ind, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: ind.label,
+      url: `https://pitchboost.ai/industries/${ind.slug}`,
+    })),
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
+
       <section style={{ padding: "120px 0 80px", background: "var(--ds-bg-light)", textAlign: "center" }}>
         <div className="mkt-container">
           <div className="section-label" style={{ display: "inline-flex", marginBottom: 20 }}>

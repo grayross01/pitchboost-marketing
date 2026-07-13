@@ -5,11 +5,12 @@ const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 const SIGNUP_URL = `${APP_URL}/signup`;
 
 export const metadata: Metadata = {
-  title: "Brand & Image Library — Consistent Branding Across Every Deck | PitchBoost",
+  alternates: { canonical: "/features/brand-and-images" },
+  title: "Brand & Image Library: Consistent Branding Across Every Deck",
   description:
     "Upload your logo, brand colors, and image library once. PitchBoost applies your brand to every deck automatically and gives your whole team access to the same approved assets.",
   openGraph: {
-    title: "Brand & Image Library — Consistent Branding Across Every Deck | PitchBoost",
+    title: "Brand & Image Library: Consistent Branding Across Every Deck",
     description:
       "Upload your logo, brand colors, and image library once. PitchBoost applies your brand automatically to every deck.",
     images: [{ url: "https://pitchboost.ai/og-image.png", width: 1310, height: 820 }],
@@ -80,9 +81,20 @@ export default function BrandAndImagesPage() {
     publisher: { "@type": "Organization", name: "PitchBoost", url: "https://pitchboost.ai" },
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://pitchboost.ai" },
+      { "@type": "ListItem", position: 2, name: "Features", item: "https://pitchboost.ai/#features" },
+      { "@type": "ListItem", position: 3, name: "Brand & Image Library", item: "https://pitchboost.ai/features/brand-and-images" },
+    ],
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Hero */}
       <section style={{ padding: "120px 0 80px", background: "var(--ds-bg-light)", textAlign: "center" }}>

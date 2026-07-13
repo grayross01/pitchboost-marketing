@@ -5,11 +5,12 @@ const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 const SIGNUP_URL = `${APP_URL}/signup`;
 
 export const metadata: Metadata = {
-  title: "API & MCP — Build Better Pitch Decks from Claude or Your AI Stack | PitchBoost",
+  alternates: { canonical: "/features/api-and-mcp" },
+  title: "API & MCP: Build Better Pitch Decks from Claude or Your AI Stack",
   description:
     "Connect PitchBoost to Claude, Cursor, or your own AI workflows. Get professionally structured decks with your brand, templates, and team libraries — not raw AI slide files.",
   openGraph: {
-    title: "API & MCP — Build Better Pitch Decks from Claude or Your AI Stack | PitchBoost",
+    title: "API & MCP: Build Better Pitch Decks from Claude or Your AI Stack",
     description:
       "Connect PitchBoost to Claude, Cursor, or your own AI workflows. Get professionally structured decks with your brand, templates, and team libraries — not raw AI slide files.",
     images: [{ url: "https://pitchboost.ai/og-image.png", width: 1310, height: 820 }],
@@ -178,6 +179,16 @@ export default function ApiAndMcpPage() {
     publisher: { "@type": "Organization", name: "PitchBoost", url: "https://pitchboost.ai" },
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://pitchboost.ai" },
+      { "@type": "ListItem", position: 2, name: "Features", item: "https://pitchboost.ai/#features" },
+      { "@type": "ListItem", position: 3, name: "API & MCP", item: "https://pitchboost.ai/features/api-and-mcp" },
+    ],
+  };
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -191,6 +202,7 @@ export default function ApiAndMcpPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero */}

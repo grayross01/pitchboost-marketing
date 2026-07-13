@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Free Tools for Real Estate Agents | PitchBoost",
+  title: "Free Tools for Real Estate Agents",
   description:
     "Free, no-signup tools for real estate agents: a closing-timeline generator, a seller net-sheet calculator, and an open-house sign-in page with a QR code. Branded to you, built to win business.",
   alternates: { canonical: "/tools" },
@@ -36,8 +36,23 @@ const TOOLS = [
 ];
 
 export default function ToolsIndexPage() {
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Free tools for real estate agents",
+    itemListElement: TOOLS.map((t, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: t.title,
+      description: t.desc,
+      url: `https://pitchboost.ai${t.href}`,
+    })),
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
+
       <section className="legal-hero">
         <div className="mkt-container" style={{ textAlign: "center" }}>
           <h1 style={{ fontSize: "clamp(1.9rem, 3.5vw, 2.6rem)", fontWeight: 800, color: "var(--ds-dark)", lineHeight: 1.15 }}>

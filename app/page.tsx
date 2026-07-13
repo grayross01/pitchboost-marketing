@@ -1,10 +1,16 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import FAQ from "@/components/marketing/faq";
+import { FAQS } from "@/components/marketing/faq-data";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 const SIGNUP_URL = `${APP_URL}/signup`;
 const SIGNUP_PRO = `${APP_URL}/signup`;
 const SIGNUP_BIZ = `${APP_URL}/signup`;
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 function CheckIcon() {
   return (
@@ -55,13 +61,16 @@ export default function MarketingPage() {
           </h1>
 
           <p className="fade-up fade-up-delay-2">
-            PitchBoost builds personalized pitch decks, presentations, and proposals for specific prospects, deals, and use cases — so your materials reflect their priorities, not a generic template.
+            PitchBoost builds personalized pitch decks, presentations, and proposals for a specific prospect in under 60 seconds, so your materials reflect their priorities, not a generic template.
           </p>
 
           <div className="hero-actions fade-up fade-up-delay-3">
             <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Start Building Free</a>
             <a href="#sample-deck" className="btn btn-ghost btn-lg">View Sample Deck</a>
           </div>
+          <p className="fade-up fade-up-delay-3" style={{ marginTop: 14, fontSize: 13, color: "var(--ds-text-tertiary)" }}>
+            Free forever plan. No credit card required.
+          </p>
 
           <div className="hero-proof-bar fade-up fade-up-delay-4">
             <div className="proof-item">
@@ -87,11 +96,11 @@ export default function MarketingPage() {
         <div className="mkt-container">
           <div className="section-header fade-up">
             <div className="section-label"><span>See it in action</span></div>
-            <h2>A real PitchBoost deck — built for a specific prospect</h2>
+            <h2>A real PitchBoost deck, built for a specific prospect</h2>
           </div>
           <div className="fade-up">
             <p style={{ fontSize: 15, color: "var(--ds-text-secondary)", lineHeight: 1.7, textAlign: "center", marginBottom: 12 }}>
-              This is a fictional sample deck showing how PitchBoost could tailor a sales presentation for a B2B SaaS prospect like Gong — pulling in brand context, prospect priorities, and deal notes to produce a personalized deck ready to send.
+              This is a fictional sample deck showing how PitchBoost could tailor a sales presentation for a B2B SaaS prospect like Gong, pulling in brand context, prospect priorities, and deal notes to produce a personalized deck ready to send.
             </p>
             <p style={{ fontSize: 13, color: "var(--ds-text-tertiary)", lineHeight: 1.6, textAlign: "center", marginBottom: 32 }}>
               This sample is not affiliated with or endorsed by Gong.
@@ -126,7 +135,7 @@ export default function MarketingPage() {
           <div className="section-header fade-up">
             <div className="section-label"><span>How It Works</span></div>
             <h2>From deal notes to a deck worth sending</h2>
-            <p>Three steps to a presentation that speaks directly to your prospect — not a generic template with their name dropped in.</p>
+            <p>Three steps to a presentation that speaks directly to your prospect, not a generic template with their name dropped in.</p>
           </div>
 
           {/* Step 1 */}
@@ -134,7 +143,7 @@ export default function MarketingPage() {
             <div>
               <div className="step-number">1</div>
               <h3>Tell PitchBoost who you&apos;re pitching</h3>
-              <p>Upload your logo, brand assets, and supporting docs. Add context about the prospect — their priorities, the opportunity, and what you want them to walk away believing.</p>
+              <p>Upload your logo, brand assets, and supporting docs. Add context about the prospect: their priorities, the opportunity, and what you want them to walk away believing.</p>
               <ul className="step-highlights">
                 <li><CheckIcon /> Upload logo and brand assets</li>
                 <li><CheckIcon /> Add prospect context and deal details</li>
@@ -187,7 +196,7 @@ export default function MarketingPage() {
             <div>
               <div className="step-number">2</div>
               <h3>Get a deck built around this deal</h3>
-              <p>PitchBoost generates a structured pitch deck with copy written for this specific prospect — their language, their priorities, your credentials presented in the way most likely to land.</p>
+              <p>PitchBoost generates a structured pitch deck with copy written for this specific prospect: their language, their priorities, your credentials presented in the way most likely to land.</p>
               <ul className="step-highlights">
                 <li><CheckIcon /> Copy written for this prospect, not a template</li>
                 <li><CheckIcon /> Auto-branded with your colors and logo</li>
@@ -203,7 +212,7 @@ export default function MarketingPage() {
                 <div className="browser-content">
                   <div style={{ background: "#f8f9fb", padding: "20px 24px", minHeight: 300 }}>
                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 16 }}>
-                      <div style={{ fontWeight: 700, fontSize: 16, color: "#0f172a" }}>Acme Corp — Enterprise Proposal</div>
+                      <div style={{ fontWeight: 700, fontSize: 16, color: "#0f172a" }}>Acme Corp: Enterprise Proposal</div>
                       <div style={{ display: "flex", gap: 8 }}>
                         <div style={{ background: "white", border: "1px solid #e2e8f0", padding: "6px 14px", borderRadius: 8, fontSize: 11, fontWeight: 600, color: "#0f172a" }}>PDF</div>
                         <div style={{ background: "linear-gradient(135deg, #1F6B6B, #E8665A)", color: "white", padding: "6px 14px", borderRadius: 8, fontSize: 11, fontWeight: 600 }}>Publish</div>
@@ -243,7 +252,7 @@ export default function MarketingPage() {
             <div>
               <div className="step-number">3</div>
               <h3>Share it, then know exactly how it landed</h3>
-              <p>Publish a branded link, export a PDF, and track exactly who opened it, which slides held their attention, and when they came back — so your follow-up is based on what they actually read.</p>
+              <p>Publish a branded link, export a PDF, and track exactly who opened it, which slides held their attention, and when they came back, so your follow-up is based on what they actually read.</p>
               <ul className="step-highlights">
                 <li><CheckIcon /> Publish a branded shareable link</li>
                 <li><CheckIcon /> Export to PDF for email or print</li>
@@ -315,28 +324,28 @@ export default function MarketingPage() {
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
                 ),
                 title: "Founders and small teams",
-                body: "Show up to every sales conversation with a deck that makes you look like you have a full team behind you — because the quality of your materials shouldn&apos;t depend on headcount.",
+                body: "Show up to every sales conversation with a deck that makes you look like you have a full team behind you, because the quality of your materials shouldn&apos;t depend on headcount.",
               },
               {
                 icon: (
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" /><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" /></svg>
                 ),
                 title: "Agencies and consultants",
-                body: "Win more pitches by showing prospects you understand their specific situation — not just that you do good work in general.",
+                body: "Win more pitches by showing prospects you understand their specific situation, not just that you do good work in general.",
               },
               {
                 icon: (
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></svg>
                 ),
                 title: "Sales and business development teams",
-                body: "Send a deck that reflects what you learned about this account — not the same slide sequence you sent the last ten prospects.",
+                body: "Send a deck that reflects what you learned about this account, not the same slide sequence you sent the last ten prospects.",
               },
               {
                 icon: (
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg>
                 ),
                 title: "Contractors and service businesses",
-                body: "A polished, specific proposal signals professionalism and attention to detail before the job even starts — and wins more bids because of it.",
+                body: "A polished, specific proposal signals professionalism and attention to detail before the job even starts, and wins more bids because of it.",
               },
             ].map(({ icon, title, body }) => (
               <div key={title} style={{ background: "var(--ds-bg)", border: "1px solid var(--ds-border)", borderRadius: 16, padding: "24px 28px" }}>
@@ -362,7 +371,7 @@ export default function MarketingPage() {
           <div className="section-header fade-up">
             <div className="section-label"><span>Features</span></div>
             <h2>Everything you need to win the deal</h2>
-            <p>From first draft to follow-up — PitchBoost covers the full workflow for creating and delivering sales materials that actually move deals forward.</p>
+            <p>From first draft to follow-up, PitchBoost covers the full workflow for creating and delivering sales materials that actually move deals forward.</p>
           </div>
           <div className="features-grid fade-up">
             {[
@@ -371,14 +380,14 @@ export default function MarketingPage() {
                 href: "/features/ai-deck-builder",
                 icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z" /><path d="M2 17l10 5 10-5" /><path d="M2 12l10 5 10-5" /></svg>,
                 title: "AI-generated pitch decks",
-                body: "Describe your opportunity and get a fully structured deck with copy written for this specific prospect — not a blank template to fill in.",
+                body: "Describe your opportunity and get a fully structured deck with copy written for this specific prospect, not a blank template to fill in.",
               },
               {
                 color: "purple",
                 href: "/features/brand-and-images",
                 icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="13.5" cy="6.5" r="2.5" /><path d="M17 2H7a5 5 0 0 0-5 5v10a5 5 0 0 0 5 5h10a5 5 0 0 0 5-5V7a5 5 0 0 0-5-5z" /></svg>,
                 title: "Brand-aware content and design",
-                body: "Every deck looks like it came from your team — your logo, your colors, your voice — without any manual design work.",
+                body: "Every deck looks like it came from your team (your logo, your colors, your voice) without any manual design work.",
               },
               {
                 color: "pink",
@@ -392,14 +401,14 @@ export default function MarketingPage() {
                 href: "/features/upload-and-redesign",
                 icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" /><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" /></svg>,
                 title: "AI slide-by-slide editing",
-                body: "If a slide isn't landing the way you want, rewrite it with AI guidance — without touching the rest of the deck.",
+                body: "If a slide isn't landing the way you want, rewrite it with AI guidance, without touching the rest of the deck.",
               },
               {
                 color: "purple",
                 href: "/features/output-types",
                 icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg>,
                 title: "Share as a link or export to PDF",
-                body: "Send a branded interactive link your prospect opens in the browser, or export a PDF for email and print — whichever fits the situation.",
+                body: "Send a branded interactive link your prospect opens in the browser, or export a PDF for email and print, whichever fits the situation.",
               },
               {
                 color: "pink",
@@ -415,6 +424,26 @@ export default function MarketingPage() {
                 <p>{body}</p>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── AI / MCP band ── */}
+      <section className="mkt-section">
+        <div className="mkt-container">
+          <div style={{ borderRadius: 20, border: "1px solid var(--ds-border)", background: "var(--ds-bg-light)", padding: "clamp(28px, 5vw, 48px)", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 28 }}>
+            <div style={{ maxWidth: 640 }}>
+              <div className="section-label" style={{ marginBottom: 14 }}><span>AI-native</span></div>
+              <h2 style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)", fontWeight: 800, color: "var(--ds-dark)", lineHeight: 1.15, marginBottom: 12 }}>
+                Build decks straight from Claude or your AI stack
+              </h2>
+              <p style={{ color: "var(--ds-text-light)", fontSize: "1.02rem", lineHeight: 1.7, margin: 0 }}>
+                Connect PitchBoost over MCP or our REST API and get back a finished, branded deck on a shareable link with viewer analytics, not a rough slide file you have to clean up. Trigger it from Claude, Cursor, or your CRM.
+              </p>
+            </div>
+            <Link href="/features/api-and-mcp" className="btn btn-primary btn-lg" style={{ whiteSpace: "nowrap" }}>
+              See the API and MCP →
+            </Link>
           </div>
         </div>
       </section>
@@ -456,7 +485,7 @@ export default function MarketingPage() {
                 <li><CheckIcon /> Saved templates</li>
                 <li><CheckIcon /> Priority generation</li>
               </ul>
-              <a href={SIGNUP_PRO} className="btn btn-primary">Start Free Trial</a>
+              <a href={SIGNUP_PRO} className="btn btn-primary">Get Started</a>
             </div>
             <div className="pricing-card">
               <div className="plan-name">Business</div>
@@ -478,6 +507,20 @@ export default function MarketingPage() {
       </section>
 
       {/* ── FAQ ── */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: FAQS.map(({ q, a }) => ({
+              "@type": "Question",
+              name: q,
+              acceptedAnswer: { "@type": "Answer", text: a },
+            })),
+          }),
+        }}
+      />
       <section className="mkt-section">
         <div className="mkt-container">
           <div className="section-header fade-up">

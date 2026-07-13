@@ -5,11 +5,12 @@ const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 const SIGNUP_URL = `${APP_URL}/signup`;
 
 export const metadata: Metadata = {
-  title: "AI Deck Builder — Personalized Pitch Decks, Presentations & Proposals | PitchBoost",
+  alternates: { canonical: "/features/ai-deck-builder" },
+  title: "AI Deck Builder: Personalized Pitch Decks, Presentations & Proposals",
   description:
     "PitchBoost's AI deck builder generates personalized pitch decks, sales presentations, and proposals in under 60 seconds — written for your specific prospect, not a generic template.",
   openGraph: {
-    title: "AI Deck Builder — Personalized Pitch Decks, Presentations & Proposals | PitchBoost",
+    title: "AI Deck Builder: Personalized Pitch Decks, Presentations & Proposals",
     description:
       "PitchBoost's AI deck builder generates personalized pitch decks, sales presentations, and proposals in under 60 seconds — written for your specific prospect, not a generic template.",
     images: [{ url: "https://pitchboost.ai/og-image.png", width: 1310, height: 820 }],
@@ -161,9 +162,20 @@ export default function AIDeckBuilderPage() {
     publisher: { "@type": "Organization", name: "PitchBoost", url: "https://pitchboost.ai" },
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://pitchboost.ai" },
+      { "@type": "ListItem", position: 2, name: "Features", item: "https://pitchboost.ai/#features" },
+      { "@type": "ListItem", position: 3, name: "AI Deck Builder", item: "https://pitchboost.ai/features/ai-deck-builder" },
+    ],
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* ── Hero ── */}
       <section style={{ padding: "120px 0 80px", background: "var(--ds-bg-light)", textAlign: "center" }}>

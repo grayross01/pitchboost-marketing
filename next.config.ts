@@ -15,10 +15,6 @@ const nextConfig: NextConfig = {
     // in their browser; under the hood Next fetches the content from the
     // app's server-rendered route. Canonicals and sitemap in the app point
     // to the www URLs so Google indexes the canonical version.
-    //
-    // NOTE: if the marketing site grows its own sitemap in the future, we
-    // should merge the two via a sitemap index. For now we proxy the app's
-    // sitemap (which only lists /pitch-deck/* URLs) as the site-wide one.
     return [
       {
         source: "/pitch-deck",
@@ -27,10 +23,6 @@ const nextConfig: NextConfig = {
       {
         source: "/pitch-deck/:slug*",
         destination: "https://app.pitchboost.ai/pitch-deck/:slug*",
-      },
-      {
-        source: "/sitemap.xml",
-        destination: "https://app.pitchboost.ai/sitemap.xml",
       },
     ];
   },

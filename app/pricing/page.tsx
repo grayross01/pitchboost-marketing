@@ -4,7 +4,7 @@ const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 const SIGNUP_URL = `${APP_URL}/signup`;
 
 export const metadata: Metadata = {
-  title: "Pricing | PitchBoost",
+  title: "Pricing",
   description:
     "PitchBoost pricing: a free plan to try it out, Pro at $29/mo for active dealmakers, and Business at $79/mo for teams. Every plan includes a monthly AI budget. No credit card to start.",
   alternates: { canonical: "/pricing" },

@@ -174,6 +174,9 @@ export default function MarketingNavbar() {
               )}
             </div>
 
+            <Link href="/compare">Compare</Link>
+            <Link href="/blog">Blog</Link>
+
           </div>
 
           <div className="nav-actions">
@@ -256,6 +259,9 @@ export default function MarketingNavbar() {
             </Link>
           </div>
         )}
+
+        <Link href="/compare" onClick={closeMobile} style={navItemStyle}>Compare</Link>
+        <Link href="/blog" onClick={closeMobile} style={navItemStyle}>Blog</Link>
 
         <div style={{ padding: "24px 24px 40px", display: "flex", flexDirection: "column", gap: 12, marginTop: "auto" }}>
           <a href={LOGIN_URL} className="btn btn-secondary" onClick={closeMobile} style={{ width: "100%", textAlign: "center" }}>Log In</a>

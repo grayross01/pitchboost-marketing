@@ -7,6 +7,7 @@ import MarketingNavbar from "@/components/marketing/navbar";
 import MarketingFooter from "@/components/marketing/footer";
 import ChromeGate from "@/components/marketing/chrome-gate";
 import FadeUpObserver from "@/components/marketing/fade-up-observer";
+import { AttributionCapture } from "@/components/marketing/attribution-capture";
 
 const GTM_ID = "GTM-TGJD79J4";
 
@@ -28,22 +29,23 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "PitchBoost — AI-Powered Personalized Pitch Decks",
-    template: "%s — PitchBoost",
+    default: "PitchBoost: AI-Powered Personalized Pitch Decks",
+    template: "%s | PitchBoost",
   },
   description:
     "PitchBoost builds personalized pitch decks that map your strengths to each prospect's pain points. Tailored to their industry, their needs, and the way they buy.",
   metadataBase: new URL("https://pitchboost.ai"),
-  alternates: {
-    canonical: "https://pitchboost.ai",
-  },
+  // NOTE: no site-wide `alternates.canonical` here. In Next, a canonical set on
+  // the root layout is inherited by every page that doesn't override it, which
+  // silently canonicalizes the whole site to the homepage. Each page sets its
+  // own canonical (or, absent one, self-canonicalizes to its URL).
   icons: {
     icon: "/icon.png",
   },
   openGraph: {
     type: "website",
     siteName: "PitchBoost",
-    title: "PitchBoost — AI-Powered Personalized Pitch Decks",
+    title: "PitchBoost: AI-Powered Personalized Pitch Decks",
     description:
       "PitchBoost builds personalized pitch decks that map your strengths to each prospect's pain points. Tailored to their industry, their needs, and the way they buy.",
     images: [{ url: "https://pitchboost.ai/og-image.png", width: 1310, height: 820, alt: "PitchBoost" }],
@@ -110,6 +112,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
+        <AttributionCapture />
         <div className="marketing">
           <ChromeGate>
             <MarketingNavbar />

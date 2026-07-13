@@ -42,8 +42,20 @@ export default async function CityPage({ params }: Props) {
   if (!c) notFound();
   const place = `${c.name}, ${c.state}`;
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://pitchboost.ai" },
+      { "@type": "ListItem", position: 2, name: "Real estate", item: "https://pitchboost.ai/real-estate" },
+      { "@type": "ListItem", position: 3, name: place, item: `https://pitchboost.ai/real-estate/${c.slug}` },
+    ],
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+
       <section className="hero">
         <div className="hero-orb" />
         <div className="hero-orb" />

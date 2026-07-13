@@ -3,7 +3,7 @@ import OpenHouseClient from "./open-house-client";
 import ToolFaq from "@/components/marketing/tool-faq";
 
 export const metadata: Metadata = {
-  title: "Free Open House Sign-In Sheet with QR Code | PitchBoost",
+  title: "Free Open House Sign-In Sheet with QR Code",
   description:
     "Create a branded open-house sign-in page with a QR code in seconds. Visitors scan, sign in on their phone, and every lead is emailed straight to you. Free, no app to download.",
   alternates: { canonical: "/tools/open-house-sign-in" },

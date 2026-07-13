@@ -5,11 +5,12 @@ const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 const SIGNUP_URL = `${APP_URL}/signup`;
 
 export const metadata: Metadata = {
-  title: "Team & Permissions — Collaborative Pitch Deck Software for Teams | PitchBoost",
+  alternates: { canonical: "/features/team-and-permissions" },
+  title: "Team & Permissions: Collaborative Pitch Deck Software for Teams",
   description:
     "Add unlimited team members with the right roles for their access level. Share brand assets, templates, and image libraries across your whole team from one workspace.",
   openGraph: {
-    title: "Team & Permissions — Collaborative Pitch Deck Software for Teams | PitchBoost",
+    title: "Team & Permissions: Collaborative Pitch Deck Software for Teams",
     description:
       "Add unlimited team members, assign roles, and share brand assets and templates across your whole team.",
     images: [{ url: "https://pitchboost.ai/og-image.png", width: 1310, height: 820 }],
@@ -98,9 +99,20 @@ export default function TeamAndPermissionsPage() {
     publisher: { "@type": "Organization", name: "PitchBoost", url: "https://pitchboost.ai" },
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://pitchboost.ai" },
+      { "@type": "ListItem", position: 2, name: "Features", item: "https://pitchboost.ai/#features" },
+      { "@type": "ListItem", position: 3, name: "Team & Permissions", item: "https://pitchboost.ai/features/team-and-permissions" },
+    ],
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Hero */}
       <section style={{ padding: "120px 0 80px", background: "var(--ds-bg-light)", textAlign: "center" }}>

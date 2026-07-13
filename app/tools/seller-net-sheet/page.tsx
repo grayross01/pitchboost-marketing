@@ -3,7 +3,7 @@ import NetSheetClient from "./net-sheet-client";
 import ToolFaq from "@/components/marketing/tool-faq";
 
 export const metadata: Metadata = {
-  title: "Free Seller Net Sheet Calculator | PitchBoost",
+  title: "Free Seller Net Sheet Calculator",
   description:
     "Estimate a seller's net proceeds in seconds. Enter the sale price, mortgage payoff, commission, and closing costs and get a clean, branded breakdown to share with your seller. Free, no account needed.",
   alternates: { canonical: "/tools/seller-net-sheet" },

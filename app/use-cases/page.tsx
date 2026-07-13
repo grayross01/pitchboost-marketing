@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 const SIGNUP_URL = `${APP_URL}/signup`;
@@ -7,12 +8,14 @@ export const metadata: Metadata = {
   title: "Use Cases",
   description:
     "See how B2B sales teams, agencies, SaaS companies, and consultancies use PitchBoost to create personalized pitch decks, presentations, and proposals that win deals.",
+  alternates: { canonical: "/use-cases" },
 };
 
 const USE_CASES = [
   {
     id: "sales-teams",
     label: "B2B Sales Teams",
+    industryHref: "/industries/b2b-sales",
     headline: "Give every rep a personalized deck for every deal",
     description:
       "Your reps know the prospect — but building a custom deck for each one takes hours they don't have. PitchBoost pulls out the capabilities most relevant to that buyer and builds a deck that speaks directly to their business, so reps pitch smarter without touching a slide.",
@@ -38,6 +41,7 @@ const USE_CASES = [
   {
     id: "agencies",
     label: "Agencies",
+    industryHref: "/industries/agencies",
     headline: "Win new clients with proposals that speak their language",
     description:
       "When you're pitching a new client, the proposal needs to feel like it was built just for them. PitchBoost maps your agency's services to what each prospect actually needs — so every proposal feels bespoke without the hours of research and design.",
@@ -61,6 +65,7 @@ const USE_CASES = [
   {
     id: "saas",
     label: "SaaS Companies",
+    industryHref: "/industries/saas",
     headline: "Turn every enterprise prospect into a tailored presentation",
     description:
       "Enterprise deals demand more than a product overview. PitchBoost builds a deck that positions your platform as the answer to each prospect's specific challenges — so your AEs walk into every call with a pitch that already resonates.",
@@ -85,6 +90,7 @@ const USE_CASES = [
   {
     id: "consultancies",
     label: "Consultancies & Professional Services",
+    industryHref: "/industries/consultancies",
     headline: "Show every prospect you already understand their business",
     description:
       "When you're pitching or proposing an engagement, demonstrating that you get the client's world is half the battle. PitchBoost connects your expertise to each prospect's specific situation — so you walk in looking prepared, not generic.",
@@ -170,6 +176,10 @@ export default function UseCasesPage() {
                     </ul>
                   </div>
                 </div>
+
+                <Link href={uc.industryHref} style={{ display: "inline-flex", alignItems: "center", gap: 6, marginTop: 24, color: "#1F6B6B", fontWeight: 600, fontSize: "0.95rem", textDecoration: "none" }}>
+                  See PitchBoost for {uc.label} →
+                </Link>
               </div>
             ))}
           </div>

@@ -5,11 +5,12 @@ const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 const SIGNUP_URL = `${APP_URL}/signup`;
 
 export const metadata: Metadata = {
-  title: "Upload & Redesign — Polish Any Existing Pitch Deck or Presentation | PitchBoost",
+  alternates: { canonical: "/features/upload-and-redesign" },
+  title: "Upload & Redesign: Polish Any Existing Pitch Deck or Presentation",
   description:
     "Upload your existing PPT or PPTX and PitchBoost redesigns it with your brand, cleans up the layout, and personalizes the content for your specific prospect — without losing the work you've already done.",
   openGraph: {
-    title: "Upload & Redesign — Polish Any Existing Pitch Deck or Presentation | PitchBoost",
+    title: "Upload & Redesign: Polish Any Existing Pitch Deck or Presentation",
     description:
       "Upload your existing PPT or PPTX and PitchBoost redesigns it with your brand, cleans up the layout, and personalizes the content for your specific prospect.",
     images: [{ url: "https://pitchboost.ai/og-image.png", width: 1310, height: 820 }],
@@ -121,9 +122,20 @@ export default function UploadAndRedesignPage() {
     publisher: { "@type": "Organization", name: "PitchBoost", url: "https://pitchboost.ai" },
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://pitchboost.ai" },
+      { "@type": "ListItem", position: 2, name: "Features", item: "https://pitchboost.ai/#features" },
+      { "@type": "ListItem", position: 3, name: "Upload & Redesign", item: "https://pitchboost.ai/features/upload-and-redesign" },
+    ],
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Hero */}
       <section style={{ padding: "120px 0 80px", background: "var(--ds-bg-light)", textAlign: "center" }}>

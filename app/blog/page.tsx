@@ -3,6 +3,7 @@ import { getAllPosts } from "@/lib/blog";
 import BlogCard from "@/components/marketing/blog-card";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/blog" },
   title: "Blog | AI Pitch Deck & Deal Deck Insights",
   description:
     "Expert guides on creating personalized pitch decks and deal decks. Tips, best practices, and insights for B2B sales teams, agencies, and dealmakers.",
@@ -11,8 +12,23 @@ export const metadata: Metadata = {
 export default function BlogIndexPage() {
   const posts = getAllPosts();
 
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "PitchBoost blog",
+    itemListElement: posts.map((post, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: post.title,
+      description: post.description,
+      url: `https://pitchboost.ai/blog/${post.slug}`,
+    })),
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
+
       <section className="blog-hero">
         <div className="mkt-container">
           <div className="section-label">

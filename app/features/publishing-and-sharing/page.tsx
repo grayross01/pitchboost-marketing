@@ -5,11 +5,12 @@ const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 const SIGNUP_URL = `${APP_URL}/signup`;
 
 export const metadata: Metadata = {
-  title: "Publishing & Sharing — Share Pitch Decks as Links, PDF, PPT & More | PitchBoost",
+  alternates: { canonical: "/features/publishing-and-sharing" },
+  title: "Publishing & Sharing: Share Pitch Decks as Links, PDF, PPT & More",
   description:
     "Publish your deck as a branded interactive link, export to PDF or PPT, host on your own custom domain, and control access with public, private, or password-protected settings.",
   openGraph: {
-    title: "Publishing & Sharing — Share Pitch Decks as Links, PDF, PPT & More | PitchBoost",
+    title: "Publishing & Sharing: Share Pitch Decks as Links, PDF, PPT & More",
     description:
       "Publish your deck as a branded link, export to PDF or PPT, host on your custom domain, and control who can view it.",
     images: [{ url: "https://pitchboost.ai/og-image.png", width: 1310, height: 820 }],
@@ -104,9 +105,20 @@ export default function PublishingAndSharingPage() {
     publisher: { "@type": "Organization", name: "PitchBoost", url: "https://pitchboost.ai" },
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://pitchboost.ai" },
+      { "@type": "ListItem", position: 2, name: "Features", item: "https://pitchboost.ai/#features" },
+      { "@type": "ListItem", position: 3, name: "Publishing & Sharing", item: "https://pitchboost.ai/features/publishing-and-sharing" },
+    ],
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Hero */}
       <section style={{ padding: "120px 0 80px", background: "var(--ds-bg-light)", textAlign: "center" }}>

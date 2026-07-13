@@ -14,6 +14,7 @@ const PRODUCT_LINKS = [
 const FEATURE_LINKS = [
   { label: "AI Deck Builder", href: "/features/ai-deck-builder" },
   { label: "Upload & Redesign", href: "/features/upload-and-redesign" },
+  { label: "Output Types", href: "/features/output-types" },
   { label: "Templates & Saved Slides", href: "/features/templates-and-slides" },
   { label: "Brand & Image Library", href: "/features/brand-and-images" },
   { label: "Publishing & Sharing", href: "/features/publishing-and-sharing" },
@@ -26,6 +27,7 @@ const COMPARE_LINKS = [
   { label: "PitchBoost vs Gamma", href: "/compare/pitchboost-vs-gamma" },
   { label: "PitchBoost vs Beautiful.ai", href: "/compare/pitchboost-vs-beautiful-ai" },
   { label: "PitchBoost vs Pitch", href: "/compare/pitchboost-vs-pitch" },
+  { label: "PitchBoost vs Tome", href: "/compare/pitchboost-vs-tome" },
 ] as const;
 
 const COMPANY_LINKS = [
@@ -46,11 +48,20 @@ const INDUSTRY_LINKS = [
   { label: "Nonprofits", href: "/industries/nonprofits" },
 ] as const;
 
+const REAL_ESTATE_LINKS = [
+  { label: "Free tools", href: "/tools" },
+  { label: "Open house sign-in", href: "/tools/open-house-sign-in" },
+  { label: "Seller net sheet", href: "/tools/seller-net-sheet" },
+  { label: "Closing timeline", href: "/tools/closing-timeline" },
+  { label: "Real estate agents", href: "/real-estate" },
+  { label: "Best listing software", href: "/best-listing-presentation-software" },
+] as const;
+
 export default function MarketingFooter() {
   return (
     <footer className="footer">
       <div className="mkt-container">
-        <div className="footer-grid" style={{ gridTemplateColumns: "2fr 1fr 1fr 1fr 1fr 1fr" }}>
+        <div className="footer-grid" style={{ gridTemplateColumns: "2fr 1fr 1fr 1fr 1fr 1fr 1fr" }}>
           <div className="footer-brand">
             <Link href="/" className="nav-logo" style={{ color: "white" }}>
               <Image src="/icon.png" alt="PitchBoost" width={28} height={28} />
@@ -95,6 +106,17 @@ export default function MarketingFooter() {
               <li>
                 <Link href="/industries" style={{ fontWeight: 600 }}>View all →</Link>
               </li>
+            </ul>
+          </div>
+
+          <div className="footer-col">
+            <h4>Real estate</h4>
+            <ul>
+              {REAL_ESTATE_LINKS.map(({ label, href }) => (
+                <li key={label}>
+                  <Link href={href}>{label}</Link>
+                </li>
+              ))}
             </ul>
           </div>
 

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { COMPETITORS } from "@/lib/competitors";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/compare" },
   title: "PitchBoost Comparisons: How We Stack Up Against the Alternatives",
   description: "See how PitchBoost compares to Gamma, Beautiful.ai, Pitch, and other AI presentation tools. Find the best alternative for sales decks, proposals, and pitch materials.",
 };
@@ -11,8 +12,22 @@ const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 const SIGNUP_URL = `${APP_URL}/signup`;
 
 export default function ComparePage() {
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "PitchBoost comparisons",
+    itemListElement: COMPETITORS.map((c, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: `PitchBoost vs ${c.name}`,
+      url: `https://pitchboost.ai/compare/${c.slug}`,
+    })),
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
+
       <section style={{ padding: "120px 0 80px", background: "var(--ds-bg-light)", textAlign: "center" }}>
         <div className="mkt-container">
           <div style={{ marginBottom: 20, display: "flex", justifyContent: "center" }}>
