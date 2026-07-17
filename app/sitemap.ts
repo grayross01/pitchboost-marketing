@@ -4,6 +4,7 @@ import { COMPETITORS } from "@/lib/competitors";
 import { FEATURES } from "@/lib/features";
 import { getAllSlugs } from "@/lib/blog";
 import { CITIES } from "@/lib/cities";
+import { NET_SHEET_STATES } from "@/lib/net-sheet-states";
 
 const BASE = "https://pitchboost.ai";
 
@@ -29,6 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/tools/open-house-sign-in", changeFrequency: "monthly", priority: 0.7 },
     { path: "/tools/closing-timeline", changeFrequency: "monthly", priority: 0.7 },
     { path: "/tools/seller-net-sheet", changeFrequency: "monthly", priority: 0.7 },
+    ...NET_SHEET_STATES.map((s) => ({ path: `/tools/seller-net-sheet/${s.slug}`, changeFrequency: "monthly" as const, priority: 0.65 })),
     { path: "/tools/review-request", changeFrequency: "monthly", priority: 0.7 },
     { path: "/blog", changeFrequency: "weekly", priority: 0.7 },
     { path: "/privacy", changeFrequency: "yearly", priority: 0.3 },

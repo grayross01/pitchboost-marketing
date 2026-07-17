@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import NetSheetClient from "./net-sheet-client";
+import Link from "next/link";
 import ToolFaq from "@/components/marketing/tool-faq";
+import { NET_SHEET_STATES } from "@/lib/net-sheet-states";
 
 export const metadata: Metadata = {
   title: "Free Seller Net Sheet Calculator",
@@ -22,6 +24,21 @@ export default function SellerNetSheetPage() {
     <>
       <NetSheetClient />
       <ToolFaq faqs={FAQS} />
+      <section className="mkt-container" style={{ maxWidth: 760, padding: "0 20px 60px" }}>
+        <h2 style={{ fontSize: "1rem", fontWeight: 700, color: "var(--ds-dark)" }}>
+          State-specific net sheets (transfer tax preloaded)
+        </h2>
+        <p style={{ marginTop: 10, fontSize: "0.9rem", lineHeight: 2 }}>
+          {NET_SHEET_STATES.map((s, i) => (
+            <span key={s.slug}>
+              <Link href={`/tools/seller-net-sheet/${s.slug}`} style={{ color: "var(--ds-primary, #0e5a64)", textDecoration: "underline" }}>
+                {s.name}
+              </Link>
+              {i < NET_SHEET_STATES.length - 1 ? " · " : ""}
+            </span>
+          ))}
+        </p>
+      </section>
     </>
   );
 }

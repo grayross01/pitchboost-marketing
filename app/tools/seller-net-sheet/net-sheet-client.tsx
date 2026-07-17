@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { trackLead } from "@/lib/analytics";
+import type { NetSheetStatePreset } from "@/lib/net-sheet-states";
 
 /**
  * Free seller net-sheet calculator: a realtor lead magnet. Enter the sale
@@ -32,7 +33,7 @@ function num(v: string): number {
   return Number.isFinite(n) ? n : 0;
 }
 
-export default function NetSheetClient() {
+export default function NetSheetClient({ preset }: { preset?: NetSheetStatePreset } = {}) {
   const [email, setEmail] = useState("");
   const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
 
@@ -46,13 +47,25 @@ export default function NetSheetClient() {
 
   const setCost = (k: string, v: string) => setCosts((p) => ({ ...p, [k]: v }));
 
+  // State pages preload the transfer tax from the sale price; the moment the
+  // user edits the field (costs.transferTax defined), their value wins.
+  const autoTransferTax = (price: number): string =>
+    preset && preset.rate > 0 && price > 0 && costs.transferTax === undefined
+      ? String(Math.round(price * preset.rate))
+      : "";
+  const costValue = (key: string): string => {
+    if (key === "transferTax" && costs.transferTax === undefined) return autoTransferTax(num(salePrice));
+    return costs[key] || "";
+  };
+
   const calc = useMemo(() => {
     const price = num(salePrice);
     const commission = price * (num(commissionPct) / 100);
-    const otherCosts = COST_FIELDS.reduce((sum, f) => sum + num(costs[f.key] || ""), 0);
+    const otherCosts = COST_FIELDS.reduce((sum, f) => sum + num(costValue(f.key)), 0);
     const totalCosts = commission + otherCosts;
     return { price, commission, otherCosts, totalCosts, net: price - totalCosts };
-  }, [salePrice, commissionPct, costs]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [salePrice, commissionPct, costs, preset]);
 
   async function captureLead() {
     trackLead("seller_net_sheet");
@@ -60,7 +73,7 @@ export default function NetSheetClient() {
       await fetch(`${APP_URL}/api/public/tool-lead`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: email.trim(), tool: "seller_net_sheet", context: { salePrice: calc.price, net: calc.net } }),
+        body: JSON.stringify({ email: email.trim(), tool: "seller_net_sheet", context: { salePrice: calc.price, net: calc.net, state: preset?.slug } }),
         keepalive: true,
       });
     } catch {
@@ -84,11 +97,12 @@ export default function NetSheetClient() {
       <section className="legal-hero pb-no-print">
         <div className="mkt-container" style={{ textAlign: "center" }}>
           <h1 style={{ fontSize: "clamp(1.75rem, 3.5vw, 2.4rem)", fontWeight: 800, color: "var(--ds-dark)", lineHeight: 1.15 }}>
-            Seller net sheet calculator
+            {preset ? `${preset.name} seller net sheet calculator` : "Seller net sheet calculator"}
           </h1>
           <p style={{ color: "var(--ds-text-light)", fontSize: "1.05rem", maxWidth: 620, margin: "12px auto 0", lineHeight: 1.7 }}>
             Show your seller what they&apos;ll actually walk away with. Enter the numbers, get a clean
             breakdown to share. Free to use, no account needed.
+            {preset && <> Transfer tax preloads at {preset.rateLabel} — edit anything to match your deal.</>}
           </p>
         </div>
       </section>
@@ -115,10 +129,16 @@ export default function NetSheetClient() {
             {COST_FIELDS.map((f) => (
               <label key={f.key} style={label}>
                 {f.label}
-                <input style={{ ...input, marginTop: 6 }} inputMode="decimal" placeholder="$0" value={costs[f.key] || ""} onChange={(e) => setCost(f.key, e.target.value)} />
+                <input style={{ ...input, marginTop: 6 }} inputMode="decimal" placeholder="$0" value={costValue(f.key)} onChange={(e) => setCost(f.key, e.target.value)} />
               </label>
             ))}
           </div>
+
+          {preset && (
+            <p style={{ marginTop: 12, fontSize: "0.78rem", color: "var(--ds-text-light)", lineHeight: 1.6 }}>
+              {preset.name}: {preset.rateLabel}. {preset.note} Rates change and local add-ons vary — verify with your title company.
+            </p>
+          )}
 
           <details style={{ marginTop: 16 }}>
             <summary style={{ cursor: "pointer", fontSize: "0.85rem", fontWeight: 600, color: "var(--ds-dark)" }}>
@@ -151,7 +171,7 @@ export default function NetSheetClient() {
                 {[
                   { l: "Sale price", v: calc.price, plus: true },
                   { l: `Agent commission (${num(commissionPct)}%)`, v: -calc.commission },
-                  ...COST_FIELDS.filter((f) => num(costs[f.key] || "") > 0).map((f) => ({ l: f.label, v: -num(costs[f.key] || "") })),
+                  ...COST_FIELDS.filter((f) => num(costValue(f.key)) > 0).map((f) => ({ l: f.label, v: -num(costValue(f.key)) })),
                 ].map((row, i) => (
                   <div key={i} style={{ display: "flex", justifyContent: "space-between", padding: "8px 0", borderBottom: "1px solid #f0f2f5", fontSize: "0.95rem" }}>
                     <span style={{ color: "var(--ds-text-light)" }}>{row.l}</span>
