@@ -18,7 +18,12 @@ export const FEATURES: FeatureMeta[] = [
   {
     slug: "upload-and-redesign",
     navLabel: "Upload & Redesign",
-    shortDescription: "Polish and personalize your existing PPT or PPTX",
+    shortDescription: "Polish and personalize your existing PPT or PPTX, and export it back as editable PowerPoint",
+  },
+  {
+    slug: "bulk-rebuild",
+    navLabel: "Bulk Rebuild",
+    shortDescription: "Rebuild a folder of old PowerPoints in one run, and get editable .pptx files back",
   },
   {
     slug: "output-types",
@@ -58,7 +63,7 @@ export const FEATURES: FeatureMeta[] = [
 ];
 
 export const FEATURE_GROUPS: FeatureGroup[] = [
-  { label: "Build", slugs: ["ai-deck-builder", "upload-and-redesign", "output-types", "api-and-mcp"] },
+  { label: "Build", slugs: ["ai-deck-builder", "upload-and-redesign", "bulk-rebuild", "output-types", "api-and-mcp"] },
   { label: "Brand & Content", slugs: ["templates-and-slides", "brand-and-images"] },
   { label: "Share & Scale", slugs: ["publishing-and-sharing", "viewer-analytics", "team-and-permissions"] },
 ];
