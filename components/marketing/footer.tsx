@@ -69,7 +69,7 @@ export default function MarketingFooter() {
             </Link>
             <p>
               AI-powered pitch deck builder for anyone who pitches. Create personalized,
-              branded presentations in a couple of minutes, publish instantly, and track viewer engagement.
+              branded presentations in a few minutes, publish instantly, and track viewer engagement.
             </p>
           </div>
 

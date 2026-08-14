@@ -175,7 +175,7 @@ export const COMPETITORS: Competitor[] = [
     metaTitle: "PitchBoost vs Pitch: Best Pitch Alternative for Fast Sales Decks (2025)",
     metaDescription: "Evaluating PitchBoost vs Pitch? See how PitchBoost compares as a Pitch alternative for AI-generated sales decks, client proposals, and pitch materials for small teams.",
     heroHeadline: "PitchBoost vs Pitch: The Faster Alternative for Sales Decks and Proposals",
-    heroSubhead: "Pitch is a polished collaboration workspace for presentation teams. PitchBoost is built for the moment you need a great deck for tomorrow's meeting — AI-generated, prospect-specific, and ready in a couple of minutes.",
+    heroSubhead: "Pitch is a polished collaboration workspace for presentation teams. PitchBoost is built for the moment you need a great deck for tomorrow's meeting — AI-generated, prospect-specific, and ready in a few minutes.",
     verdict: "Pitch is a well-designed presentation platform with strong collaboration, sharing, and workspace features. It's a good fit for teams managing multiple decks across a brand system. PitchBoost is the better alternative when the priority is generating a tailored, client-ready pitch deck or proposal as fast as possible — without managing a full presentation workspace.",
     competitorSummary: "Pitch is a presentation platform designed for collaborative teams. It offers AI presentation creation, templates, branded sharing links with analytics, and pitch rooms. It's well-regarded for its design quality and team workspace features.",
     pitchboostPricing: "Free plan available. Pro: $29/mo. Business: $79/mo.",

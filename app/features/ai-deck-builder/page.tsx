@@ -8,11 +8,11 @@ export const metadata: Metadata = {
   alternates: { canonical: "/features/ai-deck-builder" },
   title: "AI Deck Builder: Personalized Pitch Decks, Presentations & Proposals",
   description:
-    "PitchBoost's AI deck builder generates personalized pitch decks, sales presentations, and proposals in a couple of minutes — written for your specific prospect, not a generic template.",
+    "PitchBoost's AI deck builder generates personalized pitch decks, sales presentations, and proposals in a few minutes — written for your specific prospect, not a generic template.",
   openGraph: {
     title: "AI Deck Builder: Personalized Pitch Decks, Presentations & Proposals",
     description:
-      "PitchBoost's AI deck builder generates personalized pitch decks, sales presentations, and proposals in a couple of minutes — written for your specific prospect, not a generic template.",
+      "PitchBoost's AI deck builder generates personalized pitch decks, sales presentations, and proposals in a few minutes — written for your specific prospect, not a generic template.",
     images: [{ url: "https://pitchboost.ai/og-image.png", width: 1310, height: 820 }],
   },
 };
@@ -98,7 +98,7 @@ const PITCHBOOST_WINS = [
   "Structure determined by the type of conversation, not the template",
   "Pain points pulled from your prospect context and deal notes",
   "Your credentials positioned around what this specific buyer cares about",
-  "Fully built in a couple of minutes — not a starting point you have to gut",
+  "Fully built in a few minutes — not a starting point you have to gut",
 ];
 
 const STEPS = [
@@ -110,7 +110,7 @@ const STEPS = [
   {
     step: 2,
     title: "Get a deck built around this specific opportunity",
-    body: "PitchBoost structures the presentation, writes the copy, applies your branding, and organizes your supporting material in the order most likely to land with this buyer — all in a couple of minutes.",
+    body: "PitchBoost structures the presentation, writes the copy, applies your branding, and organizes your supporting material in the order most likely to land with this buyer — all in a few minutes.",
   },
   {
     step: 3,
@@ -157,7 +157,7 @@ export default function AIDeckBuilderPage() {
     "@type": "WebPage",
     name: "AI Deck Builder — Personalized Pitch Decks, Presentations & Proposals",
     description:
-      "PitchBoost's AI deck builder generates personalized pitch decks, sales presentations, and proposals in a couple of minutes.",
+      "PitchBoost's AI deck builder generates personalized pitch decks, sales presentations, and proposals in a few minutes.",
     url: "https://pitchboost.ai/features/ai-deck-builder",
     publisher: { "@type": "Organization", name: "PitchBoost", url: "https://pitchboost.ai" },
   };
@@ -191,7 +191,7 @@ export default function AIDeckBuilderPage() {
             Personalized pitch decks, presentations, and proposals that close more deals
           </h1>
           <p style={{ color: "var(--ds-text-light)", fontSize: "1.1rem", maxWidth: 640, margin: "0 auto 36px", lineHeight: 1.7 }}>
-            Describe your prospect, your opportunity, and your goals. PitchBoost generates a fully structured pitch deck, presentation, or proposal in a couple of minutes — with copy written for this specific buyer, not a template you have to gut and rewrite.
+            Describe your prospect, your opportunity, and your goals. PitchBoost generates a fully structured pitch deck, presentation, or proposal in a few minutes — with copy written for this specific buyer, not a template you have to gut and rewrite.
           </p>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 16, flexWrap: "wrap" }}>
             <a href={SIGNUP_URL} className="btn btn-primary btn-primary-animated btn-lg">Start Building Free</a>
@@ -200,7 +200,7 @@ export default function AIDeckBuilderPage() {
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 40, marginTop: 48, flexWrap: "wrap" }}>
             {[
               "Personalized to this prospect's specific situation",
-              "Fully structured in a couple of minutes",
+              "Fully structured in a few minutes",
               "Your brand, automatically applied",
             ].map((item) => (
               <div key={item} style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 14, color: "var(--ds-text-secondary)", fontWeight: 500 }}>

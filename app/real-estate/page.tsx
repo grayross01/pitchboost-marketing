@@ -228,7 +228,7 @@ export default function RealEstateLandingPage() {
           <div className="fade-up" style={{ textAlign: "center", marginTop: 28 }}>
             <a href={TIMELINE_TOOL} className="btn btn-primary btn-lg">Try the free timeline tool</a>
             <p style={{ fontSize: 13, color: "var(--ds-text-light)", marginTop: 10 }}>
-              Free to use. Build one in a couple of minutes and send it to a client today.
+              Free to use. Build one in a few minutes and send it to a client today.
             </p>
           </div>
         </div>
