@@ -62,7 +62,7 @@ const organizationSchema = {
   name: "PitchBoost",
   url: "https://pitchboost.ai",
   logo: "https://pitchboost.ai/icon.png",
-  description: "AI-powered pitch deck builder for sales teams, agencies, and anyone who pitches. Generate personalized, branded presentations in under 60 seconds.",
+  description: "AI-powered pitch deck builder for sales teams, agencies, and anyone who pitches. Generate personalized, branded presentations in a couple of minutes.",
   sameAs: [
     "https://www.linkedin.com/company/pitchboost-ai",
     "https://www.instagram.com/pitchboost.ai/",

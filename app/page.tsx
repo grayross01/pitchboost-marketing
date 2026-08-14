@@ -27,7 +27,7 @@ const softwareSchema = {
   url: "https://pitchboost.ai",
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web",
-  description: "AI-powered pitch deck builder that generates personalized, branded presentations, proposals, and sales decks in under 60 seconds.",
+  description: "AI-powered pitch deck builder that generates personalized, branded presentations, proposals, and sales decks in a couple of minutes.",
   offers: {
     "@type": "AggregateOffer",
     priceCurrency: "USD",
@@ -61,7 +61,7 @@ export default function MarketingPage() {
           </h1>
 
           <p className="fade-up fade-up-delay-2">
-            PitchBoost builds personalized pitch decks, presentations, and proposals for a specific prospect in under 60 seconds, so your materials reflect their priorities, not a generic template.
+            PitchBoost builds personalized pitch decks, presentations, and proposals for a specific prospect in a couple of minutes, so your materials reflect their priorities, not a generic template.
           </p>
 
           <div className="hero-actions fade-up fade-up-delay-3">
