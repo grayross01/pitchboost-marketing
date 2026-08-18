@@ -39,7 +39,7 @@ export const INDUSTRIES: Industry[] = [
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>,
     metaTitle: "B2B Sales Pitch Deck Software — Close More Deals | PitchBoost",
     metaDescription:
-      "PitchBoost helps B2B sales teams generate personalized sales pitch decks for every prospect in under 60 seconds. Stop sending the same deck to every deal — win more with decks built around each buyer's specific pain points.",
+      "PitchBoost helps B2B sales teams generate personalized sales pitch decks for every prospect in a few minutes. Stop sending the same deck to every deal — win more with decks built around each buyer's specific pain points.",
     heroHeadline: "B2B sales pitch decks personalized for every prospect, in 60 seconds",
     heroSubhead:
       "Your reps know the prospect. PitchBoost builds the deck. Generate a tailored sales pitch for every deal — pulled from your product's capabilities and mapped to that buyer's specific pain points — before they even get on the call.",
@@ -76,7 +76,7 @@ export const INDUSTRIES: Industry[] = [
       },
     ],
     outcomes: [
-      "Personalized sales pitch deck for every prospect in under 60 seconds",
+      "Personalized sales pitch deck for every prospect in a few minutes",
       "Reps spend more time selling, less time formatting slides",
       "Sales managers see exactly which decks and which slides perform",
       "Consistent brand quality across the entire sales team",
@@ -153,10 +153,10 @@ export const INDUSTRIES: Industry[] = [
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>,
     metaTitle: "SaaS Pitch Deck Software — Win More Enterprise Deals | PitchBoost",
     metaDescription:
-      "PitchBoost helps SaaS and technology companies generate tailored enterprise pitch decks for every buyer persona in under 60 seconds. Turn your platform's capabilities into a deck that speaks directly to each prospect's specific pain points.",
+      "PitchBoost helps SaaS and technology companies generate tailored enterprise pitch decks for every buyer persona in a few minutes. Turn your platform's capabilities into a deck that speaks directly to each prospect's specific pain points.",
     heroHeadline: "SaaS pitch decks tailored to every enterprise buyer's situation",
     heroSubhead:
-      "Enterprise buyers don't want a product overview — they want to see how your platform solves their specific problem. PitchBoost builds a tailored SaaS pitch deck for every prospect, from your product capabilities, in under 60 seconds.",
+      "Enterprise buyers don't want a product overview — they want to see how your platform solves their specific problem. PitchBoost builds a tailored SaaS pitch deck for every prospect, from your product capabilities, in a few minutes.",
     sampleDeckUrl: "https://app.pitchboost.ai/p/sample/klaviyo-us-dollarshaveclub-com",
     painPoints: [
       {
@@ -230,7 +230,7 @@ export const INDUSTRIES: Industry[] = [
       },
       {
         q: "Is there an AI pitch deck maker for SaaS companies?",
-        a: "Yes — that's exactly what PitchBoost is built for. You upload your platform's capabilities, integration details, and customer case studies once. Then for each enterprise deal, you describe the prospect's company structure and specific challenges. PitchBoost generates a tailored SaaS sales deck that connects your product to their exact situation — in under 60 seconds. No SaaS pitch deck template to fill out manually, no starting from scratch for every deal.",
+        a: "Yes — that's exactly what PitchBoost is built for. You upload your platform's capabilities, integration details, and customer case studies once. Then for each enterprise deal, you describe the prospect's company structure and specific challenges. PitchBoost generates a tailored SaaS sales deck that connects your product to their exact situation — in a few minutes. No SaaS pitch deck template to fill out manually, no starting from scratch for every deal.",
       },
       {
         q: "How do I present SaaS pricing to an enterprise buyer without losing them?",
@@ -267,10 +267,10 @@ export const INDUSTRIES: Industry[] = [
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>,
     metaTitle: "Startup Pitch Deck Software — Look Enterprise-Grade on a Startup Budget | PitchBoost",
     metaDescription:
-      "PitchBoost helps startups generate polished pitch decks for sales, partnerships, and investor meetings in under 60 seconds. Look professional and move fast — without a design team, an agency, or hours spent on slides.",
+      "PitchBoost helps startups generate polished pitch decks for sales, partnerships, and investor meetings in a few minutes. Look professional and move fast — without a design team, an agency, or hours spent on slides.",
     heroHeadline: "Startup pitch decks that look enterprise-grade without the enterprise budget",
     heroSubhead:
-      "Startups pitch investors, customers, and partners simultaneously — often with the same founder doing all three. PitchBoost generates a polished, branded pitch deck for any audience in under 60 seconds, so you spend time building the company, not building slides.",
+      "Startups pitch investors, customers, and partners simultaneously — often with the same founder doing all three. PitchBoost generates a polished, branded pitch deck for any audience in a few minutes, so you spend time building the company, not building slides.",
     sampleDeckUrl: "https://app.pitchboost.ai/p/sample/playground-goddardschool-com",
     painPoints: [
       {
@@ -279,7 +279,7 @@ export const INDUSTRIES: Industry[] = [
       },
       {
         title: "You don't have a design team and can't justify an agency",
-        body: "Agencies charge $5,000–$15,000 for a pitch deck. Freelancers take two weeks. You need to pitch next Thursday. PitchBoost builds a professional, branded deck in under a minute.",
+        body: "Agencies charge $5,000–$15,000 for a pitch deck. Freelancers take two weeks. You need to pitch next Thursday. PitchBoost builds a professional, branded deck in a few minutes.",
       },
       {
         title: "By the time you've customized the deck, the window has moved on",
@@ -332,7 +332,7 @@ export const INDUSTRIES: Industry[] = [
       },
       {
         q: "How much does it cost compared to hiring a designer or agency?",
-        a: "PitchBoost Pro is $29/month. Design agencies typically charge $5,000–$15,000 per deck. Freelancers charge $500–$2,000 and take days. PitchBoost generates a professional, branded deck in under 60 seconds and lets you update it as your startup evolves.",
+        a: "PitchBoost Pro is $29/month. Design agencies typically charge $5,000–$15,000 per deck. Freelancers charge $500–$2,000 and take days. PitchBoost generates a professional, branded deck in a few minutes and lets you update it as your startup evolves.",
       },
       {
         q: "Can I track whether investors have viewed my pitch deck?",
@@ -344,7 +344,7 @@ export const INDUSTRIES: Industry[] = [
       },
       {
         q: "Is there an AI pitch deck maker for startups?",
-        a: "Yes — PitchBoost is designed for exactly this. You input your startup's story, traction, product, and differentiators once. For each meeting — investor, customer, or partner — you describe who you're pitching and their specific situation. PitchBoost generates a tailored startup pitch deck in under 60 seconds, no startup pitch deck template required.",
+        a: "Yes — PitchBoost is designed for exactly this. You input your startup's story, traction, product, and differentiators once. For each meeting — investor, customer, or partner — you describe who you're pitching and their specific situation. PitchBoost generates a tailored startup pitch deck in a few minutes, no startup pitch deck template required.",
       },
       {
         q: "How do I explain our pricing or business model to investors and customers in the same deck?",
@@ -381,7 +381,7 @@ export const INDUSTRIES: Industry[] = [
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>,
     metaTitle: "Sponsorship Pitch Deck Software — Close More Sponsorship Deals | PitchBoost",
     metaDescription:
-      "PitchBoost helps media companies, event organizers, podcasters, and content creators generate compelling sponsorship pitch decks and media kits in under 60 seconds. Package your audience and close more sponsorship deals with materials that actually convert.",
+      "PitchBoost helps media companies, event organizers, podcasters, and content creators generate compelling sponsorship pitch decks and media kits in a few minutes. Package your audience and close more sponsorship deals with materials that actually convert.",
     heroHeadline: "Sponsorship pitch decks that make brands say yes",
     heroSubhead:
       "Sponsors don't fund reach — they fund relevance. PitchBoost helps you build a sponsorship pitch deck that connects your audience to each brand's specific marketing goals, so every conversation starts from a position of fit instead of a pitch for attention.",
@@ -417,7 +417,7 @@ export const INDUSTRIES: Industry[] = [
       },
     ],
     outcomes: [
-      "Tailored sponsorship deck for every brand in under 60 seconds",
+      "Tailored sponsorship deck for every brand in a few minutes",
       "Close more sponsorship deals with pitches that speak to each brand's goals",
       "Respond to inbound sponsor inquiries the same day they come in",
       "Professional materials that reflect the quality of your audience",
@@ -453,7 +453,7 @@ export const INDUSTRIES: Industry[] = [
       },
       {
         q: "Is there an AI sponsorship proposal maker for media companies and creators?",
-        a: "Yes — PitchBoost is built for exactly this. You upload your audience demographics, engagement data, and past campaign performance once. For each brand pitch, you describe the sponsor's marketing goals. PitchBoost generates a tailored sponsorship proposal in under 60 seconds that connects your audience to their specific objectives — no sponsorship deck template to manually customize for every brand.",
+        a: "Yes — PitchBoost is built for exactly this. You upload your audience demographics, engagement data, and past campaign performance once. For each brand pitch, you describe the sponsor's marketing goals. PitchBoost generates a tailored sponsorship proposal in a few minutes that connects your audience to their specific objectives — no sponsorship deck template to manually customize for every brand.",
       },
       {
         q: "How do I make my media kit or sponsorship proposal stand out from the competition?",
@@ -492,10 +492,10 @@ export const INDUSTRIES: Industry[] = [
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>,
     metaTitle: "Agency Pitch Deck Software — Win More Clients | PitchBoost",
     metaDescription:
-      "PitchBoost helps marketing agencies, creative studios, and PR firms generate tailored pitch decks for every prospective client in under 60 seconds. Upload your credentials once, win more clients with decks built around their business.",
+      "PitchBoost helps marketing agencies, creative studios, and PR firms generate tailored pitch decks for every prospective client in a few minutes. Upload your credentials once, win more clients with decks built around their business.",
     heroHeadline: "Agency pitch decks that win clients, built in 60 seconds",
     heroSubhead:
-      "Stop sending credentials decks that weren't built for the room. PitchBoost generates a tailored pitch deck for every prospective client — from your agency credentials, mapped to their specific brief — in under a minute.",
+      "Stop sending credentials decks that weren't built for the room. PitchBoost generates a tailored pitch deck for every prospective client — from your agency credentials, mapped to their specific brief — in a few minutes.",
     painPoints: [
       {
         title: "Every client pitch starts from scratch",
@@ -529,7 +529,7 @@ export const INDUSTRIES: Industry[] = [
     ],
     outcomes: [
       "Pitch more prospective clients without growing your team",
-      "Every client deck looks bespoke — generated in under 60 seconds",
+      "Every client deck looks bespoke — generated in a few minutes",
       "Consistent agency branding across every client pitch, every time",
       "Respond to RFPs and client briefs faster than competing agencies",
       "No design bottleneck when pitching new clients",
@@ -568,7 +568,7 @@ export const INDUSTRIES: Industry[] = [
       },
       {
         q: "Is there an AI pitch deck maker for agencies and creative studios?",
-        a: "Yes — PitchBoost is built for this exact problem. You upload your agency's credentials, case studies, and capabilities once. For each new business pitch, you describe the prospective client and their brief. PitchBoost generates a tailored agency credentials deck in under 60 seconds that's built around their industry and objectives — not a generic agency pitch deck template with the last client's logo swapped out.",
+        a: "Yes — PitchBoost is built for this exact problem. You upload your agency's credentials, case studies, and capabilities once. For each new business pitch, you describe the prospective client and their brief. PitchBoost generates a tailored agency credentials deck in a few minutes that's built around their industry and objectives — not a generic agency pitch deck template with the last client's logo swapped out.",
       },
       {
         q: "How do we present our services to a new client without leading with a 40-slide credentials dump?",
@@ -606,7 +606,7 @@ export const INDUSTRIES: Industry[] = [
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>,
     metaTitle: "Consulting Pitch Deck Software — Win More Engagements | PitchBoost",
     metaDescription:
-      "PitchBoost helps consultancies and professional services firms generate tailored proposals and pitch decks for every prospective client in under 60 seconds. Demonstrate expertise before the first meeting with decks built around each client's specific situation.",
+      "PitchBoost helps consultancies and professional services firms generate tailored proposals and pitch decks for every prospective client in a few minutes. Demonstrate expertise before the first meeting with decks built around each client's specific situation.",
     heroHeadline: "Consulting proposals that prove you understand the client",
     heroSubhead:
       "In consulting, demonstrating deep understanding of a prospect's situation is half the win. PitchBoost connects your firm's expertise to each client's specific challenges — so you walk into every conversation looking prepared, not generic.",
@@ -678,7 +678,7 @@ export const INDUSTRIES: Industry[] = [
       },
       {
         q: "Is there an AI consulting proposal generator for professional services firms?",
-        a: "Yes — PitchBoost is built for this. You upload your firm's methodology, practice areas, and case studies once. For each prospect, you describe their industry, org structure, and the business challenge they're facing. PitchBoost generates a tailored consulting proposal in under 60 seconds — no consulting proposal template to manually fill out for every engagement.",
+        a: "Yes — PitchBoost is built for this. You upload your firm's methodology, practice areas, and case studies once. For each prospect, you describe their industry, org structure, and the business challenge they're facing. PitchBoost generates a tailored consulting proposal in a few minutes — no consulting proposal template to manually fill out for every engagement.",
       },
       {
         q: "How do we explain our consulting methodology to a prospect who's never worked with a firm like ours?",
@@ -715,7 +715,7 @@ export const INDUSTRIES: Industry[] = [
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>,
     metaTitle: "Recruiting Pitch Deck Software — Win More Clients | PitchBoost",
     metaDescription:
-      "PitchBoost helps recruiting agencies and staffing firms generate tailored pitch decks for every prospective client company in under 60 seconds. Win more preferred vendor agreements and retained searches with decks built around each hiring team's specific talent needs.",
+      "PitchBoost helps recruiting agencies and staffing firms generate tailored pitch decks for every prospective client company in a few minutes. Win more preferred vendor agreements and retained searches with decks built around each hiring team's specific talent needs.",
     heroHeadline: "Recruiting pitch decks that win preferred vendor agreements",
     heroSubhead:
       "Every hiring company has different talent challenges. PitchBoost builds a recruiting pitch deck tailored to each prospective client's specific hiring needs — so your agency pitch speaks their language instead of sounding like every other recruiting firm.",
@@ -787,7 +787,7 @@ export const INDUSTRIES: Industry[] = [
       },
       {
         q: "Is there an AI pitch deck maker for recruiting and staffing agencies?",
-        a: "Yes — PitchBoost is built for exactly this use case. You upload your agency's specializations, sector focus, and placement track record once. For each new client pitch, you describe the company's open roles and talent challenges. PitchBoost generates a tailored recruiting capabilities presentation in under 60 seconds — no staffing agency pitch deck template to manually customize for every prospect.",
+        a: "Yes — PitchBoost is built for exactly this use case. You upload your agency's specializations, sector focus, and placement track record once. For each new client pitch, you describe the company's open roles and talent challenges. PitchBoost generates a tailored recruiting capabilities presentation in a few minutes — no staffing agency pitch deck template to manually customize for every prospect.",
       },
       {
         q: "How do we present our recruiting services to a company that's never used a staffing agency before?",
@@ -824,7 +824,7 @@ export const INDUSTRIES: Industry[] = [
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>,
     metaTitle: "Coaching & Training Proposal Software — Win More Corporate Clients | PitchBoost",
     metaDescription:
-      "PitchBoost helps executive coaches, corporate trainers, and professional speakers generate tailored proposals for every corporate client in under 60 seconds. Win more programs, engagements, and retainers with materials that prove your expertise before the first meeting.",
+      "PitchBoost helps executive coaches, corporate trainers, and professional speakers generate tailored proposals for every corporate client in a few minutes. Win more programs, engagements, and retainers with materials that prove your expertise before the first meeting.",
     heroHeadline: "Training and coaching proposals that win corporate clients",
     heroSubhead:
       "Corporate clients don't buy coaching programs — they buy outcomes for their specific team. PitchBoost builds a proposal that connects your methodology to each client's unique challenges, so every pitch feels less like a sales call and more like a consultation.",
@@ -861,7 +861,7 @@ export const INDUSTRIES: Industry[] = [
     ],
     outcomes: [
       "Win more corporate training and coaching engagements",
-      "Proposals tailored to each client's team challenges in under 60 seconds",
+      "Proposals tailored to each client's team challenges in a few minutes",
       "Professional materials that match the quality of your programs",
       "Pitch more prospective clients without spending hours on each proposal",
       "Track which clients are reviewing your proposal before you follow up",
@@ -880,7 +880,7 @@ export const INDUSTRIES: Industry[] = [
     faqs: [
       {
         q: "Can PitchBoost generate a speaker one-sheet or speaking proposal?",
-        a: "Yes. Whether you need a speaking proposal for a conference organizer, a one-sheet for a speaker bureau, or a training program proposal for a corporate L&D team, PitchBoost generates the right format from your credentials in under 60 seconds.",
+        a: "Yes. Whether you need a speaking proposal for a conference organizer, a one-sheet for a speaker bureau, or a training program proposal for a corporate L&D team, PitchBoost generates the right format from your credentials in a few minutes.",
       },
       {
         q: "Is PitchBoost better than a coaching proposal template?",
@@ -896,7 +896,7 @@ export const INDUSTRIES: Industry[] = [
       },
       {
         q: "Is there an AI proposal generator for coaches, trainers, and speakers?",
-        a: "Yes — PitchBoost is built for this. You upload your methodology, program formats, outcomes data, and testimonials once. For each new corporate client, you describe their team, industry, and development goals. PitchBoost generates a tailored coaching or training proposal in under 60 seconds — no coaching proposal template to manually adapt for every company you pitch.",
+        a: "Yes — PitchBoost is built for this. You upload your methodology, program formats, outcomes data, and testimonials once. For each new corporate client, you describe their team, industry, and development goals. PitchBoost generates a tailored coaching or training proposal in a few minutes — no coaching proposal template to manually adapt for every company you pitch.",
       },
       {
         q: "How do I explain the ROI of coaching or training to a corporate buyer?",
@@ -973,7 +973,7 @@ export const INDUSTRIES: Industry[] = [
     ],
     outcomes: [
       "Win more bids with proposals that look as good as your work",
-      "Professional contractor proposals created in under 60 seconds",
+      "Professional contractor proposals created in a few minutes",
       "Explain materials, process, and warranties in a format clients understand",
       "Stand out from competitors who send basic estimates",
       "Follow up confidently knowing whether the client reviewed your proposal",
@@ -1012,7 +1012,7 @@ export const INDUSTRIES: Industry[] = [
       },
       {
         q: "Is there an AI proposal maker for contractors and home service businesses?",
-        a: "Yes — PitchBoost is built for this. You set up your business profile with your services, past project photos, certifications, and warranty information once. For each new job, you describe the project scope and what the client cares about. PitchBoost generates a professional contractor proposal in under 60 seconds — no contractor proposal template to fill out for every bid.",
+        a: "Yes — PitchBoost is built for this. You set up your business profile with your services, past project photos, certifications, and warranty information once. For each new job, you describe the project scope and what the client cares about. PitchBoost generates a professional contractor proposal in a few minutes — no contractor proposal template to fill out for every bid.",
       },
       {
         q: "How do I turn a basic quote into a proposal that actually wins the job?",
@@ -1049,7 +1049,7 @@ export const INDUSTRIES: Industry[] = [
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"/></svg>,
     metaTitle: "Commercial Real Estate Pitch Deck Software — Close More Deals | PitchBoost",
     metaDescription:
-      "PitchBoost helps commercial real estate brokers and investors generate polished property overview decks, lease proposals, and investment memos in under 60 seconds. Look like a top-10 brokerage on every deal — no matter your firm's size.",
+      "PitchBoost helps commercial real estate brokers and investors generate polished property overview decks, lease proposals, and investment memos in a few minutes. Look like a top-10 brokerage on every deal — no matter your firm's size.",
     heroHeadline: "Commercial real estate pitch decks that move deals through the committee",
     heroSubhead:
       "In commercial real estate, your materials circulate across tenants, investors, and ownership groups before anyone picks up the phone. PitchBoost helps you build a polished deck for every deal — property overviews, lease proposals, investment memos — that looks like it came from a top-tier brokerage.",
@@ -1085,7 +1085,7 @@ export const INDUSTRIES: Industry[] = [
       },
     ],
     outcomes: [
-      "Professional property decks and investment memos in under 60 seconds",
+      "Professional property decks and investment memos in a few minutes",
       "Present every deal with materials that match your market expertise",
       "Track which stakeholders reviewed your deck before the negotiation call",
       "Consistent brand quality across every listing, deal, and client presentation",
@@ -1121,7 +1121,7 @@ export const INDUSTRIES: Industry[] = [
       },
       {
         q: "Is there an AI pitch deck maker for commercial real estate brokers?",
-        a: "Yes — PitchBoost is built for exactly this. You upload your brokerage credentials, market expertise, and transaction history once. For each deal, you describe the property, the target audience, and the key selling points. PitchBoost generates a tailored CRE pitch deck in under 60 seconds — no commercial real estate presentation template to manually customize for every listing or investment memo.",
+        a: "Yes — PitchBoost is built for exactly this. You upload your brokerage credentials, market expertise, and transaction history once. For each deal, you describe the property, the target audience, and the key selling points. PitchBoost generates a tailored CRE pitch deck in a few minutes — no commercial real estate presentation template to manually customize for every listing or investment memo.",
       },
       {
         q: "How do I create a property presentation that moves through an investment committee without getting stalled?",
@@ -1158,10 +1158,10 @@ export const INDUSTRIES: Industry[] = [
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9 21v-6h6v6"/></svg>,
     metaTitle: "Real Estate Listing Presentation Software: Win More Listings | PitchBoost",
     metaDescription:
-      "PitchBoost helps real estate agents build a polished listing presentation for every appointment in under 60 seconds. Paste a Zillow or Redfin link to autofill the home, walk in with a deck tailored to the seller, and see the moment they open it. Win more listings without rebuilding your slides every weekend.",
+      "PitchBoost helps real estate agents build a polished listing presentation for every appointment in a few minutes. Paste a Zillow or Redfin link to autofill the home, walk in with a deck tailored to the seller, and see the moment they open it. Win more listings without rebuilding your slides every weekend.",
     heroHeadline: "Win the listing before you walk in the door",
     heroSubhead:
-      "Sellers interview two or three agents before they sign, and your listing presentation is the one thing they keep, forward to their spouse, and compare side by side. PitchBoost builds a polished, tailored presentation for every appointment: the pricing story, the marketing plan, and your track record, formatted to the home and the seller, in under a minute.",
+      "Sellers interview two or three agents before they sign, and your listing presentation is the one thing they keep, forward to their spouse, and compare side by side. PitchBoost builds a polished, tailored presentation for every appointment: the pricing story, the marketing plan, and your track record, formatted to the home and the seller, in a few minutes.",
     painPoints: [
       {
         title: "The same generic listing template, on every appointment, against every competitor",
@@ -1194,7 +1194,7 @@ export const INDUSTRIES: Industry[] = [
       },
     ],
     outcomes: [
-      "A tailored listing presentation for every appointment in under 60 seconds",
+      "A tailored listing presentation for every appointment in a few minutes",
       "Walk in looking like the most prepared agent the seller will meet",
       "Pull a property's photos and details straight from a Zillow or Redfin link",
       "Know the moment a seller opens your presentation, and what they reread",
@@ -1230,7 +1230,7 @@ export const INDUSTRIES: Industry[] = [
       },
       {
         q: "Is there an AI listing presentation maker for real estate agents?",
-        a: "Yes, that is exactly what PitchBoost is. You set up your agent brand and track record once. For each appointment you paste the property link or describe the home and the seller, and PitchBoost generates a tailored listing presentation in under 60 seconds, with no template to rebuild for every seller.",
+        a: "Yes, that is exactly what PitchBoost is. You set up your agent brand and track record once. For each appointment you paste the property link or describe the home and the seller, and PitchBoost generates a tailored listing presentation in a few minutes, with no template to rebuild for every seller.",
       },
       {
         q: "How do I win more listings against agents who discount their commission?",
@@ -1379,7 +1379,7 @@ export const INDUSTRIES: Industry[] = [
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>,
     metaTitle: "Financial Advisor Pitch Deck Software — Convert More Prospects | PitchBoost",
     metaDescription:
-      "PitchBoost helps financial advisors, RIAs, and wealth management firms generate polished prospect presentations and client materials in under 60 seconds. Convert more prospective clients and circulate professional materials across every organization you serve.",
+      "PitchBoost helps financial advisors, RIAs, and wealth management firms generate polished prospect presentations and client materials in a few minutes. Convert more prospective clients and circulate professional materials across every organization you serve.",
     heroHeadline: "Financial advisor pitch decks that convert prospects into long-term clients",
     heroSubhead:
       "Prospective clients are evaluating your professionalism as much as your investment philosophy. PitchBoost helps you generate a polished, tailored pitch deck for every prospect — built from your firm's approach and mapped to that client's specific financial situation and goals.",
@@ -1415,7 +1415,7 @@ export const INDUSTRIES: Industry[] = [
       },
     ],
     outcomes: [
-      "Tailored prospect presentation for every prospective client in under 60 seconds",
+      "Tailored prospect presentation for every prospective client in a few minutes",
       "Materials that reflect the sophistication of your investment approach",
       "Convert more prospects with presentations built around their specific goals",
       "Track engagement so you know who's seriously evaluating your services",
@@ -1451,7 +1451,7 @@ export const INDUSTRIES: Industry[] = [
       },
       {
         q: "Is there an AI pitch deck maker for financial advisors and RIAs?",
-        a: "Yes — PitchBoost is built for this. You upload your firm's investment philosophy, team credentials, AUM profile, and service model once. For each prospect, you describe their financial situation and goals. PitchBoost generates a tailored financial advisor presentation in under 60 seconds — no financial advisor pitch deck template to manually customize for every prospect meeting.",
+        a: "Yes — PitchBoost is built for this. You upload your firm's investment philosophy, team credentials, AUM profile, and service model once. For each prospect, you describe their financial situation and goals. PitchBoost generates a tailored financial advisor presentation in a few minutes — no financial advisor pitch deck template to manually customize for every prospect meeting.",
       },
       {
         q: "How do I explain my investment philosophy to a prospect who's comparing multiple advisors?",
@@ -1488,7 +1488,7 @@ export const INDUSTRIES: Industry[] = [
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>,
     metaTitle: "Nonprofit Pitch Deck Software — Move Donors and Funders to Act | PitchBoost",
     metaDescription:
-      "PitchBoost helps nonprofits generate compelling pitch decks for donors, grant applications, and corporate partnerships in under 60 seconds. Tell your mission's story with materials that look as good as the work you do.",
+      "PitchBoost helps nonprofits generate compelling pitch decks for donors, grant applications, and corporate partnerships in a few minutes. Tell your mission's story with materials that look as good as the work you do.",
     heroHeadline: "Nonprofit pitch decks that move donors and funders to act",
     heroSubhead:
       "Your mission deserves materials that match its impact. PitchBoost helps nonprofits generate polished pitch decks for every donor meeting, grant application, and corporate partnership pitch — so you spend more time doing the work and less time building slides.",
@@ -1524,7 +1524,7 @@ export const INDUSTRIES: Industry[] = [
       },
     ],
     outcomes: [
-      "Compelling donor and grant pitch decks in under 60 seconds",
+      "Compelling donor and grant pitch decks in a few minutes",
       "Professional materials that reflect the quality of your programs",
       "Tailored pitches for individual donors, foundations, and corporate partners",
       "Track which funders are actively reviewing your materials",
@@ -1560,7 +1560,7 @@ export const INDUSTRIES: Industry[] = [
       },
       {
         q: "Is there an AI pitch deck maker for nonprofits and social impact organizations?",
-        a: "Yes — PitchBoost is built for exactly this. You upload your organization's mission, programs, impact data, and financials once. For each funder, donor, or corporate partner, you describe their giving priorities. PitchBoost generates a tailored nonprofit pitch deck in under 60 seconds — no nonprofit presentation template to manually adapt for every grant application or donor meeting.",
+        a: "Yes — PitchBoost is built for exactly this. You upload your organization's mission, programs, impact data, and financials once. For each funder, donor, or corporate partner, you describe their giving priorities. PitchBoost generates a tailored nonprofit pitch deck in a few minutes — no nonprofit presentation template to manually adapt for every grant application or donor meeting.",
       },
       {
         q: "How do we tell our mission's story differently for individual donors vs. foundations vs. corporate partners?",

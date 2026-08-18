@@ -21,7 +21,7 @@ export function GET() {
   const out: string[] = [
     "# PitchBoost",
     "",
-    "> AI pitch deck and sales presentation builder. PitchBoost generates a personalized, on-brand deck for a specific prospect or deal in under 60 seconds, publishes it as a trackable link with its own deal room, and shows you exactly who opened it and what they read.",
+    "> AI pitch deck and sales presentation builder. PitchBoost generates a personalized, on-brand deck for a specific prospect or deal in a few minutes, publishes it as a trackable link with its own deal room, and shows you exactly who opened it and what they read.",
     "",
     "PitchBoost is for anyone who pitches: sales teams, founders, agencies, consultants, and real estate agents. Describe the prospect or paste a property listing link, and it writes the copy, designs the slides, and hands you a shareable link with viewer analytics, a Q&A deal room, and AI-drafted follow-ups. Free to start; Pro and Business plans add custom sending domains, higher limits, PDF and PowerPoint export, and team features.",
     "",
