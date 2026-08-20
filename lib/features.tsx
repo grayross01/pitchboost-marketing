@@ -13,7 +13,7 @@ export const FEATURES: FeatureMeta[] = [
   {
     slug: "ai-deck-builder",
     navLabel: "AI Deck Builder",
-    shortDescription: "Generate personalized pitch decks and presentations in 60 seconds",
+    shortDescription: "Generate personalized pitch decks and presentations in minutes",
   },
   {
     slug: "upload-and-redesign",

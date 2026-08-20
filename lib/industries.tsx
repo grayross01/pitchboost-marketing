@@ -40,7 +40,7 @@ export const INDUSTRIES: Industry[] = [
     metaTitle: "B2B Sales Pitch Deck Software — Close More Deals | PitchBoost",
     metaDescription:
       "PitchBoost helps B2B sales teams generate personalized sales pitch decks for every prospect in a few minutes. Stop sending the same deck to every deal — win more with decks built around each buyer's specific pain points.",
-    heroHeadline: "B2B sales pitch decks personalized for every prospect, in 60 seconds",
+    heroHeadline: "B2B sales pitch decks personalized for every prospect, in minutes",
     heroSubhead:
       "Your reps know the prospect. PitchBoost builds the deck. Generate a tailored sales pitch for every deal — pulled from your product's capabilities and mapped to that buyer's specific pain points — before they even get on the call.",
     sampleDeckUrl: "https://app.pitchboost.ai/p/sample/klaviyo-us-dollarshaveclub-com",
@@ -190,7 +190,7 @@ export const INDUSTRIES: Industry[] = [
       },
     ],
     outcomes: [
-      "Tailored enterprise pitch deck for every prospect persona in 60 seconds",
+      "Tailored enterprise pitch deck for every prospect persona in minutes",
       "AEs run more discovery calls and fewer slide-building sessions",
       "Track engagement across every stakeholder in the buying committee",
       "Consistent brand and messaging across the entire sales org",
@@ -304,7 +304,7 @@ export const INDUSTRIES: Industry[] = [
       },
     ],
     outcomes: [
-      "Polished pitch deck for any audience — investor, customer, or partner — in 60 seconds",
+      "Polished pitch deck for any audience — investor, customer, or partner — in minutes",
       "Professional, branded materials without a design team or agency",
       "Move faster than competing startups who are still building slides",
       "Separate tailored decks for fundraising, sales, and partnership pitches",
@@ -493,7 +493,7 @@ export const INDUSTRIES: Industry[] = [
     metaTitle: "Agency Pitch Deck Software — Win More Clients | PitchBoost",
     metaDescription:
       "PitchBoost helps marketing agencies, creative studios, and PR firms generate tailored pitch decks for every prospective client in a few minutes. Upload your credentials once, win more clients with decks built around their business.",
-    heroHeadline: "Agency pitch decks that win clients, built in 60 seconds",
+    heroHeadline: "Agency pitch decks that win clients, built in minutes",
     heroSubhead:
       "Stop sending credentials decks that weren't built for the room. PitchBoost generates a tailored pitch deck for every prospective client — from your agency credentials, mapped to their specific brief — in a few minutes.",
     painPoints: [
@@ -1019,7 +1019,7 @@ export const INDUSTRIES: Industry[] = [
         a: "A quote is just a number. A winning contractor proposal explains the process, shows proof of past work, clarifies what's included, and makes the client feel like they're choosing a professional — not just a price. PitchBoost turns your scope of work and project details into a client-ready proposal that sells your business, not just your price.",
       },
     ],
-    ctaHeadline: "Ready to win more bids with contractor proposals that look as professional as your work — built in 60 seconds?",
+    ctaHeadline: "Ready to win more bids with contractor proposals that look as professional as your work — built in minutes?",
     industryTerm: "proposal",
     shortLabel: "contractor",
     shortLabelPlural: "contractors",
