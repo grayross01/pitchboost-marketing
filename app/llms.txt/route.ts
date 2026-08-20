@@ -1,5 +1,6 @@
 import { INDUSTRIES } from "@/lib/industries";
 import { FEATURES } from "@/lib/features";
+import { REDESIGNS } from "@/lib/redesigns";
 import { COMPETITORS } from "@/lib/competitors";
 
 /**
@@ -35,6 +36,12 @@ export function GET() {
     "## Features",
     "",
     ...FEATURES.map((f) => `- [${f.navLabel}](${BASE}/features/${f.slug}): ${f.shortDescription}`),
+    "",
+    "## Redesign an existing deck",
+    "",
+    "Upload a PowerPoint and PitchBoost rebuilds it in your brand: same content, professional design, in a few minutes.",
+    `- [Deck redesign hub](${BASE}/redesign): every redesign use case in one place`,
+    ...REDESIGNS.map((r) => `- [${r.navLabel}](${BASE}/redesign/${r.slug}): ${r.metaDescription}`),
     "",
     "## By industry",
     "",

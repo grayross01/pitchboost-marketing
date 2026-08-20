@@ -155,7 +155,7 @@ export default function UploadAndRedesignPage() {
           </p>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 16, flexWrap: "wrap" }}>
             <a href={`${SIGNUP_URL}?intent=rebuild`} className="btn btn-primary btn-lg">Upload Your Deck Free</a>
-            <Link href="/features/ai-deck-builder" className="btn btn-ghost btn-lg">Build from scratch instead</Link>
+            <Link href="/redesign" className="btn btn-ghost btn-lg">See redesign use cases</Link>
           </div>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 40, marginTop: 48, flexWrap: "wrap" }}>
             {["Keeps your existing content intact", "Applies your brand automatically", "Personalizes for each prospect"].map((item) => (

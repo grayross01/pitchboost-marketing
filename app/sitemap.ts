@@ -5,6 +5,7 @@ import { FEATURES } from "@/lib/features";
 import { getAllSlugs } from "@/lib/blog";
 import { CITIES } from "@/lib/cities";
 import { NET_SHEET_STATES } from "@/lib/net-sheet-states";
+import { REDESIGNS } from "@/lib/redesigns";
 
 const BASE = "https://pitchboost.ai";
 
@@ -45,6 +46,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   for (const f of FEATURES) {
     entries.push({ url: `${BASE}/features/${f.slug}`, changeFrequency: "monthly", priority: 0.8 });
+  }
+  entries.push({ url: `${BASE}/redesign`, changeFrequency: "monthly", priority: 0.85 });
+  for (const r of REDESIGNS) {
+    entries.push({ url: `${BASE}/redesign/${r.slug}`, changeFrequency: "monthly", priority: 0.8 });
   }
   for (const i of INDUSTRIES) {
     entries.push({ url: `${BASE}/industries/${i.slug}`, changeFrequency: "monthly", priority: 0.8 });
