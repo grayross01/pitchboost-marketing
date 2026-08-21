@@ -99,30 +99,20 @@ export default function MarketingPage() {
             <h2>A real PitchBoost deck, built for a specific prospect</h2>
           </div>
           <div className="fade-up">
-            <p style={{ fontSize: 15, color: "var(--ds-text-secondary)", lineHeight: 1.7, textAlign: "center", marginBottom: 12 }}>
-              This is a fictional sample deck showing how PitchBoost could tailor a sales presentation for a B2B SaaS prospect like Gong, pulling in brand context, prospect priorities, and deal notes to produce a personalized deck ready to send.
+            <p style={{ fontSize: 15, color: "var(--ds-text-secondary)", lineHeight: 1.7, textAlign: "center", marginBottom: 32 }}>
+              Every deck comes out in the sender's brand: logo, colors, and voice lifted from their
+              website, prospect context from the company they're pitching. Browse finished layouts
+              from the same engine in the template gallery.
             </p>
-            <p style={{ fontSize: 13, color: "var(--ds-text-tertiary)", lineHeight: 1.6, textAlign: "center", marginBottom: 32 }}>
-              This sample is not affiliated with or endorsed by Gong.
-            </p>
-            <div className="deck-float" style={{ borderRadius: 16, overflow: "hidden", border: "1px solid var(--ds-border)", background: "var(--ds-bg)", minHeight: 720 }}>
-              <iframe
-                src="https://app.pitchboost.ai/p/gong/sample"
-                width="100%"
-                height="720"
-                frameBorder="0"
-                allowFullScreen
-                style={{ display: "block" }}
-              />
-            </div>
-            <div style={{ textAlign: "center", marginTop: 20 }}>
+            <div style={{ textAlign: "center" }}>
               <a
-                href="https://app.pitchboost.ai/p/gong/sample"
+                href="https://app.pitchboost.ai/templates"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ fontSize: 14, fontWeight: 600, color: "#1F6B6B", textDecoration: "none" }}
+                className="btn btn-primary"
+                style={{ fontSize: 15, fontWeight: 600 }}
               >
-                View full sample deck →
+                Browse the template gallery →
               </a>
             </div>
           </div>
