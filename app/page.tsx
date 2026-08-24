@@ -381,10 +381,10 @@ export default function MarketingPage() {
               },
               {
                 color: "pink",
-                href: "/features/templates-and-slides",
-                icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /></svg>,
-                title: "Prospect-specific messaging",
-                body: "The difference between a deck that gets a response and one that gets ghosted is whether it sounds like it was written for them. PitchBoost makes that the default.",
+                href: "/features/research-and-fact-checking",
+                icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>,
+                title: "Researched, cited facts",
+                body: "PitchBoost researches your prospect while it writes and cites every stat it adds, with the source linked on the slide. Numbers it cannot back up never make the deck.",
               },
               {
                 color: "blue",
