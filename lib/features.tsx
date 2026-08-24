@@ -16,6 +16,11 @@ export const FEATURES: FeatureMeta[] = [
     shortDescription: "Generate personalized pitch decks and presentations in minutes",
   },
   {
+    slug: "research-and-fact-checking",
+    navLabel: "Research & Fact-Checking",
+    shortDescription: "Live research with cited sources on the slide, and a fact audit before you send",
+  },
+  {
     slug: "upload-and-redesign",
     navLabel: "Upload & Redesign",
     shortDescription: "Polish and personalize your existing PPT or PPTX, and export it back as editable PowerPoint",
@@ -63,7 +68,7 @@ export const FEATURES: FeatureMeta[] = [
 ];
 
 export const FEATURE_GROUPS: FeatureGroup[] = [
-  { label: "Build", slugs: ["ai-deck-builder", "upload-and-redesign", "bulk-rebuild", "output-types", "api-and-mcp"] },
+  { label: "Build", slugs: ["ai-deck-builder", "research-and-fact-checking", "upload-and-redesign", "bulk-rebuild", "output-types", "api-and-mcp"] },
   { label: "Brand & Content", slugs: ["templates-and-slides", "brand-and-images"] },
   { label: "Share & Scale", slugs: ["publishing-and-sharing", "viewer-analytics", "team-and-permissions"] },
 ];
