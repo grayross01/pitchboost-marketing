@@ -44,6 +44,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: p.priority,
   }));
 
+  entries.push({ url: `${BASE}/features`, changeFrequency: "monthly", priority: 0.85 });
   for (const f of FEATURES) {
     entries.push({ url: `${BASE}/features/${f.slug}`, changeFrequency: "monthly", priority: 0.8 });
   }

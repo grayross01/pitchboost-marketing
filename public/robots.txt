@@ -40,3 +40,6 @@ User-agent: CCBot
 Allow: /
 
 Sitemap: https://pitchboost.ai/sitemap.xml
+# Cross-submission: the app publishes the programmatic /pitch-deck sample
+# pages for this host in its own sitemap.
+Sitemap: https://app.pitchboost.ai/sitemap.xml

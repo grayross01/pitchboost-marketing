@@ -15,12 +15,13 @@ const SAMPLE_DECK = `${APP_URL}/p/real-estate/sample`;
 const TIMELINE_TOOL = "/tools/closing-timeline";
 
 export const metadata: Metadata = {
-  title: "Listing Presentations & Closing Timelines for Real Estate Agents | PitchBoost",
+  title: "Listing Presentations for Real Estate Agents | PitchBoost",
   description:
     "Win more listings and keep every deal on track. PitchBoost turns a Zillow or Redfin link into a polished, on-brand listing presentation in about a minute, builds a client-ready closing timeline, and tells you the moment a seller opens it. Start free.",
   alternates: { canonical: "/real-estate" },
   openGraph: {
     title: "PitchBoost for Real Estate Agents",
+    images: [{ url: "https://pitchboost.ai/og-image.png", width: 1310, height: 820 }],
     description:
       "Win the listing. Wow the client. Close on time. AI listing presentations, branded closing timelines, and read receipts for every deal.",
     url: "https://pitchboost.ai/real-estate",

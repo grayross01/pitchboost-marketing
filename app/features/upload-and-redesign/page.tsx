@@ -6,11 +6,11 @@ const SIGNUP_URL = `${APP_URL}/signup`;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/features/upload-and-redesign" },
-  title: "Upload & Redesign: Polish Any Existing Pitch Deck or Presentation",
+  title: "Upload & Redesign: Polish Your PowerPoint Deck",
   description:
     "Upload your existing PPT or PPTX and PitchBoost redesigns it with your brand, cleans up the layout, and personalizes the content for your specific prospect — without losing the work you've already done.",
   openGraph: {
-    title: "Upload & Redesign: Polish Any Existing Pitch Deck or Presentation",
+    title: "Upload & Redesign: Polish Your PowerPoint Deck",
     description:
       "Upload your existing PPT or PPTX and PitchBoost redesigns it with your brand, cleans up the layout, and personalizes the content for your specific prospect.",
     images: [{ url: "https://pitchboost.ai/og-image.png", width: 1310, height: 820 }],
