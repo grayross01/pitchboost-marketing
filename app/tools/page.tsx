@@ -10,6 +10,12 @@ export const metadata: Metadata = {
 
 const TOOLS = [
   {
+    href: "/tools/deck-evaluator",
+    title: "Pitch deck evaluator",
+    desc: "Upload any .pptx and get a graded evaluation in twenty seconds: clarity, narrative, persuasion, credibility, and your five highest-impact fixes.",
+    tag: "For anyone who pitches",
+  },
+  {
     href: "/tools/open-house-sign-in",
     title: "Open house sign-in + QR code",
     desc: "Print one QR code for the door. Visitors scan and sign in on their phone, and every lead is emailed straight to you.",
