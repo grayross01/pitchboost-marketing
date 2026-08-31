@@ -6,7 +6,7 @@ const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 const SIGNUP_URL = `${APP_URL}/signup?intent=rebuild`;
 
 export const metadata: Metadata = {
-  title: "Deck Redesign — Upload Any PowerPoint, Get It Back in Your Brand | PitchBoost",
+  title: "PowerPoint Deck Redesign in Your Brand | PitchBoost",
   description:
     "Redesign any presentation with AI: upload the .pptx, keep the content, get back professional design in your brand in minutes. PowerPoint redesigns, pitch deck makeovers, rebrands, and sales deck refreshes.",
   alternates: { canonical: "/redesign" },

@@ -1,0 +1,52 @@
+name: IndexNow ping
+
+# Tells Bing-family search engines (the index ChatGPT search leans on)
+# about every URL after each production deploy. The key file is public
+# by design: IndexNow verifies ownership by fetching it from the host.
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for Vercel deploy to go live
+        run: sleep 150
+      - name: Submit sitemap URLs to IndexNow
+        run: |
+          python3 - <<'EOF'
+          import json, re, urllib.request
+
+          KEY = "98bf64ffb3c57bc315a5c8766dd7d597"
+          sitemaps = [
+              "https://pitchboost.ai/sitemap.xml",
+              "https://app.pitchboost.ai/sitemap.xml",
+          ]
+          urls = []
+          for sm in sitemaps:
+              try:
+                  with urllib.request.urlopen(sm, timeout=30) as r:
+                      xml = r.read().decode()
+                  urls += re.findall(r"<loc>([^<]+)</loc>", xml)
+              except Exception as e:
+                  print(f"skip {sm}: {e}")
+          # IndexNow accepts one host per submission; the key lives on
+          # pitchboost.ai, so submit only that host's URLs.
+          urls = sorted({u for u in urls if u.startswith("https://pitchboost.ai")})
+          print(f"submitting {len(urls)} urls")
+          body = json.dumps({
+              "host": "pitchboost.ai",
+              "key": KEY,
+              "keyLocation": f"https://pitchboost.ai/{KEY}.txt",
+              "urlList": urls[:10000],
+          }).encode()
+          req = urllib.request.Request(
+              "https://api.indexnow.org/indexnow",
+              data=body,
+              headers={"Content-Type": "application/json; charset=utf-8"},
+          )
+          with urllib.request.urlopen(req, timeout=30) as r:
+              print("indexnow status:", r.status)
+          EOF
