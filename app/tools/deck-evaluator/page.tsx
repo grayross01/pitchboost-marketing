@@ -3,7 +3,7 @@ import EvaluatorClient from "./evaluator-client";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/tools/deck-evaluator" },
-  title: "Free Pitch Deck Evaluator | PitchBoost",
+  title: "Free Pitch Deck Evaluator",
   description:
     "Upload your pitch deck and get an instant graded evaluation: clarity, narrative, persuasion, and credibility scores, your five highest-impact fixes, and every number your audience might challenge. Free, no account.",
   openGraph: {
