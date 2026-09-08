@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { siteTitle } from "@/lib/site-title";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { INDUSTRIES, getIndustry } from "@/lib/industries";
@@ -26,7 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const industry = getIndustry(slug);
   if (!industry) return {};
   return {
-    title: industry.metaTitle,
+    title: siteTitle(industry.metaTitle),
     description: industry.metaDescription,
     alternates: { canonical: `/industries/${slug}` },
     openGraph: {
