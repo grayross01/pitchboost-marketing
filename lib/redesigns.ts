@@ -193,7 +193,7 @@ export const REDESIGNS: RedesignPage[] = [
       },
       {
         q: "Is it really free to try?",
-        a: "The free plan includes three deck generations with no credit card. Enough to redesign your deck and judge the result yourself.",
+        a: "The free plan includes one AI deck generation a month with no credit card. Enough to redesign your deck and judge the result yourself.",
       },
     ],
     ctaHeadline: "Skip the design course. Upload the deck.",
