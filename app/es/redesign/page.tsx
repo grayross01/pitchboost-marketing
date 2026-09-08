@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import RedesignHubView, { hubMetadata } from "@/components/marketing/redesign-hub-view";
 
-export const metadata: Metadata = hubMetadata("en");
+export const metadata: Metadata = hubMetadata("es");
 
 export default function RedesignHub() {
-  return <RedesignHubView locale="en" />;
+  return <RedesignHubView locale="es" />;
 }
