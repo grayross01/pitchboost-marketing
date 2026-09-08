@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { siteTitle } from "@/lib/site-title";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { COMPETITORS, getCompetitor } from "@/lib/competitors";
@@ -19,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const competitor = getCompetitor(slug);
   if (!competitor) return {};
   return {
-    title: competitor.metaTitle,
+    title: siteTitle(competitor.metaTitle),
     description: competitor.metaDescription,
     alternates: { canonical: `/compare/${slug}` },
     openGraph: {

@@ -4,7 +4,7 @@ import { INDUSTRIES, INDUSTRY_GROUPS } from "@/lib/industries";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/industries" },
-  title: "Pitch Deck Software by Industry | PitchBoost",
+  title: { absolute: "Pitch Deck Software by Industry | PitchBoost" },
   description:
     "PitchBoost works for B2B sales teams, agencies, startups, contractors, commercial real estate, nonprofits, and more. See how teams in your industry use PitchBoost to create professional pitch decks and win more business.",
 };
