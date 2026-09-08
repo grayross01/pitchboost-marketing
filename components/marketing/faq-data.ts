@@ -28,7 +28,7 @@ export const FAQS = [
   },
   {
     q: "Is there a free plan?",
-    a: "Yes. The Free plan lets you create up to 3 deals with basic analytics included. It's a great way to try PitchBoost before committing to a paid plan.",
+    a: "Yes. The Free plan includes one AI-generated deck a month with basic analytics. It's a great way to try PitchBoost before committing to a paid plan.",
   },
   {
     q: "Can I build decks from Claude or my own tools?",
