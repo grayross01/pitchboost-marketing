@@ -168,6 +168,7 @@ export default function PricingPage() {
               </div>
             ))}
           </div>
+          <p className="mkt-muted" style={{ textAlign: "center", fontSize: 13, marginTop: 20 }}>Prices are in US dollars. Checkout shows the amount in your local currency.</p>
         </div>
       </section>
 
