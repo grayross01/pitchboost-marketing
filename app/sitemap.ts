@@ -49,9 +49,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const f of FEATURES) {
     entries.push({ url: `${BASE}/features/${f.slug}`, changeFrequency: "monthly", priority: 0.8 });
   }
-  entries.push({ url: `${BASE}/redesign`, changeFrequency: "monthly", priority: 0.85 });
-  for (const r of REDESIGNS) {
-    entries.push({ url: `${BASE}/redesign/${r.slug}`, changeFrequency: "monthly", priority: 0.8 });
+  // The redesign cluster exists in English, Spanish (/es) and Brazilian
+  // Portuguese (/pt); every URL lists its siblings as hreflang alternates.
+  const redesignPaths = ["/redesign", ...REDESIGNS.map((r) => `/redesign/${r.slug}`)];
+  for (const path of redesignPaths) {
+    const languages = { en: `${BASE}${path}`, es: `${BASE}/es${path}`, pt: `${BASE}/pt${path}`, "x-default": `${BASE}${path}` };
+    for (const prefix of ["", "/es", "/pt"]) {
+      entries.push({
+        url: `${BASE}${prefix}${path}`,
+        changeFrequency: "monthly",
+        priority: path === "/redesign" ? (prefix ? 0.8 : 0.85) : prefix ? 0.75 : 0.8,
+        alternates: { languages },
+      });
+    }
   }
   for (const i of INDUSTRIES) {
     entries.push({ url: `${BASE}/industries/${i.slug}`, changeFrequency: "monthly", priority: 0.8 });

@@ -42,6 +42,8 @@ export function GET() {
     "Upload a PowerPoint and PitchBoost rebuilds it in your brand: same content, professional design, in a few minutes.",
     `- [Deck redesign hub](${BASE}/redesign): every redesign use case in one place`,
     ...REDESIGNS.map((r) => `- [${r.navLabel}](${BASE}/redesign/${r.slug}): ${r.metaDescription}`),
+    `- [Rediseño de presentaciones (Español)](${BASE}/es/redesign): the same redesign pages in Spanish`,
+    `- [Redesign de apresentações (Português)](${BASE}/pt/redesign): the same redesign pages in Brazilian Portuguese`,
     "",
     "## By industry",
     "",

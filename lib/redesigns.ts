@@ -648,3 +648,21 @@ export const REDESIGNS: RedesignPage[] = [
 export function getRedesign(slug: string): RedesignPage | undefined {
   return REDESIGNS.find((r) => r.slug === slug);
 }
+
+// ---- locale access (Spanish and Brazilian Portuguese live in generated siblings)
+import { REDESIGNS_ES, REDESIGN_STEPS_ES, HUB_ES } from "./redesigns.es";
+import { REDESIGNS_PT, REDESIGN_STEPS_PT, HUB_PT } from "./redesigns.pt";
+import { HUB_EN, type Locale, type RedesignHubCopy } from "./redesign-i18n";
+
+export function getRedesigns(locale: Locale): RedesignPage[] {
+  return locale === "es" ? REDESIGNS_ES : locale === "pt" ? REDESIGNS_PT : REDESIGNS;
+}
+export function getRedesignFor(locale: Locale, slug: string): RedesignPage | undefined {
+  return getRedesigns(locale).find((r) => r.slug === slug);
+}
+export function getRedesignSteps(locale: Locale): { step: string; title: string; body: string }[] {
+  return locale === "es" ? REDESIGN_STEPS_ES : locale === "pt" ? REDESIGN_STEPS_PT : REDESIGN_STEPS;
+}
+export function getHubCopy(locale: Locale): RedesignHubCopy {
+  return locale === "es" ? HUB_ES : locale === "pt" ? HUB_PT : HUB_EN;
+}

@@ -31,6 +31,11 @@ export default function MarketingNavbar() {
   const [mobileSection, setMobileSection] = useState<"features" | "industry" | null>(null);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const pathname = usePathname();
+  // The /es and /pt redesign pages are in the visitor's language; the two
+  // account buttons follow, the rest of the nav stays English (those pages are).
+  const navLocale = pathname?.startsWith("/es") ? "es" : pathname?.startsWith("/pt") ? "pt" : "en";
+  const loginLabel = navLocale === "es" ? "Iniciar sesión" : navLocale === "pt" ? "Entrar" : "Log In";
+  const startLabel = navLocale === "es" ? "Empezar" : navLocale === "pt" ? "Começar" : "Get Started";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -180,8 +185,8 @@ export default function MarketingNavbar() {
           </div>
 
           <div className="nav-actions">
-            <a href={LOGIN_URL} className="btn btn-secondary">Log In</a>
-            <a href={SIGNUP_URL} className="btn btn-primary">Get Started</a>
+            <a href={LOGIN_URL} className="btn btn-secondary">{loginLabel}</a>
+            <a href={SIGNUP_URL} className="btn btn-primary">{startLabel}</a>
           </div>
 
           <button className="mobile-toggle" id="mobileToggle" aria-label="Open menu" onClick={() => setMobileOpen(true)}>
@@ -264,8 +269,8 @@ export default function MarketingNavbar() {
         <Link href="/blog" onClick={closeMobile} style={navItemStyle}>Blog</Link>
 
         <div style={{ padding: "24px 24px 40px", display: "flex", flexDirection: "column", gap: 12, marginTop: "auto" }}>
-          <a href={LOGIN_URL} className="btn btn-secondary" onClick={closeMobile} style={{ width: "100%", textAlign: "center" }}>Log In</a>
-          <a href={SIGNUP_URL} className="btn btn-primary" onClick={closeMobile} style={{ width: "100%", textAlign: "center", color: "white" }}>Get Started</a>
+          <a href={LOGIN_URL} className="btn btn-secondary" onClick={closeMobile} style={{ width: "100%", textAlign: "center" }}>{loginLabel}</a>
+          <a href={SIGNUP_URL} className="btn btn-primary" onClick={closeMobile} style={{ width: "100%", textAlign: "center", color: "white" }}>{startLabel}</a>
         </div>
       </div>
     </>
