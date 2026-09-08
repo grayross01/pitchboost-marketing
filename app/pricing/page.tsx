@@ -21,7 +21,7 @@ function CheckIcon() {
 const FAQS: { q: string; a: string }[] = [
   {
     q: "Is there a free plan?",
-    a: "Yes. The Free plan is free forever and covers up to 3 deals with AI deck generation, basic analytics, PDF export, and shareable links. No credit card required to start.",
+    a: "Yes. The Free plan is free forever and includes one AI-generated deck a month, basic analytics, PDF export, and shareable links. No credit card required to start.",
   },
   {
     q: "What is the monthly AI budget?",
@@ -107,7 +107,7 @@ export default function PricingPage() {
               <div className="plan-price">$0<span>/mo</span></div>
               <div className="plan-period">Free forever</div>
               <ul className="pricing-features">
-                <li><CheckIcon /> Up to 3 deals</li>
+                <li><CheckIcon /> 1 deal, 1 AI deck a month</li>
                 <li><CheckIcon /> AI deck generation</li>
                 <li><CheckIcon /> Basic analytics</li>
                 <li><CheckIcon /> PDF export</li>

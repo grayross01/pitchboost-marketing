@@ -143,7 +143,7 @@ export const REDESIGNS: RedesignPage[] = [
       },
       {
         q: "What does it cost during a raise?",
-        a: "Three free deck generations on the free plan, so the makeover itself costs nothing to try. If you're iterating between investor meetings, Pro at $29/month covers rounds of revisions.",
+        a: "One free deck generation a month on the free plan, so the makeover itself costs nothing to try. If you're iterating between investor meetings, Pro at $29/month covers rounds of revisions.",
       },
     ],
     ctaHeadline: "The story's yours. Make the design worthy of it.",
