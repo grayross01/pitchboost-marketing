@@ -93,7 +93,7 @@ export const REDESIGNS: RedesignPage[] = [
       },
       {
         q: "How much does a PowerPoint redesign cost?",
-        a: "The free plan includes three AI deck generations, and a redesign counts as one. Beyond that, plans start at $29/month — against agency quotes that start around $2,000 per deck.",
+        a: "The free plan includes one AI deck generation a month, and a redesign counts as it. Beyond that, credit packs start at $5 and Pro is $29/month — against agency quotes that start around $2,000 per deck.",
       },
     ],
     ctaHeadline: "Upload the deck. Keep the story. Lose the 2014 gradients.",
@@ -193,7 +193,7 @@ export const REDESIGNS: RedesignPage[] = [
       },
       {
         q: "Is it really free to try?",
-        a: "The free plan includes three deck generations with no credit card. Enough to redesign your deck and judge the result yourself.",
+        a: "The free plan includes one AI deck generation a month with no credit card. Enough to redesign your deck and judge the result yourself.",
       },
     ],
     ctaHeadline: "Skip the design course. Upload the deck.",
@@ -397,6 +397,251 @@ export const REDESIGNS: RedesignPage[] = [
       },
     ],
     ctaHeadline: "Keep the agency for the deck of the year. Use this for the other fifty.",
+  },
+  {
+    slug: "fix-ugly-powerpoint",
+    navLabel: "Fix an ugly PowerPoint",
+    metaTitle: "Fix an Ugly PowerPoint: AI Cleanup for Messy Slides | PitchBoost",
+    metaDescription:
+      "Upload the deck you are embarrassed by and get it back clean: consistent type, aligned layouts, your brand colors, the same content. Free to try, a few minutes.",
+    heroHeadline: "Ugly slides in, clean slides out. Same words.",
+    heroSubhead:
+      "Mismatched fonts, six colors, clip art, a wall of bullets on slide 4. PitchBoost reads your .pptx, keeps every point you made, and rebuilds the deck with one type system, one palette (yours), and layouts that breathe.",
+    painPoints: [
+      {
+        title: "It grew over three years and four owners",
+        body: "Nobody designed this deck. It accreted. Each contributor brought a font, a shade of blue and a way of doing bullets, and now the whole thing reads as sloppy even though the thinking is sharp.",
+      },
+      {
+        title: "Fixing it by hand means touching every slide",
+        body: "Master slides help until the first person overrides them. Cleaning up forty slides one text box at a time is an evening you keep postponing, so the deck ships ugly again.",
+      },
+      {
+        title: "A template would erase what makes it yours",
+        body: "Pasting into a template throws away your brand and still leaves the layout decisions to you. You need the content kept and the design decided, not the other way around.",
+      },
+    ],
+    outcomes: [
+      "One type system and one palette, lifted from your website",
+      "Every slide realigned and respaced; text never rewritten without your say",
+      "Your numbers preserved exactly, including chart data",
+      "Editable PowerPoint back in minutes, plus PDF and a shareable link",
+    ],
+    faqs: [
+      {
+        q: "Will it shorten or rewrite my slides?",
+        a: "No. The default rebuild preserves the narrative and key content of each slide and changes layout, typography and visuals. If your deck is very long it will ask whether you want a condensed version, and that is a choice you make, not a default.",
+      },
+      {
+        q: "My deck has charts. Do the numbers survive?",
+        a: "Yes. PitchBoost reads chart series, categories and values from the .pptx and carries them into the rebuilt slides. Figures that were in your deck are treated as your facts; anything the AI cannot trace to your deck or your website is flagged or removed before you see it.",
+      },
+      {
+        q: "What if I only want a few slides fixed?",
+        a: "Rebuild the deck once, then use slide edits to tweak individual slides. Plain requests like changing a footer or a company name across the deck are applied instantly and do not use a credit.",
+      },
+      {
+        q: "How much does it cost?",
+        a: "The free plan includes one AI deck generation a month, so the cleanup itself costs nothing to try. Credit packs start at $5 and Pro is $29 a month if you have a whole library to fix.",
+      },
+    ],
+    ctaHeadline: "Upload the deck you hide. Get back the one you would show.",
+  },
+  {
+    slug: "google-slides-and-keynote-redesign",
+    navLabel: "Google Slides and Keynote",
+    metaTitle: "Redesign Google Slides or Keynote Decks with AI | PitchBoost",
+    metaDescription:
+      "Export your Google Slides or Keynote deck to .pptx, upload it, and get a professionally redesigned version in your brand in minutes. Free to try.",
+    heroHeadline: "Not just PowerPoint: Google Slides and Keynote, redesigned",
+    heroSubhead:
+      "Both tools export to .pptx in one click. Upload that file and PitchBoost keeps your story, learns your brand from your website, and rebuilds every slide, then hands you back an editable PowerPoint, a PDF, or a link.",
+    painPoints: [
+      {
+        title: "Your team lives in Slides, your client lives in PowerPoint",
+        body: "The deck has to travel. Every export loses a little formatting and the version the client sees is never quite the one you approved.",
+      },
+      {
+        title: "Keynote themes look great until they meet a Windows laptop",
+        body: "Fonts substitute, spacing shifts, and the polish you paid for disappears in the conference room. A rebuild that targets PowerPoint from the start avoids the problem.",
+      },
+      {
+        title: "Redesigning inside the tool is still redesigning by hand",
+        body: "Slides and Keynote have good templates and the same limitation: they do not know your content or your brand, so every layout decision is still yours to make, slide by slide.",
+      },
+    ],
+    outcomes: [
+      "Works from the .pptx export both tools produce in one step",
+      "Your brand, not a theme: logo, colors and voice from your website",
+      "Content preserved slide by slide, numbers and charts included",
+      "Editable PowerPoint, PDF and a trackable link in minutes",
+    ],
+    faqs: [
+      {
+        q: "How do I export from Google Slides?",
+        a: "File, Download, Microsoft PowerPoint (.pptx). Upload that file to PitchBoost. Speaker notes and images travel with it.",
+      },
+      {
+        q: "How do I export from Keynote?",
+        a: "File, Export To, PowerPoint. Keynote produces a .pptx that PitchBoost reads directly, including the text on every slide and the images you placed.",
+      },
+      {
+        q: "Can I get the result back in Google Slides or Keynote?",
+        a: "You get an editable PowerPoint file. Both Google Slides and Keynote open .pptx files and convert them, so you can keep working in the tool you prefer.",
+      },
+      {
+        q: "Does it cost anything to try?",
+        a: "The free plan includes one AI deck generation a month, and a redesign counts as it. Credit packs start at $5 and Pro is $29 a month.",
+      },
+    ],
+    ctaHeadline: "Export once. Upload once. Present anywhere.",
+  },
+  {
+    slug: "training-deck-redesign",
+    navLabel: "Training and course decks",
+    metaTitle: "Redesign a Training Deck or Course Slides with AI | PitchBoost",
+    metaDescription:
+      "Upload a training deck, workshop or course module and get it back consistent, readable and on brand, with every lesson and number intact. Free to try.",
+    heroHeadline: "Training decks that look as good as the teaching",
+    heroSubhead:
+      "A twelve-week programme, an onboarding workshop, a certification module: PitchBoost keeps the sequence, the exercises and the numbers, and rebuilds the slides so people read them instead of squinting.",
+    painPoints: [
+      {
+        title: "Content-heavy by nature, dense by accident",
+        body: "Training slides carry more words than a sales pitch has to. Without a layout system that plans for it, they become paragraphs on a slide, and the room stops reading.",
+      },
+      {
+        title: "Modules built months apart never match",
+        body: "Week 1 was made in a hurry, week 7 by someone else. Learners notice the seams before they notice the material.",
+      },
+      {
+        title: "You cannot afford to lose a single number",
+        body: "Session lengths, cohort sizes, pass marks, prices. A redesign that invents or drops figures is worse than no redesign. Facts have to stay exactly as written.",
+      },
+    ],
+    outcomes: [
+      "The same sequence of lessons, exercises and takeaways",
+      "Durations, group sizes and prices kept exactly as your deck states them",
+      "One consistent design across every module you upload",
+      "Editable PowerPoint for the trainer, PDF handouts for the room",
+    ],
+    faqs: [
+      {
+        q: "Will it change the order of my lessons?",
+        a: "Not unless you ask. The default rebuild preserves each slide's intent and content and only combines or reorders slides where it clearly improves the flow, without losing information.",
+      },
+      {
+        q: "How does it handle numbers like session length or group size?",
+        a: "Figures that appear in your uploaded deck are treated as your facts and preserved. Any number the AI adds that does not trace back to your deck or your website is flagged or removed before you see the result.",
+      },
+      {
+        q: "I have eight modules. Do I upload them one at a time?",
+        a: "You can, or use the bulk rebuild feature to run a whole library through the same brand and design system so the modules finally match.",
+      },
+      {
+        q: "What does it cost for a course?",
+        a: "One AI deck generation a month is free. Credit packs start at $5 for occasional modules; Pro at $29 a month suits a full curriculum refresh.",
+      },
+    ],
+    ctaHeadline: "Keep the curriculum. Fix the slides.",
+  },
+  {
+    slug: "proposal-deck-redesign",
+    navLabel: "Proposals and tender responses",
+    metaTitle: "Redesign a Proposal or Tender Response Deck with AI | PitchBoost",
+    metaDescription:
+      "Upload your proposal, RFP or tender response deck and get it back professionally laid out in your brand, with scope, pricing and commitments kept exactly. Free to try.",
+    heroHeadline: "Proposals that look as considered as the offer",
+    heroSubhead:
+      "Scope, service levels, pricing tiers, transition plans. PitchBoost keeps every commitment word for word and rebuilds the deck so the evaluation committee reads a firm that has its act together.",
+    painPoints: [
+      {
+        title: "The deadline leaves no time for design",
+        body: "The content is finished at 11pm the night before. The slides look like it. A rebuild that takes minutes fits into the gap that a designer never could.",
+      },
+      {
+        title: "Pricing and scope cannot move by a single character",
+        body: "A redesign that paraphrases a service level or rounds a price is a liability. Your figures and your wording have to survive untouched.",
+      },
+      {
+        title: "The committee sees six decks in a row",
+        body: "Theirs are all templates and bullet walls. A deck with a clear visual hierarchy is the one they remember when they score.",
+      },
+    ],
+    outcomes: [
+      "Scope, pricing and service levels preserved exactly as written",
+      "Your brand from your website, not the agency template everyone else uses",
+      "Instant global text changes, like a client name or a footer, without spending a credit",
+      "Editable PowerPoint plus a PDF for the portal upload",
+    ],
+    faqs: [
+      {
+        q: "Will it touch my pricing or commitments?",
+        a: "No. Numbers and wording that come from your uploaded deck are treated as your facts and carried across exactly. Anything the AI cannot trace to your deck is flagged or removed, so nothing invented can reach a client.",
+      },
+      {
+        q: "Can I reuse the deck for the next tender?",
+        a: "Yes. After the rebuild, edit individual slides or make deck-wide text changes. A request like replacing the client name everywhere is applied instantly at no cost.",
+      },
+      {
+        q: "Is my document confidential?",
+        a: "Your deck is processed to produce your rebuild and is never used to train models. Drafts are private to your account until you publish or download them.",
+      },
+      {
+        q: "What does it cost?",
+        a: "One AI deck generation a month is free, so the first proposal costs nothing. Credit packs start at $5 and Pro is $29 a month for teams that bid every week.",
+      },
+    ],
+    ctaHeadline: "The offer is strong. Let the deck say so.",
+  },
+  {
+    slug: "data-heavy-deck-redesign",
+    navLabel: "Data and survey decks",
+    metaTitle: "Redesign a Data-Heavy Deck or Survey Results with AI | PitchBoost",
+    metaDescription:
+      "Upload a survey results deck, dashboard summary or metrics review and get it back clean and readable, with every chart value and percentage preserved. Free to try.",
+    heroHeadline: "Survey results and metric decks, redesigned without losing a number",
+    heroSubhead:
+      "Charts, tables and forty slides of percentages. PitchBoost reads the chart data inside your .pptx, keeps every figure exactly, and rebuilds the slides so the findings land at a glance.",
+    painPoints: [
+      {
+        title: "The data is right and nobody can read it",
+        body: "Default chart colors, twelve-point labels, three charts per slide. The insight is in there, somewhere behind the formatting.",
+      },
+      {
+        title: "Redesign tools tend to invent when they cannot read",
+        body: "Most AI tools see a chart as a picture and fill the gaps with plausible numbers. For a results deck that is disqualifying.",
+      },
+      {
+        title: "Consistency across forty slides is the whole job",
+        body: "One palette, one scale, one way of labelling. By hand it takes a day; by accident it never happens.",
+      },
+    ],
+    outcomes: [
+      "Chart series, categories and values read from the file and preserved",
+      "Any figure the AI cannot trace to your deck is removed before you see it",
+      "One visual system across every chart and table",
+      "Editable PowerPoint and PDF for the readout",
+    ],
+    faqs: [
+      {
+        q: "How does it read my charts?",
+        a: "PowerPoint stores chart data inside the .pptx. PitchBoost extracts each series with its categories and values, honouring percent formats, and carries them into the rebuilt slides as your facts.",
+      },
+      {
+        q: "What happens to a number it cannot verify?",
+        a: "Every figure in the rebuilt deck is checked against your uploaded deck and your website. Anything that cannot be traced is removed automatically and listed for you, so a made-up percentage never reaches your audience.",
+      },
+      {
+        q: "Can it turn a table into a chart, or a chart into a headline number?",
+        a: "The rebuild focuses on layout and readability and keeps your data as data. Slide edits afterwards can turn a key figure into a headline stat if you ask for it.",
+      },
+      {
+        q: "What does it cost?",
+        a: "One AI deck generation a month is free. Credit packs start at $5 and Pro is $29 a month for monthly reporting cycles.",
+      },
+    ],
+    ctaHeadline: "Every number kept. Every slide readable.",
   },
 ];
 
