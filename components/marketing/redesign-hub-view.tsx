@@ -12,7 +12,7 @@ const BASE = "https://pitchboost.ai";
 export function hubMetadata(locale: Locale): Metadata {
   const hub = getHubCopy(locale);
   return {
-    title: hub.metaTitle,
+    title: { absolute: hub.metaTitle },
     description: hub.metaDescription,
     alternates: { canonical: `${LOCALE_PREFIX[locale]}/redesign`, languages: languageAlternates("/redesign") },
     openGraph: { title: hub.metaTitle, description: hub.metaDescription, locale: OG_LOCALE[locale] },
