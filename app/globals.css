@@ -974,11 +974,12 @@ body {
 /* --- Pricing --- */
 .marketing .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-  max-width: 1000px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1180px;
   margin: 0 auto;
 }
+.marketing .pricing-grid .pricing-card { padding: 36px 26px; }
 
 .marketing .pricing-card {
   background: white;
@@ -1707,7 +1708,7 @@ body {
   .marketing .step-showcase.reverse { direction: ltr; }
   .marketing .features-grid { grid-template-columns: repeat(2, 1fr); }
   .marketing .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
-  .marketing .pricing-grid { grid-template-columns: 1fr; max-width: 480px; }
+  .marketing .pricing-grid { grid-template-columns: 1fr 1fr; max-width: 760px; }
   .marketing .pricing-card:last-child { grid-column: span 1; max-width: 100%; }
   .marketing .blog-grid { grid-template-columns: repeat(2, 1fr); }
   .marketing .blog-hero h1 { font-size: 2.25rem; }

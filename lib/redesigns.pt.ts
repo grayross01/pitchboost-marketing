@@ -50,7 +50,7 @@ export const REDESIGNS_PT: RedesignPage[] = [
       },
       {
         "q": "Quanto custa um redesign de PowerPoint?",
-        "a": "O plano gratuito inclui uma geração de deck por IA por mês, e um redesign conta como uma. Além disso, pacotes de créditos começam em $5 e o Pro custa $29/mês, contra orçamentos de agências que começam em torno de $2.000 por deck."
+        "a": "O plano gratuito inclui uma geração de deck por IA por mês, e um redesign conta como uma. Além disso, o Starter custa $9/mês sem selo e o Pro $29/mês, contra orçamentos de agências que começam em torno de $2.000 por deck."
       }
     ],
     "ctaHeadline": "Envie o deck. Mantenha a história. Abandone os degradês de 2014."
@@ -379,7 +379,7 @@ export const REDESIGNS_PT: RedesignPage[] = [
       },
       {
         "q": "Quanto custa?",
-        "a": "O plano gratuito inclui uma geração de deck com IA por mês, então a limpeza em si não custa nada para testar. Pacotes de créditos começam em $5 e Pro é $29 por mês se você tiver uma biblioteca inteira para consertar."
+        "a": "O plano gratuito inclui uma geração de deck com IA por mês, então a limpeza em si não custa nada para testar. O Starter custa $9 por mês sem selo, e o Pro $29 por mês se você tiver uma biblioteca inteira para consertar."
       }
     ],
     "ctaHeadline": "Envie o deck que você esconde. Receba de volta o que você mostraria."
@@ -426,7 +426,7 @@ export const REDESIGNS_PT: RedesignPage[] = [
       },
       {
         "q": "Custa algo para testar?",
-        "a": "O plano gratuito inclui uma geração de deck com IA por mês, e um redesign conta como tal. Pacotes de créditos começam em $5 e o Pro custa $29 por mês."
+        "a": "O plano gratuito inclui uma geração de deck com IA por mês, e um redesign conta como tal. O Starter custa $9/mês sem selo e o Pro custa $29 por mês."
       }
     ],
     "ctaHeadline": "Exporte uma vez. Carregue uma vez. Apresente em qualquer lugar."
@@ -473,7 +473,7 @@ export const REDESIGNS_PT: RedesignPage[] = [
       },
       {
         "q": "Quanto custa para um curso?",
-        "a": "Uma geração de deck com IA por mês é grátis. Pacotes de créditos começam em $5 para módulos ocasionais. Pro a $29 por mês atende a uma revisão completa de currículo."
+        "a": "Uma geração de deck com IA por mês é grátis. O Starter, a $9 por mês e sem selo, cobre módulos ocasionais. O Pro a $29 por mês atende a uma revisão completa de currículo."
       }
     ],
     "ctaHeadline": "Mantenha o currículo. Conserte os slides."
@@ -520,7 +520,7 @@ export const REDESIGNS_PT: RedesignPage[] = [
       },
       {
         "q": "Quanto custa?",
-        "a": "Uma geração de deck com IA por mês é grátis, então a primeira proposta não custa nada. Pacotes de crédito começam em $5 e o Pro é $29 por mês para equipes que fazem propostas toda semana."
+        "a": "Uma geração de deck com IA por mês é grátis, então a primeira proposta não custa nada. O Starter custa $9 por mês sem selo e o Pro $29 por mês para equipes que fazem propostas toda semana."
       }
     ],
     "ctaHeadline": "A oferta é forte. Deixe o deck mostrar isso."
@@ -567,7 +567,7 @@ export const REDESIGNS_PT: RedesignPage[] = [
       },
       {
         "q": "Quanto custa?",
-        "a": "Uma geração de deck com IA por mês é grátis. Pacotes de crédito começam em $5 e Pro é $29 por mês para ciclos mensais de relatórios."
+        "a": "Uma geração de deck com IA por mês é grátis. O Starter custa $9 por mês sem selo; o Pro é $29 por mês para ciclos mensais de relatórios."
       }
     ],
     "ctaHeadline": "Cada número mantido. Cada slide legível."

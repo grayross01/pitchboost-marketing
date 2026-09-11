@@ -50,7 +50,7 @@ export const REDESIGNS_ES: RedesignPage[] = [
       },
       {
         "q": "¿Cuánto cuesta un rediseño de PowerPoint?",
-        "a": "El plan gratuito incluye una generación de presentación por IA al mes, y un rediseño cuenta como tal. Después de eso, los paquetes de créditos empiezan en $5 y Pro cuesta $29 al mes, frente a cotizaciones de agencias que comienzan alrededor de $2,000 por presentación."
+        "a": "El plan gratuito incluye una generación de presentación por IA al mes, y un rediseño cuenta como tal. Después de eso, Starter cuesta $9 al mes sin insignia y Pro $29 al mes, frente a cotizaciones de agencias que comienzan alrededor de $2,000 por presentación."
       }
     ],
     "ctaHeadline": "Sube la presentación. Conserva la historia. Olvida los degradados de 2014."
@@ -379,7 +379,7 @@ export const REDESIGNS_ES: RedesignPage[] = [
       },
       {
         "q": "¿Cuánto cuesta?",
-        "a": "El plan gratuito incluye una generación de archivo con IA al mes, así que la limpieza en sí no cuesta nada probarla. Los paquetes de créditos comienzan en $5 y Pro es $29 al mes si tienes toda una biblioteca que arreglar."
+        "a": "El plan gratuito incluye una generación de archivo con IA al mes, así que la limpieza en sí no cuesta nada probarla. Starter cuesta $9 al mes sin insignia y Pro $29 al mes si tienes toda una biblioteca que arreglar."
       }
     ],
     "ctaHeadline": "Sube el archivo que escondes. Recibe el que sí mostrarías."
@@ -426,7 +426,7 @@ export const REDESIGNS_ES: RedesignPage[] = [
       },
       {
         "q": "¿Cuesta algo probarlo?",
-        "a": "El plan gratuito incluye una generación de presentación con IA al mes, y un rediseño cuenta como tal. Los paquetes de créditos empiezan en $5 y Pro cuesta $29 al mes."
+        "a": "El plan gratuito incluye una generación de presentación con IA al mes, y un rediseño cuenta como tal. Starter cuesta $9 al mes sin insignia y Pro $29 al mes."
       }
     ],
     "ctaHeadline": "Exporta una vez. Sube una vez. Presenta en cualquier lugar."
@@ -473,7 +473,7 @@ export const REDESIGNS_ES: RedesignPage[] = [
       },
       {
         "q": "¿Cuánto cuesta para un curso?",
-        "a": "Una generación de deck con IA al mes es gratis. Los paquetes de créditos empiezan en $5 para módulos ocasionales; Pro a $29 al mes funciona para renovar un plan de estudios completo."
+        "a": "Una generación de deck con IA al mes es gratis. Starter, a $9 al mes y sin insignia, cubre módulos ocasionales; Pro a $29 al mes funciona para renovar un plan de estudios completo."
       }
     ],
     "ctaHeadline": "Conserva el plan de estudios. Arregla las diapositivas."
@@ -520,7 +520,7 @@ export const REDESIGNS_ES: RedesignPage[] = [
       },
       {
         "q": "¿Cuánto cuesta?",
-        "a": "Una generación de deck con IA al mes es gratis, así que la primera propuesta no cuesta nada. Los paquetes de créditos empiezan en $5 y Pro es $29 al mes para equipos que licitan cada semana."
+        "a": "Una generación de deck con IA al mes es gratis, así que la primera propuesta no cuesta nada. Starter cuesta $9 al mes sin insignia; Pro es $29 al mes para equipos que licitan cada semana."
       }
     ],
     "ctaHeadline": "La oferta es sólida. Deja que el deck lo diga."
@@ -567,7 +567,7 @@ export const REDESIGNS_ES: RedesignPage[] = [
       },
       {
         "q": "¿Cuánto cuesta?",
-        "a": "Una generación de presentación con IA al mes es gratis. Los paquetes de créditos empiezan en $5 y Pro cuesta $29 al mes para ciclos de reporte mensual."
+        "a": "Una generación de presentación con IA al mes es gratis. Starter cuesta $9 al mes sin insignia; Pro cuesta $29 al mes para ciclos de reporte mensual."
       }
     ],
     "ctaHeadline": "Cada número preservado. Cada diapositiva legible."

@@ -93,7 +93,7 @@ export const REDESIGNS: RedesignPage[] = [
       },
       {
         q: "How much does a PowerPoint redesign cost?",
-        a: "The free plan includes one AI deck generation a month, and a redesign counts as it. Beyond that, credit packs start at $5 and Pro is $29/month — against agency quotes that start around $2,000 per deck.",
+        a: "The free plan includes one AI deck generation a month, and a redesign counts as it. Beyond that, Starter is $9 a month with no badge and Pro is $29/month — against agency quotes that start around $2,000 per deck.",
       },
     ],
     ctaHeadline: "Upload the deck. Keep the story. Lose the 2014 gradients.",
@@ -442,7 +442,7 @@ export const REDESIGNS: RedesignPage[] = [
       },
       {
         q: "How much does it cost?",
-        a: "The free plan includes one AI deck generation a month, so the cleanup itself costs nothing to try. Credit packs start at $5 and Pro is $29 a month if you have a whole library to fix.",
+        a: "The free plan includes one AI deck generation a month, so the cleanup itself costs nothing to try. Starter is $9 a month with no badge and Pro is $29 a month if you have a whole library to fix.",
       },
     ],
     ctaHeadline: "Upload the deck you hide. Get back the one you would show.",
@@ -491,7 +491,7 @@ export const REDESIGNS: RedesignPage[] = [
       },
       {
         q: "Does it cost anything to try?",
-        a: "The free plan includes one AI deck generation a month, and a redesign counts as it. Credit packs start at $5 and Pro is $29 a month.",
+        a: "The free plan includes one AI deck generation a month, and a redesign counts as it. Starter is $9 a month with no badge and Pro is $29 a month.",
       },
     ],
     ctaHeadline: "Export once. Upload once. Present anywhere.",
@@ -540,7 +540,7 @@ export const REDESIGNS: RedesignPage[] = [
       },
       {
         q: "What does it cost for a course?",
-        a: "One AI deck generation a month is free. Credit packs start at $5 for occasional modules; Pro at $29 a month suits a full curriculum refresh.",
+        a: "One AI deck generation a month is free. Starter at $9 a month covers occasional modules without the badge; Pro at $29 a month suits a full curriculum refresh.",
       },
     ],
     ctaHeadline: "Keep the curriculum. Fix the slides.",
@@ -589,7 +589,7 @@ export const REDESIGNS: RedesignPage[] = [
       },
       {
         q: "What does it cost?",
-        a: "One AI deck generation a month is free, so the first proposal costs nothing. Credit packs start at $5 and Pro is $29 a month for teams that bid every week.",
+        a: "One AI deck generation a month is free, so the first proposal costs nothing. Starter is $9 a month with no badge and Pro is $29 a month for teams that bid every week.",
       },
     ],
     ctaHeadline: "The offer is strong. Let the deck say so.",
@@ -638,7 +638,7 @@ export const REDESIGNS: RedesignPage[] = [
       },
       {
         q: "What does it cost?",
-        a: "One AI deck generation a month is free. Credit packs start at $5 and Pro is $29 a month for monthly reporting cycles.",
+        a: "One AI deck generation a month is free. Starter is $9 a month with no badge and Pro is $29 a month for monthly reporting cycles.",
       },
     ],
     ctaHeadline: "Every number kept. Every slide readable.",
