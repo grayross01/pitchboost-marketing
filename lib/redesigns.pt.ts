@@ -571,7 +571,295 @@ export const REDESIGNS_PT: RedesignPage[] = [
       }
     ],
     "ctaHeadline": "Cada número mantido. Cada slide legível."
-  }
+  },
+  {
+    "slug": "board-deck-redesign",
+    "navLabel": "Redesign de apresentação para conselho",
+    "metaTitle": "Redesign de Apresentação para Conselho | PitchBoost",
+    "metaDescription": "Envie sua apresentação para o conselho e receba de volta pronta: mesmos números e narrativa, layout limpo, sua marca. Minutos, não um fim de semana antes da reunião.",
+    "heroHeadline": "A reunião do conselho é quinta-feira. A apresentação pode ter essa cara.",
+    "heroSubhead": "Envie a apresentação que você tem. PitchBoost mantém cada número e cada pedido de decisão, redesenha os slides com sua marca e devolve um PowerPoint que um conselheiro consegue ler no celular no aeroporto.",
+    "painPoints": [
+      {
+        "title": "Os números estão fechados, os slides não",
+        "body": "O financeiro aprovou terça à noite. Agora a atualização são doze slides de tabelas coladas em três fontes diferentes, e a única pessoa que poderia arrumar tem trabalho de dia."
+      },
+      {
+        "title": "Apresentações para conselho são julgadas pela legibilidade",
+        "body": "Conselheiros leem no celular entre voos. Slides densos com tabelas de 9 pontos são passados por cima, e o pedido no slide 11 passa batido. Layout aqui não é decoração: decide se a decisão vai ser tomada."
+      },
+      {
+        "title": "Todo trimestre começa da bagunça do trimestre anterior",
+        "body": "A apresentação é um bolo de camadas de quatro reuniões anteriores: cores velhas, seções mortas, um logo de antes do rebranding. Ninguém tem tempo para resetar, então ninguém faz."
+      }
+    ],
+    "outcomes": [
+      "Cada número carregado exatamente: a checagem sinaliza qualquer coisa que não possa rastrear até seus slides",
+      "Um pedido claro por slide, diagramado para que funcione",
+      "Sua marca atual, extraída do seu site, em cada slide",
+      "PDF e PowerPoint de volta em minutos, prontos para o pacote do conselho"
+    ],
+    "faqs": [
+      {
+        "q": "Vai alterar meus números?",
+        "a": "Não. Uma reconstrução mantém cada número do seu upload e não adiciona nenhum. Qualquer coisa que o verificador não consiga rastrear até seus slides ou seu site é sinalizada e removida antes de você ver a apresentação."
+      },
+      {
+        "q": "O material fica privado?",
+        "a": "Sim. Apresentações são privadas por padrão e compartilhadas apenas através de links que você cria, com senhas opcionais e prazo de validade."
+      },
+      {
+        "q": "Quanto tempo leva uma reconstrução de apresentação para conselho?",
+        "a": "Dois a quatro minutos para uma atualização típica de 15 slides, incluindo a revisão automática de qualidade."
+      },
+      {
+        "q": "Quanto custa?",
+        "a": "O plano gratuito inclui uma apresentação com IA por mês, até 10 slides, com um pequeno badge PitchBoost. Starter é $9 por mês para apresentações até 25 slides sem badge: Pro é $29 por mês."
+      }
+    ],
+    "ctaHeadline": "Envie ao conselho algo que pareça decidido.",
+    "updated": "2026-09-12"
+  },
+  {
+    "slug": "conference-talk-slides-redesign",
+    "navLabel": "Slides para palestra",
+    "metaTitle": "Redesign de Slides para Palestra: Deck Pronto pro Palco | PitchBoost",
+    "metaDescription": "Envie sua palestra e receba slides feitos para o palco: uma ideia por slide, tipo grande, sua marca. O conteúdo continua seu; o design finalmente combina.",
+    "heroHeadline": "Sua palestra é boa. Seus slides são uma parede de texto.",
+    "heroSubhead": "PitchBoost reconstrói um deck de conferência para a última fileira: uma ideia por slide, tipo que você lê a trinta metros, sua marca em tudo, e cada ponto que você escreveu mantido no lugar.",
+    "painPoints": [
+      {
+        "title": "Escrito para ser lido, mostrado para ser visto",
+        "body": "A maioria dos decks de palestra começa como anotações. Parágrafos em slides funcionam na mesa e morrem no projetor. A plateia lê em vez de escutar, e você acaba competindo com seus próprios slides."
+      },
+      {
+        "title": "O template do evento briga com sua marca",
+        "body": "Os organizadores enviam um template nas cores deles. Seu logo fica num canto com 40 pixels e a palestra parece todas as outras sessões da trilha."
+      },
+      {
+        "title": "O prazo é o envio para os palestrantes",
+        "body": "Os slides vencem uma semana antes da palestra, justo quando o conteúdo ainda está mudando. Design é a primeira coisa cortada."
+      }
+    ],
+    "outcomes": [
+      "Slides moldados para uma sala, não um documento: menos palavras, tipo maior, um ponto cada",
+      "Sua marca em cada slide, extraída do seu próprio site",
+      "O texto completo sobrevive no PowerPoint editável, pronto para as notas do palestrante",
+      "De volta em minutos, com um link compartilhável para o acompanhamento pós-palestra"
+    ],
+    "faqs": [
+      {
+        "q": "Vai cortar meu conteúdo?",
+        "a": "Um rebuild mantém um slide por slide de origem com o conteúdo preservado. Se você quer um deck mais enxuto, escolha a opção condensar e ele comprime a história mantendo os pontos principais."
+      },
+      {
+        "q": "Posso usar a proporção do evento?",
+        "a": "Os decks são feitos em 16:9, que é o que praticamente toda tela de conferência usa. Exporte para PowerPoint e ajuste em segundos se um local pedir 4:3."
+      },
+      {
+        "q": "Recebo um arquivo editável?",
+        "a": "Sim. Baixe um PowerPoint editável com caixas de texto reais para mudanças de última hora, ou a versão de visual exato para o envio aos palestrantes."
+      },
+      {
+        "q": "Quanto custa?",
+        "a": "Um deck com IA por mês é grátis, até 10 slides, com um badge pequeno. Starter é $9 por mês para até 25 slides e sem badge; Pro é $29 por mês."
+      }
+    ],
+    "ctaHeadline": "Dê à última fileira um motivo para olhar pra cima.",
+    "updated": "2026-09-12"
+  },
+  {
+    "slug": "qbr-deck-redesign",
+    "navLabel": "QBR deck redesign",
+    "metaTitle": "QBR Deck Redesign: Slides de Quarterly Business Review | PitchBoost",
+    "metaDescription": "Transforme o QBR do último trimestre em uma revisão limpa, na sua marca, que o cliente vai ler de verdade. Mesmas métricas, layout melhor, pronto em minutos.",
+    "heroHeadline": "O trimestre acabou. O deck não precisa parecer que passou por ele.",
+    "heroSubhead": "Faça upload do QBR que você tem, no estado em que estiver. O PitchBoost mantém cada métrica e cada próximo passo, reconstrói o layout na sua marca e entrega um deck que se lê como um plano de conta, não como um despejo de status.",
+    "painPoints": [
+      {
+        "title": "Mesmo template, décimo segundo trimestre",
+        "body": "Decks de QBR são copiados para frente até ninguém lembrar por que o slide 7 existe. Seções obsoletas e cores do ano passado dizem ao cliente exatamente quanta atenção ele recebe."
+      },
+      {
+        "title": "As métricas estão enterradas",
+        "body": "Adoção, risco de renovação, a proposta de expansão: tudo no deck, nada visível. Um defensor interno não consegue encaminhar um slide que o chefe dele entenda em dez segundos."
+      },
+      {
+        "title": "Gerentes de conta não são designers",
+        "body": "A pessoa que conhece a conta é a pessoa montando os slides às 23h. Design é a última coisa em que ela deveria gastar aquela hora."
+      }
+    ],
+    "outcomes": [
+      "Métricas trazidas para frente em layouts de estatísticas que o cliente pode escanear",
+      "Pedidos de renovação e expansão em seus próprios slides claros",
+      "Sua marca aplicada de forma consistente, do seu site, a cada trimestre",
+      "Um link rastreável para você saber quando o cliente abriu antes da reunião"
+    ],
+    "faqs": [
+      {
+        "q": "Ele mantém nossos números de uso exatamente?",
+        "a": "Sim. Cada número vem do seu upload. A verificação de fatos remove qualquer coisa que não possa rastrear até seus slides ou site, então nada é inventado para uma reunião com cliente."
+      },
+      {
+        "q": "Posso reutilizar a cada trimestre?",
+        "a": "Sim. Mantenha o deck no PitchBoost, atualize os números no próximo trimestre com edições de IA ou manualmente, e exporte de novo. Starter e Pro incluem créditos mensais exatamente para isso."
+      },
+      {
+        "q": "Meu cliente pode ver quem visualizou?",
+        "a": "Não. A análise de visualizadores é para você: você vê as aberturas, e no Pro o tempo por slide. O cliente vê um deck limpo."
+      },
+      {
+        "q": "Quanto custa?",
+        "a": "Um deck de IA por mês é gratuito, até 10 slides, com um pequeno badge. Starter é $9 por mês para até 25 slides e sem badge. Pro é $29 por mês com análise completa e domínios personalizados."
+      }
+    ],
+    "ctaHeadline": "Faça a revisão parecer que o relacionamento importa.",
+    "updated": "2026-09-12"
+  },
+  {
+    "slug": "capabilities-deck-redesign",
+    "navLabel": "Redesign de apresentação de capacidades",
+    "metaTitle": "Redesign de Apresentação de Capacidades para Agências | PitchBoost",
+    "metaDescription": "Redesenhe a apresentação de capacidades da sua agência ou consultoria: mesmos cases e serviços, layout profissional na sua marca, pronta em minutos.",
+    "heroHeadline": "Uma apresentação de credenciais com a cara do que você cobra.",
+    "heroSubhead": "Envie a apresentação de capacidades que você manda para cada prospect. PitchBoost mantém seus serviços, cases e logos de clientes, reconstrói o design na sua marca e entrega uma versão que você colocaria ao lado da sua tabela de preços.",
+    "painPoints": [
+      {
+        "title": "A apresentação vende design e parece de 2019",
+        "body": "Agências e estúdios enviam apresentações de credenciais que depreciam o próprio trabalho. O prospect percebe antes dos cases mostrarem valor."
+      },
+      {
+        "title": "Editada por todos, de responsabilidade de ninguém",
+        "body": "Cada novo lead adiciona um slide. Depois de um ano a apresentação tem 40 slides, três fontes e duas logos. Cortar isso é um projeto que ninguém assume."
+      },
+      {
+        "title": "Cases são o produto, e estão enterrados",
+        "body": "Resultados vivem na letra miúda de uma lista de bullets. Os números que ganham a proposta deveriam ser a maior coisa no slide."
+      }
+    ],
+    "outcomes": [
+      "Resultados dos cases transformados em layouts de estatísticas, exatamente como você escreveu",
+      "Logos de clientes e serviços organizados do jeito que um designer faria",
+      "Sua marca do seu site, aplicada em cada slide",
+      "Um link que te avisa quando o prospect abriu a apresentação"
+    ],
+    "faqs": [
+      {
+        "q": "Vai manter os logos dos nossos clientes?",
+        "a": "Sim. Imagens do upload são mantidas. Você escolhe quais manter antes do redesign, e logos são posicionados em vez de esticados."
+      },
+      {
+        "q": "Consegue encurtar uma apresentação de 40 slides?",
+        "a": "Sim. Escolha condensar e ela comprime a história para uma apresentação enxuta mantendo os cases que você marcou. Ou reconstrua um para um e corte depois."
+      },
+      {
+        "q": "Dá para fazer uma versão por prospect?",
+        "a": "Sim. Mantenha a apresentação no PitchBoost e use edições por IA ou o criador de decks para adaptar a abertura e a ordem dos cases para cada proposta."
+      },
+      {
+        "q": "Quanto custa?",
+        "a": "Uma apresentação por IA por mês é grátis, até 10 slides, com um pequeno badge. Starter é $9 por mês para apresentações até 25 slides sem badge. Pro é $29 por mês."
+      }
+    ],
+    "ctaHeadline": "Envie credenciais que combinem com a nota fiscal.",
+    "updated": "2026-09-12"
+  },
+  {
+    "slug": "pitch-competition-deck-redesign",
+    "navLabel": "Pitch competition deck",
+    "metaTitle": "Redesign de Deck para Pitch Competition: Demo Day | PitchBoost",
+    "metaDescription": "Redesenhe seu deck de aceleradora ou competição para três minutos: mesma história, uma ideia por slide, sua marca, pronto para o demo day em minutos.",
+    "heroHeadline": "Três minutos no palco. Slides que acompanham.",
+    "heroSubhead": "Faça upload do seu deck de competição. O PitchBoost mantém o problema, a tração e o pedido, reconstrói cada slide para uma tela grande e um relógio curto, e aplica sua marca a partir do seu site.",
+    "painPoints": [
+      {
+        "title": "Feito para um leitor, julgado em uma sala",
+        "body": "O deck que te colocou na competição foi escrito para um formulário de triagem. No palco, slides densos fazem os jurados lerem enquanto você fala, e eles perdem ambos."
+      },
+      {
+        "title": "O slide de tração está fazendo todo o trabalho, mal",
+        "body": "O único número que importa está em uma tabela com outros onze. Jurados lembram do número grande em um slide limpo, não da planilha."
+      },
+      {
+        "title": "O demo day é amanhã",
+        "body": "O feedback do mentor chega às 18h. Redesenhar manualmente significa uma noite ajustando caixas em vez de ensaiar."
+      }
+    ],
+    "outcomes": [
+      "Uma ideia por slide, dimensionada para um palco e um relógio regressivo",
+      "Tração e pedido em seus próprios slides, exatamente como você escreveu",
+      "Sua marca e logo em cada slide, não o template da aceleradora",
+      "PowerPoint editável e PDF de volta em minutos, mais um link para jurados depois"
+    ],
+    "faqs": [
+      {
+        "q": "Vai mudar minha história?",
+        "a": "Não. Um rebuild mantém a ordem e o conteúdo dos seus slides e redesenha o layout. Use a opção de condensar se os mentores disseram que está longo demais."
+      },
+      {
+        "q": "Pode adicionar números para fazer a tração parecer melhor?",
+        "a": "Não, e isso é deliberado. Cada número deve vir do seu deck ou do seu site. Qualquer outra coisa é removida pela checagem de fatos antes de você ver."
+      },
+      {
+        "q": "Quão rápido é?",
+        "a": "De dois a quatro minutos para um deck típico de 10 a 15 slides, incluindo a revisão de qualidade."
+      },
+      {
+        "q": "Quanto custa?",
+        "a": "Um deck AI por mês é grátis, até 10 slides, com um pequeno badge. Starter é $9 por mês para até 25 slides e sem badge. Pro é $29 por mês."
+      }
+    ],
+    "ctaHeadline": "Ensaie o pitch. Deixe os slides conosco.",
+    "updated": "2026-09-12"
+  },
+  {
+    "slug": "consulting-slides-redesign",
+    "navLabel": "Redesign de slides de consultoria",
+    "metaTitle": "Redesign de Slides de Consultoria: Decks Profissionais | PitchBoost",
+    "metaDescription": "Faça seu deck de consultoria parecer com as empresas que você enfrenta: títulos de ação, um gráfico por slide, layout limpo na sua marca. Envie, receba em minutos.",
+    "heroHeadline": "Slides de nível consultoria sem o time de design da consultoria.",
+    "heroSubhead": "Envie sua análise. PitchBoost mantém cada conclusão e cada valor dos gráficos, reconstrói cada slide com um título de ação e uma mensagem, e aplica a marca da sua empresa a partir do seu site.",
+    "painPoints": [
+      {
+        "title": "Ótima análise, slide 14 ilegível",
+        "body": "O raciocínio é afiado e os slides mostram isso com seis gráficos e um parágrafo. Clientes julgam rigor pela clareza do layout, justo ou não."
+      },
+      {
+        "title": "Grandes empresas têm departamento de produção",
+        "body": "As grandes empresas têm pessoas cujo trabalho inteiro são slides. Uma boutique tem você, à meia-noite, alinhando caixas de texto para o comitê de amanhã."
+      },
+      {
+        "title": "Templates não dão títulos de ação",
+        "body": "Um template ajusta as fontes. Não transforma 'Análise de receita' na frase que o cliente deve levar. Isso é trabalho editorial, e é onde consultores independentes perdem tempo."
+      }
+    ],
+    "outcomes": [
+      "Títulos de ação que declaram a conclusão, construídos do seu próprio conteúdo",
+      "Uma mensagem por slide, gráficos e tabelas organizados para um comitê diretivo",
+      "Valores dos gráficos transferidos exatamente do seu PowerPoint",
+      "A marca da sua empresa em cada slide, mais um PowerPoint editável para ajustes finais"
+    ],
+    "faqs": [
+      {
+        "q": "Ele lê meus gráficos?",
+        "a": "Sim. Dados de gráficos dentro do .pptx são extraídos junto com o texto do slide, então séries e valores passam para a reconstrução e a checagem de fatos sabe que são seus."
+      },
+      {
+        "q": "Vai reescrever minhas conclusões?",
+        "a": "Mantém o conteúdo e afia o enquadramento: títulos viram declarações, parágrafos densos viram pontos estruturados. Cada número permanece como você escreveu."
+      },
+      {
+        "q": "Posso ter um arquivo editável para o polimento final?",
+        "a": "Sim. O PowerPoint editável tem caixas de texto reais e fontes reais; a versão de aparência exata corresponde ao deck web slide por slide."
+      },
+      {
+        "q": "Quanto custa?",
+        "a": "Um deck AI por mês é grátis, até 10 slides, com um pequeno badge. Starter é $9 por mês para até 25 slides e sem badge; Pro é $29 por mês com análises completas e domínios personalizados."
+      }
+    ],
+    "ctaHeadline": "Faça o deck tão afiado quanto a análise.",
+    "updated": "2026-09-12"
+  },
 ];
 
 export const REDESIGN_STEPS_PT: { step: string; title: string; body: string }[] = [
