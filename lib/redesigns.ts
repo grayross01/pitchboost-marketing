@@ -645,6 +645,294 @@ export const REDESIGNS: RedesignPage[] = [
     ],
     ctaHeadline: "Every number kept. Every slide readable.",
   },
+  {
+    "slug": "board-deck-redesign",
+    "navLabel": "Board deck redesign",
+    "metaTitle": "Board Deck Redesign: Board-Ready Slides in Minutes | PitchBoost",
+    "metaDescription": "Upload your board deck and get it back board-ready: same numbers and narrative, clean layout, your brand. Minutes, not a weekend before the meeting.",
+    "heroHeadline": "The board meeting is Thursday. The deck can look like it.",
+    "heroSubhead": "Upload the deck you have. PitchBoost keeps every number and every decision request, redesigns the slides in your brand, and hands back a PowerPoint a director can read on a phone in an airport.",
+    "painPoints": [
+      {
+        "title": "The numbers are final, the slides are not",
+        "body": "Finance signed off on Tuesday night. Now the update is twelve slides of pasted tables in three fonts, and the one person who could fix it has a day job."
+      },
+      {
+        "title": "Board decks get judged on legibility",
+        "body": "Directors read on phones between flights. Dense slides with 9-point tables get skimmed, and the ask on slide 11 gets missed. Layout is not decoration here; it decides whether the decision gets made."
+      },
+      {
+        "title": "Every quarter starts from last quarter's mess",
+        "body": "The deck is a layer cake of four earlier meetings: old colours, dead sections, a logo from before the rebrand. Nobody has time to reset it, so nobody does."
+      }
+    ],
+    "outcomes": [
+      "Every figure carried over exactly; the fact check flags anything it cannot trace to your slides",
+      "One clear ask per slide, laid out so it lands",
+      "Your current brand, pulled from your website, on every slide",
+      "PDF and PowerPoint back in minutes, ready for the board pack"
+    ],
+    "faqs": [
+      {
+        "q": "Will it change my numbers?",
+        "a": "No. A rebuild keeps every figure from your upload and adds none. Anything the checker cannot trace to your slides or your website is flagged and removed before you see the deck."
+      },
+      {
+        "q": "Is the material kept private?",
+        "a": "Yes. Decks are private by default and shared only through links you create, with optional passwords and expiry."
+      },
+      {
+        "q": "How long does a board deck rebuild take?",
+        "a": "Two to four minutes for a typical 15-slide update, including the automatic quality review."
+      },
+      {
+        "q": "What does it cost?",
+        "a": "The free plan includes one AI deck a month, up to 10 slides, with a small PitchBoost badge. Starter is $9 a month for decks up to 25 slides with no badge; Pro is $29 a month."
+      }
+    ],
+    "ctaHeadline": "Send the board something that looks decided.",
+    "updated": "2026-09-12"
+  },
+  {
+    "slug": "conference-talk-slides-redesign",
+    "navLabel": "Conference talk slides",
+    "metaTitle": "Conference Talk Slides Redesign: Stage-Ready Deck | PitchBoost",
+    "metaDescription": "Upload your talk and get back slides built for a stage: one idea per slide, big type, your brand. The content stays yours; the design finally matches it.",
+    "heroHeadline": "Your talk is good. Your slides are a wall of text.",
+    "heroSubhead": "PitchBoost rebuilds a conference deck for the back row: one idea per slide, type you can read from thirty metres, your brand throughout, and every point you wrote kept in place.",
+    "painPoints": [
+      {
+        "title": "Written to be read, shown to be seen",
+        "body": "Most talk decks start life as notes. Paragraphs on slides work at a desk and die on a projector. The audience reads instead of listening, and you end up competing with your own slides."
+      },
+      {
+        "title": "The event template fights your brand",
+        "body": "Organisers send a template in their colours. Your logo lands in a corner at 40 pixels and the talk looks like every other session in the track."
+      },
+      {
+        "title": "The deadline is the speaker upload",
+        "body": "Slides are due a week before the talk, right when the content is still moving. Design is the first thing cut."
+      }
+    ],
+    "outcomes": [
+      "Slides shaped for a room, not a document: fewer words, bigger type, one point each",
+      "Your brand on every slide, taken from your own website",
+      "The full text survives in the editable PowerPoint, ready for speaker notes",
+      "Back in minutes, with a shareable link for the post-talk follow-up"
+    ],
+    "faqs": [
+      {
+        "q": "Will it cut my content?",
+        "a": "A rebuild keeps one slide per source slide with the content preserved. If you want a tighter deck, choose the condense option and it compresses the story while keeping the key points."
+      },
+      {
+        "q": "Can I use the event's aspect ratio?",
+        "a": "Decks are built at 16:9, which is what nearly every conference screen uses. Export to PowerPoint and adjust in seconds if a venue asks for 4:3."
+      },
+      {
+        "q": "Do I get an editable file?",
+        "a": "Yes. Download an editable PowerPoint with real text boxes for last-minute changes, or the exact-look version for the speaker upload."
+      },
+      {
+        "q": "How much does it cost?",
+        "a": "One AI deck a month is free, up to 10 slides, with a small badge. Starter is $9 a month for up to 25 slides and no badge; Pro is $29 a month."
+      }
+    ],
+    "ctaHeadline": "Give the back row a reason to look up.",
+    "updated": "2026-09-12"
+  },
+  {
+    "slug": "qbr-deck-redesign",
+    "navLabel": "QBR deck redesign",
+    "metaTitle": "QBR Deck Redesign: Quarterly Business Review Slides | PitchBoost",
+    "metaDescription": "Turn last quarter's QBR deck into a clean, on-brand review your customer will actually read. Same metrics, better layout, ready in minutes.",
+    "heroHeadline": "The quarter is over. The deck should not look like it went through it.",
+    "heroSubhead": "Upload the QBR you have, in whatever state it is in. PitchBoost keeps every metric and every next step, rebuilds the layout in your brand, and gives you a deck that reads like an account plan, not a status dump.",
+    "painPoints": [
+      {
+        "title": "Same template, twelfth quarter",
+        "body": "QBR decks get copied forward until nobody remembers why slide 7 exists. Stale sections and last year's colours tell the customer exactly how much attention they get."
+      },
+      {
+        "title": "The metrics are buried",
+        "body": "Adoption, renewal risk, the expansion ask: all in the deck, none of it visible. A customer champion cannot forward a slide their boss will understand in ten seconds."
+      },
+      {
+        "title": "Account managers are not designers",
+        "body": "The person who knows the account is the person building the slides at 11pm. Design is the last thing they should be spending that hour on."
+      }
+    ],
+    "outcomes": [
+      "Metrics pulled forward into stat layouts the customer can scan",
+      "Renewal and expansion asks on their own clear slides",
+      "Your brand applied consistently, from your website, every quarter",
+      "A trackable link so you know when the customer opened it before the call"
+    ],
+    "faqs": [
+      {
+        "q": "Does it keep our usage numbers exactly?",
+        "a": "Yes. Every figure comes from your upload; the fact check removes anything it cannot trace to your slides or website, so nothing gets invented for a customer meeting."
+      },
+      {
+        "q": "Can I reuse it every quarter?",
+        "a": "Yes. Keep the deck in PitchBoost, update the numbers next quarter with AI edits or by hand, and export again. Starter and Pro include monthly credits for exactly that."
+      },
+      {
+        "q": "Can my customer see who viewed it?",
+        "a": "No. Viewer analytics are for you: you see opens, and on Pro time per slide. The customer sees a clean deck."
+      },
+      {
+        "q": "What does it cost?",
+        "a": "One AI deck a month is free, up to 10 slides, with a small badge. Starter is $9 a month for up to 25 slides and no badge; Pro is $29 a month with full analytics and custom domains."
+      }
+    ],
+    "ctaHeadline": "Make the review look like the relationship matters.",
+    "updated": "2026-09-12"
+  },
+  {
+    "slug": "capabilities-deck-redesign",
+    "navLabel": "Capabilities deck redesign",
+    "metaTitle": "Capabilities Deck Redesign: Agency Credentials Deck | PitchBoost",
+    "metaDescription": "Redesign your agency or consultancy capabilities deck: same case studies and services, professional layout in your brand, back in minutes for the next pitch.",
+    "heroHeadline": "A credentials deck that looks like you charge what you charge.",
+    "heroSubhead": "Upload the capabilities deck you send to every prospect. PitchBoost keeps your services, case studies and client logos, rebuilds the design in your brand, and gives you a version you would put your rate card behind.",
+    "painPoints": [
+      {
+        "title": "The deck sells design and looks like 2019",
+        "body": "Agencies and studios send credentials decks that undercut their own work. The prospect notices before the case studies do."
+      },
+      {
+        "title": "Edited by everyone, owned by no one",
+        "body": "Every new business lead adds a slide. After a year the deck is 40 slides, three fonts and two logos. Cutting it back is a project nobody claims."
+      },
+      {
+        "title": "Case studies are the product, and they are buried",
+        "body": "Results live in the small print of a bullet list. The numbers that win the pitch should be the biggest thing on the slide."
+      }
+    ],
+    "outcomes": [
+      "Case-study results pulled into stat layouts, exactly as you wrote them",
+      "Client logos and services laid out the way a designer would",
+      "Your brand from your website, applied to every slide",
+      "A link that tells you when the prospect opened the deck"
+    ],
+    "faqs": [
+      {
+        "q": "Will it keep our client logos?",
+        "a": "Yes. Images in the upload come through; you choose which to keep before the rebuild, and logos are placed rather than stretched."
+      },
+      {
+        "q": "Can it shorten a 40-slide deck?",
+        "a": "Yes. Choose condense and it compresses the story to a tight deck while keeping the case studies you marked. Or rebuild one to one and cut afterwards."
+      },
+      {
+        "q": "Can we make a version per prospect?",
+        "a": "Yes. Keep the deck in PitchBoost, then use AI edits or the deck builder to tailor the opening and the case study order for each pitch."
+      },
+      {
+        "q": "What does it cost?",
+        "a": "One AI deck a month is free, up to 10 slides, with a small badge. Starter is $9 a month for decks up to 25 slides and no badge; Pro is $29 a month."
+      }
+    ],
+    "ctaHeadline": "Send credentials that match the invoice.",
+    "updated": "2026-09-12"
+  },
+  {
+    "slug": "pitch-competition-deck-redesign",
+    "navLabel": "Pitch competition deck",
+    "metaTitle": "Pitch Competition Deck Redesign: Demo Day Slides | PitchBoost",
+    "metaDescription": "Redesign your accelerator or pitch competition deck for a three-minute slot: same story, one idea per slide, your brand, ready for demo day in minutes.",
+    "heroHeadline": "Three minutes on stage. Slides that keep up.",
+    "heroSubhead": "Upload your competition deck. PitchBoost keeps the problem, the traction and the ask, rebuilds each slide for a big screen and a short clock, and applies your brand from your website.",
+    "painPoints": [
+      {
+        "title": "Built for a reader, judged in a room",
+        "body": "The deck that got you into the competition was written for a screening form. On stage, dense slides make the judges read while you talk, and they miss both."
+      },
+      {
+        "title": "The traction slide is doing all the work, badly",
+        "body": "The one number that matters is in a table with eleven others. Judges remember the big number on a clean slide, not the spreadsheet."
+      },
+      {
+        "title": "Demo day is tomorrow",
+        "body": "Mentor feedback arrives at 6pm. Redesigning by hand means a night of nudging boxes instead of rehearsing."
+      }
+    ],
+    "outcomes": [
+      "One idea per slide, sized for a stage and a countdown clock",
+      "Traction and the ask on their own slides, exactly as you wrote them",
+      "Your brand and logo on every slide, not the accelerator's template",
+      "Editable PowerPoint and PDF back in minutes, plus a link for judges afterwards"
+    ],
+    "faqs": [
+      {
+        "q": "Will it change my story?",
+        "a": "No. A rebuild keeps your slide order and content and redesigns the layout. Use the condense option if mentors told you it is too long."
+      },
+      {
+        "q": "Can it add numbers to make traction look better?",
+        "a": "No, and that is deliberate. Every figure must come from your deck or your website; anything else is removed by the fact check before you see it."
+      },
+      {
+        "q": "How fast is it?",
+        "a": "Two to four minutes for a typical 10 to 15 slide deck, including the quality review."
+      },
+      {
+        "q": "What does it cost?",
+        "a": "One AI deck a month is free, up to 10 slides, with a small badge. Starter is $9 a month for up to 25 slides and no badge; Pro is $29 a month."
+      }
+    ],
+    "ctaHeadline": "Rehearse the pitch. Let us fix the slides.",
+    "updated": "2026-09-12"
+  },
+  {
+    "slug": "consulting-slides-redesign",
+    "navLabel": "Consulting slides redesign",
+    "metaTitle": "Consulting Slides Redesign: Consultant-Grade Decks | PitchBoost",
+    "metaDescription": "Make your consulting deck read like the firms you compete with: action titles, one chart per slide, clean layout in your brand. Upload it, get it back in minutes.",
+    "heroHeadline": "Consultant-grade slides without the consultant's design team.",
+    "heroSubhead": "Upload your analysis. PitchBoost keeps every finding and every chart value, rebuilds each slide with an action title and one message, and applies your firm's brand from your website.",
+    "painPoints": [
+      {
+        "title": "Great analysis, slide 14 is unreadable",
+        "body": "The thinking is sharp and the slides show it as six charts and a paragraph. Clients judge rigour by how clearly it is laid out, whether that is fair or not."
+      },
+      {
+        "title": "Big firms have a production department",
+        "body": "The large firms have people whose whole job is slides. A boutique has you, at midnight, aligning text boxes for tomorrow's steering committee."
+      },
+      {
+        "title": "Templates do not give you action titles",
+        "body": "A template fixes the fonts. It does not turn 'Revenue analysis' into the sentence the client should take away. That is editorial work, and it is where independent consultants lose time."
+      }
+    ],
+    "outcomes": [
+      "Action titles that state the finding, built from your own content",
+      "One message per slide, charts and tables laid out for a steering committee",
+      "Chart values carried over exactly from your PowerPoint",
+      "Your firm's brand on every slide, plus an editable PowerPoint for final tweaks"
+    ],
+    "faqs": [
+      {
+        "q": "Does it read my charts?",
+        "a": "Yes. Chart data inside the .pptx is extracted with the slide text, so series and values carry into the rebuild and the fact check knows they are yours."
+      },
+      {
+        "q": "Will it rewrite my findings?",
+        "a": "It keeps the content and sharpens the framing: titles become statements, dense paragraphs become structured points. Every number stays as you wrote it."
+      },
+      {
+        "q": "Can I get an editable file for the final polish?",
+        "a": "Yes. The editable PowerPoint has real text boxes and real fonts; the exact-look version matches the web deck slide for slide."
+      },
+      {
+        "q": "What does it cost?",
+        "a": "One AI deck a month is free, up to 10 slides, with a small badge. Starter is $9 a month for up to 25 slides and no badge; Pro is $29 a month with full analytics and custom domains."
+      }
+    ],
+    "ctaHeadline": "Make the deck as sharp as the analysis.",
+    "updated": "2026-09-12"
+  },
 ];
 
 export function getRedesign(slug: string): RedesignPage | undefined {

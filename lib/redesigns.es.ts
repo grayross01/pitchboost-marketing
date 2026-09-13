@@ -571,7 +571,295 @@ export const REDESIGNS_ES: RedesignPage[] = [
       }
     ],
     "ctaHeadline": "Cada número preservado. Cada diapositiva legible."
-  }
+  },
+  {
+    "slug": "board-deck-redesign",
+    "navLabel": "Rediseño de presentaciones para directorio",
+    "metaTitle": "Rediseño de presentaciones para directorio | PitchBoost",
+    "metaDescription": "Sube tu presentación para el directorio y recíbela lista: mismos números y narrativa, diseño limpio, tu marca. En minutos, no un fin de semana antes de la reunión.",
+    "heroHeadline": "La reunión del directorio es el jueves. La presentación puede verse acorde.",
+    "heroSubhead": "Sube la presentación que tienes. PitchBoost conserva cada número y cada solicitud de decisión, rediseña las diapositivas con tu marca y devuelve un PowerPoint que un director puede leer en su teléfono en el aeropuerto.",
+    "painPoints": [
+      {
+        "title": "Los números están listos, las diapositivas no",
+        "body": "Finanzas aprobó el martes por la noche. Ahora la actualización son doce diapositivas con tablas pegadas en tres tipografías, y la única persona que podría arreglarlo tiene un trabajo de tiempo completo."
+      },
+      {
+        "title": "Las presentaciones para directorio se juzgan por legibilidad",
+        "body": "Los directores leen en sus teléfonos entre vuelos. Las diapositivas densas con tablas de 9 puntos se hojean por encima, y la solicitud de la diapositiva 11 pasa desapercibida. El diseño no es decoración aquí: decide si la decisión se toma o no."
+      },
+      {
+        "title": "Cada trimestre parte del desorden del trimestre anterior",
+        "body": "La presentación es una mezcla de cuatro reuniones previas: colores viejos, secciones muertas, un logo de antes del rediseño de marca. Nadie tiene tiempo para reiniciarla, así que nadie lo hace."
+      }
+    ],
+    "outcomes": [
+      "Cada cifra traspasada exactamente: el verificador marca cualquier cosa que no pueda rastrear a tus diapositivas",
+      "Una solicitud clara por diapositiva, presentada para que impacte",
+      "Tu marca actual, extraída de tu sitio web, en cada diapositiva",
+      "PDF y PowerPoint de vuelta en minutos, listos para el paquete del directorio"
+    ],
+    "faqs": [
+      {
+        "q": "¿Cambiará mis números?",
+        "a": "No. Una reconstrucción conserva cada cifra de tu archivo y no agrega ninguna. Cualquier cosa que el verificador no pueda rastrear a tus diapositivas o tu sitio web se marca y elimina antes de que veas la presentación."
+      },
+      {
+        "q": "¿El material se mantiene privado?",
+        "a": "Sí. Las presentaciones son privadas por defecto y se comparten solo mediante enlaces que tú creas, con contraseñas y vencimiento opcionales."
+      },
+      {
+        "q": "¿Cuánto tarda la reconstrucción de una presentación para directorio?",
+        "a": "De dos a cuatro minutos para una actualización típica de 15 diapositivas, incluyendo la revisión automática de calidad."
+      },
+      {
+        "q": "¿Cuánto cuesta?",
+        "a": "El plan gratuito incluye una presentación con IA al mes, hasta 10 diapositivas, con una pequeña insignia de PitchBoost. Starter cuesta $9 al mes para presentaciones de hasta 25 diapositivas sin insignia. Pro cuesta $29 al mes."
+      }
+    ],
+    "ctaHeadline": "Envía al directorio algo que se vea decidido.",
+    "updated": "2026-09-12"
+  },
+  {
+    "slug": "conference-talk-slides-redesign",
+    "navLabel": "Presentaciones para charlas",
+    "metaTitle": "Rediseño de Slides para Conferencias | PitchBoost",
+    "metaDescription": "Sube tu charla y recibe slides pensadas para un escenario: una idea por slide, texto grande, tu marca. El contenido sigue siendo tuyo; el diseño por fin lo refleja.",
+    "heroHeadline": "Tu charla es buena. Tus slides son un muro de texto.",
+    "heroSubhead": "PitchBoost reconstruye tu presentación para la última fila: una idea por slide, tipografía legible desde treinta metros, tu marca en cada pantalla, y cada punto que escribiste en su lugar.",
+    "painPoints": [
+      {
+        "title": "Escritas para leer, mostradas para ver",
+        "body": "La mayoría de las presentaciones empiezan como notas. Los párrafos en slides funcionan en un escritorio y mueren en un proyector. La audiencia lee en lugar de escuchar, y terminas compitiendo con tus propias slides."
+      },
+      {
+        "title": "La plantilla del evento pelea con tu marca",
+        "body": "Los organizadores envían una plantilla con sus colores. Tu logo queda en una esquina a 40 píxeles y la charla se ve igual que todas las sesiones del programa."
+      },
+      {
+        "title": "La fecha límite es la subida del orador",
+        "body": "Las slides se entregan una semana antes de la charla, justo cuando el contenido todavía está cambiando. El diseño es lo primero que se sacrifica."
+      }
+    ],
+    "outcomes": [
+      "Slides diseñadas para una sala, no para un documento: menos palabras, texto más grande, un punto por slide",
+      "Tu marca en cada slide, tomada de tu propio sitio web",
+      "El texto completo sobrevive en el PowerPoint editable, listo para las notas del orador",
+      "De vuelta en minutos, con un enlace para compartir después de la charla"
+    ],
+    "faqs": [
+      {
+        "q": "¿Recortará mi contenido?",
+        "a": "La reconstrucción mantiene una slide por cada slide original con el contenido preservado. Si quieres una presentación más compacta, elige la opción de condensar y comprime la historia manteniendo los puntos clave."
+      },
+      {
+        "q": "¿Puedo usar la relación de aspecto del evento?",
+        "a": "Las presentaciones se construyen en 16:9, que es lo que usa casi todas las pantallas de conferencias. Exporta a PowerPoint y ajusta en segundos si el lugar pide 4:3."
+      },
+      {
+        "q": "¿Recibo un archivo editable?",
+        "a": "Sí. Descarga un PowerPoint editable con cuadros de texto reales para cambios de último momento, o la versión de aspecto exacto para la subida del orador."
+      },
+      {
+        "q": "¿Cuánto cuesta?",
+        "a": "Una presentación con IA al mes es gratis, hasta 10 slides, con una pequeña insignia. Starter es $9 al mes para hasta 25 slides y sin insignia; Pro es $29 al mes."
+      }
+    ],
+    "ctaHeadline": "Dale a la última fila una razón para levantar la vista.",
+    "updated": "2026-09-12"
+  },
+  {
+    "slug": "qbr-deck-redesign",
+    "navLabel": "Rediseño de presentaciones QBR",
+    "metaTitle": "Rediseño de Presentaciones QBR | PitchBoost",
+    "metaDescription": "Convierte el QBR del trimestre pasado en una revisión limpia y con tu marca que tu cliente sí leerá. Mismas métricas, mejor diseño, lista en minutos.",
+    "heroHeadline": "El trimestre terminó. La presentación no debería verse como si lo hubiera atravesado.",
+    "heroSubhead": "Sube la QBR que tienes, en el estado en que esté. PitchBoost conserva cada métrica y cada próximo paso, reconstruye el diseño con tu marca y te entrega una presentación que se lee como un plan de cuenta, no como un volcado de datos.",
+    "painPoints": [
+      {
+        "title": "Misma plantilla, doceavo trimestre",
+        "body": "Las presentaciones QBR se copian trimestre tras trimestre hasta que nadie recuerda por qué existe la diapositiva 7. Secciones obsoletas y colores del año pasado le dicen al cliente exactamente cuánta atención recibe."
+      },
+      {
+        "title": "Las métricas están enterradas",
+        "body": "Adopción, riesgo de renovación, la propuesta de expansión: todo está en la presentación, nada es visible. Un aliado interno no puede reenviar una diapositiva que su jefe entienda en diez segundos."
+      },
+      {
+        "title": "Los account managers no son diseñadores",
+        "body": "La persona que conoce la cuenta es quien arma las diapositivas a las 11 de la noche. El diseño es lo último en lo que debería gastar esa hora."
+      }
+    ],
+    "outcomes": [
+      "Métricas destacadas en diseños visuales que el cliente puede escanear",
+      "Propuestas de renovación y expansión en sus propias diapositivas claras",
+      "Tu marca aplicada consistentemente, desde tu sitio web, cada trimestre",
+      "Un enlace rastreable para saber cuándo el cliente lo abrió antes de la llamada"
+    ],
+    "faqs": [
+      {
+        "q": "¿Conserva nuestros números de uso exactos?",
+        "a": "Sí. Cada cifra proviene de tu archivo subido. La verificación elimina todo lo que no pueda rastrearse a tus diapositivas o sitio web, así que nada se inventa para una reunión con el cliente."
+      },
+      {
+        "q": "¿Puedo reutilizarla cada trimestre?",
+        "a": "Sí. Mantén la presentación en PitchBoost, actualiza los números el próximo trimestre con ediciones por IA o manualmente, y exporta de nuevo. Starter y Pro incluyen créditos mensuales precisamente para eso."
+      },
+      {
+        "q": "¿Puede mi cliente ver quién la vio?",
+        "a": "No. Las analíticas de visualización son para ti: tú ves las aperturas, y en Pro el tiempo por diapositiva. El cliente ve una presentación limpia."
+      },
+      {
+        "q": "¿Cuánto cuesta?",
+        "a": "Una presentación con IA al mes es gratis, hasta 10 diapositivas, con una pequeña insignia. Starter cuesta $9 al mes para hasta 25 diapositivas y sin insignia. Pro cuesta $29 al mes con analíticas completas y dominios personalizados."
+      }
+    ],
+    "ctaHeadline": "Haz que la revisión refleje que la relación importa.",
+    "updated": "2026-09-12"
+  },
+  {
+    "slug": "capabilities-deck-redesign",
+    "navLabel": "Rediseño de presentaciones de credenciales",
+    "metaTitle": "Rediseño de Deck de Credenciales para Agencias | PitchBoost",
+    "metaDescription": "Rediseña tu presentación de credenciales: mismos casos de éxito y servicios, diseño profesional con tu marca, lista en minutos para tu próxima propuesta.",
+    "heroHeadline": "Una presentación de credenciales que refleja lo que cobras.",
+    "heroSubhead": "Sube la presentación de credenciales que envías a cada prospecto. PitchBoost conserva tus servicios, casos de éxito y logotipos de clientes, reconstruye el diseño con tu marca y te entrega una versión digna de tus tarifas.",
+    "painPoints": [
+      {
+        "title": "La presentación vende diseño pero parece de 2019",
+        "body": "Agencias y estudios envían presentaciones de credenciales que desmerecen su propio trabajo. El prospecto lo nota antes de ver los casos de éxito."
+      },
+      {
+        "title": "Editada por todos, de nadie",
+        "body": "Cada nueva oportunidad agrega una diapositiva. Al año la presentación tiene 40 diapositivas, tres tipografías y dos logotipos. Recortarla es un proyecto que nadie reclama."
+      },
+      {
+        "title": "Los casos de éxito son el producto, y están enterrados",
+        "body": "Los resultados viven en letra pequeña dentro de una lista. Los números que ganan la propuesta deberían ser lo más grande de la diapositiva."
+      }
+    ],
+    "outcomes": [
+      "Resultados de casos de éxito convertidos en diseños de estadísticas, exactamente como los escribiste",
+      "Logotipos de clientes y servicios organizados como lo haría un diseñador",
+      "Tu marca desde tu sitio web, aplicada a cada diapositiva",
+      "Un enlace que te avisa cuando el prospecto abrió la presentación"
+    ],
+    "faqs": [
+      {
+        "q": "¿Conservará nuestros logotipos de clientes?",
+        "a": "Sí. Las imágenes que subes se conservan, eliges cuáles mantener antes del rediseño y los logotipos se colocan sin deformarse."
+      },
+      {
+        "q": "¿Puede acortar una presentación de 40 diapositivas?",
+        "a": "Sí. Elige condensar y comprime la historia a una presentación compacta manteniendo los casos de éxito que marcaste. O reconstruye uno a uno y recorta después."
+      },
+      {
+        "q": "¿Podemos hacer una versión por prospecto?",
+        "a": "Sí. Guarda la presentación en PitchBoost y luego usa ediciones con IA o el constructor de presentaciones para adaptar la apertura y el orden de casos de éxito para cada propuesta."
+      },
+      {
+        "q": "¿Cuánto cuesta?",
+        "a": "Una presentación con IA al mes es gratis, hasta 10 diapositivas, con una insignia pequeña. Starter es $9 al mes para presentaciones de hasta 25 diapositivas sin insignia. Pro es $29 al mes."
+      }
+    ],
+    "ctaHeadline": "Envía credenciales que correspondan a la factura.",
+    "updated": "2026-09-12"
+  },
+  {
+    "slug": "pitch-competition-deck-redesign",
+    "navLabel": "Pitch competition deck",
+    "metaTitle": "Rediseño de Presentación para Competencias de Pitch | PitchBoost",
+    "metaDescription": "Rediseña tu presentación para aceleradoras o competencias de pitch en tres minutos: misma historia, una idea por diapositiva, tu marca, listo para el demo day.",
+    "heroHeadline": "Tres minutos en el escenario. Diapositivas que van al mismo ritmo.",
+    "heroSubhead": "Sube tu presentación para la competencia. PitchBoost conserva el problema, la tracción y la petición, reconstruye cada diapositiva para una pantalla grande y un tiempo corto, y aplica tu marca desde tu sitio web.",
+    "painPoints": [
+      {
+        "title": "Hecha para leer, juzgada en vivo",
+        "body": "La presentación que te metió en la competencia se escribió para un formulario de selección. En el escenario, las diapositivas densas hacen que los jueces lean mientras hablas, y se pierden ambas cosas."
+      },
+      {
+        "title": "La diapositiva de tracción hace todo el trabajo, pero mal",
+        "body": "El único número que importa está en una tabla con otros once. Los jueces recuerdan el número grande en una diapositiva limpia, no la hoja de cálculo."
+      },
+      {
+        "title": "El demo day es mañana",
+        "body": "Los comentarios del mentor llegan a las 6pm. Rediseñar a mano significa una noche moviendo cajas en lugar de ensayar."
+      }
+    ],
+    "outcomes": [
+      "Una idea por diapositiva, dimensionada para un escenario y un cronómetro en cuenta regresiva",
+      "Tracción y petición en sus propias diapositivas, exactamente como las escribiste",
+      "Tu marca y logo en cada diapositiva, no la plantilla de la aceleradora",
+      "PowerPoint editable y PDF de vuelta en minutos, más un enlace para los jueces después"
+    ],
+    "faqs": [
+      {
+        "q": "¿Cambiará mi historia?",
+        "a": "No. Una reconstrucción mantiene el orden y contenido de tus diapositivas y rediseña el formato. Usa la opción de condensar si los mentores te dijeron que es muy larga."
+      },
+      {
+        "q": "¿Puede agregar números para que la tracción se vea mejor?",
+        "a": "No, y es deliberado. Cada cifra debe venir de tu presentación o tu sitio web. Cualquier otra cosa se elimina en la verificación de datos antes de que la veas."
+      },
+      {
+        "q": "¿Qué tan rápido es?",
+        "a": "De dos a cuatro minutos para una presentación típica de 10 a 15 diapositivas, incluyendo la revisión de calidad."
+      },
+      {
+        "q": "¿Cuánto cuesta?",
+        "a": "Una presentación AI al mes es gratis, hasta 10 diapositivas, con una pequeña insignia. Starter cuesta $9 al mes para hasta 25 diapositivas y sin insignia. Pro cuesta $29 al mes."
+      }
+    ],
+    "ctaHeadline": "Ensaya el pitch. Deja que nosotros arreglemos las diapositivas.",
+    "updated": "2026-09-12"
+  },
+  {
+    "slug": "consulting-slides-redesign",
+    "navLabel": "Rediseño de presentaciones de consultoría",
+    "metaTitle": "Rediseño de Slides de Consultoría | PitchBoost",
+    "metaDescription": "Haz que tu deck de consultoría se lea como el de las grandes firmas: títulos de acción, un gráfico por slide, tu marca. Súbelo y recíbelo en minutos.",
+    "heroHeadline": "Slides de nivel consultor sin el equipo de diseño del consultor.",
+    "heroSubhead": "Sube tu análisis. PitchBoost conserva cada hallazgo y cada valor de gráfico, reconstruye cada slide con un título de acción y un mensaje, y aplica la marca de tu firma desde tu sitio web.",
+    "painPoints": [
+      {
+        "title": "Análisis excelente, el slide 14 es ilegible",
+        "body": "El razonamiento es sólido y los slides lo muestran con seis gráficos y un párrafo. Los clientes juzgan el rigor por lo claro que está presentado, sea justo o no."
+      },
+      {
+        "title": "Las grandes firmas tienen un departamento de producción",
+        "body": "Las firmas grandes tienen personas cuyo único trabajo son los slides. Una boutique te tiene a ti, a medianoche, alineando cajas de texto para el comité directivo de mañana."
+      },
+      {
+        "title": "Las plantillas no te dan títulos de acción",
+        "body": "Una plantilla arregla las fuentes. No convierte 'Análisis de ingresos' en la oración que el cliente debe retener. Eso es trabajo editorial, y es donde los consultores independientes pierden tiempo."
+      }
+    ],
+    "outcomes": [
+      "Títulos de acción que expresan el hallazgo, construidos desde tu propio contenido",
+      "Un mensaje por slide, gráficos y tablas organizados para un comité directivo",
+      "Valores de gráficos transferidos exactamente desde tu PowerPoint",
+      "La marca de tu firma en cada slide, más un PowerPoint editable para ajustes finales"
+    ],
+    "faqs": [
+      {
+        "q": "¿Lee mis gráficos?",
+        "a": "Sí. Los datos de gráficos dentro del .pptx se extraen con el texto del slide, así que las series y valores pasan a la reconstrucción y la verificación de datos sabe que son tuyos."
+      },
+      {
+        "q": "¿Reescribirá mis hallazgos?",
+        "a": "Conserva el contenido y afina el enfoque: los títulos se vuelven afirmaciones, los párrafos densos se convierten en puntos estructurados. Cada número permanece tal como lo escribiste."
+      },
+      {
+        "q": "¿Puedo obtener un archivo editable para el pulido final?",
+        "a": "Sí. El PowerPoint editable tiene cajas de texto reales y fuentes reales; la versión de aspecto exacto coincide con el deck web slide por slide."
+      },
+      {
+        "q": "¿Cuánto cuesta?",
+        "a": "Un deck con IA al mes es gratis, hasta 10 slides, con una pequeña insignia. Starter es $9 al mes para hasta 25 slides y sin insignia; Pro es $29 al mes con analíticas completas y dominios personalizados."
+      }
+    ],
+    "ctaHeadline": "Haz que el deck sea tan afilado como el análisis.",
+    "updated": "2026-09-12"
+  },
 ];
 
 export const REDESIGN_STEPS_ES: { step: string; title: string; body: string }[] = [
