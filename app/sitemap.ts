@@ -2,10 +2,11 @@ import type { MetadataRoute } from "next";
 import { INDUSTRIES } from "@/lib/industries";
 import { COMPETITORS } from "@/lib/competitors";
 import { FEATURES } from "@/lib/features";
-import { getAllSlugs } from "@/lib/blog";
 import { CITIES } from "@/lib/cities";
 import { NET_SHEET_STATES } from "@/lib/net-sheet-states";
-import { REDESIGNS } from "@/lib/redesigns";
+import { REDESIGNS, getRedesigns } from "@/lib/redesigns";
+import { getAllPosts } from "@/lib/blog";
+import { STATIC_PAGE_DATES, FEATURE_PAGE_DATES, INDUSTRIES_UPDATED, COMPETITORS_UPDATED, REDESIGNS_UPDATED, CITIES_UPDATED, NET_SHEET_UPDATED } from "@/lib/page-dates";
 
 const BASE = "https://pitchboost.ai";
 
@@ -51,29 +52,42 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
   // The redesign cluster exists in English, Spanish (/es) and Brazilian
   // Portuguese (/pt); every URL lists its siblings as hreflang alternates.
+  // Only locales that actually have the page are listed as alternates: a new
+  // English entry whose translation has not landed yet must not advertise a
+  // Spanish URL that 404s.
+  const esSlugs = new Set(getRedesigns("es").map((r) => r.slug));
+  const ptSlugs = new Set(getRedesigns("pt").map((r) => r.slug));
   const redesignPaths = ["/redesign", ...REDESIGNS.map((r) => `/redesign/${r.slug}`)];
   for (const path of redesignPaths) {
-    const languages = { en: `${BASE}${path}`, es: `${BASE}/es${path}`, pt: `${BASE}/pt${path}`, "x-default": `${BASE}${path}` };
-    for (const prefix of ["", "/es", "/pt"]) {
+    const slug = path.replace("/redesign/", "");
+    const hasEs = path === "/redesign" || esSlugs.has(slug);
+    const hasPt = path === "/redesign" || ptSlugs.has(slug);
+    const languages: Record<string, string> = { en: `${BASE}${path}`, "x-default": `${BASE}${path}` };
+    if (hasEs) languages.es = `${BASE}/es${path}`;
+    if (hasPt) languages.pt = `${BASE}/pt${path}`;
+    const entry = REDESIGNS.find((r) => r.slug === slug);
+    const lastModified = entry?.updated ?? REDESIGNS_UPDATED;
+    for (const prefix of ["", ...(hasEs ? ["/es"] : []), ...(hasPt ? ["/pt"] : [])]) {
       entries.push({
         url: `${BASE}${prefix}${path}`,
         changeFrequency: "monthly",
         priority: path === "/redesign" ? (prefix ? 0.8 : 0.85) : prefix ? 0.75 : 0.8,
+        lastModified,
         alternates: { languages },
       });
     }
   }
   for (const i of INDUSTRIES) {
-    entries.push({ url: `${BASE}/industries/${i.slug}`, changeFrequency: "monthly", priority: 0.8 });
+    entries.push({ url: `${BASE}/industries/${i.slug}`, changeFrequency: "monthly", priority: 0.8, lastModified: INDUSTRIES_UPDATED });
   }
   for (const c of COMPETITORS) {
-    entries.push({ url: `${BASE}/compare/${c.slug}`, changeFrequency: "monthly", priority: 0.8 });
+    entries.push({ url: `${BASE}/compare/${c.slug}`, changeFrequency: "monthly", priority: 0.8, lastModified: c.updated ?? COMPETITORS_UPDATED });
   }
-  for (const slug of getAllSlugs()) {
-    entries.push({ url: `${BASE}/blog/${slug}`, changeFrequency: "monthly", priority: 0.6 });
+  for (const post of getAllPosts()) {
+    entries.push({ url: `${BASE}/blog/${post.slug}`, changeFrequency: "monthly", priority: 0.6, lastModified: post.date || undefined });
   }
   for (const c of CITIES) {
-    entries.push({ url: `${BASE}/real-estate/${c.slug}`, changeFrequency: "monthly", priority: 0.7 });
+    entries.push({ url: `${BASE}/real-estate/${c.slug}`, changeFrequency: "monthly", priority: 0.7, lastModified: CITIES_UPDATED });
   }
 
   return entries;

@@ -28,7 +28,7 @@ function CheckIcon() {
 const FEATURES = [
   {
     title: "Brand kit",
-    body: "Upload your logo, set your brand colors, and define your typography preferences once. Every deck PitchBoost generates — for you or anyone on your team — comes out looking like it came from your design system, not a generic template.",
+    body: "Upload your logo, set your brand colors, and define your typography preferences once. Every deck PitchBoost generates, for you or anyone on your team, comes out looking like it came from your design system, not a generic template.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="13.5" cy="6.5" r="2.5" /><path d="M17 2H7a5 5 0 0 0-5 5v10a5 5 0 0 0 5 5h10a5 5 0 0 0 5-5V7a5 5 0 0 0-5-5z" />
@@ -37,7 +37,7 @@ const FEATURES = [
   },
   {
     title: "Image library",
-    body: "Upload a library of approved images — project photos, team headshots, product screenshots, lifestyle imagery — and include them in specific decks or make them available to your whole team when building any deck.",
+    body: "Upload a library of approved images, project photos, team headshots, product screenshots, lifestyle imagery, and include them in specific decks or make them available to your whole team when building any deck.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="3" y="3" width="18" height="18" rx="2" ry="2" /><circle cx="8.5" cy="8.5" r="1.5" /><polyline points="21 15 16 10 5 21" />
@@ -46,7 +46,7 @@ const FEATURES = [
   },
   {
     title: "Team asset sharing",
-    body: "Brand assets and images uploaded by any team member are available to the whole team. Everyone builds from the same approved library — no more hunting for the right logo file, no more off-brand colors from a rep who grabbed an old asset.",
+    body: "Brand assets and images uploaded by any team member are available to the whole team. Everyone builds from the same approved library, no more hunting for the right logo file, no more off-brand colors from a rep who grabbed an old asset.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />
@@ -56,12 +56,12 @@ const FEATURES = [
 ];
 
 const BULLETS = [
-  "Upload logo in any format — applied to every deck automatically",
+  "Upload logo in any format, applied to every deck automatically",
   "Set primary, secondary, and accent brand colors",
   "Upload images to a team-wide library",
   "Assign specific images to specific decks or deals",
   "Brand applied consistently whether you or a teammate builds the deck",
-  "Update your brand kit once — all future decks reflect the change",
+  "Update your brand kit once, all future decks reflect the change",
 ];
 
 const RELATED = [
@@ -75,7 +75,8 @@ export default function BrandAndImagesPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Brand & Image Library — Consistent Branding Across Every Deck",
+    dateModified: "2026-09-12",
+    name: "Brand & Image Library: Consistent Branding Across Every Deck",
     description: "Upload your logo, brand colors, and image library once. PitchBoost applies your brand to every deck automatically.",
     url: "https://pitchboost.ai/features/brand-and-images",
     publisher: { "@type": "Organization", name: "PitchBoost", url: "https://pitchboost.ai" },
@@ -110,7 +111,7 @@ export default function BrandAndImagesPage() {
             One brand kit. Every deck automatically consistent.
           </h1>
           <p style={{ color: "var(--ds-text-light)", fontSize: "1.1rem", maxWidth: 600, margin: "0 auto 36px", lineHeight: 1.7 }}>
-            Upload your brand kit and image library once. PitchBoost applies them to every deck your team builds — automatically — so you never have a rep send something off-brand, and every presentation looks like it came from the same place.
+            Upload your brand kit and image library once. PitchBoost applies them to every deck your team builds, automatically, so you never have a rep send something off-brand, and every presentation looks like it came from the same place.
           </p>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 16, flexWrap: "wrap" }}>
             <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Set Up Your Brand Kit</a>
@@ -132,7 +133,7 @@ export default function BrandAndImagesPage() {
           <div className="section-header wide-header fade-up">
             <div className="section-label"><span>What&apos;s included</span></div>
             <h2>Brand consistency without the design bottleneck</h2>
-            <p>Most teams have the right assets — they just aren&apos;t being used consistently. PitchBoost gives everyone access to the right version of everything, and applies it without anyone having to ask.</p>
+            <p>Most teams have the right assets, they just aren&apos;t being used consistently. PitchBoost gives everyone access to the right version of everything, and applies it without anyone having to ask.</p>
           </div>
           <div className="fade-up" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 20, marginTop: 48 }}>
             {FEATURES.map(({ title, body, icon }) => (
@@ -191,7 +192,7 @@ export default function BrandAndImagesPage() {
         <div className="mkt-container">
           <div className="cta-box fade-up">
             <h2>Look like a team that has its act together.</h2>
-            <p>Set up your brand kit once and every deck your team builds will reflect it — automatically.</p>
+            <p>Set up your brand kit once and every deck your team builds will reflect it, automatically.</p>
             <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Set Up Your Brand Kit Free</a>
           </div>
         </div>

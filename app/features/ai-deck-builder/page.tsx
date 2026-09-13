@@ -8,11 +8,11 @@ export const metadata: Metadata = {
   alternates: { canonical: "/features/ai-deck-builder" },
   title: "AI Deck Builder: Personalized Pitch Decks, Presentations & Proposals",
   description:
-    "PitchBoost's AI deck builder generates personalized pitch decks, sales presentations, and proposals in a few minutes — written for your specific prospect, not a generic template.",
+    "PitchBoost's AI deck builder generates personalized pitch decks, sales presentations, and proposals in a few minutes, written for your specific prospect, not a generic template.",
   openGraph: {
     title: "AI Deck Builder: Personalized Pitch Decks, Presentations & Proposals",
     description:
-      "PitchBoost's AI deck builder generates personalized pitch decks, sales presentations, and proposals in a few minutes — written for your specific prospect, not a generic template.",
+      "PitchBoost's AI deck builder generates personalized pitch decks, sales presentations, and proposals in a few minutes, written for your specific prospect, not a generic template.",
     images: [{ url: "https://pitchboost.ai/og-image.png", width: 1310, height: 820 }],
   },
 };
@@ -38,7 +38,7 @@ const OUTPUT_TYPES = [
   {
     label: "Pitch Decks",
     description:
-      "Structured sales decks built around your prospect's specific pain points, priorities, and buying criteria — not a standard capabilities overview with their name swapped in.",
+      "Structured sales decks built around your prospect's specific pain points, priorities, and buying criteria, not a standard capabilities overview with their name swapped in.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
@@ -50,7 +50,7 @@ const OUTPUT_TYPES = [
   {
     label: "Sales Presentations",
     description:
-      "Walkthrough-ready presentations with a narrative arc built for the specific conversation — whether that's a discovery call, a product demo, or a final decision meeting.",
+      "Walkthrough-ready presentations with a narrative arc built for the specific conversation, whether that's a discovery call, a product demo, or a final decision meeting.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 2L2 7l10 5 10-5-10-5z" />
@@ -62,7 +62,7 @@ const OUTPUT_TYPES = [
   {
     label: "Business Proposals",
     description:
-      "Professional proposals that frame your approach, your experience, and your pricing in the context of this client's actual situation — not a repurposed template from your last engagement.",
+      "Professional proposals that frame your approach, your experience, and your pricing in the context of this client's actual situation, not a repurposed template from your last engagement.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
@@ -76,7 +76,7 @@ const OUTPUT_TYPES = [
   {
     label: "One-Sheets & Buyer FAQs",
     description:
-      "Concise sales leave-behinds and FAQ documents that address the specific objections and questions most likely to come up with this prospect — built from what you know about their situation.",
+      "Concise sales leave-behinds and FAQ documents that address the specific objections and questions most likely to come up with this prospect, built from what you know about their situation.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
@@ -98,19 +98,19 @@ const PITCHBOOST_WINS = [
   "Structure determined by the type of conversation, not the template",
   "Pain points pulled from your prospect context and deal notes",
   "Your credentials positioned around what this specific buyer cares about",
-  "Fully built in a few minutes — not a starting point you have to gut",
+  "Fully built in a few minutes, not a starting point you have to gut",
 ];
 
 const STEPS = [
   {
     step: 1,
     title: "Tell PitchBoost about the deal",
-    body: "Add your brand assets, existing credentials, and supporting docs once. Then for each deck, describe the prospect — their company, their priorities, the opportunity, and what you want them to believe by the end of the presentation.",
+    body: "Add your brand assets, existing credentials, and supporting docs once. Then for each deck, describe the prospect, their company, their priorities, the opportunity, and what you want them to believe by the end of the presentation.",
   },
   {
     step: 2,
     title: "Get a deck built around this specific opportunity",
-    body: "PitchBoost structures the presentation, writes the copy, applies your branding, and organizes your supporting material in the order most likely to land with this buyer — all in a few minutes.",
+    body: "PitchBoost structures the presentation, writes the copy, applies your branding, and organizes your supporting material in the order most likely to land with this buyer, all in a few minutes.",
   },
   {
     step: 3,
@@ -122,7 +122,7 @@ const STEPS = [
 const WHO_ITS_FOR = [
   {
     title: "B2B Sales Teams",
-    body: "Give every rep a personalized pitch deck for every deal — without the hours of manual customization. Go from CRM notes to a finished deck before the next call.",
+    body: "Give every rep a personalized pitch deck for every deal, without the hours of manual customization. Go from CRM notes to a finished deck before the next call.",
     href: "/industries/b2b-sales",
   },
   {
@@ -132,20 +132,20 @@ const WHO_ITS_FOR = [
   },
   {
     title: "Founders & Startups",
-    body: "Pitch investors, customers, and partners with presentations that look like you have a full team behind you — without the design agency budget.",
+    body: "Pitch investors, customers, and partners with presentations that look like you have a full team behind you, without the design agency budget.",
     href: "/industries/startups",
   },
   {
     title: "Contractors & Service Businesses",
-    body: "Win more bids with polished proposals that explain your process and your fit for this specific job — not a price quote on a standard form.",
+    body: "Win more bids with polished proposals that explain your process and your fit for this specific job, not a price quote on a standard form.",
     href: "/industries/home-services",
   },
 ];
 
 const CAPABILITY_BULLETS = [
   "Generate a full pitch deck from a prospect URL and a few notes",
-  "Choose your output format — pitch deck, proposal, one-sheet, or buyer FAQ",
-  "Apply your brand automatically — logo, colors, and voice, every time",
+  "Choose your output format, pitch deck, proposal, one-sheet, or buyer FAQ",
+  "Apply your brand automatically, logo, colors, and voice, every time",
   "Edit any slide or the full deck using plain-language AI instructions",
   "Export as PDF or PPT, or share as a live branded link",
   "Track who opened it, which slides they spent time on, and when they came back",
@@ -155,7 +155,8 @@ export default function AIDeckBuilderPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "AI Deck Builder — Personalized Pitch Decks, Presentations & Proposals",
+    dateModified: "2026-09-12",
+    name: "AI Deck Builder: Personalized Pitch Decks, Presentations & Proposals",
     description:
       "PitchBoost's AI deck builder generates personalized pitch decks, sales presentations, and proposals in a few minutes.",
     url: "https://pitchboost.ai/features/ai-deck-builder",
@@ -191,7 +192,7 @@ export default function AIDeckBuilderPage() {
             Personalized pitch decks, presentations, and proposals that close more deals
           </h1>
           <p style={{ color: "var(--ds-text-light)", fontSize: "1.1rem", maxWidth: 640, margin: "0 auto 36px", lineHeight: 1.7 }}>
-            Describe your prospect, your opportunity, and your goals. PitchBoost generates a fully structured pitch deck, presentation, or proposal in a few minutes — with copy written for this specific buyer, not a template you have to gut and rewrite.
+            Describe your prospect, your opportunity, and your goals. PitchBoost generates a fully structured pitch deck, presentation, or proposal in a few minutes, with copy written for this specific buyer, not a template you have to gut and rewrite.
           </p>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 16, flexWrap: "wrap" }}>
             <a href={SIGNUP_URL} className="btn btn-primary btn-primary-animated btn-lg">Start Building Free</a>
@@ -243,7 +244,7 @@ export default function AIDeckBuilderPage() {
             <div className="section-label"><span>The problem</span></div>
             <h2>Most decks fail because they weren&apos;t built for the person reading them</h2>
             <p>
-              A pitch deck, presentation, or proposal that sounds generic tells your prospect one thing: you send this to everyone. Buyers can tell when the materials weren&apos;t built for them — and so do the win rates.
+              A pitch deck, presentation, or proposal that sounds generic tells your prospect one thing: you send this to everyone. Buyers can tell when the materials weren&apos;t built for them, and so do the win rates.
             </p>
           </div>
           <div className="fade-up" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24, marginTop: 48, maxWidth: 920, margin: "48px auto 0" }}>
@@ -278,9 +279,9 @@ export default function AIDeckBuilderPage() {
         <div className="mkt-container">
           <div className="section-header wide-header fade-up">
             <div className="section-label"><span>How it works</span></div>
-            <h2>From deal notes to a deck worth sending — in three steps</h2>
+            <h2>From deal notes to a deck worth sending, in three steps</h2>
             <p>
-              No blank slides. No templates to gut. No waiting on a designer. PitchBoost handles the structure, the copy, and the branding — you handle the deal.
+              No blank slides. No templates to gut. No waiting on a designer. PitchBoost handles the structure, the copy, and the branding, you handle the deal.
             </p>
           </div>
           <div className="fade-up" style={{ display: "flex", flexDirection: "column", gap: 24, maxWidth: 720, margin: "48px auto 0" }}>
@@ -303,7 +304,7 @@ export default function AIDeckBuilderPage() {
           <div className="section-header wide-header fade-up">
             <div className="section-label"><span>What&apos;s included</span></div>
             <h2>Everything you need from first draft to sent</h2>
-            <p>The AI deck builder is the starting point for every PitchBoost workflow — from generation through editing, exporting, sharing, and tracking.</p>
+            <p>The AI deck builder is the starting point for every PitchBoost workflow, from generation through editing, exporting, sharing, and tracking.</p>
           </div>
           <div className="fade-up" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 14, marginTop: 48, maxWidth: 860, margin: "48px auto 0" }}>
             {CAPABILITY_BULLETS.map((item) => (
@@ -346,7 +347,7 @@ export default function AIDeckBuilderPage() {
         <div className="mkt-container">
           <div className="cta-box fade-up">
             <h2>Stop sending the same deck twice.</h2>
-            <p>Generate your first personalized pitch deck, presentation, or proposal free — no design skills required, no credit card needed.</p>
+            <p>Generate your first personalized pitch deck, presentation, or proposal free, no design skills required, no credit card needed.</p>
             <a href={SIGNUP_URL} className="btn btn-primary btn-primary-animated btn-lg">Start Building Free</a>
           </div>
         </div>

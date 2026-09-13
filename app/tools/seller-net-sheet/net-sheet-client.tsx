@@ -102,7 +102,7 @@ export default function NetSheetClient({ preset }: { preset?: NetSheetStatePrese
           <p style={{ color: "var(--ds-text-light)", fontSize: "1.05rem", maxWidth: 620, margin: "12px auto 0", lineHeight: 1.7 }}>
             Show your seller what they&apos;ll actually walk away with. Enter the numbers, get a clean
             breakdown to share. Free to use, no account needed.
-            {preset && <> Transfer tax preloads at {preset.rateLabel} — edit anything to match your deal.</>}
+            {preset && <> Transfer tax preloads at {preset.rateLabel}, edit anything to match your deal.</>}
           </p>
         </div>
       </section>
@@ -136,7 +136,7 @@ export default function NetSheetClient({ preset }: { preset?: NetSheetStatePrese
 
           {preset && (
             <p style={{ marginTop: 12, fontSize: "0.78rem", color: "var(--ds-text-light)", lineHeight: 1.6 }}>
-              {preset.name}: {preset.rateLabel}. {preset.note} Rates change and local add-ons vary — verify with your title company.
+              {preset.name}: {preset.rateLabel}. {preset.note} Rates change and local add-ons vary, verify with your title company.
             </p>
           )}
 

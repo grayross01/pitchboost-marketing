@@ -2,7 +2,7 @@
  * State presets for the seller net sheet calculator's state-specific pages
  * (/tools/seller-net-sheet/[state]). Each preset preloads the transfer/excise
  * tax line with the state's commonly-cited rate so the estimate lands closer
- * on the first try — the field stays fully editable and every page carries
+ * on the first try, the field stays fully editable and every page carries
  * the estimate disclaimer.
  *
  * Rates are the widely used statewide defaults as of 2026 and intentionally
@@ -43,7 +43,7 @@ export const NET_SHEET_STATES: NetSheetStatePreset[] = [
     name: "California",
     rate: 0.0011,
     rateLabel: "$1.10 per $1,000 county documentary transfer tax (0.11%)",
-    note: "Charter cities can add their own transfer tax on top — Los Angeles, San Francisco, and others have significantly higher combined rates on some price tiers.",
+    note: "Charter cities can add their own transfer tax on top, Los Angeles, San Francisco, and others have significantly higher combined rates on some price tiers.",
   },
   {
     slug: "new-york",
@@ -77,7 +77,7 @@ export const NET_SHEET_STATES: NetSheetStatePreset[] = [
     slug: "washington",
     name: "Washington",
     rate: 0.0128,
-    rateLabel: "graduated REET — 1.28% on the middle price tier",
+    rateLabel: "graduated REET, 1.28% on the middle price tier",
     note: "State REET runs 1.1% to 3% depending on price bracket (brackets adjust periodically), and some cities add a local rate on top. Adjust the prefilled amount to your bracket.",
   },
   {
@@ -85,7 +85,7 @@ export const NET_SHEET_STATES: NetSheetStatePreset[] = [
     name: "Tennessee",
     rate: 0.0037,
     rateLabel: "$0.37 per $100 recordation transfer tax (0.37%)",
-    note: "Customarily paid by the buyer in many Tennessee markets — zero it out if that's how your contract reads.",
+    note: "Customarily paid by the buyer in many Tennessee markets, zero it out if that's how your contract reads.",
   },
   {
     slug: "south-carolina",
@@ -106,7 +106,7 @@ export const NET_SHEET_STATES: NetSheetStatePreset[] = [
     name: "Nevada",
     rate: 0.0051,
     rateLabel: "$2.55 per $500 in Clark County (0.51%)",
-    note: "Outside Clark County (Las Vegas) most counties are $1.95 per $500 (0.39%) — edit the prefilled amount if you're elsewhere.",
+    note: "Outside Clark County (Las Vegas) most counties are $1.95 per $500 (0.39%), edit the prefilled amount if you're elsewhere.",
   },
 ];
 

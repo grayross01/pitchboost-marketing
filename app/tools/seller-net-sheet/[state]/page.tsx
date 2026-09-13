@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ state: st
   if (!preset) return {};
   return {
     title: `Free ${preset.name} Seller Net Sheet Calculator`,
-    description: `Estimate a seller's net proceeds on a ${preset.name} home sale — with ${preset.name}'s transfer tax (${preset.rateLabel}) preloaded. Branded, printable, free for agents, no account needed.`,
+    description: `Estimate a seller's net proceeds on a ${preset.name} home sale, with ${preset.name}'s transfer tax (${preset.rateLabel}) preloaded. Branded, printable, free for agents, no account needed.`,
     alternates: { canonical: `/tools/seller-net-sheet/${preset.slug}` },
   };
 }
@@ -41,12 +41,12 @@ export default async function StateNetSheetPage({ params }: { params: Promise<{ 
     },
     {
       q: `Who pays the transfer tax in ${preset.name}?`,
-      a: `Customs vary by market and it's negotiable in the contract. This calculator treats it as a seller cost — the most common convention — but you can zero it out if the buyer is paying it in your deal.`,
+      a: `Customs vary by market and it's negotiable in the contract. This calculator treats it as a seller cost, the most common convention, but you can zero it out if the buyer is paying it in your deal.`,
     },
     { q: "Is the seller net sheet calculator free?", a: "Yes. It is free to use with no account required." },
     {
       q: "How accurate is the estimate?",
-      a: "It is an estimate based on the numbers you enter and the preloaded state rate. County and city add-ons vary, and rates change — verify against the final settlement statement from your title company.",
+      a: "It is an estimate based on the numbers you enter and the preloaded state rate. County and city add-ons vary, and rates change, verify against the final settlement statement from your title company.",
     },
     { q: "Can I share the breakdown with my seller?", a: "Yes. Print it or save it as a PDF, branded with your name and brokerage." },
   ];

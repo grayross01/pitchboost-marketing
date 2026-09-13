@@ -1,3 +1,4 @@
+import { COMPETITORS_UPDATED } from "@/lib/page-dates";
 import type { Metadata } from "next";
 import { siteTitle } from "@/lib/site-title";
 import Link from "next/link";
@@ -65,6 +66,7 @@ export default async function ComparePage({ params }: Props) {
     name: competitor.metaTitle,
     description: competitor.metaDescription,
     url: `https://pitchboost.ai/compare/${competitor.slug}`,
+    dateModified: competitor.updated ?? COMPETITORS_UPDATED,
     publisher: { "@type": "Organization", name: "PitchBoost", url: "https://pitchboost.ai" },
   };
 
@@ -248,7 +250,7 @@ export default async function ComparePage({ params }: Props) {
         <div className="mkt-container">
           <div className="cta-box">
             <h2>{competitor.ctaHeadline}</h2>
-            <p>Generate your first tailored pitch deck free — no design skills required, no credit card needed.</p>
+            <p>Generate your first tailored pitch deck free, no design skills required, no credit card needed.</p>
             <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Get started free</a>
           </div>
         </div>

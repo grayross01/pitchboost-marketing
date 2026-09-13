@@ -18,7 +18,7 @@ const USE_CASES = [
     industryHref: "/industries/b2b-sales",
     headline: "Give every rep a personalized deck for every deal",
     description:
-      "Your reps know the prospect — but building a custom deck for each one takes hours they don't have. PitchBoost pulls out the capabilities most relevant to that buyer and builds a deck that speaks directly to their business, so reps pitch smarter without touching a slide.",
+      "Your reps know the prospect, but building a custom deck for each one takes hours they don't have. PitchBoost pulls out the capabilities most relevant to that buyer and builds a deck that speaks directly to their business, so reps pitch smarter without touching a slide.",
     painPoints: [
       "Reps send the same generic deck to every prospect",
       "Hours lost customizing slides instead of selling",
@@ -44,7 +44,7 @@ const USE_CASES = [
     industryHref: "/industries/agencies",
     headline: "Win new clients with proposals that speak their language",
     description:
-      "When you're pitching a new client, the proposal needs to feel like it was built just for them. PitchBoost maps your agency's services to what each prospect actually needs — so every proposal feels bespoke without the hours of research and design.",
+      "When you're pitching a new client, the proposal needs to feel like it was built just for them. PitchBoost maps your agency's services to what each prospect actually needs, so every proposal feels bespoke without the hours of research and design.",
     painPoints: [
       "Every pitch deck starts from scratch or a stale template",
       "Designers are bottlenecked with deck requests",
@@ -68,7 +68,7 @@ const USE_CASES = [
     industryHref: "/industries/saas",
     headline: "Turn every enterprise prospect into a tailored presentation",
     description:
-      "Enterprise deals demand more than a product overview. PitchBoost builds a deck that positions your platform as the answer to each prospect's specific challenges — so your AEs walk into every call with a pitch that already resonates.",
+      "Enterprise deals demand more than a product overview. PitchBoost builds a deck that positions your platform as the answer to each prospect's specific challenges, so your AEs walk into every call with a pitch that already resonates.",
     painPoints: [
       "One product deck for vastly different buyer personas",
       "AEs spend more time on slides than on discovery calls",
@@ -93,7 +93,7 @@ const USE_CASES = [
     industryHref: "/industries/consultancies",
     headline: "Show every prospect you already understand their business",
     description:
-      "When you're pitching or proposing an engagement, demonstrating that you get the client's world is half the battle. PitchBoost connects your expertise to each prospect's specific situation — so you walk in looking prepared, not generic.",
+      "When you're pitching or proposing an engagement, demonstrating that you get the client's world is half the battle. PitchBoost connects your expertise to each prospect's specific situation, so you walk in looking prepared, not generic.",
     painPoints: [
       "Proposals and pitch decks require hours of prospect research",
       "Hard to personalize at scale when pitching multiple prospects",

@@ -37,7 +37,7 @@ export default function IndustriesPage() {
             PitchBoost works for anyone who pitches
           </h1>
           <p style={{ color: "var(--ds-text-light)", fontSize: "1.1rem", maxWidth: 520, margin: "0 auto", lineHeight: 1.7 }}>
-            From enterprise sales teams to solo contractors — if you need to look polished and win business, PitchBoost builds the deck.
+            From enterprise sales teams to solo contractors, if you need to look polished and win business, PitchBoost builds the deck.
           </p>
         </div>
       </section>
