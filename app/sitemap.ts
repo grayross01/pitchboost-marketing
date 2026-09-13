@@ -5,6 +5,7 @@ import { FEATURES } from "@/lib/features";
 import { CITIES } from "@/lib/cities";
 import { NET_SHEET_STATES } from "@/lib/net-sheet-states";
 import { REDESIGNS, getRedesigns } from "@/lib/redesigns";
+import { ANSWERS } from "@/lib/answers";
 import { getAllPosts } from "@/lib/blog";
 import { STATIC_PAGE_DATES, FEATURE_PAGE_DATES, INDUSTRIES_UPDATED, COMPETITORS_UPDATED, REDESIGNS_UPDATED, CITIES_UPDATED, NET_SHEET_UPDATED } from "@/lib/page-dates";
 
@@ -76,6 +77,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
         alternates: { languages },
       });
     }
+  }
+  entries.push({ url: `${BASE}/answers`, changeFrequency: "monthly", priority: 0.8, lastModified: STATIC_PAGE_DATES["/answers"] });
+  for (const a of ANSWERS) {
+    entries.push({ url: `${BASE}/answers/${a.slug}`, changeFrequency: "monthly", priority: 0.8, lastModified: a.updated });
   }
   for (const i of INDUSTRIES) {
     entries.push({ url: `${BASE}/industries/${i.slug}`, changeFrequency: "monthly", priority: 0.8, lastModified: INDUSTRIES_UPDATED });

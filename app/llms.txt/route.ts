@@ -2,6 +2,7 @@ import { INDUSTRIES } from "@/lib/industries";
 import { FEATURES } from "@/lib/features";
 import { REDESIGNS } from "@/lib/redesigns";
 import { COMPETITORS } from "@/lib/competitors";
+import { ANSWERS } from "@/lib/answers";
 
 /**
  * /llms.txt, a plain-text map of the site for LLMs and AI agents, following
@@ -44,6 +45,11 @@ export function GET() {
     ...REDESIGNS.map((r) => `- [${r.navLabel}](${BASE}/redesign/${r.slug}): ${r.metaDescription}`),
     `- [Rediseño de presentaciones (Español)](${BASE}/es/redesign): the same redesign pages in Spanish`,
     `- [Redesign de apresentações (Português)](${BASE}/pt/redesign): the same redesign pages in Brazilian Portuguese`,
+    "",
+    "## Straight answers",
+    "",
+    "Short answers with the number in the first sentence: cost, length, timing and what makes a deck look professional.",
+    ...ANSWERS.map((a) => `- [${a.question}](${BASE}/answers/${a.slug}): ${a.shortAnswer.split(". ")[0]}.`),
     "",
     "## By industry",
     "",

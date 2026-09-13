@@ -26,6 +26,7 @@ export const STATIC_PAGE_DATES: Record<string, string> = {
   "/privacy": "2026-09-12",
   "/terms": "2026-07-07",
   "/features": "2026-08-31",
+  "/answers": "2026-09-12",
   "/redesign": "2026-09-08",
 };
 
