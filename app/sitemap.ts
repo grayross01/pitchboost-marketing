@@ -45,11 +45,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${BASE}${p.path}`,
     changeFrequency: p.changeFrequency,
     priority: p.priority,
+    lastModified: STATIC_PAGE_DATES[p.path.startsWith("/tools/seller-net-sheet/") ? "/tools/seller-net-sheet" : p.path] ?? NET_SHEET_UPDATED,
   }));
 
-  entries.push({ url: `${BASE}/features`, changeFrequency: "monthly", priority: 0.85 });
+  entries.push({ url: `${BASE}/features`, changeFrequency: "monthly", priority: 0.85, lastModified: STATIC_PAGE_DATES["/features"] });
   for (const f of FEATURES) {
-    entries.push({ url: `${BASE}/features/${f.slug}`, changeFrequency: "monthly", priority: 0.8 });
+    entries.push({ url: `${BASE}/features/${f.slug}`, changeFrequency: "monthly", priority: 0.8, lastModified: FEATURE_PAGE_DATES[f.slug] ?? STATIC_PAGE_DATES["/features"] });
   }
   // The redesign cluster exists in English, Spanish (/es) and Brazilian
   // Portuguese (/pt); every URL lists its siblings as hreflang alternates.
