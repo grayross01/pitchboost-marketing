@@ -169,6 +169,34 @@ export default async function ComparePage({ params }: Props) {
         </div>
       </section>
 
+      {/* Prices and limits: the numbers assistants and buyers actually compare,
+          checked against the competitor's published pricing on the date shown. */}
+      {competitor.specs && competitor.specs.length > 0 && (
+        <section className="mkt-section">
+          <div className="mkt-container">
+            <div className="section-header wide-header fade-up">
+              <div className="section-label"><span>Prices and limits</span></div>
+              <h2>PitchBoost vs {competitor.name}: plans, prices and caps</h2>
+              <p>Checked against {competitor.name}&apos;s published pricing on {competitor.updated ?? COMPETITORS_UPDATED}. Prices are list prices in USD; annual billing is cheaper on both sides.</p>
+            </div>
+            <div className="fade-up" style={{ maxWidth: 900, margin: "48px auto 0", borderRadius: 16, overflow: "hidden", border: "1px solid var(--ds-border)", overflowX: "auto" }}>
+              <div style={{ display: "grid", gridTemplateColumns: "180px 1fr 1fr", background: "var(--ds-dark)", padding: "14px 24px", gap: 16 }}>
+                <div style={{ fontSize: 12, fontWeight: 600, color: "rgba(255,255,255,0.5)", textTransform: "uppercase", letterSpacing: "0.06em" }}>What</div>
+                <div style={{ fontSize: 12, fontWeight: 700, color: "#5ECEAB", textTransform: "uppercase", letterSpacing: "0.06em" }}>PitchBoost</div>
+                <div style={{ fontSize: 12, fontWeight: 600, color: "rgba(255,255,255,0.5)", textTransform: "uppercase", letterSpacing: "0.06em" }}>{competitor.name}</div>
+              </div>
+              {competitor.specs.map((row, i) => (
+                <div key={row.label} style={{ display: "grid", gridTemplateColumns: "180px 1fr 1fr", padding: "14px 24px", gap: 16, background: i % 2 ? "var(--ds-bg-light)" : "var(--ds-bg)", borderTop: "1px solid var(--ds-border)" }}>
+                  <span style={{ fontSize: 13, color: "var(--ds-text-primary)", fontWeight: 600 }}>{row.label}</span>
+                  <span style={{ fontSize: 13, color: "#1F6B6B", fontWeight: 500, lineHeight: 1.5 }}>{row.pitchboost}</span>
+                  <span style={{ fontSize: 13, color: "var(--ds-text-secondary)", lineHeight: 1.5 }}>{row.competitor}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* ── Key Differences ── */}
       <section className="mkt-section">
         <div className="mkt-container">
