@@ -8,11 +8,11 @@ export const metadata: Metadata = {
   alternates: { canonical: "/features/output-types" },
   title: "Output Types: Pitch Decks, Proposals, One-Sheets & More",
   description:
-    "PitchBoost builds the right format for every sales situation — pitch decks, business proposals, one-sheets, buyer FAQs, and more. Each output is structured for its specific purpose and personalized to your prospect.",
+    "PitchBoost builds the right format for every sales situation, pitch decks, business proposals, one-sheets, buyer FAQs, and more. Each output is structured for its specific purpose and personalized to your prospect.",
   openGraph: {
     title: "Output Types: Pitch Decks, Proposals, One-Sheets & More",
     description:
-      "PitchBoost builds the right format for every sales situation — pitch decks, business proposals, one-sheets, buyer FAQs, and more.",
+      "PitchBoost builds the right format for every sales situation, pitch decks, business proposals, one-sheets, buyer FAQs, and more.",
     images: [{ url: "https://pitchboost.ai/og-image.png", width: 1310, height: 820 }],
   },
 };
@@ -30,7 +30,7 @@ const OUTPUT_TYPES = [
     label: "Pitch Decks",
     when: "Best for: sales calls, demos, and first meetings",
     description:
-      "A structured deck that walks your prospect through the problem, your solution, why you're the right fit, and what happens next. PitchBoost builds the narrative around this specific buyer — their industry, their pain points, and what they've told you matters.",
+      "A structured deck that walks your prospect through the problem, your solution, why you're the right fit, and what happens next. PitchBoost builds the narrative around this specific buyer, their industry, their pain points, and what they've told you matters.",
     bullets: [
       "Problem/solution narrative tailored to this prospect",
       "Capability highlights most relevant to their situation",
@@ -47,7 +47,7 @@ const OUTPUT_TYPES = [
     label: "Sales Presentations",
     when: "Best for: walkthroughs, product demos, and executive reviews",
     description:
-      "A longer-form presentation designed to be walked through live — with a narrative that builds as the meeting progresses. PitchBoost structures the flow for the specific type of conversation you're having, whether that's a discovery call, a demo, or a final review.",
+      "A longer-form presentation designed to be walked through live, with a narrative that builds as the meeting progresses. PitchBoost structures the flow for the specific type of conversation you're having, whether that's a discovery call, a demo, or a final review.",
     bullets: [
       "Flow designed for a live walkthrough, not passive reading",
       "Discovery-aligned framing based on what you know about the prospect",
@@ -81,7 +81,7 @@ const OUTPUT_TYPES = [
     label: "One-Sheets",
     when: "Best for: leave-behinds, email attachments, and follow-ups",
     description:
-      "A single-page summary of why you&apos;re the right fit for this opportunity — designed to be shared after a meeting or attached to an email. Concise, visually clean, and personalized to reinforce the specific points that came up in the conversation.",
+      "A single-page summary of why you&apos;re the right fit for this opportunity, designed to be shared after a meeting or attached to an email. Concise, visually clean, and personalized to reinforce the specific points that came up in the conversation.",
     bullets: [
       "Single-page format optimized for quick reading",
       "Highlights the most relevant capabilities for this prospect",
@@ -98,7 +98,7 @@ const OUTPUT_TYPES = [
     label: "Buyer FAQs",
     when: "Best for: complex sales cycles, technical buyers, and multi-stakeholder deals",
     description:
-      "A structured FAQ document that anticipates and answers the questions this specific prospect is most likely to have — based on their industry, their role, and the deal context you provide. Helps you get ahead of objections before they stall the deal.",
+      "A structured FAQ document that anticipates and answers the questions this specific prospect is most likely to have, based on their industry, their role, and the deal context you provide. Helps you get ahead of objections before they stall the deal.",
     bullets: [
       "Questions anticipated based on prospect context and deal stage",
       "Answers written in plain language, not sales language",
@@ -124,8 +124,9 @@ export default function OutputTypesPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Output Types — Pitch Decks, Proposals, One-Sheets & More",
-    description: "PitchBoost builds the right format for every sales situation — pitch decks, proposals, one-sheets, buyer FAQs, and more.",
+    dateModified: "2026-09-12",
+    name: "Output Types: Pitch Decks, Proposals, One-Sheets & More",
+    description: "PitchBoost builds the right format for every sales situation, pitch decks, proposals, one-sheets, buyer FAQs, and more.",
     url: "https://pitchboost.ai/features/output-types",
     publisher: { "@type": "Organization", name: "PitchBoost", url: "https://pitchboost.ai" },
   };
@@ -159,7 +160,7 @@ export default function OutputTypesPage() {
             The right format for every deal and every conversation
           </h1>
           <p style={{ color: "var(--ds-text-light)", fontSize: "1.1rem", maxWidth: 620, margin: "0 auto 36px", lineHeight: 1.7 }}>
-            Different opportunities call for different materials. PitchBoost builds pitch decks, sales presentations, business proposals, one-sheets, and buyer FAQs — each structured for its purpose and personalized to the prospect in front of you.
+            Different opportunities call for different materials. PitchBoost builds pitch decks, sales presentations, business proposals, one-sheets, and buyer FAQs, each structured for its purpose and personalized to the prospect in front of you.
           </p>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 16, flexWrap: "wrap" }}>
             <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Start Building Free</a>
@@ -174,7 +175,7 @@ export default function OutputTypesPage() {
           <div className="section-header wide-header fade-up">
             <div className="section-label"><span>Formats</span></div>
             <h2>Five formats. One platform. Every deal covered.</h2>
-            <p>PitchBoost knows the difference between a pitch deck and a proposal — and builds each one with the structure, flow, and content that format actually needs.</p>
+            <p>PitchBoost knows the difference between a pitch deck and a proposal, and builds each one with the structure, flow, and content that format actually needs.</p>
           </div>
           <div className="fade-up" style={{ display: "flex", flexDirection: "column", gap: 24, marginTop: 48 }}>
             {OUTPUT_TYPES.map(({ label, when, description, bullets, icon }) => (
@@ -228,7 +229,7 @@ export default function OutputTypesPage() {
         <div className="mkt-container">
           <div className="cta-box fade-up">
             <h2>Every format you need. Every prospect covered.</h2>
-            <p>Build your first pitch deck, proposal, or one-sheet free — no design skills required, no credit card needed.</p>
+            <p>Build your first pitch deck, proposal, or one-sheet free, no design skills required, no credit card needed.</p>
             <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Start Building Free</a>
           </div>
         </div>

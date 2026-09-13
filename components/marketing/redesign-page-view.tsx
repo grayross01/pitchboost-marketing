@@ -1,3 +1,4 @@
+import { REDESIGNS_UPDATED } from "@/lib/page-dates";
 import type { Metadata } from "next";
 import Link from "next/link";
 import HtmlLang from "@/components/marketing/html-lang";
@@ -67,6 +68,7 @@ export default function RedesignPageView({ locale, page }: { locale: Locale; pag
     description: page.metaDescription,
     url: pageUrl,
     inLanguage: locale,
+    dateModified: page.updated ?? REDESIGNS_UPDATED,
     publisher: { "@type": "Organization", name: "PitchBoost", url: BASE },
   };
   const breadcrumbSchema = {

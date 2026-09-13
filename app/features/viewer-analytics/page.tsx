@@ -28,7 +28,7 @@ function CheckIcon() {
 const METRICS = [
   {
     title: "Who opened it and when",
-    body: "Know the moment your prospect opens your deck — so you can follow up while it&apos;s top of mind. If they haven&apos;t opened it in three days, you know to follow up differently than if they just finished reading it.",
+    body: "Know the moment your prospect opens your deck, so you can follow up while it&apos;s top of mind. If they haven&apos;t opened it in three days, you know to follow up differently than if they just finished reading it.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" />
@@ -46,7 +46,7 @@ const METRICS = [
   },
   {
     title: "Return visits",
-    body: "Know when your prospect comes back to the deck for a second or third look. Return visits are one of the strongest buying signals — and they tell you when to reach out and what to emphasize.",
+    body: "Know when your prospect comes back to the deck for a second or third look. Return visits are one of the strongest buying signals, and they tell you when to reach out and what to emphasize.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <polyline points="1 4 1 10 7 10" /><path d="M3.51 15a9 9 0 1 0 .49-3.51" />
@@ -67,11 +67,11 @@ const METRICS = [
 const FOLLOWUP_SCENARIOS = [
   {
     signal: "They just opened it",
-    action: "Follow up within the hour — the deck is fresh and you&apos;re top of mind.",
+    action: "Follow up within the hour, the deck is fresh and you&apos;re top of mind.",
   },
   {
     signal: "They spent 5+ minutes on pricing",
-    action: "Lead your follow-up with pricing clarity and ROI — they&apos;re evaluating the investment.",
+    action: "Lead your follow-up with pricing clarity and ROI, they&apos;re evaluating the investment.",
   },
   {
     signal: "They skipped the case studies",
@@ -79,17 +79,17 @@ const FOLLOWUP_SCENARIOS = [
   },
   {
     signal: "They came back three days later",
-    action: "Someone new is reviewing it — find out who and whether they need a separate conversation.",
+    action: "Someone new is reviewing it, find out who and whether they need a separate conversation.",
   },
 ];
 
 const BULLETS = [
-  "See every view — time, device, and duration",
+  "See every view, time, device, and duration",
   "Slide-by-slide time tracking across the full deck",
   "Return visit notifications",
   "Completion rate per viewer and per deck",
   "Analytics for all your decks in one dashboard",
-  "Works automatically — no setup required per deck",
+  "Works automatically, no setup required per deck",
 ];
 
 const RELATED = [
@@ -103,7 +103,8 @@ export default function ViewerAnalyticsPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Viewer Analytics — Know How Your Pitch Deck Landed",
+    dateModified: "2026-09-12",
+    name: "Viewer Analytics: Know How Your Pitch Deck Landed",
     description: "See who opened your deck, which slides they spent time on, and when they came back for a second look.",
     url: "https://pitchboost.ai/features/viewer-analytics",
     publisher: { "@type": "Organization", name: "PitchBoost", url: "https://pitchboost.ai" },
@@ -138,7 +139,7 @@ export default function ViewerAnalyticsPage() {
             Stop guessing. Know exactly how your deck landed.
           </h1>
           <p style={{ color: "var(--ds-text-light)", fontSize: "1.1rem", maxWidth: 600, margin: "0 auto 36px", lineHeight: 1.7 }}>
-            Every time someone opens your deck, PitchBoost tracks who viewed it, which slides held their attention, how long they spent, and when they came back. Follow up with the right message at exactly the right moment — based on what they actually read.
+            Every time someone opens your deck, PitchBoost tracks who viewed it, which slides held their attention, how long they spent, and when they came back. Follow up with the right message at exactly the right moment, based on what they actually read.
           </p>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 16, flexWrap: "wrap" }}>
             <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Start Tracking Free</a>
@@ -160,7 +161,7 @@ export default function ViewerAnalyticsPage() {
           <div className="section-header wide-header fade-up">
             <div className="section-label"><span>What you can track</span></div>
             <h2>Four signals that change how you follow up</h2>
-            <p>Sending a deck without analytics is like making a call and hanging up before they answer. PitchBoost tells you what happened after you hit send — so you know what to do next.</p>
+            <p>Sending a deck without analytics is like making a call and hanging up before they answer. PitchBoost tells you what happened after you hit send, so you know what to do next.</p>
           </div>
           <div className="fade-up" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 20, marginTop: 48 }}>
             {METRICS.map(({ title, body, icon }) => (
@@ -181,7 +182,7 @@ export default function ViewerAnalyticsPage() {
         <div className="mkt-container">
           <div className="section-header wide-header fade-up">
             <div className="section-label"><span>How to use it</span></div>
-            <h2>What the signals tell you — and what to do next</h2>
+            <h2>What the signals tell you, and what to do next</h2>
             <p>Analytics are only useful if you know what to do with them. Here&apos;s how to turn viewer data into better follow-ups.</p>
           </div>
           <div className="fade-up" style={{ display: "flex", flexDirection: "column", gap: 16, marginTop: 48, maxWidth: 720, margin: "48px auto 0" }}>
@@ -244,7 +245,7 @@ export default function ViewerAnalyticsPage() {
         <div className="mkt-container">
           <div className="cta-box fade-up">
             <h2>Follow up smarter. Close more deals.</h2>
-            <p>Build your first personalized deck free and see exactly how it lands — every view, every slide, every return visit.</p>
+            <p>Build your first personalized deck free and see exactly how it lands, every view, every slide, every return visit.</p>
             <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Start Tracking Free</a>
           </div>
         </div>

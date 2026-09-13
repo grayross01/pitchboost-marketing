@@ -67,17 +67,17 @@ export default function PrivacyPage() {
         </p>
         <ul>
           <li>
-            <strong>Auth0</strong> — authentication and identity management.
+            <strong>Auth0</strong>, authentication and identity management.
           </li>
           <li>
-            <strong>Stripe</strong> — payment processing and subscription
+            <strong>Stripe</strong>, payment processing and subscription
             management.
           </li>
           <li>
-            <strong>Vercel</strong> — hosting and infrastructure.
+            <strong>Vercel</strong>, hosting and infrastructure.
           </li>
           <li>
-            <strong>Anthropic (Claude)</strong> — AI content generation. Deck
+            <strong>Anthropic (Claude)</strong>, AI content generation. Deck
             content you provide is sent to Anthropic&apos;s API for processing.
             Refer to{" "}
             <a

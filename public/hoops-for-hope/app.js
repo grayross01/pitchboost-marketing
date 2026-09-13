@@ -1,5 +1,5 @@
 /* ============================================================
-   18 HOURS OF HOPE — Landing Page JS
+   18 HOURS OF HOPE, Landing Page JS
 
    ▶ TO GO LIVE: Update the CONFIG block below.
      1. Replace each Stripe Payment Link URL with one you create
@@ -10,7 +10,7 @@
    ============================================================ */
 
 const CONFIG = {
-  // Stripe Payment Links — create these in your Stripe dashboard
+  // Stripe Payment Links, create these in your Stripe dashboard
   // and paste the resulting URLs here.
   paymentLinks: {
     donate:               'https://donate.stripe.com/REPLACE_ME_GENERIC_DONATION',
@@ -38,12 +38,12 @@ const CONFIG = {
   // Event details
   event: {
     date: 'Saturday, October 17, 2026',  // ← update this
-    location: 'Loudoun County, VA — Venue TBA',  // ← update this
+    location: 'Loudoun County, VA, Venue TBA',  // ← update this
     contactEmail: 'hello@hopefullcollective.org',
   },
 };
 
-// Themed hours from the event PDF — order maps to the 8 AM start
+// Themed hours from the event PDF, order maps to the 8 AM start
 const THEMED_HOURS = [
   { time: '8:00 AM',  theme: 'First Shot',           sponsored: false, milestone: true },
   { time: '9:00 AM',  theme: 'Corporate Leadership', sponsored: false },
@@ -232,7 +232,7 @@ function initModalListeners() {
 }
 
 /* ============================================================
-   SLOT PICKER MODAL — Rebounder or Hour Sponsor
+   SLOT PICKER MODAL, Rebounder or Hour Sponsor
    ============================================================ */
 
 function openSlotPicker({ mode = 'rebounder', preselectIndex = null } = {}) {
@@ -455,11 +455,11 @@ async function submitForm(payload, submitBtn) {
 
   try {
     if (isPlaceholder(CONFIG.formspreeEndpoint)) {
-      // No backend configured — log to console + show success-style toast
+      // No backend configured, log to console + show success-style toast
       console.warn('[18 Hours of Hope] Formspree endpoint not configured. Payload:', payload);
       await new Promise((r) => setTimeout(r, 600));
       closeModal();
-      showToast(`Got it! We'll be in touch at ${payload.email}. (Demo mode — wire up Formspree in app.js)`, 'success');
+      showToast(`Got it! We'll be in touch at ${payload.email}. (Demo mode, wire up Formspree in app.js)`, 'success');
       return;
     }
 
@@ -536,7 +536,7 @@ function initNewsletter() {
       showToast('Thanks! You\'re on the list.', 'success');
       form.reset();
     } catch {
-      showToast('Could not subscribe — try again later.', 'error');
+      showToast('Could not subscribe, try again later.', 'error');
     } finally {
       btn.disabled = false;
       btn.textContent = 'Sign Up';

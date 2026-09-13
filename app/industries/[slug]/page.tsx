@@ -157,7 +157,7 @@ export default async function IndustryPage({ params }: Props) {
           <div className="section-header wide-header fade-up">
             <div className="section-label"><span>See it in action</span></div>
             <h2>A real {shortLabel} {industryTerm}, built with PitchBoost</h2>
-            <p>Personalized to a specific prospect and their business — generated in a few minutes.</p>
+            <p>Personalized to a specific prospect and their business, generated in a few minutes.</p>
           </div>
           <div className="fade-up" style={{ marginTop: 48, borderRadius: 16, overflow: "hidden", border: "1px solid var(--ds-border)", background: "var(--ds-bg-light)", minHeight: 520, display: "flex", alignItems: "center", justifyContent: "center" }}>
             {industry.sampleDeckUrl ? (
@@ -169,7 +169,7 @@ export default async function IndustryPage({ params }: Props) {
             )}
           </div>
           <p style={{ textAlign: "center", fontSize: 12, color: "var(--ds-text-tertiary)", marginTop: 16 }}>
-            Interactive {industryTerm} — built with PitchBoost in a few minutes.
+            Interactive {industryTerm}, built with PitchBoost in a few minutes.
           </p>
         </div>
       </section>
@@ -179,7 +179,7 @@ export default async function IndustryPage({ params }: Props) {
         <div className="mkt-container">
           <div className="section-header wide-header fade-up">
             <div className="section-label"><span>Sales materials</span></div>
-            <h2>Common {shortLabel} sales materials — and where most fall short</h2>
+            <h2>Common {shortLabel} sales materials, and where most fall short</h2>
             <p>Most {shortLabelPlural} rely on a mix of documents to win new business. The challenge is making each one feel like it was built for the specific client in the room.</p>
           </div>
           <div className="fade-up" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20, marginTop: 48 }}>
@@ -221,7 +221,7 @@ export default async function IndustryPage({ params }: Props) {
           <div className="section-header wide-header fade-up">
             <div className="section-label"><span>What to include</span></div>
             <h2>What to include in a strong {shortLabel} {industryTerm}</h2>
-            <p>The difference between a {industryTerm} that wins and one that gets &ldquo;we&apos;ll think about it&rdquo; is how specifically it addresses this client&apos;s situation — not how polished the template looks.</p>
+            <p>The difference between a {industryTerm} that wins and one that gets &ldquo;we&apos;ll think about it&rdquo; is how specifically it addresses this client&apos;s situation, not how polished the template looks.</p>
           </div>
           <div className="fade-up" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 16, marginTop: 48, maxWidth: 900, margin: "48px auto 0" }}>
             {industry.whatToInclude.map((item) => (
@@ -233,7 +233,7 @@ export default async function IndustryPage({ params }: Props) {
           </div>
           <div className="fade-up" style={{ textAlign: "center", marginTop: 40 }}>
             <p style={{ fontSize: 15, color: "var(--ds-text-secondary)", marginBottom: 20 }}>
-              PitchBoost pulls all of this from your existing credentials and the prospect&apos;s context — automatically.
+              PitchBoost pulls all of this from your existing credentials and the prospect&apos;s context, automatically.
             </p>
             <a href={signupUrl} className="btn btn-primary">Build your first {industryTerm} free</a>
           </div>
@@ -328,7 +328,7 @@ export default async function IndustryPage({ params }: Props) {
           <div className="cta-box">
             <h2>{industry.ctaHeadline}</h2>
             <p>
-              Stop adapting generic templates. Generate your first tailored {industryTerm} free — no design skills required, no credit card needed.
+              Stop adapting generic templates. Generate your first tailored {industryTerm} free, no design skills required, no credit card needed.
             </p>
             <a href={signupUrl} className="btn btn-primary btn-lg">
               Generate your {shortLabel} {industryTerm} free

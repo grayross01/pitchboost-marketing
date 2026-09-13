@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/features/templates-and-slides" },
   title: "Templates & Saved Slides: Reuse Your Best Work",
   description:
-    "Save any deck as a reusable template or save individual slides to a library. Build once, reuse for every new prospect — with AI personalization applied each time.",
+    "Save any deck as a reusable template or save individual slides to a library. Build once, reuse for every new prospect, with AI personalization applied each time.",
   openGraph: {
     title: "Templates & Saved Slides: Reuse Your Best Work",
     description:
@@ -28,7 +28,7 @@ function CheckIcon() {
 const FEATURES = [
   {
     title: "Template library",
-    body: "Save any completed deck as a template — the structure, the slide order, the section logic — and use it as the starting point for your next build. PitchBoost personalizes the copy for each new prospect while keeping the framework you've refined.",
+    body: "Save any completed deck as a template, the structure, the slide order, the section logic, and use it as the starting point for your next build. PitchBoost personalizes the copy for each new prospect while keeping the framework you've refined.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="2" y="3" width="20" height="14" rx="2" ry="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" />
@@ -37,7 +37,7 @@ const FEATURES = [
   },
   {
     title: "Saved slide library",
-    body: "Some slides should appear in every deck — a specific case study, a team credentials slide, a pricing overview. Save individual slides to your library and insert them into any new deck without rebuilding or reformatting.",
+    body: "Some slides should appear in every deck, a specific case study, a team credentials slide, a pricing overview. Save individual slides to your library and insert them into any new deck without rebuilding or reformatting.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z" /><polyline points="17 21 17 13 7 13 7 21" /><polyline points="7 3 7 8 15 8" />
@@ -46,7 +46,7 @@ const FEATURES = [
   },
   {
     title: "Shared team libraries",
-    body: "Templates and saved slides are available to your entire team — not locked to the person who built them. Everyone pitches from the same approved baseline, and quality stays consistent whether a rep builds their own deck or uses a team template.",
+    body: "Templates and saved slides are available to your entire team, not locked to the person who built them. Everyone pitches from the same approved baseline, and quality stays consistent whether a rep builds their own deck or uses a team template.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />
@@ -59,7 +59,7 @@ const STEPS = [
   {
     step: 1,
     title: "Build and refine your deck",
-    body: "Use the AI deck builder to create a presentation you're happy with — the structure, the flow, the sections. Refine it until it represents how you want to pitch.",
+    body: "Use the AI deck builder to create a presentation you're happy with, the structure, the flow, the sections. Refine it until it represents how you want to pitch.",
   },
   {
     step: 2,
@@ -69,7 +69,7 @@ const STEPS = [
   {
     step: 3,
     title: "Start every new deck from what's already worked",
-    body: "When building a new deck for a new prospect, choose your template as the starting point. PitchBoost keeps the structure and personalizes the copy for the new opportunity — no starting over.",
+    body: "When building a new deck for a new prospect, choose your template as the starting point. PitchBoost keeps the structure and personalizes the copy for the new opportunity, no starting over.",
   },
 ];
 
@@ -93,7 +93,8 @@ export default function TemplatesAndSlidesPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Templates & Saved Slides — Reuse Your Best Work",
+    dateModified: "2026-09-12",
+    name: "Templates & Saved Slides: Reuse Your Best Work",
     description: "Save any deck as a reusable template or save individual slides to a library. Build once, reuse for every new prospect.",
     url: "https://pitchboost.ai/features/templates-and-slides",
     publisher: { "@type": "Organization", name: "PitchBoost", url: "https://pitchboost.ai" },
@@ -128,7 +129,7 @@ export default function TemplatesAndSlidesPage() {
             Build your best pitch once. Reuse it for every prospect.
           </h1>
           <p style={{ color: "var(--ds-text-light)", fontSize: "1.1rem", maxWidth: 600, margin: "0 auto 36px", lineHeight: 1.7 }}>
-            Save any deck as a reusable template and save individual slides to a shared library. PitchBoost personalizes the content for each new prospect — so you compound the work you&apos;ve already done instead of starting from scratch every time.
+            Save any deck as a reusable template and save individual slides to a shared library. PitchBoost personalizes the content for each new prospect, so you compound the work you&apos;ve already done instead of starting from scratch every time.
           </p>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 16, flexWrap: "wrap" }}>
             <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Start Building Free</a>

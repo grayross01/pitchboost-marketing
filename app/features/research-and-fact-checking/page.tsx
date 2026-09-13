@@ -84,6 +84,7 @@ export default function ResearchAndFactCheckingPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
+    dateModified: "2026-08-24",
     name: "Research & Fact-Checking: AI Decks With Cited Sources",
     description:
       "PitchBoost researches your prospect while it writes, cites every stat on the slide, and removes anything it cannot source.",

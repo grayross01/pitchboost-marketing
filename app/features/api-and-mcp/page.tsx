@@ -8,11 +8,11 @@ export const metadata: Metadata = {
   alternates: { canonical: "/features/api-and-mcp" },
   title: "API & MCP: Build Better Pitch Decks from Claude or Your AI Stack",
   description:
-    "Connect PitchBoost to Claude, Cursor, or your own AI workflows. Get professionally structured decks with your brand, templates, and team libraries — not raw AI slide files.",
+    "Connect PitchBoost to Claude, Cursor, or your own AI workflows. Get professionally structured decks with your brand, templates, and team libraries, not raw AI slide files.",
   openGraph: {
     title: "API & MCP: Build Better Pitch Decks from Claude or Your AI Stack",
     description:
-      "Connect PitchBoost to Claude, Cursor, or your own AI workflows. Get professionally structured decks with your brand, templates, and team libraries — not raw AI slide files.",
+      "Connect PitchBoost to Claude, Cursor, or your own AI workflows. Get professionally structured decks with your brand, templates, and team libraries, not raw AI slide files.",
     images: [{ url: "https://pitchboost.ai/og-image.png", width: 1310, height: 820 }],
   },
 };
@@ -28,7 +28,7 @@ function CheckIcon() {
 const BENEFITS = [
   {
     title: "Your brand, automatically applied",
-    body: "Every deck generated through the API or MCP uses your team's brand kit — logo, colors, fonts, and design system. You get a finished presentation, not a raw file you have to clean up.",
+    body: "Every deck generated through the API or MCP uses your team's brand kit, logo, colors, fonts, and design system. You get a finished presentation, not a raw file you have to clean up.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="3" /><path d="M19.07 4.93a10 10 0 0 1 0 14.14" /><path d="M4.93 4.93a10 10 0 0 0 0 14.14" />
@@ -37,7 +37,7 @@ const BENEFITS = [
   },
   {
     title: "Built on templates your team has already approved",
-    body: "Generated decks pull from your saved template library — the same foundation your team uses when building in the app. Consistent structure, consistent quality, every time.",
+    body: "Generated decks pull from your saved template library, the same foundation your team uses when building in the app. Consistent structure, consistent quality, every time.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="3" y="3" width="7" height="7" /><rect x="14" y="3" width="7" height="7" /><rect x="14" y="14" width="7" height="7" /><rect x="3" y="14" width="7" height="7" />
@@ -46,7 +46,7 @@ const BENEFITS = [
   },
   {
     title: "Shared across your whole team",
-    body: "Decks generated via API or MCP land in your team workspace — visible to admins, trackable in analytics, and sharable from a single place. Not siloed to whoever triggered the generation.",
+    body: "Decks generated via API or MCP land in your team workspace, visible to admins, trackable in analytics, and sharable from a single place. Not siloed to whoever triggered the generation.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />
@@ -55,7 +55,7 @@ const BENEFITS = [
   },
   {
     title: "Published with viewer analytics",
-    body: "Every generated deck gets a shareable link with full tracking — who opened it, which slides they spent time on, and when they came back. You close the loop on every deck you send.",
+    body: "Every generated deck gets a shareable link with full tracking, who opened it, which slides they spent time on, and when they came back. You close the loop on every deck you send.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <line x1="18" y1="20" x2="18" y2="10" /><line x1="12" y1="20" x2="12" y2="4" /><line x1="6" y1="20" x2="6" y2="14" />
@@ -64,7 +64,7 @@ const BENEFITS = [
   },
   {
     title: "Output quality built over thousands of decks",
-    body: "PitchBoost's prompts, structure, and output formats have been refined across thousands of real pitch decks, proposals, and presentations. You get that experience baked into every deck your AI generates — not a generic slide template.",
+    body: "PitchBoost's prompts, structure, and output formats have been refined across thousands of real pitch decks, proposals, and presentations. You get that experience baked into every deck your AI generates, not a generic slide template.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
@@ -73,7 +73,7 @@ const BENEFITS = [
   },
   {
     title: "Custom domain hosting included",
-    body: "Decks publish to your custom domain — not a generic pitchboost.ai link. Prospects open a URL that looks like yours, with the professionalism that matches the quality of the deck.",
+    body: "Decks publish to your custom domain, not a generic pitchboost.ai link. Prospects open a URL that looks like yours, with the professionalism that matches the quality of the deck.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
@@ -86,7 +86,7 @@ const API_VS_MCP = [
   {
     label: "REST API",
     who: "Developers and integrations",
-    description: "A standard REST API for triggering deck generation from any system that can make HTTP requests — CRMs, automation tools, internal apps, or outbound sequences.",
+    description: "A standard REST API for triggering deck generation from any system that can make HTTP requests, CRMs, automation tools, internal apps, or outbound sequences.",
     bullets: [
       "Trigger personalized deck generation from any system",
       "Pass prospect context, deal notes, and output format",
@@ -97,10 +97,10 @@ const API_VS_MCP = [
   {
     label: "MCP Server",
     who: "Claude, Cursor, and AI-native workflows",
-    description: "Connect the PitchBoost MCP server to Claude or any MCP-compatible tool and generate decks through natural language. Describe the deal — the AI handles the rest.",
+    description: "Connect the PitchBoost MCP server to Claude or any MCP-compatible tool and generate decks through natural language. Describe the deal, the AI handles the rest.",
     bullets: [
       "Works with Claude, Cursor, Windsurf, and other MCP tools",
-      "Generate decks through plain language — no structured inputs",
+      "Generate decks through plain language, no structured inputs",
       "Claude picks output format, structure, and content automatically",
       "No code required for end users once the server is configured",
     ],
@@ -121,19 +121,19 @@ const BULLETS = [
 const FAQS = [
   {
     q: "Why use PitchBoost's API instead of just prompting Claude directly?",
-    a: "When you prompt Claude directly, you get text or a rough slide structure. When you use PitchBoost through the API or MCP, you get a finished, branded deck — your logo, your colors, your templates, published to a shareable link with viewer analytics. The AI handles content; PitchBoost handles everything that makes it look and function like a real sales asset.",
+    a: "When you prompt Claude directly, you get text or a rough slide structure. When you use PitchBoost through the API or MCP, you get a finished, branded deck, your logo, your colors, your templates, published to a shareable link with viewer analytics. The AI handles content; PitchBoost handles everything that makes it look and function like a real sales asset.",
   },
   {
     q: "Do generated decks use my team's brand kit and templates?",
-    a: "Yes. Every deck generated via API or MCP pulls from your team's brand kit and template library — the same assets your team uses when building in the app. You don't get a generic output you have to clean up; you get something ready to send.",
+    a: "Yes. Every deck generated via API or MCP pulls from your team's brand kit and template library, the same assets your team uses when building in the app. You don't get a generic output you have to clean up; you get something ready to send.",
   },
   {
     q: "Can I see analytics on decks generated through the API?",
-    a: "Yes. Every generated deck gets a shareable link with full viewer tracking — opens, time per slide, return visits. Decks also appear in your team workspace so admins can see performance across everything that's been sent.",
+    a: "Yes. Every generated deck gets a shareable link with full viewer tracking, opens, time per slide, return visits. Decks also appear in your team workspace so admins can see performance across everything that's been sent.",
   },
   {
     q: "Can I build a pitch deck using Claude?",
-    a: "Yes. Connect the PitchBoost MCP server to Claude and generate personalized pitch decks and proposals through natural conversation. Describe the prospect, the opportunity, and what you want to achieve — Claude calls PitchBoost and returns a finished, branded deck you can share immediately.",
+    a: "Yes. Connect the PitchBoost MCP server to Claude and generate personalized pitch decks and proposals through natural conversation. Describe the prospect, the opportunity, and what you want to achieve, Claude calls PitchBoost and returns a finished, branded deck you can share immediately.",
   },
   {
     q: "Can I generate a client proposal using Claude or another AI tool?",
@@ -145,7 +145,7 @@ const FAQS = [
   },
   {
     q: "Can I trigger pitch deck generation from my CRM or sales automation tool?",
-    a: "Yes, via the REST API. Pass prospect data from your CRM — company name, industry, deal context, contact details — and the API returns a finished, branded deck link you can drop into your outreach or share directly with the prospect.",
+    a: "Yes, via the REST API. Pass prospect data from your CRM, company name, industry, deal context, contact details, and the API returns a finished, branded deck link you can drop into your outreach or share directly with the prospect.",
   },
   {
     q: "What AI tools work with the PitchBoost MCP server?",
@@ -153,11 +153,11 @@ const FAQS = [
   },
   {
     q: "Do I need to be a developer to use the API or MCP?",
-    a: "For the REST API, basic API familiarity is helpful. For the MCP server, non-developers can often connect it through Claude's interface without writing code — just configure the server endpoint and start asking Claude to build decks.",
+    a: "For the REST API, basic API familiarity is helpful. For the MCP server, non-developers can often connect it through Claude's interface without writing code, just configure the server endpoint and start asking Claude to build decks.",
   },
   {
     q: "Can I use the API to automate personalized outbound pitch decks at scale?",
-    a: "Yes. Teams use the API to generate a customized pitch deck or proposal for every new prospect as part of their outbound sequence — pulling context from the CRM and automatically producing a deck tailored to each company before the first call.",
+    a: "Yes. Teams use the API to generate a customized pitch deck or proposal for every new prospect as part of their outbound sequence, pulling context from the CRM and automatically producing a deck tailored to each company before the first call.",
   },
 ];
 
@@ -172,7 +172,8 @@ export default function ApiAndMcpPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "API & MCP — Build Better Pitch Decks from Claude or Your AI Stack",
+    dateModified: "2026-09-12",
+    name: "API & MCP: Build Better Pitch Decks from Claude or Your AI Stack",
     description:
       "Connect PitchBoost to Claude, Cursor, or your own AI workflows. Get professionally structured decks with your brand, templates, and team libraries.",
     url: "https://pitchboost.ai/features/api-and-mcp",
@@ -219,7 +220,7 @@ export default function ApiAndMcpPage() {
             Use Claude or your AI stack to build decks. Get a finished sales asset back.
           </h1>
           <p style={{ color: "var(--ds-text-light)", fontSize: "1.1rem", maxWidth: 640, margin: "0 auto 36px", lineHeight: 1.7 }}>
-            You already know you can build a pitch deck with Claude. The question is what you get back. With PitchBoost, the answer is a fully branded, structured deck — built on your templates, shared with your team, published to your custom domain, with viewer analytics on every open.
+            You already know you can build a pitch deck with Claude. The question is what you get back. With PitchBoost, the answer is a fully branded, structured deck, built on your templates, shared with your team, published to your custom domain, with viewer analytics on every open.
           </p>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 16, flexWrap: "wrap" }}>
             <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Get API Access</a>
@@ -262,7 +263,7 @@ export default function ApiAndMcpPage() {
         <div className="mkt-container">
           <div className="section-header wide-header fade-up">
             <div className="section-label"><span>Two ways to connect</span></div>
-            <h2>REST API or MCP server — pick what fits your workflow</h2>
+            <h2>REST API or MCP server, pick what fits your workflow</h2>
             <p>Both give you the same PitchBoost output. The difference is how you connect and who&apos;s using it.</p>
           </div>
           <div className="fade-up" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", gap: 24, marginTop: 48 }}>

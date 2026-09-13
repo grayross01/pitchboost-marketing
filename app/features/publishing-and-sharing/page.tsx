@@ -28,7 +28,7 @@ function CheckIcon() {
 const SHARING_OPTIONS = [
   {
     title: "Branded shareable link",
-    body: "Publish your deck as a live, interactive link your prospect opens in the browser — no download required, no account needed on their end. The link carries your branding and looks intentional, not like a Google Drive share.",
+    body: "Publish your deck as a live, interactive link your prospect opens in the browser, no download required, no account needed on their end. The link carries your branding and looks intentional, not like a Google Drive share.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" /><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
@@ -55,7 +55,7 @@ const SHARING_OPTIONS = [
   },
   {
     title: "Custom domain hosting",
-    body: "Host your presentations on your own domain instead of a pitchboost.ai URL. Your prospect sees your brand URL in the address bar — not a third-party platform — which adds professionalism and reinforces trust at the moment they open it.",
+    body: "Host your presentations on your own domain instead of a pitchboost.ai URL. Your prospect sees your brand URL in the address bar, not a third-party platform, which adds professionalism and reinforces trust at the moment they open it.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
@@ -67,7 +67,7 @@ const SHARING_OPTIONS = [
 const PRIVACY_OPTIONS = [
   {
     title: "Fully public",
-    body: "Anyone with the link can view the deck. Best for presentations you want to be easily shareable or discoverable — like a product overview or a general capabilities deck.",
+    body: "Anyone with the link can view the deck. Best for presentations you want to be easily shareable or discoverable, like a product overview or a general capabilities deck.",
   },
   {
     title: "Private tokenized link",
@@ -75,12 +75,12 @@ const PRIVACY_OPTIONS = [
   },
   {
     title: "Password protected",
-    body: "Add a password to your deck for situations that require an additional layer of access control — confidential proposals, sensitive pricing information, or deals where you need to verify who&apos;s viewing.",
+    body: "Add a password to your deck for situations that require an additional layer of access control, confidential proposals, sensitive pricing information, or deals where you need to verify who&apos;s viewing.",
   },
 ];
 
 const BULLETS = [
-  "Publish as a live branded link — no download required",
+  "Publish as a live branded link, no download required",
   "Export to PDF, preserving all layout and branding",
   "Export to .pptx for editable PowerPoint delivery",
   "Host on your own custom domain",
@@ -99,7 +99,8 @@ export default function PublishingAndSharingPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Publishing & Sharing — Share Pitch Decks as Links, PDF, PPT & More",
+    dateModified: "2026-09-12",
+    name: "Publishing & Sharing: Share Pitch Decks as Links, PDF, PPT & More",
     description: "Publish your deck as a branded link, export to PDF or PPT, host on your custom domain, and control who can view it.",
     url: "https://pitchboost.ai/features/publishing-and-sharing",
     publisher: { "@type": "Organization", name: "PitchBoost", url: "https://pitchboost.ai" },
@@ -134,7 +135,7 @@ export default function PublishingAndSharingPage() {
             Professional delivery for every pitch, proposal, and presentation
           </h1>
           <p style={{ color: "var(--ds-text-light)", fontSize: "1.1rem", maxWidth: 620, margin: "0 auto 36px", lineHeight: 1.7 }}>
-            Publish a branded interactive link, export to PDF or PowerPoint, host on your own domain, and control exactly who can access it. Every format, every privacy setting — from the same place you built the deck.
+            Publish a branded interactive link, export to PDF or PowerPoint, host on your own domain, and control exactly who can access it. Every format, every privacy setting, from the same place you built the deck.
           </p>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 16, flexWrap: "wrap" }}>
             <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Publish Your First Deck Free</a>
@@ -155,7 +156,7 @@ export default function PublishingAndSharingPage() {
         <div className="mkt-container">
           <div className="section-header wide-header fade-up">
             <div className="section-label"><span>How to share</span></div>
-            <h2>Four ways to deliver your deck — all included</h2>
+            <h2>Four ways to deliver your deck, all included</h2>
             <p>Different deals and different prospects call for different delivery methods. PitchBoost gives you all four without requiring different tools or workflows.</p>
           </div>
           <div className="fade-up" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 20, marginTop: 48 }}>
@@ -233,7 +234,7 @@ export default function PublishingAndSharingPage() {
       <section className="mkt-section cta-section">
         <div className="mkt-container">
           <div className="cta-box fade-up">
-            <h2>Built, published, and in their inbox — in minutes.</h2>
+            <h2>Built, published, and in their inbox, in minutes.</h2>
             <p>Generate your first personalized pitch deck free and share it as a branded link, PDF, or PowerPoint.</p>
             <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Publish Your First Deck Free</a>
           </div>

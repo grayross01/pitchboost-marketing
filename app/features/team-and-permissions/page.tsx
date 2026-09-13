@@ -28,7 +28,7 @@ function CheckIcon() {
 const FEATURES = [
   {
     title: "Unlimited team members",
-    body: "Add as many people as your team needs — reps, managers, designers, account executives. Everyone gets their own login and access to the tools appropriate for their role.",
+    body: "Add as many people as your team needs, reps, managers, designers, account executives. Everyone gets their own login and access to the tools appropriate for their role.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />
@@ -37,7 +37,7 @@ const FEATURES = [
   },
   {
     title: "Roles and access levels",
-    body: "Assign each team member the right level of access — admin for full control, member for building and editing, viewer for reviewing and sharing. Manage permissions without creating workarounds.",
+    body: "Assign each team member the right level of access, admin for full control, member for building and editing, viewer for reviewing and sharing. Manage permissions without creating workarounds.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" />
@@ -46,7 +46,7 @@ const FEATURES = [
   },
   {
     title: "Shared libraries",
-    body: "Brand assets, templates, and saved slides are available to the entire team — not locked to the person who created them. Everyone pitches from the same approved foundation.",
+    body: "Brand assets, templates, and saved slides are available to the entire team, not locked to the person who created them. Everyone pitches from the same approved foundation.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
@@ -58,7 +58,7 @@ const FEATURES = [
 const ROLES = [
   {
     role: "Admin",
-    description: "Full access — manage team members, permissions, brand kit, billing, and all shared libraries. Create, edit, and delete any deck across the workspace.",
+    description: "Full access, manage team members, permissions, brand kit, billing, and all shared libraries. Create, edit, and delete any deck across the workspace.",
     capabilities: ["Manage team members and roles", "Configure brand kit and shared libraries", "Access all decks and analytics across the workspace", "Manage billing and subscription"],
   },
   {
@@ -68,7 +68,7 @@ const ROLES = [
   },
   {
     role: "Viewer",
-    description: "Read-only access for stakeholders who need to review and share decks without editing them — managers reviewing output, clients with workspace access, or external collaborators.",
+    description: "Read-only access for stakeholders who need to review and share decks without editing them, managers reviewing output, clients with workspace access, or external collaborators.",
     capabilities: ["View and share existing decks", "Access analytics for decks they're shared on", "No editing or generation capabilities", "No access to billing or team settings"],
   },
 ];
@@ -93,7 +93,8 @@ export default function TeamAndPermissionsPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Team & Permissions — Collaborative Pitch Deck Software for Teams",
+    dateModified: "2026-09-12",
+    name: "Team & Permissions: Collaborative Pitch Deck Software for Teams",
     description: "Add unlimited team members, assign roles, and share brand assets and templates across your whole team.",
     url: "https://pitchboost.ai/features/team-and-permissions",
     publisher: { "@type": "Organization", name: "PitchBoost", url: "https://pitchboost.ai" },
@@ -128,7 +129,7 @@ export default function TeamAndPermissionsPage() {
             Give your whole team the tools to pitch and present well
           </h1>
           <p style={{ color: "var(--ds-text-light)", fontSize: "1.1rem", maxWidth: 600, margin: "0 auto 36px", lineHeight: 1.7 }}>
-            Add unlimited team members with the right roles for their needs. Share brand assets, templates, and image libraries across the workspace so everyone pitches from the same approved foundation — without managing permissions deal by deal.
+            Add unlimited team members with the right roles for their needs. Share brand assets, templates, and image libraries across the workspace so everyone pitches from the same approved foundation, without managing permissions deal by deal.
           </p>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 16, flexWrap: "wrap" }}>
             <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Set Up Your Team Free</a>
@@ -150,7 +151,7 @@ export default function TeamAndPermissionsPage() {
           <div className="section-header wide-header fade-up">
             <div className="section-label"><span>What&apos;s included</span></div>
             <h2>Built for teams that pitch at scale</h2>
-            <p>Individual reps shouldn&apos;t have to build everything from scratch. Team features give everyone access to the same assets, the same quality baseline, and the same tools — regardless of their role or technical ability.</p>
+            <p>Individual reps shouldn&apos;t have to build everything from scratch. Team features give everyone access to the same assets, the same quality baseline, and the same tools, regardless of their role or technical ability.</p>
           </div>
           <div className="fade-up" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 20, marginTop: 48 }}>
             {FEATURES.map(({ title, body, icon }) => (
@@ -172,7 +173,7 @@ export default function TeamAndPermissionsPage() {
           <div className="section-header wide-header fade-up">
             <div className="section-label"><span>Roles</span></div>
             <h2>Three roles. Every access level covered.</h2>
-            <p>Assign the right role to each team member based on what they actually need to do — not a one-size-fits-all permission model.</p>
+            <p>Assign the right role to each team member based on what they actually need to do, not a one-size-fits-all permission model.</p>
           </div>
           <div className="fade-up" style={{ display: "flex", flexDirection: "column", gap: 20, marginTop: 48, maxWidth: 800, margin: "48px auto 0" }}>
             {ROLES.map(({ role, description, capabilities }) => (

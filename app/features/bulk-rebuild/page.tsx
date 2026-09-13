@@ -69,7 +69,8 @@ export default function BulkRebuildPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Bulk Rebuild — Convert a Folder of Old PowerPoints Into Modern Decks",
+    dateModified: "2026-09-12",
+    name: "Bulk Rebuild: Convert a Folder of Old PowerPoints Into Modern Decks",
     description:
       "Rebuild up to twelve .pptx files in one run, keeping your content, and download them back as editable PowerPoint.",
     url: "https://pitchboost.ai/features/bulk-rebuild",

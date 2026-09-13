@@ -26,6 +26,8 @@ export interface Competitor {
   competitorBestFor: string[];
   faqs: { q: string; a: string }[];
   ctaHeadline: string;
+  /** ISO date the comparison was last checked against the competitor's live pricing. */
+  updated?: string;
 }
 
 export const COMPETITORS: Competitor[] = [
@@ -35,8 +37,8 @@ export const COMPETITORS: Competitor[] = [
     metaTitle: "PitchBoost vs Gamma: Best Gamma Alternative for Sales Teams (2025)",
     metaDescription: "Looking for a Gamma alternative built for sales decks and proposals? See how PitchBoost compares to Gamma for AI-generated pitch decks, prospect personalization, and proposal workflows.",
     heroHeadline: "PitchBoost vs Gamma: The Better Alternative for Sales Decks and Proposals",
-    heroSubhead: "Gamma is great for general AI presentations. PitchBoost is purpose-built for pitch decks, proposals, and sales materials — personalized for the specific prospect in the room.",
-    verdict: "Gamma is a solid tool for generating fast general-purpose presentations and internal docs. But if your goal is to create a tailored pitch deck or proposal for a specific client or prospect, PitchBoost is the purpose-built alternative — with a workflow designed entirely around winning deals, not making slides.",
+    heroSubhead: "Gamma is great for general AI presentations. PitchBoost is purpose-built for pitch decks, proposals, and sales materials, personalized for the specific prospect in the room.",
+    verdict: "Gamma is a solid tool for generating fast general-purpose presentations and internal docs. But if your goal is to create a tailored pitch deck or proposal for a specific client or prospect, PitchBoost is the purpose-built alternative, with a workflow designed entirely around winning deals, not making slides.",
     competitorSummary: "Gamma is an AI presentation and document tool that generates card-based visual content quickly. It's popular for internal presentations, marketing content, and fast first drafts. It supports PDF/PPTX export, shareable links, and basic analytics on paid plans.",
     pitchboostPricing: "Free plan available. Pro: $29/mo. Business: $79/mo.",
     competitorPricing: "Free plan available. Plus: $9/seat/mo. Pro tier available.",
@@ -55,11 +57,11 @@ export const COMPETITORS: Competitor[] = [
     keyDifferences: [
       {
         title: "Built for sales, not just slides",
-        body: "Gamma generates presentations — but it doesn't know who you're pitching or why. PitchBoost is built around the sales workflow: you input your credentials and the prospect's context, and the output is a deck tailored to that specific opportunity. That difference shows up in every line of copy, not just the layout.",
+        body: "Gamma generates presentations, but it doesn't know who you're pitching or why. PitchBoost is built around the sales workflow: you input your credentials and the prospect's context, and the output is a deck tailored to that specific opportunity. That difference shows up in every line of copy, not just the layout.",
       },
       {
         title: "Prospect personalization vs. generic content",
-        body: "One of the biggest reasons deals stall is generic materials that could have been sent to anyone. PitchBoost pulls your existing credentials and maps them to the specific prospect's situation automatically. Gamma generates from prompts — which still requires you to manually tailor everything afterward.",
+        body: "One of the biggest reasons deals stall is generic materials that could have been sent to anyone. PitchBoost pulls your existing credentials and maps them to the specific prospect's situation automatically. Gamma generates from prompts, which still requires you to manually tailor everything afterward.",
       },
       {
         title: "Pricing built for small teams",
@@ -82,7 +84,7 @@ export const COMPETITORS: Competitor[] = [
     faqs: [
       {
         q: "Is PitchBoost a good Gamma alternative for sales teams?",
-        a: "Yes — PitchBoost is purpose-built for sales teams who need personalized pitch decks and proposals, not general presentations. If your primary use case is winning deals rather than internal communication, PitchBoost is the more focused tool.",
+        a: "Yes, PitchBoost is purpose-built for sales teams who need personalized pitch decks and proposals, not general presentations. If your primary use case is winning deals rather than internal communication, PitchBoost is the more focused tool.",
       },
       {
         q: "Can PitchBoost do everything Gamma does?",
@@ -94,7 +96,7 @@ export const COMPETITORS: Competitor[] = [
       },
       {
         q: "Does Gamma personalize decks for specific prospects?",
-        a: "Not natively. Gamma generates from prompts, so you'd need to manually tailor the content for each prospect. PitchBoost is built around prospect-specific deck generation — inputting deal context is part of the core workflow.",
+        a: "Not natively. Gamma generates from prompts, so you'd need to manually tailor the content for each prospect. PitchBoost is built around prospect-specific deck generation, inputting deal context is part of the core workflow.",
       },
     ],
     ctaHeadline: "Ready to try the Gamma alternative built for sales?",
@@ -105,8 +107,8 @@ export const COMPETITORS: Competitor[] = [
     metaTitle: "PitchBoost vs Beautiful.ai: Best Beautiful.ai Alternative for Proposals (2025)",
     metaDescription: "Comparing PitchBoost and Beautiful.ai? See why sales teams and small businesses choose PitchBoost as a Beautiful.ai alternative for AI-generated pitch decks and client proposals.",
     heroHeadline: "PitchBoost vs Beautiful.ai: The Smarter Alternative for Pitch Decks and Proposals",
-    heroSubhead: "Beautiful.ai is built for polished brand presentations. PitchBoost is built for winning deals — generating prospect-specific pitch decks and proposals without a designer or a premium team plan.",
-    verdict: "Beautiful.ai produces visually consistent, polished presentations with strong design guardrails. But the workflow is still largely manual — you're working from templates, not generating from deal context. For teams that need to produce personalized pitch decks and proposals quickly without a design team, PitchBoost is the more practical alternative.",
+    heroSubhead: "Beautiful.ai is built for polished brand presentations. PitchBoost is built for winning deals, generating prospect-specific pitch decks and proposals without a designer or a premium team plan.",
+    verdict: "Beautiful.ai produces visually consistent, polished presentations with strong design guardrails. But the workflow is still largely manual, you're working from templates, not generating from deal context. For teams that need to produce personalized pitch decks and proposals quickly without a design team, PitchBoost is the more practical alternative.",
     competitorSummary: "Beautiful.ai is a presentation tool known for its Smart Slide technology, which automatically adjusts layouts as you add content. It's popular for brand-consistent business presentations, with strong team plan features for collaboration and brand controls.",
     pitchboostPricing: "Free plan available. Pro: $29/mo. Business: $79/mo.",
     competitorPricing: "Pro: $12/mo billed annually. Team: $40/user/mo billed annually.",
@@ -125,15 +127,15 @@ export const COMPETITORS: Competitor[] = [
     keyDifferences: [
       {
         title: "AI generation vs. AI-assisted design",
-        body: "Beautiful.ai's AI helps you design slides more efficiently — it adjusts layouts and suggests formatting. PitchBoost generates the actual pitch deck content from your credentials and prospect context. That's a fundamentally different kind of help: one saves you design time, the other saves you the entire deck-building process.",
+        body: "Beautiful.ai's AI helps you design slides more efficiently, it adjusts layouts and suggests formatting. PitchBoost generates the actual pitch deck content from your credentials and prospect context. That's a fundamentally different kind of help: one saves you design time, the other saves you the entire deck-building process.",
       },
       {
         title: "Team plan pricing adds up fast",
-        body: "Beautiful.ai's Pro plan at $12/mo is individual-only. Team plans jump to $40/user/mo billed annually — a significant cost for small sales teams or agencies managing multiple clients. PitchBoost's Business plan at $79/mo covers teams without per-seat pricing that scales against you.",
+        body: "Beautiful.ai's Pro plan at $12/mo is individual-only. Team plans jump to $40/user/mo billed annually, a significant cost for small sales teams or agencies managing multiple clients. PitchBoost's Business plan at $79/mo covers teams without per-seat pricing that scales against you.",
       },
       {
         title: "Proposals built for the deal, not the brand",
-        body: "Beautiful.ai excels at brand consistency. PitchBoost excels at deal relevance. For client-facing pitch decks and proposals where the content needs to speak directly to a specific prospect's situation, PitchBoost's personalization workflow produces materials that feel custom-built — because they are.",
+        body: "Beautiful.ai excels at brand consistency. PitchBoost excels at deal relevance. For client-facing pitch decks and proposals where the content needs to speak directly to a specific prospect's situation, PitchBoost's personalization workflow produces materials that feel custom-built, because they are.",
       },
     ],
     pitchboostBestFor: [
@@ -152,7 +154,7 @@ export const COMPETITORS: Competitor[] = [
     faqs: [
       {
         q: "Is PitchBoost a good Beautiful.ai alternative for small teams?",
-        a: "Yes — PitchBoost is built specifically for small teams and solo operators who need professional pitch decks and proposals without a design budget. Unlike Beautiful.ai, there's no per-seat pricing that gets expensive as your team grows.",
+        a: "Yes, PitchBoost is built specifically for small teams and solo operators who need professional pitch decks and proposals without a design budget. Unlike Beautiful.ai, there's no per-seat pricing that gets expensive as your team grows.",
       },
       {
         q: "Does Beautiful.ai generate pitch decks from deal context?",
@@ -160,7 +162,7 @@ export const COMPETITORS: Competitor[] = [
       },
       {
         q: "How does PitchBoost compare to Beautiful.ai on price?",
-        a: "Beautiful.ai's individual Pro plan is $12/mo billed annually, but team features require the $40/user/mo plan. PitchBoost starts free and offers a full-featured Business plan at $79/mo for teams — no per-seat pricing.",
+        a: "Beautiful.ai's individual Pro plan is $12/mo billed annually, but team features require the $40/user/mo plan. PitchBoost starts free and offers a full-featured Business plan at $79/mo for teams, no per-seat pricing.",
       },
       {
         q: "Can I switch from Beautiful.ai to PitchBoost easily?",
@@ -175,8 +177,8 @@ export const COMPETITORS: Competitor[] = [
     metaTitle: "PitchBoost vs Pitch: Best Pitch Alternative for Fast Sales Decks (2025)",
     metaDescription: "Evaluating PitchBoost vs Pitch? See how PitchBoost compares as a Pitch alternative for AI-generated sales decks, client proposals, and pitch materials for small teams.",
     heroHeadline: "PitchBoost vs Pitch: The Faster Alternative for Sales Decks and Proposals",
-    heroSubhead: "Pitch is a polished collaboration workspace for presentation teams. PitchBoost is built for the moment you need a great deck for tomorrow's meeting — AI-generated, prospect-specific, and ready in a few minutes.",
-    verdict: "Pitch is a well-designed presentation platform with strong collaboration, sharing, and workspace features. It's a good fit for teams managing multiple decks across a brand system. PitchBoost is the better alternative when the priority is generating a tailored, client-ready pitch deck or proposal as fast as possible — without managing a full presentation workspace.",
+    heroSubhead: "Pitch is a polished collaboration workspace for presentation teams. PitchBoost is built for the moment you need a great deck for tomorrow's meeting, AI-generated, prospect-specific, and ready in a few minutes.",
+    verdict: "Pitch is a well-designed presentation platform with strong collaboration, sharing, and workspace features. It's a good fit for teams managing multiple decks across a brand system. PitchBoost is the better alternative when the priority is generating a tailored, client-ready pitch deck or proposal as fast as possible, without managing a full presentation workspace.",
     competitorSummary: "Pitch is a presentation platform designed for collaborative teams. It offers AI presentation creation, templates, branded sharing links with analytics, and pitch rooms. It's well-regarded for its design quality and team workspace features.",
     pitchboostPricing: "Free plan available. Pro: $29/mo. Business: $79/mo.",
     competitorPricing: "Free plan available. Paid team plans based on plan and seat count.",
@@ -195,15 +197,15 @@ export const COMPETITORS: Competitor[] = [
     keyDifferences: [
       {
         title: "A pitch deck generator vs. a presentation workspace",
-        body: "Pitch is built around a collaborative workspace — managing decks, teams, brands, and assets over time. PitchBoost is built around a single outcome: generating a great pitch deck for a specific opportunity, fast. If you don't need workspace management and just need the deck, PitchBoost removes that overhead entirely.",
+        body: "Pitch is built around a collaborative workspace, managing decks, teams, brands, and assets over time. PitchBoost is built around a single outcome: generating a great pitch deck for a specific opportunity, fast. If you don't need workspace management and just need the deck, PitchBoost removes that overhead entirely.",
       },
       {
         title: "AI credits vs. unlimited generation",
-        body: "Pitch's AI features are credit-based, which means frequent users hit limits or need to manage usage carefully. PitchBoost is built around AI generation as the core workflow — not an add-on feature with a usage cap.",
+        body: "Pitch's AI features are credit-based, which means frequent users hit limits or need to manage usage carefully. PitchBoost is built around AI generation as the core workflow, not an add-on feature with a usage cap.",
       },
       {
         title: "Prospect personalization at the core",
-        body: "Pitch decks built in Pitch start from templates and are customized manually. PitchBoost generates from your credentials and the prospect's context — so the first draft already speaks to their specific situation. For sales teams pitching multiple accounts, that difference compounds quickly.",
+        body: "Pitch decks built in Pitch start from templates and are customized manually. PitchBoost generates from your credentials and the prospect's context, so the first draft already speaks to their specific situation. For sales teams pitching multiple accounts, that difference compounds quickly.",
       },
     ],
     pitchboostBestFor: [
@@ -222,11 +224,11 @@ export const COMPETITORS: Competitor[] = [
     faqs: [
       {
         q: "Is PitchBoost a good Pitch alternative for small sales teams?",
-        a: "Yes — PitchBoost is purpose-built for small sales teams who need personalized pitch decks quickly, without the overhead of managing a full presentation workspace. It's a more focused alternative to Pitch for teams where speed and personalization matter most.",
+        a: "Yes, PitchBoost is purpose-built for small sales teams who need personalized pitch decks quickly, without the overhead of managing a full presentation workspace. It's a more focused alternative to Pitch for teams where speed and personalization matter most.",
       },
       {
         q: "How does PitchBoost's AI compare to Pitch's AI?",
-        a: "Pitch uses AI as a credit-based feature for generating content within slides. PitchBoost is built AI-native from the ground up — the entire deck is generated from your credentials and prospect context, not added as an optional layer on top of a manual workflow.",
+        a: "Pitch uses AI as a credit-based feature for generating content within slides. PitchBoost is built AI-native from the ground up, the entire deck is generated from your credentials and prospect context, not added as an optional layer on top of a manual workflow.",
       },
       {
         q: "Does Pitch personalize decks for specific prospects?",

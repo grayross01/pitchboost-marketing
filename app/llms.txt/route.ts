@@ -4,7 +4,7 @@ import { REDESIGNS } from "@/lib/redesigns";
 import { COMPETITORS } from "@/lib/competitors";
 
 /**
- * /llms.txt — a plain-text map of the site for LLMs and AI agents, following
+ * /llms.txt, a plain-text map of the site for LLMs and AI agents, following
  * the llmstxt.org convention. Generated from the same data that drives the
  * pages, so it stays current as industries/features/comparisons are added.
  */

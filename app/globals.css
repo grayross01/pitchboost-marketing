@@ -1718,7 +1718,7 @@ body {
 
 /* --- Nav collapses earlier than the rest of mobile layout --- */
 /* Logo + 5 desktop nav links + 2 action buttons can't comfortably fit  */
-/* below ~960px — and pinch-zoom on tablets shrinks effective space     */
+/* below ~960px, and pinch-zoom on tablets shrinks effective space     */
 /* further, causing Blog and Log In to overlap. Hide the inline nav     */
 /* sooner and surface the hamburger / mobile menu instead.              */
 @media (max-width: 960px) {

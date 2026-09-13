@@ -37,7 +37,7 @@ export default function ComparePage() {
             How PitchBoost compares to the alternatives
           </h1>
           <p style={{ color: "var(--ds-text-light)", fontSize: "1.1rem", maxWidth: 560, margin: "0 auto", lineHeight: 1.7 }}>
-            PitchBoost is the AI-native alternative built specifically for pitch decks, proposals, and sales materials — not general presentations.
+            PitchBoost is the AI-native alternative built specifically for pitch decks, proposals, and sales materials, not general presentations.
           </p>
         </div>
       </section>

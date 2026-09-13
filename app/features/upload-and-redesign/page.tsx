@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/features/upload-and-redesign" },
   title: "Upload & Redesign: Polish Your PowerPoint Deck",
   description:
-    "Upload your existing PPT or PPTX and PitchBoost redesigns it with your brand, cleans up the layout, and personalizes the content for your specific prospect — without losing the work you've already done.",
+    "Upload your existing PPT or PPTX and PitchBoost redesigns it with your brand, cleans up the layout, and personalizes the content for your specific prospect, without losing the work you've already done.",
   openGraph: {
     title: "Upload & Redesign: Polish Your PowerPoint Deck",
     description:
@@ -37,7 +37,7 @@ function XIcon() {
 const WHAT_IT_DOES = [
   {
     title: "Clean up the layout and design",
-    body: "PitchBoost applies consistent spacing, typography, and visual hierarchy to your existing slides — so the deck looks intentional and professional, not assembled slide by slide over three years.",
+    body: "PitchBoost applies consistent spacing, typography, and visual hierarchy to your existing slides, so the deck looks intentional and professional, not assembled slide by slide over three years.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="3" y="3" width="18" height="18" rx="2" /><path d="M3 9h18M9 21V9" />
@@ -46,7 +46,7 @@ const WHAT_IT_DOES = [
   },
   {
     title: "Apply your brand automatically",
-    body: "Your logo, colors, and fonts get applied across every slide. The result looks like your design team rebuilt it from scratch — without the turnaround time or the brief.",
+    body: "Your logo, colors, and fonts get applied across every slide. The result looks like your design team rebuilt it from scratch, without the turnaround time or the brief.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="13.5" cy="6.5" r="2.5" /><path d="M17 2H7a5 5 0 0 0-5 5v10a5 5 0 0 0 5 5h10a5 5 0 0 0 5-5V7a5 5 0 0 0-5-5z" />
@@ -55,7 +55,7 @@ const WHAT_IT_DOES = [
   },
   {
     title: "Personalize for your specific prospect",
-    body: "Once the design is polished, PitchBoost rewrites and adapts the copy for the specific prospect you're pitching — so the content of your existing deck maps to their situation, not a generic audience.",
+    body: "Once the design is polished, PitchBoost rewrites and adapts the copy for the specific prospect you're pitching, so the content of your existing deck maps to their situation, not a generic audience.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />
@@ -82,7 +82,7 @@ const STEPS = [
   {
     step: 1,
     title: "Upload your existing PPT or PPTX",
-    body: "Drag in any existing PowerPoint file — a capabilities deck, a proposal template, a past pitch, whatever you've been working from. PitchBoost reads the content and structure.",
+    body: "Drag in any existing PowerPoint file, a capabilities deck, a proposal template, a past pitch, whatever you've been working from. PitchBoost reads the content and structure.",
   },
   {
     step: 2,
@@ -92,13 +92,13 @@ const STEPS = [
   {
     step: 3,
     title: "Get a polished, prospect-ready deck",
-    body: "PitchBoost returns a redesigned version — clean layout, on-brand design, and copy adapted for the opportunity — ready to publish as a link, export as PDF, or download as PPT.",
+    body: "PitchBoost returns a redesigned version, clean layout, on-brand design, and copy adapted for the opportunity, ready to publish as a link, export as PDF, or download as PPT.",
   },
 ];
 
 const BULLETS = [
   "Upload any .ppt or .pptx file",
-  "Full brand application — logo, colors, fonts",
+  "Full brand application, logo, colors, fonts",
   "AI-assisted layout cleanup and visual consistency",
   "Optional prospect-specific copy adaptation",
   "Keep, edit, or regenerate any individual slide",
@@ -116,7 +116,8 @@ export default function UploadAndRedesignPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Upload & Redesign — Polish Any Existing Pitch Deck or Presentation",
+    dateModified: "2026-09-12",
+    name: "Upload & Redesign: Polish Any Existing Pitch Deck or Presentation",
     description: "Upload your existing PPT or PPTX and PitchBoost redesigns it with your brand and personalizes it for your prospect.",
     url: "https://pitchboost.ai/features/upload-and-redesign",
     publisher: { "@type": "Organization", name: "PitchBoost", url: "https://pitchboost.ai" },
@@ -151,7 +152,7 @@ export default function UploadAndRedesignPage() {
             Your existing deck, redesigned and ready to win
           </h1>
           <p style={{ color: "var(--ds-text-light)", fontSize: "1.1rem", maxWidth: 620, margin: "0 auto 36px", lineHeight: 1.7 }}>
-            You have a deck with good content — it just doesn&apos;t look the part. Upload your existing PPT or PPTX and PitchBoost redesigns it with your brand, cleans up the layout, and personalizes it for your specific prospect — without starting over.
+            You have a deck with good content, it just doesn&apos;t look the part. Upload your existing PPT or PPTX and PitchBoost redesigns it with your brand, cleans up the layout, and personalizes it for your specific prospect, without starting over.
           </p>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 16, flexWrap: "wrap" }}>
             <a href={`${SIGNUP_URL}?intent=rebuild`} className="btn btn-primary btn-lg">Upload Your Deck Free</a>
@@ -174,7 +175,7 @@ export default function UploadAndRedesignPage() {
           <div className="section-header wide-header fade-up">
             <div className="section-label"><span>What it does</span></div>
             <h2>Three things PitchBoost does to your existing deck</h2>
-            <p>Most teams have a deck that&apos;s been patched together over time — good bones, messy execution. PitchBoost fixes the execution without making you rebuild from scratch.</p>
+            <p>Most teams have a deck that&apos;s been patched together over time, good bones, messy execution. PitchBoost fixes the execution without making you rebuild from scratch.</p>
           </div>
           <div className="fade-up" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 20, marginTop: 48 }}>
             {WHAT_IT_DOES.map(({ title, body, icon }) => (
@@ -289,7 +290,7 @@ export default function UploadAndRedesignPage() {
       <section className="mkt-section cta-section">
         <div className="mkt-container">
           <div className="cta-box fade-up">
-            <h2>Your best deck is the one you already have — polished.</h2>
+            <h2>Your best deck is the one you already have, polished.</h2>
             <p>Upload your existing presentation and get back a version that&apos;s branded, clean, and ready to send.</p>
             <a href={`${SIGNUP_URL}?intent=rebuild`} className="btn btn-primary btn-lg">Upload Your Deck Free</a>
           </div>
