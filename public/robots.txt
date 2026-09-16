@@ -3,6 +3,7 @@
 
 User-agent: *
 Allow: /
+Disallow: /demo/
 Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 # AI assistants and answer engines are explicitly welcome to crawl and cite us.
