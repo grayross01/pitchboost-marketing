@@ -6,8 +6,9 @@ import { CITIES } from "@/lib/cities";
 import { NET_SHEET_STATES } from "@/lib/net-sheet-states";
 import { REDESIGNS, getRedesigns } from "@/lib/redesigns";
 import { ANSWERS } from "@/lib/answers";
+import { HELP_ARTICLES } from "@/lib/help";
 import { getAllPosts } from "@/lib/blog";
-import { STATIC_PAGE_DATES, FEATURE_PAGE_DATES, INDUSTRIES_UPDATED, COMPETITORS_UPDATED, REDESIGNS_UPDATED, CITIES_UPDATED, NET_SHEET_UPDATED } from "@/lib/page-dates";
+import { STATIC_PAGE_DATES, FEATURE_PAGE_DATES, INDUSTRIES_UPDATED, COMPETITORS_UPDATED, REDESIGNS_UPDATED, HELP_UPDATED, CITIES_UPDATED, NET_SHEET_UPDATED } from "@/lib/page-dates";
 
 const BASE = "https://pitchboost.ai";
 
@@ -78,6 +79,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified,
         alternates: { languages },
       });
+    }
+  }
+  // Help center: every article exists in all three locales (the translation
+  // job writes whole files), so each URL lists all its siblings.
+  for (const path of ["/help", ...HELP_ARTICLES.map((a) => `/help/${a.slug}`)]) {
+    const languages = { en: `${BASE}${path}`, es: `${BASE}/es${path}`, pt: `${BASE}/pt${path}`, "x-default": `${BASE}${path}` };
+    const lastModified = HELP_ARTICLES.find((a) => `/help/${a.slug}` === path)?.updated ?? HELP_UPDATED;
+    for (const prefix of ["", "/es", "/pt"]) {
+      entries.push({ url: `${BASE}${prefix}${path}`, changeFrequency: "monthly", priority: prefix ? 0.7 : 0.8, lastModified, alternates: { languages } });
     }
   }
   entries.push({ url: `${BASE}/answers`, changeFrequency: "monthly", priority: 0.8, lastModified: STATIC_PAGE_DATES["/answers"] });
