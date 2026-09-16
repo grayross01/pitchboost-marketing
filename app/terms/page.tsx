@@ -12,11 +12,16 @@ export default function TermsPage() {
       <section className="legal-hero">
         <div className="mkt-container">
           <h1>Terms of Service</h1>
-          <p>Last updated: July 6, 2026</p>
+          <p>Last updated: September 15, 2026</p>
         </div>
       </section>
 
       <div className="legal-content">
+        <p>
+          PitchBoost is operated by ARK Holdings, LLC, an Oregon limited
+          liability company (&quot;PitchBoost&quot;, &quot;we&quot;, &quot;us&quot;).
+        </p>
+
         <h2>1. Acceptance of Terms</h2>
         <p>
           By accessing or using PitchBoost (&quot;the Service&quot;), you agree
