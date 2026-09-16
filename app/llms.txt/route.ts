@@ -3,6 +3,7 @@ import { FEATURES } from "@/lib/features";
 import { REDESIGNS } from "@/lib/redesigns";
 import { COMPETITORS } from "@/lib/competitors";
 import { ANSWERS } from "@/lib/answers";
+import { HELP_ARTICLES } from "@/lib/help";
 
 /**
  * /llms.txt, a plain-text map of the site for LLMs and AI agents, following
@@ -44,6 +45,7 @@ export function GET() {
     `- [Home](${BASE}/): what PitchBoost does and how it works`,
     `- [Upload and redesign](${BASE}/features/upload-and-redesign): the feature most people come for, an existing deck rebuilt in your brand`,
     `- [Pricing](${BASE}/pricing): plans and what each includes`,
+    `- [Help center](${BASE}/help): short how-to answers with real steps and numbers, in English, Spanish and Portuguese`,
     `- [Get started](${APP}/signup?intent=rebuild): create a free account and land on the upload screen`,
     "",
     "## Redesign an existing deck",
@@ -57,10 +59,16 @@ export function GET() {
     "## Use PitchBoost from ChatGPT or Claude",
     "",
     `- [API and MCP](${BASE}/features/api-and-mcp): the MCP server at ${APP}/api/mcp and the REST API; connect it as a custom connector in Claude or ChatGPT developer mode`,
+    `- [Connect to ChatGPT](${BASE}/help/connect-chatgpt): step by step`,
+    `- [Connect to Claude](${BASE}/help/connect-claude): step by step`,
     "",
     "## Features",
     "",
     ...FEATURES.map((f) => `- [${f.navLabel}](${BASE}/features/${f.slug}): ${f.shortDescription}`),
+    "",
+    "## Help center",
+    "",
+    ...HELP_ARTICLES.map((h) => `- [${h.title}](${BASE}/help/${h.slug}): ${h.metaDescription}`),
     "",
     "## Straight answers",
     "",

@@ -31,6 +31,7 @@ const COMPARE_LINKS = [
 ] as const;
 
 const COMPANY_LINKS = [
+  { label: "Help center", href: "/help" },
   { label: "Contact", href: "mailto:support@pitchboost.ai" },
   { label: "Privacy Policy", href: "/privacy" },
   { label: "Terms of Service", href: "/terms" },
