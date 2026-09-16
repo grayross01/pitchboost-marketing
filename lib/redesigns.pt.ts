@@ -860,6 +860,153 @@ export const REDESIGNS_PT: RedesignPage[] = [
     "ctaHeadline": "Faça o deck tão afiado quanto a análise.",
     "updated": "2026-09-12"
   },
+
+  {
+    "slug": "beautify-powerpoint",
+    "navLabel": "Embelezar um PowerPoint",
+    "metaTitle": "Embeleze Seu PowerPoint com IA: Mesmos Slides, Mais Bonitos | PitchBoost",
+    "metaDescription": "Embeleze uma apresentação PowerPoint com IA. Envie o .pptx, mantenha o conteúdo de cada slide e receba de volta com layouts limpos, tipografia real e as cores da sua marca em minutos. Grátis para testar.",
+    "heroHeadline": "Embeleze seu PowerPoint sem reconstruí-lo",
+    "heroSubhead": "A maioria das ferramentas de embelezamento de PPT troca seus slides por um modelo mais bonito e considera pronto. PitchBoost lê o que cada slide está tentando dizer e então organiza adequadamente na sua própria marca: espaçamento, hierarquia, tipografia, cor e imagens que se encaixam no conteúdo em vez de brigar com ele.",
+    "painPoints": [
+      {
+        "title": "Os embelezadores de um clique parecem todos iguais",
+        "body": "Passe um deck por uma ferramenta de troca de modelo e você recebe a aparência do modelo, não a sua. Blobs de gradiente, ícones genéricos, um esquema de cores que não pertence a ninguém. Fica mais bonito do que o que você tinha e ainda parece mil outros decks."
+      },
+      {
+        "title": "Slides feios geralmente são um problema de layout, não de decoração",
+        "body": "Oito marcadores, um gráfico colado em tamanho aleatório, um título que vai para duas linhas. Nenhuma quantidade de sombra projetada resolve isso. Embelezar um slide significa decidir sobre o que o slide trata e dar a essa única coisa o espaço que ela precisa."
+      },
+      {
+        "title": "Você não tem uma tarde para ajustar caixas de texto",
+        "body": "Alinhar, redimensionar e recolorir manualmente é o tipo de trabalho que consome uma noite e ainda parece ligeiramente torto pela manhã. O deck está com prazo apertado: o polimento é o que fica de fora."
+      }
+    ],
+    "outcomes": [
+      "Cada slide reorganizado em torno de seu ponto: uma ideia, hierarquia adequada, espaço para respirar",
+      "As cores, logo e voz da sua marca, extraídos do seu site, não de uma galeria de modelos",
+      "Paredes de marcadores transformadas em layouts estruturados: gráficos e tabelas dimensionados para serem lidos",
+      "Um link compartilhável mais PDF e um PowerPoint editável, em minutos"
+    ],
+    "faqs": [
+      {
+        "q": "Embelezar muda o que meus slides dizem?",
+        "a": "Não. O conteúdo de cada slide é preservado e a apresentação dele é reconstruída: layout, tipografia, cor, espaçamento e elementos visuais. Quando um slide está sobrecarregado, o texto é reestruturado em uma forma mais clara, mas as afirmações e números continuam seus."
+      },
+      {
+        "q": "Como isso é diferente de uma ferramenta de IA para embelezar PPT?",
+        "a": "Ferramentas de troca de modelo reestilizam suas caixas existentes. PitchBoost lê o deck, entende a função de cada slide e o projeta do zero na sua marca. A diferença aparece mais em slides densos, gráficos e tudo que nunca se encaixou no modelo desde o início."
+      },
+      {
+        "q": "Posso enviar Google Slides ou Keynote?",
+        "a": "Sim, exportando primeiro para .pptx. Ambos fazem isso em um passo sem perder nada. Arquivos de até 50 MB são aceitos."
+      },
+      {
+        "q": "Quanto custa embelezar um deck?",
+        "a": "O plano gratuito inclui um deck de IA por mês, até 10 slides, com um pequeno badge Powered by PitchBoost. Starter é $9 por mês para até 25 slides e sem badge: Pro é $29 por mês para até 60 slides com análise completa de visualizadores."
+      }
+    ],
+    "ctaHeadline": "Envie o deck. Receba de volta bonito e ainda seu.",
+    "updated": "2026-09-16"
+  },
+
+  {
+    "slug": "powerpoint-makeover-before-and-after",
+    "navLabel": "Reforma de PowerPoint: antes e depois",
+    "metaTitle": "Reforma de PowerPoint Antes e Depois: O Que Muda com IA | PitchBoost",
+    "metaDescription": "O que uma reforma de PowerPoint realmente muda, slide por slide: título, agenda, paredes de bullet points, gráficos, equipe e fechamento. Envie seu próprio deck e veja o antes e depois em minutos.",
+    "heroHeadline": "Reforma de PowerPoint, antes e depois, slide por slide",
+    "heroSubhead": "A forma mais rápida de avaliar uma reforma é ver o mesmo deck duas vezes. Veja o que muda em cada tipo de slide quando o PitchBoost reconstrói um deck, e como fazer o antes e depois com seu próprio arquivo de graça.",
+    "painPoints": [
+      {
+        "title": "Slide de título: do nome do arquivo à primeira impressão",
+        "body": "Antes: um título de template padrão, uma data, talvez um logo espremido no canto. Depois: a cor e logo da sua marca, um título que diz para que serve o deck, e o nome do apresentador onde pode ser lido do fundo da sala."
+      },
+      {
+        "title": "A parede de bullet points: de oito linhas para um ponto",
+        "body": "Antes: um título, oito bullet points, fonte de 11 pontos, o apresentador lendo em voz alta. Depois: a única afirmação do slide como título, os pontos de apoio organizados numa estrutura que os reflete (etapas, uma comparação, uma grade), e o detalhe movido para as notas do apresentador ou um slide de acompanhamento."
+      },
+      {
+        "title": "O slide de gráfico: de screenshot para evidência",
+        "body": "Antes: um gráfico colado no tamanho que veio, os rótulos dos eixos pequenos demais para ler, a conclusão em lugar nenhum. Depois: o gráfico dimensionado para preencher o slide, a conclusão como título, seus valores de dados transferidos exatamente, e cores alinhadas à sua marca."
+      }
+    ],
+    "outcomes": [
+      "Slides de equipe e sobre nós: tamanhos consistentes de fotos, nomes legíveis, sem organogramas de clip-art",
+      "Agenda e divisores de seção: um sistema visual para o deck inteiro em vez de cinco",
+      "Slide de fechamento: um próximo passo real e detalhes de contato, não a palavra Perguntas",
+      "O deck inteiro em uma marca: mesma fonte, mesma paleta, mesmo espaçamento em cada slide"
+    ],
+    "faqs": [
+      {
+        "q": "Posso ver um antes e depois do meu próprio deck antes de pagar?",
+        "a": "Sim. O plano gratuito inclui um deck de IA por mês, e uma reforma conta como um. Envie o .pptx, aponte o PitchBoost para seu site para a marca, e compare o resultado ao original em alguns minutos."
+      },
+      {
+        "q": "A reforma mantém meu conteúdo?",
+        "a": "Ela mantém o conteúdo e reconstrói o design. Títulos se tornam o ponto do slide, texto denso é reestruturado, e nada é inventado: números, afirmações e valores de gráficos são transferidos do seu arquivo."
+      },
+      {
+        "q": "E se eu quiser reformar apenas alguns slides?",
+        "a": "Cada slide no deck reconstruído é editável, e você pode regenerar ou restaurar slides individuais. A maioria das pessoas faz a reforma completa e depois ajusta manualmente os dois ou três slides que mais importam."
+      },
+      {
+        "q": "Recebo um PowerPoint editável de volta?",
+        "a": "Sim. Baixe um PowerPoint editável com caixas de texto e fontes reais, uma versão de aparência exata que corresponde ao deck web, ou um PDF. O link web também fica ativo, então você pode compartilhar a versão depois imediatamente."
+      }
+    ],
+    "ctaHeadline": "Faça o antes e depois com seu próprio deck. O primeiro é gratuito.",
+    "updated": "2026-09-16"
+  },
+
+  {
+    "slug": "modernize-old-powerpoint",
+    "navLabel": "Modernizar um PowerPoint antigo",
+    "metaTitle": "Modernizar um PowerPoint Antigo: Atualize Slides com IA | PitchBoost",
+    "metaDescription": "Modernize um PowerPoint antigo ou desatualizado com IA. Carregue o arquivo, mantenha o conteúdo e receba layouts modernos, fontes atuais, sua marca de hoje e slides widescreen em minutos.",
+    "heroHeadline": "Modernize o PowerPoint antigo que você continua reutilizando",
+    "heroSubhead": "O conteúdo ainda funciona. O template de 2014, as barras com gradiente, o logo de dois rebrandings atrás e os slides 4:3 não. O PitchBoost lê o deck antigo e reconstrói como um atual, na marca que você tem hoje.",
+    "painPoints": [
+      {
+        "title": "Foi criado para um projetor que já não existe",
+        "body": "Decks antigos são 4:3 com barras pretas em toda tela moderna, compostos em Calibri em três tamanhos diferentes, com títulos em WordArt e um rodapé que ainda menciona um endereço antigo. Todo espectador percebe antes de você terminar a primeira frase."
+      },
+      {
+        "title": "A marca mudou e o deck não",
+        "body": "Logo novo, cores novas, site novo, e a apresentação principal ainda usa os antigos. Substituir um logo em 40 slides é fácil. Fazer o deck inteiro parecer que foi desenhado para a nova marca não é."
+      },
+      {
+        "title": "Ninguém quer reconstruir algo que funciona",
+        "body": "A narrativa foi refinada ao longo de anos de reuniões reais. Começar do zero em uma ferramenta nova significa rediscutir cada slide. O que você precisa é o mesmo deck, atualizado, sem mexer no que já está comprovado."
+      }
+    ],
+    "outcomes": [
+      "Slides widescreen 16:9 com layouts, tipografia e espaçamento modernos",
+      "Sua marca atual em cada slide, extraída do seu site ativo",
+      "Hábitos visuais ultrapassados removidos: WordArt, clip art, barras com gradiente, bullets empilhados",
+      "A mesma narrativa e os mesmos números, agora em um deck que você pode compartilhar como link ou baixar"
+    ],
+    "faqs": [
+      {
+        "q": "Vai converter meu deck 4:3 para widescreen?",
+        "a": "Sim. O deck reconstruído é 16:9 por padrão, com cada slide refeito para o formato mais largo em vez de esticado. Layouts antigos são substituídos, não redimensionados."
+      },
+      {
+        "q": "Pode usar minha marca nova em vez da que está no arquivo?",
+        "a": "Sim. O PitchBoost extrai a marca do seu site, não do deck antigo, então o logo, as cores e o tom são os que você usa hoje. Você pode revisar o logo antes de qualquer geração."
+      },
+      {
+        "q": "Funciona em arquivos .ppt muito antigos?",
+        "a": "Carregue .pptx. Se você tem um .ppt legado, abra no PowerPoint e salve como .pptx primeiro. Essa conversão não tem perda e leva alguns segundos. Arquivos de até 50 MB são aceitos."
+      },
+      {
+        "q": "Quanto custa modernizar um deck?",
+        "a": "Um deck com IA por mês é gratuito, até 10 slides, com um pequeno badge. Starter é $9 por mês para até 25 slides e sem badge. Pro é $29 por mês para até 60 slides, analytics completo e domínios personalizados. Decks mais longos podem ser condensados antes."
+      }
+    ],
+    "ctaHeadline": "Mantenha a história que funciona. Aposente o template que não funciona.",
+    "updated": "2026-09-16"
+  },
 ];
 
 export const REDESIGN_STEPS_PT: { step: string; title: string; body: string }[] = [

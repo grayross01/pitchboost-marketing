@@ -933,6 +933,153 @@ export const REDESIGNS: RedesignPage[] = [
     "ctaHeadline": "Make the deck as sharp as the analysis.",
     "updated": "2026-09-12"
   },
+
+  {
+    "slug": "beautify-powerpoint",
+    "navLabel": "Beautify a PowerPoint",
+    "metaTitle": "Beautify Your PowerPoint with AI: Same Slides, Better Looking | PitchBoost",
+    "metaDescription": "Beautify a PowerPoint presentation with AI. Upload the .pptx, keep every slide's content, and get it back with clean layouts, real typography and your brand colors in minutes. Free to try.",
+    "heroHeadline": "Beautify your PowerPoint without rebuilding it",
+    "heroSubhead": "Most beautify-PPT tools swap your slides into a prettier template and call it done. PitchBoost reads what each slide is trying to say, then lays it out properly in your own brand: spacing, hierarchy, type, color and imagery that fit the content instead of fighting it.",
+    "painPoints": [
+      {
+        "title": "The one-click beautifiers all look the same",
+        "body": "Run a deck through a template-swap tool and you get the template's look, not yours. Gradient blobs, stock icons, a color scheme that belongs to nobody. It is prettier than what you had and still looks like a thousand other decks."
+      },
+      {
+        "title": "Ugly slides are usually a layout problem, not a decoration problem",
+        "body": "Eight bullets, a chart pasted at a random size, a title that runs to two lines. No amount of drop shadow fixes that. Beautifying a slide means deciding what the slide is about and giving that one thing the room it needs."
+      },
+      {
+        "title": "You do not have an afternoon to nudge text boxes",
+        "body": "Aligning, resizing and recoloring by hand is the kind of work that eats an evening and still looks slightly off in the morning. The deck is due; the polish is what gets skipped."
+      }
+    ],
+    "outcomes": [
+      "Every slide re-laid out around its point: one idea, proper hierarchy, room to breathe",
+      "Your brand's colors, logo and voice, lifted from your website, not a template gallery",
+      "Bullet walls turned into structured layouts; charts and tables sized to be read",
+      "A shareable link plus PDF and an editable PowerPoint, in minutes"
+    ],
+    "faqs": [
+      {
+        "q": "Does beautifying change what my slides say?",
+        "a": "No. The content on each slide is preserved and the presentation of it is rebuilt: layout, typography, color, spacing and visuals. Where a slide is overloaded, the copy is restructured into a clearer shape, but claims and numbers stay yours."
+      },
+      {
+        "q": "How is this different from an AI beautify PPT tool?",
+        "a": "Template-swap tools restyle your existing boxes. PitchBoost reads the deck, understands each slide's job, and designs it from scratch in your brand. The difference shows most on dense slides, charts and anything that never fit the template in the first place."
+      },
+      {
+        "q": "Can I upload Google Slides or Keynote?",
+        "a": "Yes, by exporting to .pptx first. Both do it in one step with nothing lost. Files up to 50 MB are accepted."
+      },
+      {
+        "q": "What does it cost to beautify a deck?",
+        "a": "The free plan includes one AI deck a month, up to 10 slides, with a small PitchBoost badge. Starter is $9 a month for up to 25 slides and no badge; Pro is $29 a month for up to 60 slides with full viewer analytics."
+      }
+    ],
+    "ctaHeadline": "Upload the deck. Get it back beautiful, and still yours.",
+    "updated": "2026-09-16"
+  },
+
+  {
+    "slug": "powerpoint-makeover-before-and-after",
+    "navLabel": "PowerPoint makeover: before and after",
+    "metaTitle": "PowerPoint Makeover Before and After: What an AI Redesign Changes | PitchBoost",
+    "metaDescription": "What a PowerPoint makeover actually changes, slide by slide: title, agenda, bullet walls, charts, team and closing slides. Upload your own deck and see the before and after in minutes.",
+    "heroHeadline": "PowerPoint makeover, before and after, slide by slide",
+    "heroSubhead": "The fastest way to judge a makeover is to see the same deck twice. Here is what changes on each kind of slide when PitchBoost rebuilds a deck, and how to run the before-and-after on your own file for free.",
+    "painPoints": [
+      {
+        "title": "Title slide: from file name to first impression",
+        "body": "Before: a default template title, a date, maybe a logo squashed in the corner. After: your brand's color and logo, a headline that says what the deck is for, and the presenter's name where it can be read from the back of the room."
+      },
+      {
+        "title": "The bullet wall: from eight lines to one point",
+        "body": "Before: a title, eight bullets, 11-point type, the presenter reading it aloud. After: the slide's single claim as the title, the supporting points laid out in a structure that matches them (steps, a comparison, a grid), and the detail moved to speaker notes or a follow-up slide."
+      },
+      {
+        "title": "The chart slide: from screenshot to evidence",
+        "body": "Before: a chart pasted at whatever size it came, the axis labels too small to read, the takeaway nowhere. After: the chart sized to fill the slide, the takeaway as the title, your data values carried over exactly, and colors matched to your brand."
+      }
+    ],
+    "outcomes": [
+      "Team and about-us slides: consistent headshot sizes, names readable, no clip-art org charts",
+      "Agenda and section dividers: one visual system for the whole deck instead of five",
+      "Closing slide: a real next step and contact details, not the word Questions",
+      "The whole deck in one brand: same type, same palette, same spacing on every slide"
+    ],
+    "faqs": [
+      {
+        "q": "Can I see a before and after of my own deck before paying?",
+        "a": "Yes. The free plan includes one AI deck a month, and a makeover counts as one. Upload the .pptx, point PitchBoost at your website for the brand, and compare the result to the original in a few minutes."
+      },
+      {
+        "q": "Does the makeover keep my content?",
+        "a": "It keeps the content and rebuilds the design. Titles become the point of the slide, dense text is restructured, and nothing is invented: numbers, claims and chart values are carried over from your file."
+      },
+      {
+        "q": "What if I only want some slides made over?",
+        "a": "Every slide in the rebuilt deck is editable, and you can regenerate or restore individual slides. Most people run the full makeover and then hand-tune the two or three slides they care most about."
+      },
+      {
+        "q": "Do I get an editable PowerPoint back?",
+        "a": "Yes. Download an editable PowerPoint with real text boxes and fonts, an exact-look version that matches the web deck, or a PDF. The web link is also live, so you can share the after version straight away."
+      }
+    ],
+    "ctaHeadline": "Run the before and after on your own deck. The first one is free.",
+    "updated": "2026-09-16"
+  },
+
+  {
+    "slug": "modernize-old-powerpoint",
+    "navLabel": "Modernize an old PowerPoint",
+    "metaTitle": "Modernize an Old PowerPoint: Update Outdated Slides with AI | PitchBoost",
+    "metaDescription": "Modernize an old or outdated PowerPoint with AI. Upload the deck, keep the content, and get modern layouts, current fonts, your present-day brand and widescreen slides back in minutes.",
+    "heroHeadline": "Modernize the old PowerPoint you keep reusing",
+    "heroSubhead": "The content still holds up. The 2014 template, the gradient bars, the logo from two rebrands ago and the 4:3 slides do not. PitchBoost reads the old deck and rebuilds it as a current one, in the brand you have today.",
+    "painPoints": [
+      {
+        "title": "It was built for a projector that no longer exists",
+        "body": "Old decks are 4:3 with black bars on every modern screen, set in Calibri at three different sizes, with WordArt titles and a footer that still names an old address. Every viewer notices before you finish the first sentence."
+      },
+      {
+        "title": "The brand changed and the deck did not",
+        "body": "New logo, new colors, new website, and the flagship presentation still wears the old ones. Replacing a logo on 40 slides is easy; making the whole deck look like it was designed for the new brand is not."
+      },
+      {
+        "title": "Nobody wants to rebuild something that works",
+        "body": "The narrative has been refined over years of real meetings. Starting over in a new tool means re-arguing every slide. What you need is the same deck, made current, without touching what is proven."
+      }
+    ],
+    "outcomes": [
+      "16:9 widescreen slides with modern layouts, type and spacing",
+      "Your current brand on every slide, pulled from your live website",
+      "Outdated visual habits removed: WordArt, clip art, gradient bars, stacked bullets",
+      "The same narrative and numbers, now in a deck you can share as a link or download"
+    ],
+    "faqs": [
+      {
+        "q": "Will it convert my 4:3 deck to widescreen?",
+        "a": "Yes. The rebuilt deck is 16:9 by design, with each slide re-laid out for the wider frame instead of stretched. Old layouts are replaced, not scaled."
+      },
+      {
+        "q": "Can it use my new brand instead of the one in the file?",
+        "a": "Yes. PitchBoost takes the brand from your website, not from the old deck, so the logo, colors and tone are the ones you use today. You can review the logo before anything generates."
+      },
+      {
+        "q": "Does it work on very old .ppt files?",
+        "a": "Upload .pptx. If you have a legacy .ppt, open it in PowerPoint and save as .pptx first; that conversion is lossless and takes a few seconds. Files up to 50 MB are accepted."
+      },
+      {
+        "q": "What does it cost to modernize a deck?",
+        "a": "One AI deck a month is free, up to 10 slides, with a small badge. Starter is $9 a month for up to 25 slides and no badge; Pro is $29 a month for up to 60 slides, full analytics and custom domains. Longer decks can be condensed first."
+      }
+    ],
+    "ctaHeadline": "Keep the story that works. Retire the template that does not.",
+    "updated": "2026-09-16"
+  },
 ];
 
 export function getRedesign(slug: string): RedesignPage | undefined {

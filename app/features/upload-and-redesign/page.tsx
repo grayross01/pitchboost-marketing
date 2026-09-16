@@ -112,11 +112,38 @@ const RELATED = [
   { label: "Templates & Saved Slides", desc: "Save and reuse your best work", href: "/features/templates-and-slides" },
 ];
 
+const FAQS = [
+  {
+    q: "What files can I upload?",
+    a: "PowerPoint (.pptx) up to 50 MB. Google Slides and Keynote both export to .pptx in one step with nothing lost, so upload that export.",
+  },
+  {
+    q: "Will the redesign change my content?",
+    a: "The content of every slide is preserved and the design is rebuilt: layout, typography, spacing, color and brand. Numbers, claims and chart values are carried over from your file. If the deck is longer than your plan's slide limit, PitchBoost asks whether to condense it first.",
+  },
+  {
+    q: "How does PitchBoost know my brand?",
+    a: "You point it at your website. It picks up your logo, colors and tone of voice from your own pages, and you can review or replace the logo before anything generates.",
+  },
+  {
+    q: "How long does it take?",
+    a: "A few minutes for a typical deck. You can watch the slides land as they finish, or close the tab and PitchBoost emails you a link when the deck is ready.",
+  },
+  {
+    q: "What do I get back?",
+    a: "A published deck you can share as a trackable link, a PDF, and a PowerPoint download. The editable PowerPoint has real text boxes and fonts; the exact-look version matches the web deck slide for slide.",
+  },
+  {
+    q: "How much does it cost?",
+    a: "The free plan includes one AI deck a month, up to 10 slides, with a small PitchBoost badge. Starter is $9 a month for up to 25 slides and no badge; Pro is $29 a month for up to 60 slides, full viewer analytics and custom domains.",
+  },
+];
+
 export default function UploadAndRedesignPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    dateModified: "2026-09-12",
+    dateModified: "2026-09-16",
     name: "Upload & Redesign: Polish Any Existing Pitch Deck or Presentation",
     description: "Upload your existing PPT or PPTX and PitchBoost redesigns it with your brand and personalizes it for your prospect.",
     url: "https://pitchboost.ai/features/upload-and-redesign",
@@ -133,10 +160,17 @@ export default function UploadAndRedesignPage() {
     ],
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQS.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero */}
       <section style={{ padding: "120px 0 80px", background: "var(--ds-bg-light)", textAlign: "center" }}>
@@ -263,6 +297,30 @@ export default function UploadAndRedesignPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="mkt-section">
+        <div className="mkt-container">
+          <div className="section-header wide-header fade-up">
+            <div className="section-label"><span>Questions</span></div>
+            <h2>Before you upload</h2>
+          </div>
+          <div className="fade-up" style={{ display: "flex", flexDirection: "column", gap: 12, maxWidth: 760, margin: "40px auto 0" }}>
+            {FAQS.map(({ q, a }) => (
+              <details key={q} style={{ background: "var(--ds-bg-light)", border: "1px solid var(--ds-border)", borderRadius: 12, padding: "16px 20px" }}>
+                <summary style={{ fontSize: 15, fontWeight: 700, color: "var(--ds-text-primary)", cursor: "pointer" }}>{q}</summary>
+                <p style={{ fontSize: 14, color: "var(--ds-text-secondary)", lineHeight: 1.65, margin: "10px 0 0" }}>{a}</p>
+              </details>
+            ))}
+          </div>
+          <p style={{ textAlign: "center", fontSize: 14, color: "var(--ds-text-secondary)", marginTop: 28 }}>
+            Prefer another language? The redesign guides are also in{" "}
+            <Link href="/es/redesign" hrefLang="es" style={{ color: "#1F6B6B", fontWeight: 600 }}>Español</Link>
+            {" "}and{" "}
+            <Link href="/pt/redesign" hrefLang="pt" style={{ color: "#1F6B6B", fontWeight: 600 }}>Português</Link>.
+          </p>
         </div>
       </section>
 
