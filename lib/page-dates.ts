@@ -41,13 +41,13 @@ export const FEATURE_PAGE_DATES: Record<string, string> = {
   "research-and-fact-checking": "2026-08-24",
   "team-and-permissions": "2026-09-12",
   "templates-and-slides": "2026-09-12",
-  "upload-and-redesign": "2026-09-12",
+  "upload-and-redesign": "2026-09-16",
   "viewer-analytics": "2026-09-12",
 };
 
 export const INDUSTRIES_UPDATED = "2026-09-12";
 export const COMPETITORS_UPDATED = "2026-09-12";
-export const REDESIGNS_UPDATED = "2026-09-12";
+export const REDESIGNS_UPDATED = "2026-09-16";
 export const CITIES_UPDATED = "2026-07-10";
 export const NET_SHEET_UPDATED = "2026-07-16";
 

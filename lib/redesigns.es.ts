@@ -860,6 +860,153 @@ export const REDESIGNS_ES: RedesignPage[] = [
     "ctaHeadline": "Haz que el deck sea tan afilado como el análisis.",
     "updated": "2026-09-12"
   },
+
+  {
+    "slug": "beautify-powerpoint",
+    "navLabel": "Embellecer un PowerPoint",
+    "metaTitle": "Embellece tu PowerPoint con IA: las mismas diapositivas, mejor aspecto | PitchBoost",
+    "metaDescription": "Embellece una presentación de PowerPoint con IA. Sube el .pptx, conserva el contenido de cada diapositiva y recíbelo con diseños limpios, tipografía real y los colores de tu marca en minutos.",
+    "heroHeadline": "Embellece tu PowerPoint sin reconstruirlo",
+    "heroSubhead": "La mayoría de las herramientas de embellecimiento PPT intercambian tus diapositivas en una plantilla más bonita y lo dan por hecho. PitchBoost lee lo que cada diapositiva intenta decir y luego la diseña correctamente con tu propia marca: espaciado, jerarquía, tipografía, color e imágenes que se ajustan al contenido en lugar de pelearse con él.",
+    "painPoints": [
+      {
+        "title": "Los embellecedores de un clic todos lucen igual",
+        "body": "Pasa un mazo por una herramienta de intercambio de plantillas y obtienes el aspecto de la plantilla, no el tuyo. Manchas degradadas, iconos de stock, un esquema de color que no pertenece a nadie. Es más bonito que lo que tenías y aún así se ve como mil otros mazos."
+      },
+      {
+        "title": "Las diapositivas feas suelen ser un problema de diseño, no de decoración",
+        "body": "Ocho viñetas, un gráfico pegado a un tamaño al azar, un título que ocupa dos líneas. Ninguna cantidad de sombra paralela arregla eso. Embellecer una diapositiva significa decidir de qué trata la diapositiva y darle a esa única cosa el espacio que necesita."
+      },
+      {
+        "title": "No tienes una tarde para ajustar cuadros de texto",
+        "body": "Alinear, redimensionar y recolorear a mano es el tipo de trabajo que se come una noche y aún luce ligeramente mal por la mañana. El mazo vence pronto, el pulido es lo que se omite."
+      }
+    ],
+    "outcomes": [
+      "Cada diapositiva rediseñada alrededor de su punto: una idea, jerarquía adecuada, espacio para respirar",
+      "Los colores, logo y voz de tu marca, tomados de tu sitio web, no de una galería de plantillas",
+      "Muros de viñetas convertidos en diseños estructurados, gráficos y tablas dimensionados para ser leídos",
+      "Un enlace compartible más PDF y un PowerPoint editable, en minutos"
+    ],
+    "faqs": [
+      {
+        "q": "¿Embellecer cambia lo que dicen mis diapositivas?",
+        "a": "No. El contenido de cada diapositiva se conserva y la presentación se reconstruye: diseño, tipografía, color, espaciado y elementos visuales. Cuando una diapositiva está sobrecargada, el texto se reestructura en una forma más clara, pero los argumentos y números siguen siendo tuyos."
+      },
+      {
+        "q": "¿En qué se diferencia esto de una herramienta de IA para embellecer PPT?",
+        "a": "Las herramientas de intercambio de plantillas rediseñan tus cuadros existentes. PitchBoost lee el mazo, entiende el trabajo de cada diapositiva y la diseña desde cero con tu marca. La diferencia se nota más en diapositivas densas, gráficos y cualquier cosa que nunca encajó en la plantilla desde el principio."
+      },
+      {
+        "q": "¿Puedo subir Google Slides o Keynote?",
+        "a": "Sí, exportándolo primero a .pptx. Ambos lo hacen en un paso sin perder nada. Se aceptan archivos de hasta 50 MB."
+      },
+      {
+        "q": "¿Cuánto cuesta embellecer un mazo?",
+        "a": "El plan gratuito incluye un mazo con IA al mes, hasta 10 diapositivas, con una pequeña insignia de PitchBoost. Starter cuesta $9 al mes para hasta 25 diapositivas y sin insignia. Pro cuesta $29 al mes para hasta 60 diapositivas con analíticas completas del visor."
+      }
+    ],
+    "ctaHeadline": "Sube el mazo. Recíbelo hermoso y aún tuyo.",
+    "updated": "2026-09-16"
+  },
+
+  {
+    "slug": "powerpoint-makeover-before-and-after",
+    "navLabel": "Renovación de PowerPoint: antes y después",
+    "metaTitle": "Renovación de PowerPoint Antes y Después: Qué Cambia con IA | PitchBoost",
+    "metaDescription": "Qué cambia realmente en una renovación de PowerPoint, diapositiva por diapositiva: portada, agenda, muros de texto, gráficos, equipo y cierre. Sube tu presentación y ve el antes y después en minutos.",
+    "heroHeadline": "Renovación de PowerPoint, antes y después, diapositiva por diapositiva",
+    "heroSubhead": "La forma más rápida de evaluar una renovación es ver la misma presentación dos veces. Esto es lo que cambia en cada tipo de diapositiva cuando PitchBoost reconstruye una presentación, y cómo hacer el antes y después con tu propio archivo gratis.",
+    "painPoints": [
+      {
+        "title": "Diapositiva de portada: del nombre de archivo a la primera impresión",
+        "body": "Antes: un título de plantilla predeterminada, una fecha, tal vez un logo aplastado en la esquina. Después: el color y logo de tu marca, un título que dice para qué es la presentación, y el nombre del presentador donde se puede leer desde el fondo de la sala."
+      },
+      {
+        "title": "El muro de viñetas: de ocho líneas a una idea",
+        "body": "Antes: un título, ocho viñetas, tipografía de 11 puntos, el presentador leyéndolo en voz alta. Después: la única afirmación de la diapositiva como título, los puntos de apoyo dispuestos en una estructura que les corresponde (pasos, una comparación, una cuadrícula), y el detalle movido a las notas del orador o una diapositiva de seguimiento."
+      },
+      {
+        "title": "La diapositiva de gráfico: de captura de pantalla a evidencia",
+        "body": "Antes: un gráfico pegado en el tamaño que vino, las etiquetas del eje demasiado pequeñas para leer, la conclusión en ninguna parte. Después: el gráfico dimensionado para llenar la diapositiva, la conclusión como título, tus valores de datos trasladados exactamente, y colores ajustados a tu marca."
+      }
+    ],
+    "outcomes": [
+      "Diapositivas de equipo y acerca de nosotros: tamaños de foto consistentes, nombres legibles, sin organigramas de imágenes prediseñadas",
+      "Agenda y separadores de sección: un sistema visual para toda la presentación en lugar de cinco",
+      "Diapositiva de cierre: un siguiente paso real y detalles de contacto, no la palabra Preguntas",
+      "Toda la presentación en una marca: misma tipografía, misma paleta, mismo espaciado en cada diapositiva"
+    ],
+    "faqs": [
+      {
+        "q": "¿Puedo ver un antes y después de mi propia presentación antes de pagar?",
+        "a": "Sí. El plan gratuito incluye una presentación con IA al mes, y una renovación cuenta como una. Sube el .pptx, indica a PitchBoost tu sitio web para la marca, y compara el resultado con el original en pocos minutos."
+      },
+      {
+        "q": "¿La renovación conserva mi contenido?",
+        "a": "Conserva el contenido y reconstruye el diseño. Los títulos se convierten en la idea de la diapositiva, el texto denso se reestructura, y nada se inventa: números, afirmaciones y valores de gráficos se trasladan desde tu archivo."
+      },
+      {
+        "q": "¿Qué pasa si solo quiero renovar algunas diapositivas?",
+        "a": "Cada diapositiva de la presentación reconstruida es editable, y puedes regenerar o restaurar diapositivas individuales. La mayoría hace la renovación completa y luego ajusta manualmente las dos o tres diapositivas que más le importan."
+      },
+      {
+        "q": "¿Obtengo un PowerPoint editable de vuelta?",
+        "a": "Sí. Descarga un PowerPoint editable con cuadros de texto y fuentes reales, una versión de aspecto exacto que coincide con la presentación web, o un PDF. El enlace web también está activo, así que puedes compartir la versión después de inmediato."
+      }
+    ],
+    "ctaHeadline": "Haz el antes y después con tu propia presentación. La primera es gratis.",
+    "updated": "2026-09-16"
+  },
+
+  {
+    "slug": "modernize-old-powerpoint",
+    "navLabel": "Modernizar un PowerPoint antiguo",
+    "metaTitle": "Modernizar un PowerPoint antiguo con IA | PitchBoost",
+    "metaDescription": "Moderniza un PowerPoint antiguo o desactualizado con IA. Sube el archivo, conserva el contenido y recibe diseños modernos, tipografías actuales, tu marca de hoy y diapositivas panorámicas en minutos.",
+    "heroHeadline": "Moderniza el PowerPoint antiguo que sigues reutilizando",
+    "heroSubhead": "El contenido sigue siendo válido. La plantilla de 2014, las barras degradadas, el logo de dos cambios de marca atrás y las diapositivas 4:3 no. PitchBoost lee el archivo antiguo y lo reconstruye como uno actual, con la marca que tienes hoy.",
+    "painPoints": [
+      {
+        "title": "Fue diseñado para un proyector que ya no existe",
+        "body": "Los archivos antiguos son 4:3 con barras negras en todas las pantallas modernas, configurados en Calibri con tres tamaños diferentes, títulos en WordArt y un pie de página que todavía menciona una dirección antigua. Cada espectador lo nota antes de que termines la primera frase."
+      },
+      {
+        "title": "La marca cambió y el archivo no",
+        "body": "Nuevo logo, nuevos colores, nuevo sitio web, y la presentación principal todavía lleva los antiguos. Reemplazar un logo en 40 diapositivas es fácil, hacer que todo el archivo parezca diseñado para la nueva marca no lo es."
+      },
+      {
+        "title": "Nadie quiere reconstruir algo que funciona",
+        "body": "La narrativa se ha refinado durante años de reuniones reales. Empezar de cero en una herramienta nueva significa volver a discutir cada diapositiva. Lo que necesitas es el mismo archivo, actualizado, sin tocar lo que está probado."
+      }
+    ],
+    "outcomes": [
+      "Diapositivas panorámicas 16:9 con diseños, tipografía y espaciado modernos",
+      "Tu marca actual en cada diapositiva, tomada de tu sitio web activo",
+      "Hábitos visuales obsoletos eliminados: WordArt, clip art, barras degradadas, viñetas apiladas",
+      "La misma narrativa y cifras, ahora en un archivo que puedes compartir como enlace o descargar"
+    ],
+    "faqs": [
+      {
+        "q": "¿Convertirá mi archivo 4:3 a panorámico?",
+        "a": "Sí. El archivo reconstruido es 16:9 por diseño, con cada diapositiva reorganizada para el marco más ancho en lugar de estirada. Los diseños antiguos se reemplazan, no se escalan."
+      },
+      {
+        "q": "¿Puede usar mi nueva marca en lugar de la que está en el archivo?",
+        "a": "Sí. PitchBoost toma la marca de tu sitio web, no del archivo antiguo, por lo que el logo, los colores y el tono son los que usas hoy. Puedes revisar el logo antes de que se genere nada."
+      },
+      {
+        "q": "¿Funciona con archivos .ppt muy antiguos?",
+        "a": "Sube archivos .pptx. Si tienes un .ppt antiguo, ábrelo en PowerPoint y guárdalo como .pptx primero; esa conversión no pierde información y toma unos segundos. Se aceptan archivos de hasta 50 MB."
+      },
+      {
+        "q": "¿Cuánto cuesta modernizar un archivo?",
+        "a": "Un archivo con IA al mes es gratis, hasta 10 diapositivas, con una pequeña insignia. Starter cuesta $9 al mes para hasta 25 diapositivas y sin insignia; Pro cuesta $29 al mes para hasta 60 diapositivas, analíticas completas y dominios personalizados. Los archivos más largos pueden condensarse primero."
+      }
+    ],
+    "ctaHeadline": "Conserva la historia que funciona. Retira la plantilla que no.",
+    "updated": "2026-09-16"
+  },
 ];
 
 export const REDESIGN_STEPS_ES: { step: string; title: string; body: string }[] = [
