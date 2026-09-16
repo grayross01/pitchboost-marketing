@@ -39,6 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/blog", changeFrequency: "weekly", priority: 0.7 },
     { path: "/privacy", changeFrequency: "yearly", priority: 0.3 },
     { path: "/terms", changeFrequency: "yearly", priority: 0.3 },
+    { path: "/support", changeFrequency: "yearly", priority: 0.3 },
   ];
 
   const entries: MetadataRoute.Sitemap = staticPages.map((p) => ({
