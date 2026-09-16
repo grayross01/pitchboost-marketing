@@ -12,11 +12,17 @@ export default function PrivacyPage() {
       <section className="legal-hero">
         <div className="mkt-container">
           <h1>Privacy Policy</h1>
-          <p>Last updated: March 29, 2026</p>
+          <p>Last updated: September 15, 2026</p>
         </div>
       </section>
 
       <div className="legal-content">
+        <p>
+          PitchBoost is operated by ARK Holdings, LLC, an Oregon limited
+          liability company (&quot;PitchBoost&quot;, &quot;we&quot;, &quot;us&quot;).
+          This policy explains what we collect and how we use it.
+        </p>
+
         <h2>1. Information We Collect</h2>
         <p>
           <strong>Account information:</strong> When you sign up we collect your
