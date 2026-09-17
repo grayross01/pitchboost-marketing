@@ -10,7 +10,6 @@ export const metadata: Metadata = {
     title: "Free Pitch Deck Evaluator",
     description:
       "Instant graded feedback on any .pptx: four scored dimensions, your five highest-impact fixes, and the claims to verify before you present.",
-    images: [{ url: "https://pitchboost.ai/og-image.png", width: 1310, height: 820 }],
   },
 };
 

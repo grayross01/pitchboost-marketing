@@ -13,7 +13,6 @@ export const metadata: Metadata = {
     title: "Templates & Saved Slides: Reuse Your Best Work",
     description:
       "Save any deck as a reusable template or save individual slides to a library. Build once, reuse for every new prospect.",
-    images: [{ url: "https://pitchboost.ai/og-image.png", width: 1310, height: 820 }],
   },
 };
 

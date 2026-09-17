@@ -13,7 +13,6 @@ export const metadata: Metadata = {
     title: "Publishing & Sharing: Share Pitch Decks as Links, PDF, PPT & More",
     description:
       "Publish your deck as a branded link, export to PDF or PPT, host on your custom domain, and control who can view it.",
-    images: [{ url: "https://pitchboost.ai/og-image.png", width: 1310, height: 820 }],
   },
 };
 

@@ -13,7 +13,6 @@ export const metadata: Metadata = {
     title: "Output Types: Pitch Decks, Proposals, One-Sheets & More",
     description:
       "PitchBoost builds the right format for every sales situation, pitch decks, business proposals, one-sheets, buyer FAQs, and more.",
-    images: [{ url: "https://pitchboost.ai/og-image.png", width: 1310, height: 820 }],
   },
 };
 

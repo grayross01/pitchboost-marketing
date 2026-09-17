@@ -13,7 +13,6 @@ export const metadata: Metadata = {
     title: "Brand & Image Library: Consistent Branding Across Every Deck",
     description:
       "Upload your logo, brand colors, and image library once. PitchBoost applies your brand automatically to every deck.",
-    images: [{ url: "https://pitchboost.ai/og-image.png", width: 1310, height: 820 }],
   },
 };
 

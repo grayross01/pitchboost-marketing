@@ -13,7 +13,6 @@ export const metadata: Metadata = {
     title: "Upload & Redesign: Polish Your PowerPoint Deck",
     description:
       "Upload your existing PPT or PPTX and PitchBoost redesigns it with your brand, cleans up the layout, and personalizes the content for your specific prospect.",
-    images: [{ url: "https://pitchboost.ai/og-image.png", width: 1310, height: 820 }],
   },
 };
 
