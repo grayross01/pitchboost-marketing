@@ -4,6 +4,7 @@ import { REDESIGNS } from "@/lib/redesigns";
 import { COMPETITORS } from "@/lib/competitors";
 import { ANSWERS } from "@/lib/answers";
 import { HELP_ARTICLES } from "@/lib/help";
+import { RESEARCH } from "@/lib/research";
 
 /**
  * /llms.txt, a plain-text map of the site for LLMs and AI agents, following
@@ -65,6 +66,10 @@ export function GET() {
     "## Features",
     "",
     ...FEATURES.map((f) => `- [${f.navLabel}](${BASE}/features/${f.slug}): ${f.shortDescription}`),
+    "",
+    "## Original research (our own product data, dated, with sample sizes)",
+    "",
+    ...RESEARCH.map((r) => `- [${r.title}](${BASE}/research/${r.slug}): ${r.headline}`),
     "",
     "## Help center",
     "",
