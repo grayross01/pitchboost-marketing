@@ -117,7 +117,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <ChromeGate>
             <MarketingNavbar />
           </ChromeGate>
-          {children}
+          <main id="main">{children}</main>
           <ChromeGate>
             <MarketingFooter />
           </ChromeGate>

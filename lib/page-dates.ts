@@ -9,7 +9,7 @@
  * change daily but does not gets discounted.
  */
 export const STATIC_PAGE_DATES: Record<string, string> = {
-  "": "2026-09-11",
+  "": "2026-09-17",
   "/industries": "2026-09-12",
   "/compare": "2026-09-12",
   "/pricing": "2026-09-11",
@@ -23,9 +23,12 @@ export const STATIC_PAGE_DATES: Record<string, string> = {
   "/tools/seller-net-sheet": "2026-07-16",
   "/tools/review-request": "2026-07-12",
   "/blog": "2026-07-12",
-  "/privacy": "2026-09-15",
+  "/privacy": "2026-09-17",
   "/terms": "2026-09-15",
   "/support": "2026-09-15",
+  "/about": "2026-09-17",
+  "/security": "2026-09-17",
+  "/changelog": "2026-09-17",
   "/features": "2026-08-31",
   "/answers": "2026-09-12",
   "/redesign": "2026-09-08",

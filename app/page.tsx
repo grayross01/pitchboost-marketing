@@ -48,31 +48,31 @@ export default function MarketingPage() {
         <div className="hero-orb" />
 
         <div className="mkt-container">
-          <div className="fade-up">
+          <div className="rise">
             <div className="hero-badge">
               <span style={{ width: 8, height: 8, borderRadius: "50%", background: "linear-gradient(135deg, #1F6B6B, #E8665A)", display: "inline-block" }} />
               AI-powered pitch decks that win deals
             </div>
           </div>
 
-          <h1 className="fade-up fade-up-delay-1">
+          <h1 className="rise rise-1">
             The deck that speaks<br />
             <span className="gradient-text">their language.</span>
           </h1>
 
-          <p className="fade-up fade-up-delay-2">
+          <p className="rise rise-2">
             PitchBoost builds personalized pitch decks, presentations, and proposals for a specific prospect in a few minutes, so your materials reflect their priorities, not a generic template.
           </p>
 
-          <div className="hero-actions fade-up fade-up-delay-3">
+          <div className="hero-actions rise rise-3">
             <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Start Building Free</a>
             <a href="#sample-deck" className="btn btn-ghost btn-lg">View Sample Deck</a>
           </div>
-          <p className="fade-up fade-up-delay-3" style={{ marginTop: 14, fontSize: 13, color: "var(--ds-text-tertiary)" }}>
+          <p className="rise rise-3" style={{ marginTop: 14, fontSize: 13, color: "var(--ds-text-tertiary)" }}>
             Free forever plan. No credit card required.
           </p>
 
-          <div className="hero-proof-bar fade-up fade-up-delay-4">
+          <div className="hero-proof-bar rise rise-4">
             <div className="proof-item">
               <span className="proof-icon">◎</span>
               <span>Relevant to this prospect,<br />not every prospect</span>

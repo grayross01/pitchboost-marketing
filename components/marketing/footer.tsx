@@ -31,7 +31,10 @@ const COMPARE_LINKS = [
 ] as const;
 
 const COMPANY_LINKS = [
+  { label: "About", href: "/about" },
   { label: "Help center", href: "/help" },
+  { label: "Changelog", href: "/changelog" },
+  { label: "Security", href: "/security" },
   { label: "Contact", href: "mailto:support@pitchboost.ai" },
   { label: "Privacy Policy", href: "/privacy" },
   { label: "Terms of Service", href: "/terms" },
@@ -75,7 +78,7 @@ export default function MarketingFooter() {
           </div>
 
           <div className="footer-col">
-            <h4>Features</h4>
+            <p className="footer-heading">Features</p>
             <ul>
               {FEATURE_LINKS.map(({ label, href }) => (
                 <li key={label}>
@@ -86,7 +89,7 @@ export default function MarketingFooter() {
           </div>
 
           <div className="footer-col">
-            <h4>Product</h4>
+            <p className="footer-heading">Product</p>
             <ul>
               {PRODUCT_LINKS.map(({ label, href }) => (
                 <li key={label}>
@@ -97,7 +100,7 @@ export default function MarketingFooter() {
           </div>
 
           <div className="footer-col">
-            <h4>By Industry</h4>
+            <p className="footer-heading">By Industry</p>
             <ul>
               {INDUSTRY_LINKS.map(({ label, href }) => (
                 <li key={label}>
@@ -111,7 +114,7 @@ export default function MarketingFooter() {
           </div>
 
           <div className="footer-col">
-            <h4>Real estate</h4>
+            <p className="footer-heading">Real estate</p>
             <ul>
               {REAL_ESTATE_LINKS.map(({ label, href }) => (
                 <li key={label}>
@@ -122,7 +125,7 @@ export default function MarketingFooter() {
           </div>
 
           <div className="footer-col">
-            <h4>Compare</h4>
+            <p className="footer-heading">Compare</p>
             <ul>
               {COMPARE_LINKS.map(({ label, href }) => (
                 <li key={label}>
@@ -136,7 +139,7 @@ export default function MarketingFooter() {
           </div>
 
           <div className="footer-col">
-            <h4>Company</h4>
+            <p className="footer-heading">Company</p>
             <ul>
               {COMPANY_LINKS.map(({ label, href }) => (
                 <li key={label}>
