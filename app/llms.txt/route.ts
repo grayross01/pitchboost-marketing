@@ -84,6 +84,7 @@ export function GET() {
     "## Compare",
     "",
     ...COMPETITORS.map((c) => `- [PitchBoost vs ${c.name}](${BASE}/compare/${c.slug})`),
+    ...COMPETITORS.filter((c) => c.altSlug).map((c) => `- [${c.name} alternatives](${BASE}/alternatives/${c.altSlug}): four tools compared with checked prices and when to stay with ${c.name}`),
     "",
     "## Free tools for real estate agents",
     "",

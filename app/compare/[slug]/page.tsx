@@ -177,7 +177,10 @@ export default async function ComparePage({ params }: Props) {
             <div className="section-header wide-header fade-up">
               <div className="section-label"><span>Prices and limits</span></div>
               <h2>PitchBoost vs {competitor.name}: plans, prices and caps</h2>
-              <p>Checked against {competitor.name}&apos;s published pricing on {competitor.updated ?? COMPETITORS_UPDATED}. Prices are list prices in USD; annual billing is cheaper on both sides.</p>
+              <p>
+                Checked against {competitor.pricingUrl ? <a href={competitor.pricingUrl} target="_blank" rel="noopener noreferrer">{competitor.name}&apos;s published pricing</a> : <>{competitor.name}&apos;s published pricing</>} on {competitor.updated ?? COMPETITORS_UPDATED}. Prices are list prices in USD; annual billing is cheaper on both sides.
+                {competitor.altSlug && <> Looking for more options? See <Link href={`/alternatives/${competitor.altSlug}`}>{competitor.name} alternatives</Link>.</>}
+              </p>
             </div>
             <div className="fade-up" style={{ maxWidth: 900, margin: "48px auto 0", borderRadius: 16, overflow: "hidden", border: "1px solid var(--ds-border)", overflowX: "auto" }}>
               <div style={{ display: "grid", gridTemplateColumns: "180px 1fr 1fr", background: "var(--ds-dark)", padding: "14px 24px", gap: 16 }}>
