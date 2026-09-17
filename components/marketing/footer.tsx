@@ -8,6 +8,7 @@ const PRODUCT_LINKS = [
   { label: "Pricing", href: "/pricing" },
   { label: "Templates", href: `${APP_URL}/templates` },
   { label: "Blog", href: "/blog" },
+  { label: "Research", href: "/research" },
   { label: "Get Started", href: SIGNUP_URL },
 ] as const;
 

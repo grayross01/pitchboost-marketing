@@ -8,6 +8,7 @@ import { REDESIGNS, getRedesigns } from "@/lib/redesigns";
 import { ANSWERS } from "@/lib/answers";
 import { HELP_ARTICLES } from "@/lib/help";
 import { CHANGELOG } from "@/lib/changelog";
+import { RESEARCH } from "@/lib/research";
 import { getAllPosts } from "@/lib/blog";
 import { STATIC_PAGE_DATES, FEATURE_PAGE_DATES, INDUSTRIES_UPDATED, COMPETITORS_UPDATED, REDESIGNS_UPDATED, HELP_UPDATED, CITIES_UPDATED, NET_SHEET_UPDATED } from "@/lib/page-dates";
 
@@ -45,6 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/about", changeFrequency: "monthly", priority: 0.5 },
     { path: "/security", changeFrequency: "monthly", priority: 0.5 },
     { path: "/changelog", changeFrequency: "weekly", priority: 0.5 },
+    { path: "/research", changeFrequency: "monthly", priority: 0.7 },
   ];
 
   const entries: MetadataRoute.Sitemap = staticPages.map((p) => ({
@@ -93,6 +95,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     for (const prefix of ["", "/es", "/pt"]) {
       entries.push({ url: `${BASE}${prefix}${path}`, changeFrequency: "monthly", priority: prefix ? 0.7 : 0.8, lastModified, alternates: { languages } });
     }
+  }
+  for (const r of RESEARCH) {
+    entries.push({ url: `${BASE}/research/${r.slug}`, changeFrequency: "monthly", priority: 0.8, lastModified: r.updated });
   }
   entries.push({ url: `${BASE}/answers`, changeFrequency: "monthly", priority: 0.8, lastModified: STATIC_PAGE_DATES["/answers"] });
   for (const a of ANSWERS) {
