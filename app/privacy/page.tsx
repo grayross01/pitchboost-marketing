@@ -12,7 +12,7 @@ export default function PrivacyPage() {
       <section className="legal-hero">
         <div className="mkt-container">
           <h1>Privacy Policy</h1>
-          <p>Last updated: September 15, 2026</p>
+          <p>Last updated: September 17, 2026</p>
         </div>
       </section>
 
@@ -95,7 +95,34 @@ export default function PrivacyPage() {
             </a>{" "}
             for details on their data handling.
           </li>
+          <li>
+            <strong>Google (Gemini)</strong>, AI image generation, only when you
+            turn on AI images for a deck. Receives the image prompt derived from
+            the slide, not your whole deck.
+          </li>
+          <li>
+            <strong>Neon</strong>, the Postgres database that stores accounts,
+            deals and deck content, in the United States.
+          </li>
+          <li>
+            <strong>Microlink</strong>, renders slide screenshots for PowerPoint
+            exports and email thumbnails from a time-limited link to the slide.
+          </li>
+          <li>
+            <strong>Resend</strong>, transactional email delivery.
+          </li>
+          <li>
+            <strong>Sentry</strong>, error monitoring (stack traces and request
+            metadata, not deck content).
+          </li>
+          <li>
+            <strong>Cloudflare</strong>, DNS and edge proxy for the application.
+          </li>
         </ul>
+        <p>
+          The <a href="/security">security page</a> describes what each provider
+          receives and where data is stored.
+        </p>
 
         <h2>5. Cookies</h2>
         <p>

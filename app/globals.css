@@ -1250,12 +1250,14 @@ body {
 .marketing .footer-brand p {
   font-size: 0.9rem;
   line-height: 1.7;
-  opacity: 0.6;
+  /* Explicit color instead of opacity: 0.6 opacity on #12121f fell below the 4.5:1 contrast ratio. */
+  color: rgba(255, 255, 255, 0.74);
   margin-top: 16px;
 }
 
-.marketing .footer-col h4 {
+.marketing .footer-col .footer-heading {
   color: white;
+  margin: 0 0 14px;
   font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -1297,7 +1299,7 @@ body {
   padding-top: 32px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   font-size: 0.85rem;
-  opacity: 0.5;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 /* --- Legal Pages --- */
@@ -1700,6 +1702,23 @@ body {
 .marketing .fade-up-delay-2 { transition-delay: 0.2s; }
 .marketing .fade-up-delay-3 { transition-delay: 0.3s; }
 .marketing .fade-up-delay-4 { transition-delay: 0.4s; }
+
+/* Above-the-fold entrance. Pure CSS (no observer): the hero must paint on the
+ * first frame or the largest contentful paint waits for hydration, which on a
+ * throttled phone measured 8 seconds. */
+@keyframes rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.marketing .rise { animation: rise 0.55s ease both; }
+.marketing .rise-1 { animation-delay: 0.08s; }
+.marketing .rise-2 { animation-delay: 0.16s; }
+.marketing .rise-3 { animation-delay: 0.24s; }
+.marketing .rise-4 { animation-delay: 0.32s; }
+@media (prefers-reduced-motion: reduce) {
+  .marketing .rise { animation: none; }
+  .marketing .fade-up { opacity: 1; transform: none; transition: none; }
+}
 
 /* --- Responsive: 1024px --- */
 @media (max-width: 1024px) {

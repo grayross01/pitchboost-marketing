@@ -7,6 +7,7 @@ import { NET_SHEET_STATES } from "@/lib/net-sheet-states";
 import { REDESIGNS, getRedesigns } from "@/lib/redesigns";
 import { ANSWERS } from "@/lib/answers";
 import { HELP_ARTICLES } from "@/lib/help";
+import { CHANGELOG } from "@/lib/changelog";
 import { getAllPosts } from "@/lib/blog";
 import { STATIC_PAGE_DATES, FEATURE_PAGE_DATES, INDUSTRIES_UPDATED, COMPETITORS_UPDATED, REDESIGNS_UPDATED, HELP_UPDATED, CITIES_UPDATED, NET_SHEET_UPDATED } from "@/lib/page-dates";
 
@@ -41,13 +42,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/privacy", changeFrequency: "yearly", priority: 0.3 },
     { path: "/terms", changeFrequency: "yearly", priority: 0.3 },
     { path: "/support", changeFrequency: "yearly", priority: 0.3 },
+    { path: "/about", changeFrequency: "monthly", priority: 0.5 },
+    { path: "/security", changeFrequency: "monthly", priority: 0.5 },
+    { path: "/changelog", changeFrequency: "weekly", priority: 0.5 },
   ];
 
   const entries: MetadataRoute.Sitemap = staticPages.map((p) => ({
     url: `${BASE}${p.path}`,
     changeFrequency: p.changeFrequency,
     priority: p.priority,
-    lastModified: STATIC_PAGE_DATES[p.path.startsWith("/tools/seller-net-sheet/") ? "/tools/seller-net-sheet" : p.path] ?? NET_SHEET_UPDATED,
+    lastModified: p.path === "/changelog" ? CHANGELOG[0].date : (STATIC_PAGE_DATES[p.path.startsWith("/tools/seller-net-sheet/") ? "/tools/seller-net-sheet" : p.path] ?? NET_SHEET_UPDATED),
   }));
 
   entries.push({ url: `${BASE}/features`, changeFrequency: "monthly", priority: 0.85, lastModified: STATIC_PAGE_DATES["/features"] });
