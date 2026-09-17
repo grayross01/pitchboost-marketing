@@ -13,7 +13,6 @@ export const metadata: Metadata = {
     title: "Bulk Rebuild: Convert a Folder of Old PowerPoints Into Modern Decks",
     description:
       "Rebuild a whole back catalogue of PowerPoints in one run, and get editable .pptx files back.",
-    images: [{ url: "https://pitchboost.ai/og-image.png", width: 1310, height: 820 }],
   },
 };
 

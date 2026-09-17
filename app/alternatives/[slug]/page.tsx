@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: { absolute: `${title} | PitchBoost` },
     description,
     alternates: { canonical: `${BASE}/alternatives/${slug}` },
-    openGraph: { title, description, images: [{ url: `${BASE}/og-image.png`, width: 1310, height: 820 }] },
+    openGraph: { title, description },
   };
 }
 

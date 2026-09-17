@@ -10,7 +10,6 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About PitchBoost",
     description: "What PitchBoost is, who makes it, and the rules the product is built to.",
-    images: [{ url: "https://pitchboost.ai/og-image.png", width: 1310, height: 820 }],
   },
 };
 

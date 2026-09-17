@@ -14,7 +14,6 @@ export const metadata: Metadata = {
     title: "PitchBoost Features",
     description:
       "AI deck generation with cited facts, PowerPoint redesign, brand kits, viewer analytics, teams, and an API.",
-    images: [{ url: "https://pitchboost.ai/og-image.png", width: 1310, height: 820 }],
   },
 };
 

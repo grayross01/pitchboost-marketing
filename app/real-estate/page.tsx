@@ -21,7 +21,6 @@ export const metadata: Metadata = {
   alternates: { canonical: "/real-estate" },
   openGraph: {
     title: "PitchBoost for Real Estate Agents",
-    images: [{ url: "https://pitchboost.ai/og-image.png", width: 1310, height: 820 }],
     description:
       "Win the listing. Wow the client. Close on time. AI listing presentations, branded closing timelines, and read receipts for every deal.",
     url: "https://pitchboost.ai/real-estate",

@@ -13,7 +13,6 @@ export const metadata: Metadata = {
     title: "API & MCP: Build Better Pitch Decks from Claude or Your AI Stack",
     description:
       "Connect PitchBoost to Claude, Cursor, or your own AI workflows. Get professionally structured decks with your brand, templates, and team libraries, not raw AI slide files.",
-    images: [{ url: "https://pitchboost.ai/og-image.png", width: 1310, height: 820 }],
   },
 };
 

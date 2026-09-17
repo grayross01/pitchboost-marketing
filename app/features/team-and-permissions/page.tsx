@@ -13,7 +13,6 @@ export const metadata: Metadata = {
     title: "Team & Permissions: Collaborative Pitch Deck Software for Teams",
     description:
       "Add unlimited team members, assign roles, and share brand assets and templates across your whole team.",
-    images: [{ url: "https://pitchboost.ai/og-image.png", width: 1310, height: 820 }],
   },
 };
 

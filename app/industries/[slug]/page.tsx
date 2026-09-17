@@ -33,7 +33,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: industry.metaTitle,
       description: industry.metaDescription,
-      images: [{ url: "https://pitchboost.ai/og-image.png", width: 1310, height: 820 }],
     },
   };
 }

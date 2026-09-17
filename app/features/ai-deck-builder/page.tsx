@@ -13,7 +13,6 @@ export const metadata: Metadata = {
     title: "AI Deck Builder: Personalized Pitch Decks, Presentations & Proposals",
     description:
       "PitchBoost's AI deck builder generates personalized pitch decks, sales presentations, and proposals in a few minutes, written for your specific prospect, not a generic template.",
-    images: [{ url: "https://pitchboost.ai/og-image.png", width: 1310, height: 820 }],
   },
 };
 

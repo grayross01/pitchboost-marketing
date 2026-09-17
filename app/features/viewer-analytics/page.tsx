@@ -13,7 +13,6 @@ export const metadata: Metadata = {
     title: "Viewer Analytics: Know How Your Pitch Deck Landed",
     description:
       "See who opened your deck, which slides they spent time on, and when they came back for a second look.",
-    images: [{ url: "https://pitchboost.ai/og-image.png", width: 1310, height: 820 }],
   },
 };
 

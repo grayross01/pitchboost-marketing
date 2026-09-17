@@ -13,7 +13,6 @@ export const metadata: Metadata = {
     title: "Research & Fact-Checking: AI Decks With Cited Sources",
     description:
       "Live research on every generation, citations rendered on the slide, and a fact audit that shows where every claim came from before you hit send.",
-    images: [{ url: "https://pitchboost.ai/og-image.png", width: 1310, height: 820 }],
   },
 };
 

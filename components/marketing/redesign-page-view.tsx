@@ -24,7 +24,6 @@ export function redesignPageMetadata(locale: Locale, slug: string): Metadata {
       title: page.metaTitle,
       description: page.metaDescription,
       locale: OG_LOCALE[locale],
-      images: [{ url: `${BASE}/og-image.png`, width: 1310, height: 820 }],
     },
   };
 }
