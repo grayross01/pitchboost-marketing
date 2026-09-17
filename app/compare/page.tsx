@@ -58,6 +58,18 @@ export default function ComparePage() {
             ))}
           </div>
 
+          <div style={{ maxWidth: 900, margin: "40px auto 0", textAlign: "center" }}>
+            <p style={{ fontSize: 14, color: "var(--ds-text-secondary)" }}>
+              Looking for a replacement rather than a head-to-head?{" "}
+              {COMPETITORS.filter((c) => c.altSlug).map((c, i, arr) => (
+                <span key={c.slug}>
+                  <Link href={`/alternatives/${c.altSlug}`} style={{ color: "#1F6B6B", fontWeight: 600 }}>{c.name} alternatives</Link>
+                  {i < arr.length - 1 ? ", " : "."}
+                </span>
+              ))}
+            </p>
+          </div>
+
           <div style={{ textAlign: "center", marginTop: 56 }}>
             <p style={{ fontSize: 15, color: "var(--ds-text-secondary)", marginBottom: 20 }}>Ready to see the difference for yourself?</p>
             <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Try PitchBoost free</a>

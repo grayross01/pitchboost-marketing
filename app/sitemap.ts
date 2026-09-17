@@ -109,6 +109,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const c of COMPETITORS) {
     entries.push({ url: `${BASE}/compare/${c.slug}`, changeFrequency: "monthly", priority: 0.8, lastModified: c.updated ?? COMPETITORS_UPDATED });
   }
+  for (const c of COMPETITORS) {
+    if (c.altSlug) entries.push({ url: `${BASE}/alternatives/${c.altSlug}`, changeFrequency: "monthly", priority: 0.75, lastModified: c.updated ?? COMPETITORS_UPDATED });
+  }
   for (const post of getAllPosts()) {
     entries.push({ url: `${BASE}/blog/${post.slug}`, changeFrequency: "monthly", priority: 0.6, lastModified: post.date || undefined });
   }

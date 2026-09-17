@@ -30,6 +30,10 @@ export interface Competitor {
   specs?: { label: string; pitchboost: string; competitor: string }[];
   /** ISO date the comparison was last checked against the competitor's live pricing. */
   updated?: string;
+  /** The competitor's own pricing page, linked as the source next to the checked date. */
+  pricingUrl?: string;
+  /** Short slug for the alternatives page: /alternatives/<altSlug>. */
+  altSlug?: string;
 }
 
 export const COMPETITORS: Competitor[] = [
@@ -46,6 +50,8 @@ export const COMPETITORS: Competitor[] = [
     competitorPricing: "Free: 400 one-time credits. Plus: about $8 to $10/mo. Pro: about $15 to $20/mo. Ultra: $90+/mo.",
     specs: [{"label": "Free plan", "pitchboost": "150 credits a month (1 deck), 10-slide cap, small badge", "competitor": "400 credits once, never refill; 10 cards per generation; badge on shares and exports"}, {"label": "First paid tier", "pitchboost": "Starter, $9/mo: 800 credits, 25 slides, no badge", "competitor": "Plus, about $8 to $10/mo: 1,000 credits, 20 cards, badge off"}, {"label": "Badge removal", "pitchboost": "Starter and up, every deck; or $12 per deck", "competitor": "Plus and up"}, {"label": "Upload an existing deck and rebuild it", "pitchboost": "Yes, from .pptx, one slide per source slide", "competitor": "Imports a .pptx or doc as a starting point; output is a new Gamma"}, {"label": "Brand from your website", "pitchboost": "Yes, logo, colours and tone pulled from your site", "competitor": "Brand kit on paid plans, set up by hand"}, {"label": "Fact check against your own material", "pitchboost": "Yes, invented figures are removed before you see the deck", "competitor": "No"}, {"label": "PowerPoint export", "pitchboost": "Every plan; editable text boxes on paid plans", "competitor": "Yes; slides are Gamma cards, not native layouts"}, {"label": "Viewer analytics", "pitchboost": "Basic on Free, full on Pro", "competitor": "Pro and up"}, {"label": "API and MCP for AI assistants", "pitchboost": "Pro; a no-account sample tool for ChatGPT and Claude", "competitor": "API on Pro and up"}],
     updated: "2026-09-12",
+    pricingUrl: "https://gamma.app/pricing",
+    altSlug: "gamma",
     features: [
       { label: "AI-generated pitch decks", pitchboost: true, competitor: true },
       { label: "Personalized per prospect or deal", pitchboost: true, competitor: false },
@@ -118,6 +124,8 @@ export const COMPETITORS: Competitor[] = [
     competitorPricing: "No free plan (14-day trial). Pro: about $12/mo billed annually, $45 monthly. Team: $40/user/mo.",
     specs: [{"label": "Free plan", "pitchboost": "150 credits a month (1 deck), 10-slide cap, small badge", "competitor": "None; 14-day trial, card required"}, {"label": "First paid tier", "pitchboost": "Starter, $9/mo: 800 credits, 25 slides, no badge", "competitor": "Pro, about $12/mo billed annually ($45 monthly)"}, {"label": "Badge removal", "pitchboost": "Starter and up, every deck; or $12 per deck", "competitor": "Not applicable, no free tier"}, {"label": "Upload an existing deck and rebuild it", "pitchboost": "Yes, from .pptx, one slide per source slide", "competitor": "Imports .pptx into Smart Slides; layout is redone slide by slide by you"}, {"label": "Brand from your website", "pitchboost": "Yes, logo, colours and tone pulled from your site", "competitor": "Custom brand styling set up by hand"}, {"label": "Fact check against your own material", "pitchboost": "Yes, invented figures are removed before you see the deck", "competitor": "No"}, {"label": "PowerPoint export", "pitchboost": "Every plan; editable text boxes on paid plans", "competitor": "Yes"}, {"label": "Viewer analytics", "pitchboost": "Basic on Free, full on Pro", "competitor": "Yes"}, {"label": "API and MCP for AI assistants", "pitchboost": "Pro; a no-account sample tool for ChatGPT and Claude", "competitor": "No public API"}],
     updated: "2026-09-12",
+    pricingUrl: "https://www.beautiful.ai/pricing",
+    altSlug: "beautiful-ai",
     features: [
       { label: "AI-generated pitch decks", pitchboost: true, competitor: "Partial" },
       { label: "Personalized per prospect or deal", pitchboost: true, competitor: false },
@@ -190,6 +198,8 @@ export const COMPETITORS: Competitor[] = [
     competitorPricing: "Free plan. Plus: about $13 to $15/mo. Team: $19 to $23 per seat. Business: $25 to $30 per seat.",
     specs: [{"label": "Free plan", "pitchboost": "150 credits a month (1 deck), 10-slide cap, small badge", "competitor": "Unlimited presentations, 100 one-time AI credits, branded links and PDF, no PowerPoint export"}, {"label": "First paid tier", "pitchboost": "Starter, $9/mo: 800 credits, 25 slides, no badge", "competitor": "Plus, about $13 to $15/mo: unbranded, PowerPoint export, custom fonts"}, {"label": "Badge removal", "pitchboost": "Starter and up, every deck; or $12 per deck", "competitor": "Plus and up"}, {"label": "Upload an existing deck and rebuild it", "pitchboost": "Yes, from .pptx, one slide per source slide", "competitor": "Imports .pptx; redesign is manual with templates"}, {"label": "Brand from your website", "pitchboost": "Yes, logo, colours and tone pulled from your site", "competitor": "Brand kit set up by hand"}, {"label": "Fact check against your own material", "pitchboost": "Yes, invented figures are removed before you see the deck", "competitor": "No"}, {"label": "PowerPoint export", "pitchboost": "Every plan; editable text boxes on paid plans", "competitor": "Paid plans only"}, {"label": "Viewer analytics", "pitchboost": "Basic on Free, full on Pro", "competitor": "Paid plans"}, {"label": "API and MCP for AI assistants", "pitchboost": "Pro; a no-account sample tool for ChatGPT and Claude", "competitor": "No"}],
     updated: "2026-09-12",
+    pricingUrl: "https://pitch.com/pricing",
+    altSlug: "pitch",
     features: [
       { label: "AI-generated pitch decks", pitchboost: true, competitor: "Credit-based" },
       { label: "Personalized per prospect or deal", pitchboost: true, competitor: false },
@@ -262,6 +272,8 @@ export const COMPETITORS: Competitor[] = [
     competitorPricing: "Free tier. Pro: about $16 per user/mo. Enterprise: custom.",
     specs: [{"label": "Free plan", "pitchboost": "150 credits a month (1 deck), 10-slide cap, small badge", "competitor": "Free tier with limited AI credits"}, {"label": "First paid tier", "pitchboost": "Starter, $9/mo: 800 credits, 25 slides, no badge", "competitor": "Pro, about $16 per user/mo"}, {"label": "Badge removal", "pitchboost": "Starter and up, every deck; or $12 per deck", "competitor": "Paid plans"}, {"label": "Upload an existing deck and rebuild it", "pitchboost": "Yes, from .pptx, one slide per source slide", "competitor": "No native .pptx rebuild; generates from prompts and docs"}, {"label": "Brand from your website", "pitchboost": "Yes, logo, colours and tone pulled from your site", "competitor": "No"}, {"label": "Fact check against your own material", "pitchboost": "Yes, invented figures are removed before you see the deck", "competitor": "No"}, {"label": "PowerPoint export", "pitchboost": "Every plan; editable text boxes on paid plans", "competitor": "Limited"}, {"label": "Viewer analytics", "pitchboost": "Basic on Free, full on Pro", "competitor": "Yes"}, {"label": "API and MCP for AI assistants", "pitchboost": "Pro; a no-account sample tool for ChatGPT and Claude", "competitor": "No"}],
     updated: "2026-09-12",
+    pricingUrl: "https://tome.app",
+    altSlug: "tome",
     features: [
       { label: "AI-generated pitch decks", pitchboost: true, competitor: "Retired" },
       { label: "Personalized per prospect or deal", pitchboost: true, competitor: "Research only" },
@@ -474,7 +486,9 @@ export const COMPETITORS: Competitor[] = [
         "competitor": "Connect APIs for developers; no MCP"
       }
     ],
-    "updated": "2026-09-12"
+    "updated": "2026-09-12",
+    "pricingUrl": "https://www.canva.com/pricing/",
+    "altSlug": "canva"
   },
   {
     "slug": "pitchboost-vs-copilot",
@@ -631,7 +645,9 @@ export const COMPETITORS: Competitor[] = [
         "competitor": "Graph API for developers"
       }
     ],
-    "updated": "2026-09-12"
+    "updated": "2026-09-12",
+    "pricingUrl": "https://www.microsoft.com/en-us/microsoft-365/copilot",
+    "altSlug": "copilot-in-powerpoint"
   },
 ];
 
