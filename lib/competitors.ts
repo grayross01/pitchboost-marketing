@@ -34,6 +34,18 @@ export interface Competitor {
   pricingUrl?: string;
   /** Short slug for the alternatives page: /alternatives/<altSlug>. */
   altSlug?: string;
+  /** Which shelf the tool sits on. The alternatives page compares a tool
+   *  against the others on its shelf, so the matrix stays readable: the
+   *  general AI presentation makers on one, the tools built around
+   *  redesigning an existing deck on the other. */
+  family?: "generator" | "redesign";
+}
+
+/** The tools an alternatives page for `c` puts in its matrix: the same
+ *  family, in list order. */
+export function peersOf(c: Competitor): Competitor[] {
+  const fam = c.family ?? "generator";
+  return COMPETITORS.filter((o) => o.slug !== c.slug && (o.family ?? "generator") === fam);
 }
 
 export const COMPETITORS: Competitor[] = [
@@ -648,6 +660,806 @@ export const COMPETITORS: Competitor[] = [
     "updated": "2026-09-12",
     "pricingUrl": "https://www.microsoft.com/en-us/microsoft-365/copilot",
     "altSlug": "copilot-in-powerpoint"
+  },
+  {
+    "slug": "pitchboost-vs-slidespeak",
+    "name": "SlideSpeak",
+    "metaTitle": "PitchBoost vs SlideSpeak (2026): Which Redesigns an Existing PowerPoint Better?",
+    "metaDescription": "SlideSpeak enhances an uploaded deck with a brand kit and credits; PitchBoost rebuilds the whole deck one slide to one in your brand from your website, with every number checked. Prices, free plans and exports compared, checked September 2026.",
+    "heroHeadline": "PitchBoost vs SlideSpeak: two ways to fix a deck you already have",
+    "heroSubhead": "SlideSpeak is a broad AI presentation suite (generate, summarize, chat with documents, even AI video) with a deck enhancer inside it. PitchBoost does one job: take your PowerPoint, keep the content, rebuild the design in your brand, and hand back an editable file.",
+    "verdict": "Pick SlideSpeak if you want one subscription that also writes new decks, summarizes documents and makes videos. Pick PitchBoost if the deck already exists and the job is to make it look right in your brand without touching a number: the rebuild is slide for slide, the brand comes off your website, and the free plan gives you a full deck to judge by rather than a credit balance.",
+    "competitorSummary": "SlideSpeak is an AI presentation platform that generates decks from prompts and documents, summarizes and chats with files, and, on paid plans, enhances an uploaded deck by aligning elements, applying a brand kit and redesigning layouts. Credits drive everything: 100 at sign-up on the free plan, 1,000 a month on Premium, 2,500 on Premium Plus, with top-ups from $10.",
+    "pitchboostPricing": "Free plan. Starter $9/mo. Pro $29/mo. Business $79/mo.",
+    "competitorPricing": "Free: 100 credits once (about 3 presentations). Premium from $29/mo. Premium Plus from $34/mo. Custom template add-on $129. Credit packs from $10 for 500.",
+    "specs": [
+      {
+        "label": "Free plan",
+        "pitchboost": "150 credits a month (1 deck), 10-slide cap, small badge",
+        "competitor": "100 credits at sign-up, no refill; 50MB file limit"
+      },
+      {
+        "label": "First paid tier",
+        "pitchboost": "Starter, $9/mo: 800 credits, 25 slides, no badge",
+        "competitor": "Premium, from $29/mo: 1,000 credits a month, PDF and PPT export"
+      },
+      {
+        "label": "Badge removal",
+        "pitchboost": "Starter and up, every deck; or $12 per deck",
+        "competitor": "Not stated on the pricing page"
+      },
+      {
+        "label": "Upload an existing deck and rebuild it",
+        "pitchboost": "Yes, from .pptx, one slide per source slide",
+        "competitor": "Yes: the AI enhancer realigns, restyles and applies a brand kit to an upload"
+      },
+      {
+        "label": "Brand from your website",
+        "pitchboost": "Yes, logo, colours and tone pulled from your site",
+        "competitor": "Brand kit uploaded by hand; branded presentations on Premium Plus"
+      },
+      {
+        "label": "Fact check against your own material",
+        "pitchboost": "Yes, invented figures are removed before you see the deck",
+        "competitor": "No"
+      },
+      {
+        "label": "PowerPoint export",
+        "pitchboost": "Every plan; editable text boxes on paid plans",
+        "competitor": "Paid plans (PDF and PPT); limited on Free"
+      },
+      {
+        "label": "Viewer analytics",
+        "pitchboost": "Basic on Free, full on Pro",
+        "competitor": "Shareable links; no per-viewer analytics listed"
+      },
+      {
+        "label": "API and MCP for AI assistants",
+        "pitchboost": "Pro; a no-account sample tool for ChatGPT and Claude",
+        "competitor": "API available for developers"
+      }
+    ],
+    "updated": "2026-09-19",
+    "pricingUrl": "https://slidespeak.co/pricing",
+    "altSlug": "slidespeak",
+    "family": "redesign",
+    "features": [
+      {
+        "label": "Redesign an uploaded PowerPoint",
+        "pitchboost": true,
+        "competitor": true
+      },
+      {
+        "label": "One rebuilt slide per source slide",
+        "pitchboost": true,
+        "competitor": "Enhancer works within the existing slides"
+      },
+      {
+        "label": "Brand captured from your website",
+        "pitchboost": true,
+        "competitor": false
+      },
+      {
+        "label": "Numbers checked against the source file",
+        "pitchboost": true,
+        "competitor": false
+      },
+      {
+        "label": "Editable PowerPoint export",
+        "pitchboost": true,
+        "competitor": "Paid plans"
+      },
+      {
+        "label": "Generates new decks from a brief",
+        "pitchboost": true,
+        "competitor": true
+      },
+      {
+        "label": "Summarize and chat with documents",
+        "pitchboost": false,
+        "competitor": true
+      },
+      {
+        "label": "AI video from slides",
+        "pitchboost": false,
+        "competitor": true
+      },
+      {
+        "label": "Free plan",
+        "pitchboost": true,
+        "competitor": true
+      },
+      {
+        "label": "Works from ChatGPT or Claude",
+        "pitchboost": true,
+        "competitor": false
+      }
+    ],
+    "keyDifferences": [
+      {
+        "title": "Enhance in place, or rebuild slide for slide",
+        "body": "SlideSpeak's enhancer improves the slides you upload: alignment, styling, a brand kit applied on top. PitchBoost reads what each slide says (text, chart values, tables, SmartArt) and rebuilds the design from that, one new slide per source slide, so a wall of bullets comes back as a layout rather than a tidier wall of bullets."
+      },
+      {
+        "title": "Where the brand comes from",
+        "body": "SlideSpeak wants a brand kit you assemble by hand, and branded presentations sit on the Premium Plus tier. PitchBoost reads your website first: logo, colours and typography come from the site, and you review the capture before anything generates. There is nothing to upload except the deck."
+      },
+      {
+        "title": "Credits versus a deck",
+        "body": "SlideSpeak's free plan is 100 credits at sign-up, roughly three presentations, then nothing until you pay. PitchBoost's free plan refills monthly and is sized for one full deck of up to 10 slides, so the thing you evaluate is your own deck, rebuilt. Starter at $9 is the first paid tier against SlideSpeak's $29."
+      }
+    ],
+    "pitchboostBestFor": [
+      "Anyone with an existing deck that needs to look right in their brand",
+      "Sales teams and founders who send decks to specific prospects",
+      "Teams that want the PowerPoint back, editable",
+      "People who found us through ChatGPT or Claude and want to hand the file over there"
+    ],
+    "competitorBestFor": [
+      "Teams that want one tool for decks, document summaries and chat",
+      "Making AI videos from slides",
+      "Generating many new decks a month on a credit budget",
+      "Enterprises that need SSO and custom templates"
+    ],
+    "faqs": [
+      {
+        "q": "Can SlideSpeak redesign a PowerPoint I already have?",
+        "a": "Yes. Its AI enhancer takes an uploaded deck and realigns elements, restyles them and applies a brand kit. It works within your existing slides rather than rebuilding them, and export to PPT is a paid feature."
+      },
+      {
+        "q": "Does PitchBoost keep my content when it redesigns a deck?",
+        "a": "Yes. Every fact, figure and name is carried over, chart values and tables included, and a fidelity check flags anything it could not source in your file rather than inventing a replacement. The layout, typography and colours change; the story does not."
+      },
+      {
+        "q": "Which is cheaper for a single deck redesign?",
+        "a": "PitchBoost's free plan rebuilds a deck of up to 10 slides with a small badge; Starter at $9 a month rebuilds up to 25 slides with no badge and can be cancelled after one month. SlideSpeak's free credits cover about three presentations and PPT export needs Premium at $29 a month."
+      },
+      {
+        "q": "Does either tool pull my brand from my website?",
+        "a": "PitchBoost does: it reads your logo, colours and type from your site before generating. SlideSpeak uses a brand kit you build by hand, with branded presentations on its Premium Plus plan."
+      }
+    ],
+    "ctaHeadline": "Bring us the deck. Leave with the deck you meant."
+  },
+  {
+    "slug": "pitchboost-vs-alai",
+    "name": "Alai",
+    "metaTitle": "PitchBoost vs Alai (2026): Redesign an Existing Deck, Prices and Free Plans Compared",
+    "metaDescription": "Alai generates layout options per slide and has a free prettify tool; PitchBoost rebuilds the whole deck in your brand from your website with every number checked. Free plans, prices and exports compared, checked September 2026.",
+    "heroHeadline": "PitchBoost vs Alai: layout options per slide, or the whole deck rebuilt in your brand",
+    "heroSubhead": "Alai is a fast AI slide maker with a free deck prettifier and a generous free tier. PitchBoost starts from the deck you already have, captures your brand from your website, rebuilds every slide one to one, and checks the numbers on the way through.",
+    "verdict": "Alai is a good pick for quick, good-looking slides from a prompt and for trying a redesign of a small deck for free. PitchBoost is the pick when the deck matters: it keeps every figure, pulls the brand from your site instead of a theme picker, and gives the PowerPoint back editable. On price, Alai's paid plans start at $20 and PitchBoost's at $9.",
+    "competitorSummary": "Alai is an AI presentation tool that generates slides from prompts, offers several layout options for each slide, and lets you redesign an existing deck while keeping the content as written. The free plan allows unlimited presentations with a credit allowance, up to 10 AI slides per prompt, PDF and PPT export, and a watermark that only paid plans remove. A free prettify-your-deck tool sits on its site.",
+    "pitchboostPricing": "Free plan. Starter $9/mo. Pro $29/mo. Business $79/mo.",
+    "competitorPricing": "Free: $0, unlimited presentations with a credit allowance, watermark. Plus $20/mo. Pro $30/mo. Ultra $80/mo.",
+    "specs": [
+      {
+        "label": "Free plan",
+        "pitchboost": "150 credits a month (1 deck), 10-slide cap, small badge",
+        "competitor": "Unlimited presentations within a credit allowance, 10 AI slides per prompt, watermark"
+      },
+      {
+        "label": "First paid tier",
+        "pitchboost": "Starter, $9/mo: 800 credits, 25 slides, no badge",
+        "competitor": "Plus, $20/mo: watermark off, priority access to elements and themes"
+      },
+      {
+        "label": "Badge removal",
+        "pitchboost": "Starter and up, every deck; or $12 per deck",
+        "competitor": "Plus and up"
+      },
+      {
+        "label": "Upload an existing deck and rebuild it",
+        "pitchboost": "Yes, from .pptx, one slide per source slide",
+        "competitor": "Yes; several layout options per slide, content kept as written"
+      },
+      {
+        "label": "Brand from your website",
+        "pitchboost": "Yes, logo, colours and tone pulled from your site",
+        "competitor": "Themes; no website capture"
+      },
+      {
+        "label": "Fact check against your own material",
+        "pitchboost": "Yes, invented figures are removed before you see the deck",
+        "competitor": "No"
+      },
+      {
+        "label": "PowerPoint export",
+        "pitchboost": "Every plan; editable text boxes on paid plans",
+        "competitor": "Every plan (PDF and PPT)"
+      },
+      {
+        "label": "Viewer analytics",
+        "pitchboost": "Basic on Free, full on Pro",
+        "competitor": "None listed"
+      },
+      {
+        "label": "API and MCP for AI assistants",
+        "pitchboost": "Pro; a no-account sample tool for ChatGPT and Claude",
+        "competitor": "None listed"
+      }
+    ],
+    "updated": "2026-09-19",
+    "pricingUrl": "https://getalai.com/pricing",
+    "altSlug": "alai",
+    "family": "redesign",
+    "features": [
+      {
+        "label": "Redesign an uploaded PowerPoint",
+        "pitchboost": true,
+        "competitor": true
+      },
+      {
+        "label": "Several layout options per slide",
+        "pitchboost": false,
+        "competitor": true
+      },
+      {
+        "label": "Brand captured from your website",
+        "pitchboost": true,
+        "competitor": false
+      },
+      {
+        "label": "Numbers checked against the source file",
+        "pitchboost": true,
+        "competitor": false
+      },
+      {
+        "label": "Editable PowerPoint export on the free plan",
+        "pitchboost": "Badge on Free",
+        "competitor": "Watermark on Free"
+      },
+      {
+        "label": "Free no-sign-up redesign preview",
+        "pitchboost": true,
+        "competitor": true
+      },
+      {
+        "label": "Viewer analytics on shared links",
+        "pitchboost": true,
+        "competitor": false
+      },
+      {
+        "label": "Personalised decks for a named prospect",
+        "pitchboost": true,
+        "competitor": false
+      },
+      {
+        "label": "Works from ChatGPT or Claude",
+        "pitchboost": true,
+        "competitor": false
+      },
+      {
+        "label": "Free plan",
+        "pitchboost": true,
+        "competitor": true
+      }
+    ],
+    "keyDifferences": [
+      {
+        "title": "Options per slide versus a finished deck",
+        "body": "Alai's approach is to hand you several layouts per slide and let you pick. PitchBoost makes the call for the whole deck at once so it reads as one design, then lets you edit any slide with AI afterwards. If you enjoy choosing layouts, Alai is more fun; if you want the deck done, PitchBoost is faster."
+      },
+      {
+        "title": "A theme, or your actual brand",
+        "body": "Alai applies a theme. PitchBoost reads your website for the logo, the colours and the type before it starts, and you approve the capture. For a deck going to a client, the difference is whether it looks like your company or like a nice template."
+      },
+      {
+        "title": "What happens to the numbers",
+        "body": "Both tools say they keep your text. PitchBoost also checks every figure against the file it came from and flags anything it cannot source, which matters most on the data-heavy slides a redesign is most likely to reshape."
+      }
+    ],
+    "pitchboostBestFor": [
+      "Decks going to a client, investor or prospect",
+      "Teams that want the brand pulled from the website, not a theme",
+      "Data-heavy decks where the numbers must survive",
+      "People who want the editable PowerPoint back"
+    ],
+    "competitorBestFor": [
+      "Quick slides from a prompt with several layout choices",
+      "Students and personal projects on the free plan",
+      "Trying a redesign of a small deck for free",
+      "Anyone who prefers picking layouts slide by slide"
+    ],
+    "faqs": [
+      {
+        "q": "Does Alai redesign an existing PowerPoint?",
+        "a": "Yes. You upload the deck and Alai generates layout options for each slide using its themes while keeping the content as written. Its free tier carries a watermark; Plus at $20 a month removes it."
+      },
+      {
+        "q": "Is there a free way to see what PitchBoost would do to my deck?",
+        "a": "Yes. The free redesign preview on pitchboost.ai takes a .pptx and returns your title slide and your busiest content slide redesigned, with no account. The full deck, in your brand, needs a free account."
+      },
+      {
+        "q": "Which is cheaper?",
+        "a": "Both have free plans. PitchBoost's first paid tier is Starter at $9 a month (800 credits, 25-slide decks, no badge); Alai's is Plus at $20 a month. PitchBoost Pro is $29 against Alai Pro at $30."
+      },
+      {
+        "q": "Which keeps my brand better?",
+        "a": "PitchBoost captures your brand from your website (logo, colours, typography) before generating. Alai applies themes, which you can customise by hand on paid plans."
+      }
+    ],
+    "ctaHeadline": "See your own deck rebuilt in your brand."
+  },
+  {
+    "slug": "pitchboost-vs-sharayeh",
+    "name": "Sharayeh",
+    "metaTitle": "PitchBoost vs Sharayeh (2026): AI PowerPoint Redesign Tools Compared, Prices Checked",
+    "metaDescription": "Sharayeh redesigns a .pptx into three design variants and sells credits from $10; PitchBoost rebuilds the deck in your brand from your website with every number checked, from a free plan. Compared and priced, September 2026.",
+    "heroHeadline": "PitchBoost vs Sharayeh: three variants of your deck, or one deck in your brand",
+    "heroSubhead": "Sharayeh is a document tool with a no-sign-up PowerPoint redesigner that returns three styled versions of your file. PitchBoost rebuilds the deck in your own brand, one slide per source slide, and checks the figures before you see it.",
+    "verdict": "Sharayeh is worth a look if you want a quick restyle of a deck and do not have a brand to apply: upload, pick one of three variants, buy credits to download. PitchBoost is the better choice when the deck represents a company: the brand comes from your website, the content is checked, the rebuild is one slide to one, and the free plan gives you a full deck without buying credits.",
+    "competitorSummary": "Sharayeh is a document-conversion service (presentations from Word, PDFs and images) with an AI redesign tool for PowerPoint. It accepts .pptx and .ppt files, keeps the text as written, modernises layout, colours, fonts and spacing, and returns three design variants as editable .pptx. Previews need no sign-up; downloads use credits sold in packs.",
+    "pitchboostPricing": "Free plan. Starter $9/mo. Pro $29/mo. Business $79/mo.",
+    "competitorPricing": "Preview without sign-up. Credits: $10 for 3,000, $24 for 10,000; buying credits unlocks downloads and Pro features.",
+    "specs": [
+      {
+        "label": "Free plan",
+        "pitchboost": "150 credits a month (1 deck), 10-slide cap, small badge",
+        "competitor": "Preview without sign-up; downloads need a credit pack"
+      },
+      {
+        "label": "First paid tier",
+        "pitchboost": "Starter, $9/mo: 800 credits, 25 slides, no badge",
+        "competitor": "Standard pack, $10 once: 3,000 credits"
+      },
+      {
+        "label": "Badge removal",
+        "pitchboost": "Starter and up, every deck; or $12 per deck",
+        "competitor": "Not stated"
+      },
+      {
+        "label": "Upload an existing deck and rebuild it",
+        "pitchboost": "Yes, from .pptx, one slide per source slide",
+        "competitor": "Yes: .pptx or .ppt in, three design variants out"
+      },
+      {
+        "label": "Brand from your website",
+        "pitchboost": "Yes, logo, colours and tone pulled from your site",
+        "competitor": "Brand kit on Pro; no website capture"
+      },
+      {
+        "label": "Fact check against your own material",
+        "pitchboost": "Yes, invented figures are removed before you see the deck",
+        "competitor": "No; text kept as written"
+      },
+      {
+        "label": "PowerPoint export",
+        "pitchboost": "Every plan; editable text boxes on paid plans",
+        "competitor": "Editable .pptx with credits"
+      },
+      {
+        "label": "Viewer analytics",
+        "pitchboost": "Basic on Free, full on Pro",
+        "competitor": "None"
+      },
+      {
+        "label": "API and MCP for AI assistants",
+        "pitchboost": "Pro; a no-account sample tool for ChatGPT and Claude",
+        "competitor": "None listed"
+      }
+    ],
+    "updated": "2026-09-19",
+    "pricingUrl": "https://sharayeh.com/en/pricing",
+    "altSlug": "sharayeh",
+    "family": "redesign",
+    "features": [
+      {
+        "label": "Redesign an uploaded PowerPoint",
+        "pitchboost": true,
+        "competitor": true
+      },
+      {
+        "label": "Try without an account",
+        "pitchboost": "Two-slide preview",
+        "competitor": "Preview, download needs credits"
+      },
+      {
+        "label": "Brand captured from your website",
+        "pitchboost": true,
+        "competitor": false
+      },
+      {
+        "label": "Numbers checked against the source file",
+        "pitchboost": true,
+        "competitor": false
+      },
+      {
+        "label": "Editable PowerPoint export",
+        "pitchboost": true,
+        "competitor": true
+      },
+      {
+        "label": "Several full-deck variants to choose from",
+        "pitchboost": false,
+        "competitor": true
+      },
+      {
+        "label": "Viewer analytics on shared links",
+        "pitchboost": true,
+        "competitor": false
+      },
+      {
+        "label": "Generates new decks from a brief",
+        "pitchboost": true,
+        "competitor": "From documents and images"
+      },
+      {
+        "label": "Monthly plan with a free tier",
+        "pitchboost": true,
+        "competitor": "Credit packs"
+      },
+      {
+        "label": "Works from ChatGPT or Claude",
+        "pitchboost": true,
+        "competitor": false
+      }
+    ],
+    "keyDifferences": [
+      {
+        "title": "Restyle versus rebuild",
+        "body": "Sharayeh keeps your slides and restyles them: new colours, fonts, spacing, image placement, in three variants. PitchBoost reads the content and rebuilds each slide as a new layout for what it says, which is what fixes a slide that was a wall of text rather than making the wall prettier."
+      },
+      {
+        "title": "Whose brand",
+        "body": "Sharayeh's variants are palettes; a brand kit is a Pro feature you set up. PitchBoost starts by reading your website and shows you the captured logo, colours and type before it generates, so the first draft is already yours."
+      },
+      {
+        "title": "Credits versus a plan",
+        "body": "Sharayeh sells credit packs from $10 and gates downloads behind them. PitchBoost's free plan includes a full deck a month with a small badge, and Starter at $9 a month removes the badge and rebuilds up to 25 slides; cancel after a month if it was a one-off."
+      }
+    ],
+    "pitchboostBestFor": [
+      "Decks that need to carry a real brand",
+      "Sales and investor decks where the figures matter",
+      "Teams that want analytics on the shared link",
+      "Anyone who wants the whole deck rebuilt, not restyled"
+    ],
+    "competitorBestFor": [
+      "A fast restyle with a few looks to pick from",
+      "Converting Word, PDF and images into slides",
+      "Occasional use on a credit pack rather than a subscription",
+      "Decks with no company brand to apply"
+    ],
+    "faqs": [
+      {
+        "q": "Does Sharayeh need an account to redesign a PowerPoint?",
+        "a": "You can preview a redesign without signing up. Downloading the editable .pptx uses credits, sold in packs from $10."
+      },
+      {
+        "q": "Does PitchBoost also have a no-sign-up preview?",
+        "a": "Yes. The free redesign preview returns two of your slides rebuilt, with no account. The whole deck in your brand needs a free account, and there is nothing to buy to download it."
+      },
+      {
+        "q": "Which keeps my content more faithfully?",
+        "a": "Both keep your text. PitchBoost also checks every number against the file it came from and flags anything it could not source, which Sharayeh does not do."
+      },
+      {
+        "q": "What about very large files?",
+        "a": "Sharayeh takes files up to 30MB free and 300MB on Pro. PitchBoost's app has no fixed file limit; the free preview tool on pitchboost.ai caps at 4MB."
+      }
+    ],
+    "ctaHeadline": "Your deck, in your brand, checked."
+  },
+  {
+    "slug": "pitchboost-vs-plus-ai",
+    "name": "Plus AI",
+    "metaTitle": "PitchBoost vs Plus AI (2026): Redesign Inside Google Slides or Rebuild the Deck? Prices Compared",
+    "metaDescription": "Plus AI is an add-on that rewrites and remixes slides inside Google Slides and PowerPoint from $15 a month; PitchBoost rebuilds an uploaded deck in your brand from your website with every number checked, from a free plan. Compared, September 2026.",
+    "heroHeadline": "PitchBoost vs Plus AI: an add-on in your editor, or a rebuild of the whole deck",
+    "heroSubhead": "Plus AI lives inside Google Slides and PowerPoint and improves the deck you have open, slide by slide. PitchBoost takes the file, rebuilds every slide in your brand, and hands back an editable PowerPoint and a shareable link.",
+    "verdict": "Choose Plus AI if you live in Google Slides or PowerPoint and want AI help on the slide you are editing right now: rewrite, remix, insert. Choose PitchBoost when the whole deck needs to change at once: it reads the file, captures your brand from your website, rebuilds slide for slide, checks the numbers, and costs less to start ($9 Starter against $15 Basic, with a free plan Plus AI does not offer beyond a 7-day trial).",
+    "competitorSummary": "Plus AI is an AI add-on for Google Slides and Microsoft PowerPoint. It generates new presentations, rewrites and remixes existing slides, and inserts single slides, all inside the editor you already use. Plans are per user from $15 a month (or $10 a month billed annually) with a 7-day trial; team branding (logo, colours, fonts) arrives on the Team plan at $40 a month.",
+    "pitchboostPricing": "Free plan. Starter $9/mo. Pro $29/mo. Business $79/mo.",
+    "competitorPricing": "7-day trial. Basic $15/user/mo ($10 annual). Pro $25/user/mo ($20 annual). Team $40/user/mo ($30 annual). Max $240/user/mo ($200 annual).",
+    "specs": [
+      {
+        "label": "Free plan",
+        "pitchboost": "150 credits a month (1 deck), 10-slide cap, small badge",
+        "competitor": "None; 7-day trial with 1,000 credits"
+      },
+      {
+        "label": "First paid tier",
+        "pitchboost": "Starter, $9/mo: 800 credits, 25 slides, no badge",
+        "competitor": "Basic, $15/user/mo ($10 annual): 1,500 credits, rewrite and remix"
+      },
+      {
+        "label": "Badge removal",
+        "pitchboost": "Starter and up, every deck; or $12 per deck",
+        "competitor": "Not applicable; works in your own file"
+      },
+      {
+        "label": "Upload an existing deck and rebuild it",
+        "pitchboost": "Yes, from .pptx, one slide per source slide",
+        "competitor": "Remixes and rewrites slides inside the open deck; no whole-deck rebuild"
+      },
+      {
+        "label": "Brand from your website",
+        "pitchboost": "Yes, logo, colours and tone pulled from your site",
+        "competitor": "Team plan branding set by hand"
+      },
+      {
+        "label": "Fact check against your own material",
+        "pitchboost": "Yes, invented figures are removed before you see the deck",
+        "competitor": "No"
+      },
+      {
+        "label": "PowerPoint export",
+        "pitchboost": "Every plan; editable text boxes on paid plans",
+        "competitor": "Native: it edits the PowerPoint or Google Slides file directly"
+      },
+      {
+        "label": "Viewer analytics",
+        "pitchboost": "Basic on Free, full on Pro",
+        "competitor": "None"
+      },
+      {
+        "label": "API and MCP for AI assistants",
+        "pitchboost": "Pro; a no-account sample tool for ChatGPT and Claude",
+        "competitor": "None listed"
+      }
+    ],
+    "updated": "2026-09-19",
+    "pricingUrl": "https://plusai.com/pricing",
+    "altSlug": "plus-ai",
+    "family": "redesign",
+    "features": [
+      {
+        "label": "Works inside Google Slides",
+        "pitchboost": false,
+        "competitor": true
+      },
+      {
+        "label": "Works inside PowerPoint",
+        "pitchboost": "Import and export .pptx",
+        "competitor": true
+      },
+      {
+        "label": "Rebuild the whole deck at once",
+        "pitchboost": true,
+        "competitor": false
+      },
+      {
+        "label": "Rewrite or remix one slide at a time",
+        "pitchboost": true,
+        "competitor": true
+      },
+      {
+        "label": "Brand captured from your website",
+        "pitchboost": true,
+        "competitor": false
+      },
+      {
+        "label": "Numbers checked against the source file",
+        "pitchboost": true,
+        "competitor": false
+      },
+      {
+        "label": "Shareable link with viewer analytics",
+        "pitchboost": true,
+        "competitor": false
+      },
+      {
+        "label": "Free plan",
+        "pitchboost": true,
+        "competitor": "7-day trial"
+      },
+      {
+        "label": "Per-user pricing",
+        "pitchboost": "Per workspace",
+        "competitor": true
+      },
+      {
+        "label": "Works from ChatGPT or Claude",
+        "pitchboost": true,
+        "competitor": false
+      }
+    ],
+    "keyDifferences": [
+      {
+        "title": "Inside the editor, or on the whole file",
+        "body": "Plus AI's strength is that nothing leaves Google Slides or PowerPoint: you select a slide, ask for a rewrite or a remix, and keep working. PitchBoost is the opposite shape: give it the file, and every slide comes back rebuilt in one design, with the PowerPoint returned for editing."
+      },
+      {
+        "title": "Branding by hand, or from the website",
+        "body": "Plus AI's branding (logo, colours, fonts) is a Team-plan feature you configure. PitchBoost reads it from your website on every plan, including the free one, and shows you the capture before generating."
+      },
+      {
+        "title": "Trial versus a free plan, and per-user pricing",
+        "body": "Plus AI has no free plan, only a 7-day trial, and charges per user from $15 a month. PitchBoost has a permanent free plan sized for one deck a month and charges per workspace from $9."
+      }
+    ],
+    "pitchboostBestFor": [
+      "A deck that needs to change all at once, in a real brand",
+      "Sending decks to prospects with analytics on who opened them",
+      "Small teams that do not want per-seat pricing",
+      "Anyone arriving with a file rather than an open editor"
+    ],
+    "competitorBestFor": [
+      "People who work all day in Google Slides or PowerPoint",
+      "Slide-by-slide rewrites and remixes while editing",
+      "Teams standardising on one add-on with shared presets",
+      "Inserting a single AI slide into an existing deck"
+    ],
+    "faqs": [
+      {
+        "q": "Can Plus AI redesign my whole PowerPoint?",
+        "a": "Plus AI rewrites and remixes slides inside the deck you have open and can insert new ones. It does not take a file and rebuild every slide as one new design; that is what PitchBoost does."
+      },
+      {
+        "q": "Can I edit a PitchBoost deck in PowerPoint afterwards?",
+        "a": "Yes. PitchBoost exports an editable .pptx on every plan, with editable text boxes on paid plans, so you can keep working in PowerPoint, Google Slides or Keynote."
+      },
+      {
+        "q": "Which is cheaper?",
+        "a": "PitchBoost has a free plan and starts at $9 a month per workspace. Plus AI has a 7-day trial and starts at $15 per user a month, or $10 billed annually."
+      },
+      {
+        "q": "Does either work from ChatGPT?",
+        "a": "PitchBoost has a ChatGPT app and a Claude connector, so you can hand a deck over from inside either assistant. Plus AI runs as an add-on inside Google Slides and PowerPoint."
+      }
+    ],
+    "ctaHeadline": "Give us the file. Get the deck back."
+  },
+  {
+    "slug": "pitchboost-vs-perceptis",
+    "name": "Perceptis",
+    "metaTitle": "PitchBoost vs Perceptis (2026): Consulting-Style Slides vs a Full Deck Rebuild, Prices Compared",
+    "metaDescription": "Perceptis generates consulting-style PowerPoint slides and unlocks upload-to-edit on its $129 Pro plan; PitchBoost rebuilds an uploaded deck in your brand from your website on every plan, free included. Compared and priced, September 2026.",
+    "heroHeadline": "PitchBoost vs Perceptis: consulting slide layouts, or your deck rebuilt in your brand",
+    "heroSubhead": "Perceptis builds McKinsey-style slides natively in PowerPoint from a slide library and charges by slides per month. PitchBoost starts from the deck you already have, rebuilds it in your brand from your website, and gives the file back editable, from a free plan.",
+    "verdict": "Perceptis suits consultants who want native PowerPoint slides in a consulting idiom (Gantt charts, maps, framework layouts) and are happy to pay $129 a month for the upload-to-edit feature. PitchBoost is for everyone else with an existing deck: the redesign of an upload is on every plan including the free one, the brand comes from your website, the numbers are checked, and Starter is $9.",
+    "competitorSummary": "Perceptis is an AI slide generator aimed at consulting and business slides: single and multi-slide generation from a library of 50 or more professional layouts, complex visuals like maps and Gantt charts, and PowerPoint-native export with real charts, tables and shapes. Plans are priced by slides per month: Free (10), Starter $29 (50), Pro $129 (100, plus upload-to-edit and one corporate theme).",
+    "pitchboostPricing": "Free plan. Starter $9/mo. Pro $29/mo. Business $79/mo.",
+    "competitorPricing": "Free: 10 slides a month. Starter $29/mo: 50 slides, remove Perceptis branding. Pro $129/mo: 100 slides, upload-to-edit, one corporate theme.",
+    "specs": [
+      {
+        "label": "Free plan",
+        "pitchboost": "150 credits a month (1 deck), 10-slide cap, small badge",
+        "competitor": "10 slides a month, Perceptis branding"
+      },
+      {
+        "label": "First paid tier",
+        "pitchboost": "Starter, $9/mo: 800 credits, 25 slides, no badge",
+        "competitor": "Starter, $29/mo: 50 slides a month, branding removed"
+      },
+      {
+        "label": "Badge removal",
+        "pitchboost": "Starter and up, every deck; or $12 per deck",
+        "competitor": "Starter and up"
+      },
+      {
+        "label": "Upload an existing deck and rebuild it",
+        "pitchboost": "Yes, from .pptx, one slide per source slide, every plan",
+        "competitor": "Upload-to-edit on Pro ($129/mo) only"
+      },
+      {
+        "label": "Brand from your website",
+        "pitchboost": "Yes, logo, colours and tone pulled from your site",
+        "competitor": "One corporate theme on Pro"
+      },
+      {
+        "label": "Fact check against your own material",
+        "pitchboost": "Yes, invented figures are removed before you see the deck",
+        "competitor": "No"
+      },
+      {
+        "label": "PowerPoint export",
+        "pitchboost": "Every plan; editable text boxes on paid plans",
+        "competitor": "Every plan; native charts, tables and shapes"
+      },
+      {
+        "label": "Viewer analytics",
+        "pitchboost": "Basic on Free, full on Pro",
+        "competitor": "None"
+      },
+      {
+        "label": "API and MCP for AI assistants",
+        "pitchboost": "Pro; a no-account sample tool for ChatGPT and Claude",
+        "competitor": "None listed"
+      }
+    ],
+    "updated": "2026-09-19",
+    "pricingUrl": "https://perceptis.ai/pricing",
+    "altSlug": "perceptis",
+    "family": "redesign",
+    "features": [
+      {
+        "label": "Redesign an uploaded PowerPoint",
+        "pitchboost": "Every plan",
+        "competitor": "Pro plan only"
+      },
+      {
+        "label": "Consulting-style layout library",
+        "pitchboost": false,
+        "competitor": true
+      },
+      {
+        "label": "Native PowerPoint charts and shapes",
+        "pitchboost": "Editable text boxes; charts as images",
+        "competitor": true
+      },
+      {
+        "label": "Brand captured from your website",
+        "pitchboost": true,
+        "competitor": false
+      },
+      {
+        "label": "Numbers checked against the source file",
+        "pitchboost": true,
+        "competitor": false
+      },
+      {
+        "label": "Shareable link with viewer analytics",
+        "pitchboost": true,
+        "competitor": false
+      },
+      {
+        "label": "Free plan",
+        "pitchboost": true,
+        "competitor": true
+      },
+      {
+        "label": "Personalised decks for a named prospect",
+        "pitchboost": true,
+        "competitor": false
+      },
+      {
+        "label": "Maps and Gantt charts",
+        "pitchboost": false,
+        "competitor": true
+      },
+      {
+        "label": "Works from ChatGPT or Claude",
+        "pitchboost": true,
+        "competitor": false
+      }
+    ],
+    "keyDifferences": [
+      {
+        "title": "Who gets to upload a deck",
+        "body": "Perceptis puts upload-to-edit on its Pro plan at $129 a month; Free and Starter generate new slides only. PitchBoost's whole reason to exist is the upload: every plan, including the free one, takes a .pptx and rebuilds it."
+      },
+      {
+        "title": "Consulting idiom, or your idiom",
+        "body": "Perceptis is strongest at the consulting look: framework slides, Gantt charts, maps, native PowerPoint objects. PitchBoost rebuilds in your brand, pulled from your website, which is what a sales, investor or client deck usually needs to look like."
+      },
+      {
+        "title": "Slides per month, or credits",
+        "body": "Perceptis counts slides: 10 free, 50 for $29, 100 for $129. PitchBoost counts decks: one free deck of up to 10 slides a month, then 800 credits (about seven decks of up to 25 slides) for $9."
+      }
+    ],
+    "pitchboostBestFor": [
+      "Anyone with an existing deck to rebuild, on any budget",
+      "Decks that must carry a company's real brand",
+      "Sales, investor and client decks with figures to protect",
+      "Teams that want a shareable link with analytics"
+    ],
+    "competitorBestFor": [
+      "Consultants who want the consulting slide idiom",
+      "Native PowerPoint charts, maps and Gantt charts",
+      "Building new slides from a layout library",
+      "Teams already paying for a Pro seat who need upload-to-edit"
+    ],
+    "faqs": [
+      {
+        "q": "Can Perceptis redesign a PowerPoint I upload?",
+        "a": "On its Pro plan at $129 a month, yes (upload-to-edit with AI). The Free and Starter plans generate new slides only."
+      },
+      {
+        "q": "Does PitchBoost export native PowerPoint charts?",
+        "a": "PitchBoost exports an editable .pptx with editable text boxes on paid plans; charts and visuals are rendered as images. Perceptis exports native charts, tables and shapes, which is a real advantage if you rebuild charts by hand in PowerPoint."
+      },
+      {
+        "q": "Which is cheaper to redesign one deck?",
+        "a": "PitchBoost: free for a deck of up to 10 slides with a small badge, or $9 for Starter with no badge and 25-slide decks. Perceptis: the upload feature starts at $129 a month."
+      },
+      {
+        "q": "Do both keep my brand?",
+        "a": "PitchBoost captures it from your website on every plan. Perceptis includes one corporate theme on Pro."
+      }
+    ],
+    "ctaHeadline": "The upload is the whole point. Try it free."
   },
 ];
 
