@@ -912,6 +912,13 @@ export const REDESIGNS_ES: RedesignPage[] = [
 
   {
     "slug": "powerpoint-makeover-before-and-after",
+    "gallery": [
+      { "before": "/redesign/makeover/before-1.webp", "after": "/redesign/makeover/after-1.webp", "caption": "Diapositiva de título: el mismo nombre y el mismo lema, con la marca extraída del sitio web en lugar de un rectángulo azul marino." },
+      { "before": "/redesign/makeover/before-3.webp", "after": "/redesign/makeover/after-3.webp", "caption": "El muro de texto: cinco viñetas largas se convierten en un diseño, y cada cifra (23%, 3,4 días, 61%, 34%, $4.200, 11 horas) sigue ahí." },
+      { "before": "/redesign/makeover/before-4.webp", "after": "/redesign/makeover/after-4.webp", "caption": "Tabla de precios: tres niveles, los mismos números, legibles desde el fondo de la sala." },
+      { "before": "/redesign/makeover/before-5.webp", "after": "/redesign/makeover/after-5.webp", "caption": "Diapositiva de gráfico: los valores del gráfico se leen del archivo y se reconstruyen como tabla comparativa, con las cifras principales al frente y la mejora calculada por cliente." },
+      { "before": "/redesign/makeover/before-6.webp", "after": "/redesign/makeover/after-6.webp", "caption": "Próximos pasos: un cierre con la petición, el calendario y una forma de responder." }
+    ],
     "navLabel": "Renovación de PowerPoint: antes y después",
     "metaTitle": "Renovación de PowerPoint Antes y Después: Qué Cambia con IA | PitchBoost",
     "metaDescription": "Qué cambia realmente en una renovación de PowerPoint, diapositiva por diapositiva: portada, agenda, muros de texto, gráficos, equipo y cierre. Sube tu presentación y ve el antes y después en minutos.",

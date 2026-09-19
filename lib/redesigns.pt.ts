@@ -912,6 +912,13 @@ export const REDESIGNS_PT: RedesignPage[] = [
 
   {
     "slug": "powerpoint-makeover-before-and-after",
+    "gallery": [
+      { "before": "/redesign/makeover/before-1.webp", "after": "/redesign/makeover/after-1.webp", "caption": "Slide de título: o mesmo nome e o mesmo slogan, com a marca extraída do site em vez de um retângulo azul-marinho." },
+      { "before": "/redesign/makeover/before-3.webp", "after": "/redesign/makeover/after-3.webp", "caption": "A parede de texto: cinco tópicos longos viram um layout, e cada número (23%, 3,4 dias, 61%, 34%, US$ 4.200, 11 horas) continua lá." },
+      { "before": "/redesign/makeover/before-4.webp", "after": "/redesign/makeover/after-4.webp", "caption": "Tabela de preços: três planos, os mesmos números, legíveis do fundo da sala." },
+      { "before": "/redesign/makeover/before-5.webp", "after": "/redesign/makeover/after-5.webp", "caption": "Slide de gráfico: os valores do gráfico são lidos do arquivo e reconstruídos como tabela comparativa, com os números principais em destaque e a melhoria calculada por cliente." },
+      { "before": "/redesign/makeover/before-6.webp", "after": "/redesign/makeover/after-6.webp", "caption": "Próximos passos: um fechamento com o pedido, o cronograma e um jeito de responder." }
+    ],
     "navLabel": "Reforma de PowerPoint: antes e depois",
     "metaTitle": "Reforma de PowerPoint Antes e Depois: O Que Muda com IA | PitchBoost",
     "metaDescription": "O que uma reforma de PowerPoint realmente muda, slide por slide: título, agenda, paredes de bullet points, gráficos, equipe e fechamento. Envie seu próprio deck e veja o antes e depois em minutos.",

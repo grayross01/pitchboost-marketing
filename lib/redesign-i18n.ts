@@ -38,6 +38,13 @@ export interface RedesignUi {
   relatedBulkBody: string;
   ctaBody: string;
   alsoIn: string;
+  galleryLabel: string;
+  galleryTitle: string;
+  galleryBody: string;
+  galleryBefore: string;
+  galleryAfter: string;
+  galleryFoot: string;
+  galleryFootLink: string;
 }
 
 export const REDESIGN_UI: Record<Locale, RedesignUi> = {
@@ -64,6 +71,13 @@ export const REDESIGN_UI: Record<Locale, RedesignUi> = {
     relatedBulkBody: "Convert a whole folder of PowerPoints into your brand in one run.",
     ctaBody: "Upload the deck, point PitchBoost at your website, and see the redesign for yourself. One free deck a month, no credit card.",
     alsoIn: "Also in",
+    galleryLabel: "Before and after",
+    galleryTitle: "The same deck, rebuilt",
+    galleryBody: "A six-slide sales deck for a fictional fleet-analytics company, built the way most decks are (Calibri, a navy bar, five long bullets), then uploaded and rebuilt one slide to one in the company's brand. Nothing was retyped.",
+    galleryBefore: "Before",
+    galleryAfter: "After",
+    galleryFoot: "Want this on your own slides before signing up?",
+    galleryFootLink: "The free preview rebuilds two of them.",
   },
   es: {
     breadcrumbHome: "Inicio",
@@ -88,6 +102,13 @@ export const REDESIGN_UI: Record<Locale, RedesignUi> = {
     relatedBulkBody: "Convierte una carpeta entera de PowerPoints a tu marca en una sola pasada.",
     ctaBody: "Sube la presentación, indica a PitchBoost tu sitio web y comprueba el rediseño por ti mismo. Una presentación gratis al mes, sin tarjeta de crédito.",
     alsoIn: "También en",
+    galleryLabel: "Antes y después",
+    galleryTitle: "La misma presentación, reconstruida",
+    galleryBody: "Una presentación de ventas de seis diapositivas para una empresa ficticia de analítica de flotas, hecha como casi todas (Calibri, una franja azul marino, cinco viñetas largas), subida y reconstruida diapositiva a diapositiva con la marca de la empresa. No se volvió a escribir nada.",
+    galleryBefore: "Antes",
+    galleryAfter: "Después",
+    galleryFoot: "¿Quieres verlo en tus propias diapositivas antes de registrarte?",
+    galleryFootLink: "La vista previa gratuita reconstruye dos de ellas.",
   },
   pt: {
     breadcrumbHome: "Início",
@@ -112,6 +133,13 @@ export const REDESIGN_UI: Record<Locale, RedesignUi> = {
     relatedBulkBody: "Converta uma pasta inteira de PowerPoints para a sua marca de uma vez.",
     ctaBody: "Envie a apresentação, aponte o PitchBoost para o seu site e veja o redesign com seus próprios olhos. Uma apresentação grátis por mês, sem cartão de crédito.",
     alsoIn: "Também em",
+    galleryLabel: "Antes e depois",
+    galleryTitle: "A mesma apresentação, reconstruída",
+    galleryBody: "Uma apresentação de vendas de seis slides de uma empresa fictícia de análise de frotas, feita como quase todas (Calibri, uma faixa azul-marinho, cinco tópicos longos), enviada e reconstruída slide a slide com a marca da empresa. Nada foi redigitado.",
+    galleryBefore: "Antes",
+    galleryAfter: "Depois",
+    galleryFoot: "Quer ver isso nos seus próprios slides antes de se cadastrar?",
+    galleryFootLink: "A prévia gratuita reconstrói dois deles.",
   },
 };
 

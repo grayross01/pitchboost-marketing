@@ -28,6 +28,9 @@ export interface RedesignPage {
   ctaHeadline: string;
   /** ISO date the page copy last changed (sitemap lastmod, dateModified). */
   updated?: string;
+  /** Before-and-after pairs rendered under the hero (the makeover page).
+   *  Images live in public/; the same deck, the same slide, rebuilt. */
+  gallery?: { before: string; after: string; caption: string }[];
 }
 
 /** The rebuild flow is the same regardless of intent; the framing differs.
@@ -985,6 +988,13 @@ export const REDESIGNS: RedesignPage[] = [
 
   {
     "slug": "powerpoint-makeover-before-and-after",
+    "gallery": [
+      { "before": "/redesign/makeover/before-1.webp", "after": "/redesign/makeover/after-1.webp", "caption": "Title slide: the same company name and tagline, in the brand pulled from the website instead of a navy rectangle." },
+      { "before": "/redesign/makeover/before-3.webp", "after": "/redesign/makeover/after-3.webp", "caption": "The wall of text: five long bullets become a layout, and every figure in them (23%, 3.4 days, 61%, 34%, $4,200, 11 hours) is still there." },
+      { "before": "/redesign/makeover/before-4.webp", "after": "/redesign/makeover/after-4.webp", "caption": "Pricing table: three tiers, the same numbers, readable from the back of the room." },
+      { "before": "/redesign/makeover/before-5.webp", "after": "/redesign/makeover/after-5.webp", "caption": "Chart slide: the values behind the chart are read from the file and rebuilt as a comparison table, with the headline numbers pulled forward and the improvement worked out per customer." },
+      { "before": "/redesign/makeover/before-6.webp", "after": "/redesign/makeover/after-6.webp", "caption": "Next steps: a closing slide with the ask, the timeline and a way to reply." }
+    ],
     "navLabel": "PowerPoint makeover: before and after",
     "metaTitle": "PowerPoint Makeover Before and After: What an AI Redesign Changes | PitchBoost",
     "metaDescription": "What a PowerPoint makeover actually changes, slide by slide: title, agenda, bullet walls, charts, team and closing slides. Upload your own deck and see the before and after in minutes.",

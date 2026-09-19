@@ -31,12 +31,14 @@ function SlideFrame({ src, label }: { src: string; label: string }) {
     return () => ro.disconnect();
   }, []);
   return (
-    <div ref={ref} style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: 12, border: "1px solid var(--ds-border)", background: "#0f1220" }}>
+    <div ref={ref} style={{ position: "relative", width: "100%", minWidth: 0, maxWidth: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: 12, border: "1px solid var(--ds-border)", background: "#0f1220" }}>
       <iframe
         src={src}
         title={label}
         loading="lazy"
-        style={{ width: 1920, height: 1080, border: 0, transform: `scale(${scale})`, transformOrigin: "top left", pointerEvents: "none", display: "block" }}
+        // Absolutely positioned so the 1920px intrinsic width never feeds the
+        // grid's min-content size (which is how slide 1 rendered unscaled).
+        style={{ position: "absolute", top: 0, left: 0, width: 1920, height: 1080, border: 0, transform: `scale(${scale})`, transformOrigin: "top left", pointerEvents: "none", display: "block" }}
       />
     </div>
   );
@@ -233,7 +235,7 @@ export default function PreviewClient() {
               </div>
             </div>
           )}
-          <div>
+          <div style={{ minWidth: 0 }}>
             <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: ".06em", textTransform: "uppercase", color: "#1F6B6B", marginBottom: 8 }}>Slide 1, redesigned</div>
             <SlideFrame src={slideUrl(1)} label="Slide 1, redesigned" />
           </div>
@@ -256,7 +258,7 @@ export default function PreviewClient() {
               </div>
               <p style={{ fontSize: 12.5, color: "var(--ds-text-secondary)", margin: "8px 0 0" }}>Every word and number carried over; only the design changed.</p>
             </div>
-            <div>
+            <div style={{ minWidth: 0 }}>
               <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: ".06em", textTransform: "uppercase", color: "#1F6B6B", marginBottom: 8 }}>Slide {content.slideNumber}, redesigned</div>
               <SlideFrame src={slideUrl(2)} label={`Slide ${content.slideNumber}, redesigned`} />
             </div>

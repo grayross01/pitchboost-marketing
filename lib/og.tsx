@@ -169,3 +169,54 @@ export async function ogImage({ eyebrow, title, subtitle }: OgCard): Promise<Ima
     { ...OG_SIZE, fonts },
   );
 }
+
+/**
+ * A card built around a picture: the before/after pair on the makeover
+ * page. `picturePath` is a file under public/, read at render time and
+ * embedded as a data URL (the deployed URL is not reachable while the
+ * site is still building).
+ */
+export async function ogImageWithPicture({ eyebrow, title, picturePath, pictureAspect }: { eyebrow: string; title: string; picturePath: string; pictureAspect: number }): Promise<ImageResponse> {
+  const fonts = await loadFonts();
+  const bytes = await readFile(join(process.cwd(), "public", picturePath));
+  const mime = picturePath.endsWith(".webp") ? "image/webp" : picturePath.endsWith(".png") ? "image/png" : "image/jpeg";
+  const src = `data:${mime};base64,${bytes.toString("base64")}`;
+  const w = 1080;
+  const h = Math.round(w / pictureAspect);
+  return new ImageResponse(
+    (
+      <div
+        style={{
+          width: 1200,
+          height: 630,
+          display: "flex",
+          flexDirection: "column",
+          background: "linear-gradient(135deg, #0f1220 0%, #171a2e 58%, #1F6B6B 100%)",
+          padding: "48px 60px 44px",
+          fontFamily: "Geist",
+          color: "white",
+        }}
+      >
+        <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+          <div style={{ width: 12, height: 12, borderRadius: 6, background: `linear-gradient(135deg, ${TEAL}, ${CORAL})` }} />
+          <div style={{ fontSize: 22, letterSpacing: "0.08em", textTransform: "uppercase", color: "rgba(255,255,255,0.72)" }}>{clip(eyebrow, 48)}</div>
+        </div>
+        <div style={{ fontSize: 44, fontWeight: 700, lineHeight: 1.1, letterSpacing: "-0.03em", marginTop: 18, maxWidth: 1080 }}>{clip(title, 70)}</div>
+        <div style={{ display: "flex", marginTop: "auto", justifyContent: "center" }}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={src} width={w} height={h} style={{ width: w, height: h, borderRadius: 12 }} alt="" />
+        </div>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginTop: 26 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+            <div style={{ width: 30, height: 30, borderRadius: 8, background: `linear-gradient(135deg, ${TEAL}, ${CORAL})` }} />
+            <div style={{ fontSize: 28, fontWeight: 700, letterSpacing: "-0.02em" }}>PitchBoost</div>
+          </div>
+          <div style={{ fontSize: 20, color: "rgba(255,255,255,0.78)", background: "rgba(255,255,255,0.10)", border: "1px solid rgba(255,255,255,0.16)", padding: "8px 18px", borderRadius: 999 }}>
+            pitchboost.ai
+          </div>
+        </div>
+      </div>
+    ),
+    { ...OG_SIZE, fonts },
+  );
+}
