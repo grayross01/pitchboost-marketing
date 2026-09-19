@@ -16,7 +16,8 @@ export const STATIC_PAGE_DATES: Record<string, string> = {
   "/use-cases": "2026-09-12",
   "/real-estate": "2026-09-08",
   "/best-listing-presentation-software": "2026-07-11",
-  "/tools": "2026-08-31",
+  "/tools": "2026-09-19",
+  "/tools/redesign-preview": "2026-09-19",
   "/tools/deck-evaluator": "2026-08-31",
   "/tools/open-house-sign-in": "2026-07-12",
   "/tools/closing-timeline": "2026-07-12",
@@ -50,7 +51,7 @@ export const FEATURE_PAGE_DATES: Record<string, string> = {
 };
 
 export const INDUSTRIES_UPDATED = "2026-09-12";
-export const COMPETITORS_UPDATED = "2026-09-12";
+export const COMPETITORS_UPDATED = "2026-09-19";
 export const REDESIGNS_UPDATED = "2026-09-16";
 export const HELP_UPDATED = "2026-09-16";
 export const CITIES_UPDATED = "2026-07-10";

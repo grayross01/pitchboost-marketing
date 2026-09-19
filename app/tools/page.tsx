@@ -10,6 +10,12 @@ export const metadata: Metadata = {
 
 const TOOLS = [
   {
+    href: "/tools/redesign-preview",
+    title: "PowerPoint redesign preview",
+    desc: "Drop a .pptx and see two of your own slides redesigned in about a minute, every word and number kept. No account, no email.",
+    tag: "For anyone with a deck that needs help",
+  },
+  {
     href: "/tools/deck-evaluator",
     title: "Pitch deck evaluator",
     desc: "Upload any .pptx and get a graded evaluation in twenty seconds: clarity, narrative, persuasion, credibility, and your five highest-impact fixes.",

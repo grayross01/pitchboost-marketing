@@ -1,7 +1,7 @@
 import { INDUSTRIES } from "@/lib/industries";
 import { FEATURES } from "@/lib/features";
 import { REDESIGNS } from "@/lib/redesigns";
-import { COMPETITORS } from "@/lib/competitors";
+import { COMPETITORS, peersOf } from "@/lib/competitors";
 import { ANSWERS } from "@/lib/answers";
 import { HELP_ARTICLES } from "@/lib/help";
 import { RESEARCH } from "@/lib/research";
@@ -89,11 +89,13 @@ export function GET() {
     "## Compare",
     "",
     ...COMPETITORS.map((c) => `- [PitchBoost vs ${c.name}](${BASE}/compare/${c.slug})`),
-    ...COMPETITORS.filter((c) => c.altSlug).map((c) => `- [${c.name} alternatives](${BASE}/alternatives/${c.altSlug}): four tools compared with checked prices and when to stay with ${c.name}`),
+    ...COMPETITORS.filter((c) => c.altSlug).map((c) => `- [${c.name} alternatives](${BASE}/alternatives/${c.altSlug}): ${peersOf(c).length + 2} tools compared with checked prices and when to stay with ${c.name}`),
     "",
-    "## Free tools for real estate agents",
+    "## Free tools, no sign-up",
     "",
-    `- [Free tools hub](${BASE}/tools): all the free, no-signup tools for real estate agents in one place`,
+    `- [PowerPoint redesign preview](${BASE}/tools/redesign-preview): upload a .pptx and see the title slide and the busiest content slide redesigned in about a minute, every number kept; no account`,
+    `- [Pitch deck evaluator](${BASE}/tools/deck-evaluator): graded evaluation of any .pptx with prioritized fixes and the claims to verify`,
+    `- [Free tools hub](${BASE}/tools): every free, no-signup tool in one place`,
     `- [Open house sign-in](${BASE}/tools/open-house-sign-in): branded QR sign-in sheet; every visitor is emailed to the agent as a lead`,
     `- [Seller net sheet](${BASE}/tools/seller-net-sheet): estimate a seller's net proceeds and share a branded breakdown`,
     `- [Closing timeline](${BASE}/tools/closing-timeline): generate every key real estate closing deadline from two dates`,

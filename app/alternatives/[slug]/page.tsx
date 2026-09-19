@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { COMPETITORS, type Competitor } from "@/lib/competitors";
+import { COMPETITORS, peersOf, type Competitor } from "@/lib/competitors";
 import { COMPETITORS_UPDATED } from "@/lib/page-dates";
 
 /**
@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const c = byAlt(slug);
   if (!c) return {};
-  const count = COMPETITORS.length; // PitchBoost plus every other tool we compare against
+  const count = peersOf(c).length + 2; // the tool, PitchBoost, and the others on its shelf
   const title = `${c.name} alternatives (2026): ${count} tools compared, prices checked`;
   const description = `${count} alternatives to ${c.name} including PitchBoost, with checked prices, free plans, PowerPoint export, brand handling and when to stay with ${c.name}. Last checked ${c.updated ?? COMPETITORS_UPDATED}.`;
   return {
@@ -46,7 +46,8 @@ export default async function AlternativesPage({ params }: Props) {
   const { slug } = await params;
   const c = byAlt(slug);
   if (!c) notFound();
-  const others = COMPETITORS.filter((o) => o.slug !== c.slug);
+  const others = peersOf(c);
+  const count = others.length + 2;
   const updated = c.updated ?? COMPETITORS_UPDATED;
   const url = `${BASE}/alternatives/${slug}`;
   const labels = (c.specs ?? []).map((s) => s.label);
@@ -115,7 +116,7 @@ export default async function AlternativesPage({ params }: Props) {
             Alternatives to {c.name} in 2026
           </h1>
           <p style={{ color: "var(--ds-text-light)", fontSize: "1.05rem", maxWidth: 640, margin: "0 auto", lineHeight: 1.7 }}>
-            {COMPETITORS.length} tools, one of them ours, compared on the things that decide a purchase: free plan, first paid tier, what happens to a deck you already have, and who each tool is actually for. Checked on {updated}.
+            {count} tools, one of them ours, compared on the things that decide a purchase: free plan, first paid tier, what happens to a deck you already have, and who each tool is actually for. Checked on {updated}.
           </p>
         </div>
       </section>

@@ -33,6 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/real-estate", changeFrequency: "monthly", priority: 0.9 },
     { path: "/best-listing-presentation-software", changeFrequency: "monthly", priority: 0.8 },
     { path: "/tools", changeFrequency: "monthly", priority: 0.7 },
+    { path: "/tools/redesign-preview", changeFrequency: "monthly", priority: 0.9 },
     { path: "/tools/deck-evaluator", changeFrequency: "monthly", priority: 0.8 },
     { path: "/tools/open-house-sign-in", changeFrequency: "monthly", priority: 0.7 },
     { path: "/tools/closing-timeline", changeFrequency: "monthly", priority: 0.7 },
