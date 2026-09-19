@@ -221,7 +221,7 @@ export default function PreviewClient() {
     <div style={{ maxWidth: 1040, margin: "0 auto" }}>
       <div style={{ background: "var(--ds-bg)", border: "1px solid var(--ds-border)", borderRadius: 18, padding: "28px 24px" }}>
         <div style={{ fontSize: 13, color: "var(--ds-text-secondary)", marginBottom: 18 }}>
-          {preview.filename} &middot; {preview.totalSlides} slides &middot; two rebuilt as a preview
+          {`${preview.filename} \u00b7 ${preview.totalSlides} slides \u00b7 two rebuilt as a preview`}
         </div>
 
         {/* slide 1: before (the file's own thumbnail when it has one) and after */}
