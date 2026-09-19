@@ -71,6 +71,17 @@ export default function RedesignPageView({ locale, page }: { locale: Locale; pag
     inLanguage: locale,
     dateModified: page.updated ?? REDESIGNS_UPDATED,
     publisher: { "@type": "Organization", name: "PitchBoost", url: BASE },
+    ...(page.gallery && page.gallery.length > 0
+      ? {
+          image: page.gallery.map((g) => ({
+            "@type": "ImageObject",
+            contentUrl: `${BASE}${g.after}`,
+            caption: g.caption,
+            width: 1280,
+            height: 720,
+          })),
+        }
+      : {}),
   };
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -119,6 +130,42 @@ export default function RedesignPageView({ locale, page }: { locale: Locale; pag
           <LocaleSwitch locale={locale} path={`/redesign/${page.slug}`} />
         </div>
       </section>
+
+      {/* Before and after: the same deck, rebuilt. Only pages with a gallery. */}
+      {page.gallery && page.gallery.length > 0 && (
+        <section className="mkt-section" style={{ paddingTop: 24 }}>
+          <div className="mkt-container">
+            <div className="section-header wide-header fade-up">
+              <div className="section-label"><span>{ui.galleryLabel}</span></div>
+              <h2>{ui.galleryTitle}</h2>
+              <p style={{ color: "var(--ds-text-light)", maxWidth: 640, margin: "12px auto 0", lineHeight: 1.7 }}>{ui.galleryBody}</p>
+            </div>
+            <div style={{ display: "grid", gap: 36, marginTop: 40 }}>
+              {page.gallery.map((g, i) => (
+                <figure key={g.before} className="fade-up" style={{ margin: 0 }}>
+                  <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 16 }}>
+                    <div>
+                      <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: ".06em", textTransform: "uppercase", color: "var(--ds-text-secondary)", marginBottom: 8 }}>{ui.galleryBefore}</div>
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={g.before} alt={`${ui.galleryBefore}: ${g.caption}`} width={1280} height={720} loading={i === 0 ? "eager" : "lazy"} style={{ width: "100%", height: "auto", display: "block", borderRadius: 12, border: "1px solid var(--ds-border)" }} />
+                    </div>
+                    <div>
+                      <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: ".06em", textTransform: "uppercase", color: "#1F6B6B", marginBottom: 8 }}>{ui.galleryAfter}</div>
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={g.after} alt={`${ui.galleryAfter}: ${g.caption}`} width={1280} height={720} loading={i === 0 ? "eager" : "lazy"} style={{ width: "100%", height: "auto", display: "block", borderRadius: 12, border: "1px solid var(--ds-border)", boxShadow: "0 18px 40px rgba(15,18,32,.14)" }} />
+                    </div>
+                  </div>
+                  <figcaption style={{ fontSize: 14, color: "var(--ds-text-secondary)", lineHeight: 1.6, marginTop: 10, maxWidth: 820 }}>{g.caption}</figcaption>
+                </figure>
+              ))}
+            </div>
+            <p style={{ textAlign: "center", fontSize: 14, color: "var(--ds-text-secondary)", marginTop: 28 }}>
+              {ui.galleryFoot}{" "}
+              <Link href="/tools/redesign-preview" style={{ color: "#1F6B6B" }}>{ui.galleryFootLink}</Link>
+            </p>
+          </div>
+        </section>
+      )}
 
       {/* How it works */}
       <section className="mkt-section">
