@@ -11,6 +11,24 @@ import { AttributionCapture } from "@/components/marketing/attribution-capture";
 
 const GTM_ID = "GTM-TGJD79J4";
 
+/** Google Ads account 853-189-7580 (PitchBoost, from Sep 23 2026). Its
+ *  conversions are reported server-side by the app; this tag lets it see
+ *  landings and build audiences. */
+const ADS_ID = "AW-18454213526";
+
+/** Where Google's EU user consent policy applies (EEA, UK, Switzerland).
+ *  Same list as the app's lib/consent-regions: with no consent banner, ad
+ *  storage and ad data start denied there and granted elsewhere. */
+const CONSENT_REGIONS = [
+  "AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IE", "IT",
+  "LV", "LT", "LU", "MT", "NL", "PL", "PT", "RO", "SK", "SI", "ES", "SE", "IS", "LI", "NO",
+  "GB", "CH",
+];
+const CONSENT_DEFAULTS_JS =
+  `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}` +
+  `gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',region:${JSON.stringify(CONSENT_REGIONS)}});` +
+  `gtag('consent','default',{ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted',analytics_storage:'granted'});`;
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -87,6 +105,8 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${inter.variable}`}
     >
       <head>
+        {/* Consent mode defaults first, before GTM or gtag can fire. */}
+        <script id="consent-defaults" dangerouslySetInnerHTML={{ __html: CONSENT_DEFAULTS_JS }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
       </head>
@@ -99,6 +119,14 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','${GTM_ID}');`,
+        }}
+      />
+      <Script id="google-ads-gtag" strategy="afterInteractive" src={`https://www.googletagmanager.com/gtag/js?id=${ADS_ID}`} />
+      <Script
+        id="google-ads-gtag-config"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${ADS_ID}');`,
         }}
       />
       <body>
