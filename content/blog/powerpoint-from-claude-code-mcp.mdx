@@ -1,0 +1,128 @@
+---
+title: "Building a PowerPoint from Claude Code Using MCP"
+description: "How to generate a real PowerPoint deck from Claude Code with one MCP server. Setup command, four workflows that use the codebase as source material, and what comes back."
+date: "2026-09-25"
+author: "PitchBoost Team"
+tags: ["Claude Code", "MCP", "PowerPoint", "Developer"]
+---
+
+Claude Code is a good coding assistant. It reads your repo, runs commands, edits files, keeps context across a session. What it does not do out of the box is produce a PowerPoint you can send to a stakeholder.
+
+For a lot of developer work, that gap is annoying. You finish a sprint. You need to give a demo to the team. You end up screen-sharing the code, then hand-building a deck in the last twenty minutes, then wishing you had spent that time on the demo instead.
+
+With one MCP server, Claude Code can build the deck from the same context it already has. Here is the setup, four workflows that actually work, and what you get back.
+
+## What MCP does for Claude Code
+
+Model Context Protocol (MCP) is how Claude Code connects to external tools. You point Claude Code at an MCP server, and the tools that server exposes become tools Claude Code can call inside a session. It is the same mechanism the built-in filesystem, Bash and web-search tools use; MCP just lets you add third-party ones.
+
+For presentations, the useful move is exposing a deck generation service to Claude Code. Then the model that already knows your codebase, your PRs, your commit messages and your open issues can turn any of that context into a deck without leaving the terminal.
+
+## Setting up the PitchBoost MCP server in Claude Code
+
+One command:
+
+```
+claude mcp add --transport http pitchboost https://app.pitchboost.ai/api/mcp
+```
+
+That registers the PitchBoost MCP server on your Claude Code install. Restart Claude Code (or start a new session) and the deck generation tools become available. There is nothing else to configure; the server handles auth on first use.
+
+The same server URL works with Claude Desktop, Cursor, Windsurf and anything else that speaks MCP. Set it up once per tool.
+
+For a plan-level view of what MCP access includes and what tier it lives on, see the [API and MCP feature page](/features/api-and-mcp).
+
+## Four workflows that use Claude Code as the input
+
+The point of using Claude Code specifically (rather than Claude Desktop or the browser app) is that Claude Code already has your repo in context. That opens workflows the other clients cannot easily do.
+
+### 1. Sprint demo deck from the last two weeks of commits
+
+You just finished a sprint. Ask Claude Code:
+
+> Look at commits since the last release tag. Group them by feature area. Build a 10-slide sprint demo deck: what shipped, what is next, one slide per feature area with a screenshot.
+
+Claude Code reads the git log, groups the changes, and calls the PitchBoost tool with a structured brief. The deck comes back as a shareable link and an editable .pptx. Screenshots you have referenced can be attached; text-only slides get real layouts.
+
+This is a five-minute job that used to be an afternoon.
+
+### 2. Architecture deck from the repo
+
+You are onboarding a new engineer, or presenting your service to another team. Ask Claude Code:
+
+> Read the top-level README and docs/architecture.md. Build a 12-slide architecture overview: what the service does, the main components, how requests flow, what the data model looks like, what depends on what.
+
+Claude Code follows the imports it needs to, drafts the outline, calls the PitchBoost tool, and returns a deck that reads like a proper architecture overview instead of a whiteboard photo. The [research and fact-checking step](/features/research-and-fact-checking) preserves numbers, names and structure from the source docs so the deck matches what is actually in the repo.
+
+### 3. Changelog deck for a monthly stakeholder update
+
+The stakeholder update happens every four weeks. You have a rough template. Ask Claude Code:
+
+> Build the monthly stakeholder deck. Read the changelog for the last four weeks, the closed issues for the milestone, and any /docs/updates markdown files. Structure: shipped, in progress, blocked, asking for. Apply the pitchboost.ai brand.
+
+Claude Code pulls each source, structures the update, and calls PitchBoost with your brand URL. You get a branded deck back, editable in PowerPoint, sharable as a link.
+
+The link matters here. A stakeholder update sent as a .pptx attachment tells you nothing. A [shared link with viewer analytics](/features/viewer-analytics) tells you which stakeholders actually opened the deck and which slides they spent time on. That is real feedback on whether the update landed.
+
+### 4. Investor or customer update from the repo state
+
+If you are a solo founder or on a small team, the same pattern works for external updates. Ask Claude Code:
+
+> Look at closed issues since the last investor update, the last two release notes, and the CHANGELOG. Build a 6-slide investor update: what shipped, key metrics if any are in the repo, roadmap for the next month, one ask.
+
+Same output: a branded, shareable deck built from the material Claude Code already has access to. You edit it manually if it needs anything the repo did not know about.
+
+## What comes back
+
+The PitchBoost tool returns three things to Claude Code:
+
+- **A shareable link** to the hosted deck, tracked automatically.
+- **An editable .pptx** file, with real text boxes and real fonts, so you can adjust in PowerPoint, Keynote or Google Slides.
+- **A PDF** version for anyone who wants a static copy.
+
+Claude Code prints the link. You open it, review, edit if needed, share.
+
+## Combining with other MCP servers
+
+Where this gets interesting is chaining Claude Code with more than one MCP server. A few real combinations:
+
+- **GitHub MCP + PitchBoost MCP.** Claude Code pulls issue titles, PR descriptions and milestones from GitHub via the GitHub MCP server, then hands the structured summary to the PitchBoost tool. This is closer to a full "generate the sprint deck from the milestone" flow than reading local commits.
+- **Linear or Jira MCP + PitchBoost MCP.** Same idea for teams whose truth lives in a ticket system rather than in commits. The tickets closed this cycle become the sprint content; PitchBoost turns it into a real deck.
+- **Filesystem + PitchBoost MCP.** For documentation-heavy projects, Claude Code reads the docs folder and generates an onboarding or architecture deck from the docs alone.
+
+The point across all of these: Claude Code is orchestrating, not generating the deck itself. It knows what content should be in the deck; the PitchBoost tool knows how to make a deck.
+
+## What the deck looks like
+
+Because PitchBoost applies your brand from your website (or a URL you specify), the deck is on your logo, colors and voice. It is not a generic AI deck. Numbers and quotes from the source content are preserved exactly; anything the tool could not verify against the source is dropped, not paraphrased. Output is a real editable .pptx, not a screenshot on top of a background.
+
+For a live demo of the deck side of this, the [free redesign preview](/tools/redesign-preview) shows what the design treatment looks like on any two slides you upload.
+
+## Why this is different from prompting Claude Code directly
+
+If you just ask Claude Code to "write me a pitch deck", you get text. Maybe a markdown outline with slide-by-slide bullets. That is useful as raw material, but it is not a deck. You still have to open PowerPoint, apply a theme, format each slide, and export.
+
+With the PitchBoost MCP server, Claude Code hands the raw material to a tool that actually builds the deck. The step that turns "here is what should be in the deck" into "here is the deck" happens outside Claude Code. Claude Code just orchestrates it.
+
+That separation is worth making explicit because it is the whole reason to add an MCP server rather than trying to get the model to do the work directly. LLMs are good at outlining. They are not good at making PowerPoint files. MCP tools fill the gap.
+
+## Practical setup notes
+
+- **Terminal restart.** After `claude mcp add`, start a new Claude Code session. Existing sessions do not pick up new MCP servers.
+- **First deck.** The first deck the tool generates will trigger authentication if you have not signed in yet. Claude Code will print a URL; open it, sign in, and the tool is ready.
+- **Brand.** By default, the tool asks you which brand to apply. Answer with a URL (yourdomain.com); it scans and applies your logo, colors and voice. You can also save a default brand in the PitchBoost dashboard so you do not have to answer every time.
+- **Free tier.** The MCP server works on the free plan (150 credits/month, roughly one deck up to 10 slides). Longer decks and Pro-only features (custom domains, saved templates, full viewer analytics with time-per-slide) require a paid plan.
+
+## The short version
+
+One command wires PitchBoost into Claude Code as an MCP server:
+
+```
+claude mcp add --transport http pitchboost https://app.pitchboost.ai/api/mcp
+```
+
+From that point on, Claude Code can generate a real PowerPoint deck from anything already in its context: commits, issues, docs, changelogs, README files. The deck comes back as a shareable link and an editable .pptx, branded to your site, with analytics tracking who opens it.
+
+If you are already using Claude Code for the coding side of your work, running the sprint demo, the stakeholder update or the architecture overview through the same tool is a small setup cost with a big time payoff.
+
+**Want to try the deck side without setting up MCP first?** [Upload any deck to the free preview](/tools/redesign-preview) and see the branded, redesigned version on two slides before you connect anything.
