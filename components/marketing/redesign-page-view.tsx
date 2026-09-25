@@ -29,6 +29,16 @@ export function redesignPageMetadata(locale: Locale, slug: string): Metadata {
   };
 }
 
+/** hreflang alternates limited to the locales that actually have this page. */
+function availableAlternates(slug: string): Record<string, string> {
+  const all = languageAlternates(`/redesign/${slug}`);
+  const out: Record<string, string> = { en: all.en, "x-default": all["x-default"] };
+  for (const l of LOCALES) {
+    if (l !== "en" && getRedesignFor(l, slug)) out[l] = all[l];
+  }
+  return out;
+}
+
 function CheckIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: 18, height: 18, flexShrink: 0, color: "#1F6B6B" }}>
