@@ -1,0 +1,107 @@
+---
+title: "How to Fix Inconsistent Fonts and Layouts in a PowerPoint"
+description: "The main reason a deck looks amateur is inconsistency, not bad design. How to audit a deck for font drift, layout drift and color drift, and how to fix it fast without rebuilding every slide by hand."
+date: "2026-09-25"
+author: "PitchBoost Team"
+tags: ["PowerPoint", "Slide Design", "Fonts", "Layouts", "How-to"]
+---
+
+The deck does not look bad slide by slide. Each slide has a chart or a bullet list or a header, and each of those things looks fine on its own. But something about the deck as a whole feels wrong.
+
+Almost every time, the answer is the same. Six fonts. Four heading sizes. Three slightly different blues. Titles that live in three different vertical positions. Page numbers that are there on some slides and missing on others. Nothing on any given slide is obviously broken. The whole deck is drifting.
+
+Inconsistency is what makes a deck look homemade. It is also the easiest thing to fix once you can see it. Here is how to audit for it and how to fix it fast.
+
+## Why decks end up inconsistent
+
+Almost every drifted deck traces to the same handful of sources:
+
+1. **The deck has three template ancestors.** Some slides were built from a 2019 template, some from a 2022 refresh, some from a slide someone copied out of a customer deck. Each ancestor brought its own fonts, colors and heading sizes.
+2. **A few slides came from a Word paste.** Text pasted from Word or a PDF carries the source's fonts, sizes and colors. Nobody stripped the formatting.
+3. **Charts were built in different tools.** Some in PowerPoint's chart builder, some in Excel, some in a screenshot from a dashboard. Each looks different because they came from different places.
+4. **Someone tried to "match" the brand but eyeballed it.** The blue on slide 5 is close to the brand blue but not the same. Multiplied across a deck, close-but-not-exact colors look sloppier than clearly-different ones.
+5. **Placeholder overrides.** Someone dragged the title text box on one slide to fix an overflow. It never got put back. Now titles live in two positions.
+
+Naming the source often points at the fix. If half the slides came from a Word paste, the fix is a Format-Painter pass. If the drift is template ancestors, the fix is a slide master rebuild.
+
+## How to audit a deck for inconsistency
+
+You need to see the whole deck at once. Two views help.
+
+**Slide Sorter view** (View, Slide Sorter). Every slide as a thumbnail. Look for slides that visibly break the pattern: different background, different title position, off-brand color. Even at that zoom, drift jumps out.
+
+**A one-page contact sheet.** File, Print, 9 slides per page, print to PDF. This is a compressed version of the deck as a document. If a slide looks like it belongs to a different deck at that size, it does.
+
+Now do a specific pass for each of the four drift types:
+
+**Font drift.** Home tab, Replace, Replace Fonts. It lists every font used in the deck. If it shows six fonts and you thought you were using two, you have drift. Replace each font you did not intend to use with the one you did.
+
+**Size drift.** Click through the deck, watching heading sizes. If titles are 32pt on some slides and 28pt on others, either standardize them or decide the two sizes have a purpose (section headers vs slide titles, for example).
+
+**Color drift.** Design tab, Colors. If the theme colors do not match your brand, replace them. Then click through, watching for hard-coded colors on individual text boxes or shapes that ignore the theme.
+
+**Layout drift.** Click on a title on slide 1. Note its position and size. Click on a title on slide 15. If they are not the same, layouts have drifted. Same for page numbers, section headers, footers.
+
+Ten minutes of auditing tells you exactly what is wrong. From there the fix is mechanical.
+
+## The slide master is the actual fix
+
+Most deck drift lives on individual slides. That is a symptom. The cause is that the slide master was never used, or was ignored halfway through the deck.
+
+The slide master (View, Slide Master) is the template all slides inherit from. Every layout (Title Slide, Title and Content, Two Content, and so on) has its own master. Fonts, colors, title positions, background elements, page numbers: they all live in the master.
+
+If you change the title font in the slide master, every slide using that layout updates. If a slide does not update, it is because someone hard-coded the font on that slide, overriding the master. That is drift.
+
+Two mechanical steps fix most drift:
+
+**Step 1. Set the master correctly.** In Slide Master view, set your fonts (one for headings, one for body, or the same for both). Set your colors (a theme color palette using your brand). Set the position of the title, the position of the page number and the position of the footer. Delete any layouts you never use so nobody applies them by accident.
+
+**Step 2. Reset every slide to the master.** Select all slides. Home, Reset. This clears manual overrides and re-applies the master's formatting. Anything that was drifting because someone dragged a text box or changed a font on a slide snaps back.
+
+Reset is destructive: it can undo intentional customizations (a slide where you wanted the title bigger for a reason). So do it on a copy first, or slide by slide on the ones you know are drifted.
+
+## What to do about pasted content
+
+Text and objects pasted from Word, Excel, PDFs or other decks bring their formatting with them. This is the single biggest source of ongoing drift.
+
+Two habits stop the problem at the source:
+
+**Paste Special, Unformatted Text.** When you paste text into PowerPoint, always use Home, Paste, Paste Special, Unformatted Text (or Cmd+Shift+V on Mac). The text arrives in your deck's font at your deck's size. This alone prevents most drift.
+
+**Rebuild charts in PowerPoint's chart tool.** Screenshots of charts from Excel, Tableau or a dashboard bring their own colors, fonts and sizes. If you rebuild the chart in PowerPoint's native chart tool (Insert, Chart), it inherits your theme's colors and fonts.
+
+For a deck already contaminated, Format Painter is the fastest local fix. Click on a piece of text that is formatted correctly, click the Format Painter button (or Cmd+Shift+C to copy, Cmd+Shift+V to paste formatting), then click the misformatted text. Formatting matches. Do this per element on the drifted slides.
+
+## Fixing color drift specifically
+
+Color is where drift hurts most, because slightly-wrong colors read as sloppy even to people who cannot name the problem.
+
+**Set theme colors properly.** Design, Colors, Customize Colors. Enter your brand's exact hex codes. Save the theme. Now every element that uses "Accent 1" gets your brand's accent 1, and changes automatically if you update the theme.
+
+**Replace hard-coded colors.** A shape or text box with a hard-coded color ignores the theme. Select all shapes on a slide, look at the fill color. If any of them use a color that is not in your theme, change it.
+
+**One accent, sparingly.** Almost every deck uses too many colors. A workable rule: one accent color on any given slide. If a slide has three accent colors, one of them is decorative and can go.
+
+## The rebuild option
+
+Auditing and fixing manually works. It takes two to four hours for a 30-slide deck if you know what you are doing, and longer if you are learning as you go.
+
+The alternative is to upload the current deck to [PitchBoost](/features/upload-and-redesign) and let it apply one design across every slide. Point it at your website; it picks up your logo, brand colors and voice from your own pages and applies them consistently. Every slide comes back on the same layout, in the same font, with brand-correct colors. You get an editable .pptx you can adjust in PowerPoint.
+
+The [free redesign preview](/tools/redesign-preview) applies the treatment to two of your slides so you can see the difference on the deck you have before you commit. The [rebrand presentation page](/redesign/rebrand-presentation) covers the specific case where the brand is right but the deck never got updated.
+
+## What to check after the fix
+
+Three quick passes:
+
+1. **Slide Sorter view.** Every thumbnail should look like part of the same deck. If any slide obviously stands out, it is still drifting.
+2. **Replace Fonts.** The list should show only the fonts you intended to use. If a stray font shows up, it is on a text box or shape somewhere.
+3. **Read the deck once.** Titles in the same place on every slide. Page numbers where you expect them. Charts using consistent colors. If any of these fail, the master needs another pass.
+
+## The short version
+
+Deck inconsistency comes from four kinds of drift: font, size, color, and layout. The audit is ten minutes with Slide Sorter view and Replace Fonts. The fix is a properly-set slide master, Reset applied to drifted slides, Paste Special, Unformatted Text going forward, and charts rebuilt in PowerPoint's native tool.
+
+If the deck is too far gone to fix by hand, [PitchBoost](/pricing) rebuilds it against one design and returns an editable .pptx. The [preview](/tools/redesign-preview) is free.
+
+**Have a deck that looks inconsistent slide to slide?** [Upload it](/features/upload-and-redesign) and see what it looks like with one design applied across every slide.
