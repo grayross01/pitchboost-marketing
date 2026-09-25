@@ -20,7 +20,7 @@ export function redesignPageMetadata(locale: Locale, slug: string): Metadata {
     // metaTitle already ends in "| PitchBoost"; the layout template would add it twice.
     title: { absolute: page.metaTitle },
     description: page.metaDescription,
-    alternates: { canonical: `${LOCALE_PREFIX[locale]}${path}`, languages: languageAlternates(path) },
+    alternates: { canonical: `${LOCALE_PREFIX[locale]}${path}`, languages: availableAlternates(slug) },
     openGraph: {
       title: page.metaTitle,
       description: page.metaDescription,
