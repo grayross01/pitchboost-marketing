@@ -1090,6 +1090,198 @@ export const REDESIGNS: RedesignPage[] = [
     "ctaHeadline": "Keep the story that works. Retire the template that does not.",
     "updated": "2026-09-16"
   },
+  {
+    "slug": "powerpoint-designer-alternative",
+    "navLabel": "PowerPoint Designer alternative",
+    "metaTitle": "PowerPoint Designer Not Working? An AI Alternative | PitchBoost",
+    "metaDescription": "Why PowerPoint Designer shows no design ideas, how to fix it, and how to redesign the whole deck at once in your brand when slide-by-slide suggestions fall short. Free to try.",
+    "heroHeadline": "When PowerPoint Designer runs out of ideas, redesign the whole deck",
+    "heroSubhead": "Designer suggests layouts one slide at a time, and only when a slide fits its rules. PitchBoost takes your entire .pptx, learns your brand from your website, and rebuilds every slide in one pass, then hands you an editable PowerPoint and a link that shows you who opened it.",
+    "painPoints": [
+      {
+        "title": "\"Sorry, no design ideas for this slide\"",
+        "body": "Designer needs an internet connection, a built-in theme, a Title or Title + Content layout, and no extra text boxes or shapes. Real decks break those rules on almost every slide, which is exactly when you need the help."
+      },
+      {
+        "title": "One slide at a time is still a day's work",
+        "body": "Even when it works, Designer offers options per slide. Thirty slides means thirty decisions, and the results rarely look like they belong to the same deck."
+      },
+      {
+        "title": "It knows PowerPoint's themes, not your brand",
+        "body": "Designer works best with the themes that ship with PowerPoint. Custom and downloaded themes, the ones companies actually use, often get no suggestions at all."
+      }
+    ],
+    "outcomes": [
+      "Every slide redesigned in one pass, consistent from first to last",
+      "Works on crowded slides, custom themes and text boxes Designer skips",
+      "Your logo, colors and voice pulled from your website",
+      "An editable PowerPoint, plus a trackable link that shows who opened it"
+    ],
+    "faqs": [
+      {
+        "q": "Why does PowerPoint Designer say there are no design ideas?",
+        "a": "The usual causes: you are offline, the deck uses a custom or downloaded theme, the slide is not on a Title or Title + Content layout, it has shapes or text boxes outside the placeholders, more than one slide is selected, or someone else is editing the same slide. Older .ppt files and accounts without a Microsoft 365 subscription do not get suggestions either."
+      },
+      {
+        "q": "How do I turn Designer back on?",
+        "a": "Go to File, Options, General, and under PowerPoint Designer tick \"Automatically show me design ideas\". If the box is greyed out, your IT admin has probably disabled it. In versions with Copilot, the feature appears on the Home tab as Design Suggestions."
+      },
+      {
+        "q": "Do I need Microsoft 365 to use PitchBoost?",
+        "a": "No. PitchBoost runs in the browser. Upload a .pptx from any version of PowerPoint, or an export from Google Slides or Keynote, and download the result as PowerPoint or PDF."
+      },
+      {
+        "q": "What does it cost?",
+        "a": "One AI deck a month is free, up to 10 slides, with a small badge. Starter is $9 a month for decks up to 25 slides with no badge; Pro is $29 a month for up to 60 slides and full viewer analytics."
+      }
+    ],
+    "ctaHeadline": "Stop fixing slides one at a time.",
+    "updated": "2026-09-25"
+  },
+  {
+    "slug": "keynote-to-powerpoint",
+    "navLabel": "Keynote to PowerPoint",
+    "metaTitle": "Keynote to PowerPoint: Convert and Redesign in One Step | PitchBoost",
+    "metaDescription": "Export your Keynote deck to PowerPoint, then fix the fonts, spacing and layouts that break in conversion. PitchBoost rebuilds it as a clean, editable .pptx in your brand. Free to try.",
+    "heroHeadline": "Keynote to PowerPoint, without the broken slides",
+    "heroSubhead": "Keynote exports to .pptx in one click, but fonts swap, text overflows and layouts drift on the way. Upload the export and PitchBoost rebuilds every slide as native PowerPoint in your brand, so it looks right on every laptop in the room.",
+    "painPoints": [
+      {
+        "title": "Apple fonts do not survive the trip",
+        "body": "Keynote decks lean on fonts that PowerPoint on Windows does not have. PowerPoint substitutes something close, and every line break and text box shifts with it."
+      },
+      {
+        "title": "Builds and layouts come out flattened",
+        "body": "Magic Move, custom builds and some grouped objects convert into static or awkward approximations. The deck opens, but it is no longer the deck you designed."
+      },
+      {
+        "title": "Fixing the export is slower than starting over",
+        "body": "Nudging text boxes back into place slide by slide is how an afternoon disappears. The client or the conference needs a .pptx that works, today."
+      }
+    ],
+    "outcomes": [
+      "Native PowerPoint layouts, not a patched-up conversion",
+      "Fonts and spacing chosen to hold up on Windows and Mac",
+      "Your text, numbers and charts carried across slide by slide",
+      "An editable .pptx, a PDF, and a link that shows who opened it"
+    ],
+    "faqs": [
+      {
+        "q": "How do I export a Keynote file to PowerPoint?",
+        "a": "In Keynote choose File, Export To, PowerPoint, and save the .pptx. Upload that file to PitchBoost. The text on every slide and the images you placed come with it."
+      },
+      {
+        "q": "Why does my Keynote deck look different in PowerPoint?",
+        "a": "Mostly fonts and effects. PowerPoint on Windows does not have many Apple fonts, so it substitutes them, which changes line breaks and spacing. Some builds and transitions have no PowerPoint equivalent and get simplified."
+      },
+      {
+        "q": "Will my animations carry over?",
+        "a": "PitchBoost rebuilds the layout and design, not Keynote-specific animations. You get clean slides that you can add PowerPoint transitions to if you need them."
+      },
+      {
+        "q": "Can I keep working in Keynote afterwards?",
+        "a": "Yes. Keynote opens .pptx files, so you can bring the redesigned deck back into Keynote whenever you like."
+      }
+    ],
+    "ctaHeadline": "Built in Keynote. Presented anywhere.",
+    "updated": "2026-09-25"
+  },
+  {
+    "slug": "google-slides-to-powerpoint",
+    "navLabel": "Google Slides to PowerPoint",
+    "metaTitle": "Google Slides to PowerPoint: Convert and Redesign | PitchBoost",
+    "metaDescription": "Download your Google Slides deck as PowerPoint and get it back redesigned in your brand, with the formatting that breaks in conversion fixed. Editable .pptx in minutes. Free to try.",
+    "heroHeadline": "Google Slides to PowerPoint, and better on arrival",
+    "heroSubhead": "Your team builds in Slides; the client, the board or the event wants PowerPoint. Download the .pptx, upload it, and PitchBoost rebuilds every slide in your brand, so what arrives looks designed rather than converted.",
+    "painPoints": [
+      {
+        "title": "Conversion quietly breaks things",
+        "body": "Google Fonts that are not installed on the viewer's computer, text boxes that resize, shapes that shift. The .pptx opens fine and looks slightly wrong everywhere."
+      },
+      {
+        "title": "Slides themes look like Slides themes",
+        "body": "The built-in themes are recognizable at a glance. When the deck lands in a PowerPoint-first company, it reads as a quick job."
+      },
+      {
+        "title": "Linked charts arrive as pictures",
+        "body": "Charts linked to Google Sheets often come across as static images, so nobody can update the numbers without going back to the original."
+      }
+    ],
+    "outcomes": [
+      "Clean native PowerPoint slides, not a converted Slides theme",
+      "Your brand, pulled from your website, applied to every slide",
+      "Numbers kept exactly as your deck states them",
+      "An editable .pptx, a PDF and a trackable link to send"
+    ],
+    "faqs": [
+      {
+        "q": "How do I convert Google Slides to PowerPoint?",
+        "a": "In Google Slides choose File, Download, Microsoft PowerPoint (.pptx). Upload that file to PitchBoost. Speaker notes and images travel with it."
+      },
+      {
+        "q": "Why does my Google Slides deck look wrong in PowerPoint?",
+        "a": "Fonts are the usual cause: Google Fonts that are not installed get substituted, which moves text around. Some shapes, charts linked to Sheets and embedded videos also convert imperfectly."
+      },
+      {
+        "q": "Can I bring the redesign back into Google Slides?",
+        "a": "Yes. Upload the redesigned .pptx to Google Drive and open it with Google Slides. Or send the PitchBoost link, which looks the same on any device and shows you when it is opened."
+      },
+      {
+        "q": "Does it cost anything?",
+        "a": "One AI deck a month is free, up to 10 slides, with a small badge. Starter is $9 a month for decks up to 25 slides with no badge; Pro is $29 a month for up to 60 slides and full viewer analytics."
+      }
+    ],
+    "ctaHeadline": "Download once. Send something you are proud of.",
+    "updated": "2026-09-25"
+  },
+  {
+    "slug": "change-powerpoint-template",
+    "navLabel": "Apply a new template",
+    "metaTitle": "How to Change the Template on an Existing PowerPoint | PitchBoost",
+    "metaDescription": "Applying a new template to an existing PowerPoint by hand breaks layouts slide by slide. The manual method, and how to move the whole deck onto your brand in minutes. Free to try.",
+    "heroHeadline": "Move an existing PowerPoint onto a new template, all at once",
+    "heroSubhead": "Changing the theme is easy. Making every slide actually fit it is the hard part. PitchBoost reads your deck, takes your brand from your website, and rebuilds each slide so it looks made for the new look, not forced into it.",
+    "painPoints": [
+      {
+        "title": "A new theme only restyles the placeholders",
+        "body": "Text boxes, shapes and images you added by hand keep their old fonts, colors and positions. After the switch, half the deck follows the new template and half ignores it."
+      },
+      {
+        "title": "Old layouts do not map to new ones",
+        "body": "Your deck used layouts the new template does not have, so PowerPoint guesses. Titles jump, columns collapse, and every slide needs checking."
+      },
+      {
+        "title": "A rebrand multiplies the work",
+        "body": "A new brand means every deck in the company, not one. Fixing each by hand is weeks of work nobody budgeted for."
+      }
+    ],
+    "outcomes": [
+      "Every slide rebuilt for the new look, hand-made text boxes included",
+      "Logo, colors and voice pulled from your current website",
+      "Content and numbers preserved slide by slide",
+      "Bulk rebuild to move a whole library of decks at once"
+    ],
+    "faqs": [
+      {
+        "q": "How do I apply a new template to an existing PowerPoint by hand?",
+        "a": "Open the deck, go to Design, open the Themes gallery and choose Browse for Themes to pick the template file. Then go slide by slide: choose Home, Layout, pick the closest layout, and click Reset to pull the content into the new placeholders. Anything outside a placeholder has to be restyled manually."
+      },
+      {
+        "q": "Why didn't changing the template update all my slides?",
+        "a": "Themes restyle placeholders and theme colors only. Text boxes, shapes and fonts set directly on a slide override the template, so they stay exactly as they were."
+      },
+      {
+        "q": "Can PitchBoost use our new brand?",
+        "a": "Yes. It builds from your brand as it appears on your website, logo, colors and tone of voice, and you can review the logo before anything generates. Point it at the site that shows the new brand, and every deck you upload comes back in it. Pro also saves templates for reuse."
+      },
+      {
+        "q": "We have dozens of decks to move over. Is there a faster way?",
+        "a": "Bulk rebuild processes up to 12 PowerPoints per run into the same brand, so the whole library ends up matching."
+      }
+    ],
+    "ctaHeadline": "New template. Every slide. One pass.",
+    "updated": "2026-09-25"
+  },
 ];
 
 export function getRedesign(slug: string): RedesignPage | undefined {
