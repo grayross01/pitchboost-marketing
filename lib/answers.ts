@@ -265,7 +265,157 @@ export const ANSWERS: AnswerPage[] = [
     ],
     "related": "rebrand-presentation",
     "updated": "2026-09-12"
-  }
+  },
+  {
+    "slug": "can-claude-make-a-powerpoint",
+    "question": "Can Claude make a PowerPoint?",
+    "navLabel": "Claude and PowerPoint",
+    "metaTitle": "Can Claude Make a PowerPoint? Yes, Here's How (2026) | PitchBoost",
+    "metaDescription": "Claude can create and redesign PowerPoint decks. What it does on its own, and how connecting PitchBoost turns a chat into a branded, editable deck you can track.",
+    "shortAnswer": "Yes. Claude writes the outline and slide content for a presentation on its own, and where file creation is available it can produce a simple .pptx. For a designed, on-brand deck, or to redesign a PowerPoint you already have, connect PitchBoost to Claude: attach your .pptx or describe the deck, and Claude sends it to PitchBoost, which returns a finished deck in your brand as an editable PowerPoint, a PDF and a shareable link that shows you when it is opened.",
+    "sections": [
+      {
+        "title": "What Claude does on its own",
+        "body": "Claude is strong at the thinking part of a deck: structuring the story, writing slide copy, tightening a long presentation and suggesting what belongs on each slide. Where file creation is available it can also produce a basic PowerPoint file. What it does not have is your brand, a design system built for presentations, or any way to see what happens after you send the deck."
+      },
+      {
+        "title": "Redesigning an existing PowerPoint in Claude",
+        "body": "With PitchBoost connected, attach the .pptx and ask Claude to make it look professional. Claude reads the slides and sends them to PitchBoost, which keeps your content and numbers, applies the logo, colors and voice from your website, and rebuilds every slide. Claude replies with the link to the finished deck a few minutes later."
+      },
+      {
+        "title": "Building a new deck from a conversation",
+        "body": "Describe the prospect, the offer and the goal, and ask for a pitch deck. Claude can research the prospect first, then call PitchBoost to build the deck with that context, so the first draft is already personalized."
+      },
+      {
+        "title": "Know who opened it",
+        "body": "An attachment tells you nothing once it leaves your outbox. A PitchBoost deck goes out as a link, so you see when it is opened and when the recipient comes back to it; Pro adds time spent on each slide. You know who is interested before you follow up."
+      },
+      {
+        "title": "How to connect PitchBoost to Claude",
+        "body": "On claude.ai open Settings, then Connectors, choose Add custom connector and enter https://app.pitchboost.ai/api/mcp. Sign in to PitchBoost once, then enable it from the tools menu in any chat. In Claude Code, run: claude mcp add --transport http pitchboost https://app.pitchboost.ai/api/mcp"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Can Claude edit my PowerPoint directly?",
+        "a": "Claude can read a .pptx you attach and rewrite its content. For a full visual redesign in your brand, it hands the deck to PitchBoost and returns the rebuilt version, which you can edit slide by slide in PitchBoost or download as PowerPoint."
+      },
+      {
+        "q": "Does it use PitchBoost credits?",
+        "a": "Yes, the same as the app: a rebuild or a new deck counts as one of your monthly decks. Listing and opening decks is free."
+      },
+      {
+        "q": "Does the same setup work in Cursor or Windsurf?",
+        "a": "Yes. Any MCP client that supports Streamable HTTP uses the same URL, including Cursor and Windsurf."
+      },
+      {
+        "q": "What happens to my slide content?",
+        "a": "The slide text is sent to PitchBoost to rebuild the deck and stored in your account with the result. The privacy policy explains retention and deletion."
+      }
+    ],
+    "related": "powerpoint-redesign",
+    "updated": "2026-09-25"
+  },
+  {
+    "slug": "can-copilot-redesign-a-powerpoint",
+    "question": "Can Copilot redesign a PowerPoint?",
+    "navLabel": "Copilot and PowerPoint",
+    "metaTitle": "Can Copilot Redesign a PowerPoint? What It Does in 2026 | PitchBoost",
+    "metaDescription": "What Copilot in PowerPoint does well, where it stops, and when a dedicated AI redesign tool is the faster route to a branded deck you can track after you send it.",
+    "shortAnswer": "Partly. Copilot in PowerPoint drafts presentations from a prompt or a Word or PDF file, rewrites text, adds slides and suggests layouts slide by slide through Design Suggestions (formerly Designer). It works best inside a template your company already has. Rebuilding an old, inconsistent deck into a new brand still takes several prompts and manual cleanup, and a deck sent as a file tells you nothing once it is emailed. A dedicated redesign tool such as PitchBoost rebuilds the whole .pptx in your brand from your website in one pass and sends it as a link with viewer analytics.",
+    "sections": [
+      {
+        "title": "What Copilot in PowerPoint does well",
+        "body": "Turning a Word document or PDF into a first draft, summarizing a long deck, rewriting slide text, generating images and speaker notes, and on business plans, drawing on company files and brand assets stored in SharePoint. If your organization already has a good PowerPoint template, starting Copilot inside it keeps that look."
+      },
+      {
+        "title": "Where it stops",
+        "body": "Design suggestions still work slide by slide and favor built-in themes and standard layouts. Moving a messy deck onto a brand that has not already been turned into a template means repeated prompting and hand fixes. And like any PowerPoint file, the finished deck gives you no feedback after you send it."
+      },
+      {
+        "title": "What it costs",
+        "body": "Copilot in PowerPoint is included with Microsoft 365 Personal and Family plans and with Copilot Pro. Business and enterprise users generally need a Microsoft 365 Copilot license on top of their Microsoft 365 plan."
+      },
+      {
+        "title": "Where PitchBoost is different",
+        "body": "Upload the whole .pptx, point PitchBoost at your website, and every slide is rebuilt in your brand in a few minutes, with your text and numbers kept exactly. No template or Microsoft subscription is required. The deck goes out as a trackable link, so you see when a prospect opens it and, on Pro, how long they spend on each slide. Download the editable PowerPoint whenever you need the file."
+      },
+      {
+        "title": "Using both",
+        "body": "Plenty of teams draft with Copilot and finish with PitchBoost: let Copilot turn the source document into slides, then upload that .pptx for the brand redesign and the tracked link."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Is Designer the same as Copilot?",
+        "a": "Designer is PowerPoint's older layout-suggestion feature. For Copilot users it is now called Design Suggestions and sits on the Home tab. It suggests layouts for the slide you have selected."
+      },
+      {
+        "q": "Can Copilot apply my brand?",
+        "a": "On business plans it can use templates and brand assets your organization has stored in SharePoint. Without those, it works from PowerPoint's themes."
+      },
+      {
+        "q": "Do I need Copilot or Microsoft 365 to use PitchBoost?",
+        "a": "No. PitchBoost runs in the browser and accepts any .pptx up to 50 MB, including decks made with Copilot, Google Slides or Keynote."
+      },
+      {
+        "q": "What does PitchBoost cost?",
+        "a": "One AI deck a month is free, up to 10 slides, with a small badge. Starter is $9 a month for decks up to 25 slides with no badge; Pro is $29 a month for up to 60 slides and full viewer analytics."
+      }
+    ],
+    "related": "powerpoint-designer-alternative",
+    "updated": "2026-09-25"
+  },
+  {
+    "slug": "what-is-a-powerpoint-mcp-server",
+    "question": "What is a PowerPoint MCP server?",
+    "navLabel": "PowerPoint MCP server",
+    "metaTitle": "PowerPoint MCP Server: Build and Redesign Decks from Claude or Cursor | PitchBoost",
+    "metaDescription": "A PowerPoint MCP server lets Claude, ChatGPT, Cursor and other AI assistants create and redesign presentations. How it works, the two kinds, and how to connect PitchBoost.",
+    "shortAnswer": "A PowerPoint MCP server is a connector that lets an AI assistant such as Claude, ChatGPT, Cursor or Windsurf create, edit or redesign presentations through the Model Context Protocol, instead of only writing text about them. PitchBoost's MCP server, at https://app.pitchboost.ai/api/mcp, lets an assistant rebuild an uploaded .pptx in your brand or build a new deck from a brief, then returns a link to the finished deck with editable PowerPoint and PDF downloads.",
+    "sections": [
+      {
+        "title": "How it works",
+        "body": "MCP is an open standard for connecting AI assistants to outside tools. You add the server's URL to your assistant once and sign in. From then on, when you ask for a deck, the assistant calls the server's tools, passes your content or file, and returns the result in the chat."
+      },
+      {
+        "title": "Two kinds of PowerPoint MCP server",
+        "body": "File-level servers, often open-source projects built on libraries such as python-pptx, let the assistant add slides, text and shapes to a file on your computer. They are flexible, but the result is whatever the assistant draws, one element at a time. Hosted design servers such as PitchBoost take the content and do the design, brand, layout, charts and fact checking, and return a finished deck."
+      },
+      {
+        "title": "What PitchBoost's server can do",
+        "body": "Rebuild an uploaded deck, check on a rebuild until it is ready, build a new deck from a brief, list your recent decks, fetch one by id, and publish a draft. Nothing it does is destructive, and it never changes your plan."
+      },
+      {
+        "title": "Setup in Claude, ChatGPT, Cursor and Windsurf",
+        "body": "In Claude, add a custom connector with the URL https://app.pitchboost.ai/api/mcp. In ChatGPT, add the PitchBoost app from the app directory. In Claude Code, run claude mcp add --transport http pitchboost https://app.pitchboost.ai/api/mcp. Cursor and Windsurf take the same URL in their MCP settings. Each one asks you to sign in to PitchBoost once."
+      },
+      {
+        "title": "After the deck is sent",
+        "body": "Decks from PitchBoost go out as links, so you see when each one is opened; Pro adds time per slide. A .pptx built by a file-level server is just a file, and a file tells you nothing once it is emailed."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Do I need to write code to use it?",
+        "a": "No. In Claude and ChatGPT it is a connector you add in settings. Only Claude Code uses a one-line terminal command."
+      },
+      {
+        "q": "Can it redesign an existing PowerPoint?",
+        "a": "Yes. Attach the .pptx in the chat and ask for a redesign; the assistant sends it to PitchBoost, which returns the rebuilt deck as a link and an editable PowerPoint download."
+      },
+      {
+        "q": "Can I try it before signing up?",
+        "a": "Yes. The server can make a sample deck without an account, so you can see the output first."
+      },
+      {
+        "q": "Does it use credits?",
+        "a": "A deck built or rebuilt through MCP uses the same credits as the app. Listing and fetching decks is free."
+      }
+    ],
+    "related": "powerpoint-redesign",
+    "updated": "2026-09-25"
+  },
 ];
 
 export function getAnswer(slug: string): AnswerPage | undefined {
