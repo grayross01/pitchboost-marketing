@@ -20,13 +20,23 @@ export function redesignPageMetadata(locale: Locale, slug: string): Metadata {
     // metaTitle already ends in "| PitchBoost"; the layout template would add it twice.
     title: { absolute: page.metaTitle },
     description: page.metaDescription,
-    alternates: { canonical: `${LOCALE_PREFIX[locale]}${path}`, languages: languageAlternates(path) },
+    alternates: { canonical: `${LOCALE_PREFIX[locale]}${path}`, languages: availableAlternates(slug) },
     openGraph: {
       title: page.metaTitle,
       description: page.metaDescription,
       locale: OG_LOCALE[locale],
     },
   };
+}
+
+/** hreflang alternates limited to the locales that actually have this page. */
+function availableAlternates(slug: string): Record<string, string> {
+  const all = languageAlternates(`/redesign/${slug}`);
+  const out: Record<string, string> = { en: all.en, "x-default": all["x-default"] };
+  for (const l of LOCALES) {
+    if (l !== "en" && getRedesignFor(l, slug)) out[l] = all[l];
+  }
+  return out;
 }
 
 function CheckIcon() {
@@ -40,7 +50,11 @@ function CheckIcon() {
 /** "Also in: Español · Português" for the same slug in the other locales. */
 export function LocaleSwitch({ locale, path }: { locale: Locale; path: string }) {
   const ui = REDESIGN_UI[locale];
-  const others = LOCALES.filter((l) => l !== locale);
+  // Only link to translations that exist: new English pages ship before the
+  // translation job adds their Spanish and Portuguese siblings.
+  const slug = path.startsWith("/redesign/") ? path.slice("/redesign/".length) : null;
+  const others = LOCALES.filter((l) => l !== locale && (slug === null || getRedesignFor(l, slug)));
+  if (others.length === 0) return null;
   return (
     <p style={{ fontSize: 12, color: "var(--ds-text-tertiary)", marginTop: 8 }}>
       {ui.alsoIn}{" "}
