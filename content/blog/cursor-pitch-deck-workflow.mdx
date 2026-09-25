@@ -1,0 +1,124 @@
+---
+title: "Cursor Pitch Deck Workflow: From Repo to Investor Deck Without Leaving the IDE"
+description: "How to generate a real investor pitch deck from Cursor using MCP. The setup, the prompt patterns that work, and why building the deck alongside the product is faster than switching to a slide tool."
+date: "2026-09-25"
+author: "PitchBoost Team"
+tags: ["Cursor", "MCP", "Pitch Deck", "Startup", "Developer"]
+---
+
+You are building the product in Cursor. The investor meeting is in three days. You need a pitch deck, and the last time you built one you spent an evening in Google Slides moving text boxes around instead of shipping.
+
+Cursor supports MCP. That means with one config change, Cursor can call out to a presentation tool the same way it calls out to a linter or a search server. You describe the deck; a real branded PowerPoint comes back. The deck gets built from the same context that already lives in your editor: the README, the product docs, the changelog, the pricing file.
+
+Here is the setup, four prompt patterns that actually work, and how to keep the deck current as the product changes.
+
+## Why generate a pitch deck from Cursor at all
+
+Two reasons the workflow makes sense for indie devs and solo founders:
+
+1. **The truth about the product lives in the repo.** The value prop is somewhere between README, marketing copy and the code itself. Pulling the deck from that source, rather than retyping it in a slide tool, keeps the deck matched to the actual product.
+2. **You already trust Cursor with context.** Cursor knows your file structure, your docs, your commits. Handing it "build a deck from what you already know" is a shorter path than switching to another tool and pasting the same information in a second time.
+
+The tradeoff is the deck is generated, not designed slide by slide. That is a good tradeoff for a first draft and a bad one if you need pixel-level control. Most founders benefit from getting a good first draft in five minutes and then editing the two or three slides that matter, rather than starting from a blank template.
+
+## Setting up MCP for PitchBoost in Cursor
+
+Cursor's MCP settings live under Settings, MCP. Add a server with:
+
+- **Name:** pitchboost
+- **URL:** `https://app.pitchboost.ai/api/mcp`
+- **Transport:** HTTP
+
+Save. Restart Cursor. The PitchBoost tools become available in the chat.
+
+The first deck you generate will trigger sign-in; Cursor will show a URL, you complete authentication in the browser, and future calls use the saved session.
+
+The same URL works with Claude Desktop, Claude Code and Windsurf. Set up once per tool. For a plan-level view of what MCP access includes, see the [API and MCP feature page](/features/api-and-mcp).
+
+## Four prompt patterns for pitch deck generation
+
+The point of using Cursor specifically is that it already knows the codebase. The prompts below assume that context; if you use them in Claude Desktop or another client without repo access, you would paste the source material manually.
+
+### 1. First-draft investor deck
+
+You have not made a deck yet. You need a starting point.
+
+> Read the README, docs/product.md, and app/pricing/page.tsx. Build a 10-slide investor pitch deck: problem, why now, our approach, product overview, traction, pricing, market, team, ask, close. Use the pitchboost.ai brand. Return a shareable link and the .pptx.
+
+Cursor reads each source, structures the outline into the standard investor arc, and calls the PitchBoost tool. The deck comes back branded to your domain (logo, colors and voice picked up automatically). You review the link, edit the slides that need it, and share.
+
+The [research and fact-checking step](/features/research-and-fact-checking) preserves numbers, quotes and product names from the source material exactly, so a paraphrase does not quietly change your pitch.
+
+### 2. Update the deck to match the product
+
+You have a deck from a month ago. The product has moved on.
+
+> Read the current CHANGELOG and docs/product.md. Update the product overview slide, the traction slide and the roadmap slide in the existing deck to match. Keep the rest.
+
+Cursor pulls the current state, diffs it against the deck, and regenerates the specific slides that changed. This is the workflow that keeps a live pitch matching a live product.
+
+### 3. Investor-specific personalization
+
+Same deck, different investor.
+
+> Read the notes in docs/investors/acme.md. Take the existing 10-slide pitch deck and personalize the problem slide, the market slide and the close for Acme. Keep everything else. Return the personalized version as a new deck.
+
+Cursor uses the investor notes as extra context, PitchBoost generates the personalized version and hosts it at a distinct link. You send the right deck to the right investor, and analytics on the shared link tell you which slides they spent time on.
+
+The [personalize sales deck](/blog/how-to-personalize-sales-deck-for-each-prospect) piece has more on the general pattern.
+
+### 4. YC or accelerator application deck
+
+You are applying to YC, Techstars or an accelerator, and the application asks for a deck.
+
+> Build a 10-slide accelerator application deck. Structure: what we are building, why us, current traction, why now, business model, plan for the next 6 months, ask. Read the README, docs/product.md, docs/traction.md. Keep it dense, one point per slide, in the pitchboost.ai brand.
+
+Cursor drafts to the specific structure YC-style applications reward (dense, no-fluff, one point per slide) and PitchBoost returns the deck. You edit for tone, add anything the repo did not have, submit.
+
+## What Cursor returns
+
+For each call, the PitchBoost tool returns three things and Cursor shows all three:
+
+- **A shareable link** to the hosted deck, tracked automatically.
+- **An editable .pptx** file, with real text boxes and real fonts.
+- **A PDF** for anyone who wants a static copy.
+
+Cursor prints the link. You open it, edit any slide inline in the PitchBoost editor or in PowerPoint after downloading the .pptx, and share.
+
+## The link matters more than the file
+
+Most founders send investor decks as .pptx or .pdf attachments. This is bad instrumentation. You do not know if the investor opened it, when they opened it, whether they came back to it, or which slides they lingered on.
+
+A shared link tells you all of that. [PitchBoost's viewer analytics](/features/viewer-analytics) shows opens, time per slide (on Pro) and repeat visits. That data is worth having because it changes how you follow up. An investor who opened the deck once and left after slide 3 needs a different follow-up than one who came back three times and lingered on the traction slide.
+
+Send the link. Keep the .pptx for the ones who insist on a file.
+
+## Combining with other MCP servers
+
+Cursor supports multiple MCP servers at once. Two useful combinations:
+
+- **GitHub MCP + PitchBoost MCP.** Cursor pulls issue titles, PR descriptions and milestones for a "what we shipped this quarter" traction slide, then hands the structured summary to PitchBoost.
+- **Postgres or analytics MCP + PitchBoost MCP.** For traction slides driven by real metrics, Cursor queries a database or analytics tool and passes the actual numbers into the deck. The [research and fact-checking step](/features/research-and-fact-checking) then confirms every number in the output against the source query, so nothing gets paraphrased.
+
+Chaining tools is where MCP earns its complexity. For a first pitch deck, the single-tool setup is enough.
+
+## What the deck looks like
+
+Because PitchBoost applies your brand from your website (or a URL you specify), the deck comes back on your logo, colors and voice. It is not a generic AI deck. The output is a real editable .pptx, not a screenshot on top of a background, so you can open it in PowerPoint, Keynote or Google Slides and treat it like any other deck.
+
+The [free redesign preview](/tools/redesign-preview) applies the same design treatment to two of your existing slides so you can see the visual quality before you commit.
+
+## Practical notes for the pitch deck workflow
+
+- **Domain first.** Point PitchBoost at your product domain before your first call. Brand extraction (logo, colors, voice) reads better from a live marketing page than from an unfinished landing page.
+- **Keep source docs in the repo.** The more of your pitch content lives in tracked markdown (README, docs/product.md, docs/traction.md), the more of the deck Cursor can build without extra context.
+- **Iterate on prompts, not slides.** If the first draft is not what you wanted, edit the prompt and regenerate. Two prompt iterations are cheaper than an evening of manual slide editing.
+- **Free tier limits.** The free plan is 150 credits/month, roughly one 10-slide deck. For a full pitch cycle with iterations and multiple investor versions, the Starter or Pro plan is more realistic. See [pricing](/pricing).
+
+## The short version
+
+Cursor's MCP support means you can build a real investor pitch deck from the same window you build the product in. Add the PitchBoost MCP server (URL: `https://app.pitchboost.ai/api/mcp`), give Cursor a prompt referencing your README and docs, and get a branded editable .pptx and a shareable link back in a few minutes.
+
+The workflow is well-suited for indie founders, YC applicants and small teams who live in Cursor and want the deck to keep up with the product without a separate slide-tool loop.
+
+**Fundraising and short on time?** [Set up the MCP server](/features/api-and-mcp) or [try the free redesign preview](/tools/redesign-preview) first to see what the design output looks like on your existing slides.
