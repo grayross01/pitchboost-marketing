@@ -50,7 +50,11 @@ function CheckIcon() {
 /** "Also in: Español · Português" for the same slug in the other locales. */
 export function LocaleSwitch({ locale, path }: { locale: Locale; path: string }) {
   const ui = REDESIGN_UI[locale];
-  const others = LOCALES.filter((l) => l !== locale);
+  // Only link to translations that exist: new English pages ship before the
+  // translation job adds their Spanish and Portuguese siblings.
+  const slug = path.startsWith("/redesign/") ? path.slice("/redesign/".length) : null;
+  const others = LOCALES.filter((l) => l !== locale && (slug === null || getRedesignFor(l, slug)));
+  if (others.length === 0) return null;
   return (
     <p style={{ fontSize: 12, color: "var(--ds-text-tertiary)", marginTop: 8 }}>
       {ui.alsoIn}{" "}
