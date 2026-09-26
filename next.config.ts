@@ -2,47 +2,12 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   // NOTE: previously used `output: "export"` for static HTML export.
-  // Removed to enable `rewrites()` below, which need a Node runtime.
+  // Removed to allow server routes such as app/pitch-deck/[[...slug]], which
+  // proxies the app's programmatic sample pages onto this domain.
   // The marketing site stays visually static — Next.js will server-render
   // the pages fresh on each request but the content hasn't changed.
   images: {
     unoptimized: true,
-  },
-  async rewrites() {
-    // Proxy the programmatic-SEO landing pages from the app to the marketing
-    // domain so they accrue link equity and brand authority to pitchboost.ai
-    // (not app.pitchboost.ai). User sees www.pitchboost.ai/pitch-deck/stripe
-    // in their browser; under the hood Next fetches the content from the
-    // app's server-rendered route. Canonicals and sitemap in the app point
-    // to the www URLs so Google indexes the canonical version.
-    return {
-      beforeFiles: [],
-      afterFiles: [
-        {
-          source: "/pitch-deck",
-          destination: "https://app.pitchboost.ai/pitch-deck",
-        },
-        {
-          source: "/pitch-deck/:slug*",
-          destination: "https://app.pitchboost.ai/pitch-deck/:slug*",
-        },
-      ],
-      // The proxied /pitch-deck pages reference the app's own build assets
-      // (/_next/static/...) and Cloudflare's /cdn-cgi helpers by relative path,
-      // which do not exist on this deployment. Fallback rewrites only run after
-      // our own files and routes miss, so our assets are untouched and the
-      // app's resolve instead of 404ing (which left those pages unstyled).
-      fallback: [
-        {
-          source: "/_next/static/:path*",
-          destination: "https://app.pitchboost.ai/_next/static/:path*",
-        },
-        {
-          source: "/cdn-cgi/:path*",
-          destination: "https://app.pitchboost.ai/cdn-cgi/:path*",
-        },
-      ],
-    };
   },
   async redirects() {
     // Short, ad-friendly aliases for the comparison pages. The canonical pages
