@@ -5,11 +5,19 @@ import { FAQS } from "@/components/marketing/faq-data";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 const SIGNUP_URL = `${APP_URL}/signup`;
+const SIGNUP_REBUILD = `${APP_URL}/signup?intent=rebuild`;
 const SIGNUP_PRO = `${APP_URL}/signup`;
 const SIGNUP_BIZ = `${APP_URL}/signup`;
 
+const TITLE = "PitchBoost: Redesign Your PowerPoint or Build a New Deck, in Your Brand";
+const DESCRIPTION =
+  "Upload the PowerPoint you already have and PitchBoost rebuilds every slide in your brand, or start from a brief and get a new deck written for your audience. Share it as a tracked link, a PDF or an editable PowerPoint.";
+
 export const metadata: Metadata = {
+  title: { absolute: TITLE },
+  description: DESCRIPTION,
   alternates: { canonical: "/" },
+  openGraph: { title: TITLE, description: DESCRIPTION },
 };
 
 function CheckIcon() {
@@ -27,7 +35,7 @@ const softwareSchema = {
   url: "https://pitchboost.ai",
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web",
-  description: "AI-powered pitch deck builder that generates personalized, branded presentations, proposals, and sales decks in a few minutes.",
+  description: "AI presentation tool that redesigns an existing PowerPoint in your brand, or builds a new pitch deck, proposal or presentation from a brief, in a few minutes.",
   offers: {
     "@type": "AggregateOffer",
     priceCurrency: "USD",
@@ -51,22 +59,22 @@ export default function MarketingPage() {
           <div className="rise">
             <div className="hero-badge">
               <span style={{ width: 8, height: 8, borderRadius: "50%", background: "linear-gradient(135deg, #1F6B6B, #E8665A)", display: "inline-block" }} />
-              AI-powered pitch decks that win deals
+              AI presentation design for new decks and redesigns
             </div>
           </div>
 
           <h1 className="rise rise-1">
-            The deck that speaks<br />
-            <span className="gradient-text">their language.</span>
+            Designer-quality slides,<br />
+            <span className="gradient-text">in your brand.</span>
           </h1>
 
           <p className="rise rise-2">
-            PitchBoost builds personalized pitch decks, presentations, and proposals for a specific prospect in a few minutes, so your materials reflect their priorities, not a generic template.
+            Start from the slides you already have or from a quick brief. PitchBoost designs every slide in your brand&apos;s style and shapes it for the people you&apos;re presenting to, then hands it back as a tracked link, a PDF, or an editable PowerPoint.
           </p>
 
           <div className="hero-actions rise rise-3">
-            <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Start Building Free</a>
-            <a href="#sample-deck" className="btn btn-ghost btn-lg">View Sample Deck</a>
+            <a href={SIGNUP_REBUILD} className="btn btn-primary btn-lg">Redesign My Slides</a>
+            <a href={SIGNUP_URL} className="btn btn-ghost btn-lg">Start From Scratch</a>
           </div>
           <p className="rise rise-3" style={{ marginTop: 14, fontSize: 13, color: "var(--ds-text-tertiary)" }}>
             Free forever plan. No credit card required.
@@ -75,17 +83,83 @@ export default function MarketingPage() {
           <div className="hero-proof-bar rise rise-4">
             <div className="proof-item">
               <span className="proof-icon">◎</span>
-              <span>Relevant to this prospect,<br />not every prospect</span>
+              <span>Your slides rebuilt,<br />content and numbers kept</span>
             </div>
             <div className="proof-sep" />
             <div className="proof-item">
               <span className="proof-icon">◎</span>
-              <span>Your brand, case studies,<br />and supporting docs</span>
+              <span>Your brand, pulled<br />from your website</span>
             </div>
             <div className="proof-sep" />
             <div className="proof-item">
               <span className="proof-icon">◎</span>
-              <span>Know who engaged and<br />follow up with confidence</span>
+              <span>Send a link and see<br />when it&apos;s opened</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Redesign an existing deck ── */}
+      <section id="redesign" className="mkt-section">
+        <div className="mkt-container">
+          <div className="step-showcase fade-up">
+            <div>
+              <div className="section-label"><span>Already have a deck?</span></div>
+              <h3>Upload your PowerPoint. Get it back looking like a designer made it.</h3>
+              <p>Bring a dated, text-heavy, or off-brand deck. PitchBoost reads every slide, keeps your content and numbers, and rebuilds the layout in your brand. Thesis defenses, lectures, proposals, pitch decks, and sales decks all work.</p>
+              <ul className="step-highlights">
+                <li><CheckIcon /> Upload a .pptx up to 50 MB (export Google Slides or Keynote first)</li>
+                <li><CheckIcon /> Logo, colors, and voice pulled from your website</li>
+                <li><CheckIcon /> Numbers from your deck preserved and fact-checked</li>
+                <li><CheckIcon /> Get it back as a tracked link, a PDF, and an editable PowerPoint</li>
+              </ul>
+              <div style={{ display: "flex", gap: 20, alignItems: "center", flexWrap: "wrap", marginTop: 24 }}>
+                <a href={SIGNUP_REBUILD} className="btn btn-primary">Redesign My PowerPoint</a>
+                <Link href="/redesign/powerpoint-redesign" style={{ fontSize: 14, fontWeight: 600, color: "#1F6B6B", textDecoration: "none" }}>
+                  How PowerPoint redesign works →
+                </Link>
+              </div>
+            </div>
+            <div className="step-visual">
+              <div className="browser-frame">
+                <div className="browser-bar">
+                  <div className="browser-dots"><span /><span /><span /></div>
+                  <div className="browser-url">pitchboost.ai/rebuild</div>
+                </div>
+                <div className="browser-content">
+                  <div style={{ background: "#f8f9fb", padding: "20px 24px", minHeight: 300 }}>
+                    <div style={{ border: "2px dashed #cbd5e1", borderRadius: 10, padding: "16px", textAlign: "center", marginBottom: 16, background: "white" }}>
+                      <div style={{ fontWeight: 600, fontSize: 12, color: "#0f172a" }}>Q3-strategy-review.pptx</div>
+                      <div style={{ fontSize: 10, color: "#64748b" }}>18 slides &middot; 6.2 MB &middot; uploaded</div>
+                    </div>
+                    <div style={{ display: "grid", gridTemplateColumns: "1fr auto 1fr", gap: 10, alignItems: "center" }}>
+                      <div style={{ background: "white", border: "1px solid #e2e8f0", borderRadius: 8, padding: "12px", minHeight: 120 }}>
+                        <div style={{ fontSize: 9, color: "#94a3b8", marginBottom: 6 }}>BEFORE</div>
+                        <div style={{ fontSize: 11, fontWeight: 700, color: "#0f172a", marginBottom: 6, fontFamily: "Times New Roman, serif" }}>Q3 Strategy Review</div>
+                        {[92, 100, 86, 97, 74, 90].map((w, i) => (
+                          <div key={i} style={{ height: 4, width: `${w}%`, background: "#cbd5e1", borderRadius: 2, marginBottom: 4 }} />
+                        ))}
+                      </div>
+                      <div style={{ fontSize: 16, color: "#1F6B6B" }}>→</div>
+                      <div style={{ background: "linear-gradient(135deg, #1F6B6B, #2A8A8A)", borderRadius: 8, padding: "12px", minHeight: 120, color: "white" }}>
+                        <div style={{ fontSize: 9, opacity: 0.7, marginBottom: 6 }}>AFTER</div>
+                        <div style={{ fontSize: 11, fontWeight: 700, marginBottom: 10 }}>Q3 Strategy Review</div>
+                        <div style={{ display: "flex", gap: 6 }}>
+                          {["+18%", "$2.4M", "3 wins"].map((t) => (
+                            <div key={t} style={{ flex: 1, background: "rgba(255,255,255,0.15)", borderRadius: 4, padding: "8px 4px", fontSize: 10, fontWeight: 700, textAlign: "center" }}>{t}</div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                    <div style={{ display: "flex", gap: 8, marginTop: 16, justifyContent: "flex-end" }}>
+                      {["PDF", "PowerPoint"].map((t) => (
+                        <div key={t} style={{ background: "white", border: "1px solid #e2e8f0", padding: "6px 14px", borderRadius: 8, fontSize: 11, fontWeight: 600, color: "#0f172a" }}>{t}</div>
+                      ))}
+                      <div style={{ background: "linear-gradient(135deg, #1F6B6B, #E8665A)", color: "white", padding: "6px 14px", borderRadius: 8, fontSize: 11, fontWeight: 600 }}>Share link</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -100,8 +174,8 @@ export default function MarketingPage() {
           </div>
           <div className="fade-up">
             <p style={{ fontSize: 15, color: "var(--ds-text-secondary)", lineHeight: 1.7, textAlign: "center", marginBottom: 32 }}>
-              Every deck comes out in the sender's brand: logo, colors, and voice lifted from their
-              website, prospect context from the company they're pitching. Browse finished layouts
+              Every deck comes out in the sender&apos;s brand: logo, colors, and voice lifted from their
+              website, prospect context from the company they&apos;re pitching. Browse finished layouts
               from the same engine in the template gallery.
             </p>
             <div style={{ textAlign: "center" }}>
@@ -124,20 +198,20 @@ export default function MarketingPage() {
         <div className="mkt-container">
           <div className="section-header fade-up">
             <div className="section-label"><span>How It Works</span></div>
-            <h2>From deal notes to a deck worth sending</h2>
-            <p>Three steps to a presentation that speaks directly to your prospect, not a generic template with their name dropped in.</p>
+            <h2>From a rough deck or a brief to one worth sending</h2>
+            <p>Three steps, whether you start from slides you already have or from a description of what you need.</p>
           </div>
 
           {/* Step 1 */}
           <div className="step-showcase fade-up" style={{ marginBottom: 80 }}>
             <div>
               <div className="step-number">1</div>
-              <h3>Tell PitchBoost who you&apos;re pitching</h3>
-              <p>Upload your logo, brand assets, and supporting docs. Add context about the prospect: their priorities, the opportunity, and what you want them to walk away believing.</p>
+              <h3>Bring your deck, or tell PitchBoost what you need</h3>
+              <p>Upload an existing PowerPoint, or describe the presentation and who it&apos;s for. Point PitchBoost at your website and it picks up your logo, colors, and voice.</p>
               <ul className="step-highlights">
-                <li><CheckIcon /> Upload logo and brand assets</li>
-                <li><CheckIcon /> Add prospect context and deal details</li>
-                <li><CheckIcon /> Attach credentials and supporting docs</li>
+                <li><CheckIcon /> Upload a .pptx, or start from a brief</li>
+                <li><CheckIcon /> Brand pulled from your website</li>
+                <li><CheckIcon /> Add audience context and supporting docs</li>
               </ul>
             </div>
             <div className="step-visual">
@@ -185,10 +259,10 @@ export default function MarketingPage() {
           <div className="step-showcase reverse fade-up" style={{ marginBottom: 80 }}>
             <div>
               <div className="step-number">2</div>
-              <h3>Get a deck built around this deal</h3>
-              <p>PitchBoost generates a structured pitch deck with copy written for this specific prospect: their language, their priorities, your credentials presented in the way most likely to land.</p>
+              <h3>Get every slide rebuilt, or a new deck written</h3>
+              <p>An uploaded deck comes back with every slide redesigned in your brand, your content and numbers intact. A new deck comes back structured and written for the specific audience, with your credentials presented in the way most likely to land.</p>
               <ul className="step-highlights">
-                <li><CheckIcon /> Copy written for this prospect, not a template</li>
+                <li><CheckIcon /> Your content and numbers preserved</li>
                 <li><CheckIcon /> Auto-branded with your colors and logo</li>
                 <li><CheckIcon /> Edit any slide after generation</li>
               </ul>
@@ -242,10 +316,10 @@ export default function MarketingPage() {
             <div>
               <div className="step-number">3</div>
               <h3>Share it, then know exactly how it landed</h3>
-              <p>Publish a branded link, export a PDF, and track exactly who opened it, which slides held their attention, and when they came back, so your follow-up is based on what they actually read.</p>
+              <p>Send a branded link, or download a PDF or an editable PowerPoint. A link tells you who opened it, which slides held their attention, and when they came back. A file sent as an attachment tells you nothing.</p>
               <ul className="step-highlights">
                 <li><CheckIcon /> Publish a branded shareable link</li>
-                <li><CheckIcon /> Export to PDF for email or print</li>
+                <li><CheckIcon /> Download a PDF or editable PowerPoint</li>
                 <li><CheckIcon /> See which slides they spent time on</li>
               </ul>
             </div>
@@ -304,8 +378,8 @@ export default function MarketingPage() {
         <div className="mkt-container">
           <div className="section-header fade-up">
             <div className="section-label"><span>Who It&apos;s For</span></div>
-            <h2>Built for people who pitch, but don&apos;t have a design team</h2>
-            <p>Generic decks lose deals. PitchBoost gives anyone who pitches the ability to show up with materials that feel built for the specific person, company, or opportunity they&apos;re trying to win.</p>
+            <h2>Built for people who present, but don&apos;t have a design team</h2>
+            <p>PitchBoost gives anyone with a deck to deliver materials that look professionally designed and feel built for the specific person, company, or room they&apos;re presenting to.</p>
           </div>
           <div className="fade-up" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 20, marginTop: 48 }}>
             {[
@@ -315,6 +389,13 @@ export default function MarketingPage() {
                 ),
                 title: "Founders and small teams",
                 body: "Show up to every sales conversation with a deck that makes you look like you have a full team behind you, because the quality of your materials shouldn&apos;t depend on headcount.",
+              },
+              {
+                icon: (
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z" /><path d="M6 12v5c3 2 9 2 12 0v-5" /></svg>
+                ),
+                title: "Students and academics",
+                body: "Thesis defenses, lectures, and conference talks that look as considered as the work behind them. Upload the deck you have and get it back clean, consistent, and readable.",
               },
               {
                 icon: (
@@ -329,13 +410,6 @@ export default function MarketingPage() {
                 ),
                 title: "Sales and business development teams",
                 body: "Send a deck that reflects what you learned about this account, not the same slide sequence you sent the last ten prospects.",
-              },
-              {
-                icon: (
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg>
-                ),
-                title: "Contractors and service businesses",
-                body: "A polished, specific proposal signals professionalism and attention to detail before the job even starts, and wins more bids because of it.",
               },
             ].map(({ icon, title, body }) => (
               <div key={title} style={{ background: "var(--ds-bg)", border: "1px solid var(--ds-border)", borderRadius: 16, padding: "24px 28px" }}>
@@ -390,15 +464,15 @@ export default function MarketingPage() {
                 color: "blue",
                 href: "/features/upload-and-redesign",
                 icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" /><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" /></svg>,
-                title: "AI slide-by-slide editing",
-                body: "If a slide isn't landing the way you want, rewrite it with AI guidance, without touching the rest of the deck.",
+                title: "Upload and redesign",
+                body: "Upload an existing PowerPoint and get every slide rebuilt in your brand, with your content kept. Then refine any single slide with AI without touching the rest.",
               },
               {
                 color: "purple",
                 href: "/features/output-types",
                 icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg>,
-                title: "Share as a link or export to PDF",
-                body: "Send a branded interactive link your prospect opens in the browser, or export a PDF for email and print, whichever fits the situation.",
+                title: "Link, PDF, or editable PowerPoint",
+                body: "Send a branded interactive link your audience opens in the browser, or download a PDF or an editable PowerPoint, whichever fits the situation.",
               },
               {
                 color: "pink",
@@ -528,9 +602,9 @@ export default function MarketingPage() {
       <section className="mkt-section cta-section">
         <div className="mkt-container">
           <div className="cta-box fade-up">
-            <h2>Stop sending the same deck twice.</h2>
-            <p>Create a polished, personalized sales deck for your next prospect in minutes.</p>
-            <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Start Building Free</a>
+            <h2>Your next deck, done in minutes.</h2>
+            <p>Redesign the PowerPoint you have or build a new one, in your brand, and know when it&apos;s been read.</p>
+            <a href={SIGNUP_REBUILD} className="btn btn-primary btn-lg">Redesign My PowerPoint</a>
           </div>
         </div>
       </section>

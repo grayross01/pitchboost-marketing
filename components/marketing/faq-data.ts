@@ -11,12 +11,16 @@ export const FAQS = [
     a: "You describe your deal, the company, the opportunity, key metrics, and PitchBoost's AI generates a complete, branded slide deck with professional copy, layout, and structure. You can edit every slide afterward.",
   },
   {
+    q: "Can I upload my existing PowerPoint?",
+    a: "Yes. Upload a .pptx up to 50 MB and PitchBoost rebuilds every slide in your brand, keeping your content and numbers. Google Slides and Keynote decks work too: export them to .pptx first. You get the result back as a shareable link, a PDF, and an editable PowerPoint.",
+  },
+  {
     q: "Can I use my own branding?",
     a: "Absolutely. Upload your logo and set your brand colors when you create a deal. Every generated deck uses your visual identity automatically.",
   },
   {
     q: "What format are the decks?",
-    a: "PitchBoost decks are interactive web presentations you can share via link. You can also export to PDF for offline use.",
+    a: "PitchBoost decks are interactive web presentations you can share via link, so you can see when they are opened. You can also download a PDF or an editable PowerPoint.",
   },
   {
     q: "How is pricing calculated?",
