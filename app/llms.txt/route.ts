@@ -3,6 +3,7 @@ import { FEATURES } from "@/lib/features";
 import { REDESIGNS } from "@/lib/redesigns";
 import { COMPETITORS, peersOf } from "@/lib/competitors";
 import { ANSWERS } from "@/lib/answers";
+import { getAllPosts } from "@/lib/blog";
 import { HELP_ARTICLES } from "@/lib/help";
 import { RESEARCH } from "@/lib/research";
 
@@ -80,6 +81,10 @@ export function GET() {
     "Short answers with the number in the first sentence: cost, length, timing and what makes a deck look professional.",
     ...ANSWERS.map((a) => `- [${a.question}](${BASE}/answers/${a.slug}): ${a.shortAnswer.split(". ")[0]}.`),
     "",
+    "## Guides (blog, newest first)",
+    "",
+    ...getAllPosts().map((p) => `- [${p.title}](${BASE}/blog/${p.slug}): ${firstSentence(p.description)}`),
+    "",
     "## By industry",
     "",
     `- [All industries](${BASE}/industries): every use case PitchBoost is built for`,
@@ -104,7 +109,7 @@ export function GET() {
     "",
     "## More",
     "",
-    `- [Blog](${BASE}/blog): guides on pitch decks, sales presentations, and outreach`,
+    `- [Blog](${BASE}/blog): how-to guides on redesigning and building presentations, listed in full above`,
     `- [About](${BASE}/about): the company (ARK Holdings, LLC, Oregon), what the product is built to do and not do`,
     `- [Security](${BASE}/security): where data lives, who processes it, what certifications we do not hold`,
     `- [Changelog](${BASE}/changelog): dated customer-facing changes`,

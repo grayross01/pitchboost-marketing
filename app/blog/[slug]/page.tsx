@@ -8,6 +8,14 @@ import BlogTag from "@/components/marketing/blog-tag";
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 const SIGNUP_URL = `${APP_URL}/signup`;
 
+// Closing call to action, chosen per post by `cta` in the front matter.
+// "redesign" carries the rebuild intent, which lands signup on the upload screen.
+const CLOSING_CTA = {
+  redesign: { line: "Have slides that need work?", label: "Redesign My Slides", href: `${APP_URL}/signup?intent=rebuild` },
+  build: { line: "Ready to turn it into slides?", label: "Start From Scratch", href: SIGNUP_URL },
+  default: { line: "Ready to create your own pitch deck?", label: "Start Building Free", href: SIGNUP_URL },
+};
+
 interface Props {
   params: Promise<{ slug: string }>;
 }
@@ -30,6 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: post.description,
       type: "article",
       publishedTime: post.date,
+      ...(post.updated && { modifiedTime: post.updated }),
       authors: [post.author],
       tags: post.tags,
       ...(post.image && { images: [{ url: post.image }] }),
@@ -51,6 +60,7 @@ export default async function BlogPostPage({ params }: Props) {
     "best-ai-pitch-deck-generators": { href: "/compare", label: "full PitchBoost comparison hub" },
   };
   const compareLink = COMPARE_LINK_BY_SLUG[slug];
+  const cta = CLOSING_CTA[post.cta ?? "default"];
 
   // Up to 3 other posts that share a tag with this one.
   const related = getAllPosts()
@@ -64,7 +74,7 @@ export default async function BlogPostPage({ params }: Props) {
     description: post.description,
     url: postUrl,
     datePublished: post.date,
-    dateModified: post.date,
+    dateModified: post.updated || post.date,
     author: { "@type": "Organization", name: "PitchBoost", url: "https://pitchboost.ai" },
     publisher: {
       "@type": "Organization",
@@ -94,7 +104,11 @@ export default async function BlogPostPage({ params }: Props) {
       <section className="blog-hero">
         <div className="mkt-container">
           <div className="blog-post-meta">
-            <time dateTime={post.date}>{formatDate(post.date)}</time>
+            {post.updated ? (
+              <span>Updated <time dateTime={post.updated}>{formatDate(post.updated)}</time></span>
+            ) : (
+              <time dateTime={post.date}>{formatDate(post.date)}</time>
+            )}
             <span className="blog-meta-sep">&middot;</span>
             <span>{post.readingTime}</span>
           </div>
@@ -149,10 +163,10 @@ export default async function BlogPostPage({ params }: Props) {
 
         <div style={{ textAlign: "center", padding: "20px 0 40px" }}>
           <p style={{ fontWeight: 600, color: "var(--ds-dark)", fontSize: "1.15rem" }}>
-            Ready to create your own pitch deck?
+            {cta.line}
           </p>
-          <a href={SIGNUP_URL} className="btn btn-primary btn-lg" style={{ marginTop: 12 }}>
-            Start Building Free
+          <a href={cta.href} className="btn btn-primary btn-lg" style={{ marginTop: 12 }}>
+            {cta.label}
           </a>
         </div>
 

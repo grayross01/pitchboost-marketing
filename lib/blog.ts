@@ -10,6 +10,11 @@ export interface BlogPostMeta {
   title: string;
   description: string;
   date: string;
+  /** Last substantive revision, if the post was refreshed after `date`. */
+  updated?: string;
+  /** Which closing call to action the post gets: "redesign" (upload an
+   *  existing deck), "build" (start a new deck), or the default pitch-deck one. */
+  cta?: "redesign" | "build";
   author: string;
   authorRole?: string;
   tags: string[];
@@ -35,6 +40,8 @@ export function getAllPosts(): BlogPostMeta[] {
       title: data.title || slug,
       description: data.description || "",
       date: data.date || "",
+      updated: data.updated,
+      cta: data.cta,
       author: data.author || "PitchBoost Team",
       authorRole: data.authorRole,
       tags: data.tags || [],
@@ -61,6 +68,8 @@ export function getPostBySlug(slug: string): BlogPost | null {
     title: data.title || slug,
     description: data.description || "",
     date: data.date || "",
+    updated: data.updated,
+    cta: data.cta,
     author: data.author || "PitchBoost Team",
     authorRole: data.authorRole,
     tags: data.tags || [],
@@ -78,9 +87,12 @@ export function getAllSlugs(): string[] {
 }
 
 export function formatDate(dateStr: string): string {
+  // "2026-09-27" parses as UTC midnight; format in UTC too, or a server west
+  // of Greenwich prints the day before.
   return new Date(dateStr).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
     day: "numeric",
+    timeZone: "UTC",
   });
 }
