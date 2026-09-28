@@ -42,6 +42,7 @@ const COMPANY_LINKS = [
 ] as const;
 
 const INDUSTRY_LINKS = [
+  { label: "Students", href: "/students" },
   { label: "B2B Sales Teams", href: "/industries/b2b-sales" },
   { label: "Agencies", href: "/industries/agencies" },
   { label: "SaaS & Technology", href: "/industries/saas" },
@@ -101,7 +102,7 @@ export default function MarketingFooter() {
           </div>
 
           <div className="footer-col">
-            <p className="footer-heading">By Industry</p>
+            <p className="footer-heading">Who It&apos;s For</p>
             <ul>
               {INDUSTRY_LINKS.map(({ label, href }) => (
                 <li key={label}>

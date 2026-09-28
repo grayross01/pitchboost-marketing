@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { INDUSTRIES, INDUSTRY_GROUPS } from "@/lib/industries";
+import { AUDIENCE_GROUPS, INDUSTRIES, INDUSTRY_GROUPS } from "@/lib/industries";
 import { FEATURES, FEATURE_GROUPS } from "@/lib/features";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
@@ -150,12 +150,12 @@ export default function MarketingNavbar() {
                 className={`nav-industry-trigger${activeDropdown === "industry" ? " open" : ""}`}
                 aria-expanded={activeDropdown === "industry"}
               >
-                By Industry <ChevronDown />
+                Who It&apos;s For <ChevronDown />
               </button>
 
               {activeDropdown === "industry" && (
                 <div className="nav-dropdown">
-                  {INDUSTRY_GROUPS.map((group) => (
+                  {INDUSTRY_GROUPS.map((group, gi) => (
                     <div key={group.label}>
                       <div className="nav-dropdown-group-label">{group.label}</div>
                       {group.slugs.map((slug) => {
@@ -168,11 +168,24 @@ export default function MarketingNavbar() {
                           </Link>
                         );
                       })}
+                      {/* The grid is three columns; the non-industry audiences
+                          stack under the second, the shortest group. */}
+                      {gi === 1 && AUDIENCE_GROUPS.map((aud) => (
+                        <div key={aud.label} style={{ marginTop: 14 }}>
+                          <div className="nav-dropdown-group-label">{aud.label}</div>
+                          {aud.links.map((l) => (
+                            <Link key={l.href} href={l.href} onClick={() => setActiveDropdown(null)}>
+                              {dot}
+                              {l.label}
+                            </Link>
+                          ))}
+                        </div>
+                      ))}
                     </div>
                   ))}
                   <div className="nav-dropdown-footer">
                     <Link href="/industries" onClick={() => setActiveDropdown(null)}>
-                      View all industries →
+                      See everyone it&apos;s for →
                     </Link>
                   </div>
                 </div>
@@ -239,13 +252,13 @@ export default function MarketingNavbar() {
 
         <Link href="/pricing" onClick={closeMobile} style={navItemStyle}>Pricing</Link>
 
-        {/* By Industry accordion */}
+        {/* Who it's for accordion */}
         <button
           onClick={() => setMobileSection((v) => v === "industry" ? null : "industry")}
           aria-expanded={mobileSection === "industry"}
           style={{ ...navItemStyle, display: "flex", justifyContent: "space-between", alignItems: "center", background: "none", border: "none", borderBottom: "1px solid var(--ds-border)", cursor: "pointer", fontFamily: "inherit" }}
         >
-          By Industry
+          Who It&apos;s For
           <span style={{ transition: "transform 0.2s", display: "inline-block", transform: mobileSection === "industry" ? "rotate(180deg)" : "none" }}>
             <ChevronDown size={16} />
           </span>
@@ -253,6 +266,12 @@ export default function MarketingNavbar() {
 
         {mobileSection === "industry" && (
           <div style={{ background: "var(--ds-bg-light)", borderBottom: "1px solid var(--ds-border)" }}>
+            {AUDIENCE_GROUPS.flatMap((aud) => aud.links).map((l) => (
+              <Link key={l.href} href={l.href} onClick={closeMobile} style={subItemStyle}>
+                <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#1F6B6B", flexShrink: 0, display: "inline-block" }} />
+                {l.label}
+              </Link>
+            ))}
             {INDUSTRIES.map((ind) => (
               <Link key={ind.slug} href={`/industries/${ind.slug}`} onClick={closeMobile} style={subItemStyle}>
                 <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#1F6B6B", flexShrink: 0, display: "inline-block" }} />
@@ -260,7 +279,7 @@ export default function MarketingNavbar() {
               </Link>
             ))}
             <Link href="/industries" onClick={closeMobile} style={{ ...subItemStyle, fontWeight: 700, color: "#1F6B6B" }}>
-              View all industries →
+              See everyone it&apos;s for →
             </Link>
           </div>
         )}

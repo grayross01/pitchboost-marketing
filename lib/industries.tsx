@@ -1605,6 +1605,25 @@ export const INDUSTRY_GROUPS = [
   },
 ] as const;
 
+/**
+ * Audiences that are not industries and have their own page instead of the
+ * sales-oriented /industries/[slug] template. Shown in the "Who it's for"
+ * menu, the footer and on /industries, alongside INDUSTRY_GROUPS.
+ */
+export const AUDIENCE_GROUPS = [
+  {
+    label: "Education",
+    links: [
+      {
+        label: "Students",
+        title: "Students and Student Groups",
+        href: "/students",
+        blurb: "Class presentations, group projects, defenses and research talks that look professionally designed.",
+      },
+    ],
+  },
+] as const;
+
 export function getIndustry(slug: string): Industry | undefined {
   return INDUSTRIES.find((i) => i.slug === slug);
 }
