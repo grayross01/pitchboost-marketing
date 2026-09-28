@@ -22,6 +22,8 @@ const nextConfig: NextConfig = {
       // those live on the app. Query strings (e.g. ?targetUrl=) carry over.
       { source: "/signup", destination: "https://app.pitchboost.ai/signup", permanent: false },
       { source: "/login", destination: "https://app.pitchboost.ai/login", permanent: false },
+      // Old slug of the sales-deck post; Search Console still shows it.
+      { source: "/blog/sales-deck-vs-pitch-deck-key-differences-and-when-to-use-each", destination: "/blog/sales-deck-vs-pitch-deck", permanent: true },
       // There is no locale homepage; the translated sections start at /redesign.
       { source: "/es", destination: "/es/redesign", permanent: true },
       { source: "/pt", destination: "/pt/redesign", permanent: true },
