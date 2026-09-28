@@ -1,8 +1,14 @@
 name: IndexNow ping
 
 # Tells Bing-family search engines (the index ChatGPT search leans on)
-# about every URL after each production deploy. The key file is public
-# by design: IndexNow verifies ownership by fetching it from the host.
+# about the URLs a push changed, after the production deploy is live. The
+# key file is public by design: IndexNow verifies ownership by fetching it
+# from the host.
+#
+# Only changed URLs are submitted. Resubmitting the whole sitemap on every
+# push is what Bing Webmaster Tools flags as "batch mode", and it can delay
+# indexing. Changed files map to URLs by the rules in the script below; a
+# push that maps to nothing submits nothing.
 
 on:
   push:
@@ -12,34 +18,83 @@ jobs:
   ping:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: List files changed in this push
+        run: |
+          BEFORE="${{ github.event.before }}"
+          if [ -z "$BEFORE" ] || ! git cat-file -e "$BEFORE" 2>/dev/null; then BEFORE="${{ github.sha }}~1"; fi
+          git diff --name-only "$BEFORE" "${{ github.sha }}" > changed.txt
+          cat changed.txt
       - name: Wait for Vercel deploy to go live
         run: sleep 150
-      - name: Submit sitemap URLs to IndexNow
+      - name: Submit changed URLs to IndexNow
         run: |
           python3 - <<'EOF'
           import json, re, urllib.request
 
           KEY = "98bf64ffb3c57bc315a5c8766dd7d597"
-          sitemaps = [
-              "https://pitchboost.ai/sitemap.xml",
-              "https://app.pitchboost.ai/sitemap.xml",
-          ]
-          urls = []
-          for sm in sitemaps:
-              try:
-                  with urllib.request.urlopen(sm, timeout=30) as r:
-                      xml = r.read().decode()
-                  urls += re.findall(r"<loc>([^<]+)</loc>", xml)
-              except Exception as e:
-                  print(f"skip {sm}: {e}")
-          # IndexNow accepts one host per submission; the key lives on
-          # pitchboost.ai, so submit only that host's URLs.
-          urls = sorted({u for u in urls if u.startswith("https://pitchboost.ai")})
-          print(f"submitting {len(urls)} urls")
+          BASE = "https://pitchboost.ai"
+          with urllib.request.urlopen(f"{BASE}/sitemap.xml", timeout=30) as r:
+              sitemap = re.findall(r"<loc>([^<]+)</loc>", r.read().decode())
+          paths = [u[len(BASE):] or "/" for u in sitemap if u.startswith(BASE)]
+
+          def under(prefix):
+              return {p for p in paths if p == prefix or p.startswith(prefix + "/")}
+
+          # Data files and shared components that feed whole sections.
+          SECTIONS = {
+              "lib/redesigns": ["/redesign", "/es/redesign", "/pt/redesign"],
+              "lib/redesign-i18n": ["/redesign", "/es/redesign", "/pt/redesign"],
+              "components/marketing/redesign-page-view": ["/redesign", "/es/redesign", "/pt/redesign"],
+              "lib/answers": ["/answers"],
+              "lib/help": ["/help", "/es/help", "/pt/help"],
+              "lib/research": ["/research"],
+              "lib/competitors": ["/compare", "/alternatives"],
+              "lib/industries": ["/industries"],
+              "lib/features": ["/features"],
+              "lib/cities": ["/real-estate"],
+              "lib/net-sheet-states": ["/tools/seller-net-sheet"],
+              "lib/guides": ["/redesign", "/answers"],
+              "components/marketing/pricing-plans": ["/pricing"],
+              "components/marketing/faq-data": [],
+          }
+          SINGLE = {
+              "components/marketing/pricing-plans": ["/"],
+              "components/marketing/faq-data": ["/"],
+          }
+
+          changed = [l.strip() for l in open("changed.txt") if l.strip()]
+          out = set()
+          for f in changed:
+              m = re.match(r"content/blog/(.+)\.mdx$", f)
+              if m:
+                  out |= {f"/blog/{m.group(1)}", "/blog"}
+                  continue
+              stem = re.sub(r"\.(es|pt)?\.?tsx?$", "", f)
+              stem = re.sub(r"\.(es|pt)$", "", stem)
+              for key, prefixes in SECTIONS.items():
+                  if stem == key:
+                      for p in prefixes:
+                          out |= under(p)
+              out |= set(SINGLE.get(stem, []))
+              m = re.match(r"app/(.+?)/(?:\[[^/]+\]/)?(?:page|layout)\.tsx$", f)
+              if m:
+                  out |= under("/" + m.group(1).split("/[")[0])
+              elif f == "app/page.tsx":
+                  out.add("/")
+
+          urls = sorted(BASE + p for p in out if p in paths or p == "/")
+          print(f"{len(changed)} files changed, {len(urls)} urls to submit")
+          for u in urls:
+              print(" ", u)
+          if not urls:
+              raise SystemExit(0)
           body = json.dumps({
               "host": "pitchboost.ai",
               "key": KEY,
-              "keyLocation": f"https://pitchboost.ai/{KEY}.txt",
+              "keyLocation": f"{BASE}/{KEY}.txt",
               "urlList": urls[:10000],
           }).encode()
           req = urllib.request.Request(
