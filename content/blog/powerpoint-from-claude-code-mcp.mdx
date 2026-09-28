@@ -2,6 +2,7 @@
 title: "Building a PowerPoint from Claude Code Using MCP"
 description: "How to generate a real PowerPoint deck from Claude Code with one MCP server. Setup command, four workflows that use the codebase as source material, and what comes back."
 date: "2026-09-25"
+cta: "build"
 author: "PitchBoost Team"
 tags: ["Claude Code", "MCP", "PowerPoint", "Developer"]
 ---
@@ -40,9 +41,9 @@ The point of using Claude Code specifically (rather than Claude Desktop or the b
 
 You just finished a sprint. Ask Claude Code:
 
-> Look at commits since the last release tag. Group them by feature area. Build a 10-slide sprint demo deck: what shipped, what is next, one slide per feature area with a screenshot.
+> Look at commits since the last release tag. Group them by feature area. Build a 10-slide sprint demo deck: what shipped, what is next, one slide per feature area.
 
-Claude Code reads the git log, groups the changes, and calls the PitchBoost tool with a structured brief. The deck comes back as a shareable link and an editable .pptx. Screenshots you have referenced can be attached; text-only slides get real layouts.
+Claude Code reads the git log, groups the changes, and calls the PitchBoost tool with a structured brief. The deck comes back as a shareable link, with an editable .pptx and a PDF to download.
 
 This is a five-minute job that used to be an afternoon.
 
@@ -52,7 +53,7 @@ You are onboarding a new engineer, or presenting your service to another team. A
 
 > Read the top-level README and docs/architecture.md. Build a 12-slide architecture overview: what the service does, the main components, how requests flow, what the data model looks like, what depends on what.
 
-Claude Code follows the imports it needs to, drafts the outline, calls the PitchBoost tool, and returns a deck that reads like a proper architecture overview instead of a whiteboard photo. The [research and fact-checking step](/features/research-and-fact-checking) preserves numbers, names and structure from the source docs so the deck matches what is actually in the repo.
+Claude Code follows the imports it needs to, drafts the outline, calls the PitchBoost tool, and returns a deck that reads like a proper architecture overview instead of a whiteboard photo. The [fact check](/features/research-and-fact-checking) removes any figure it cannot trace back to the material you supplied, so the deck does not invent numbers.
 
 ### 3. Changelog deck for a monthly stakeholder update
 
@@ -62,7 +63,7 @@ The stakeholder update happens every four weeks. You have a rough template. Ask 
 
 Claude Code pulls each source, structures the update, and calls PitchBoost with your brand URL. You get a branded deck back, editable in PowerPoint, sharable as a link.
 
-The link matters here. A stakeholder update sent as a .pptx attachment tells you nothing. A [shared link with viewer analytics](/features/viewer-analytics) tells you which stakeholders actually opened the deck and which slides they spent time on. That is real feedback on whether the update landed.
+The link matters here. A stakeholder update sent as a .pptx attachment tells you nothing. A [shared link with viewer analytics](/features/viewer-analytics) tells you when the deck was opened and, on Pro, which slides held attention. That is real feedback on whether the update landed.
 
 ### 4. Investor or customer update from the repo state
 
@@ -74,11 +75,11 @@ Same output: a branded, shareable deck built from the material Claude Code alrea
 
 ## What comes back
 
-The PitchBoost tool returns three things to Claude Code:
+The PitchBoost tool returns a link to the finished deck. From there you get:
 
-- **A shareable link** to the hosted deck, tracked automatically.
-- **An editable .pptx** file, with real text boxes and real fonts, so you can adjust in PowerPoint, Keynote or Google Slides.
-- **A PDF** version for anyone who wants a static copy.
+- **The shareable link** itself, tracked automatically.
+- **An editable .pptx** download, with real text boxes and real fonts, so you can adjust in PowerPoint, Keynote or Google Slides.
+- **A PDF** download for anyone who wants a static copy.
 
 Claude Code prints the link. You open it, review, edit if needed, share.
 
@@ -94,24 +95,24 @@ The point across all of these: Claude Code is orchestrating, not generating the 
 
 ## What the deck looks like
 
-Because PitchBoost applies your brand from your website (or a URL you specify), the deck is on your logo, colors and voice. It is not a generic AI deck. Numbers and quotes from the source content are preserved exactly; anything the tool could not verify against the source is dropped, not paraphrased. Output is a real editable .pptx, not a screenshot on top of a background.
+Because PitchBoost applies your brand from your website (or a URL you specify), the deck is on your logo, colors and voice. It is not a generic AI deck. Numbers from the source content are carried over exactly; any figure the tool cannot trace to what you supplied is dropped, not paraphrased. Output is a real editable .pptx, not a screenshot on top of a background.
 
 For a live demo of the deck side of this, the [free redesign preview](/tools/redesign-preview) shows what the design treatment looks like on any two slides you upload.
 
 ## Why this is different from prompting Claude Code directly
 
-If you just ask Claude Code to "write me a pitch deck", you get text. Maybe a markdown outline with slide-by-slide bullets. That is useful as raw material, but it is not a deck. You still have to open PowerPoint, apply a theme, format each slide, and export.
+If you just ask Claude Code to "write me a pitch deck", you get text: a markdown outline with slide-by-slide bullets, or, if you ask it to write python-pptx code, a plain .pptx with default layouts. That is useful as raw material, but it is not a designed deck. You still have to open PowerPoint, apply a theme, format each slide, and export.
 
 With the PitchBoost MCP server, Claude Code hands the raw material to a tool that actually builds the deck. The step that turns "here is what should be in the deck" into "here is the deck" happens outside Claude Code. Claude Code just orchestrates it.
 
-That separation is worth making explicit because it is the whole reason to add an MCP server rather than trying to get the model to do the work directly. LLMs are good at outlining. They are not good at making PowerPoint files. MCP tools fill the gap.
+That separation is worth making explicit because it is the whole reason to add an MCP server rather than trying to get the model to do the work directly. LLMs are good at outlining. Designing a finished, branded deck is a different job, and MCP tools fill that gap.
 
 ## Practical setup notes
 
 - **Terminal restart.** After `claude mcp add`, start a new Claude Code session. Existing sessions do not pick up new MCP servers.
 - **First deck.** The first deck the tool generates will trigger authentication if you have not signed in yet. Claude Code will print a URL; open it, sign in, and the tool is ready.
-- **Brand.** By default, the tool asks you which brand to apply. Answer with a URL (yourdomain.com); it scans and applies your logo, colors and voice. You can also save a default brand in the PitchBoost dashboard so you do not have to answer every time.
-- **Free tier.** The MCP server works on the free plan (150 credits/month, roughly one deck up to 10 slides). Longer decks and Pro-only features (custom domains, saved templates, full viewer analytics with time-per-slide) require a paid plan.
+- **Brand.** Name your website in the prompt ("use the brand from yourdomain.com"). PitchBoost scans it and applies your logo, colors and voice.
+- **Credits.** Decks built through MCP use the same credits as the app. The free plan covers roughly one deck a month up to 10 slides; longer decks and Pro features (custom domains, saved templates, time per slide) need a paid plan. See [pricing](/pricing).
 
 ## The short version
 

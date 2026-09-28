@@ -1124,7 +1124,7 @@ export const REDESIGNS: RedesignPage[] = [
       },
       {
         "q": "How do I turn Designer back on?",
-        "a": "Go to File, Options, General, and under PowerPoint Designer tick \"Automatically show me design ideas\". If the box is greyed out, your IT admin has probably disabled it. In versions with Copilot, the feature appears on the Home tab as Design Suggestions."
+        "a": "Go to File, Options, General, and under PowerPoint Designer tick \"Automatically show me design ideas\". If the box is grayed out, your IT admin has probably disabled it. In versions with Copilot, the feature appears on the Home tab as Design Suggestions."
       },
       {
         "q": "Do I need Microsoft 365 to use PitchBoost?",
