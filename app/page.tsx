@@ -2,12 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import FAQ from "@/components/marketing/faq";
 import { FAQS } from "@/components/marketing/faq-data";
+import PricingPlans from "@/components/marketing/pricing-plans";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 const SIGNUP_URL = `${APP_URL}/signup`;
 const SIGNUP_REBUILD = `${APP_URL}/signup?intent=rebuild`;
-const SIGNUP_PRO = `${APP_URL}/signup`;
-const SIGNUP_BIZ = `${APP_URL}/signup`;
 
 const TITLE = "PitchBoost: Redesign Your PowerPoint or Build a New Deck, in Your Brand";
 const DESCRIPTION =
@@ -40,7 +39,7 @@ const softwareSchema = {
     "@type": "AggregateOffer",
     priceCurrency: "USD",
     lowPrice: "0",
-    offerCount: "3",
+    offerCount: "4",
   },
   publisher: { "@type": "Organization", name: "PitchBoost", url: "https://pitchboost.ai" },
 };
@@ -520,53 +519,7 @@ export default function MarketingPage() {
             <h2>Simple, transparent pricing</h2>
             <p>Start free and upgrade when you&apos;re ready. Every plan includes a monthly AI budget that resets automatically.</p>
           </div>
-          <div className="pricing-grid fade-up">
-            <div className="pricing-card">
-              <div className="plan-name">Free</div>
-              <div className="plan-desc">Perfect for trying PitchBoost</div>
-              <div className="plan-price">$0<span>/mo</span></div>
-              <div className="plan-period">Free forever</div>
-              <ul className="pricing-features">
-                <li><CheckIcon /> 150 credits a month (1 AI deck)</li>
-                <li><CheckIcon /> AI deck generation</li>
-                <li><CheckIcon /> Basic analytics</li>
-                <li><CheckIcon /> PDF export</li>
-                <li><CheckIcon /> Shareable links</li>
-              </ul>
-              <a href={SIGNUP_URL} className="btn btn-secondary">Get Started</a>
-            </div>
-            <div className="pricing-card featured">
-              <div className="pricing-badge">Most Popular</div>
-              <div className="plan-name">Pro</div>
-              <div className="plan-desc">For active dealmakers</div>
-              <div className="plan-price">$29<span>/mo</span></div>
-              <div className="plan-period">or $24/mo billed annually</div>
-              <ul className="pricing-features">
-                <li><CheckIcon /> Unlimited deals</li>
-                <li><CheckIcon /> Larger AI budget</li>
-                <li><CheckIcon /> Full viewer analytics</li>
-                <li><CheckIcon /> Custom domains</li>
-                <li><CheckIcon /> Saved templates</li>
-                <li><CheckIcon /> Priority generation</li>
-              </ul>
-              <a href={SIGNUP_PRO} className="btn btn-primary">Get Started</a>
-            </div>
-            <div className="pricing-card">
-              <div className="plan-name">Business</div>
-              <div className="plan-desc">For teams closing deals at scale</div>
-              <div className="plan-price">$79<span>/mo</span></div>
-              <div className="plan-period">or $66/mo billed annually</div>
-              <ul className="pricing-features">
-                <li><CheckIcon /> Everything in Pro</li>
-                <li><CheckIcon /> Team collaboration</li>
-                <li><CheckIcon /> Analytics export</li>
-                <li><CheckIcon /> Highest AI budget</li>
-                <li><CheckIcon /> Custom domains</li>
-                <li><CheckIcon /> Saved templates</li>
-              </ul>
-              <a href={SIGNUP_BIZ} className="btn btn-secondary">Get Started</a>
-            </div>
-          </div>
+          <PricingPlans className="pricing-grid fade-up" />
         </div>
       </section>
 
