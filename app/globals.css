@@ -1547,6 +1547,30 @@ body {
   color: var(--ds-dark);
   font-weight: 600;
 }
+.marketing .blog-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 28px 0 32px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  display: block;
+  overflow-x: auto;
+}
+
+.marketing .blog-content th,
+.marketing .blog-content td {
+  border: 1px solid var(--ds-border);
+  padding: 10px 14px;
+  text-align: left;
+  vertical-align: top;
+  color: var(--ds-text);
+}
+
+.marketing .blog-content th {
+  background: var(--ds-bg-light);
+  font-weight: 700;
+}
+
 .marketing .blog-content hr {
   border: none;
   border-top: 1px solid var(--ds-border);

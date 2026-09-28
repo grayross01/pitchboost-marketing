@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import remarkGfm from "remark-gfm";
 import Link from "next/link";
 import { getAllPosts, getAllSlugs, getPostBySlug, formatDate } from "@/lib/blog";
 import BlogTag from "@/components/marketing/blog-tag";
@@ -132,7 +133,9 @@ export default async function BlogPostPage({ params }: Props) {
       </div>
 
       <article className="blog-content">
-        <MDXRemote source={post.content} />
+        {/* remark-gfm renders Markdown tables (and strikethrough, autolinks);
+            without it a table prints as raw pipes. */}
+        <MDXRemote source={post.content} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
 
         {compareLink && (
           <p>
