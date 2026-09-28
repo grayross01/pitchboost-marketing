@@ -1,0 +1,103 @@
+---
+title: "How to Fix a Broken Chart in PowerPoint"
+description: "A chart in PowerPoint can break in five different ways: a lost Excel link, a picture that only looks like a chart, stale numbers, a conversion from Google Slides or Keynote, or a chart that works but nobody can read. How to tell which one you have and fix it."
+date: "2026-09-27"
+author: "PitchBoost Team"
+tags: ["PowerPoint", "Charts", "Data", "Slide Design", "How-to"]
+---
+
+A working chart does one job: it makes a number obvious. When it breaks, it usually breaks in one of five ways, and each has a different fix. The first step is working out which one you have.
+
+Here is how to diagnose it in a minute and fix it in five.
+
+## First, check what the chart actually is
+
+Click the chart once and look at the ribbon.
+
+- **A Chart Design tab appears.** It is a native PowerPoint chart. The numbers live inside the file (or in a linked Excel workbook), and you can edit them.
+- **A Picture Format tab appears.** It is an image of a chart. There are no numbers behind it, only pixels. No setting will make it editable, because there is nothing to edit.
+
+This matters more than it sounds. In the decks people uploaded to PitchBoost for redesign in September 2026, only 3 of 17 contained a native PowerPoint chart ([the research is here](/research/uploaded-decks-september-2026)). Every deck had numbers in it. Most charts in real decks are screenshots, pasted from a dashboard, a spreadsheet or someone else's slides.
+
+## Problem 1: "The linked file isn't available"
+
+You right-click the chart, choose Edit Data, and PowerPoint tells you the linked file is not available. The chart was linked to an Excel workbook, and that workbook has moved, been renamed, or lives on a drive you cannot reach.
+
+**Fix it:**
+
+1. On Windows, go to File, Info, and under Related Documents choose **Edit Links to Files**. Every linked object in the deck is listed with its source path.
+2. If you can find the workbook, select the link and choose **Change Source**, then point it at the file's new location.
+3. If you cannot find it, or you never want the deck to depend on it again, choose **Break Link**. The chart keeps its current look and becomes a static chart.
+
+After breaking a link, the chart still displays, but it will not update. If you need live numbers, recreate the chart as an embedded chart (Problem 2 below) so the data travels with the deck.
+
+**Prevent it:** for any deck that leaves your laptop, embed rather than link. When pasting from Excel, use Paste Special and choose the option that embeds the workbook, or build the chart in PowerPoint with Insert, Chart.
+
+## Problem 2: Edit Data is grayed out, or missing
+
+If the chart is a picture, there is no Edit Data. The fix is to rebuild it as a real chart, which takes about five minutes:
+
+1. Find the numbers. Check the original spreadsheet, the dashboard it came from, or read them off the image.
+2. Insert, Chart, and pick the chart type (see Problem 5 for choosing).
+3. PowerPoint opens a small data sheet. Replace the sample data with your categories and values.
+4. Delete the old image.
+
+A native chart can be restyled to match the deck, resized without blurring, and edited next quarter without anyone hunting for a source file. It is also the only kind of chart that other tools, including screen readers and AI redesign tools, can read the numbers from.
+
+## Problem 3: The numbers on the chart are wrong
+
+The slide title says revenue grew 42%. The chart shows 38%. Someone updated one and not the other.
+
+**For a linked chart:** select it, go to Chart Design, and choose **Refresh Data**. PowerPoint pulls the current values from the workbook, if it can reach it.
+
+**For an embedded chart:** Chart Design, Edit Data, and correct the values in the data sheet directly.
+
+**For a picture:** rebuild it (Problem 2). A picture of old numbers is a guarantee that this will happen again.
+
+Then check the text around the chart. Titles, callouts and speaker notes that quote a figure are the usual place a stale number survives.
+
+## Problem 4: It broke when you moved from Google Slides or Keynote
+
+Charts come across from Google Slides and Keynote with a few predictable changes:
+
+- **Charts linked to Google Sheets usually arrive as pictures.** The link does not survive the export to .pptx. Rebuild the chart natively in PowerPoint if you need to edit it.
+- **Fonts get substituted.** If the chart used a font that is not installed on the machine opening the file, PowerPoint swaps in another one. Labels grow, wrap, or overlap. Set the chart's text to a font that exists on both ends, or use the deck's theme font.
+- **Colors shift.** Custom colors sometimes map onto the nearest theme color. Reapply your palette from Chart Design, Change Colors, or set each series fill by hand.
+
+The [Google Slides and Keynote redesign page](/redesign/google-slides-and-keynote-redesign) covers the rest of what changes in the conversion.
+
+## Problem 5: The chart works, but nobody can read it
+
+This is the most common broken chart of all, because nothing looks wrong to the person who built it. The data is right. The audience still cannot tell what it means.
+
+The fixes, roughly in order of impact:
+
+1. **Make the title the takeaway.** "Q3 revenue by region" describes the chart. "EMEA grew fastest, up 31%" tells the audience what to see. Put the second one at the top.
+2. **Pick the chart for the question.** Change over time is a line or column chart. Comparing a few items is a bar chart, sorted largest to smallest. Parts of a whole is a stacked bar, or a pie with no more than four or five slices. If you have to explain how to read the chart, it is the wrong chart.
+3. **Label the data directly.** Put values on or next to the bars, and label lines at their ends. Then delete the legend. Every glance from the chart to the legend and back is a moment the audience is not listening.
+4. **Use one highlight color.** Make the series that carries the point your brand color and everything else gray. Default rainbow palettes give every series equal weight, which means none of them stands out.
+5. **Remove what does not carry information.** Gridlines, borders, 3D effects, shadows, and axis tick marks at every unit. Flat 2D charts are easier to read accurately.
+6. **Make the text big enough.** Chart labels are often left at the default size, which is set for a document, not a room. Nothing on a chart should be smaller than about 14 point.
+7. **One chart per slide.** Two charts side by side means two points competing. Split them, or keep the one that makes the argument and move the other to the appendix.
+
+## When the whole deck is full of charts like this
+
+If one chart is broken, fix it by hand. If thirty are, the job is really a redesign.
+
+[PitchBoost](/features/upload-and-redesign) reads the data inside every native chart in your .pptx (series, categories and values) and rebuilds each slide in your brand, with the chart sized to be read and your numbers carried over exactly. Any figure the AI cannot trace back to your file is removed before you see the result, so nothing gets invented along the way. You get the deck back as an editable PowerPoint, a PDF and a shareable link.
+
+One honest limit: a chart pasted as a picture has no numbers inside it for any tool to read. Rebuild those as native charts first (Problem 2), and they come through with everything else.
+
+The [data-heavy deck redesign page](/redesign/data-heavy-deck-redesign) shows what this looks like on survey results and metrics reviews, and the [makeover page](/redesign/powerpoint-makeover-before-and-after) has a chart slide before and after.
+
+## Know whether the chart landed
+
+Chart slides are where readers slow down, or skip ahead. A deck sent as an attachment tells you nothing about which it was. Send it as a PitchBoost link instead, and you see when it was opened, and on Pro, how long each slide held the reader's attention. If the chart slide got four seconds, the chart is still broken, whatever it looks like.
+
+## The short version
+
+Click the chart. If you see a Chart Design tab, it is a real chart: fix broken links with Edit Links to Files, and stale numbers with Refresh Data or Edit Data. If you see Picture Format, it is an image: rebuild it with Insert, Chart. Then make it readable: takeaway as the title, the right chart type, direct labels, one highlight color, nothing under 14 point.
+
+The other common slide problems have their own guides: [slides with too much text](/blog/fix-slides-with-too-much-text) and [inconsistent fonts and layouts](/blog/fix-inconsistent-fonts-and-layouts).
+
+**Have a deck with more broken charts than time?** [Upload it](/features/upload-and-redesign) and get every slide rebuilt in your brand, with your chart data carried over exactly.
