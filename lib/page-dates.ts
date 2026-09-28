@@ -10,7 +10,8 @@
  */
 export const STATIC_PAGE_DATES: Record<string, string> = {
   "": "2026-09-17",
-  "/industries": "2026-09-12",
+  "/industries": "2026-09-28",
+  "/students": "2026-09-28",
   "/compare": "2026-09-12",
   "/pricing": "2026-09-11",
   "/use-cases": "2026-09-12",
