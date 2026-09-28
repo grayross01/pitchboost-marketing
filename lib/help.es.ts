@@ -175,7 +175,7 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
     "category": "output",
     "title": "Cómo descargar tu presentación como PowerPoint o PDF",
     "metaDescription": "Todos los planes pueden descargar una presentación como PowerPoint editable, PowerPoint de aspecto exacto o PDF. Dónde están los botones y qué archivo elegir.",
-    "answer": "Abre la pantalla de compartir de la presentación y usa los botones de descarga: \"Descargar PowerPoint\" te da un .pptx editable con cuadros de texto y formas reales, \"PowerPoint (editable)\" te da un .pptx de aspecto exacto donde cada diapositiva es una imagen de la presentación web, y \"PDF\" te da una página por diapositiva. Las descargas están disponibles en todos los planes; en el plan gratuito llevan una pequeña insignia de PitchBoost.",
+    "answer": "Abre la pantalla de compartir de la presentación y usa los botones de descarga: \"Descargar PowerPoint\" te da un .pptx de aspecto exacto donde cada diapositiva es una imagen de la presentación web, \"PowerPoint editable\" te da un .pptx con cuadros de texto y formas reales, parecido al diseño web pero no idéntico, y \"PDF\" te da una página por diapositiva. Las descargas están disponibles en todos los planes; en el plan gratuito llevan una pequeña insignia de PitchBoost.",
     "steps": [
       {
         "title": "Abre la presentación",

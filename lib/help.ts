@@ -198,7 +198,7 @@ export const HELP_ARTICLES: HelpArticle[] = [
     metaDescription:
       "Every plan can download a deck as an editable PowerPoint, an exact-look PowerPoint, or a PDF. Where the buttons are and which file to pick.",
     answer:
-      "Open the deck's share screen and use the download buttons: \"Download PowerPoint\" gives you an editable .pptx with real text boxes and shapes, \"PowerPoint\" gives you an exact-look .pptx where each slide is an image of the web deck, and \"PDF\" gives you one page per slide. Downloads are available on every plan; on the free plan they carry a small PitchBoost badge.",
+      "Open the deck's share screen and use the download buttons: \"Download PowerPoint\" gives you an exact-look .pptx where each slide is an image of the web deck, \"Editable PowerPoint\" gives you a .pptx with real text boxes and shapes, close to the web layout but not identical, and \"PDF\" gives you one page per slide. Downloads are available on every plan; on the free plan they carry a small PitchBoost badge.",
     steps: [
       {
         title: "Open the deck",
