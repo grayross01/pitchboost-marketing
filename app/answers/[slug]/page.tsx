@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ANSWERS, getAnswer } from "@/lib/answers";
 import { getRedesign } from "@/lib/redesigns";
+import { guidesForAnswer } from "@/lib/guides";
 import { siteTitle } from "@/lib/site-title";
 
 interface Props { params: Promise<{ slug: string }> }
@@ -31,6 +32,7 @@ export default async function AnswerPage({ params }: Props) {
   const a = getAnswer(slug);
   if (!a) notFound();
   const related = getRedesign(a.related);
+  const guides = guidesForAnswer(a.slug);
   const url = `${BASE}/answers/${a.slug}`;
   const webPage = {
     "@context": "https://schema.org",
@@ -86,6 +88,18 @@ export default async function AnswerPage({ params }: Props) {
               <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "#1F6B6B", marginBottom: 8 }}>The page that does the work</div>
               <Link href={`/redesign/${related.slug}`} style={{ fontSize: 17, fontWeight: 700, color: "var(--ds-dark)", textDecoration: "none" }}>{related.heroHeadline}</Link>
               <p style={{ fontSize: 14, color: "var(--ds-text-secondary)", lineHeight: 1.65, margin: "8px 0 0" }}>{related.metaDescription}</p>
+            </div>
+          )}
+          {guides.length > 0 && (
+            <div style={{ marginTop: 28 }}>
+              <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: ".06em", textTransform: "uppercase", color: "var(--ds-text-secondary)", marginBottom: 10 }}>Guides</div>
+              <ul style={{ margin: 0, padding: 0, listStyle: "none", display: "grid", gap: 8 }}>
+                {guides.map((g) => (
+                  <li key={g.slug}>
+                    <Link href={`/blog/${g.slug}`} style={{ color: "var(--ds-text-primary)", fontWeight: 600, fontSize: 14.5, textDecoration: "none" }}>{g.title}</Link>
+                  </li>
+                ))}
+              </ul>
             </div>
           )}
         </div>

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import HtmlLang from "@/components/marketing/html-lang";
 import { getRedesigns, getRedesignFor, getRedesignSteps, type RedesignPage } from "@/lib/redesigns";
-import { getAllPosts } from "@/lib/blog";
+import { guidesForRedesign } from "@/lib/guides";
 import { LOCALE_NAME, LOCALE_PREFIX, LOCALES, OG_LOCALE, REDESIGN_UI, languageAlternates, type Locale } from "@/lib/redesign-i18n";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
@@ -69,7 +69,7 @@ export function LocaleSwitch({ locale, path }: { locale: Locale; path: string })
 }
 
 export default function RedesignPageView({ locale, page }: { locale: Locale; page: RedesignPage }) {
-  const guides = locale === "en" ? getAllPosts().filter((p) => p.tags.includes("Redesign")).slice(0, 6) : [];
+  const guides = locale === "en" ? guidesForRedesign(page.slug) : [];
   const ui = REDESIGN_UI[locale];
   const prefix = LOCALE_PREFIX[locale];
   const steps = getRedesignSteps(locale);
@@ -280,9 +280,9 @@ export default function RedesignPageView({ locale, page }: { locale: Locale; pag
               <p style={{ fontSize: 13, color: "var(--ds-text-secondary)", lineHeight: 1.6, margin: 0 }}>{ui.relatedBulkBody}</p>
             </Link>
           </div>
-          {/* The how-to guides (English only; the posts are English). Tagged
-              "Redesign" in the blog front matter, so a new guide shows up here
-              without touching this file. */}
+          {/* The how-to guides (English only; the posts are English): the ones
+              mapped to this page in lib/guides.ts first, then the newest posts
+              tagged "Redesign". */}
           {locale === "en" && guides.length > 0 && (
             <div className="fade-up" style={{ marginTop: 28 }}>
               <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: ".06em", textTransform: "uppercase", color: "var(--ds-text-secondary)", marginBottom: 10 }}>Guides</div>
