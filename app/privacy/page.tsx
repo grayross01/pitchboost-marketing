@@ -135,7 +135,12 @@ export default function PrivacyPage() {
             visitors of our site, and site analytics. If you sign up after
             clicking one of our Google ads, we send Google that ad&apos;s click
             ID with the time and value of your sign-up, first deck and
-            purchases, so it can report which ads work. No deck content is
+            purchases, so it can report which ads work. For the same purpose,
+            when you sign up we send Google your sign-up, first deck and
+            purchases with a one-way hash (SHA-256) of your email address
+            instead of the address itself. Google matches the hash against its
+            own signed-in users to see whether one of our ads led to them,
+            including an ad clicked on another device. No deck content is
             sent.
           </li>
           <li>
