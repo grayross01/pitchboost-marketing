@@ -18,7 +18,11 @@ import { useEffect } from "react";
  * real-estate lead-magnet tools linked to signup with utm_source=pitchboost)
  * were erasing the REAL paid source before it could be persisted. Rules:
  *   1. utm_source=pitchboost is internal funnel tracking, never a source.
- *   2. A cookie that already holds a gclid or utm_source is never replaced.
+ *   2. A cookie that already holds a gclid or utm_source is never replaced,
+ *      with one exception: a Google Ads click id joins a cookie that has no
+ *      click id yet. Most visitors first arrive from ChatGPT (utm_source),
+ *      and without this an ad click that later brought one of them back to
+ *      sign up could never be reported to Google Ads.
  */
 const FIELDS = ["gclid", "utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"] as const;
 const COOKIE = "pb_attr";
@@ -63,18 +67,33 @@ export function AttributionCapture() {
       // previously recorded as direct, which is most of what we were losing.
       if (!attr.gclid && !attr.utm_source && !fromAi) return;
 
+      // Share across the marketing + app subdomains in prod; host-only in dev.
+      const host = window.location.hostname;
+      const domain = host.endsWith("pitchboost.ai") ? "; domain=.pitchboost.ai" : "";
+      const secure = window.location.protocol === "https:" ? "; Secure" : "";
+      const write = (value: Record<string, string>) => {
+        document.cookie =
+          `${COOKIE}=${encodeURIComponent(JSON.stringify(value))}` +
+          `; path=/; max-age=${MAX_AGE}; SameSite=Lax${domain}${secure}`;
+      };
+
       // First-touch: if the cookie already knows where this person came
       // from, a later tagged click (retargeting, a second campaign, the
       // watermark backlink) must not erase it. The DB is first-touch
       // anyway, so the earliest source is the one that will be stored.
+      let existing: Record<string, string> | null = null;
       try {
         const raw = document.cookie.split("; ").find((c) => c.startsWith(`${COOKIE}=`));
-        if (raw) {
-          const existing = JSON.parse(decodeURIComponent(raw.slice(COOKIE.length + 1)));
-          if (existing && (existing.gclid || existing.utm_source)) return;
-        }
+        if (raw) existing = JSON.parse(decodeURIComponent(raw.slice(COOKIE.length + 1)));
       } catch {
         /* unparseable cookie: treat as absent */
+      }
+      if (existing && (existing.gclid || existing.utm_source)) {
+        // The exception (rule 2): an ad click after a first touch that had
+        // no click id adds its gclid and leaves the source, landing page
+        // and referrer of the first touch as they were.
+        if (!existing.gclid && attr.gclid) write({ ...existing, gclid: attr.gclid });
+        return;
       }
 
       // WHICH page they were sent to. Assistants never pass the user's prompt,
@@ -85,13 +104,7 @@ export function AttributionCapture() {
       attr.landing_path = window.location.pathname.slice(0, 300);
       if (referrerHost) attr.referrer_host = referrerHost.slice(0, 200);
 
-      // Share across the marketing + app subdomains in prod; host-only in dev.
-      const host = window.location.hostname;
-      const domain = host.endsWith("pitchboost.ai") ? "; domain=.pitchboost.ai" : "";
-      const secure = window.location.protocol === "https:" ? "; Secure" : "";
-      document.cookie =
-        `${COOKIE}=${encodeURIComponent(JSON.stringify(attr))}` +
-        `; path=/; max-age=${MAX_AGE}; SameSite=Lax${domain}${secure}`;
+      write(attr);
     } catch {
       /* best-effort; attribution must never break the page */
     }
