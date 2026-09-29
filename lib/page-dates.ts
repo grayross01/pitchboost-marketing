@@ -25,7 +25,7 @@ export const STATIC_PAGE_DATES: Record<string, string> = {
   "/tools/seller-net-sheet": "2026-07-16",
   "/tools/review-request": "2026-07-12",
   "/blog": "2026-07-12",
-  "/privacy": "2026-09-17",
+  "/privacy": "2026-09-29",
   "/terms": "2026-09-15",
   "/support": "2026-09-15",
   "/about": "2026-09-17",

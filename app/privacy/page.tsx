@@ -12,7 +12,7 @@ export default function PrivacyPage() {
       <section className="legal-hero">
         <div className="mkt-container">
           <h1>Privacy Policy</h1>
-          <p>Last updated: September 17, 2026</p>
+          <p>Last updated: September 29, 2026</p>
         </div>
       </section>
 
@@ -41,6 +41,12 @@ export default function PrivacyPage() {
           <strong>Payment information:</strong> Payment details are processed and
           stored by Stripe. We do not store your full credit card number.
         </p>
+        <p>
+          <strong>Where you came from:</strong> When you arrive from an ad or
+          another website, we record what sent you, such as the Google Ads
+          click ID, the campaign tags in the link, the page you landed on and
+          the referring site, and keep it with your account when you sign up.
+        </p>
 
         <h2>2. How We Use Your Data</h2>
         <ul>
@@ -55,6 +61,11 @@ export default function PrivacyPage() {
           </li>
           <li>
             To improve our product through aggregated, anonymized analytics.
+          </li>
+          <li>
+            To measure which ads and channels bring people to PitchBoost, and
+            to tell the ad platform that sent you when you sign up, create your
+            first deck or make a purchase (see section 5).
           </li>
           <li>To respond to support requests.</li>
         </ul>
@@ -118,17 +129,54 @@ export default function PrivacyPage() {
           <li>
             <strong>Cloudflare</strong>, DNS and edge proxy for the application.
           </li>
+          <li>
+            <strong>Google (Google Ads, Google Analytics, Google Tag
+            Manager)</strong>, advertising measurement, ads shown to past
+            visitors of our site, and site analytics. If you sign up after
+            clicking one of our Google ads, we send Google that ad&apos;s click
+            ID with the time and value of your sign-up, first deck and
+            purchases, so it can report which ads work. No deck content is
+            sent.
+          </li>
+          <li>
+            <strong>Meta (Facebook pixel)</strong>, measures visits from our
+            Meta ads and lets us show ads to people who have visited our site.
+          </li>
         </ul>
         <p>
           The <a href="/security">security page</a> describes what each provider
           receives and where data is stored.
         </p>
 
-        <h2>5. Cookies</h2>
+        <h2>5. Cookies and Advertising</h2>
         <p>
-          We use essential cookies for authentication and session management. We
-          may also use analytics cookies to understand how the service is used.
-          You can control cookie preferences through your browser settings.
+          We use essential cookies for authentication and session management,
+          and analytics cookies to understand how the service is used.
+        </p>
+        <p>
+          We also use advertising cookies from Google and Meta (such as{" "}
+          <code>_gcl_aw</code>, <code>_gcl_au</code>, <code>_ga</code> and{" "}
+          <code>_fbp</code>) and our own <code>pb_attr</code> cookie, which
+          records what sent you to us. They let us measure which of our ads
+          lead to sign-ups and purchases, and let Google and Meta show our ads
+          to people who have visited our site. These providers may use
+          cookies to show you ads based on your past visits to our site and
+          other sites.
+        </p>
+        <p>
+          You can turn off personalized ads from Google in{" "}
+          <a href="https://myadcenter.google.com" target="_blank" rel="noopener noreferrer">
+            My Ad Center
+          </a>
+          , from Meta in your{" "}
+          <a href="https://www.facebook.com/adpreferences" target="_blank" rel="noopener noreferrer">
+            ad preferences
+          </a>
+          , and from many other ad providers at{" "}
+          <a href="https://optout.aboutads.info" target="_blank" rel="noopener noreferrer">
+            optout.aboutads.info
+          </a>
+          . You can also block or delete cookies in your browser settings.
         </p>
 
         <h2>6. Your Rights</h2>
