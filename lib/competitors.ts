@@ -60,7 +60,7 @@ export const COMPETITORS: Competitor[] = [
     competitorSummary: "Gamma is an AI presentation and document tool that generates card-based visual content quickly. It's popular for internal presentations, marketing content, and fast first drafts. It supports PDF/PPTX export, shareable links, and basic analytics on paid plans.",
     pitchboostPricing: "Free plan. Starter $9/mo. Pro $29/mo. Business $79/mo.",
     competitorPricing: "Free: 400 one-time credits. Plus: about $8 to $10/mo. Pro: about $15 to $20/mo. Ultra: $90+/mo.",
-    specs: [{"label": "Free plan", "pitchboost": "150 credits a month (1 deck), 10-slide cap, small badge", "competitor": "400 credits once, never refill; 10 cards per generation; badge on shares and exports"}, {"label": "First paid tier", "pitchboost": "Starter, $9/mo: 800 credits, 25 slides, no badge", "competitor": "Plus, about $8 to $10/mo: 1,000 credits, 20 cards, badge off"}, {"label": "Badge removal", "pitchboost": "Starter and up, every deck; or $12 per deck", "competitor": "Plus and up"}, {"label": "Upload an existing deck and rebuild it", "pitchboost": "Yes, from .pptx, one slide per source slide", "competitor": "Imports a .pptx or doc as a starting point; output is a new Gamma"}, {"label": "Brand from your website", "pitchboost": "Yes, logo, colours and tone pulled from your site", "competitor": "Brand kit on paid plans, set up by hand"}, {"label": "Fact check against your own material", "pitchboost": "Yes, invented figures are removed before you see the deck", "competitor": "No"}, {"label": "PowerPoint export", "pitchboost": "Every plan; editable text boxes on paid plans", "competitor": "Yes; slides are Gamma cards, not native layouts"}, {"label": "Viewer analytics", "pitchboost": "Basic on Free, full on Pro", "competitor": "Pro and up"}, {"label": "API and MCP for AI assistants", "pitchboost": "Pro; a no-account sample tool for ChatGPT and Claude", "competitor": "API on Pro and up"}],
+    specs: [{"label": "Free plan", "pitchboost": "150 credits a month (1 deck), 10-slide cap, small badge", "competitor": "400 credits once, never refill; 10 cards per generation; badge on shares and exports"}, {"label": "First paid tier", "pitchboost": "Starter, $9/mo: 800 credits, 50 slides, no badge", "competitor": "Plus, about $8 to $10/mo: 1,000 credits, 20 cards, badge off"}, {"label": "Badge removal", "pitchboost": "Starter and up, every deck; or $13 per deck", "competitor": "Plus and up"}, {"label": "Upload an existing deck and rebuild it", "pitchboost": "Yes, from .pptx, one slide per source slide", "competitor": "Imports a .pptx or doc as a starting point; output is a new Gamma"}, {"label": "Brand from your website", "pitchboost": "Yes, logo, colours and tone pulled from your site", "competitor": "Brand kit on paid plans, set up by hand"}, {"label": "Fact check against your own material", "pitchboost": "Yes, invented figures are removed before you see the deck", "competitor": "No"}, {"label": "PowerPoint export", "pitchboost": "Every plan; editable text boxes on paid plans", "competitor": "Yes; slides are Gamma cards, not native layouts"}, {"label": "Viewer analytics", "pitchboost": "Basic on Free, full on Pro", "competitor": "Pro and up"}, {"label": "API and MCP for AI assistants", "pitchboost": "Pro; a no-account sample tool for ChatGPT and Claude", "competitor": "API on Pro and up"}],
     updated: "2026-09-12",
     pricingUrl: "https://gamma.app/pricing",
     altSlug: "gamma",
@@ -134,7 +134,7 @@ export const COMPETITORS: Competitor[] = [
     competitorSummary: "Beautiful.ai is a presentation tool known for its Smart Slide technology, which automatically adjusts layouts as you add content. It's popular for brand-consistent business presentations, with strong team plan features for collaboration and brand controls.",
     pitchboostPricing: "Free plan. Starter $9/mo. Pro $29/mo. Business $79/mo.",
     competitorPricing: "No free plan (14-day trial). Pro: about $12/mo billed annually, $45 monthly. Team: $40/user/mo.",
-    specs: [{"label": "Free plan", "pitchboost": "150 credits a month (1 deck), 10-slide cap, small badge", "competitor": "None; 14-day trial, card required"}, {"label": "First paid tier", "pitchboost": "Starter, $9/mo: 800 credits, 25 slides, no badge", "competitor": "Pro, about $12/mo billed annually ($45 monthly)"}, {"label": "Badge removal", "pitchboost": "Starter and up, every deck; or $12 per deck", "competitor": "Not applicable, no free tier"}, {"label": "Upload an existing deck and rebuild it", "pitchboost": "Yes, from .pptx, one slide per source slide", "competitor": "Imports .pptx into Smart Slides; layout is redone slide by slide by you"}, {"label": "Brand from your website", "pitchboost": "Yes, logo, colours and tone pulled from your site", "competitor": "Custom brand styling set up by hand"}, {"label": "Fact check against your own material", "pitchboost": "Yes, invented figures are removed before you see the deck", "competitor": "No"}, {"label": "PowerPoint export", "pitchboost": "Every plan; editable text boxes on paid plans", "competitor": "Yes"}, {"label": "Viewer analytics", "pitchboost": "Basic on Free, full on Pro", "competitor": "Yes"}, {"label": "API and MCP for AI assistants", "pitchboost": "Pro; a no-account sample tool for ChatGPT and Claude", "competitor": "No public API"}],
+    specs: [{"label": "Free plan", "pitchboost": "150 credits a month (1 deck), 10-slide cap, small badge", "competitor": "None; 14-day trial, card required"}, {"label": "First paid tier", "pitchboost": "Starter, $9/mo: 800 credits, 50 slides, no badge", "competitor": "Pro, about $12/mo billed annually ($45 monthly)"}, {"label": "Badge removal", "pitchboost": "Starter and up, every deck; or $13 per deck", "competitor": "Not applicable, no free tier"}, {"label": "Upload an existing deck and rebuild it", "pitchboost": "Yes, from .pptx, one slide per source slide", "competitor": "Imports .pptx into Smart Slides; layout is redone slide by slide by you"}, {"label": "Brand from your website", "pitchboost": "Yes, logo, colours and tone pulled from your site", "competitor": "Custom brand styling set up by hand"}, {"label": "Fact check against your own material", "pitchboost": "Yes, invented figures are removed before you see the deck", "competitor": "No"}, {"label": "PowerPoint export", "pitchboost": "Every plan; editable text boxes on paid plans", "competitor": "Yes"}, {"label": "Viewer analytics", "pitchboost": "Basic on Free, full on Pro", "competitor": "Yes"}, {"label": "API and MCP for AI assistants", "pitchboost": "Pro; a no-account sample tool for ChatGPT and Claude", "competitor": "No public API"}],
     updated: "2026-09-12",
     pricingUrl: "https://www.beautiful.ai/pricing",
     altSlug: "beautiful-ai",
@@ -208,7 +208,7 @@ export const COMPETITORS: Competitor[] = [
     competitorSummary: "Pitch is a presentation platform designed for collaborative teams. It offers AI presentation creation, templates, branded sharing links with analytics, and pitch rooms. It's well-regarded for its design quality and team workspace features.",
     pitchboostPricing: "Free plan. Starter $9/mo. Pro $29/mo. Business $79/mo.",
     competitorPricing: "Free plan. Plus: about $13 to $15/mo. Team: $19 to $23 per seat. Business: $25 to $30 per seat.",
-    specs: [{"label": "Free plan", "pitchboost": "150 credits a month (1 deck), 10-slide cap, small badge", "competitor": "Unlimited presentations, 100 one-time AI credits, branded links and PDF, no PowerPoint export"}, {"label": "First paid tier", "pitchboost": "Starter, $9/mo: 800 credits, 25 slides, no badge", "competitor": "Plus, about $13 to $15/mo: unbranded, PowerPoint export, custom fonts"}, {"label": "Badge removal", "pitchboost": "Starter and up, every deck; or $12 per deck", "competitor": "Plus and up"}, {"label": "Upload an existing deck and rebuild it", "pitchboost": "Yes, from .pptx, one slide per source slide", "competitor": "Imports .pptx; redesign is manual with templates"}, {"label": "Brand from your website", "pitchboost": "Yes, logo, colours and tone pulled from your site", "competitor": "Brand kit set up by hand"}, {"label": "Fact check against your own material", "pitchboost": "Yes, invented figures are removed before you see the deck", "competitor": "No"}, {"label": "PowerPoint export", "pitchboost": "Every plan; editable text boxes on paid plans", "competitor": "Paid plans only"}, {"label": "Viewer analytics", "pitchboost": "Basic on Free, full on Pro", "competitor": "Paid plans"}, {"label": "API and MCP for AI assistants", "pitchboost": "Pro; a no-account sample tool for ChatGPT and Claude", "competitor": "No"}],
+    specs: [{"label": "Free plan", "pitchboost": "150 credits a month (1 deck), 10-slide cap, small badge", "competitor": "Unlimited presentations, 100 one-time AI credits, branded links and PDF, no PowerPoint export"}, {"label": "First paid tier", "pitchboost": "Starter, $9/mo: 800 credits, 50 slides, no badge", "competitor": "Plus, about $13 to $15/mo: unbranded, PowerPoint export, custom fonts"}, {"label": "Badge removal", "pitchboost": "Starter and up, every deck; or $13 per deck", "competitor": "Plus and up"}, {"label": "Upload an existing deck and rebuild it", "pitchboost": "Yes, from .pptx, one slide per source slide", "competitor": "Imports .pptx; redesign is manual with templates"}, {"label": "Brand from your website", "pitchboost": "Yes, logo, colours and tone pulled from your site", "competitor": "Brand kit set up by hand"}, {"label": "Fact check against your own material", "pitchboost": "Yes, invented figures are removed before you see the deck", "competitor": "No"}, {"label": "PowerPoint export", "pitchboost": "Every plan; editable text boxes on paid plans", "competitor": "Paid plans only"}, {"label": "Viewer analytics", "pitchboost": "Basic on Free, full on Pro", "competitor": "Paid plans"}, {"label": "API and MCP for AI assistants", "pitchboost": "Pro; a no-account sample tool for ChatGPT and Claude", "competitor": "No"}],
     updated: "2026-09-12",
     pricingUrl: "https://pitch.com/pricing",
     altSlug: "pitch",
@@ -282,7 +282,7 @@ export const COMPETITORS: Competitor[] = [
     competitorSummary: "Tome is now an AI sales assistant focused on account research, meeting preparation, and deal personalization, under the tagline 'make deals, not decks.' It scans company data, CRM records, and call notes to brief sales teams before a meeting. Its earlier AI presentation product was sunset in 2025.",
     pitchboostPricing: "Free plan. Starter $9/mo. Pro $29/mo. Business $79/mo.",
     competitorPricing: "Free tier. Pro: about $16 per user/mo. Enterprise: custom.",
-    specs: [{"label": "Free plan", "pitchboost": "150 credits a month (1 deck), 10-slide cap, small badge", "competitor": "Free tier with limited AI credits"}, {"label": "First paid tier", "pitchboost": "Starter, $9/mo: 800 credits, 25 slides, no badge", "competitor": "Pro, about $16 per user/mo"}, {"label": "Badge removal", "pitchboost": "Starter and up, every deck; or $12 per deck", "competitor": "Paid plans"}, {"label": "Upload an existing deck and rebuild it", "pitchboost": "Yes, from .pptx, one slide per source slide", "competitor": "No native .pptx rebuild; generates from prompts and docs"}, {"label": "Brand from your website", "pitchboost": "Yes, logo, colours and tone pulled from your site", "competitor": "No"}, {"label": "Fact check against your own material", "pitchboost": "Yes, invented figures are removed before you see the deck", "competitor": "No"}, {"label": "PowerPoint export", "pitchboost": "Every plan; editable text boxes on paid plans", "competitor": "Limited"}, {"label": "Viewer analytics", "pitchboost": "Basic on Free, full on Pro", "competitor": "Yes"}, {"label": "API and MCP for AI assistants", "pitchboost": "Pro; a no-account sample tool for ChatGPT and Claude", "competitor": "No"}],
+    specs: [{"label": "Free plan", "pitchboost": "150 credits a month (1 deck), 10-slide cap, small badge", "competitor": "Free tier with limited AI credits"}, {"label": "First paid tier", "pitchboost": "Starter, $9/mo: 800 credits, 50 slides, no badge", "competitor": "Pro, about $16 per user/mo"}, {"label": "Badge removal", "pitchboost": "Starter and up, every deck; or $13 per deck", "competitor": "Paid plans"}, {"label": "Upload an existing deck and rebuild it", "pitchboost": "Yes, from .pptx, one slide per source slide", "competitor": "No native .pptx rebuild; generates from prompts and docs"}, {"label": "Brand from your website", "pitchboost": "Yes, logo, colours and tone pulled from your site", "competitor": "No"}, {"label": "Fact check against your own material", "pitchboost": "Yes, invented figures are removed before you see the deck", "competitor": "No"}, {"label": "PowerPoint export", "pitchboost": "Every plan; editable text boxes on paid plans", "competitor": "Limited"}, {"label": "Viewer analytics", "pitchboost": "Basic on Free, full on Pro", "competitor": "Yes"}, {"label": "API and MCP for AI assistants", "pitchboost": "Pro; a no-account sample tool for ChatGPT and Claude", "competitor": "No"}],
     updated: "2026-09-12",
     pricingUrl: "https://tome.app",
     altSlug: "tome",
@@ -459,12 +459,12 @@ export const COMPETITORS: Competitor[] = [
       },
       {
         "label": "First paid tier",
-        "pitchboost": "Starter, $9/mo: 800 credits, 25 slides, no badge",
+        "pitchboost": "Starter, $9/mo: 800 credits, 50 slides, no badge",
         "competitor": "Canva Pro, $18/mo or $144/yr: brand kit, 500 Magic Studio credits"
       },
       {
         "label": "Badge removal",
-        "pitchboost": "Starter and up, every deck; or $12 per deck",
+        "pitchboost": "Starter and up, every deck; or $13 per deck",
         "competitor": "No badge on free designs"
       },
       {
@@ -618,12 +618,12 @@ export const COMPETITORS: Competitor[] = [
       },
       {
         "label": "First paid tier",
-        "pitchboost": "Starter, $9/mo: 800 credits, 25 slides, no badge",
+        "pitchboost": "Starter, $9/mo: 800 credits, 50 slides, no badge",
         "competitor": "Microsoft 365 Premium, $19.99/mo (consumer) or Microsoft 365 Copilot add-on, $21 to $30 per user/mo (work)"
       },
       {
         "label": "Badge removal",
-        "pitchboost": "Starter and up, every deck; or $12 per deck",
+        "pitchboost": "Starter and up, every deck; or $13 per deck",
         "competitor": "Not applicable"
       },
       {
@@ -680,12 +680,12 @@ export const COMPETITORS: Competitor[] = [
       },
       {
         "label": "First paid tier",
-        "pitchboost": "Starter, $9/mo: 800 credits, 25 slides, no badge",
+        "pitchboost": "Starter, $9/mo: 800 credits, 50 slides, no badge",
         "competitor": "Premium, from $29/mo: 1,000 credits a month, PDF and PPT export"
       },
       {
         "label": "Badge removal",
-        "pitchboost": "Starter and up, every deck; or $12 per deck",
+        "pitchboost": "Starter and up, every deck; or $13 per deck",
         "competitor": "Not stated on the pricing page"
       },
       {
@@ -812,7 +812,7 @@ export const COMPETITORS: Competitor[] = [
       },
       {
         "q": "Which is cheaper for a single deck redesign?",
-        "a": "PitchBoost's free plan rebuilds a deck of up to 10 slides with a small badge; Starter at $9 a month rebuilds up to 25 slides with no badge and can be cancelled after one month. SlideSpeak's free credits cover about three presentations and PPT export needs Premium at $29 a month."
+        "a": "PitchBoost's free plan rebuilds a deck of up to 10 slides with a small badge; Starter at $9 a month rebuilds up to 50 slides with no badge and can be cancelled after one month. SlideSpeak's free credits cover about three presentations and PPT export needs Premium at $29 a month."
       },
       {
         "q": "Does either tool pull my brand from my website?",
@@ -840,12 +840,12 @@ export const COMPETITORS: Competitor[] = [
       },
       {
         "label": "First paid tier",
-        "pitchboost": "Starter, $9/mo: 800 credits, 25 slides, no badge",
+        "pitchboost": "Starter, $9/mo: 800 credits, 50 slides, no badge",
         "competitor": "Plus, $20/mo: watermark off, priority access to elements and themes"
       },
       {
         "label": "Badge removal",
-        "pitchboost": "Starter and up, every deck; or $12 per deck",
+        "pitchboost": "Starter and up, every deck; or $13 per deck",
         "competitor": "Plus and up"
       },
       {
@@ -972,7 +972,7 @@ export const COMPETITORS: Competitor[] = [
       },
       {
         "q": "Which is cheaper?",
-        "a": "Both have free plans. PitchBoost's first paid tier is Starter at $9 a month (800 credits, 25-slide decks, no badge); Alai's is Plus at $20 a month. PitchBoost Pro is $29 against Alai Pro at $30."
+        "a": "Both have free plans. PitchBoost's first paid tier is Starter at $9 a month (800 credits, 50-slide decks, no badge); Alai's is Plus at $20 a month. PitchBoost Pro is $29 against Alai Pro at $30."
       },
       {
         "q": "Which keeps my brand better?",
@@ -1000,12 +1000,12 @@ export const COMPETITORS: Competitor[] = [
       },
       {
         "label": "First paid tier",
-        "pitchboost": "Starter, $9/mo: 800 credits, 25 slides, no badge",
+        "pitchboost": "Starter, $9/mo: 800 credits, 50 slides, no badge",
         "competitor": "Standard pack, $10 once: 3,000 credits"
       },
       {
         "label": "Badge removal",
-        "pitchboost": "Starter and up, every deck; or $12 per deck",
+        "pitchboost": "Starter and up, every deck; or $13 per deck",
         "competitor": "Not stated"
       },
       {
@@ -1106,7 +1106,7 @@ export const COMPETITORS: Competitor[] = [
       },
       {
         "title": "Credits versus a plan",
-        "body": "Sharayeh sells credit packs from $10 and gates downloads behind them. PitchBoost's free plan includes a full deck a month with a small badge, and Starter at $9 a month removes the badge and rebuilds up to 25 slides; cancel after a month if it was a one-off."
+        "body": "Sharayeh sells credit packs from $10 and gates downloads behind them. PitchBoost's free plan includes a full deck a month with a small badge, and Starter at $9 a month removes the badge and rebuilds up to 50 slides; cancel after a month if it was a one-off."
       }
     ],
     "pitchboostBestFor": [
@@ -1160,12 +1160,12 @@ export const COMPETITORS: Competitor[] = [
       },
       {
         "label": "First paid tier",
-        "pitchboost": "Starter, $9/mo: 800 credits, 25 slides, no badge",
+        "pitchboost": "Starter, $9/mo: 800 credits, 50 slides, no badge",
         "competitor": "Basic, $15/user/mo ($10 annual): 1,500 credits, rewrite and remix"
       },
       {
         "label": "Badge removal",
-        "pitchboost": "Starter and up, every deck; or $12 per deck",
+        "pitchboost": "Starter and up, every deck; or $13 per deck",
         "competitor": "Not applicable; works in your own file"
       },
       {
@@ -1320,12 +1320,12 @@ export const COMPETITORS: Competitor[] = [
       },
       {
         "label": "First paid tier",
-        "pitchboost": "Starter, $9/mo: 800 credits, 25 slides, no badge",
+        "pitchboost": "Starter, $9/mo: 800 credits, 50 slides, no badge",
         "competitor": "Starter, $29/mo: 50 slides a month, branding removed"
       },
       {
         "label": "Badge removal",
-        "pitchboost": "Starter and up, every deck; or $12 per deck",
+        "pitchboost": "Starter and up, every deck; or $13 per deck",
         "competitor": "Starter and up"
       },
       {
@@ -1426,7 +1426,7 @@ export const COMPETITORS: Competitor[] = [
       },
       {
         "title": "Slides per month, or credits",
-        "body": "Perceptis counts slides: 10 free, 50 for $29, 100 for $129. PitchBoost counts decks: one free deck of up to 10 slides a month, then 800 credits (about seven decks of up to 25 slides) for $9."
+        "body": "Perceptis counts slides: 10 free, 50 for $29, 100 for $129. PitchBoost counts decks: one free deck of up to 10 slides a month, then 800 credits (about seven decks of up to 50 slides) for $9."
       }
     ],
     "pitchboostBestFor": [
@@ -1452,7 +1452,7 @@ export const COMPETITORS: Competitor[] = [
       },
       {
         "q": "Which is cheaper to redesign one deck?",
-        "a": "PitchBoost: free for a deck of up to 10 slides with a small badge, or $9 for Starter with no badge and 25-slide decks. Perceptis: the upload feature starts at $129 a month."
+        "a": "PitchBoost: free for a deck of up to 10 slides with a small badge, or $9 for Starter with no badge and 50-slide decks. Perceptis: the upload feature starts at $129 a month."
       },
       {
         "q": "Do both keep my brand?",

@@ -51,7 +51,7 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
       {
         "heading": "Limites de slides por plano",
         "paragraphs": [
-          "O plano Free reconstrói até 10 slides, Starter até 25 e Pro até 60. Uma apresentação mais longa pode ser condensada para caber antes da reconstrução começar, e a tela de compartilhamento informa quantos slides foram mantidos."
+          "O plano Free reconstrói até 10 slides, Starter até 50 e Pro até 60. Uma apresentação mais longa pode ser condensada para caber antes da reconstrução começar, e a tela de compartilhamento informa quantos slides foram mantidos."
         ]
       }
     ],
@@ -66,7 +66,7 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
       },
       {
         "q": "Quanto custa?",
-        "a": "O plano Free inclui uma apresentação AI por mês, até 10 slides, com um pequeno selo PitchBoost. Starter custa $9 por mês para até 25 slides e sem selo; Pro custa $29 por mês para até 60 slides com analytics completo."
+        "a": "O plano Free inclui uma apresentação AI por mês, até 10 slides, com um pequeno selo PitchBoost. Starter custa $9 por mês para até 50 slides e sem selo; Pro custa $29 por mês para até 60 slides com analytics completo."
       }
     ],
     "related": [
@@ -126,13 +126,13 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
     "slug": "slide-limits-by-plan",
     "category": "redesign",
     "title": "Quantos slides o PitchBoost reconstrói em cada plano",
-    "metaDescription": "Free reconstrói até 10 slides, Starter até 25, Pro e Business até 60. O que acontece com decks mais longos: condensar ou reconstruir os primeiros.",
-    "answer": "O plano gratuito reconstrói decks com até 10 slides, Starter até 25, e Pro e Business até 60. Se o seu deck for mais longo, o PitchBoost oferece a opção de condensá-lo para caber (mesma história, menos slides) ou reconstruir apenas os primeiros slides. A tela de compartilhamento mostra quantos dos seus slides originais foram mantidos e como reconstruir o restante após um upgrade.",
+    "metaDescription": "Free reconstrói até 10 slides, Starter até 50, Pro e Business até 60. O que acontece com decks mais longos: condensar ou reconstruir os primeiros.",
+    "answer": "O plano gratuito reconstrói decks com até 10 slides, Starter até 50, e Pro e Business até 60. Se o seu deck for mais longo, o PitchBoost oferece a opção de condensá-lo para caber (mesma história, menos slides) ou reconstruir apenas os primeiros slides. A tela de compartilhamento mostra quantos dos seus slides originais foram mantidos e como reconstruir o restante: com um pagamento único para essa apresentação (US$ 13, ou US$ 25 acima de 50 slides) ou com um plano.",
     "sections": [
       {
         "heading": "Os limites",
         "paragraphs": [
-          "Free: até 10 slides por deck, um deck com IA por mês. Starter ($9 por mês): até 25 slides. Pro ($29 por mês) e Business ($79 por mês): até 60 slides. O limite se aplica ao deck que o PitchBoost produz, não ao arquivo que você envia: você pode enviar um deck de 45 slides em qualquer plano."
+          "Free: até 10 slides por deck, um deck com IA por mês. Starter ($9 por mês): até 50 slides. Pro ($29 por mês) e Business ($79 por mês): até 60 slides. O limite se aplica ao deck que o PitchBoost produz, não ao arquivo que você envia: você pode enviar um deck de 45 slides em qualquer plano."
         ]
       },
       {
@@ -398,7 +398,7 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
         "heading": "Os planos",
         "paragraphs": [
           "Free: 150 créditos por mês, um negócio, apresentações de até 10 slides, exportação em PDF e PowerPoint com um pequeno selo, um link compartilhável com análises básicas. Não requer cartão.",
-          "Starter, $9 por mês: 800 créditos, negócios ilimitados, apresentações de até 25 slides, sem selo em lugar algum, pacotes extras.",
+          "Starter, $9 por mês: 800 créditos, negócios ilimitados, apresentações de até 50 slides, sem selo em lugar algum, pacotes extras.",
           "Pro, $29 por mês: 2.500 créditos, apresentações de até 60 slides, análises completas do visualizador com tempo por slide, modelos salvos, domínios personalizados, acesso à API e MCP.",
           "Business, $79 por mês: 7.000 créditos, assentos e permissões de equipe, exportação de análises e envio a partir do seu próprio domínio.",
           "Cobrança anual é mais barata: Starter $7, Pro $24 e Business $66 por mês quando pago anualmente."

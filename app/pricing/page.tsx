@@ -22,7 +22,11 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "What does Starter add over Free?",
-    a: "Starter is $9 a month: 800 credits (about five decks plus edits), decks up to 25 slides, no PitchBoost badge on any deck or export, clean editable PowerPoint downloads, and top-up packs when you need more.",
+    a: "Starter is $9 a month: 800 credits (about five decks plus edits), decks up to 50 slides, no PitchBoost badge on any deck or export, clean editable PowerPoint downloads, and top-up packs when you need more.",
+  },
+  {
+    q: "Can I pay once instead of subscribing?",
+    a: "Yes. If you have one deck to fix, Finish this deck is a one-time $13 (decks up to 50 slides; $25 up to 60): every slide rebuilt one to one, no PitchBoost badge on that deck, and 100 credits for edits. It is offered when your upload is longer than the free plan builds, and on any deck's share screen.",
   },
   {
     q: "What is the difference between Starter, Pro and Business?",
@@ -75,6 +79,7 @@ export default function PricingPage() {
     offers: [
       { "@type": "Offer", name: "Free", price: "0", priceCurrency: "USD", url: "https://pitchboost.ai/pricing" },
       { "@type": "Offer", name: "Starter", price: "9", priceCurrency: "USD", url: "https://pitchboost.ai/pricing" },
+      { "@type": "Offer", name: "Finish this deck (one time)", price: "13", priceCurrency: "USD", url: "https://pitchboost.ai/pricing" },
       { "@type": "Offer", name: "Pro", price: "29", priceCurrency: "USD", url: "https://pitchboost.ai/pricing" },
       { "@type": "Offer", name: "Business", price: "79", priceCurrency: "USD", url: "https://pitchboost.ai/pricing" },
     ],

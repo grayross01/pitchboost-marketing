@@ -13,6 +13,12 @@ export interface ChangelogEntry {
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    date: "2026-09-30",
+    title: "Finish one deck for $13, no subscription",
+    body: "If your upload is longer than the free plan builds, you can now finish that one deck with a one-time payment: every slide rebuilt, no PitchBoost badge, and 100 credits for edits ($13 up to 50 slides, $25 up to 60). The free choice comes first: condense to 10 slides and build. Starter now rebuilds decks up to 50 slides.",
+    area: "Billing",
+  },
+  {
     date: "2026-09-17",
     title: "Help center in English, Spanish and Portuguese",
     body: "Ten short articles with real steps: redesigning a PowerPoint, Google Slides and Keynote, slide limits by plan, downloads, share links, connecting to ChatGPT and Claude, credits, how long a deck takes, and how your brand is captured.",

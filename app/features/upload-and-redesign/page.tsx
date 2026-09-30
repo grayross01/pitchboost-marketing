@@ -134,7 +134,7 @@ const FAQS = [
   },
   {
     q: "How much does it cost?",
-    a: "The free plan includes one AI deck a month, up to 10 slides, with a small PitchBoost badge. Starter is $9 a month for up to 25 slides and no badge; Pro is $29 a month for up to 60 slides, full viewer analytics and custom domains.",
+    a: "The free plan includes one AI deck a month, up to 10 slides, with a small PitchBoost badge. Starter is $9 a month for up to 50 slides and no badge; Pro is $29 a month for up to 60 slides, full viewer analytics and custom domains.",
   },
 ];
 
