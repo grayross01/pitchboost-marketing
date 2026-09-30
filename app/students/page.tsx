@@ -171,7 +171,7 @@ export default function StudentsPage() {
           </p>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 16, flexWrap: "wrap" }}>
             <a href={SIGNUP_REBUILD} className="btn btn-primary btn-lg">Redesign My Slides</a>
-            <a href={SIGNUP_URL} className="btn btn-ghost btn-lg">Start From Scratch</a>
+            <a href={SIGNUP_URL} className="btn btn-light btn-lg">Start From Scratch</a>
           </div>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 40, marginTop: 48, flexWrap: "wrap" }}>
             {["Your content and numbers kept", "One consistent design on every slide", "Free for one deck a month"].map((item) => (

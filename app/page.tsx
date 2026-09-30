@@ -73,7 +73,7 @@ export default function MarketingPage() {
 
           <div className="hero-actions rise rise-3">
             <a href={SIGNUP_REBUILD} className="btn btn-primary btn-lg">Redesign My Slides</a>
-            <a href={SIGNUP_URL} className="btn btn-ghost btn-lg">Start From Scratch</a>
+            <a href={SIGNUP_URL} className="btn btn-light btn-lg">Start From Scratch</a>
           </div>
           <p className="rise rise-3" style={{ marginTop: 14, fontSize: 13, color: "rgba(255,255,255,0.7)" }}>
             Free forever plan. No credit card required.
