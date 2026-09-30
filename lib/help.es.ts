@@ -51,7 +51,7 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       {
         "heading": "Límites de diapositivas por plan",
         "paragraphs": [
-          "El plan gratuito reconstruye hasta 10 diapositivas, Starter hasta 25 y Pro hasta 60. Una presentación más larga puede condensarse para ajustarse antes de que comience la reconstrucción, y la pantalla de compartir te indica cuántas diapositivas se conservaron."
+          "El plan gratuito reconstruye hasta 10 diapositivas, Starter hasta 50 y Pro hasta 60. Una presentación más larga puede condensarse para ajustarse antes de que comience la reconstrucción, y la pantalla de compartir te indica cuántas diapositivas se conservaron."
         ]
       }
     ],
@@ -66,7 +66,7 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       },
       {
         "q": "¿Cuánto cuesta?",
-        "a": "El plan gratuito incluye una presentación AI al mes, hasta 10 diapositivas, con una pequeña insignia de PitchBoost. Starter cuesta $9 al mes para hasta 25 diapositivas y sin insignia; Pro cuesta $29 al mes para hasta 60 diapositivas con análisis completo."
+        "a": "El plan gratuito incluye una presentación AI al mes, hasta 10 diapositivas, con una pequeña insignia de PitchBoost. Starter cuesta $9 al mes para hasta 50 diapositivas y sin insignia; Pro cuesta $29 al mes para hasta 60 diapositivas con análisis completo."
       }
     ],
     "related": [
@@ -126,13 +126,13 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
     "slug": "slide-limits-by-plan",
     "category": "redesign",
     "title": "Cuántas diapositivas rediseña PitchBoost en cada plan",
-    "metaDescription": "Free rediseña hasta 10 diapositivas, Starter hasta 25, Pro y Business hasta 60. Qué pasa con una presentación más larga: condensar o rediseñar solo las primeras.",
-    "answer": "El plan gratuito rediseña presentaciones de hasta 10 diapositivas, Starter hasta 25, y Pro y Business hasta 60. Si tu presentación es más larga, PitchBoost te ofrece condensarla para que quepa (la misma historia, menos diapositivas) o rediseñar solo las primeras diapositivas. La pantalla de compartir muestra cuántas de tus diapositivas originales se conservaron y cómo rediseñar el resto después de mejorar tu plan.",
+    "metaDescription": "Free rediseña hasta 10 diapositivas, Starter hasta 50, Pro y Business hasta 60. Qué pasa con una presentación más larga: condensar o rediseñar solo las primeras.",
+    "answer": "El plan gratuito rediseña presentaciones de hasta 10 diapositivas, Starter hasta 50, y Pro y Business hasta 60. Si tu presentación es más larga, PitchBoost te ofrece condensarla para que quepa (la misma historia, menos diapositivas) o rediseñar solo las primeras diapositivas. La pantalla de compartir muestra cuántas de tus diapositivas originales se conservaron y cómo rediseñar el resto: con un pago único para esa presentación ($13, o $25 si pasa de 50 diapositivas) o con un plan.",
     "sections": [
       {
         "heading": "Los límites",
         "paragraphs": [
-          "Free: hasta 10 diapositivas por presentación, una presentación con IA al mes. Starter ($9 al mes): hasta 25 diapositivas. Pro ($29 al mes) y Business ($79 al mes): hasta 60 diapositivas. El límite se aplica a la presentación que PitchBoost produce, no al archivo que subes; puedes subir una presentación de 45 diapositivas en cualquier plan."
+          "Free: hasta 10 diapositivas por presentación, una presentación con IA al mes. Starter ($9 al mes): hasta 50 diapositivas. Pro ($29 al mes) y Business ($79 al mes): hasta 60 diapositivas. El límite se aplica a la presentación que PitchBoost produce, no al archivo que subes; puedes subir una presentación de 45 diapositivas en cualquier plan."
         ]
       },
       {
@@ -398,7 +398,7 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
         "heading": "Los planes",
         "paragraphs": [
           "Free: 150 créditos al mes, un trato, presentaciones de hasta 10 diapositivas, exportar en PDF y PowerPoint con una marca pequeña, enlace compartible con análisis básicos. No se requiere tarjeta.",
-          "Starter, $9 al mes: 800 créditos, tratos ilimitados, presentaciones de hasta 25 diapositivas, sin marca en ningún lugar, paquetes adicionales.",
+          "Starter, $9 al mes: 800 créditos, tratos ilimitados, presentaciones de hasta 50 diapositivas, sin marca en ningún lugar, paquetes adicionales.",
           "Pro, $29 al mes: 2,500 créditos, presentaciones de hasta 60 diapositivas, análisis completo del visor con tiempo por diapositiva, plantillas guardadas, dominios personalizados, acceso a API y MCP.",
           "Business, $79 al mes: 7,000 créditos, puestos y permisos de equipo, exportar análisis y enviar desde tu propio dominio.",
           "La facturación anual es más económica: Starter $7, Pro $24 y Business $66 al mes cuando se paga anualmente."

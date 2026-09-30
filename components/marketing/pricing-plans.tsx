@@ -15,6 +15,7 @@ function CheckIcon() {
 
 export default function PricingPlans({ className = "pricing-grid" }: { className?: string }) {
   return (
+    <>
     <div className={className}>
       <div className="pricing-card">
         <div className="plan-name">Free</div>
@@ -37,7 +38,7 @@ export default function PricingPlans({ className = "pricing-grid" }: { className
         <div className="plan-period">or $7/mo billed annually</div>
         <ul className="pricing-features">
           <li><CheckIcon /> 800 credits a month (about 5 decks)</li>
-          <li><CheckIcon /> Decks up to 25 slides</li>
+          <li><CheckIcon /> Decks up to 50 slides</li>
           <li><CheckIcon /> No PitchBoost badge, anywhere</li>
           <li><CheckIcon /> Clean, editable PowerPoint downloads</li>
           <li><CheckIcon /> Top-up credit packs</li>
@@ -75,5 +76,10 @@ export default function PricingPlans({ className = "pricing-grid" }: { className
         <a href={SIGNUP_URL} className="btn btn-secondary">Get Started</a>
       </div>
     </div>
+    {/* Most people have one deck to fix, so a plan is not the only way to pay. */}
+    <p style={{ textAlign: "center", fontSize: 15, color: "var(--ds-text-secondary, #4a5a68)", margin: "22px auto 0", maxWidth: 680, lineHeight: 1.6 }}>
+      <strong style={{ color: "var(--ds-dark)" }}>Just one deck?</strong> Finish it for $13 once, no subscription: every slide rebuilt, no PitchBoost badge, and 100 credits for edits. Decks over 50 slides are $25.
+    </p>
+    </>
   );
 }

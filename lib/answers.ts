@@ -44,7 +44,7 @@ export const ANSWERS: AnswerPage[] = [
       },
       {
         "title": "AI redesign: free to $29 a month, minutes",
-        "body": "Upload the .pptx and the tool rebuilds each slide in your brand, pulled from your website, with the text and chart values kept. PitchBoost's free plan covers one deck a month up to 10 slides with a small badge; Starter is $9 a month for decks up to 25 slides with no badge; Pro is $29. What you do not get is bespoke illustration or a designer's opinion on the story."
+        "body": "Upload the .pptx and the tool rebuilds each slide in your brand, pulled from your website, with the text and chart values kept. PitchBoost's free plan covers one deck a month up to 10 slides with a small badge; Starter is $9 a month for decks up to 50 slides with no badge; Pro is $29. What you do not get is bespoke illustration or a designer's opinion on the story."
       }
     ],
     "faqs": [
@@ -100,7 +100,7 @@ export const ANSWERS: AnswerPage[] = [
       },
       {
         "q": "Does PitchBoost limit slide count?",
-        "a": "The free plan rebuilds up to 10 slides, Starter up to 25, Pro up to 60. The condense option targets 10 to 15 whatever the source length."
+        "a": "The free plan rebuilds up to 10 slides, Starter up to 50, Pro up to 60. The condense option targets 10 to 15 whatever the source length."
       }
     ],
     "related": "investor-deck-redesign",
@@ -360,7 +360,7 @@ export const ANSWERS: AnswerPage[] = [
       },
       {
         "q": "What does PitchBoost cost?",
-        "a": "One AI deck a month is free, up to 10 slides, with a small badge. Starter is $9 a month for decks up to 25 slides with no badge; Pro is $29 a month for up to 60 slides and full viewer analytics."
+        "a": "One AI deck a month is free, up to 10 slides, with a small badge. Starter is $9 a month for decks up to 50 slides with no badge; Pro is $29 a month for up to 60 slides and full viewer analytics."
       }
     ],
     "related": "powerpoint-designer-alternative",
