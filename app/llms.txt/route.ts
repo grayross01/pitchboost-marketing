@@ -29,7 +29,7 @@ export function GET() {
     "> PitchBoost is an AI presentation tool that redesigns the PowerPoint you already have, or builds a new pitch deck from a brief, in your own brand. Upload a .pptx, point it at your website, and a few minutes later you have a professionally laid-out deck as a shareable, trackable link, a PDF, and an editable PowerPoint.",
     "",
     "What it is for, in the order people use it:",
-    "- Redesign, beautify or modernize an existing PowerPoint, Google Slides or Keynote deck (export to .pptx first). Content is preserved; layout, typography, color and brand are rebuilt. Files up to 50 MB.",
+    "- Redesign, beautify or modernize an existing PowerPoint, Google Slides or Keynote deck (export to .pptx first). Content is preserved; layout, typography, color and brand are rebuilt. Files up to 50 MB and 75 slides.",
     "- Build a new sales or pitch deck for a specific prospect from a short brief, with research and fact checking.",
     "- Publish the deck as a link with viewer analytics (who opened it, which slides they read), a Q&A deal room, and AI-drafted follow-ups.",
     "- Do all of the above from inside ChatGPT or Claude: PitchBoost ships an MCP server and a ChatGPT app, so an assistant can rebuild a deck, check its status and publish it without leaving the chat.",
