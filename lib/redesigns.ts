@@ -100,6 +100,10 @@ export const REDESIGNS: RedesignPage[] = [
         q: "How much does a PowerPoint redesign cost?",
         a: "The free plan includes one AI deck generation a month, and a redesign counts as it. Beyond that, Starter is $9 a month with no badge and Pro is $29/month, against agency quotes that start around $2,000 per deck.",
       },
+      {
+        q: "Can I do this from inside ChatGPT?",
+        a: "Yes. Add the PitchBoost plugin from ChatGPT's plugin directory (free ChatGPT accounts included), attach your .pptx in a chat and ask for a redesign. ChatGPT sends it to PitchBoost and replies with the link; open it in PitchBoost for the full preview and downloads.",
+      },
     ],
     ctaHeadline: "Upload the deck. Keep the story. Lose the 2014 gradients.",
   },

@@ -388,7 +388,7 @@ export const ANSWERS: AnswerPage[] = [
       },
       {
         "title": "Setup in Claude, ChatGPT, Cursor and Windsurf",
-        "body": "In Claude, add a custom connector with the URL https://app.pitchboost.ai/api/mcp. In ChatGPT, add the PitchBoost app from the app directory. In Claude Code, run claude mcp add --transport http pitchboost https://app.pitchboost.ai/api/mcp. Cursor and Windsurf take the same URL in their MCP settings. Each one asks you to sign in to PitchBoost once."
+        "body": "In ChatGPT, add the PitchBoost plugin from the plugin directory; it works on free ChatGPT accounts. In Claude, add a custom connector with the URL https://app.pitchboost.ai/api/mcp. In Claude Code, run claude mcp add --transport http pitchboost https://app.pitchboost.ai/api/mcp. Cursor and Windsurf take the same URL in their MCP settings. Each one asks you to sign in to PitchBoost once."
       },
       {
         "title": "After the deck is sent",
@@ -398,7 +398,7 @@ export const ANSWERS: AnswerPage[] = [
     "faqs": [
       {
         "q": "Do I need to write code to use it?",
-        "a": "No. In Claude and ChatGPT it is a connector you add in settings. Only Claude Code uses a one-line terminal command."
+        "a": "No. In ChatGPT it is a plugin you add from the directory; in Claude it is a connector you add in settings. Only Claude Code uses a one-line terminal command."
       },
       {
         "q": "Can it redesign an existing PowerPoint?",

@@ -19,6 +19,12 @@ export const CHANGELOG: ChangelogEntry[] = [
     area: "Billing",
   },
   {
+    date: "2026-09-30",
+    title: "PitchBoost is in ChatGPT's plugin directory",
+    body: "Add the PitchBoost plugin in ChatGPT, on a free account or a paid one, attach a .pptx and ask for a redesign, or describe a new deck. ChatGPT replies with the link; open it in PitchBoost for the full preview and the PowerPoint and PDF downloads.",
+    area: "Integrations",
+  },
+  {
     date: "2026-09-17",
     title: "Help center in English, Spanish and Portuguese",
     body: "Ten short articles with real steps: redesigning a PowerPoint, Google Slides and Keynote, slide limits by plan, downloads, share links, connecting to ChatGPT and Claude, credits, how long a deck takes, and how your brand is captured.",

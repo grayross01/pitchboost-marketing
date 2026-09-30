@@ -302,52 +302,58 @@ export const HELP_ARTICLES: HelpArticle[] = [
     category: "assistants",
     title: "How to use PitchBoost in ChatGPT",
     metaDescription:
-      "Add PitchBoost to ChatGPT as a connector, sign in once, then ask ChatGPT to redesign a deck, build a new one, or list your decks. The exact steps.",
+      "Add the PitchBoost plugin in ChatGPT, sign in once, then ask ChatGPT to redesign a deck you attach or build a new one. Works on free ChatGPT accounts. The exact steps.",
     answer:
-      "Add PitchBoost to ChatGPT as a connector using the server address https://app.pitchboost.ai/api/mcp, sign in to your PitchBoost account when ChatGPT asks, and then talk to it normally: upload a deck and say \"make this look professional\", or describe a prospect and ask for a pitch deck. ChatGPT calls PitchBoost, which returns a link to the finished deck. A PitchBoost app listing for ChatGPT is under review; until it appears in the directory, the connector route below works on accounts with developer mode enabled.",
+      "PitchBoost is a plugin in ChatGPT's plugin directory, and it works on free ChatGPT accounts. Add it, sign in to PitchBoost once (a free account is enough), then talk to ChatGPT normally: attach a .pptx and say \"make this look professional\", or describe the presentation you need. ChatGPT sends the job to PitchBoost and replies with a link to the finished deck; open it in PitchBoost for the full preview and the PowerPoint and PDF downloads.",
     steps: [
       {
-        title: "Turn on developer mode",
-        body: "In ChatGPT open Settings, then Connectors, then Advanced, and enable Developer mode. This is the switch that allows custom connectors.",
-      },
-      {
-        title: "Create the connector",
-        body: "Still under Connectors, click Create. Name it PitchBoost, paste https://app.pitchboost.ai/api/mcp as the MCP server URL, choose OAuth as the authentication, and save. If the sign-in fails with an unknown client error, open the connector's advanced settings and set client registration to dynamic (DCR).",
+        title: "Add the PitchBoost plugin",
+        body: "In ChatGPT, open the plugin directory, search for PitchBoost and add it. It is available on free ChatGPT accounts as well as paid plans.",
       },
       {
         title: "Sign in to PitchBoost",
-        body: "ChatGPT opens a PitchBoost sign-in window. Use your existing account or create a free one. You do this once.",
+        body: "The first time you use it, ChatGPT opens a PitchBoost sign-in window. Sign in or create a free account. You do this once; ChatGPT remembers the connection.",
       },
       {
-        title: "Use it in a chat",
-        body: "Start a new chat, enable the PitchBoost connector in the tools menu, and ask. For a redesign, attach the .pptx and ask for it to be improved: ChatGPT reads the slides and sends them to PitchBoost, which rebuilds the deck in your brand and returns the link.",
+        title: "Attach a deck and ask",
+        body: "In a chat, attach your .pptx (Google Slides and Keynote export to .pptx in one step) and say what you want: \"redesign this in our brand\", \"make my class presentation look professional\", or describe a new deck from scratch. Name a website for the brand if you have one.",
+      },
+      {
+        title: "Open the deck in PitchBoost",
+        body: "A few minutes later ChatGPT replies with the link. Click Open the deck in PitchBoost to see the full preview, download the editable PowerPoint or a PDF, and share the tracked link.",
       },
     ],
     sections: [
       {
         heading: "What ChatGPT can do with PitchBoost",
         paragraphs: [
-          "Rebuild a deck you upload, check whether a rebuild has finished, build a new deck for a specific prospect, list your recent decks, get the link for one, and publish a draft. It can also make a sample deck without an account, with a badge, that you can claim later.",
-          "It cannot change your plan, delete anything, or see decks outside your account. Rebuilds and new decks use the same monthly allowance as the app: one deck a month on the free plan.",
+          "Rebuild a deck you attach, check whether a rebuild has finished, build a new deck from a brief, list your recent decks, get the link for one, and publish a draft. It can also make a sample deck before you sign in, with a badge, that you can claim later.",
+          "It cannot change your plan, delete anything, or see decks outside your account. Rebuilds and new decks use the same monthly allowance as the app: one deck a month on the free plan, up to 10 slides.",
+        ],
+      },
+      {
+        heading: "If you would rather use the MCP address",
+        paragraphs: [
+          "The plugin runs on PitchBoost's MCP server. Developers who want to connect it by hand, in ChatGPT developer mode or any other MCP client, can use https://app.pitchboost.ai/api/mcp with OAuth; the Claude article has the details.",
         ],
       },
     ],
     faqs: [
       {
-        q: "Does the connector work on a free ChatGPT account?",
-        a: "Custom connectors need a ChatGPT plan with developer mode available. Check Settings > Connectors > Advanced on your account; if the switch is not there, the directory listing, once approved, will be the route.",
+        q: "Does the plugin work on a free ChatGPT account?",
+        a: "Yes. Add it from the plugin directory like any other plugin. A free PitchBoost account works too, with one deck a month.",
       },
       {
         q: "Where does the rebuilt deck go?",
-        a: "Into your PitchBoost account, under a deal named after the deck. The link ChatGPT gives you opens it directly; you can edit and download from there like any other deck.",
+        a: "Into your PitchBoost account, under a deal named after the deck. The link ChatGPT gives you opens it directly; you can edit, download and share from there like any other deck.",
       },
       {
         q: "Is my deck content sent to PitchBoost?",
-        a: "Yes, the slide text ChatGPT extracts is sent to PitchBoost to rebuild the deck, and stored in your account with the result. The privacy policy explains retention and deletion.",
+        a: "Yes, the slide content ChatGPT extracts is sent to PitchBoost to rebuild the deck, and stored in your account with the result. The privacy policy explains retention and deletion.",
       },
     ],
     related: ["connect-claude", "redesign-a-powerpoint", "credits-and-plans"],
-    updated: "2026-09-16",
+    updated: "2026-09-30",
   },
 
   {

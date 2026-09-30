@@ -6,13 +6,13 @@ const SIGNUP_URL = `${APP_URL}/signup`;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/features/api-and-mcp" },
-  title: "API & MCP: Build Better Pitch Decks from Claude or Your AI Stack",
+  title: "API & MCP: Build Decks from ChatGPT, Claude or Your AI Stack",
   description:
-    "Connect PitchBoost to Claude, Cursor, or your own AI workflows. Get professionally structured decks with your brand, templates, and team libraries, not raw AI slide files.",
+    "Use the PitchBoost plugin in ChatGPT, or connect the MCP server to Claude, Cursor, or your own AI workflows. Get professionally designed decks in your brand, not raw AI slide files.",
   openGraph: {
-    title: "API & MCP: Build Better Pitch Decks from Claude or Your AI Stack",
+    title: "API & MCP: Build Decks from ChatGPT, Claude or Your AI Stack",
     description:
-      "Connect PitchBoost to Claude, Cursor, or your own AI workflows. Get professionally structured decks with your brand, templates, and team libraries, not raw AI slide files.",
+      "Use the PitchBoost plugin in ChatGPT, or connect the MCP server to Claude, Cursor, or your own AI workflows. Get professionally designed decks in your brand, not raw AI slide files.",
   },
 };
 
@@ -95,10 +95,10 @@ const API_VS_MCP = [
   },
   {
     label: "MCP Server",
-    who: "Claude, Cursor, and AI-native workflows",
-    description: "Connect the PitchBoost MCP server to Claude or any MCP-compatible tool and generate decks through natural language. Describe the deal, the AI handles the rest.",
+    who: "ChatGPT, Claude, Cursor, and AI-native workflows",
+    description: "Add the PitchBoost plugin in ChatGPT (free accounts included), or connect the MCP server to Claude or any MCP-compatible tool, and redesign or build decks through natural language.",
     bullets: [
-      "Works with Claude, Cursor, Windsurf, and other MCP tools",
+      "In ChatGPT as a plugin; in Claude, Cursor, Windsurf and other MCP tools via the MCP server",
       "Generate decks through plain language, no structured inputs",
       "Claude picks output format, structure, and content automatically",
       "No code required for end users once the server is configured",
@@ -108,7 +108,7 @@ const API_VS_MCP = [
 
 const BULLETS = [
   "REST API for programmatic deck and proposal generation",
-  "MCP server compatible with Claude and MCP-compatible tools",
+  "ChatGPT plugin, plus an MCP server for Claude and other MCP-compatible tools",
   "All output types: pitch decks, proposals, one-sheets, buyer FAQs",
   "Generated decks use your team's brand kit automatically",
   "Templates and saved slides available to API-generated decks",
@@ -118,6 +118,10 @@ const BULLETS = [
 ];
 
 const FAQS = [
+  {
+    q: "Is PitchBoost available in ChatGPT?",
+    a: "Yes. PitchBoost is a plugin in ChatGPT's plugin directory, and it works on free ChatGPT accounts. Add it, sign in to PitchBoost once, then attach a .pptx and ask for a redesign, or describe a new deck. ChatGPT replies with the link; open it in PitchBoost for the full preview and downloads. The help center has the steps.",
+  },
   {
     q: "Why use PitchBoost's API instead of just prompting Claude directly?",
     a: "When you prompt Claude directly, you get text or a rough slide structure. When you use PitchBoost through the API or MCP, you get a finished, branded deck, your logo, your colors, your templates, published to a shareable link with viewer analytics. The AI handles content; PitchBoost handles everything that makes it look and function like a real sales asset.",

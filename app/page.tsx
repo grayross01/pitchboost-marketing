@@ -498,10 +498,10 @@ export default function MarketingPage() {
             <div style={{ maxWidth: 640 }}>
               <div className="section-label" style={{ marginBottom: 14 }}><span>AI-native</span></div>
               <h2 style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)", fontWeight: 800, color: "var(--ds-dark)", lineHeight: 1.15, marginBottom: 12 }}>
-                Build decks straight from Claude or your AI stack
+                Redesign or build decks from inside ChatGPT or Claude
               </h2>
               <p style={{ color: "var(--ds-text-light)", fontSize: "1.02rem", lineHeight: 1.7, margin: 0 }}>
-                Connect PitchBoost over MCP or our REST API and get back a finished, branded deck on a shareable link with viewer analytics, not a rough slide file you have to clean up. Trigger it from Claude, Cursor, or your CRM.
+                Add the PitchBoost plugin in ChatGPT, or connect the MCP server in Claude, Cursor or your own tools, and get back a finished, branded deck on a shareable link with viewer analytics, not a rough slide file to clean up. Free ChatGPT accounts included.
               </p>
             </div>
             <Link href="/features/api-and-mcp" className="btn btn-primary btn-lg" style={{ whiteSpace: "nowrap" }}>
