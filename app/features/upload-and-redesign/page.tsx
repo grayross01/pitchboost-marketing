@@ -114,7 +114,7 @@ const RELATED = [
 const FAQS = [
   {
     q: "What files can I upload?",
-    a: "PowerPoint (.pptx) up to 50 MB. Google Slides and Keynote both export to .pptx in one step with nothing lost, so upload that export.",
+    a: "PowerPoint (.pptx) up to 50 MB and 75 slides. Google Slides and Keynote both export to .pptx in one step with nothing lost, so upload that export.",
   },
   {
     q: "Will the redesign change my content?",

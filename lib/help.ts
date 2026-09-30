@@ -40,7 +40,7 @@ export const HELP_ARTICLES: HelpArticle[] = [
     metaDescription:
       "Upload a .pptx, point PitchBoost at your website, and get the deck back redesigned in your brand in a few minutes. Step by step, with what happens to your content.",
     answer:
-      "To redesign a PowerPoint in PitchBoost, choose \"Make a deck I have better\" after signing in, upload the .pptx (up to 50 MB), enter your company website so it can pick up your logo and colors, and click Generate. The rebuilt deck arrives in about 3 to 5 minutes as a web deck you can edit, share as a link, or download as PowerPoint or PDF. Your slide content is kept; the layout, typography, spacing and brand are rebuilt.",
+      "To redesign a PowerPoint in PitchBoost, choose \"Make a deck I have better\" after signing in, upload the .pptx (up to 50 MB and 75 slides), enter your company website so it can pick up your logo and colors, and click Generate. The rebuilt deck arrives in about 3 to 5 minutes as a web deck you can edit, share as a link, or download as PowerPoint or PDF. Your slide content is kept; the layout, typography, spacing and brand are rebuilt.",
     steps: [
       {
         title: "Sign in and choose \"Make a deck I have better\"",
@@ -48,7 +48,7 @@ export const HELP_ARTICLES: HelpArticle[] = [
       },
       {
         title: "Upload the .pptx",
-        body: "Drop in the PowerPoint file or click to browse. Files up to 50 MB are accepted. Keynote and Google Slides users export to .pptx first (one menu click in either app).",
+        body: "Drop in the PowerPoint file or click to browse. Files up to 50 MB and 75 slides are accepted. Keynote and Google Slides users export to .pptx first (one menu click in either app).",
       },
       {
         title: "Enter your company website",
@@ -97,7 +97,7 @@ export const HELP_ARTICLES: HelpArticle[] = [
       },
     ],
     related: ["google-slides-and-keynote", "slide-limits-by-plan", "download-powerpoint-or-pdf", "how-long-does-a-deck-take"],
-    updated: "2026-09-16",
+    updated: "2026-09-30",
   },
 
   {
@@ -156,7 +156,7 @@ export const HELP_ARTICLES: HelpArticle[] = [
       {
         heading: "The limits",
         paragraphs: [
-          "Free: up to 10 slides per deck, one AI deck a month. Starter ($9 a month): up to 50 slides. Pro ($29 a month) and Business ($79 a month): up to 60 slides. The limit applies to the deck PitchBoost produces, not the file you upload; you can upload a 45-slide deck on any plan.",
+          "Free: up to 10 slides per deck, one AI deck a month. Starter ($9 a month): up to 50 slides. Pro ($29 a month) and Business ($79 a month): up to 60 slides. The limit applies to the deck PitchBoost produces, not the file you upload; you can upload a 45-slide deck on any plan. The file itself can have up to 75 slides.",
         ],
       },
       {
@@ -169,7 +169,7 @@ export const HELP_ARTICLES: HelpArticle[] = [
       {
         heading: "Very long decks",
         paragraphs: [
-          "Decks over 40 slides are always either condensed or cut to 40 before the plan limit applies, so a 90-slide training deck on Pro comes back as 40 slides at most. Split very long decks into modules and rebuild each one.",
+          "PitchBoost accepts PowerPoints of up to 75 slides and reads the first 60, so a 70-slide deck on Pro comes back as 60 slides at most, condensed or cut. A file over 75 slides is turned away at upload with a note saying so. Split very long decks into modules and rebuild each one.",
         ],
       },
     ],
@@ -188,7 +188,7 @@ export const HELP_ARTICLES: HelpArticle[] = [
       },
     ],
     related: ["redesign-a-powerpoint", "credits-and-plans", "download-powerpoint-or-pdf"],
-    updated: "2026-09-16",
+    updated: "2026-09-30",
   },
 
   {
