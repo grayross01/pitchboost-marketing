@@ -230,6 +230,25 @@ body {
   border-color: rgba(255,255,255,0.35);
 }
 
+/* The second path on a dark hero ("Start From Scratch"): solid white, the
+   same size as the gradient button beside it, so building a new deck reads
+   as something we do, not a footnote to the redesign. */
+.marketing .btn-light {
+  background: #fff;
+  color: var(--ds-dark);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.18);
+}
+
+.marketing .btn-light:hover {
+  background: var(--ds-bg-light);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+.marketing .hero-actions .btn-lg {
+  min-width: 250px;
+}
+
 /* --- Navigation --- */
 .marketing .navbar {
   position: fixed;
