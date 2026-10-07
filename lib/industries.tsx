@@ -1047,6 +1047,7 @@ export const INDUSTRIES: Industry[] = [
     label: "Commercial Real Estate",
     navGroup: "verticals",
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"/></svg>,
+    sampleDeckUrl: "https://app.pitchboost.ai/d/ZaNMt4Z5Ok",
     metaTitle: "Commercial Real Estate Pitch Deck Software: Close More Deals | PitchBoost",
     metaDescription:
       "PitchBoost helps commercial real estate brokers and investors generate polished property overview decks, lease proposals, and investment memos in a few minutes. Look like a top-10 brokerage on every deal, no matter your firm's size.",
