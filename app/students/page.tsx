@@ -8,7 +8,7 @@ const SIGNUP_REBUILD = `${APP_URL}/signup?intent=rebuild`;
 const URL = "https://pitchboost.ai/students";
 // A real student deck redesigned in the app, embedded like the industry
 // pages' samples. Empty shows the "coming soon" placeholder.
-const SAMPLE_DECK_URL = "";
+const SAMPLE_DECK_URL = "https://app.pitchboost.ai/d/2w2czfWSmK";
 
 const TITLE = "PitchBoost for Students: Class Presentations That Look Professionally Designed";
 const DESCRIPTION =
