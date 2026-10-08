@@ -9,7 +9,8 @@ import { trackLead } from "@/lib/analytics";
  * agent enters the property + their branding; we create a branded sign-in page
  * on the app (keyed by an unguessable token so their email stays private) and
  * hand back a QR code to print for the door. Visitors scan, sign in, and each
- * lead is emailed to the agent. Creating one captures the agent as our lead.
+ * lead is emailed to the agent once they confirm their address (the app
+ * emails a confirmation link). Creating one captures the agent as our lead.
  */
 
 const APP_URL = "https://app.pitchboost.ai";
@@ -134,8 +135,13 @@ export default function OpenHouseClient() {
                 {copied ? "Link copied" : "Copy the link"}
               </button>
             </div>
-            <p className="pb-no-print" style={{ textAlign: "center", fontSize: "0.85rem", color: "var(--ds-text-light)", marginTop: 16, lineHeight: 1.6 }}>
-              Every sign-in is emailed to you. Want them to flow into a pipeline with follow-up reminders and tracking?{" "}
+            {/* Sign-in alerts start once the agent confirms the address: anyone
+                can type any email into this form, so the app asks first. */}
+            <p className="pb-no-print" role="status" style={{ textAlign: "center", fontSize: "0.95rem", color: "var(--ds-dark)", fontWeight: 600, marginTop: 18, lineHeight: 1.6 }}>
+              One last step: open the email we just sent you and tap &ldquo;Turn on sign-in alerts&rdquo;.
+            </p>
+            <p className="pb-no-print" style={{ textAlign: "center", fontSize: "0.85rem", color: "var(--ds-text-light)", marginTop: 6, lineHeight: 1.6 }}>
+              After that, every sign-in is emailed to you. Want them to flow into a pipeline with follow-up reminders and tracking?{" "}
               <a href={`${APP_URL}/signup?intent=listing`} style={{ color: "var(--ds-primary, #0e5a64)", fontWeight: 600 }}>Do it in PitchBoost</a>.
             </p>
           </>
