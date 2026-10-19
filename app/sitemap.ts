@@ -28,6 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "", changeFrequency: "weekly", priority: 1.0 },
     { path: "/industries", changeFrequency: "monthly", priority: 0.9 },
     { path: "/students", changeFrequency: "monthly", priority: 0.9 },
+    { path: "/chatgpt", changeFrequency: "monthly", priority: 0.9 },
     { path: "/compare", changeFrequency: "monthly", priority: 0.8 },
     { path: "/pricing", changeFrequency: "monthly", priority: 0.8 },
     { path: "/use-cases", changeFrequency: "monthly", priority: 0.6 },

@@ -504,9 +504,14 @@ export default function MarketingPage() {
                 Add the PitchBoost plugin in ChatGPT, or connect the MCP server in Claude, Cursor or your own tools, and get back a finished, branded deck on a shareable link with viewer analytics, not a rough slide file to clean up. Free ChatGPT accounts included.
               </p>
             </div>
-            <Link href="/features/api-and-mcp" className="btn btn-primary btn-lg" style={{ whiteSpace: "nowrap" }}>
-              See the API and MCP →
-            </Link>
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 10 }}>
+              <Link href="/chatgpt" className="btn btn-primary btn-lg" style={{ whiteSpace: "nowrap" }}>
+                Use it in ChatGPT →
+              </Link>
+              <Link href="/features/api-and-mcp" style={{ fontSize: 14, fontWeight: 600, color: "#1F6B6B", textDecoration: "none" }}>
+                Claude, Cursor and the API
+              </Link>
+            </div>
           </div>
         </div>
       </section>
