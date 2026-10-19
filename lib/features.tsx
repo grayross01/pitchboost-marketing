@@ -67,6 +67,13 @@ export const FEATURES: FeatureMeta[] = [
   },
 ];
 
+/** Pages that belong in the Features menu but are not /features/[slug]
+ *  pages. Rendered at the end of their group (desktop) and after the
+ *  feature list (mobile). */
+export const FEATURE_EXTRA_LINKS: { group: string; label: string; href: string }[] = [
+  { group: "Build", label: "ChatGPT Plugin", href: "/chatgpt" },
+];
+
 export const FEATURE_GROUPS: FeatureGroup[] = [
   { label: "Build", slugs: ["ai-deck-builder", "research-and-fact-checking", "upload-and-redesign", "bulk-rebuild", "output-types", "api-and-mcp"] },
   { label: "Brand & Content", slugs: ["templates-and-slides", "brand-and-images"] },

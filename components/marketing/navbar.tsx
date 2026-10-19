@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { AUDIENCE_GROUPS, INDUSTRIES, INDUSTRY_GROUPS } from "@/lib/industries";
-import { FEATURES, FEATURE_GROUPS } from "@/lib/features";
+import { FEATURES, FEATURE_EXTRA_LINKS, FEATURE_GROUPS } from "@/lib/features";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 const LOGIN_URL = `${APP_URL}/login`;
@@ -132,6 +132,12 @@ export default function MarketingNavbar() {
                           </Link>
                         );
                       })}
+                      {FEATURE_EXTRA_LINKS.filter((l) => l.group === group.label).map((l) => (
+                        <Link key={l.href} href={l.href} onClick={() => setActiveDropdown(null)}>
+                          {dot}
+                          {l.label}
+                        </Link>
+                      ))}
                     </div>
                   ))}
                 </div>
@@ -241,6 +247,12 @@ export default function MarketingNavbar() {
 
         {mobileSection === "features" && (
           <div style={{ background: "var(--ds-bg-light)", borderBottom: "1px solid var(--ds-border)" }}>
+            {FEATURE_EXTRA_LINKS.map((l) => (
+              <Link key={l.href} href={l.href} onClick={closeMobile} style={subItemStyle}>
+                <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#1F6B6B", flexShrink: 0, display: "inline-block" }} />
+                {l.label}
+              </Link>
+            ))}
             {FEATURES.map((feat) => (
               <Link key={feat.slug} href={`/features/${feat.slug}`} onClick={closeMobile} style={subItemStyle}>
                 <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#1F6B6B", flexShrink: 0, display: "inline-block" }} />
