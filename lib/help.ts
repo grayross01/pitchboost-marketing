@@ -13,7 +13,7 @@
  * article changes and `updated` moves.
  */
 
-export type HelpCategory = "redesign" | "output" | "sharing" | "assistants" | "account";
+export type HelpCategory = "redesign" | "output" | "sharing" | "assistants" | "integrations" | "account";
 
 export interface HelpArticle {
   slug: string;
@@ -539,9 +539,82 @@ export const HELP_ARTICLES: HelpArticle[] = [
     related: ["redesign-a-powerpoint", "google-slides-and-keynote", "how-long-does-a-deck-take"],
     updated: "2026-09-16",
   },
+  {
+    "slug": "crm-workflow-decks",
+    "category": "integrations",
+    "title": "How to build decks from your CRM workflows",
+    "metaDescription": "Install PitchBoost in your CRM, connect the PitchBoost account that pays for the decks, and add the Create PitchBoost deck step to any workflow. What lands on the contact, how the deck link flows into the next steps, and the two triggers.",
+    "answer": "To build decks from your CRM workflows, install PitchBoost into the sub-account from the install link, connect the PitchBoost account that will pay for the decks on the page that opens, then add the step Create PitchBoost deck to any workflow. The step answers at once with the deck's link, the deck itself is finished in about two to four minutes, and the link is written to the contact's PitchBoost deck field and to a note. Two triggers, Deck ready and Deck viewed, start follow-up workflows.",
+    "steps": [
+      {
+        "title": "Install PitchBoost in your CRM",
+        "body": "Open the install link you were given (or the PitchBoost listing in your CRM's app marketplace), click Install, pick the sub-accounts, and allow the requested permissions. PitchBoost asks only for contacts, custom fields, opportunities, location details and workflow access."
+      },
+      {
+        "title": "Connect the PitchBoost account that pays",
+        "body": "After the install, a PitchBoost page opens and asks which PitchBoost account the decks are billed to. Sign in (a free account works) and click Connect. Decks made by any workflow in the installed accounts use that account's deck allowance."
+      },
+      {
+        "title": "Check the PitchBoost page in the left menu",
+        "body": "Inside the sub-account, the left menu now has a PitchBoost entry. It shows Connected with the account's name, lists the decks made from workflows, and has the Disconnect and Remove options."
+      },
+      {
+        "title": "Add the step Create PitchBoost deck to a workflow",
+        "body": "In the workflow builder, add an action, open the Apps tab and pick Create PitchBoost deck. Choose the deck kind (pitch deck or one-page sales sheet), write a short brief such as \"Lead with pricing\", and leave the prospect company and website fields mapped to the contact's company and website unless you want to override them."
+      },
+      {
+        "title": "Use the deck link in the next steps",
+        "body": "The step returns deck_url right away. Add it to the email, SMS or task that follows; the link opens a placeholder page while the deck builds and the finished deck when it is done. The step also returns status (building, not_linked or error) and deck_title, so a workflow can branch on a failed run."
+      },
+      {
+        "title": "Start follow-ups from the two triggers",
+        "body": "Create a workflow with the trigger Deck ready to send the deck when it is finished, and one with Deck viewed to follow up when the prospect opens it. Deck viewed fires at most once every ten minutes per deck."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "What lands on the contact",
+        "paragraphs": [
+          "When the build finishes, PitchBoost writes the deck's link to a custom field named PitchBoost deck (created on first use) and adds a note on the contact with the link and the deck's title. The deck is also listed on the PitchBoost page in the left menu.",
+          "The deck is built from the contact's company name and website and from your brief. If the contact has no website, PitchBoost works from the company name and the brief alone, so a sentence about what you sell and who the contact is makes a real difference."
+        ]
+      },
+      {
+        "heading": "Billing and limits",
+        "paragraphs": [
+          "Decks are built and hosted by PitchBoost and billed to the PitchBoost account you connected: a free account includes one deck a month and paid plans add more. Your CRM may count workflow steps from installed apps as premium executions and bill them separately after its free allowance.",
+          "If the step answers with status not_linked, nobody has connected a PitchBoost account to that sub-account or its agency yet: open the PitchBoost page in the left menu and click Connect."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Can several sub-accounts share one PitchBoost account?",
+        "a": "Yes. When the app is installed for the whole agency, every sub-account bills the agency's connected PitchBoost account unless that sub-account connects its own, which takes precedence."
+      },
+      {
+        "q": "Does the deck change when the contact changes?",
+        "a": "No. A deck is built once from the contact's details at the time the step runs. Run the step again to build a new deck; the field and note on the contact are updated to the newest one."
+      },
+      {
+        "q": "What is the difference between Disconnect and Remove?",
+        "a": "Disconnect keeps the app installed but detaches the PitchBoost account, so workflow steps answer not_linked until someone connects again. Remove uninstalls the app from the sub-account, and workflows that still contain its steps skip them."
+      },
+      {
+        "q": "Can I download the decks?",
+        "a": "Yes. Every deck opens in PitchBoost, where it can be edited and downloaded as PowerPoint, PDF or Google Slides like any other PitchBoost deck."
+      }
+    ],
+    "related": [
+      "share-a-deck-link",
+      "download-powerpoint-or-pdf",
+      "credits-and-plans"
+    ],
+    "updated": "2026-10-20"
+  },
 ];
 
-export const HELP_CATEGORY_ORDER: HelpCategory[] = ["redesign", "output", "sharing", "assistants", "account"];
+export const HELP_CATEGORY_ORDER: HelpCategory[] = ["redesign", "output", "sharing", "assistants", "integrations", "account"];
 
 export function getHelpArticle(slug: string): HelpArticle | undefined {
   return HELP_ARTICLES.find((a) => a.slug === slug);
