@@ -20,7 +20,7 @@ export const FAQS = [
   },
   {
     q: "What format are the decks?",
-    a: "PitchBoost decks are interactive web presentations you can share via link, so you can see when they are opened. You can also download a PDF or an editable PowerPoint.",
+    a: "PitchBoost decks are interactive web presentations you can share via link, so you can see when they are opened. Sharing the link is free on every plan; downloading a PDF or an editable PowerPoint takes a paid plan or a one-time $9 for that deck.",
   },
   {
     q: "How is pricing calculated?",

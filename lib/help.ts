@@ -78,7 +78,7 @@ export const HELP_ARTICLES: HelpArticle[] = [
       {
         heading: "Slide limits by plan",
         paragraphs: [
-          "The free plan rebuilds up to 10 slides, Starter up to 50 and Pro up to 60. A longer deck can be condensed to fit before the rebuild starts, and the share screen tells you how many slides were kept.",
+          "The free plan rebuilds up to 10 slides, Starter up to 25 and Pro up to 60. A longer deck can be condensed to fit before the rebuild starts, and the share screen tells you how many slides were kept.",
         ],
       },
     ],
@@ -93,7 +93,7 @@ export const HELP_ARTICLES: HelpArticle[] = [
       },
       {
         q: "What does it cost?",
-        a: "The free plan includes one AI deck a month, up to 10 slides, with a small PitchBoost badge. Starter is $9 a month for up to 50 slides and no badge; Pro is $29 a month for up to 60 slides with full analytics.",
+        a: "The free plan includes one AI deck a month, up to 10 slides, with a small PitchBoost badge. Starter is $7 a month for up to 25 slides and no badge; Pro is $29 a month for up to 60 slides with full analytics.",
       },
     ],
     related: ["google-slides-and-keynote", "slide-limits-by-plan", "download-powerpoint-or-pdf", "how-long-does-a-deck-take"],
@@ -149,14 +149,14 @@ export const HELP_ARTICLES: HelpArticle[] = [
     category: "redesign",
     title: "How many slides PitchBoost rebuilds on each plan",
     metaDescription:
-      "Free rebuilds up to 10 slides, Starter up to 50, Pro and Business up to 60. What happens to a longer deck: condense to fit, or rebuild the first slides.",
+      "Free rebuilds up to 10 slides, Starter up to 25, Pro and Business up to 60. What happens to a longer deck: condense to fit, or rebuild the first slides.",
     answer:
-      "The free plan rebuilds decks up to 10 slides, Starter up to 50, and Pro and Business up to 60. If your deck is longer, PitchBoost offers to condense it to fit (same story, fewer slides) or to rebuild only the first slides. The share screen shows how many of your original slides were kept and how to rebuild the rest: once for that deck ($13, or $25 past 50 slides) or with a plan.",
+      "The free plan rebuilds decks up to 10 slides, Starter up to 25, and Pro and Business up to 60. If your deck is longer, PitchBoost offers to condense it to fit (same story, fewer slides) or to rebuild only the first slides. The share screen shows how many of your original slides were kept and how to rebuild the rest: once for that deck ($9, for decks up to 25 slides) or with a plan.",
     sections: [
       {
         heading: "The limits",
         paragraphs: [
-          "Free: up to 10 slides per deck, one AI deck a month. Starter ($9 a month): up to 50 slides. Pro ($29 a month) and Business ($79 a month): up to 60 slides. The limit applies to the deck PitchBoost produces, not the file you upload; you can upload a 45-slide deck on any plan. The file itself can have up to 75 slides.",
+          "Free: up to 10 slides per deck, one AI deck a month. Starter ($7 a month): up to 25 slides. Pro ($29 a month) and Business ($79 a month): up to 60 slides. The limit applies to the deck PitchBoost produces, not the file you upload; you can upload a 45-slide deck on any plan. The file itself can have up to 75 slides.",
         ],
       },
       {
@@ -196,9 +196,9 @@ export const HELP_ARTICLES: HelpArticle[] = [
     category: "output",
     title: "How to download your deck as PowerPoint or PDF",
     metaDescription:
-      "Every plan can download a deck as an editable PowerPoint, an exact-look PowerPoint, or a PDF. Where the buttons are and which file to pick.",
+      "Download a deck as an editable PowerPoint, an exact-look PowerPoint, or a PDF on any paid plan or for $9 a deck. Where the buttons are and which file to pick.",
     answer:
-      "Open the deck's share screen and use the download buttons: \"Download PowerPoint\" gives you an exact-look .pptx where each slide is an image of the web deck, \"Editable PowerPoint\" gives you a .pptx with real text boxes and shapes, close to the web layout but not identical, and \"PDF\" gives you one page per slide. Downloads are available on every plan; on the free plan they carry a small PitchBoost badge.",
+      "Open the deck's share screen and use the download buttons: \"Download PowerPoint\" gives you an exact-look .pptx where each slide is an image of the web deck, \"Editable PowerPoint\" gives you a .pptx with real text boxes and shapes, close to the web layout but not identical, and \"PDF\" gives you one page per slide. Downloads come with every paid plan. On the free plan, sharing the deck as a live link stays free, and you can unlock the downloads for one deck with a one-time $9 (decks up to 25 slides), which also removes the badge.",
     steps: [
       {
         title: "Open the deck",
@@ -217,13 +217,13 @@ export const HELP_ARTICLES: HelpArticle[] = [
       {
         heading: "Editable versus exact-look",
         paragraphs: [
-          "The editable PowerPoint is close to the web layout but not pixel-identical: it uses PowerPoint's own text boxes, shapes and fonts so you can edit every element. The exact-look file is pixel-identical because each slide is a high-resolution image, which also means the text cannot be edited in PowerPoint. When in doubt, take both; they are free to generate.",
+          "The editable PowerPoint is close to the web layout but not pixel-identical: it uses PowerPoint's own text boxes, shapes and fonts so you can edit every element. The exact-look file is pixel-identical because each slide is a high-resolution image, which also means the text cannot be edited in PowerPoint. When in doubt, take both; once a deck's downloads are unlocked, each file costs nothing extra.",
         ],
       },
       {
         heading: "The badge",
         paragraphs: [
-          "On the free plan, every slide carries a small \"Powered by PitchBoost\" badge, and it rides along in PDF and PowerPoint downloads. Starter ($9 a month) removes it from every deck and export, and you can also remove it from a single deck with a one-time purchase from the share screen.",
+          "On the free plan, every slide carries a small \"Powered by PitchBoost\" badge, including the live link. Starter ($7 a month) removes it from every deck and export, and you can also remove it from a single deck with a one-time $9 purchase from the share screen, which unlocks that deck's downloads too.",
         ],
       },
     ],
@@ -417,16 +417,16 @@ export const HELP_ARTICLES: HelpArticle[] = [
     metaDescription:
       "Every plan includes monthly credits; a deck costs 100, a slide edit 10. What Free, Starter, Pro and Business include, what rolls over, and how to buy more.",
     answer:
-      "Every PitchBoost plan includes a monthly credit allowance and every AI action has a fixed price: a deck (new or rebuilt) costs 100 credits, a slide edit 10, a full-deck edit 50, a website scan 10. Free includes 150 credits a month (one deck), Starter 800, Pro 2,500 and Business 7,000. Paid plans roll unused credits over for a month and can buy top-up packs. In the app you see the percentage of your allowance used, never a running dollar figure.",
+      "Every PitchBoost plan includes a monthly credit allowance and every AI action has a fixed price: a deck (new or rebuilt) costs 100 credits, a slide edit 10, a full-deck edit 50, a website scan 10. Free includes 150 credits a month (one deck), Starter 300, Pro 2,500 and Business 7,000. Paid plans roll unused credits over for a month and can buy top-up packs. In the app you see the percentage of your allowance used, never a running dollar figure.",
     sections: [
       {
         heading: "The plans",
         paragraphs: [
-          "Free: 150 credits a month, one deal, decks up to 10 slides, PDF and PowerPoint export with a small badge, a shareable link with basic analytics. No card required.",
-          "Starter, $9 a month: 800 credits, unlimited deals, decks up to 50 slides, no badge anywhere, top-up packs.",
+          "Free: 150 credits a month, one deal, decks up to 10 slides with a small badge, a shareable live link with basic analytics. Downloading a file takes a paid plan or a one-time $9 for that deck. No card required.",
+          "Starter, $7 a month: 300 credits, unlimited deals, decks up to 25 slides, no badge anywhere, PowerPoint, PDF and Google Slides downloads, top-up packs.",
           "Pro, $29 a month: 2,500 credits, decks up to 60 slides, full viewer analytics with time per slide, saved templates, custom domains, API and MCP access.",
           "Business, $79 a month: 7,000 credits, team seats and permissions, analytics export, and sending from your own domain.",
-          "Annual billing is cheaper: Starter $7, Pro $24 and Business $66 a month when paid yearly.",
+          "Annual billing is cheaper: Starter $70 a year (about $5.83 a month), Pro $24 and Business $66 a month when paid yearly.",
         ],
       },
       {

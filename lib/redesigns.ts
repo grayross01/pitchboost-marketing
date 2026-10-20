@@ -98,7 +98,7 @@ export const REDESIGNS: RedesignPage[] = [
       },
       {
         q: "How much does a PowerPoint redesign cost?",
-        a: "The free plan includes one AI deck generation a month, and a redesign counts as it. Beyond that, Starter is $9 a month with no badge and Pro is $29/month, against agency quotes that start around $2,000 per deck.",
+        a: "The free plan includes one AI deck generation a month, and a redesign counts as it. Beyond that, Starter is $7 a month with no badge and Pro is $29/month, against agency quotes that start around $2,000 per deck.",
       },
       {
         q: "Can I do this from inside ChatGPT?",
@@ -451,7 +451,7 @@ export const REDESIGNS: RedesignPage[] = [
       },
       {
         q: "How much does it cost?",
-        a: "The free plan includes one AI deck generation a month, so the cleanup itself costs nothing to try. Starter is $9 a month with no badge and Pro is $29 a month if you have a whole library to fix.",
+        a: "The free plan includes one AI deck generation a month, so the cleanup itself costs nothing to try. Starter is $7 a month with no badge and Pro is $29 a month if you have a whole library to fix.",
       },
     ],
     ctaHeadline: "Upload the deck you hide. Get back the one you would show.",
@@ -500,7 +500,7 @@ export const REDESIGNS: RedesignPage[] = [
       },
       {
         q: "Does it cost anything to try?",
-        a: "The free plan includes one AI deck generation a month, and a redesign counts as it. Starter is $9 a month with no badge and Pro is $29 a month.",
+        a: "The free plan includes one AI deck generation a month, and a redesign counts as it. Starter is $7 a month with no badge and Pro is $29 a month.",
       },
     ],
     ctaHeadline: "Export once. Upload once. Present anywhere.",
@@ -549,7 +549,7 @@ export const REDESIGNS: RedesignPage[] = [
       },
       {
         q: "What does it cost for a course?",
-        a: "One AI deck generation a month is free. Starter at $9 a month covers occasional modules without the badge; Pro at $29 a month suits a full curriculum refresh.",
+        a: "One AI deck generation a month is free. Starter at $7 a month covers occasional modules without the badge; Pro at $29 a month suits a full curriculum refresh.",
       },
     ],
     ctaHeadline: "Keep the curriculum. Fix the slides.",
@@ -598,7 +598,7 @@ export const REDESIGNS: RedesignPage[] = [
       },
       {
         q: "What does it cost?",
-        a: "One AI deck generation a month is free, so the first proposal costs nothing. Starter is $9 a month with no badge and Pro is $29 a month for teams that bid every week.",
+        a: "One AI deck generation a month is free, so the first proposal costs nothing. Starter is $7 a month with no badge and Pro is $29 a month for teams that bid every week.",
       },
     ],
     ctaHeadline: "The offer is strong. Let the deck say so.",
@@ -647,7 +647,7 @@ export const REDESIGNS: RedesignPage[] = [
       },
       {
         q: "What does it cost?",
-        a: "One AI deck generation a month is free. Starter is $9 a month with no badge and Pro is $29 a month for monthly reporting cycles.",
+        a: "One AI deck generation a month is free. Starter is $7 a month with no badge and Pro is $29 a month for monthly reporting cycles.",
       },
     ],
     ctaHeadline: "Every number kept. Every slide readable.",
@@ -694,7 +694,7 @@ export const REDESIGNS: RedesignPage[] = [
       },
       {
         "q": "What does it cost?",
-        "a": "The free plan includes one AI deck a month, up to 10 slides, with a small PitchBoost badge. Starter is $9 a month for decks up to 50 slides with no badge; Pro is $29 a month."
+        "a": "The free plan includes one AI deck a month, up to 10 slides, with a small PitchBoost badge. Starter is $7 a month for decks up to 25 slides with no badge; Pro is $29 a month."
       }
     ],
     "ctaHeadline": "Send the board something that looks decided.",
@@ -742,7 +742,7 @@ export const REDESIGNS: RedesignPage[] = [
       },
       {
         "q": "How much does it cost?",
-        "a": "One AI deck a month is free, up to 10 slides, with a small badge. Starter is $9 a month for up to 50 slides and no badge; Pro is $29 a month."
+        "a": "One AI deck a month is free, up to 10 slides, with a small badge. Starter is $7 a month for up to 25 slides and no badge; Pro is $29 a month."
       }
     ],
     "ctaHeadline": "Give the back row a reason to look up.",
@@ -790,7 +790,7 @@ export const REDESIGNS: RedesignPage[] = [
       },
       {
         "q": "What does it cost?",
-        "a": "One AI deck a month is free, up to 10 slides, with a small badge. Starter is $9 a month for up to 50 slides and no badge; Pro is $29 a month with full analytics and custom domains."
+        "a": "One AI deck a month is free, up to 10 slides, with a small badge. Starter is $7 a month for up to 25 slides and no badge; Pro is $29 a month with full analytics and custom domains."
       }
     ],
     "ctaHeadline": "Make the review look like the relationship matters.",
@@ -838,7 +838,7 @@ export const REDESIGNS: RedesignPage[] = [
       },
       {
         "q": "What does it cost?",
-        "a": "One AI deck a month is free, up to 10 slides, with a small badge. Starter is $9 a month for decks up to 50 slides and no badge; Pro is $29 a month."
+        "a": "One AI deck a month is free, up to 10 slides, with a small badge. Starter is $7 a month for decks up to 25 slides and no badge; Pro is $29 a month."
       }
     ],
     "ctaHeadline": "Send credentials that match the invoice.",
@@ -886,7 +886,7 @@ export const REDESIGNS: RedesignPage[] = [
       },
       {
         "q": "What does it cost?",
-        "a": "One AI deck a month is free, up to 10 slides, with a small badge. Starter is $9 a month for up to 50 slides and no badge; Pro is $29 a month."
+        "a": "One AI deck a month is free, up to 10 slides, with a small badge. Starter is $7 a month for up to 25 slides and no badge; Pro is $29 a month."
       }
     ],
     "ctaHeadline": "Rehearse the pitch. Let us fix the slides.",
@@ -934,7 +934,7 @@ export const REDESIGNS: RedesignPage[] = [
       },
       {
         "q": "What does it cost?",
-        "a": "One AI deck a month is free, up to 10 slides, with a small badge. Starter is $9 a month for up to 50 slides and no badge; Pro is $29 a month with full analytics and custom domains."
+        "a": "One AI deck a month is free, up to 10 slides, with a small badge. Starter is $7 a month for up to 25 slides and no badge; Pro is $29 a month with full analytics and custom domains."
       }
     ],
     "ctaHeadline": "Make the deck as sharp as the analysis.",
@@ -983,7 +983,7 @@ export const REDESIGNS: RedesignPage[] = [
       },
       {
         "q": "What does it cost to beautify a deck?",
-        "a": "The free plan includes one AI deck a month, up to 10 slides, with a small PitchBoost badge. Starter is $9 a month for up to 50 slides and no badge; Pro is $29 a month for up to 60 slides with full viewer analytics."
+        "a": "The free plan includes one AI deck a month, up to 10 slides, with a small PitchBoost badge. Starter is $7 a month for up to 25 slides and no badge; Pro is $29 a month for up to 60 slides with full viewer analytics."
       }
     ],
     "ctaHeadline": "Upload the deck. Get it back beautiful, and still yours.",
@@ -1088,7 +1088,7 @@ export const REDESIGNS: RedesignPage[] = [
       },
       {
         "q": "What does it cost to modernize a deck?",
-        "a": "One AI deck a month is free, up to 10 slides, with a small badge. Starter is $9 a month for up to 50 slides and no badge; Pro is $29 a month for up to 60 slides, full analytics and custom domains. Longer decks can be condensed first."
+        "a": "One AI deck a month is free, up to 10 slides, with a small badge. Starter is $7 a month for up to 25 slides and no badge; Pro is $29 a month for up to 60 slides, full analytics and custom domains. Longer decks can be condensed first."
       }
     ],
     "ctaHeadline": "Keep the story that works. Retire the template that does not.",
@@ -1136,7 +1136,7 @@ export const REDESIGNS: RedesignPage[] = [
       },
       {
         "q": "What does it cost?",
-        "a": "One AI deck a month is free, up to 10 slides, with a small badge. Starter is $9 a month for decks up to 50 slides with no badge; Pro is $29 a month for up to 60 slides and full viewer analytics."
+        "a": "One AI deck a month is free, up to 10 slides, with a small badge. Starter is $7 a month for decks up to 25 slides with no badge; Pro is $29 a month for up to 60 slides and full viewer analytics."
       }
     ],
     "ctaHeadline": "Stop fixing slides one at a time.",
@@ -1232,7 +1232,7 @@ export const REDESIGNS: RedesignPage[] = [
       },
       {
         "q": "Does it cost anything?",
-        "a": "One AI deck a month is free, up to 10 slides, with a small badge. Starter is $9 a month for decks up to 50 slides with no badge; Pro is $29 a month for up to 60 slides and full viewer analytics."
+        "a": "One AI deck a month is free, up to 10 slides, with a small badge. Starter is $7 a month for decks up to 25 slides with no badge; Pro is $29 a month for up to 60 slides and full viewer analytics."
       }
     ],
     "ctaHeadline": "Download once. Send something you are proud of.",

@@ -57,7 +57,7 @@ export default async function AlternativesPage({ params }: Props) {
   const faqs = [
     {
       q: `Is there a free alternative to ${c.name}?`,
-      a: `PitchBoost has a free plan: one AI deck a month, up to 10 slides, with a small badge, plus PDF and PowerPoint export. ${others.map((o) => `${o.name}: ${o.competitorPricing.split(".")[0]}.`).join(" ")}`,
+      a: `PitchBoost has a free plan: one AI deck a month, up to 10 slides, with a small badge, shared as a free live link (PDF and PowerPoint downloads take a paid plan or $9 for that deck). ${others.map((o) => `${o.name}: ${o.competitorPricing.split(".")[0]}.`).join(" ")}`,
     },
     {
       q: `When is ${c.name} the better choice?`,

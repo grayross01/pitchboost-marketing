@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 const FAQ = [
   {
     q: "Is the redesign preview really free, with no account?",
-    a: "Yes. Drop a .pptx and two slides come back redesigned in about a minute. No account, no email, no card. The full deck, in your brand and as a downloadable PowerPoint, needs a free account.",
+    a: "Yes. Drop a .pptx and two slides come back redesigned in about a minute. No account, no email, no card. The full deck, in your brand, needs a free account; downloading it as a PowerPoint takes a paid plan or a one-time $9 for that deck.",
   },
   {
     q: "Which two slides does it redesign?",

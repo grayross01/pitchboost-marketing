@@ -234,7 +234,7 @@ export default function PublishingAndSharingPage() {
         <div className="mkt-container">
           <div className="cta-box fade-up">
             <h2>Built, published, and in their inbox, in minutes.</h2>
-            <p>Generate your first personalized pitch deck free and share it as a branded link, PDF, or PowerPoint.</p>
+            <p>Generate your first personalized pitch deck free and share it as a branded link. PDF and PowerPoint downloads come with any paid plan, or $9 for one deck.</p>
             <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Publish Your First Deck Free</a>
           </div>
         </div>
