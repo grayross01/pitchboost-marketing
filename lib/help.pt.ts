@@ -519,5 +519,78 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
       "how-long-does-a-deck-take"
     ],
     "updated": "2026-09-16"
-  }
+  },
+  {
+    "slug": "crm-workflow-decks",
+    "category": "integrations",
+    "title": "Como criar apresentações a partir dos fluxos de trabalho do seu CRM",
+    "metaDescription": "Instale o PitchBoost no seu CRM, conecte a conta do PitchBoost que paga as apresentações e adicione a etapa Create PitchBoost deck a qualquer fluxo de trabalho. O que fica no contato, como o link passa para as próximas etapas e os dois gatilhos.",
+    "answer": "Para criar apresentações a partir dos fluxos de trabalho do seu CRM, instale o PitchBoost na subconta pelo link de instalação, conecte na página que se abre a conta do PitchBoost que pagará as apresentações e adicione a etapa Create PitchBoost deck a qualquer fluxo. A etapa responde na hora com o link da apresentação, a apresentação fica pronta em cerca de dois a quatro minutos e o link é gravado no campo PitchBoost deck do contato e em uma nota. Dois gatilhos, Deck ready e Deck viewed, iniciam os fluxos de acompanhamento.",
+    "steps": [
+      {
+        "title": "Instale o PitchBoost no seu CRM",
+        "body": "Abra o link de instalação que você recebeu (ou a página do PitchBoost no marketplace de aplicativos do seu CRM), clique em Install, escolha as subcontas e conceda as permissões solicitadas. O PitchBoost pede acesso apenas a contatos, campos personalizados, oportunidades, dados da localização e fluxos de trabalho."
+      },
+      {
+        "title": "Conecte a conta do PitchBoost que paga",
+        "body": "Após a instalação, abre-se uma página do PitchBoost perguntando a qual conta do PitchBoost as apresentações serão cobradas. Entre (uma conta gratuita serve) e clique em Connect. As apresentações criadas por qualquer fluxo das contas instaladas usam a cota dessa conta."
+      },
+      {
+        "title": "Confira a página do PitchBoost no menu à esquerda",
+        "body": "Dentro da subconta, o menu à esquerda agora tem uma entrada PitchBoost. Ela mostra Connected com o nome da conta, lista as apresentações criadas a partir de fluxos e tem as opções Disconnect e Remove."
+      },
+      {
+        "title": "Adicione a etapa Create PitchBoost deck a um fluxo",
+        "body": "No editor de fluxos, adicione uma ação, abra a aba Apps e escolha Create PitchBoost deck. Escolha o tipo (apresentação ou folha de vendas de uma página), escreva um briefing curto como \"Comece pelo preço\" e deixe os campos de empresa e site do prospect mapeados para a empresa e o site do contato, a menos que queira substituí-los."
+      },
+      {
+        "title": "Use o link da apresentação nas próximas etapas",
+        "body": "A etapa devolve deck_url imediatamente. Adicione-o ao e-mail, SMS ou tarefa seguinte; o link abre uma página provisória enquanto a apresentação é construída e a apresentação pronta quando termina. A etapa também devolve status (building, not_linked ou error) e deck_title, então um fluxo pode se ramificar se uma execução falhar."
+      },
+      {
+        "title": "Inicie acompanhamentos a partir dos dois gatilhos",
+        "body": "Crie um fluxo com o gatilho Deck ready para enviar a apresentação quando estiver pronta e outro com Deck viewed para fazer o acompanhamento quando o prospect a abrir. Deck viewed dispara no máximo uma vez a cada dez minutos por apresentação."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "O que fica no contato",
+        "paragraphs": [
+          "Quando a construção termina, o PitchBoost grava o link da apresentação em um campo personalizado chamado PitchBoost deck (criado no primeiro uso) e adiciona uma nota no contato com o link e o título. A apresentação também aparece na página do PitchBoost no menu à esquerda.",
+          "A apresentação é construída a partir do nome da empresa e do site do contato e do seu briefing. Se o contato não tiver site, o PitchBoost trabalha só com o nome da empresa e o briefing, então uma frase sobre o que você vende e quem é o contato faz diferença de verdade."
+        ]
+      },
+      {
+        "heading": "Cobrança e limites",
+        "paragraphs": [
+          "As apresentações são construídas e hospedadas pelo PitchBoost e cobradas da conta do PitchBoost que você conectou: uma conta gratuita inclui uma apresentação por mês e os planos pagos acrescentam mais. Seu CRM pode contar etapas de fluxo de aplicativos instalados como execuções premium e cobrá-las à parte depois da cota gratuita.",
+          "Se a etapa responder com status not_linked, ninguém conectou ainda uma conta do PitchBoost a essa subconta nem à agência: abra a página do PitchBoost no menu à esquerda e clique em Connect."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Várias subcontas podem compartilhar uma conta do PitchBoost?",
+        "a": "Sim. Quando o aplicativo é instalado para a agência inteira, cada subconta cobra da conta do PitchBoost conectada pela agência, a menos que essa subconta conecte a sua própria, que tem prioridade."
+      },
+      {
+        "q": "A apresentação muda quando o contato muda?",
+        "a": "Não. Uma apresentação é construída uma vez com os dados do contato no momento em que a etapa roda. Rode a etapa de novo para criar outra; o campo e a nota do contato são atualizados com a mais recente."
+      },
+      {
+        "q": "Qual é a diferença entre Disconnect e Remove?",
+        "a": "Disconnect mantém o aplicativo instalado, mas desvincula a conta do PitchBoost, então as etapas respondem not_linked até alguém conectar de novo. Remove desinstala o aplicativo da subconta, e os fluxos que ainda contêm suas etapas as pulam."
+      },
+      {
+        "q": "Posso baixar as apresentações?",
+        "a": "Sim. Toda apresentação abre no PitchBoost, onde pode ser editada e baixada como PowerPoint, PDF ou Google Slides como qualquer outra apresentação do PitchBoost."
+      }
+    ],
+    "related": [
+      "share-a-deck-link",
+      "download-powerpoint-or-pdf",
+      "credits-and-plans"
+    ],
+    "updated": "2026-10-20"
+  },
 ];

@@ -519,5 +519,78 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       "how-long-does-a-deck-take"
     ],
     "updated": "2026-09-16"
-  }
+  },
+  {
+    "slug": "crm-workflow-decks",
+    "category": "integrations",
+    "title": "Cómo crear presentaciones desde los flujos de trabajo de tu CRM",
+    "metaDescription": "Instala PitchBoost en tu CRM, conecta la cuenta de PitchBoost que paga las presentaciones y añade el paso Create PitchBoost deck a cualquier flujo de trabajo. Qué queda en el contacto, cómo pasa el enlace a los siguientes pasos y los dos disparadores.",
+    "answer": "Para crear presentaciones desde los flujos de trabajo de tu CRM, instala PitchBoost en la subcuenta con el enlace de instalación, conecta en la página que se abre la cuenta de PitchBoost que pagará las presentaciones y añade el paso Create PitchBoost deck a cualquier flujo. El paso responde al instante con el enlace de la presentación, la presentación queda lista en unos dos a cuatro minutos y el enlace se escribe en el campo PitchBoost deck del contacto y en una nota. Dos disparadores, Deck ready y Deck viewed, inician los flujos de seguimiento.",
+    "steps": [
+      {
+        "title": "Instala PitchBoost en tu CRM",
+        "body": "Abre el enlace de instalación que recibiste (o la ficha de PitchBoost en el marketplace de aplicaciones de tu CRM), pulsa Install, elige las subcuentas y concede los permisos solicitados. PitchBoost solo pide acceso a contactos, campos personalizados, oportunidades, datos de la ubicación y flujos de trabajo."
+      },
+      {
+        "title": "Conecta la cuenta de PitchBoost que paga",
+        "body": "Tras la instalación se abre una página de PitchBoost que pregunta a qué cuenta de PitchBoost se facturan las presentaciones. Inicia sesión (vale una cuenta gratuita) y pulsa Connect. Las presentaciones creadas por cualquier flujo de las cuentas instaladas consumen la cuota de esa cuenta."
+      },
+      {
+        "title": "Revisa la página de PitchBoost en el menú izquierdo",
+        "body": "Dentro de la subcuenta, el menú izquierdo tiene ahora una entrada PitchBoost. Muestra Connected con el nombre de la cuenta, lista las presentaciones creadas desde flujos y tiene las opciones Disconnect y Remove."
+      },
+      {
+        "title": "Añade el paso Create PitchBoost deck a un flujo",
+        "body": "En el editor de flujos, añade una acción, abre la pestaña Apps y elige Create PitchBoost deck. Elige el tipo (presentación o ficha comercial de una página), escribe un breve encargo como \"Empieza por el precio\" y deja los campos de empresa y web del prospecto asignados a la empresa y la web del contacto salvo que quieras sobrescribirlos."
+      },
+      {
+        "title": "Usa el enlace de la presentación en los siguientes pasos",
+        "body": "El paso devuelve deck_url de inmediato. Añádelo al correo, SMS o tarea que sigue; el enlace abre una página provisional mientras se construye la presentación y la presentación terminada cuando está lista. El paso también devuelve status (building, not_linked o error) y deck_title, así que un flujo puede bifurcarse si una ejecución falla."
+      },
+      {
+        "title": "Inicia seguimientos desde los dos disparadores",
+        "body": "Crea un flujo con el disparador Deck ready para enviar la presentación cuando esté terminada y otro con Deck viewed para hacer seguimiento cuando el prospecto la abra. Deck viewed se dispara como máximo una vez cada diez minutos por presentación."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Qué queda en el contacto",
+        "paragraphs": [
+          "Cuando termina la construcción, PitchBoost escribe el enlace de la presentación en un campo personalizado llamado PitchBoost deck (se crea en el primer uso) y añade una nota en el contacto con el enlace y el título. La presentación también aparece en la página de PitchBoost del menú izquierdo.",
+          "La presentación se construye a partir del nombre de la empresa y la web del contacto y de tu encargo. Si el contacto no tiene web, PitchBoost trabaja solo con el nombre de la empresa y el encargo, así que una frase sobre qué vendes y quién es el contacto marca la diferencia."
+        ]
+      },
+      {
+        "heading": "Facturación y límites",
+        "paragraphs": [
+          "Las presentaciones las construye y aloja PitchBoost y se facturan a la cuenta de PitchBoost que conectaste: una cuenta gratuita incluye una presentación al mes y los planes de pago añaden más. Tu CRM puede contar los pasos de flujo de aplicaciones instaladas como ejecuciones premium y facturarlos aparte una vez agotada su cuota gratuita.",
+          "Si el paso responde con status not_linked, nadie ha conectado aún una cuenta de PitchBoost a esa subcuenta ni a su agencia: abre la página de PitchBoost en el menú izquierdo y pulsa Connect."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "¿Pueden varias subcuentas compartir una cuenta de PitchBoost?",
+        "a": "Sí. Cuando la aplicación se instala para toda la agencia, cada subcuenta factura a la cuenta de PitchBoost conectada por la agencia, salvo que esa subcuenta conecte la suya, que tiene prioridad."
+      },
+      {
+        "q": "¿Cambia la presentación cuando cambia el contacto?",
+        "a": "No. Una presentación se construye una vez con los datos del contacto en el momento en que se ejecuta el paso. Ejecuta el paso de nuevo para crear otra; el campo y la nota del contacto se actualizan con la más reciente."
+      },
+      {
+        "q": "¿Qué diferencia hay entre Disconnect y Remove?",
+        "a": "Disconnect mantiene la aplicación instalada pero desvincula la cuenta de PitchBoost, así que los pasos responden not_linked hasta que alguien vuelva a conectar. Remove desinstala la aplicación de la subcuenta y los flujos que aún contienen sus pasos los omiten."
+      },
+      {
+        "q": "¿Puedo descargar las presentaciones?",
+        "a": "Sí. Cada presentación se abre en PitchBoost, donde se puede editar y descargar como PowerPoint, PDF o Google Slides como cualquier otra presentación de PitchBoost."
+      }
+    ],
+    "related": [
+      "share-a-deck-link",
+      "download-powerpoint-or-pdf",
+      "credits-and-plans"
+    ],
+    "updated": "2026-10-20"
+  },
 ];
