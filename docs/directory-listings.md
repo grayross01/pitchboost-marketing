@@ -22,13 +22,13 @@ Answer engines cite third-party pages more than vendor pages, so being listed on
 **Long description:**
 PitchBoost redesigns existing presentations. Upload a .pptx and it reads every slide, learns your brand from your website (logo, colours, tone), and rebuilds the deck slide by slide with professional layout and typography. Text and chart values are kept; anything the AI cannot trace to your material is removed and listed, so nothing gets invented. You get a shareable link with viewer analytics, a PDF, and an editable PowerPoint. It also builds new pitch decks, proposals and one-pagers from a brief, personalised for a specific prospect, and connects to ChatGPT and Claude through an MCP server.
 
-Free plan: one AI deck a month, up to 10 slides, with a small badge. Starter: $9 a month, 800 credits, decks up to 25 slides, no badge. Pro: $29 a month, 2,500 credits, decks up to 60 slides, full analytics, custom domains, API.
+Free plan: one AI deck a month, up to 10 slides, with a small badge. Starter: $7 a month, 300 credits, decks up to 25 slides, no badge, downloads included. Sharing as a live link is free on every plan; downloading a file takes a paid plan or a one-time $9 per deck. Pro: $29 a month, 2,500 credits, decks up to 60 slides, full analytics, custom domains, API.
 
 **Categories:** Presentation software; AI presentation maker; Pitch deck software; Sales enablement.
 
 **Alternatives to:** Gamma, Beautiful.ai, Pitch, Tome, Canva (presentations), Copilot in PowerPoint.
 
-**Pricing summary:** Free plan; paid from $9/month; no credit card to start.
+**Pricing summary:** Free plan; paid from $7/month, or $9 once for a single deck; no credit card to start.
 
 **Screenshots to capture (1600x1000, light theme):**
 1. The welcome upload step with a .pptx dropped in.

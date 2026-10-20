@@ -1008,7 +1008,7 @@ export const INDUSTRIES: Industry[] = [
       },
       {
         q: "Can I export my proposal as a PDF for clients who prefer a file?",
-        a: "Yes, one-click PDF export is available on all plans. Send a link, a PDF, or both, whatever the client prefers.",
+        a: "Yes, one-click PDF export comes with every paid plan, or $9 for a single deck. The live link is free on every plan, so send a link, a PDF, or both, whatever the client prefers.",
       },
       {
         q: "Is there an AI proposal maker for contractors and home service businesses?",

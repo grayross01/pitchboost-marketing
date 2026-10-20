@@ -90,7 +90,7 @@ export default function AboutPage() {
             editable PowerPoint with real text boxes. You are never locked into the tool.
           </li>
           <li>
-            <strong>Plain pricing.</strong> Free to start, one deck a month. Starter at $9 a
+            <strong>Plain pricing.</strong> Free to start, one deck a month. Starter at $7 a
             month, Pro at $29, Business at $79. The <Link href="/pricing">pricing page</Link> is
             the whole story.
           </li>

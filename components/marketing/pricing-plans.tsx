@@ -25,7 +25,7 @@ export default function PricingPlans({ className = "pricing-grid" }: { className
         <ul className="pricing-features">
           <li><CheckIcon /> 150 credits a month (1 AI deck)</li>
           <li><CheckIcon /> Decks up to 10 slides</li>
-          <li><CheckIcon /> PDF and PowerPoint export, with badge</li>
+          <li><CheckIcon /> Share as a live link, with badge</li>
           <li><CheckIcon /> Shareable link and basic analytics</li>
           <li><CheckIcon /> Research and fact checking included</li>
         </ul>
@@ -34,13 +34,13 @@ export default function PricingPlans({ className = "pricing-grid" }: { className
       <div className="pricing-card">
         <div className="plan-name">Starter</div>
         <div className="plan-desc">Your decks, without the badge</div>
-        <div className="plan-price">$9<span>/mo</span></div>
-        <div className="plan-period">or $7/mo billed annually</div>
+        <div className="plan-price">$7<span>/mo</span></div>
+        <div className="plan-period">or $5.83/mo billed annually</div>
         <ul className="pricing-features">
-          <li><CheckIcon /> 800 credits a month (about 5 decks)</li>
-          <li><CheckIcon /> Decks up to 50 slides</li>
+          <li><CheckIcon /> 300 credits a month (about 3 decks)</li>
+          <li><CheckIcon /> Decks up to 25 slides</li>
           <li><CheckIcon /> No PitchBoost badge, anywhere</li>
-          <li><CheckIcon /> Clean, editable PowerPoint downloads</li>
+          <li><CheckIcon /> PowerPoint, PDF and Google Slides downloads</li>
           <li><CheckIcon /> Top-up credit packs</li>
         </ul>
         <a href={SIGNUP_URL} className="btn btn-secondary">Start with Starter</a>
@@ -78,7 +78,7 @@ export default function PricingPlans({ className = "pricing-grid" }: { className
     </div>
     {/* Most people have one deck to fix, so a plan is not the only way to pay. */}
     <p style={{ textAlign: "center", fontSize: 15, color: "var(--ds-text-secondary, #4a5a68)", margin: "22px auto 0", maxWidth: 680, lineHeight: 1.6 }}>
-      <strong style={{ color: "var(--ds-dark)" }}>Just one deck?</strong> Finish it for $13 once, no subscription: every slide rebuilt, no PitchBoost badge, and 100 credits for edits. Decks over 50 slides are $25.
+      <strong style={{ color: "var(--ds-dark)" }}>Just one deck?</strong> Finish it for $9 once, no subscription: every slide rebuilt (up to 25), no PitchBoost badge, the PowerPoint, PDF and Google Slides downloads, and 100 credits for edits. Longer decks need Pro.
     </p>
     </>
   );

@@ -84,7 +84,7 @@ const FAQS = [
   },
   {
     q: "What does it cost?",
-    a: "The free plan includes one deck a month of up to 10 slides, with a small PitchBoost badge. To finish one deck with no badge, there is a one-time $13 option with no subscription. Starter is $9 a month for regular use; all plans are on the pricing page.",
+    a: "The free plan includes one deck a month of up to 10 slides, with a small PitchBoost badge. Every deck can be shared as a live link for free; to download one as a PowerPoint or PDF with no badge, there is a one-time $9 option with no subscription. Starter is $7 a month for regular use; all plans are on the pricing page.",
   },
   {
     q: "Where do my decks go?",
@@ -141,7 +141,7 @@ export default function ChatGptPage() {
             <a href={SIGNUP_REBUILD} className="btn btn-ghost btn-lg">Or Upload on the Web</a>
           </div>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 40, marginTop: 48, flexWrap: "wrap" }}>
-            {["Works on free ChatGPT accounts", "Your content and numbers kept", "Editable PowerPoint, PDF and a link"].map((item) => (
+            {["Works on free ChatGPT accounts", "Your content and numbers kept", "A free live link; PowerPoint and PDF from $9"].map((item) => (
               <div key={item} style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 14, color: "var(--ds-text-secondary)", fontWeight: 500 }}>
                 <span style={{ width: 7, height: 7, borderRadius: "50%", background: "#1F6B6B", display: "inline-block", flexShrink: 0 }} />
                 {item}

@@ -51,7 +51,7 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
       {
         "heading": "Limites de slides por plano",
         "paragraphs": [
-          "O plano Free reconstrói até 10 slides, Starter até 50 e Pro até 60. Uma apresentação mais longa pode ser condensada para caber antes da reconstrução começar, e a tela de compartilhamento informa quantos slides foram mantidos."
+          "O plano Free reconstrói até 10 slides, Starter até 25 e Pro até 60. Uma apresentação mais longa pode ser condensada para caber antes da reconstrução começar, e a tela de compartilhamento informa quantos slides foram mantidos."
         ]
       }
     ],
@@ -66,7 +66,7 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
       },
       {
         "q": "Quanto custa?",
-        "a": "O plano Free inclui uma apresentação AI por mês, até 10 slides, com um pequeno selo PitchBoost. Starter custa $9 por mês para até 50 slides e sem selo; Pro custa $29 por mês para até 60 slides com analytics completo."
+        "a": "O plano Free inclui uma apresentação AI por mês, até 10 slides, com um pequeno selo PitchBoost. Starter custa $7 por mês para até 25 slides e sem selo; Pro custa $29 por mês para até 60 slides com analytics completo."
       }
     ],
     "related": [
@@ -126,13 +126,13 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
     "slug": "slide-limits-by-plan",
     "category": "redesign",
     "title": "Quantos slides o PitchBoost reconstrói em cada plano",
-    "metaDescription": "Free reconstrói até 10 slides, Starter até 50, Pro e Business até 60. O que acontece com decks mais longos: condensar ou reconstruir os primeiros.",
-    "answer": "O plano gratuito reconstrói decks com até 10 slides, Starter até 50, e Pro e Business até 60. Se o seu deck for mais longo, o PitchBoost oferece a opção de condensá-lo para caber (mesma história, menos slides) ou reconstruir apenas os primeiros slides. A tela de compartilhamento mostra quantos dos seus slides originais foram mantidos e como reconstruir o restante: com um pagamento único para essa apresentação (US$ 13, ou US$ 25 acima de 50 slides) ou com um plano.",
+    "metaDescription": "Free reconstrói até 10 slides, Starter até 25, Pro e Business até 60. O que acontece com decks mais longos: condensar ou reconstruir os primeiros.",
+    "answer": "O plano gratuito reconstrói decks com até 10 slides, Starter até 25, e Pro e Business até 60. Se o seu deck for mais longo, o PitchBoost oferece a opção de condensá-lo para caber (mesma história, menos slides) ou reconstruir apenas os primeiros slides. A tela de compartilhamento mostra quantos dos seus slides originais foram mantidos e como reconstruir o restante: com um pagamento único para essa apresentação (US$ 9, para decks de até 25 slides) ou com um plano.",
     "sections": [
       {
         "heading": "Os limites",
         "paragraphs": [
-          "Free: até 10 slides por deck, um deck com IA por mês. Starter ($9 por mês): até 50 slides. Pro ($29 por mês) e Business ($79 por mês): até 60 slides. O limite se aplica ao deck que o PitchBoost produz, não ao arquivo que você envia: você pode enviar um deck de 45 slides em qualquer plano."
+          "Free: até 10 slides por deck, um deck com IA por mês. Starter ($7 por mês): até 25 slides. Pro ($29 por mês) e Business ($79 por mês): até 60 slides. O limite se aplica ao deck que o PitchBoost produz, não ao arquivo que você envia: você pode enviar um deck de 45 slides em qualquer plano."
         ]
       },
       {
@@ -174,8 +174,8 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
     "slug": "download-powerpoint-or-pdf",
     "category": "output",
     "title": "Como baixar sua apresentação como PowerPoint ou PDF",
-    "metaDescription": "Todos os planos podem baixar uma apresentação como PowerPoint editável, PowerPoint com aparência exata ou PDF. Onde estão os botões e qual arquivo escolher.",
-    "answer": "Abra a tela de compartilhamento da apresentação e use os botões de download: \"Baixar PowerPoint\" fornece um .pptx com aparência exata onde cada slide é uma imagem da apresentação web, \"PowerPoint editável\" fornece um .pptx com caixas de texto e formas reais, parecido com o layout web mas não idêntico, e \"PDF\" fornece uma página por slide. Downloads estão disponíveis em todos os planos; no plano gratuito eles carregam um pequeno badge do PitchBoost.",
+    "metaDescription": "Baixe uma apresentação como PowerPoint editável, PowerPoint com aparência exata ou PDF em qualquer plano pago ou por US$ 9 a apresentação. Onde estão os botões e qual arquivo escolher.",
+    "answer": "Abra a tela de compartilhamento da apresentação e use os botões de download: \"Baixar PowerPoint\" fornece um .pptx com aparência exata onde cada slide é uma imagem da apresentação web, \"PowerPoint editável\" fornece um .pptx com caixas de texto e formas reais, parecido com o layout web mas não idêntico, e \"PDF\" fornece uma página por slide. Downloads vêm com todos os planos pagos. No plano gratuito, compartilhar a apresentação como link ao vivo continua grátis, e você pode liberar os downloads de uma apresentação com um pagamento único de US$ 9 (decks de até 25 slides), que também remove o badge.",
     "steps": [
       {
         "title": "Abra a apresentação",
@@ -194,13 +194,13 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
       {
         "heading": "Editável versus aparência exata",
         "paragraphs": [
-          "O PowerPoint editável fica próximo do layout web mas não é pixel a pixel idêntico: ele usa as próprias caixas de texto, formas e fontes do PowerPoint para que você possa editar cada elemento. O arquivo de aparência exata é pixel a pixel idêntico porque cada slide é uma imagem de alta resolução, o que também significa que o texto não pode ser editado no PowerPoint. Em caso de dúvida, pegue os dois; eles são gratuitos para gerar."
+          "O PowerPoint editável fica próximo do layout web mas não é pixel a pixel idêntico: ele usa as próprias caixas de texto, formas e fontes do PowerPoint para que você possa editar cada elemento. O arquivo de aparência exata é pixel a pixel idêntico porque cada slide é uma imagem de alta resolução, o que também significa que o texto não pode ser editado no PowerPoint. Em caso de dúvida, pegue os dois; depois que os downloads de uma apresentação estão liberados, cada arquivo não custa nada a mais."
         ]
       },
       {
         "heading": "O badge",
         "paragraphs": [
-          "No plano gratuito, cada slide carrega um pequeno badge \"Powered by PitchBoost\", e ele acompanha os downloads em PDF e PowerPoint. Starter ($9 por mês) remove ele de todas as apresentações e exportações, e você também pode removê-lo de uma única apresentação com uma compra única na tela de compartilhamento."
+          "No plano gratuito, cada slide carrega um pequeno badge \"Powered by PitchBoost\", inclusive no link ao vivo. Starter ($7 por mês) remove ele de todas as apresentações e exportações, e você também pode removê-lo de uma única apresentação com uma compra única de US$ 9 na tela de compartilhamento, que também libera os downloads dessa apresentação."
         ]
       }
     ],
@@ -392,16 +392,16 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
     "category": "account",
     "title": "Como funcionam os créditos e planos",
     "metaDescription": "Todo plano inclui créditos mensais; uma apresentação custa 100, uma edição de slide 10. O que Free, Starter, Pro e Business incluem, o que é acumulado e como comprar mais.",
-    "answer": "Todo plano do PitchBoost inclui uma cota mensal de créditos e cada ação de IA tem um preço fixo: uma apresentação (nova ou reconstruída) custa 100 créditos, uma edição de slide 10, uma edição de apresentação completa 50, uma varredura de site 10. Free inclui 150 créditos por mês (uma apresentação), Starter 800, Pro 2.500 e Business 7.000. Planos pagos acumulam créditos não usados por um mês e podem comprar pacotes extras. No aplicativo você vê a porcentagem da sua cota usada, nunca um valor em dólar corrente.",
+    "answer": "Todo plano do PitchBoost inclui uma cota mensal de créditos e cada ação de IA tem um preço fixo: uma apresentação (nova ou reconstruída) custa 100 créditos, uma edição de slide 10, uma edição de apresentação completa 50, uma varredura de site 10. Free inclui 150 créditos por mês (uma apresentação), Starter 300, Pro 2.500 e Business 7.000. Planos pagos acumulam créditos não usados por um mês e podem comprar pacotes extras. No aplicativo você vê a porcentagem da sua cota usada, nunca um valor em dólar corrente.",
     "sections": [
       {
         "heading": "Os planos",
         "paragraphs": [
-          "Free: 150 créditos por mês, um negócio, apresentações de até 10 slides, exportação em PDF e PowerPoint com um pequeno selo, um link compartilhável com análises básicas. Não requer cartão.",
-          "Starter, $9 por mês: 800 créditos, negócios ilimitados, apresentações de até 50 slides, sem selo em lugar algum, pacotes extras.",
+          "Free: 150 créditos por mês, um negócio, apresentações de até 10 slides com um pequeno selo, um link ao vivo compartilhável com análises básicas. Baixar um arquivo exige um plano pago ou um pagamento único de US$ 9 por essa apresentação. Não requer cartão.",
+          "Starter, $7 por mês: 300 créditos, negócios ilimitados, apresentações de até 25 slides, sem selo em lugar algum, downloads em PowerPoint, PDF e Google Slides, pacotes extras.",
           "Pro, $29 por mês: 2.500 créditos, apresentações de até 60 slides, análises completas do visualizador com tempo por slide, modelos salvos, domínios personalizados, acesso à API e MCP.",
           "Business, $79 por mês: 7.000 créditos, assentos e permissões de equipe, exportação de análises e envio a partir do seu próprio domínio.",
-          "Cobrança anual é mais barata: Starter $7, Pro $24 e Business $66 por mês quando pago anualmente."
+          "Cobrança anual é mais barata: Starter $70 por ano (cerca de $5,83 por mês), Pro $24 e Business $66 por mês quando pago anualmente."
         ]
       },
       {

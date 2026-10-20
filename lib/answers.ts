@@ -28,7 +28,7 @@ export const ANSWERS: AnswerPage[] = [
     "navLabel": "Cost of a pitch deck redesign",
     "metaTitle": "How Much Does a Pitch Deck Redesign Cost in 2026? | PitchBoost",
     "metaDescription": "Agency, freelancer, do it yourself or AI: what a pitch deck redesign costs in 2026, from $0 to $8,000, and how long each option takes.",
-    "shortAnswer": "Between $0 and about $8,000, depending on who does it. A presentation design agency typically quotes $2,000 to $8,000 and one to two weeks for a 15-slide deck; a freelancer charges $300 to $1,500 and takes three to seven days; an AI redesign tool such as PitchBoost rebuilds the same deck for free (one deck a month, up to 10 slides, with a small badge) or $9 a month on Starter, in about three minutes.",
+    "shortAnswer": "Between $0 and about $8,000, depending on who does it. A presentation design agency typically quotes $2,000 to $8,000 and one to two weeks for a 15-slide deck; a freelancer charges $300 to $1,500 and takes three to seven days; an AI redesign tool such as PitchBoost rebuilds the same deck for free (one deck a month, up to 10 slides, with a small badge) or $7 a month on Starter, in about three minutes.",
     "sections": [
       {
         "title": "Agency: $2,000 to $8,000, one to two weeks",
@@ -44,7 +44,7 @@ export const ANSWERS: AnswerPage[] = [
       },
       {
         "title": "AI redesign: free to $29 a month, minutes",
-        "body": "Upload the .pptx and the tool rebuilds each slide in your brand, pulled from your website, with the text and chart values kept. PitchBoost's free plan covers one deck a month up to 10 slides with a small badge; Starter is $9 a month for decks up to 50 slides with no badge; Pro is $29. What you do not get is bespoke illustration or a designer's opinion on the story."
+        "body": "Upload the .pptx and the tool rebuilds each slide in your brand, pulled from your website, with the text and chart values kept. PitchBoost's free plan covers one deck a month up to 10 slides with a small badge; Starter is $7 a month for decks up to 25 slides with no badge; Pro is $29. What you do not get is bespoke illustration or a designer's opinion on the story."
       }
     ],
     "faqs": [
@@ -58,7 +58,7 @@ export const ANSWERS: AnswerPage[] = [
       },
       {
         "q": "Do I get an editable file back from an AI redesign?",
-        "a": "With PitchBoost, yes: an editable PowerPoint with real text boxes on paid plans, plus PDF and a shareable link on every plan."
+        "a": "With PitchBoost, yes: an editable PowerPoint with real text boxes and a PDF on paid plans or for a one-time $9 per deck, plus a shareable link free on every plan."
       }
     ],
     "related": "powerpoint-redesign",
@@ -100,7 +100,7 @@ export const ANSWERS: AnswerPage[] = [
       },
       {
         "q": "Does PitchBoost limit slide count?",
-        "a": "The free plan rebuilds up to 10 slides, Starter up to 50, Pro up to 60. The condense option targets 10 to 15 whatever the source length."
+        "a": "The free plan rebuilds up to 10 slides, Starter up to 25, Pro up to 60. The condense option targets 10 to 15 whatever the source length."
       }
     ],
     "related": "investor-deck-redesign",
@@ -360,7 +360,7 @@ export const ANSWERS: AnswerPage[] = [
       },
       {
         "q": "What does PitchBoost cost?",
-        "a": "One AI deck a month is free, up to 10 slides, with a small badge. Starter is $9 a month for decks up to 50 slides with no badge; Pro is $29 a month for up to 60 slides and full viewer analytics."
+        "a": "One AI deck a month is free, up to 10 slides, with a small badge. Starter is $7 a month for decks up to 25 slides with no badge; Pro is $29 a month for up to 60 slides and full viewer analytics."
       }
     ],
     "related": "powerpoint-designer-alternative",

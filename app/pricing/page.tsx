@@ -7,14 +7,14 @@ const SIGNUP_URL = `${APP_URL}/signup`;
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "PitchBoost pricing: a free plan to try it out, Starter at $9/mo without the badge, Pro at $29/mo for active dealmakers, and Business at $79/mo for teams. Every plan includes a monthly AI budget. No credit card to start.",
+    "PitchBoost pricing: a free plan to try it out, Starter at $7/mo without the badge, Pro at $29/mo for active dealmakers, and Business at $79/mo for teams. Every plan includes a monthly AI budget. No credit card to start.",
   alternates: { canonical: "/pricing" },
 };
 
 const FAQS: { q: string; a: string }[] = [
   {
     q: "Is there a free plan?",
-    a: "Yes. The Free plan is free forever: one AI-generated deck a month (up to 10 slides), a few AI edits, PDF and PowerPoint export with a small PitchBoost badge, and a shareable link. No credit card required.",
+    a: "Yes. The Free plan is free forever: one AI-generated deck a month (up to 10 slides), a few AI edits, a small PitchBoost badge, and a shareable live link, free. Downloading the deck as a PowerPoint, PDF or Google Slides file takes a paid plan or a one-time $9 for that deck. No credit card required.",
   },
   {
     q: "How do credits work?",
@@ -22,11 +22,11 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "What does Starter add over Free?",
-    a: "Starter is $9 a month: 800 credits (about five decks plus edits), decks up to 50 slides, no PitchBoost badge on any deck or export, clean editable PowerPoint downloads, and top-up packs when you need more.",
+    a: "Starter is $7 a month: 300 credits (about three decks plus edits), decks up to 25 slides, no PitchBoost badge on any deck or export, PowerPoint, PDF and Google Slides downloads, and top-up packs when you need more. Cancel anytime.",
   },
   {
     q: "Can I pay once instead of subscribing?",
-    a: "Yes. If you have one deck to fix, Finish this deck is a one-time $13 (decks up to 50 slides; $25 up to 60): every slide rebuilt one to one, no PitchBoost badge on that deck, and 100 credits for edits. It is offered when your upload is longer than the free plan builds, and on any deck's share screen.",
+    a: "Yes. If you have one deck to fix, Finish this deck is a one-time $9 for a deck of up to 25 slides: every slide rebuilt one to one, no PitchBoost badge on that deck, the PowerPoint, PDF and Google Slides downloads, and 100 credits for edits. Longer decks need Pro. It is offered when your upload is longer than the free plan builds, and on any deck's share screen.",
   },
   {
     q: "What is the difference between Starter, Pro and Business?",
@@ -42,11 +42,11 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "Do you offer annual billing?",
-    a: "Yes. Starter is $7/mo, Pro $24/mo and Business $66/mo when billed annually.",
+    a: "Yes. Starter is $70 a year (about $5.83/mo), Pro $24/mo and Business $66/mo when billed annually.",
   },
   {
     q: "Do I need design or PowerPoint skills?",
-    a: "No. PitchBoost generates the deck for you, on your brand, and you can export to PDF or PowerPoint on every plan. No design work required.",
+    a: "No. PitchBoost generates the deck for you, on your brand. Every plan shares it as a live link; PDF and PowerPoint downloads come with any paid plan or a one-time $9. No design work required.",
   },
 ];
 
@@ -78,8 +78,8 @@ export default function PricingPage() {
     brand: { "@type": "Brand", name: "PitchBoost" },
     offers: [
       { "@type": "Offer", name: "Free", price: "0", priceCurrency: "USD", url: "https://pitchboost.ai/pricing" },
-      { "@type": "Offer", name: "Starter", price: "9", priceCurrency: "USD", url: "https://pitchboost.ai/pricing" },
-      { "@type": "Offer", name: "Finish this deck (one time)", price: "13", priceCurrency: "USD", url: "https://pitchboost.ai/pricing" },
+      { "@type": "Offer", name: "Starter", price: "7", priceCurrency: "USD", url: "https://pitchboost.ai/pricing" },
+      { "@type": "Offer", name: "Finish this deck (one time)", price: "9", priceCurrency: "USD", url: "https://pitchboost.ai/pricing" },
       { "@type": "Offer", name: "Pro", price: "29", priceCurrency: "USD", url: "https://pitchboost.ai/pricing" },
       { "@type": "Offer", name: "Business", price: "79", priceCurrency: "USD", url: "https://pitchboost.ai/pricing" },
     ],

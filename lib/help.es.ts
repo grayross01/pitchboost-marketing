@@ -51,7 +51,7 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       {
         "heading": "Límites de diapositivas por plan",
         "paragraphs": [
-          "El plan gratuito reconstruye hasta 10 diapositivas, Starter hasta 50 y Pro hasta 60. Una presentación más larga puede condensarse para ajustarse antes de que comience la reconstrucción, y la pantalla de compartir te indica cuántas diapositivas se conservaron."
+          "El plan gratuito reconstruye hasta 10 diapositivas, Starter hasta 25 y Pro hasta 60. Una presentación más larga puede condensarse para ajustarse antes de que comience la reconstrucción, y la pantalla de compartir te indica cuántas diapositivas se conservaron."
         ]
       }
     ],
@@ -66,7 +66,7 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       },
       {
         "q": "¿Cuánto cuesta?",
-        "a": "El plan gratuito incluye una presentación AI al mes, hasta 10 diapositivas, con una pequeña insignia de PitchBoost. Starter cuesta $9 al mes para hasta 50 diapositivas y sin insignia; Pro cuesta $29 al mes para hasta 60 diapositivas con análisis completo."
+        "a": "El plan gratuito incluye una presentación AI al mes, hasta 10 diapositivas, con una pequeña insignia de PitchBoost. Starter cuesta $7 al mes para hasta 25 diapositivas y sin insignia; Pro cuesta $29 al mes para hasta 60 diapositivas con análisis completo."
       }
     ],
     "related": [
@@ -126,13 +126,13 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
     "slug": "slide-limits-by-plan",
     "category": "redesign",
     "title": "Cuántas diapositivas rediseña PitchBoost en cada plan",
-    "metaDescription": "Free rediseña hasta 10 diapositivas, Starter hasta 50, Pro y Business hasta 60. Qué pasa con una presentación más larga: condensar o rediseñar solo las primeras.",
-    "answer": "El plan gratuito rediseña presentaciones de hasta 10 diapositivas, Starter hasta 50, y Pro y Business hasta 60. Si tu presentación es más larga, PitchBoost te ofrece condensarla para que quepa (la misma historia, menos diapositivas) o rediseñar solo las primeras diapositivas. La pantalla de compartir muestra cuántas de tus diapositivas originales se conservaron y cómo rediseñar el resto: con un pago único para esa presentación ($13, o $25 si pasa de 50 diapositivas) o con un plan.",
+    "metaDescription": "Free rediseña hasta 10 diapositivas, Starter hasta 25, Pro y Business hasta 60. Qué pasa con una presentación más larga: condensar o rediseñar solo las primeras.",
+    "answer": "El plan gratuito rediseña presentaciones de hasta 10 diapositivas, Starter hasta 25, y Pro y Business hasta 60. Si tu presentación es más larga, PitchBoost te ofrece condensarla para que quepa (la misma historia, menos diapositivas) o rediseñar solo las primeras diapositivas. La pantalla de compartir muestra cuántas de tus diapositivas originales se conservaron y cómo rediseñar el resto: con un pago único para esa presentación ($9, para presentaciones de hasta 25 diapositivas) o con un plan.",
     "sections": [
       {
         "heading": "Los límites",
         "paragraphs": [
-          "Free: hasta 10 diapositivas por presentación, una presentación con IA al mes. Starter ($9 al mes): hasta 50 diapositivas. Pro ($29 al mes) y Business ($79 al mes): hasta 60 diapositivas. El límite se aplica a la presentación que PitchBoost produce, no al archivo que subes; puedes subir una presentación de 45 diapositivas en cualquier plan."
+          "Free: hasta 10 diapositivas por presentación, una presentación con IA al mes. Starter ($7 al mes): hasta 25 diapositivas. Pro ($29 al mes) y Business ($79 al mes): hasta 60 diapositivas. El límite se aplica a la presentación que PitchBoost produce, no al archivo que subes; puedes subir una presentación de 45 diapositivas en cualquier plan."
         ]
       },
       {
@@ -174,8 +174,8 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
     "slug": "download-powerpoint-or-pdf",
     "category": "output",
     "title": "Cómo descargar tu presentación como PowerPoint o PDF",
-    "metaDescription": "Todos los planes pueden descargar una presentación como PowerPoint editable, PowerPoint de aspecto exacto o PDF. Dónde están los botones y qué archivo elegir.",
-    "answer": "Abre la pantalla de compartir de la presentación y usa los botones de descarga: \"Descargar PowerPoint\" te da un .pptx de aspecto exacto donde cada diapositiva es una imagen de la presentación web, \"PowerPoint editable\" te da un .pptx con cuadros de texto y formas reales, parecido al diseño web pero no idéntico, y \"PDF\" te da una página por diapositiva. Las descargas están disponibles en todos los planes; en el plan gratuito llevan una pequeña insignia de PitchBoost.",
+    "metaDescription": "Descarga una presentación como PowerPoint editable, PowerPoint de aspecto exacto o PDF con cualquier plan de pago o por $9 la presentación. Dónde están los botones y qué archivo elegir.",
+    "answer": "Abre la pantalla de compartir de la presentación y usa los botones de descarga: \"Descargar PowerPoint\" te da un .pptx de aspecto exacto donde cada diapositiva es una imagen de la presentación web, \"PowerPoint editable\" te da un .pptx con cuadros de texto y formas reales, parecido al diseño web pero no idéntico, y \"PDF\" te da una página por diapositiva. Las descargas vienen con todos los planes de pago. En el plan gratuito, compartir la presentación como enlace en vivo sigue siendo gratis, y puedes desbloquear las descargas de una presentación con un pago único de $9 (presentaciones de hasta 25 diapositivas), que además quita la insignia.",
     "steps": [
       {
         "title": "Abre la presentación",
@@ -194,13 +194,13 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       {
         "heading": "Editable versus aspecto exacto",
         "paragraphs": [
-          "El PowerPoint editable es cercano al diseño web pero no idéntico pixel por pixel: usa los propios cuadros de texto, formas y fuentes de PowerPoint para que puedas editar cada elemento. El archivo de aspecto exacto es idéntico pixel por pixel porque cada diapositiva es una imagen de alta resolución, lo que también significa que el texto no se puede editar en PowerPoint. En caso de duda, llévate ambos; son gratuitos de generar."
+          "El PowerPoint editable es cercano al diseño web pero no idéntico pixel por pixel: usa los propios cuadros de texto, formas y fuentes de PowerPoint para que puedas editar cada elemento. El archivo de aspecto exacto es idéntico pixel por pixel porque cada diapositiva es una imagen de alta resolución, lo que también significa que el texto no se puede editar en PowerPoint. En caso de duda, llévate ambos; una vez desbloqueadas las descargas de una presentación, cada archivo no cuesta nada más."
         ]
       },
       {
         "heading": "La insignia",
         "paragraphs": [
-          "En el plan gratuito, cada diapositiva lleva una pequeña insignia \"Powered by PitchBoost\", y viaja junto en las descargas de PDF y PowerPoint. Starter ($9 al mes) la elimina de cada presentación y exportación, y también puedes eliminarla de una sola presentación con una compra única desde la pantalla de compartir."
+          "En el plan gratuito, cada diapositiva lleva una pequeña insignia \"Powered by PitchBoost\", también en el enlace en vivo. Starter ($7 al mes) la elimina de cada presentación y exportación, y también puedes eliminarla de una sola presentación con una compra única de $9 desde la pantalla de compartir, que además desbloquea las descargas de esa presentación."
         ]
       }
     ],
@@ -392,16 +392,16 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
     "category": "account",
     "title": "Cómo funcionan los créditos y planes",
     "metaDescription": "Cada plan incluye créditos mensuales: una presentación cuesta 100, editar una diapositiva 10. Qué incluyen Free, Starter, Pro y Business, qué se acumula y cómo comprar más.",
-    "answer": "Cada plan de PitchBoost incluye una asignación mensual de créditos y cada acción de IA tiene un precio fijo: una presentación (nueva o mejorada) cuesta 100 créditos, editar una diapositiva 10, editar la presentación completa 50, escanear un sitio web 10. Free incluye 150 créditos al mes (una presentación), Starter 800, Pro 2,500 y Business 7,000. Los planes de pago acumulan los créditos no usados durante un mes y pueden comprar paquetes adicionales. En la aplicación ves el porcentaje de tu asignación usado, nunca una cifra en dólares.",
+    "answer": "Cada plan de PitchBoost incluye una asignación mensual de créditos y cada acción de IA tiene un precio fijo: una presentación (nueva o mejorada) cuesta 100 créditos, editar una diapositiva 10, editar la presentación completa 50, escanear un sitio web 10. Free incluye 150 créditos al mes (una presentación), Starter 300, Pro 2,500 y Business 7,000. Los planes de pago acumulan los créditos no usados durante un mes y pueden comprar paquetes adicionales. En la aplicación ves el porcentaje de tu asignación usado, nunca una cifra en dólares.",
     "sections": [
       {
         "heading": "Los planes",
         "paragraphs": [
-          "Free: 150 créditos al mes, un trato, presentaciones de hasta 10 diapositivas, exportar en PDF y PowerPoint con una marca pequeña, enlace compartible con análisis básicos. No se requiere tarjeta.",
-          "Starter, $9 al mes: 800 créditos, tratos ilimitados, presentaciones de hasta 50 diapositivas, sin marca en ningún lugar, paquetes adicionales.",
+          "Free: 150 créditos al mes, un trato, presentaciones de hasta 10 diapositivas con una marca pequeña, enlace en vivo compartible con análisis básicos. Descargar un archivo requiere un plan de pago o un pago único de $9 por esa presentación. No se requiere tarjeta.",
+          "Starter, $7 al mes: 300 créditos, tratos ilimitados, presentaciones de hasta 25 diapositivas, sin marca en ningún lugar, descargas de PowerPoint, PDF y Google Slides, paquetes adicionales.",
           "Pro, $29 al mes: 2,500 créditos, presentaciones de hasta 60 diapositivas, análisis completo del visor con tiempo por diapositiva, plantillas guardadas, dominios personalizados, acceso a API y MCP.",
           "Business, $79 al mes: 7,000 créditos, puestos y permisos de equipo, exportar análisis y enviar desde tu propio dominio.",
-          "La facturación anual es más económica: Starter $7, Pro $24 y Business $66 al mes cuando se paga anualmente."
+          "La facturación anual es más económica: Starter $70 al año (unos $5.83 al mes), Pro $24 y Business $66 al mes cuando se paga anualmente."
         ]
       },
       {
