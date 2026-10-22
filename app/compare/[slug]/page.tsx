@@ -140,7 +140,7 @@ export default async function ComparePage({ params }: Props) {
           <div className="section-header wide-header fade-up">
             <div className="section-label"><span>Feature comparison</span></div>
             <h2>PitchBoost vs {competitor.name}: Feature by feature</h2>
-            <p>How the two tools stack up on the things that matter most for pitch decks, proposals, and sales materials.</p>
+            <p>How the two tools stack up on what decides whether a presentation works: the content, the design, the file you send and the price.</p>
           </div>
 
           <div className="fade-up" style={{ maxWidth: 780, margin: "48px auto 0", borderRadius: 16, overflow: "hidden", border: "1px solid var(--ds-border)" }}>

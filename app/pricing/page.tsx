@@ -7,7 +7,7 @@ const SIGNUP_URL = `${APP_URL}/signup`;
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "PitchBoost pricing: a free plan to try it out, Starter at $7/mo without the badge, Pro at $29/mo for active dealmakers, and Business at $79/mo for teams. Every plan includes a monthly AI budget. No credit card to start.",
+    "PitchBoost pricing: a free plan to try it, $9 once to finish a single deck, Starter at $7/mo without the badge, Pro at $29/mo for people who present every week, and Business at $79/mo for teams. No credit card to start.",
   alternates: { canonical: "/pricing" },
 };
 
@@ -74,7 +74,7 @@ export default function PricingPage() {
     "@context": "https://schema.org",
     "@type": "Product",
     name: "PitchBoost",
-    description: "AI pitch deck and sales presentation builder that generates personalized, on-brand decks and tracks who opens them.",
+    description: "AI presentation maker that builds new presentations from a prompt and redesigns existing PowerPoint and PDF decks in your brand, with shareable links that show who opened them.",
     brand: { "@type": "Brand", name: "PitchBoost" },
     offers: [
       { "@type": "Offer", name: "Free", price: "0", priceCurrency: "USD", url: "https://pitchboost.ai/pricing" },

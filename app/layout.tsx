@@ -47,11 +47,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "PitchBoost: AI-Powered Personalized Pitch Decks",
+    default: "PitchBoost: AI Presentation Maker",
     template: "%s | PitchBoost",
   },
   description:
-    "PitchBoost builds personalized pitch decks that map your strengths to each prospect's pain points. Tailored to their industry, their needs, and the way they buy.",
+    "Make a presentation from a prompt, or redesign the PowerPoint you already have. Lessons, lectures, reports, talks and pitches, designed in your brand, in any language.",
   metadataBase: new URL("https://pitchboost.ai"),
   // NOTE: no site-wide `alternates.canonical` here. In Next, a canonical set on
   // the root layout is inherited by every page that doesn't override it, which
@@ -63,9 +63,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "PitchBoost",
-    title: "PitchBoost: AI-Powered Personalized Pitch Decks",
+    title: "PitchBoost: AI Presentation Maker",
     description:
-      "PitchBoost builds personalized pitch decks that map your strengths to each prospect's pain points. Tailored to their industry, their needs, and the way they buy.",
+      "Make a presentation from a prompt, or redesign the PowerPoint you already have. Lessons, lectures, reports, talks and pitches, designed in your brand, in any language.",
   },
   twitter: {
     card: "summary_large_image",
@@ -78,7 +78,7 @@ const organizationSchema = {
   name: "PitchBoost",
   url: "https://pitchboost.ai",
   logo: "https://pitchboost.ai/icon.png",
-  description: "AI-powered pitch deck builder for sales teams, agencies, and anyone who pitches. Generate personalized, branded presentations in a few minutes.",
+  description: "AI presentation maker. Builds new presentations from a prompt and redesigns existing PowerPoint, PDF and Google Slides decks in your brand, for students, teachers, teams, founders and sales.",
   sameAs: [
     "https://www.linkedin.com/company/pitchboost-ai",
     "https://www.instagram.com/pitchboost.ai/",

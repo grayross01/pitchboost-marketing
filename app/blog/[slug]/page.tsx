@@ -14,7 +14,7 @@ const SIGNUP_URL = `${APP_URL}/signup`;
 const CLOSING_CTA = {
   redesign: { line: "Have slides that need work?", label: "Redesign My Slides", href: `${APP_URL}/signup?intent=rebuild` },
   build: { line: "Ready to turn it into slides?", label: "Start From Scratch", href: SIGNUP_URL },
-  default: { line: "Ready to create your own pitch deck?", label: "Start Building Free", href: SIGNUP_URL },
+  default: { line: "Ready to make your next presentation?", label: "Start Building Free", href: SIGNUP_URL },
 };
 
 interface Props {

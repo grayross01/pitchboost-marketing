@@ -48,7 +48,7 @@ export default function PricingPlans({ className = "pricing-grid" }: { className
       <div className="pricing-card featured">
         <div className="pricing-badge">Most Popular</div>
         <div className="plan-name">Pro</div>
-        <div className="plan-desc">For active dealmakers</div>
+        <div className="plan-desc">For people who present every week</div>
         <div className="plan-price">$29<span>/mo</span></div>
         <div className="plan-period">or $24/mo billed annually</div>
         <ul className="pricing-features">
@@ -63,7 +63,7 @@ export default function PricingPlans({ className = "pricing-grid" }: { className
       </div>
       <div className="pricing-card">
         <div className="plan-name">Business</div>
-        <div className="plan-desc">For teams closing deals at scale</div>
+        <div className="plan-desc">For teams that share a brand</div>
         <div className="plan-price">$79<span>/mo</span></div>
         <div className="plan-period">or $66/mo billed annually</div>
         <ul className="pricing-features">

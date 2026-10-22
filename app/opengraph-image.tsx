@@ -5,5 +5,5 @@ export const contentType = OG_CONTENT_TYPE;
 export const alt = "PitchBoost";
 
 export default function Image() {
-  return ogImage({ eyebrow: "AI presentation software", title: "The deck that speaks their language.", subtitle: "PitchBoost builds personalized pitch decks, presentations and proposals for a specific prospect in a few minutes, in your brand." });
+  return ogImage({ eyebrow: "AI presentation maker", title: "The deck that speaks their language.", subtitle: "Lessons, reports, talks and pitches, made from a prompt or redesigned from the deck you have, in your brand and in any language." });
 }

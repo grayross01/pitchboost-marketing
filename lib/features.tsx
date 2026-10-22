@@ -13,7 +13,7 @@ export const FEATURES: FeatureMeta[] = [
   {
     slug: "ai-deck-builder",
     navLabel: "AI Deck Builder",
-    shortDescription: "Generate personalized pitch decks and presentations in minutes",
+    shortDescription: "Make a presentation from a prompt: a lesson, a report, a talk or a pitch, in minutes",
   },
   {
     slug: "research-and-fact-checking",
@@ -33,7 +33,7 @@ export const FEATURES: FeatureMeta[] = [
   {
     slug: "output-types",
     navLabel: "Output Types",
-    shortDescription: "Pitch decks, one-sheets, buyer FAQs, and more",
+    shortDescription: "Presentations, pitch decks, one-sheets, buyer FAQs, and more",
   },
   {
     slug: "templates-and-slides",
@@ -63,7 +63,7 @@ export const FEATURES: FeatureMeta[] = [
   {
     slug: "api-and-mcp",
     navLabel: "API & MCP",
-    shortDescription: "Build pitch decks and proposals from Claude or your own AI stack",
+    shortDescription: "Make presentations from ChatGPT, Claude or your own AI stack",
   },
 ];
 

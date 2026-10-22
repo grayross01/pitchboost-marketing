@@ -3,7 +3,7 @@ import Link from "next/link";
 import { STATIC_PAGE_DATES } from "@/lib/page-dates";
 
 export const metadata: Metadata = {
-  title: "About PitchBoost | The company behind the deck rebuilder",
+  title: { absolute: "About PitchBoost: the company behind the AI presentation maker" },
   description:
     "PitchBoost is an AI presentation tool from ARK Holdings, LLC in Oregon. What we build, why decks and not slides, how the product is made, and how to reach us.",
   alternates: { canonical: "https://pitchboost.ai/about" },

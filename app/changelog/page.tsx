@@ -3,7 +3,7 @@ import Link from "next/link";
 import { CHANGELOG } from "@/lib/changelog";
 
 export const metadata: Metadata = {
-  title: "Changelog | What changed in PitchBoost",
+  title: { absolute: "Changelog: what changed in PitchBoost" },
   description: "Dated, customer-facing changes to PitchBoost: the deck rebuilder, exports, sharing, billing, emails and the ChatGPT and Claude connectors.",
   alternates: { canonical: "https://pitchboost.ai/changelog" },
   openGraph: {

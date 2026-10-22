@@ -6,13 +6,13 @@ const SIGNUP_URL = `${APP_URL}/signup`;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/features/ai-deck-builder" },
-  title: "AI Deck Builder: Personalized Pitch Decks, Presentations & Proposals",
+  title: "AI Deck Builder: Presentations and Pitch Decks From a Prompt",
   description:
-    "PitchBoost's AI deck builder generates personalized pitch decks, sales presentations, and proposals in a few minutes, written for your specific prospect, not a generic template.",
+    "Say what the deck is for and PitchBoost writes and designs it in a few minutes: a lesson, a report, a talk, or a pitch written for one specific prospect, not a generic template.",
   openGraph: {
-    title: "AI Deck Builder: Personalized Pitch Decks, Presentations & Proposals",
+    title: "AI Deck Builder: Presentations and Pitch Decks From a Prompt",
     description:
-      "PitchBoost's AI deck builder generates personalized pitch decks, sales presentations, and proposals in a few minutes, written for your specific prospect, not a generic template.",
+      "Say what the deck is for and PitchBoost writes and designs it in a few minutes: a lesson, a report, a talk, or a pitch written for one specific prospect, not a generic template.",
   },
 };
 
@@ -188,10 +188,10 @@ export default function AIDeckBuilderPage() {
             </div>
           </div>
           <h1 style={{ fontSize: "clamp(1.9rem, 3.8vw, 2.75rem)", fontWeight: 800, color: "var(--ds-dark)", maxWidth: 820, margin: "0 auto 20px", lineHeight: 1.15, fontFamily: "var(--font-inter, 'Inter'), sans-serif" }}>
-            Personalized pitch decks, presentations, and proposals that close more deals
+            Presentations and pitch decks, written for the room you&apos;re walking into
           </h1>
           <p style={{ color: "var(--ds-text-light)", fontSize: "1.1rem", maxWidth: 640, margin: "0 auto 36px", lineHeight: 1.7 }}>
-            Describe your prospect, your opportunity, and your goals. PitchBoost generates a fully structured pitch deck, presentation, or proposal in a few minutes, with copy written for this specific buyer, not a template you have to gut and rewrite.
+            Say what the deck is for and who will see it. PitchBoost writes and designs a fully structured deck in a few minutes: a lesson that ends on takeaways, a board update that leads with the result, or a pitch written for one specific buyer, not a template you have to gut and rewrite.
           </p>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 16, flexWrap: "wrap" }}>
             <a href={SIGNUP_URL} className="btn btn-primary btn-primary-animated btn-lg">Start Building Free</a>

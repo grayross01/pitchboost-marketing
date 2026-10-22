@@ -9,12 +9,12 @@
  * change daily but does not gets discounted.
  */
 export const STATIC_PAGE_DATES: Record<string, string> = {
-  "": "2026-09-17",
+  "": "2026-10-22",
   "/industries": "2026-09-28",
   "/students": "2026-09-28",
   "/chatgpt": "2026-10-19",
-  "/compare": "2026-09-12",
-  "/pricing": "2026-09-11",
+  "/compare": "2026-10-22",
+  "/pricing": "2026-10-22",
   "/use-cases": "2026-09-12",
   "/real-estate": "2026-09-08",
   "/best-listing-presentation-software": "2026-07-11",
@@ -25,7 +25,7 @@ export const STATIC_PAGE_DATES: Record<string, string> = {
   "/tools/closing-timeline": "2026-07-12",
   "/tools/seller-net-sheet": "2026-07-16",
   "/tools/review-request": "2026-07-12",
-  "/blog": "2026-07-12",
+  "/blog": "2026-10-22",
   "/privacy": "2026-09-29",
   "/terms": "2026-09-15",
   "/support": "2026-09-15",
@@ -39,7 +39,7 @@ export const STATIC_PAGE_DATES: Record<string, string> = {
 };
 
 export const FEATURE_PAGE_DATES: Record<string, string> = {
-  "ai-deck-builder": "2026-09-12",
+  "ai-deck-builder": "2026-10-22",
   "api-and-mcp": "2026-09-12",
   "brand-and-images": "2026-09-12",
   "bulk-rebuild": "2026-09-12",
@@ -53,7 +53,7 @@ export const FEATURE_PAGE_DATES: Record<string, string> = {
 };
 
 export const INDUSTRIES_UPDATED = "2026-09-12";
-export const COMPETITORS_UPDATED = "2026-09-19";
+export const COMPETITORS_UPDATED = "2026-10-22";
 export const REDESIGNS_UPDATED = "2026-09-16";
 export const HELP_UPDATED = "2026-09-16";
 export const CITIES_UPDATED = "2026-07-10";
