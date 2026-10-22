@@ -421,8 +421,11 @@ export default function MarketingPage() {
             ))}
           </div>
           <div className="fade-up" style={{ textAlign: "center", marginTop: 36 }}>
+            <Link href="/ai-presentation-maker" style={{ fontSize: 14, fontWeight: 600, color: "#1F6B6B", textDecoration: "none", marginRight: 28 }}>
+              Lessons, reports and talks →
+            </Link>
             <Link href="/industries" style={{ fontSize: 14, fontWeight: 600, color: "#1F6B6B", textDecoration: "none" }}>
-              Explore industry-specific pages →
+              Pages for your industry →
             </Link>
           </div>
         </div>

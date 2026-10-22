@@ -1831,3 +1831,7 @@ body {
   .marketing .testimonial-card { padding: 24px; }
   .marketing .footer { padding: 48px 0 32px; }
 }
+
+/* Topic box on the presentation pages (components/marketing/topic-box.tsx). */
+.topic-input::placeholder { color: var(--ds-text-tertiary); }
+.topic-input-dark::placeholder { color: rgba(255, 255, 255, 0.6); }
