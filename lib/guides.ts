@@ -37,6 +37,17 @@ const GUIDES_BY_ANSWER: Record<string, string[]> = {
   "how-to-rebrand-a-presentation": ["how-to-rebrand-a-presentation", "fix-inconsistent-fonts-and-layouts"],
 };
 
+const GUIDES_BY_PRESENTATION: Record<string, string[]> = {
+  "class-presentation": ["class-presentation", "fix-slides-with-too-much-text"],
+  "lecture-slides": ["lecture-academic-slides", "fix-slides-with-too-much-text"],
+  "thesis-defense": ["thesis-defense-presentation", "fix-broken-chart-in-powerpoint"],
+  "research-presentation": ["conference-presentation-design", "fix-broken-chart-in-powerpoint"],
+  "training-presentation": ["lecture-academic-slides", "fix-slides-with-too-much-text"],
+  "report-presentation": ["board-presentation", "qbr-deck", "fix-broken-chart-in-powerpoint"],
+  "investor-update": ["board-presentation", "fix-broken-chart-in-powerpoint"],
+  "conference-talk": ["conference-presentation-design", "fix-slides-with-too-much-text"],
+};
+
 function resolve(slugs: string[] | undefined, fallbackTag: string | null, limit: number): BlogPostMeta[] {
   const posts = getAllPosts();
   const bySlug = new Map(posts.map((p) => [p.slug, p]));
@@ -56,6 +67,10 @@ function resolve(slugs: string[] | undefined, fallbackTag: string | null, limit:
 
 export function guidesForRedesign(slug: string, limit = 6): BlogPostMeta[] {
   return resolve(GUIDES_BY_REDESIGN[slug], "Redesign", limit);
+}
+
+export function guidesForPresentation(slug: string, limit = 3): BlogPostMeta[] {
+  return resolve(GUIDES_BY_PRESENTATION[slug], null, limit);
 }
 
 export function guidesForAnswer(slug: string, limit = 4): BlogPostMeta[] {

@@ -6,6 +6,7 @@ import { ANSWERS } from "@/lib/answers";
 import { getAllPosts } from "@/lib/blog";
 import { HELP_ARTICLES } from "@/lib/help";
 import { RESEARCH } from "@/lib/research";
+import { PRESENTATIONS } from "@/lib/presentations";
 
 /**
  * /llms.txt, a plain-text map of the site for LLMs and AI agents, following
@@ -46,10 +47,17 @@ export function GET() {
     "## Start here",
     "",
     `- [Home](${BASE}/): what PitchBoost does and how it works`,
+    `- [AI presentation maker](${BASE}/ai-presentation-maker): make any kind of presentation from a prompt, shaped for its purpose`,
     `- [Upload and redesign](${BASE}/features/upload-and-redesign): the feature most people come for, an existing deck rebuilt in your brand`,
     `- [Pricing](${BASE}/pricing): plans and what each includes`,
     `- [Help center](${BASE}/help): short how-to answers with real steps and numbers, in English, Spanish and Portuguese`,
     `- [Get started](${APP}/signup?intent=rebuild): create a free account and land on the upload screen`,
+    "",
+    "## Make a presentation from a prompt",
+    "",
+    "One page per kind of presentation, each with the slide-by-slide shape PitchBoost builds for it, example prompts and an FAQ.",
+    `- [AI presentation maker](${BASE}/ai-presentation-maker): the hub, with how it works and an honest comparison with Gamma, ChatGPT and Copilot`,
+    ...PRESENTATIONS.map((p) => `- [${p.navLabel}](${BASE}/presentations/${p.slug}): ${p.metaDescription}`),
     "",
     "## Redesign an existing deck",
     "",

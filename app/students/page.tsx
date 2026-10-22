@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
-const SIGNUP_URL = `${APP_URL}/signup`;
 // Rebuild intent lands the new account on the upload screen.
 const SIGNUP_REBUILD = `${APP_URL}/signup?intent=rebuild`;
 const URL = "https://pitchboost.ai/students";
@@ -77,7 +76,7 @@ const STEPS = [
   {
     step: "3",
     title: "Get it back in minutes",
-    body: "Every slide comes back redesigned, with your content and numbers kept. Download an editable PowerPoint to keep working on it, a PDF to submit, or share a link.",
+    body: "Every slide comes back redesigned, with your content and numbers kept. Share it as a link, or download an editable PowerPoint to keep working on it or a PDF to submit (downloads take Starter, or $9 once for that deck).",
   },
 ];
 
@@ -93,7 +92,7 @@ const GUIDES = [
 const FAQS = [
   {
     q: "Is PitchBoost free for students?",
-    a: "Yes. The free plan includes one deck a month of up to 10 slides, which fits a typical class presentation. Free decks carry a small PitchBoost badge. The Starter plan, $7 a month, removes the badge, allows decks up to 25 slides and covers about three decks a month. You can cancel anytime.",
+    a: "Yes. The free plan includes one deck a month of up to 10 slides, which fits a typical class presentation. Free decks carry a small PitchBoost badge and are shared as a link; downloading the PowerPoint or PDF takes Starter, or $9 once for that one deck. The Starter plan, $7 a month, removes the badge, allows decks up to 25 slides and covers about three decks a month. You can cancel anytime.",
   },
   {
     q: "Does it work with Google Slides, Keynote or Canva?",
@@ -117,7 +116,7 @@ const FAQS = [
   },
   {
     q: "Can I edit the result?",
-    a: "Yes. Download the redesigned deck as a normal, editable PowerPoint file and open it in PowerPoint, Keynote or Google Slides to change anything you like.",
+    a: "Yes. With Starter, or $9 once for that deck, download it as a normal, editable PowerPoint file and open it in PowerPoint, Keynote or Google Slides to change anything you like. You can also edit any slide in PitchBoost itself, on any plan.",
   },
 ];
 
@@ -171,7 +170,7 @@ export default function StudentsPage() {
           </p>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 16, flexWrap: "wrap" }}>
             <a href={SIGNUP_REBUILD} className="btn btn-primary btn-lg">Redesign My Slides</a>
-            <a href={SIGNUP_URL} className="btn btn-light btn-lg">Start From Scratch</a>
+            <Link href="/presentations/class-presentation" className="btn btn-light btn-lg">Start From a Topic</Link>
           </div>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 40, marginTop: 48, flexWrap: "wrap" }}>
             {["Your content and numbers kept", "One consistent design on every slide", "Free for one deck a month"].map((item) => (
@@ -316,7 +315,7 @@ export default function StudentsPage() {
             <div style={{ background: "var(--ds-bg-light)", border: "1px solid var(--ds-border)", borderRadius: 16, padding: "26px 28px" }}>
               <div style={{ fontSize: 15, fontWeight: 700, color: "var(--ds-text-primary)" }}>Free</div>
               <div style={{ fontSize: 28, fontWeight: 800, color: "var(--ds-dark)", margin: "6px 0 12px" }}>$0</div>
-              <p style={{ fontSize: 14, color: "var(--ds-text-secondary)", lineHeight: 1.65, margin: 0 }}>One deck a month, up to 10 slides, with a small PitchBoost badge. Enough for a typical class presentation.</p>
+              <p style={{ fontSize: 14, color: "var(--ds-text-secondary)", lineHeight: 1.65, margin: 0 }}>One deck a month, up to 10 slides, with a small PitchBoost badge, shared as a link. Enough for a typical class presentation.</p>
             </div>
             <div style={{ background: "linear-gradient(135deg, rgba(31,107,107,0.05), rgba(232,102,90,0.03))", border: "1px solid rgba(31,107,107,0.25)", borderRadius: 16, padding: "26px 28px" }}>
               <div style={{ fontSize: 15, fontWeight: 700, color: "#1F6B6B" }}>Starter</div>

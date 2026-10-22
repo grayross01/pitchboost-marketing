@@ -9,6 +9,7 @@ import { ANSWERS } from "@/lib/answers";
 import { HELP_ARTICLES } from "@/lib/help";
 import { CHANGELOG } from "@/lib/changelog";
 import { RESEARCH } from "@/lib/research";
+import { PRESENTATIONS } from "@/lib/presentations";
 import { getAllPosts } from "@/lib/blog";
 import { STATIC_PAGE_DATES, FEATURE_PAGE_DATES, INDUSTRIES_UPDATED, COMPETITORS_UPDATED, REDESIGNS_UPDATED, HELP_UPDATED, CITIES_UPDATED, NET_SHEET_UPDATED } from "@/lib/page-dates";
 
@@ -26,6 +27,7 @@ const BASE = "https://pitchboost.ai";
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: Array<{ path: string; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"]; priority: number }> = [
     { path: "", changeFrequency: "weekly", priority: 1.0 },
+    { path: "/ai-presentation-maker", changeFrequency: "monthly", priority: 0.95 },
     { path: "/industries", changeFrequency: "monthly", priority: 0.9 },
     { path: "/students", changeFrequency: "monthly", priority: 0.9 },
     { path: "/chatgpt", changeFrequency: "monthly", priority: 0.9 },
@@ -59,6 +61,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: p.path === "/changelog" ? CHANGELOG[0].date : (STATIC_PAGE_DATES[p.path.startsWith("/tools/seller-net-sheet/") ? "/tools/seller-net-sheet" : p.path] ?? NET_SHEET_UPDATED),
   }));
 
+  // Presentation use cases (class presentations, lecture slides, ...): the
+  // family under the /ai-presentation-maker hub.
+  for (const p of PRESENTATIONS) {
+    entries.push({ url: `${BASE}/presentations/${p.slug}`, changeFrequency: "monthly", priority: 0.85, lastModified: p.updated });
+  }
   entries.push({ url: `${BASE}/features`, changeFrequency: "monthly", priority: 0.85, lastModified: STATIC_PAGE_DATES["/features"] });
   for (const f of FEATURES) {
     entries.push({ url: `${BASE}/features/${f.slug}`, changeFrequency: "monthly", priority: 0.8, lastModified: FEATURE_PAGE_DATES[f.slug] ?? STATIC_PAGE_DATES["/features"] });

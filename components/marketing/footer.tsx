@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { PRESENTATIONS } from "@/lib/presentations";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 const SIGNUP_URL = `${APP_URL}/signup`;
@@ -68,7 +69,7 @@ export default function MarketingFooter() {
   return (
     <footer className="footer">
       <div className="mkt-container">
-        <div className="footer-grid" style={{ gridTemplateColumns: "2fr 1fr 1fr 1fr 1fr 1fr 1fr" }}>
+        <div className="footer-grid" style={{ gridTemplateColumns: "1.6fr repeat(7, 1fr)", gap: 32 }}>
           <div className="footer-brand">
             <Link href="/" className="nav-logo" style={{ color: "white" }}>
               <Image src="/icon.png" alt="PitchBoost" width={28} height={28} />
@@ -88,6 +89,20 @@ export default function MarketingFooter() {
                   <Link href={href}>{label}</Link>
                 </li>
               ))}
+            </ul>
+          </div>
+
+          <div className="footer-col">
+            <p className="footer-heading">Presentations</p>
+            <ul>
+              {PRESENTATIONS.map(({ navLabel, slug }) => (
+                <li key={slug}>
+                  <Link href={`/presentations/${slug}`}>{navLabel}</Link>
+                </li>
+              ))}
+              <li>
+                <Link href="/ai-presentation-maker" style={{ fontWeight: 600 }}>AI presentation maker →</Link>
+              </li>
             </ul>
           </div>
 
