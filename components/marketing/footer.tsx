@@ -75,8 +75,8 @@ export default function MarketingFooter() {
               PitchBoost
             </Link>
             <p>
-              AI-powered pitch deck builder for anyone who pitches. Create personalized,
-              branded presentations in a few minutes, publish instantly, and track viewer engagement.
+              AI presentation maker for anyone who presents. Start from a prompt or the deck
+              you have, get every slide designed in your brand, and see how it lands.
             </p>
           </div>
 

@@ -5,5 +5,5 @@ export const contentType = OG_CONTENT_TYPE;
 export const alt = "PitchBoost blog";
 
 export default function Image() {
-  return ogImage({ eyebrow: "Blog", title: "AI pitch deck and deal deck insights", subtitle: "Guides on creating personalized pitch decks and deal decks for B2B sales teams, agencies and dealmakers." });
+  return ogImage({ eyebrow: "Blog", title: "Guides for people who present", subtitle: "Class presentations, lectures, reports, pitch decks, and fixing the slides you already have." });
 }

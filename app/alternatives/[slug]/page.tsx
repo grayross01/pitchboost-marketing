@@ -61,7 +61,7 @@ export default async function AlternativesPage({ params }: Props) {
     },
     {
       q: `When is ${c.name} the better choice?`,
-      a: `${c.name} is the better fit for ${c.competitorBestFor.slice(0, 3).map((x) => x.toLowerCase()).join(", ")}. PitchBoost is built for one job, rebuilding or building a deck for a specific prospect in your brand, and does not try to be a general workspace.`,
+      a: `${c.name} is the better fit for ${c.competitorBestFor.slice(0, 3).map((x) => x.toLowerCase()).join(", ")}. PitchBoost does one thing, presentations: it builds a new deck from a prompt or redesigns the one you have in your brand, and it does not try to be a docs, website or whiteboard workspace.`,
     },
     {
       q: `Can I move my existing decks to an alternative?`,

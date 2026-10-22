@@ -4,9 +4,9 @@ import BlogCard from "@/components/marketing/blog-card";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/blog" },
-  title: "Blog | AI Pitch Deck & Deal Deck Insights",
+  title: { absolute: "Presentation Guides: Class Talks, Reports, Pitches and Redesigns | PitchBoost" },
   description:
-    "Expert guides on creating personalized pitch decks and deal decks. Tips, best practices, and insights for B2B sales teams, agencies, and dealmakers.",
+    "Plain-English guides to presentations that land: class presentations, lectures and thesis defenses, board updates and reports, pitch decks, and fixing the slides you already have.",
 };
 
 export default function BlogIndexPage() {
@@ -34,10 +34,10 @@ export default function BlogIndexPage() {
           <div className="section-label">
             <span>Blog</span>
           </div>
-          <h1>Insights for Dealmakers</h1>
+          <h1>Guides for people who present</h1>
           <p>
-            Guides, tips, and best practices for creating pitch decks and deal
-            decks that win.
+            How to make a class presentation, a lecture, a board update or a pitch
+            that people remember, and how to fix the slides you already have.
           </p>
         </div>
       </section>

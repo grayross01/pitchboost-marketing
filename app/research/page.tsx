@@ -4,7 +4,7 @@ import { RESEARCH } from "@/lib/research";
 import { STATIC_PAGE_DATES } from "@/lib/page-dates";
 
 export const metadata: Metadata = {
-  title: "Research | Original data from PitchBoost",
+  title: { absolute: "Research: original data from PitchBoost" },
   description: "Numbers only PitchBoost can publish: what people upload, where AI-referred signups come from, and what they do next. Dated, with sample sizes and method.",
   alternates: { canonical: "https://pitchboost.ai/research" },
   openGraph: {

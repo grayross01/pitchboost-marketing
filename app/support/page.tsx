@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Support | PitchBoost",
+  title: { absolute: "Support | PitchBoost" },
   description: "How to reach PitchBoost support, what to include, and how fast we answer.",
   alternates: { canonical: "https://pitchboost.ai/support" },
 };

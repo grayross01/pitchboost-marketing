@@ -8,9 +8,9 @@ const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 const SIGNUP_URL = `${APP_URL}/signup`;
 const SIGNUP_REBUILD = `${APP_URL}/signup?intent=rebuild`;
 
-const TITLE = "PitchBoost: Redesign Your PowerPoint or Build a New Deck, in Your Brand";
+const TITLE = "PitchBoost: AI Presentation Maker and PowerPoint Redesign";
 const DESCRIPTION =
-  "Upload the PowerPoint you already have and PitchBoost rebuilds every slide in your brand, or start from a brief and get a new deck written for your audience. Share it as a tracked link, a PDF or an editable PowerPoint.";
+  "Make a presentation from a prompt, or upload the PowerPoint you already have and get every slide redesigned in your brand. Lessons, reports, talks and pitches, shared as a link, a PDF or an editable PowerPoint.";
 
 export const metadata: Metadata = {
   title: { absolute: TITLE },
@@ -34,7 +34,7 @@ const softwareSchema = {
   url: "https://pitchboost.ai",
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web",
-  description: "AI presentation tool that redesigns an existing PowerPoint in your brand, or builds a new pitch deck, proposal or presentation from a brief, in a few minutes.",
+  description: "AI presentation maker that builds a new presentation from a prompt (a lesson, a report, a talk or a pitch) or redesigns an existing PowerPoint or PDF deck in your brand, in a few minutes.",
   offers: {
     "@type": "AggregateOffer",
     priceCurrency: "USD",
@@ -387,7 +387,7 @@ export default function MarketingPage() {
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
                 ),
                 title: "Founders and small teams",
-                body: "Show up to every sales conversation with a deck that makes you look like you have a full team behind you, because the quality of your materials shouldn&apos;t depend on headcount.",
+                body: "Show up to every sales conversation with a deck that makes you look like you have a full team behind you, because the quality of your materials shouldn't depend on headcount.",
               },
               {
                 icon: (
@@ -433,8 +433,8 @@ export default function MarketingPage() {
         <div className="mkt-container">
           <div className="section-header fade-up">
             <div className="section-label"><span>Features</span></div>
-            <h2>Everything you need to win the deal</h2>
-            <p>From first draft to follow-up, PitchBoost covers the full workflow for creating and delivering sales materials that actually move deals forward.</p>
+            <h2>Everything between the first draft and the room</h2>
+            <p>From the first draft to the follow-up, PitchBoost makes the deck, delivers it and tells you how it landed, whether the room is a class, a board or a buyer.</p>
           </div>
           <div className="features-grid fade-up">
             {[
@@ -442,8 +442,8 @@ export default function MarketingPage() {
                 color: "blue",
                 href: "/features/ai-deck-builder",
                 icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z" /><path d="M2 17l10 5 10-5" /><path d="M2 12l10 5 10-5" /></svg>,
-                title: "AI-generated pitch decks",
-                body: "Describe your opportunity and get a fully structured deck with copy written for this specific prospect, not a blank template to fill in.",
+                title: "New decks from a prompt",
+                body: "Say what the presentation is for and who will see it. A lesson comes back ending on takeaways, a report on the decision you need, a pitch written for one specific prospect.",
               },
               {
                 color: "purple",
@@ -478,7 +478,7 @@ export default function MarketingPage() {
                 href: "/features/viewer-analytics",
                 icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" /></svg>,
                 title: "Viewer analytics",
-                body: "Know which slides your prospect spent time on before you pick up the phone. Follow up with the right message, at the right moment.",
+                body: "See who opened your deck and which slides held their attention, so the follow-up lands at the right moment.",
               },
             ].map(({ color, href, icon, title, body }) => (
               <Link key={title} href={href} className="feature-card">

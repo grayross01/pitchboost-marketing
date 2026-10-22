@@ -2,7 +2,7 @@
   "serverInfo": {
     "name": "pitchboost",
     "version": "1.0.0",
-    "description": "Generate and read personalized PitchBoost decks and sales presentations."
+    "description": "Make, redesign and read PitchBoost presentations: lessons, reports, talks and pitches, in any language."
   },
   "transport": {
     "type": "streamable-http",
