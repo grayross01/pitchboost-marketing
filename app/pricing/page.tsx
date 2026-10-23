@@ -18,7 +18,7 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "How do credits work?",
-    a: "Every plan includes a monthly credit allowance and every AI action has a fixed price: a deck costs 100 credits, a slide edit 10, a full-deck edit 50, a website scan 10. Fact checking and chart extraction are free. Paid plans roll unused credits over for a month and can buy top-up packs. In the app you see a simple percentage of your allowance, never a running dollar figure.",
+    a: "Every plan includes a monthly credit allowance and every AI action has a fixed price: a deck of up to 10 slides costs 100 credits, each slide past 10 adds 8 (4 on the new deck engine), an AI image is 10, a slide edit 10, a full-deck edit 50, a website scan 10. Fact checking and chart extraction are free. Paid plans roll unused credits over for a month and can buy top-up packs. In the app you see a simple percentage of your allowance, never a running dollar figure.",
   },
   {
     q: "What does Starter add over Free?",

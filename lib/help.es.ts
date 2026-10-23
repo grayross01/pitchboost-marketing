@@ -160,7 +160,7 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       },
       {
         "q": "¿Una presentación condensada cuenta como una presentación completa?",
-        "a": "Sí. Un rediseño es una presentación con IA, sin importar su longitud, y usa 100 créditos."
+        "a": "Sí. Un rediseño es una presentación con IA, con un precio según su longitud: 100 créditos hasta 10 diapositivas, más 8 por cada diapositiva adicional."
       }
     ],
     "related": [
@@ -168,7 +168,7 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       "credits-and-plans",
       "download-powerpoint-or-pdf"
     ],
-    "updated": "2026-09-16"
+    "updated": "2026-10-23"
   },
   {
     "slug": "download-powerpoint-or-pdf",
@@ -377,7 +377,7 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       },
       {
         "q": "¿Usa mis créditos?",
-        "a": "Sí, igual que en la aplicación: una reconstrucción o una presentación nueva cuesta 100 créditos y cuenta como una de tus presentaciones mensuales. Listar y obtener presentaciones es gratis."
+        "a": "Sí, igual que en la aplicación: una reconstrucción o una presentación nueva cuesta 100 créditos hasta 10 diapositivas, más 8 por cada diapositiva adicional. Listar y obtener presentaciones es gratis."
       }
     ],
     "related": [
@@ -385,14 +385,14 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       "redesign-a-powerpoint",
       "credits-and-plans"
     ],
-    "updated": "2026-09-16"
+    "updated": "2026-10-23"
   },
   {
     "slug": "credits-and-plans",
     "category": "account",
     "title": "Cómo funcionan los créditos y planes",
-    "metaDescription": "Cada plan incluye créditos mensuales: una presentación cuesta 100, editar una diapositiva 10. Qué incluyen Free, Starter, Pro y Business, qué se acumula y cómo comprar más.",
-    "answer": "Cada plan de PitchBoost incluye una asignación mensual de créditos y cada acción de IA tiene un precio fijo: una presentación (nueva o mejorada) cuesta 100 créditos, editar una diapositiva 10, editar la presentación completa 50, escanear un sitio web 10. Free incluye 150 créditos al mes (una presentación), Starter 300, Pro 2,500 y Business 7,000. Los planes de pago acumulan los créditos no usados durante un mes y pueden comprar paquetes adicionales. En la aplicación ves el porcentaje de tu asignación usado, nunca una cifra en dólares.",
+    "metaDescription": "Créditos mensuales en cada plan: una presentación de hasta 10 diapositivas cuesta 100 y cada diapositiva extra suma 8. Qué incluye cada plan y cómo comprar más.",
+    "answer": "Cada plan de PitchBoost incluye una asignación mensual de créditos y cada acción de IA tiene un precio fijo: una presentación (nueva o mejorada) de hasta 10 diapositivas cuesta 100 créditos, cada diapositiva adicional suma 8 (4 con el nuevo motor de presentaciones), una imagen con IA 10, editar una diapositiva 10, editar la presentación completa 50, escanear un sitio web 10. Free incluye 150 créditos al mes (una presentación), Starter 300, Pro 2,500 y Business 7,000. Los planes de pago acumulan los créditos no usados durante un mes y pueden comprar paquetes adicionales. En la aplicación ves el porcentaje de tu asignación usado, nunca una cifra en dólares.",
     "sections": [
       {
         "heading": "Los planes",
@@ -402,6 +402,13 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
           "Pro, $29 al mes: 2,500 créditos, presentaciones de hasta 60 diapositivas, análisis completo del visor con tiempo por diapositiva, plantillas guardadas, dominios personalizados, acceso a API y MCP.",
           "Business, $79 al mes: 7,000 créditos, puestos y permisos de equipo, exportar análisis y enviar desde tu propio dominio.",
           "La facturación anual es más económica: Starter $70 al año (unos $5.83 al mes), Pro $24 y Business $66 al mes cuando se paga anualmente."
+        ]
+      },
+      {
+        "heading": "Cuánto cuesta una presentación",
+        "paragraphs": [
+          "Una presentación tiene un precio según su tamaño, de esta lista, sin presupuesto antes de crearla: hasta 10 diapositivas son 100 créditos; cada diapositiva adicional, 8 más (4 con el nuevo motor de presentaciones en Ajustes); cada imagen con IA, 10. Los documentos adjuntos están incluidos hasta unas 10 páginas de texto y después suman cerca de 1 crédito por página.",
+          "Al empezar, se apartan los créditos del tamaño esperado y luego se ajusta a lo que entrega: si sale más corta, se devuelve la diferencia. Una presentación de 24 diapositivas son 212 créditos; una de 60, 500. Si no te alcanza, el mensaje dice cuánto necesita y cuánto te queda."
         ]
       },
       {
@@ -436,7 +443,7 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       "download-powerpoint-or-pdf",
       "share-a-deck-link"
     ],
-    "updated": "2026-09-16"
+    "updated": "2026-10-23"
   },
   {
     "slug": "how-long-does-a-deck-take",
