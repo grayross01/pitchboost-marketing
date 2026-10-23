@@ -2,13 +2,19 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Free Tools for Real Estate Agents",
+  title: "Free Tools: AI Presentation Maker, Redesign Preview and Real Estate Tools",
   description:
-    "Free, no-signup tools for real estate agents: a closing-timeline generator, a seller net-sheet calculator, and an open-house sign-in page with a QR code. Branded to you, built to win business.",
+    "Free, no-signup tools: make a presentation with AI, preview a PowerPoint redesign, grade a deck, and real estate tools for agents (closing timelines, net sheets, open-house sign-in).",
   alternates: { canonical: "/tools" },
 };
 
 const TOOLS = [
+  {
+    href: "/tools/free-ai-presentation-maker",
+    title: "Free AI presentation maker",
+    desc: "Say what your presentation is about and get a designed deck at a link in about two minutes. A lesson, a report, a talk or a pitch. No account.",
+    tag: "For anyone who presents",
+  },
   {
     href: "/tools/redesign-preview",
     title: "PowerPoint redesign preview",
@@ -68,11 +74,11 @@ export default function ToolsIndexPage() {
       <section className="legal-hero">
         <div className="mkt-container" style={{ textAlign: "center" }}>
           <h1 style={{ fontSize: "clamp(1.9rem, 3.5vw, 2.6rem)", fontWeight: 800, color: "var(--ds-dark)", lineHeight: 1.15 }}>
-            Free tools for real estate agents
+            Free tools, no sign-up
           </h1>
           <p style={{ color: "var(--ds-text-light)", fontSize: "1.05rem", maxWidth: 640, margin: "12px auto 0", lineHeight: 1.7 }}>
-            No signup, no fluff. Each one is branded to you and built to win business, then it flows
-            right into PitchBoost when you want tracking and follow-up.
+            Make a presentation, preview a redesign of the one you have, or grade a deck. Real estate
+            agents get closing timelines, net sheets and open-house sign-in too.
           </p>
         </div>
       </section>

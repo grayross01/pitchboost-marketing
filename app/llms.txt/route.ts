@@ -109,6 +109,7 @@ export function GET() {
     "",
     "## Free tools, no sign-up",
     "",
+    `- [Free AI presentation maker](${BASE}/tools/free-ai-presentation-maker): say what the presentation is about and get a designed deck at a link in about two minutes; two a day, no account`,
     `- [PowerPoint redesign preview](${BASE}/tools/redesign-preview): upload a .pptx and see the title slide and the busiest content slide redesigned in about a minute, every number kept; no account`,
     `- [Pitch deck evaluator](${BASE}/tools/deck-evaluator): graded evaluation of any .pptx with prioritized fixes and the claims to verify`,
     `- [Free tools hub](${BASE}/tools): every free, no-signup tool in one place`,
