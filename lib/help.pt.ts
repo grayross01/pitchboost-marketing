@@ -160,7 +160,7 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
       },
       {
         "q": "Um deck condensado conta como um deck completo?",
-        "a": "Sim. Uma reconstrução é um deck com IA, qualquer que seja seu tamanho, e usa 100 créditos."
+        "a": "Sim. Uma reconstrução é uma apresentação com IA, com preço pelo tamanho: 100 créditos até 10 slides, mais 8 por slide a partir daí."
       }
     ],
     "related": [
@@ -168,7 +168,7 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
       "credits-and-plans",
       "download-powerpoint-or-pdf"
     ],
-    "updated": "2026-09-16"
+    "updated": "2026-10-23"
   },
   {
     "slug": "download-powerpoint-or-pdf",
@@ -377,7 +377,7 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
       },
       {
         "q": "Usa meus créditos?",
-        "a": "Sim, o mesmo que no app: uma reconstrução ou uma nova apresentação custa 100 créditos e conta como uma das suas apresentações mensais. Listar e buscar apresentações é gratuito."
+        "a": "Sim, o mesmo que no app: uma reconstrução ou uma nova apresentação custa 100 créditos até 10 slides, mais 8 por slide a partir daí. Listar e buscar apresentações é gratuito."
       }
     ],
     "related": [
@@ -385,14 +385,14 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
       "redesign-a-powerpoint",
       "credits-and-plans"
     ],
-    "updated": "2026-09-16"
+    "updated": "2026-10-23"
   },
   {
     "slug": "credits-and-plans",
     "category": "account",
     "title": "Como funcionam os créditos e planos",
-    "metaDescription": "Todo plano inclui créditos mensais; uma apresentação custa 100, uma edição de slide 10. O que Free, Starter, Pro e Business incluem, o que é acumulado e como comprar mais.",
-    "answer": "Todo plano do PitchBoost inclui uma cota mensal de créditos e cada ação de IA tem um preço fixo: uma apresentação (nova ou reconstruída) custa 100 créditos, uma edição de slide 10, uma edição de apresentação completa 50, uma varredura de site 10. Free inclui 150 créditos por mês (uma apresentação), Starter 300, Pro 2.500 e Business 7.000. Planos pagos acumulam créditos não usados por um mês e podem comprar pacotes extras. No aplicativo você vê a porcentagem da sua cota usada, nunca um valor em dólar corrente.",
+    "metaDescription": "Todo plano inclui créditos mensais; uma apresentação de até 10 slides custa 100 e cada slide a mais soma 8. O que cada plano inclui e como comprar mais.",
+    "answer": "Todo plano do PitchBoost inclui uma cota mensal de créditos e cada ação de IA tem um preço fixo: uma apresentação (nova ou reconstruída) de até 10 slides custa 100 créditos, cada slide a mais soma 8 (4 no novo motor de apresentações), uma imagem com IA 10, uma edição de slide 10, uma edição de apresentação completa 50, uma varredura de site 10. Free inclui 150 créditos por mês (uma apresentação), Starter 300, Pro 2.500 e Business 7.000. Planos pagos acumulam créditos não usados por um mês e podem comprar pacotes extras. No aplicativo você vê a porcentagem da sua cota usada, nunca um valor em dólar corrente.",
     "sections": [
       {
         "heading": "Os planos",
@@ -402,6 +402,13 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
           "Pro, $29 por mês: 2.500 créditos, apresentações de até 60 slides, análises completas do visualizador com tempo por slide, modelos salvos, domínios personalizados, acesso à API e MCP.",
           "Business, $79 por mês: 7.000 créditos, assentos e permissões de equipe, exportação de análises e envio a partir do seu próprio domínio.",
           "Cobrança anual é mais barata: Starter $70 por ano (cerca de $5,83 por mês), Pro $24 e Business $66 por mês quando pago anualmente."
+        ]
+      },
+      {
+        "heading": "Quanto custa uma apresentação",
+        "paragraphs": [
+          "Uma apresentação tem preço pelo tamanho, por esta lista, sem orçamento antes de ser criada: até 10 slides são 100 créditos; cada slide a mais, 8 (4 no novo motor de apresentações, em Configurações); cada imagem com IA, 10. Documentos anexados estão incluídos até cerca de 10 páginas de texto e depois somam cerca de 1 crédito por página.",
+          "Ao começar, os créditos do tamanho esperado ficam reservados, e o valor se ajusta ao que ela entrega: se sair menor, a diferença volta. Uma apresentação de 24 slides custa 212 créditos; uma de 60, 500. Se faltar crédito, a mensagem diz quanto ela precisa e quanto você tem."
         ]
       },
       {
@@ -436,7 +443,7 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
       "download-powerpoint-or-pdf",
       "share-a-deck-link"
     ],
-    "updated": "2026-09-16"
+    "updated": "2026-10-23"
   },
   {
     "slug": "how-long-does-a-deck-take",

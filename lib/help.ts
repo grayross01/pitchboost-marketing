@@ -184,11 +184,11 @@ export const HELP_ARTICLES: HelpArticle[] = [
       },
       {
         q: "Does a condensed deck count as a full deck?",
-        a: "Yes. One rebuild is one AI deck, whatever its length, and it uses 100 credits.",
+        a: "Yes. A rebuild is one AI deck, priced by its length: 100 credits up to 10 slides, plus 8 for each slide after that.",
       },
     ],
     related: ["redesign-a-powerpoint", "credits-and-plans", "download-powerpoint-or-pdf"],
-    updated: "2026-09-30",
+    updated: "2026-10-23",
   },
 
   {
@@ -403,11 +403,11 @@ export const HELP_ARTICLES: HelpArticle[] = [
       },
       {
         q: "Does it use my credits?",
-        a: "Yes, the same as the app: a rebuild or a new deck is 100 credits and counts as one of your monthly decks. Listing and fetching decks is free.",
+        a: "Yes, the same as the app: a rebuild or a new deck is 100 credits up to 10 slides, plus 8 for each slide after that. Listing and fetching decks is free.",
       },
     ],
     related: ["connect-chatgpt", "redesign-a-powerpoint", "credits-and-plans"],
-    updated: "2026-09-16",
+    updated: "2026-10-23",
   },
 
   {
@@ -415,9 +415,9 @@ export const HELP_ARTICLES: HelpArticle[] = [
     category: "account",
     title: "How credits and plans work",
     metaDescription:
-      "Every plan includes monthly credits; a deck costs 100, a slide edit 10. What Free, Starter, Pro and Business include, what rolls over, and how to buy more.",
+      "Monthly credits on every plan: a deck of up to 10 slides costs 100, each slide past 10 adds 8. What each plan includes, what rolls over, and how to buy more.",
     answer:
-      "Every PitchBoost plan includes a monthly credit allowance and every AI action has a fixed price: a deck (new or rebuilt) costs 100 credits, a slide edit 10, a full-deck edit 50, a website scan 10. Free includes 150 credits a month (one deck), Starter 300, Pro 2,500 and Business 7,000. Paid plans roll unused credits over for a month and can buy top-up packs. In the app you see the percentage of your allowance used, never a running dollar figure.",
+      "Every PitchBoost plan includes a monthly credit allowance and every AI action has a fixed price: a deck (new or rebuilt) of up to 10 slides costs 100 credits, each slide past 10 adds 8 (4 on the new deck engine), an AI image is 10, a slide edit 10, a full-deck edit 50, a website scan 10. Free includes 150 credits a month (one deck), Starter 300, Pro 2,500 and Business 7,000. Paid plans roll unused credits over for a month and can buy top-up packs. In the app you see the percentage of your allowance used, never a running dollar figure.",
     sections: [
       {
         heading: "The plans",
@@ -427,6 +427,13 @@ export const HELP_ARTICLES: HelpArticle[] = [
           "Pro, $29 a month: 2,500 credits, decks up to 60 slides, full viewer analytics with time per slide, saved templates, custom domains, API and MCP access.",
           "Business, $79 a month: 7,000 credits, team seats and permissions, analytics export, and sending from your own domain.",
           "Annual billing is cheaper: Starter $70 a year (about $5.83 a month), Pro $24 and Business $66 a month when paid yearly.",
+        ],
+      },
+      {
+        heading: "What a deck costs",
+        paragraphs: [
+          "A deck is priced by its size, from this list, with no quote before it builds: up to 10 slides is 100 credits; each slide past 10 is 8 more (4 on the new deck engine in Settings); each AI image is 10. Attached documents are included up to about 10 pages of text, then add about 1 credit a page.",
+          "When a deck starts, the credits for the size it is expected to be are set aside, and it settles to what it delivers: a deck that comes out shorter gives the difference back. A 24-slide deck is 212 credits; a 60-slide deck is 500. If you are short, the message says what the deck needs and what you have left.",
         ],
       },
       {
@@ -457,7 +464,7 @@ export const HELP_ARTICLES: HelpArticle[] = [
       },
     ],
     related: ["slide-limits-by-plan", "download-powerpoint-or-pdf", "share-a-deck-link"],
-    updated: "2026-09-16",
+    updated: "2026-10-23",
   },
 
   {
