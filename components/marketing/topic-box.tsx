@@ -15,12 +15,14 @@ export function presentSignupUrl(prompt: string, forLabel?: string): string {
 export default function TopicBox({
   placeholder,
   forLabel,
+  label = "What is your presentation about?",
   buttonLabel = "Make my presentation",
   dark = false,
   id = "topic",
 }: {
   placeholder: string;
   forLabel?: string;
+  label?: string;
   buttonLabel?: string;
   dark?: boolean;
   id?: string;
@@ -34,7 +36,7 @@ export default function TopicBox({
       <input type="hidden" name="intent" value="present" />
       {forLabel && <input type="hidden" name="for" value={forLabel} />}
       <label htmlFor={id} style={{ position: "absolute", width: 1, height: 1, overflow: "hidden", clip: "rect(0 0 0 0)", whiteSpace: "nowrap" }}>
-        What is your presentation about?
+        {label}
       </label>
       <input
         id={id}
