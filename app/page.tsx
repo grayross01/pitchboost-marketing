@@ -8,9 +8,11 @@ const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 const SIGNUP_URL = `${APP_URL}/signup`;
 const SIGNUP_REBUILD = `${APP_URL}/signup?intent=rebuild`;
 
-const TITLE = "PitchBoost: AI Presentation Maker and PowerPoint Redesign";
+// Redesign-first on purpose: most ChatGPT referrals land here, and this is
+// the wording that earned them. /ai-presentation-maker carries that search.
+const TITLE = "PitchBoost: Redesign Your PowerPoint or Build a New Deck, in Your Brand";
 const DESCRIPTION =
-  "Make a presentation from a prompt, or upload the PowerPoint you already have and get every slide redesigned in your brand. Lessons, reports, talks and pitches, shared as a link, a PDF or an editable PowerPoint.";
+  "Upload the PowerPoint you already have and PitchBoost rebuilds every slide in your brand, or start from a brief and get a new deck written for your audience. Share it as a tracked link, a PDF or an editable PowerPoint.";
 
 export const metadata: Metadata = {
   title: { absolute: TITLE },
