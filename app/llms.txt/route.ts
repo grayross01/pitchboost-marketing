@@ -58,6 +58,8 @@ export function GET() {
     "One page per kind of presentation, each with the slide-by-slide shape PitchBoost builds for it, example prompts and an FAQ.",
     `- [AI presentation maker](${BASE}/ai-presentation-maker): the hub, with how it works and an honest comparison with Gamma, ChatGPT and Copilot`,
     ...PRESENTATIONS.map((p) => `- [${p.navLabel}](${BASE}/presentations/${p.slug}): ${p.metaDescription}`),
+    `- [Creador de presentaciones con IA (Español)](${BASE}/es/ai-presentation-maker): the same presentation pages in Spanish`,
+    `- [Criador de apresentações com IA (Português)](${BASE}/pt/ai-presentation-maker): the same presentation pages in Brazilian Portuguese`,
     "",
     "## Redesign an existing deck",
     "",

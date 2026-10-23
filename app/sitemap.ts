@@ -10,6 +10,8 @@ import { HELP_ARTICLES } from "@/lib/help";
 import { CHANGELOG } from "@/lib/changelog";
 import { RESEARCH } from "@/lib/research";
 import { PRESENTATIONS } from "@/lib/presentations";
+import { getPresentationFor } from "@/lib/presentations-i18n";
+import { LOCALES, LOCALE_PREFIX } from "@/lib/redesign-i18n";
 import { getAllPosts } from "@/lib/blog";
 import { STATIC_PAGE_DATES, FEATURE_PAGE_DATES, INDUSTRIES_UPDATED, COMPETITORS_UPDATED, REDESIGNS_UPDATED, HELP_UPDATED, CITIES_UPDATED, NET_SHEET_UPDATED } from "@/lib/page-dates";
 
@@ -27,7 +29,6 @@ const BASE = "https://pitchboost.ai";
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: Array<{ path: string; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"]; priority: number }> = [
     { path: "", changeFrequency: "weekly", priority: 1.0 },
-    { path: "/ai-presentation-maker", changeFrequency: "monthly", priority: 0.95 },
     { path: "/industries", changeFrequency: "monthly", priority: 0.9 },
     { path: "/students", changeFrequency: "monthly", priority: 0.9 },
     { path: "/chatgpt", changeFrequency: "monthly", priority: 0.9 },
@@ -63,9 +64,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   // Presentation use cases (class presentations, lecture slides, ...): the
-  // family under the /ai-presentation-maker hub.
+  // family under the /ai-presentation-maker hub, in English, Spanish and
+  // Portuguese. As with the redesign cluster, a page lists only the locales
+  // it actually exists in.
+  const hubLanguages: Record<string, string> = { "x-default": `${BASE}/ai-presentation-maker` };
+  for (const l of LOCALES) hubLanguages[l] = `${BASE}${LOCALE_PREFIX[l]}/ai-presentation-maker`;
+  for (const l of LOCALES) {
+    entries.push({ url: hubLanguages[l], changeFrequency: "monthly", priority: l === "en" ? 0.95 : 0.85, lastModified: STATIC_PAGE_DATES["/ai-presentation-maker"], alternates: { languages: hubLanguages } });
+  }
   for (const p of PRESENTATIONS) {
-    entries.push({ url: `${BASE}/presentations/${p.slug}`, changeFrequency: "monthly", priority: 0.85, lastModified: p.updated });
+    const locales = LOCALES.filter((l) => !!getPresentationFor(l, p.slug));
+    const languages: Record<string, string> = { "x-default": `${BASE}/presentations/${p.slug}` };
+    for (const l of locales) languages[l] = `${BASE}${LOCALE_PREFIX[l]}/presentations/${p.slug}`;
+    for (const l of locales) {
+      entries.push({ url: languages[l], changeFrequency: "monthly", priority: l === "en" ? 0.85 : 0.75, lastModified: getPresentationFor(l, p.slug)?.updated ?? p.updated, alternates: { languages } });
+    }
   }
   entries.push({ url: `${BASE}/features`, changeFrequency: "monthly", priority: 0.85, lastModified: STATIC_PAGE_DATES["/features"] });
   for (const f of FEATURES) {
