@@ -294,7 +294,12 @@ body {
 .marketing .nav-links {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 30px;
+}
+/* Six items since Presentations joined: keep every label on one line. */
+.marketing .nav-links a,
+.marketing .nav-links .nav-industry-trigger {
+  white-space: nowrap;
 }
 .marketing .nav-links a {
   font-size: 0.9375rem;
@@ -1779,11 +1784,11 @@ body {
 }
 
 /* --- Nav collapses earlier than the rest of mobile layout --- */
-/* Logo + 5 desktop nav links + 2 action buttons can't comfortably fit  */
-/* below ~960px, and pinch-zoom on tablets shrinks effective space     */
+/* Logo + 6 desktop nav links + 2 action buttons can't comfortably fit  */
+/* below ~1140px, and pinch-zoom on tablets shrinks effective space    */
 /* further, causing Blog and Log In to overlap. Hide the inline nav     */
 /* sooner and surface the hamburger / mobile menu instead.              */
-@media (max-width: 960px) {
+@media (max-width: 1140px) {
   .marketing .nav-links, .marketing .nav-actions { display: none; }
   .marketing .mobile-toggle { display: flex; }
 }
@@ -1799,7 +1804,7 @@ body {
   .marketing .hero-proof-bar { flex-wrap: wrap; gap: 16px; }
   .marketing .proof-sep { display: none; }
   .marketing .section-header h2 { font-size: 1.85rem; }
-  /* nav-links/nav-actions hide handled by the 960px breakpoint above */
+  /* nav-links/nav-actions hide handled by the 1140px breakpoint above */
   .marketing .features-grid { grid-template-columns: 1fr; }
   .marketing .comparison-grid { grid-template-columns: 1fr; }
   .marketing .compare-two-col { grid-template-columns: 1fr !important; }

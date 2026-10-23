@@ -144,6 +144,7 @@ export default function MarketingNavbar() {
               )}
             </div>
 
+            <Link href="/ai-presentation-maker">Presentations</Link>
             <Link href="/pricing">Pricing</Link>
 
             {/* By Industry dropdown */}
@@ -262,6 +263,7 @@ export default function MarketingNavbar() {
           </div>
         )}
 
+        <Link href="/ai-presentation-maker" onClick={closeMobile} style={navItemStyle}>Presentations</Link>
         <Link href="/pricing" onClick={closeMobile} style={navItemStyle}>Pricing</Link>
 
         {/* Who it's for accordion */}
