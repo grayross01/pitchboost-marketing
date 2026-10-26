@@ -137,9 +137,13 @@ export default function ChatGptPage() {
             PitchBoost is a plugin in ChatGPT&apos;s plugin directory, free ChatGPT accounts included. Attach your slides, ask in plain words, and get them back redesigned in your brand as an editable PowerPoint, a PDF and a link you can track.
           </p>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 16, flexWrap: "wrap" }}>
-            <Link href="/help/connect-chatgpt" className="btn btn-primary btn-lg">How to Add the Plugin</Link>
+            {/* /gpt redirects to the plugin listing in ChatGPT (next.config.ts). */}
+            <a href="/gpt" className="btn btn-primary btn-lg">Add PitchBoost to ChatGPT</a>
             <a href={SIGNUP_REBUILD} className="btn btn-ghost btn-lg">Or Upload on the Web</a>
           </div>
+          <p style={{ fontSize: 14, color: "var(--ds-text-secondary)", marginTop: 16 }}>
+            Opens the plugin in ChatGPT. <Link href="/help/connect-chatgpt" style={{ color: "#1F6B6B", fontWeight: 600 }}>Setup steps</Link>
+          </p>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 40, marginTop: 48, flexWrap: "wrap" }}>
             {["Works on free ChatGPT accounts", "Your content and numbers kept", "A free live link; PowerPoint and PDF from $9"].map((item) => (
               <div key={item} style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 14, color: "var(--ds-text-secondary)", fontWeight: 500 }}>
@@ -260,7 +264,7 @@ export default function ChatGptPage() {
           <div className="cta-box fade-up">
             <h2>Your next deck, designed from the chat.</h2>
             <p>Add PitchBoost in ChatGPT, or upload your slides on the web. Either way, free for your first deck.</p>
-            <Link href="/help/connect-chatgpt" className="btn btn-primary btn-lg">How to Add the Plugin</Link>
+            <a href="/gpt" className="btn btn-primary btn-lg">Add PitchBoost to ChatGPT</a>
           </div>
         </div>
       </section>
