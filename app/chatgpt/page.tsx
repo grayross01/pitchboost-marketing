@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ChatGptPluginButton } from "@/components/marketing/chatgpt-plugin-button";
+import { ChatGptStickyCta } from "@/components/marketing/chatgpt-sticky-cta";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 const SIGNUP_REBUILD = `${APP_URL}/signup?intent=rebuild`;
@@ -15,6 +17,15 @@ export const metadata: Metadata = {
   description: DESCRIPTION,
   openGraph: { title: TITLE, description: DESCRIPTION, url: URL },
 };
+
+function ArrowIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ width: 22, height: 22, flexShrink: 0 }}>
+      <line x1="5" y1="12" x2="19" y2="12" />
+      <polyline points="12 5 19 12 12 19" />
+    </svg>
+  );
+}
 
 function CheckIcon() {
   return (
@@ -124,57 +135,49 @@ export default function ChatGptPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howTo) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      {/* Hero */}
-      <section style={{ padding: "120px 0 80px", background: "var(--ds-bg-light)", textAlign: "center" }}>
-        <div className="mkt-container">
-          <div style={{ marginBottom: 20, display: "flex", justifyContent: "center" }}>
-            <div className="section-label"><span>PitchBoost in ChatGPT</span></div>
+      {/* Hero: built for visitors arriving from an ad inside ChatGPT. One job:
+          get them to the plugin listing. */}
+      <section className="chatgpt-hero">
+        <div className="mkt-container chatgpt-hero-grid">
+          <div className="chatgpt-hero-copy">
+            <div className="section-label" style={{ marginBottom: 20 }}><span>A plugin for ChatGPT</span></div>
+            <h1>Redesign your PowerPoint without leaving ChatGPT</h1>
+            <p className="chatgpt-hero-lede">
+              Add PitchBoost, attach your slides and ask in plain words. You get them back redesigned in your brand, with your content and numbers kept.
+            </p>
+            <ChatGptPluginButton via="chatgpt_hero" className="btn btn-primary btn-primary-animated chatgpt-cta">
+              Add PitchBoost to ChatGPT
+              <ArrowIcon />
+            </ChatGptPluginButton>
+            {/* Marks the bottom of the hero button for the sticky phone bar. */}
+            <span id="chatgpt-hero-cta" style={{ display: "block", height: 1 }} />
+            <p className="chatgpt-cta-note">Free, and works on free ChatGPT accounts. Opens the plugin in ChatGPT.</p>
+            <ul className="chatgpt-hero-points">
+              {["Your first deck is free", "Editable PowerPoint, PDF and a trackable link", "Keeps your text and numbers"].map((item) => (
+                <li key={item}><CheckIcon />{item}</li>
+              ))}
+            </ul>
+            <p className="chatgpt-hero-alt">
+              Prefer the web? <a href={SIGNUP_REBUILD}>Upload your slides here</a>
+            </p>
           </div>
-          <h1 style={{ fontSize: "clamp(1.9rem, 3.8vw, 2.75rem)", fontWeight: 800, color: "var(--ds-dark)", maxWidth: 800, margin: "0 auto 20px", lineHeight: 1.15, fontFamily: "var(--font-inter, 'Inter'), sans-serif" }}>
-            Redesign your PowerPoint without leaving ChatGPT
-          </h1>
-          <p style={{ color: "var(--ds-text-light)", fontSize: "1.1rem", maxWidth: 660, margin: "0 auto 36px", lineHeight: 1.7 }}>
-            PitchBoost is a plugin in ChatGPT&apos;s plugin directory, free ChatGPT accounts included. Attach your slides, ask in plain words, and get them back redesigned in your brand as an editable PowerPoint, a PDF and a link you can track.
-          </p>
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 16, flexWrap: "wrap" }}>
-            {/* /gpt is a short hand-off page that forwards to the plugin listing. */}
-            <a href="/gpt" className="btn btn-primary btn-lg">Add PitchBoost to ChatGPT</a>
-            <a href={SIGNUP_REBUILD} className="btn btn-ghost btn-lg">Or Upload on the Web</a>
-          </div>
-          <p style={{ fontSize: 14, color: "var(--ds-text-secondary)", marginTop: 16 }}>
-            Opens the plugin in ChatGPT. <Link href="/help/connect-chatgpt" style={{ color: "#1F6B6B", fontWeight: 600 }}>Setup steps</Link>
-          </p>
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 40, marginTop: 48, flexWrap: "wrap" }}>
-            {["Works on free ChatGPT accounts", "Your content and numbers kept", "A free live link; PowerPoint and PDF from $9"].map((item) => (
-              <div key={item} style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 14, color: "var(--ds-text-secondary)", fontWeight: 500 }}>
-                <span style={{ width: 7, height: 7, borderRadius: "50%", background: "#1F6B6B", display: "inline-block", flexShrink: 0 }} />
-                {item}
-              </div>
-            ))}
+          <div className="chatgpt-hero-shot">
+            <ChatGptPluginButton via="chatgpt_hero_image" className="chatgpt-hero-shot-link">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/chatgpt/pitchboost-plugin-listing.jpg"
+                alt="The PitchBoost plugin listing in ChatGPT's plugin directory, with example prompts and a Try in chat button"
+                width={1200}
+                height={1022}
+              />
+            </ChatGptPluginButton>
+            <p className="chatgpt-hero-shot-caption">This is what opens: choose Try in chat.</p>
           </div>
         </div>
       </section>
 
-      {/* Listing screenshot */}
-      <section className="mkt-section">
-        <div className="mkt-container">
-          <div className="section-header wide-header fade-up">
-            <div className="section-label"><span>In the plugin directory</span></div>
-            <h2>Find it in ChatGPT, then just ask</h2>
-            <p>Search for PitchBoost in ChatGPT&apos;s plugin directory and choose Try in chat, or mention PitchBoost in any chat once it is added.</p>
-          </div>
-          <div className="fade-up" style={{ maxWidth: 760, margin: "40px auto 0" }}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/chatgpt/pitchboost-plugin-listing.jpg"
-              alt="The PitchBoost plugin listing in ChatGPT's plugin directory, with example prompts and a Try in chat button"
-              width={1200}
-              height={1022}
-              style={{ width: "100%", height: "auto", borderRadius: 16, border: "1px solid var(--ds-border)", boxShadow: "0 8px 32px rgba(0,0,0,0.08)" }}
-            />
-          </div>
-        </div>
-      </section>
+      {/* Mobile: keep the one action in reach while scrolling. */}
+      <ChatGptStickyCta watchId="chatgpt-hero-cta" />
 
       {/* Why work in ChatGPT */}
       <section className="mkt-section" style={{ background: "var(--ds-bg-light)" }}>
@@ -264,7 +267,7 @@ export default function ChatGptPage() {
           <div className="cta-box fade-up">
             <h2>Your next deck, designed from the chat.</h2>
             <p>Add PitchBoost in ChatGPT, or upload your slides on the web. Either way, free for your first deck.</p>
-            <a href="/gpt" className="btn btn-primary btn-lg">Add PitchBoost to ChatGPT</a>
+            <ChatGptPluginButton via="chatgpt_footer_cta">Add PitchBoost to ChatGPT</ChatGptPluginButton>
           </div>
         </div>
       </section>

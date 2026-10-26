@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PluginButton, PluginRedirect } from "./redirect-client";
+import { ChatGptPluginButton } from "@/components/marketing/chatgpt-plugin-button";
+import { CHATGPT_PLUGIN_URL as PLUGIN_URL } from "@/lib/chatgpt";
+import { PluginRedirect } from "./redirect-client";
 
 /** Short hand-off page to the PitchBoost plugin in ChatGPT. It replaces a
  *  plain redirect so ad platforms can crawl a real page on our domain. */
-const PLUGIN_URL = "https://chatgpt.com/plugins/plugin_asdk_app_6aaa1c8e8e6c81918ceb99441a587e47";
 const REDIRECT_DELAY_MS = 2000;
 
 const TITLE = "Opening PitchBoost in ChatGPT";
@@ -29,7 +30,7 @@ export default function GptPage() {
         <p style={{ color: "var(--ds-text-light)", fontSize: "1.1rem", maxWidth: 620, margin: "0 auto 32px", lineHeight: 1.7 }}>
           Add the plugin, attach your PowerPoint and ask in plain words. You get it back redesigned in your brand as an editable PowerPoint, a PDF and a link you can track. Works on free ChatGPT accounts.
         </p>
-        <PluginButton href={PLUGIN_URL} />
+        <ChatGptPluginButton via="gpt_page">Open PitchBoost in ChatGPT</ChatGptPluginButton>
         <p style={{ fontSize: 14, color: "var(--ds-text-secondary)", marginTop: 20 }}>
           Not redirected? Use the button above. <Link href="/chatgpt" style={{ color: "#1F6B6B", fontWeight: 600 }}>How the plugin works</Link>
         </p>
