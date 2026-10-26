@@ -30,11 +30,11 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "What is the difference between Starter, Pro and Business?",
-    a: "Starter removes the badge and covers occasional decks. Pro is for people who do this for a living: 2,500 credits, decks up to 60 slides, full viewer analytics, saved templates, custom domains, and API access. Business adds team collaboration, analytics export and 7,000 credits for teams.",
+    a: "Starter removes the badge and covers occasional decks. Pro is for people who do this for a living: 1,200 credits (about 12 decks), decks up to 60 slides, full viewer analytics, saved templates, custom domains, and API access. Business adds team collaboration, analytics export and 3,300 credits for teams.",
   },
   {
     q: "Can I buy more credits?",
-    a: "On Starter, Pro and Business, yes: packs of 250 ($5), 900 ($15) and 2,800 ($40) credits that never expire while you are subscribed. The Free plan does not offer packs; the first step up is Starter.",
+    a: "On Starter, Pro and Business, yes: packs of 200 ($5), 700 ($15) and 1,900 ($40) credits that never expire while you are subscribed. The Free plan does not offer packs; the first step up is Starter.",
   },
   {
     q: "Can I change or cancel my plan anytime?",

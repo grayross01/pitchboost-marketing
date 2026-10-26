@@ -52,7 +52,7 @@ export default function PricingPlans({ className = "pricing-grid" }: { className
         <div className="plan-price">$29<span>/mo</span></div>
         <div className="plan-period">or $24/mo billed annually</div>
         <ul className="pricing-features">
-          <li><CheckIcon /> 2,500 credits a month (about 20 decks)</li>
+          <li><CheckIcon /> 1,200 credits a month (about 12 decks)</li>
           <li><CheckIcon /> Decks up to 60 slides</li>
           <li><CheckIcon /> Full viewer analytics and read receipts</li>
           <li><CheckIcon /> Custom domains and saved templates</li>
@@ -68,7 +68,7 @@ export default function PricingPlans({ className = "pricing-grid" }: { className
         <div className="plan-period">or $66/mo billed annually</div>
         <ul className="pricing-features">
           <li><CheckIcon /> Everything in Pro</li>
-          <li><CheckIcon /> 7,000 credits a month</li>
+          <li><CheckIcon /> 3,300 credits a month (about 33 decks)</li>
           <li><CheckIcon /> Team collaboration</li>
           <li><CheckIcon /> Analytics export</li>
           <li><CheckIcon /> Sending from your own domain</li>
