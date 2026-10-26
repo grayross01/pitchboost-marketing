@@ -137,7 +137,7 @@ export default function ChatGptPage() {
             PitchBoost is a plugin in ChatGPT&apos;s plugin directory, free ChatGPT accounts included. Attach your slides, ask in plain words, and get them back redesigned in your brand as an editable PowerPoint, a PDF and a link you can track.
           </p>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 16, flexWrap: "wrap" }}>
-            {/* /gpt redirects to the plugin listing in ChatGPT (next.config.ts). */}
+            {/* /gpt is a short hand-off page that forwards to the plugin listing. */}
             <a href="/gpt" className="btn btn-primary btn-lg">Add PitchBoost to ChatGPT</a>
             <a href={SIGNUP_REBUILD} className="btn btn-ghost btn-lg">Or Upload on the Web</a>
           </div>

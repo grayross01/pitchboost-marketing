@@ -22,10 +22,6 @@ const nextConfig: NextConfig = {
       // those live on the app. Query strings (e.g. ?targetUrl=) carry over.
       { source: "/signup", destination: "https://app.pitchboost.ai/signup", permanent: false },
       { source: "/login", destination: "https://app.pitchboost.ai/login", permanent: false },
-      // Short link to the PitchBoost plugin listing in ChatGPT, for posts,
-      // bios and slides. Not permanent, so the target can change without
-      // browsers caching it.
-      { source: "/gpt", destination: "https://chatgpt.com/plugins/plugin_asdk_app_6aaa1c8e8e6c81918ceb99441a587e47", permanent: false },
       // Old slug of the sales-deck post; Search Console still shows it.
       { source: "/blog/sales-deck-vs-pitch-deck-key-differences-and-when-to-use-each", destination: "/blog/sales-deck-vs-pitch-deck", permanent: true },
       // There is no locale homepage; the translated sections start at /redesign.
