@@ -188,7 +188,7 @@ export const HELP_ARTICLES: HelpArticle[] = [
       },
     ],
     related: ["redesign-a-powerpoint", "credits-and-plans", "download-powerpoint-or-pdf"],
-    updated: "2026-10-23",
+    updated: "2026-10-27",
   },
 
   {
@@ -417,15 +417,15 @@ export const HELP_ARTICLES: HelpArticle[] = [
     metaDescription:
       "Monthly credits on every plan: a deck of up to 10 slides costs 100, each slide past 10 adds 8. What each plan includes, what rolls over, and how to buy more.",
     answer:
-      "Every PitchBoost plan includes a monthly credit allowance and every AI action has a fixed price: a deck (new or rebuilt) of up to 10 slides costs 100 credits, each slide past 10 adds 8 (4 on the new deck engine), an AI image is 10, a slide edit 10, a full-deck edit 50, a website scan 10. Free includes 150 credits a month (one deck), Starter 300, Pro 2,500 and Business 7,000. Paid plans roll unused credits over for a month and can buy top-up packs. In the app you see the percentage of your allowance used, never a running dollar figure.",
+      "Every PitchBoost plan includes a monthly credit allowance and every AI action has a fixed price: a deck (new or rebuilt) of up to 10 slides costs 100 credits, each slide past 10 adds 8 (4 on the new deck engine), an AI image is 10, a slide edit 10, a full-deck edit 50, a website scan 10. Free includes 150 credits a month (one deck), Starter 300, Pro 1,200 and Business 3,300. Paid plans roll unused credits over for a month and can buy top-up packs. In the app you see the percentage of your allowance used, never a running dollar figure.",
     sections: [
       {
         heading: "The plans",
         paragraphs: [
           "Free: 150 credits a month, one deal, decks up to 10 slides with a small badge, a shareable live link with basic analytics. Downloading a file takes a paid plan or a one-time $9 for that deck. No card required.",
           "Starter, $7 a month: 300 credits, unlimited deals, decks up to 25 slides, no badge anywhere, PowerPoint, PDF and Google Slides downloads, top-up packs.",
-          "Pro, $29 a month: 2,500 credits, decks up to 60 slides, full viewer analytics with time per slide, saved templates, custom domains, API and MCP access.",
-          "Business, $79 a month: 7,000 credits, team seats and permissions, analytics export, and sending from your own domain.",
+          "Pro, $29 a month: 1,200 credits (about 12 decks), decks up to 60 slides, full viewer analytics with time per slide, saved templates, custom domains, API and MCP access.",
+          "Business, $79 a month: 3,300 credits (about 33 decks), team seats and permissions, analytics export, and sending from your own domain.",
           "Annual billing is cheaper: Starter $70 a year (about $5.83 a month), Pro $24 and Business $66 a month when paid yearly.",
         ],
       },
@@ -439,7 +439,7 @@ export const HELP_ARTICLES: HelpArticle[] = [
       {
         heading: "Rollover and packs",
         paragraphs: [
-          "On paid plans, unused credits carry into the next month up to one month's allowance. On the free plan they reset. Top-up packs of 250 ($5), 900 ($15) and 2,800 ($40) credits are available on paid plans and never expire while you are subscribed.",
+          "On paid plans, unused credits carry into the next month up to one month's allowance. On the free plan they reset. Top-up packs of 200 ($5), 700 ($15) and 1,900 ($40) credits are available on paid plans and never expire while you are subscribed.",
         ],
       },
       {

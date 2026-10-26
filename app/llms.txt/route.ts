@@ -39,7 +39,7 @@ export function GET() {
     "- Free: 1 AI deck a month, rebuilds up to 10 slides (longer decks are condensed first), small PitchBoost badge on the deck, free link sharing. Downloading the deck as a file (PowerPoint, editable PowerPoint, PDF, Google Slides) takes a paid plan or the one-time option below.",
     "- Finish this deck, $9 once (no subscription): one deck of up to 25 slides rebuilt in full, no badge, PowerPoint, PDF and Google Slides downloads, 100 credits for edits. Longer decks need Pro.",
     "- Starter, $7 a month (or $70 a year): rebuilds up to 25 slides, no badge, downloads included, 300 credits a month (about 3 decks).",
-    "- Pro, $29 a month: rebuilds up to 60 slides, 2,500 credits a month, full viewer analytics, custom domains, API and MCP access.",
+    "- Pro, $29 a month: rebuilds up to 60 slides, 1,200 credits a month (about 12 decks), full viewer analytics, custom domains, API and MCP access.",
     "- Business: team seats, permissions and higher limits; pricing on the pricing page.",
     "",
     "Operated by ARK Holdings, LLC (Oregon, USA). Support: support@pitchboost.ai.",

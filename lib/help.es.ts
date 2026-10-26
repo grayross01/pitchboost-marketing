@@ -168,7 +168,7 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       "credits-and-plans",
       "download-powerpoint-or-pdf"
     ],
-    "updated": "2026-10-23"
+    "updated": "2026-10-27"
   },
   {
     "slug": "download-powerpoint-or-pdf",
@@ -392,15 +392,15 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
     "category": "account",
     "title": "Cómo funcionan los créditos y planes",
     "metaDescription": "Créditos mensuales en cada plan: una presentación de hasta 10 diapositivas cuesta 100 y cada diapositiva extra suma 8. Qué incluye cada plan y cómo comprar más.",
-    "answer": "Cada plan de PitchBoost incluye una asignación mensual de créditos y cada acción de IA tiene un precio fijo: una presentación (nueva o mejorada) de hasta 10 diapositivas cuesta 100 créditos, cada diapositiva adicional suma 8 (4 con el nuevo motor de presentaciones), una imagen con IA 10, editar una diapositiva 10, editar la presentación completa 50, escanear un sitio web 10. Free incluye 150 créditos al mes (una presentación), Starter 300, Pro 2,500 y Business 7,000. Los planes de pago acumulan los créditos no usados durante un mes y pueden comprar paquetes adicionales. En la aplicación ves el porcentaje de tu asignación usado, nunca una cifra en dólares.",
+    "answer": "Cada plan de PitchBoost incluye una asignación mensual de créditos y cada acción de IA tiene un precio fijo: una presentación (nueva o mejorada) de hasta 10 diapositivas cuesta 100 créditos, cada diapositiva adicional suma 8 (4 con el nuevo motor de presentaciones), una imagen con IA 10, editar una diapositiva 10, editar la presentación completa 50, escanear un sitio web 10. Free incluye 150 créditos al mes (una presentación), Starter 300, Pro 1,200 y Business 3,300. Los planes de pago acumulan los créditos no usados durante un mes y pueden comprar paquetes adicionales. En la aplicación ves el porcentaje de tu asignación usado, nunca una cifra en dólares.",
     "sections": [
       {
         "heading": "Los planes",
         "paragraphs": [
           "Free: 150 créditos al mes, un trato, presentaciones de hasta 10 diapositivas con una marca pequeña, enlace en vivo compartible con análisis básicos. Descargar un archivo requiere un plan de pago o un pago único de $9 por esa presentación. No se requiere tarjeta.",
           "Starter, $7 al mes: 300 créditos, tratos ilimitados, presentaciones de hasta 25 diapositivas, sin marca en ningún lugar, descargas de PowerPoint, PDF y Google Slides, paquetes adicionales.",
-          "Pro, $29 al mes: 2,500 créditos, presentaciones de hasta 60 diapositivas, análisis completo del visor con tiempo por diapositiva, plantillas guardadas, dominios personalizados, acceso a API y MCP.",
-          "Business, $79 al mes: 7,000 créditos, puestos y permisos de equipo, exportar análisis y enviar desde tu propio dominio.",
+          "Pro, $29 al mes: 1,200 créditos (unas 12 presentaciones), presentaciones de hasta 60 diapositivas, análisis completo del visor con tiempo por diapositiva, plantillas guardadas, dominios personalizados, acceso a API y MCP.",
+          "Business, $79 al mes: 3,300 créditos (unas 33 presentaciones), puestos y permisos de equipo, exportar análisis y enviar desde tu propio dominio.",
           "La facturación anual es más económica: Starter $70 al año (unos $5.83 al mes), Pro $24 y Business $66 al mes cuando se paga anualmente."
         ]
       },
@@ -414,7 +414,7 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       {
         "heading": "Acumulación y paquetes",
         "paragraphs": [
-          "En los planes de pago, los créditos no usados pasan al siguiente mes hasta la asignación de un mes. En el plan gratuito se reinician. Los paquetes adicionales de 250 ($5), 900 ($15) y 2,800 ($40) créditos están disponibles en planes de pago y nunca expiran mientras tengas una suscripción activa."
+          "En los planes de pago, los créditos no usados pasan al siguiente mes hasta la asignación de un mes. En el plan gratuito se reinician. Los paquetes adicionales de 200 ($5), 700 ($15) y 1,900 ($40) créditos están disponibles en planes de pago y nunca expiran mientras tengas una suscripción activa."
         ]
       },
       {

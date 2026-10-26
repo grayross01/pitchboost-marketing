@@ -168,7 +168,7 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
       "credits-and-plans",
       "download-powerpoint-or-pdf"
     ],
-    "updated": "2026-10-23"
+    "updated": "2026-10-27"
   },
   {
     "slug": "download-powerpoint-or-pdf",
@@ -392,15 +392,15 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
     "category": "account",
     "title": "Como funcionam os créditos e planos",
     "metaDescription": "Todo plano inclui créditos mensais; uma apresentação de até 10 slides custa 100 e cada slide a mais soma 8. O que cada plano inclui e como comprar mais.",
-    "answer": "Todo plano do PitchBoost inclui uma cota mensal de créditos e cada ação de IA tem um preço fixo: uma apresentação (nova ou reconstruída) de até 10 slides custa 100 créditos, cada slide a mais soma 8 (4 no novo motor de apresentações), uma imagem com IA 10, uma edição de slide 10, uma edição de apresentação completa 50, uma varredura de site 10. Free inclui 150 créditos por mês (uma apresentação), Starter 300, Pro 2.500 e Business 7.000. Planos pagos acumulam créditos não usados por um mês e podem comprar pacotes extras. No aplicativo você vê a porcentagem da sua cota usada, nunca um valor em dólar corrente.",
+    "answer": "Todo plano do PitchBoost inclui uma cota mensal de créditos e cada ação de IA tem um preço fixo: uma apresentação (nova ou reconstruída) de até 10 slides custa 100 créditos, cada slide a mais soma 8 (4 no novo motor de apresentações), uma imagem com IA 10, uma edição de slide 10, uma edição de apresentação completa 50, uma varredura de site 10. Free inclui 150 créditos por mês (uma apresentação), Starter 300, Pro 1.200 e Business 3.300. Planos pagos acumulam créditos não usados por um mês e podem comprar pacotes extras. No aplicativo você vê a porcentagem da sua cota usada, nunca um valor em dólar corrente.",
     "sections": [
       {
         "heading": "Os planos",
         "paragraphs": [
           "Free: 150 créditos por mês, um negócio, apresentações de até 10 slides com um pequeno selo, um link ao vivo compartilhável com análises básicas. Baixar um arquivo exige um plano pago ou um pagamento único de US$ 9 por essa apresentação. Não requer cartão.",
           "Starter, $7 por mês: 300 créditos, negócios ilimitados, apresentações de até 25 slides, sem selo em lugar algum, downloads em PowerPoint, PDF e Google Slides, pacotes extras.",
-          "Pro, $29 por mês: 2.500 créditos, apresentações de até 60 slides, análises completas do visualizador com tempo por slide, modelos salvos, domínios personalizados, acesso à API e MCP.",
-          "Business, $79 por mês: 7.000 créditos, assentos e permissões de equipe, exportação de análises e envio a partir do seu próprio domínio.",
+          "Pro, $29 por mês: 1.200 créditos (cerca de 12 apresentações), apresentações de até 60 slides, análises completas do visualizador com tempo por slide, modelos salvos, domínios personalizados, acesso à API e MCP.",
+          "Business, $79 por mês: 3.300 créditos (cerca de 33 apresentações), assentos e permissões de equipe, exportação de análises e envio a partir do seu próprio domínio.",
           "Cobrança anual é mais barata: Starter $70 por ano (cerca de $5,83 por mês), Pro $24 e Business $66 por mês quando pago anualmente."
         ]
       },
@@ -414,7 +414,7 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
       {
         "heading": "Acúmulo e pacotes",
         "paragraphs": [
-          "Nos planos pagos, créditos não usados são transferidos para o próximo mês até o limite de uma cota mensal. No plano gratuito eles são reiniciados. Pacotes extras de 250 ($5), 900 ($15) e 2.800 ($40) créditos estão disponíveis nos planos pagos e nunca expiram enquanto você estiver inscrito."
+          "Nos planos pagos, créditos não usados são transferidos para o próximo mês até o limite de uma cota mensal. No plano gratuito eles são reiniciados. Pacotes extras de 200 ($5), 700 ($15) e 1.900 ($40) créditos estão disponíveis nos planos pagos e nunca expiram enquanto você estiver inscrito."
         ]
       },
       {
