@@ -18,7 +18,10 @@ const ADS_ID = "AW-18454213526";
 
 /** Where Google's EU user consent policy applies (EEA, UK, Switzerland).
  *  Same list as the app's lib/consent-regions: with no consent banner, ad
- *  storage and ad data start denied there and granted elsewhere. */
+ *  storage and ad data start denied there and granted elsewhere. Analytics
+ *  storage is granted everywhere (Kurt's call, 2026-10-27): with it denied,
+ *  GA4 did not report EU, UK and Swiss visitors at all, about half of the
+ *  ChatGPT traffic. */
 const CONSENT_REGIONS = [
   "AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IE", "IT",
   "LV", "LT", "LU", "MT", "NL", "PL", "PT", "RO", "SK", "SI", "ES", "SE", "IS", "LI", "NO",
@@ -26,7 +29,7 @@ const CONSENT_REGIONS = [
 ];
 const CONSENT_DEFAULTS_JS =
   `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}` +
-  `gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',region:${JSON.stringify(CONSENT_REGIONS)}});` +
+  `gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'granted',region:${JSON.stringify(CONSENT_REGIONS)}});` +
   `gtag('consent','default',{ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted',analytics_storage:'granted'});`;
 
 const geistSans = Geist({
