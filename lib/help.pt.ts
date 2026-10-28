@@ -101,7 +101,7 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
       {
         "heading": "Voltando para o Google Slides ou Keynote depois",
         "paragraphs": [
-          "Baixe o PowerPoint editável da tela de compartilhamento e abra em qualquer app: o Google Slides importa .pptx através de Arquivo > Importar slides ou fazendo upload no Drive, o Keynote abre .pptx diretamente. Caixas de texto e formas permanecem editáveis. O link da apresentação web também funciona sozinho, sem nenhum app."
+          "Baixe o PowerPoint editável da tela de compartilhamento e abra em qualquer app: o Google Slides importa .pptx através de Arquivo > Importar slides ou fazendo upload no Drive, o Keynote abre .pptx diretamente. Cada palavra continua editável. O link da apresentação web também funciona sozinho, sem nenhum app."
         ]
       }
     ],
@@ -120,7 +120,7 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
       "download-powerpoint-or-pdf",
       "brand-from-your-website"
     ],
-    "updated": "2026-09-16"
+    "updated": "2026-10-28"
   },
   {
     "slug": "slide-limits-by-plan",
@@ -175,7 +175,7 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
     "category": "output",
     "title": "Como baixar sua apresentação como PowerPoint ou PDF",
     "metaDescription": "Baixe uma apresentação como PowerPoint editável, PowerPoint com aparência exata ou PDF em qualquer plano pago ou por US$ 9 a apresentação. Onde estão os botões e qual arquivo escolher.",
-    "answer": "Abra a tela de compartilhamento da apresentação e use os botões de download: \"Baixar PowerPoint\" fornece um .pptx com aparência exata onde cada slide é uma imagem da apresentação web, \"PowerPoint editável\" fornece um .pptx com caixas de texto e formas reais, parecido com o layout web mas não idêntico, e \"PDF\" fornece uma página por slide. Downloads vêm com todos os planos pagos. No plano gratuito, compartilhar a apresentação como link ao vivo continua grátis, e você pode liberar os downloads de uma apresentação com um pagamento único de US$ 9 (decks de até 25 slides), que também remove o badge.",
+    "answer": "Abra a tela de compartilhamento da apresentação e use os botões de download: \"Baixar PowerPoint\" fornece um .pptx com aparência exata onde cada slide é uma imagem da apresentação web, \"PowerPoint editável\" fornece um .pptx com a mesma aparência da apresentação web, com cada palavra como uma caixa de texto real do PowerPoint que você pode alterar, e \"PDF\" fornece uma página por slide. Downloads vêm com todos os planos pagos. No plano gratuito, compartilhar a apresentação como link ao vivo continua grátis, e você pode liberar os downloads de uma apresentação com um pagamento único de US$ 9 (decks de até 25 slides), que também remove o badge.",
     "steps": [
       {
         "title": "Abra a apresentação",
@@ -194,7 +194,7 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
       {
         "heading": "Editável versus aparência exata",
         "paragraphs": [
-          "O PowerPoint editável fica próximo do layout web mas não é pixel a pixel idêntico: ele usa as próprias caixas de texto, formas e fontes do PowerPoint para que você possa editar cada elemento. O arquivo de aparência exata é pixel a pixel idêntico porque cada slide é uma imagem de alta resolução, o que também significa que o texto não pode ser editado no PowerPoint. Em caso de dúvida, pegue os dois; depois que os downloads de uma apresentação estão liberados, cada arquivo não custa nada a mais."
+          "O PowerPoint editável tem a aparência da apresentação web: o design de cada slide (fundo, imagens, formas e gráficos) vem como uma única imagem, e cada palavra fica por cima como uma caixa de texto real do PowerPoint que você pode editar, mover ou mudar de estilo. Se o seu computador não tiver alguma das fontes da apresentação, o PowerPoint usa uma parecida, então uma linha pode quebrar um pouco diferente. O arquivo de aparência exata é pixel a pixel idêntico porque cada slide é uma única imagem de alta resolução, o que também significa que o texto dele não pode ser editado. Em caso de dúvida, pegue os dois; depois que os downloads de uma apresentação estão liberados, cada arquivo não custa nada a mais."
         ]
       },
       {
@@ -223,7 +223,7 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
       "google-slides-and-keynote",
       "credits-and-plans"
     ],
-    "updated": "2026-09-16"
+    "updated": "2026-10-28"
   },
   {
     "slug": "share-a-deck-link",

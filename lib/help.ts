@@ -126,7 +126,7 @@ export const HELP_ARTICLES: HelpArticle[] = [
       {
         heading: "Going back to Google Slides or Keynote afterwards",
         paragraphs: [
-          "Download the editable PowerPoint from the share screen and open it in either app: Google Slides imports .pptx through File > Import slides or by uploading to Drive; Keynote opens .pptx directly. Text boxes and shapes stay editable. The web deck link also works on its own, without any app.",
+          "Download the editable PowerPoint from the share screen and open it in either app: Google Slides imports .pptx through File > Import slides or by uploading to Drive; Keynote opens .pptx directly. Every word stays editable. The web deck link also works on its own, without any app.",
         ],
       },
     ],
@@ -141,7 +141,7 @@ export const HELP_ARTICLES: HelpArticle[] = [
       },
     ],
     related: ["redesign-a-powerpoint", "download-powerpoint-or-pdf", "brand-from-your-website"],
-    updated: "2026-09-16",
+    updated: "2026-10-28",
   },
 
   {
@@ -198,7 +198,7 @@ export const HELP_ARTICLES: HelpArticle[] = [
     metaDescription:
       "Download a deck as an editable PowerPoint, an exact-look PowerPoint, or a PDF on any paid plan or for $9 a deck. Where the buttons are and which file to pick.",
     answer:
-      "Open the deck's share screen and use the download buttons: \"Download PowerPoint\" gives you an exact-look .pptx where each slide is an image of the web deck, \"Editable PowerPoint\" gives you a .pptx with real text boxes and shapes, close to the web layout but not identical, and \"PDF\" gives you one page per slide. Downloads come with every paid plan. On the free plan, sharing the deck as a live link stays free, and you can unlock the downloads for one deck with a one-time $9 (decks up to 25 slides), which also removes the badge.",
+      "Open the deck's share screen and use the download buttons: \"Download PowerPoint\" gives you an exact-look .pptx where each slide is an image of the web deck, \"Editable PowerPoint\" gives you a .pptx that looks like the web deck, with every word as a real PowerPoint text box you can change, and \"PDF\" gives you one page per slide. Downloads come with every paid plan. On the free plan, sharing the deck as a live link stays free, and you can unlock the downloads for one deck with a one-time $9 (decks up to 25 slides), which also removes the badge.",
     steps: [
       {
         title: "Open the deck",
@@ -217,7 +217,7 @@ export const HELP_ARTICLES: HelpArticle[] = [
       {
         heading: "Editable versus exact-look",
         paragraphs: [
-          "The editable PowerPoint is close to the web layout but not pixel-identical: it uses PowerPoint's own text boxes, shapes and fonts so you can edit every element. The exact-look file is pixel-identical because each slide is a high-resolution image, which also means the text cannot be edited in PowerPoint. When in doubt, take both; once a deck's downloads are unlocked, each file costs nothing extra.",
+          "The editable PowerPoint looks like the web deck: each slide's design (background, images, shapes and charts) comes in as one picture, and every word sits on top as a real PowerPoint text box you can edit, move or restyle. If your computer doesn't have one of the deck's fonts, PowerPoint swaps in a similar one, so a line can wrap a little differently. The exact-look file is pixel-identical because each slide is a single high-resolution image, which also means its text cannot be edited. When in doubt, take both; once a deck's downloads are unlocked, each file costs nothing extra.",
         ],
       },
       {
@@ -242,7 +242,7 @@ export const HELP_ARTICLES: HelpArticle[] = [
       },
     ],
     related: ["share-a-deck-link", "google-slides-and-keynote", "credits-and-plans"],
-    updated: "2026-09-16",
+    updated: "2026-10-28",
   },
 
   {
