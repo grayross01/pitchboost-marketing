@@ -101,7 +101,7 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       {
         "heading": "Volver a Google Slides o Keynote después",
         "paragraphs": [
-          "Descarga el PowerPoint editable desde la pantalla de compartir y ábrelo en cualquiera de las dos aplicaciones: Google Slides importa .pptx a través de Archivo > Importar diapositivas o subiéndolo a Drive, Keynote abre .pptx directamente. Los cuadros de texto y las formas permanecen editables. El enlace de la presentación web también funciona por sí solo, sin necesidad de ninguna aplicación."
+          "Descarga el PowerPoint editable desde la pantalla de compartir y ábrelo en cualquiera de las dos aplicaciones: Google Slides importa .pptx a través de Archivo > Importar diapositivas o subiéndolo a Drive, Keynote abre .pptx directamente. Cada palabra sigue siendo editable. El enlace de la presentación web también funciona por sí solo, sin necesidad de ninguna aplicación."
         ]
       }
     ],
@@ -120,7 +120,7 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       "download-powerpoint-or-pdf",
       "brand-from-your-website"
     ],
-    "updated": "2026-09-16"
+    "updated": "2026-10-28"
   },
   {
     "slug": "slide-limits-by-plan",
@@ -175,7 +175,7 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
     "category": "output",
     "title": "Cómo descargar tu presentación como PowerPoint o PDF",
     "metaDescription": "Descarga una presentación como PowerPoint editable, PowerPoint de aspecto exacto o PDF con cualquier plan de pago o por $9 la presentación. Dónde están los botones y qué archivo elegir.",
-    "answer": "Abre la pantalla de compartir de la presentación y usa los botones de descarga: \"Descargar PowerPoint\" te da un .pptx de aspecto exacto donde cada diapositiva es una imagen de la presentación web, \"PowerPoint editable\" te da un .pptx con cuadros de texto y formas reales, parecido al diseño web pero no idéntico, y \"PDF\" te da una página por diapositiva. Las descargas vienen con todos los planes de pago. En el plan gratuito, compartir la presentación como enlace en vivo sigue siendo gratis, y puedes desbloquear las descargas de una presentación con un pago único de $9 (presentaciones de hasta 25 diapositivas), que además quita la insignia.",
+    "answer": "Abre la pantalla de compartir de la presentación y usa los botones de descarga: \"Descargar PowerPoint\" te da un .pptx de aspecto exacto donde cada diapositiva es una imagen de la presentación web, \"PowerPoint editable\" te da un .pptx que se ve como la presentación web, con cada palabra como un cuadro de texto real de PowerPoint que puedes cambiar, y \"PDF\" te da una página por diapositiva. Las descargas vienen con todos los planes de pago. En el plan gratuito, compartir la presentación como enlace en vivo sigue siendo gratis, y puedes desbloquear las descargas de una presentación con un pago único de $9 (presentaciones de hasta 25 diapositivas), que además quita la insignia.",
     "steps": [
       {
         "title": "Abre la presentación",
@@ -194,7 +194,7 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       {
         "heading": "Editable versus aspecto exacto",
         "paragraphs": [
-          "El PowerPoint editable es cercano al diseño web pero no idéntico pixel por pixel: usa los propios cuadros de texto, formas y fuentes de PowerPoint para que puedas editar cada elemento. El archivo de aspecto exacto es idéntico pixel por pixel porque cada diapositiva es una imagen de alta resolución, lo que también significa que el texto no se puede editar en PowerPoint. En caso de duda, llévate ambos; una vez desbloqueadas las descargas de una presentación, cada archivo no cuesta nada más."
+          "El PowerPoint editable se ve como la presentación web: el diseño de cada diapositiva (fondo, imágenes, formas y gráficos) llega como una sola imagen, y cada palabra va encima como un cuadro de texto real de PowerPoint que puedes editar, mover o cambiar de estilo. Si tu computadora no tiene alguna de las fuentes de la presentación, PowerPoint usa una parecida, así que una línea puede cortarse un poco distinto. El archivo de aspecto exacto es idéntico pixel por pixel porque cada diapositiva es una sola imagen de alta resolución, lo que también significa que su texto no se puede editar. En caso de duda, llévate ambos; una vez desbloqueadas las descargas de una presentación, cada archivo no cuesta nada más."
         ]
       },
       {
@@ -223,7 +223,7 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       "google-slides-and-keynote",
       "credits-and-plans"
     ],
-    "updated": "2026-09-16"
+    "updated": "2026-10-28"
   },
   {
     "slug": "share-a-deck-link",
