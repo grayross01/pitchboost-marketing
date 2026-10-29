@@ -13,6 +13,96 @@ export interface ChangelogEntry {
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    date: "2026-10-28",
+    title: "Type straight onto your slides",
+    body: "The editor is rebuilt. Click any words on a slide and type, or click a picture to swap it from your deal, the image library or an upload. Everything saves as you go, Undo takes back any change (the AI's included), and the AI sits beside the slide while you work.",
+    area: "Decks",
+  },
+  {
+    date: "2026-10-28",
+    title: "Searchable PDFs, and speaker notes in every PowerPoint",
+    body: "Downloaded PDFs now carry the slide text, so you can select, copy and search it. The exact-look PowerPoint has your speaker notes too, and the two PowerPoints download under different names.",
+    area: "Decks",
+  },
+  {
+    date: "2026-10-27",
+    title: "An editable PowerPoint that looks like your deck",
+    body: "Editable PowerPoint now keeps the deck's own design, pictures and logos, with every word as real PowerPoint text you can change, in the deck's fonts, sizes and colors.",
+    area: "Decks",
+  },
+  {
+    date: "2026-10-27",
+    title: "One place to share or download",
+    body: "A deck's share screen shows the deck on the left and one panel on the right for the link and every download, with Edit deck at the top.",
+    area: "Sharing",
+  },
+  {
+    date: "2026-10-26",
+    title: "Present from PitchBoost, with a presenter view",
+    body: "Present opens the deck full window, one slide at a time. Presenter view opens a second window with the next slide, your speaker notes, a clock and a timer, and both windows stay on the same slide.",
+    area: "Decks",
+  },
+  {
+    date: "2026-10-26",
+    title: "Check the outline before the deck is built",
+    body: "Before a deck is built from a written brief, PitchBoost shows the slide-by-slide plan. Edit titles and points, reorder, add or remove slides, or ask for a revision, then build exactly that plan. Or skip it.",
+    area: "Decks",
+  },
+  {
+    date: "2026-10-26",
+    title: "An AI chat beside the deck",
+    body: "Ask for a change to the slide you're on or to the whole deck in one running conversation. Changes save themselves with Undo, questions get answers without changing anything, and you see the cost before you send.",
+    area: "Decks",
+  },
+  {
+    date: "2026-10-23",
+    title: "Long PDFs read to the end",
+    body: "Attach a long PDF, like a thesis or an annual report, and PitchBoost reads up to 120 pages, condensing each part and keeping every number, instead of stopping at page 40.",
+    area: "Decks",
+  },
+  {
+    date: "2026-10-23",
+    title: "Make a presentation free, with no account",
+    body: "On pitchboost.ai, type what your presentation is about and get a designed deck in about two minutes, free and with no sign-up.",
+    area: "Site",
+  },
+  {
+    date: "2026-10-22",
+    title: "Presentations for every purpose",
+    body: "PitchBoost now shapes a deck for its job: lessons end on takeaways and questions, reports lead with the result, talks build to a point, and only pitches end on an ask.",
+    area: "Decks",
+  },
+  {
+    date: "2026-10-22",
+    title: "No PitchBoost credit on decks you paid for",
+    body: "Decks on a paid plan, or bought once, carry no PitchBoost badge or credit line anywhere: the link, the downloads and Google Slides.",
+    area: "Billing",
+  },
+  {
+    date: "2026-10-21",
+    title: "Right-to-left downloads",
+    body: "Arabic, Hebrew, Persian and Urdu decks now download right to left in PowerPoint, the editable PowerPoint and Google Slides.",
+    area: "Languages",
+  },
+  {
+    date: "2026-10-20",
+    title: "Free links, paid downloads, and Starter at $7",
+    body: "Every deck's link stays free to share and present. The PowerPoint, PDF and Google Slides files come with Starter (now $7 a month, decks up to 25 slides), Pro or Business, or $9 once for a single deck up to 25 slides. Accounts created before Oct 20 keep their downloads.",
+    area: "Billing",
+  },
+  {
+    date: "2026-10-09",
+    title: "Open any deck in Google Slides",
+    body: "Open in Google Slides puts an editable copy of the deck in your own Google Drive and opens it there.",
+    area: "Integrations",
+  },
+  {
+    date: "2026-10-06",
+    title: "Redesign a PDF, and \"Make it look like this\"",
+    body: "Upload a deck saved as a PDF and PitchBoost rebuilds it like a PowerPoint, and a PDF attached for context is now read. \"Make it look like this\" takes a picture of a look you like (a slide, a website, a brand board) and builds the deck in its colors, fonts and layout.",
+    area: "Decks",
+  },
+  {
     date: "2026-09-30",
     title: "Finish one deck for $13, no subscription",
     body: "If your upload is longer than the free plan builds, you can now finish that one deck with a one-time payment: every slide rebuilt, no PitchBoost badge, and 100 credits for edits ($13 up to 50 slides, $25 up to 60). The free choice comes first: condense to 10 slides and build. Starter now rebuilds decks up to 50 slides.",

@@ -37,6 +37,7 @@ const COMPANY_LINKS = [
   { label: "About", href: "/about" },
   { label: "Help center", href: "/help" },
   { label: "Changelog", href: "/changelog" },
+  { label: "Suggest a feature", href: "/ideas" },
   { label: "Security", href: "/security" },
   { label: "Contact", href: "mailto:support@pitchboost.ai" },
   { label: "Privacy Policy", href: "/privacy" },
