@@ -53,6 +53,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/about", changeFrequency: "monthly", priority: 0.5 },
     { path: "/security", changeFrequency: "monthly", priority: 0.5 },
     { path: "/changelog", changeFrequency: "weekly", priority: 0.5 },
+    { path: "/ideas", changeFrequency: "monthly", priority: 0.4 },
     { path: "/research", changeFrequency: "monthly", priority: 0.7 },
   ];
 
