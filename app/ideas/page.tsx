@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { CHANGELOG } from "@/lib/changelog";
-import IdeasClient from "./ideas-client";
+import IdeasBoard from "./ideas-client";
 
-const TITLE = "Suggest a Feature: Help Decide What PitchBoost Builds Next | PitchBoost";
+const TITLE = "PitchBoost Ideas Board: Vote on What We Build Next | PitchBoost";
 const DESCRIPTION =
-  "Pick the PitchBoost features you'd actually use, tell us what to build or fix, and the most-wanted ideas move up the list. Takes about a minute.";
+  "Vote for the PitchBoost features you want, add your own ideas, and see what everyone else asked for. The most-voted ideas move up our list.";
 const URL = "https://pitchboost.ai/ideas";
 
 export const metadata: Metadata = {
@@ -21,25 +21,35 @@ export default function IdeasPage() {
   const recent = CHANGELOG.slice(0, 4);
   return (
     <>
-      <style>{`.idea-card:focus-visible{outline:2px solid var(--ds-teal);outline-offset:2px}.idea-card:hover{border-color:var(--ds-teal-light)}`}</style>
+      <style>{`
+.ideas-layout{display:grid;gap:24px;max-width:1040px;margin:0 auto;align-items:start}
+.ideas-add{order:0}
+.ideas-list{order:1;min-width:0}
+.idea-more{display:none}
+.idea-more.is-open{display:block}
+@media(min-width:900px){.ideas-layout{grid-template-columns:minmax(0,1fr) 340px}.ideas-add{order:2;position:sticky;top:96px}.ideas-list{order:1}.idea-more{display:block}}
+.idea-vote:not(:disabled):hover{border-color:var(--ds-teal)}
+.idea-vote:focus-visible,.ideas-layout button:focus-visible,.ideas-layout input:focus-visible,.ideas-layout textarea:focus-visible{outline:2px solid var(--ds-teal);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){.idea-vote{transition:none!important}}
+`}</style>
 
       <section style={{ padding: "120px 0 36px", background: "var(--ds-bg-light)", textAlign: "center" }}>
         <div className="mkt-container">
           <div style={{ marginBottom: 20, display: "flex", justifyContent: "center" }}>
-            <div className="section-label"><span>Suggest a feature</span></div>
+            <div className="section-label"><span>Ideas board</span></div>
           </div>
           <h1 style={{ fontSize: "clamp(1.9rem, 3.8vw, 2.75rem)", fontWeight: 800, color: "var(--ds-dark)", maxWidth: 780, margin: "0 auto 18px", lineHeight: 1.15, fontFamily: "var(--font-inter, 'Inter'), sans-serif" }}>
             Help decide what PitchBoost builds next
           </h1>
           <p style={{ color: "var(--ds-text-light)", fontSize: "1.1rem", maxWidth: 620, margin: "0 auto", lineHeight: 1.7 }}>
-            Pick the ideas you&apos;d actually use, tell us what&apos;s missing or annoying, and send it. The most-picked ideas move up the list. It takes about a minute.
+            Vote for the ideas you want, add your own, and see what everyone else asked for. The most-voted ideas move up our list.
           </p>
         </div>
       </section>
 
       <section style={{ padding: "0 0 64px", background: "var(--ds-bg-light)" }}>
         <div className="mkt-container">
-          <IdeasClient />
+          <IdeasBoard />
         </div>
       </section>
 
