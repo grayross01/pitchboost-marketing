@@ -32,6 +32,23 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
+        // Security headers for every page (the app sets its own). Framing is
+        // limited through CSP frame-ancestors and X-Frame-Options, so the idea
+        // board and the free preview tool cannot be framed on another site; the
+        // other directives stop type sniffing, cross-site referrers and device
+        // features nothing here uses. Only frame-ancestors is set through CSP,
+        // so scripts, styles and images are untouched.
+        source: "/(.*)",
+        headers: [
+          { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains" },
+          { key: "Content-Security-Policy", value: "frame-ancestors 'self'" },
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), payment=()" },
+        ],
+      },
+      {
         // RFC 8288 Link headers so agents can discover the API catalog + docs
         // from the homepage response.
         source: "/",
