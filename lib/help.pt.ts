@@ -398,9 +398,9 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
         "heading": "Os planos",
         "paragraphs": [
           "Free: 150 créditos por mês, um negócio, apresentações de até 10 slides com um pequeno selo, um link ao vivo compartilhável com análises básicas. Baixar um arquivo exige um plano pago ou um pagamento único de US$ 9 por essa apresentação. Não requer cartão.",
-          "Starter, $7 por mês: 300 créditos, negócios ilimitados, apresentações de até 25 slides, sem selo em lugar algum, downloads em PowerPoint, PDF e Google Slides, pacotes extras.",
-          "Pro, $29 por mês: 1.200 créditos (cerca de 12 apresentações), apresentações de até 60 slides, análises completas do visualizador com tempo por slide, modelos salvos, domínios personalizados, acesso à API e MCP.",
-          "Business, $79 por mês: 3.300 créditos (cerca de 33 apresentações), assentos e permissões de equipe, exportação de análises e envio a partir do seu próprio domínio.",
+          "Starter, $7 por mês: mais créditos de IA, 300 por mês, negócios ilimitados, apresentações de até 25 slides, sem selo em lugar algum, downloads em PowerPoint, PDF e Google Slides, pacotes extras.",
+          "Pro, $29 por mês: ainda mais créditos de IA, 1.200 por mês, apresentações de até 60 slides, análises completas do visualizador com tempo por slide, modelos salvos, domínios personalizados, acesso à API e MCP.",
+          "Business, $79 por mês: nossa maior cota de créditos de IA, 3.300 por mês, assentos e permissões de equipe, exportação de análises e envio a partir do seu próprio domínio.",
           "Cobrança anual é mais barata: Starter $70 por ano (cerca de $5,83 por mês), Pro $24 e Business $66 por mês quando pago anualmente."
         ]
       },
