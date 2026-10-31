@@ -7,14 +7,14 @@ const SIGNUP_URL = `${APP_URL}/signup`;
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "PitchBoost pricing: a free plan to try it, $9 once to finish a single deck, Starter at $7/mo without the badge, Pro at $29/mo for people who present every week, and Business at $79/mo for teams. No credit card to start.",
+    "PitchBoost pricing: a free plan to try it, Starter at $7/mo without the badge, Pro at $29/mo for people who present every week, Business at $79/mo for teams, or pay once for a single deck: $9 up to 25 slides, $19 up to 60. No credit card to start.",
   alternates: { canonical: "/pricing" },
 };
 
 const FAQS: { q: string; a: string }[] = [
   {
     q: "Is there a free plan?",
-    a: "Yes. The Free plan is free forever: one AI-generated deck a month (up to 10 slides), a few AI edits, a small PitchBoost badge, and a shareable live link, free. Downloading the deck as a PowerPoint, PDF or Google Slides file takes a paid plan or a one-time $9 for that deck. No credit card required.",
+    a: "Yes. The Free plan is free forever: one AI-generated deck a month (up to 10 slides), a few AI edits, a small PitchBoost badge, and a shareable live link, free. Downloading the deck as a PowerPoint, PDF or Google Slides file takes a paid plan or a one-time payment for that deck: $9 up to 25 slides, $19 up to 60. No credit card required.",
   },
   {
     q: "How do credits work?",
@@ -26,7 +26,7 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "Can I pay once instead of subscribing?",
-    a: "Yes. If you have one deck to fix, Finish this deck is a one-time $9 for a deck of up to 25 slides: every slide rebuilt one to one, no PitchBoost badge on that deck, the PowerPoint, PDF and Google Slides downloads, and 100 credits for edits. Longer decks need Pro. It is offered when your upload is longer than the free plan builds, and on any deck's share screen.",
+    a: "Yes. Finish this deck is a one-time payment for the deck in front of you: $9 for decks up to 25 slides, $19 up to 60. It opens every slide of that deck plus the PowerPoint, PDF and Google Slides downloads, removes the badge from that deck, and includes 100 credits for edits. If you start Starter or Pro within 30 days, it counts toward the first month. It is offered in the app once your deck is built: a free upload longer than 10 slides is built in full with the extra slides locked, the free link always works and shows the free slides, and the share screen offers the same choice for any deck.",
   },
   {
     q: "What is the difference between Starter, Pro and Business?",
@@ -46,7 +46,7 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "Do I need design or PowerPoint skills?",
-    a: "No. PitchBoost generates the deck for you, on your brand. Every plan shares it as a live link; PDF and PowerPoint downloads come with any paid plan or a one-time $9. No design work required.",
+    a: "No. PitchBoost generates the deck for you, on your brand. Every plan shares it as a live link; PDF and PowerPoint downloads come with any paid plan or a one-time payment for that deck ($9 up to 25 slides, $19 up to 60). No design work required.",
   },
 ];
 
@@ -79,7 +79,8 @@ export default function PricingPage() {
     offers: [
       { "@type": "Offer", name: "Free", price: "0", priceCurrency: "USD", url: "https://pitchboost.ai/pricing" },
       { "@type": "Offer", name: "Starter", price: "7", priceCurrency: "USD", url: "https://pitchboost.ai/pricing" },
-      { "@type": "Offer", name: "Finish this deck (one time)", price: "9", priceCurrency: "USD", url: "https://pitchboost.ai/pricing" },
+      { "@type": "Offer", name: "Finish this deck, up to 25 slides (one time)", price: "9", priceCurrency: "USD", url: "https://pitchboost.ai/pricing" },
+      { "@type": "Offer", name: "Finish this deck, up to 60 slides (one time)", price: "19", priceCurrency: "USD", url: "https://pitchboost.ai/pricing" },
       { "@type": "Offer", name: "Pro", price: "29", priceCurrency: "USD", url: "https://pitchboost.ai/pricing" },
       { "@type": "Offer", name: "Business", price: "79", priceCurrency: "USD", url: "https://pitchboost.ai/pricing" },
     ],
@@ -107,10 +108,23 @@ export default function PricingPage() {
       {/* ── Plans ── */}
       <section className="mkt-section" style={{ background: "var(--ds-bg-light)", paddingTop: 24 }}>
         <div className="mkt-container">
-          <PricingPlans />
+          <PricingPlans oneDeckNote={false} />
           <p style={{ textAlign: "center", color: "var(--ds-text-light)", fontSize: "0.9rem", marginTop: 28 }}>
             No credit card required to start. Upgrade, downgrade, or cancel anytime.
           </p>
+
+          {/* ── Just one deck? Always below the plans: plans lead, paying once is second. ── */}
+          <div style={{ maxWidth: 760, margin: "40px auto 0", background: "#fff", border: "1px solid var(--ds-border, #e5e9ef)", borderRadius: 14, padding: "28px 24px", textAlign: "center" }}>
+            <div className="section-label" style={{ marginBottom: 14 }}><span>Just one deck?</span></div>
+            <h2 style={{ fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", fontWeight: 700, color: "var(--ds-dark)", lineHeight: 1.3, margin: "0 0 12px" }}>
+              Pay once for the deck in front of you: $9 up to 25 slides, $19 up to 60.
+            </h2>
+            <p style={{ fontSize: "0.92rem", color: "var(--ds-text-light, #5b6b7a)", lineHeight: 1.7, maxWidth: 640, margin: "0 auto 20px" }}>
+              Every slide rebuilt in your brand, the PowerPoint, PDF and Google Slides, no badge on that deck, and 100 credits for edits. If you start Starter or Pro within 30 days, it counts toward the first month. Most people who finish one deck are back for another within a month, and Pro costs less than two long-deck unlocks.
+            </p>
+            <a href={SIGNUP_URL} className="btn btn-secondary">Upload a deck to see it</a>
+            <p className="mkt-muted" style={{ textAlign: "center", fontSize: 13, color: "var(--ds-text-light)", marginTop: 12, marginBottom: 0 }}>Offered in the app once your deck is built.</p>
+          </div>
         </div>
       </section>
 

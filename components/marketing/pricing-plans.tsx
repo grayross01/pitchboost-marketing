@@ -13,7 +13,7 @@ function CheckIcon() {
   );
 }
 
-export default function PricingPlans({ className = "pricing-grid" }: { className?: string }) {
+export default function PricingPlans({ className = "pricing-grid", oneDeckNote = true }: { className?: string; oneDeckNote?: boolean }) {
   return (
     <>
     <div className={className}>
@@ -76,10 +76,12 @@ export default function PricingPlans({ className = "pricing-grid" }: { className
         <a href={SIGNUP_URL} className="btn btn-secondary">Get Started</a>
       </div>
     </div>
-    {/* Most people have one deck to fix, so a plan is not the only way to pay. */}
-    <p style={{ textAlign: "center", fontSize: 15, color: "var(--ds-text-secondary, #4a5a68)", margin: "22px auto 0", maxWidth: 680, lineHeight: 1.6 }}>
-      <strong style={{ color: "var(--ds-dark)" }}>Just one deck?</strong> Finish it for $9 once, no subscription: every slide rebuilt (up to 25), no PitchBoost badge, the PowerPoint, PDF and Google Slides downloads, and 100 credits for edits. Longer decks need Pro.
-    </p>
+    {/* Most people have one deck to fix, so a plan is not the only way to pay. /pricing turns this line off and shows its own fuller strip under the plans. */}
+    {oneDeckNote ? (
+      <p style={{ textAlign: "center", fontSize: 15, color: "var(--ds-text-secondary, #4a5a68)", margin: "22px auto 0", maxWidth: 680, lineHeight: 1.6 }}>
+        <strong style={{ color: "var(--ds-dark)" }}>Just one deck?</strong> Pay once for that deck, no subscription: $9 up to 25 slides, $19 up to 60. Every slide rebuilt, no PitchBoost badge, the PowerPoint, PDF and Google Slides downloads, and 100 credits for edits. Start Starter or Pro within 30 days and it counts toward the first month.
+      </p>
+    ) : null}
     </>
   );
 }
