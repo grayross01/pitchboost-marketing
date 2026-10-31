@@ -92,7 +92,7 @@ const GUIDES = [
 const FAQS = [
   {
     q: "Is PitchBoost free for students?",
-    a: "Yes. The free plan includes one deck a month of up to 10 slides, which fits a typical class presentation. Free decks carry a small PitchBoost badge and are shared as a link; downloading the PowerPoint or PDF takes Starter, or $9 once for that one deck. The Starter plan, $7 a month, removes the badge, allows decks up to 25 slides and covers about three decks a month. You can cancel anytime.",
+    a: "Yes. The free plan includes one deck a month of up to 10 slides, which fits a typical class presentation. Free decks carry a small PitchBoost badge and are shared as a link; downloading the PowerPoint or PDF takes Starter, or $9 once for that one deck. The Starter plan, $7 a month, removes the badge, allows decks up to 25 slides and comes with more AI credits, 300 a month. You can cancel anytime.",
   },
   {
     q: "Does it work with Google Slides, Keynote or Canva?",
@@ -320,7 +320,7 @@ export default function StudentsPage() {
             <div style={{ background: "linear-gradient(135deg, rgba(31,107,107,0.05), rgba(232,102,90,0.03))", border: "1px solid rgba(31,107,107,0.25)", borderRadius: 16, padding: "26px 28px" }}>
               <div style={{ fontSize: 15, fontWeight: 700, color: "#1F6B6B" }}>Starter</div>
               <div style={{ fontSize: 28, fontWeight: 800, color: "var(--ds-dark)", margin: "6px 0 12px" }}>$7<span style={{ fontSize: 15, fontWeight: 600, color: "var(--ds-text-secondary)" }}>/mo</span></div>
-              <p style={{ fontSize: 14, color: "var(--ds-text-secondary)", lineHeight: 1.65, margin: 0 }}>No badge, decks up to 25 slides, about three decks a month, PowerPoint and PDF downloads. Cancel anytime.</p>
+              <p style={{ fontSize: 14, color: "var(--ds-text-secondary)", lineHeight: 1.65, margin: 0 }}>No badge, decks up to 25 slides, more AI credits (300 a month), PowerPoint and PDF downloads. Cancel anytime.</p>
             </div>
           </div>
           <p style={{ textAlign: "center", fontSize: 14, color: "var(--ds-text-secondary)", marginTop: 20 }}>
