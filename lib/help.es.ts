@@ -398,9 +398,9 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
         "heading": "Los planes",
         "paragraphs": [
           "Free: 150 créditos al mes, un trato, presentaciones de hasta 10 diapositivas con una marca pequeña, enlace en vivo compartible con análisis básicos. Descargar un archivo requiere un plan de pago o un pago único de $9 por esa presentación. No se requiere tarjeta.",
-          "Starter, $7 al mes: 300 créditos, tratos ilimitados, presentaciones de hasta 25 diapositivas, sin marca en ningún lugar, descargas de PowerPoint, PDF y Google Slides, paquetes adicionales.",
-          "Pro, $29 al mes: 1,200 créditos (unas 12 presentaciones), presentaciones de hasta 60 diapositivas, análisis completo del visor con tiempo por diapositiva, plantillas guardadas, dominios personalizados, acceso a API y MCP.",
-          "Business, $79 al mes: 3,300 créditos (unas 33 presentaciones), puestos y permisos de equipo, exportar análisis y enviar desde tu propio dominio.",
+          "Starter, $7 al mes: más créditos de IA, 300 al mes, tratos ilimitados, presentaciones de hasta 25 diapositivas, sin marca en ningún lugar, descargas de PowerPoint, PDF y Google Slides, paquetes adicionales.",
+          "Pro, $29 al mes: aún más créditos de IA, 1200 al mes, presentaciones de hasta 60 diapositivas, análisis completo del visor con tiempo por diapositiva, plantillas guardadas, dominios personalizados, acceso a API y MCP.",
+          "Business, $79 al mes: nuestra mayor asignación de créditos de IA, 3300 al mes, puestos y permisos de equipo, exportar análisis y enviar desde tu propio dominio.",
           "La facturación anual es más económica: Starter $70 al año (unos $5.83 al mes), Pro $24 y Business $66 al mes cuando se paga anualmente."
         ]
       },

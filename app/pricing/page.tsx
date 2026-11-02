@@ -22,7 +22,7 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "What does Starter add over Free?",
-    a: "Starter is $7 a month: 300 credits (about three decks plus edits), decks up to 25 slides, no PitchBoost badge on any deck or export, PowerPoint, PDF and Google Slides downloads, and top-up packs when you need more. Cancel anytime.",
+    a: "Starter is $7 a month: more AI credits (300 a month, double the free plan's 150), decks up to 25 slides, no PitchBoost badge on any deck or export, PowerPoint, PDF and Google Slides downloads, and top-up packs when you need more. Cancel anytime.",
   },
   {
     q: "Can I pay once instead of subscribing?",
@@ -30,7 +30,7 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "What is the difference between Starter, Pro and Business?",
-    a: "Starter removes the badge and covers occasional decks. Pro is for people who do this for a living: 1,200 credits (about 12 decks), decks up to 60 slides, full viewer analytics, saved templates, custom domains, and API access. Business adds team collaboration, analytics export and 3,300 credits for teams.",
+    a: "Starter removes the badge and adds more AI credits. Pro is for people who do this for a living: even more AI credits (1,200 a month), decks up to 60 slides, full viewer analytics, saved templates, custom domains, and API access. Business adds team collaboration, analytics export and our largest AI credit allowance, 3,300 a month.",
   },
   {
     q: "Can I buy more credits?",

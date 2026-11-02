@@ -1433,7 +1433,7 @@ export const COMPETITORS: Competitor[] = [
       },
       {
         "title": "Slides per month, or credits",
-        "body": "Perceptis counts slides: 10 free, 50 for $29, 100 for $129. PitchBoost counts decks: one free deck of up to 10 slides a month, then 300 credits (about three decks of up to 25 slides) for $7."
+        "body": "Perceptis counts slides: 10 free, 50 for $29, 100 for $129. PitchBoost counts AI credits: 150 free a month (one deck of up to 10 slides), then more AI credits, 300 a month with decks up to 25 slides, for $7."
       }
     ],
     "pitchboostBestFor": [
