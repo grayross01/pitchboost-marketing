@@ -13,6 +13,12 @@ export interface ChangelogEntry {
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    date: "2026-11-05",
+    title: "Your team, on every plan",
+    body: "Any plan can now invite teammates, Free included, at no charge per person. Everyone shares the workspace's AI credits. And if you move to a lower plan, we show you what it changes on your account before anything happens.",
+    area: "Billing",
+  },
+  {
     date: "2026-10-28",
     title: "Type straight onto your slides",
     body: "The editor is rebuilt. Click any words on a slide and type, or click a picture to swap it from your deal, the image library or an upload. Everything saves as you go, Undo takes back any change (the AI's included), and the AI sits beside the slide while you work.",

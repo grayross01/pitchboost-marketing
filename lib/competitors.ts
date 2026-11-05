@@ -164,7 +164,7 @@ export const COMPETITORS: Competitor[] = [
       },
       {
         title: "Team plan pricing adds up fast",
-        body: "Beautiful.ai's Pro plan at $12/mo is individual-only. Team plans jump to $40/user/mo billed annually, a significant cost for small sales teams or agencies managing multiple clients. PitchBoost's Business plan at $79/mo covers teams without per-seat pricing that scales against you.",
+        body: "Beautiful.ai's Pro plan at $12/mo is individual-only. Team plans jump to $40/user/mo billed annually, a significant cost for small sales teams or agencies managing multiple clients. PitchBoost includes your team on every plan, Free included, without per-seat pricing that scales against you.",
       },
       {
         title: "Proposals built for the deal, not the brand",
@@ -195,7 +195,7 @@ export const COMPETITORS: Competitor[] = [
       },
       {
         q: "How does PitchBoost compare to Beautiful.ai on price?",
-        a: "Beautiful.ai's individual Pro plan is $12/mo billed annually, but team features require the $40/user/mo plan. PitchBoost starts free and offers a full-featured Business plan at $79/mo for teams, no per-seat pricing.",
+        a: "Beautiful.ai's individual Pro plan is $12/mo billed annually, but team features require the $40/user/mo plan. PitchBoost starts free and includes your team on every plan, with no per-seat pricing.",
       },
       {
         q: "Can I switch from Beautiful.ai to PitchBoost easily?",

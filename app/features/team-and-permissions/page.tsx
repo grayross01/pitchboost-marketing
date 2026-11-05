@@ -73,7 +73,7 @@ const ROLES = [
 ];
 
 const BULLETS = [
-  "Unlimited team members on Business plan",
+  "Unlimited team members on every plan, Free included",
   "Three roles: admin, member, and viewer",
   "Shared brand kit across the whole workspace",
   "Shared template library and saved slide library",
@@ -238,7 +238,7 @@ export default function TeamAndPermissionsPage() {
         <div className="mkt-container">
           <div className="cta-box fade-up">
             <h2>Your whole team. One platform. Better pitches.</h2>
-            <p>Start free and add your team when you&apos;re ready. No per-seat limits on the Business plan.</p>
+            <p>Start free and add your team when you&apos;re ready. There&apos;s no charge per person on any plan.</p>
             <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Set Up Your Team Free</a>
           </div>
         </div>
