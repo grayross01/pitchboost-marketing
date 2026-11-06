@@ -13,6 +13,12 @@ export interface ChangelogEntry {
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    date: "2026-11-06",
+    title: "Plan credits start fresh every month",
+    body: "Your plan's credits now reset at each renewal, and unused ones don't carry over. Credits you buy in a pack do.",
+    area: "Billing",
+  },
+  {
     date: "2026-11-05",
     title: "Full analytics and saved templates, on every plan",
     body: "Time per slide, drop-off, repeat visits and your Template Library are now on every plan, Free included. Nobody has to upgrade to find out which slides got read.",

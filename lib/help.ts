@@ -415,7 +415,7 @@ export const HELP_ARTICLES: HelpArticle[] = [
     category: "account",
     title: "How credits and plans work",
     metaDescription:
-      "Monthly credits on every plan: a deck of up to 10 slides costs 100, each slide past 10 adds 8. What each plan includes, what rolls over, and how to buy more.",
+      "Monthly credits on every plan: a deck of up to 10 slides costs 100, each slide past 10 adds 8. What each plan includes, what resets each month, and how to buy more.",
     answer:
       "Every PitchBoost plan includes a monthly credit allowance and every AI action has a fixed price: a deck (new or rebuilt) of up to 10 slides costs 100 credits, each slide past 10 adds 8 (4 on the new deck engine), an AI image is 10, a slide edit 10, a full-deck edit 50, a website scan 10. Free includes 150 credits a month (one deck), Starter 300, Pro 1,200 and Business 3,300. Paid plans roll unused credits over for a month and can buy top-up packs. In the app you see the percentage of your allowance used, never a running dollar figure.",
     sections: [
@@ -440,7 +440,7 @@ export const HELP_ARTICLES: HelpArticle[] = [
       {
         heading: "Rollover and packs",
         paragraphs: [
-          "On paid plans, unused credits carry into the next month up to one month's allowance. On the free plan they reset. Top-up packs of 200 ($5), 700 ($15) and 1,900 ($40) credits are available on paid plans and never expire while you are subscribed.",
+          "Plan credits reset every month, on every plan, and unused ones don't carry over. Credits you buy in a pack do. Top-up packs of 200 ($5), 700 ($15) and 1,900 ($40) credits are available on paid plans and never expire while you are subscribed.",
         ],
       },
       {
