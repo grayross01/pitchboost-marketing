@@ -359,7 +359,7 @@ export const PRESENTATIONS_PT: PresentationPage[] = [
       "A apresentação da reunião de laboratório do mês passado, enviada como .pptx, volta redesenhada com cada slide e cada número mantidos.",
       "Peça uma versão mais simples de um slide para um público misto, e o resto da apresentação fica como está.",
       "Notas do apresentador curtas no PowerPoint editável, para a explicação não depender da memória.",
-      "Envie ao grupo como link antes da reunião e veja quais slides foram vistos, com análises básicas no plano gratuito e completas no Pro.",
+      "Envie ao grupo como link antes da reunião e veja quais slides foram vistos, em todos os planos.",
     ],
     examplePrompts: [
       "Clube de revista sobre o artigo anexo, 15 minutos, para residentes de cardiologia. Dê às limitações do estudo um slide próprio.",
@@ -457,7 +457,7 @@ export const PRESENTATIONS_PT: PresentationPage[] = [
       "A apresentação de onboarding que você já tem pode ser enviada como .pptx ou PDF e redesenhada sem perder um slide, um passo ou um número.",
       "O PowerPoint editável traz notas do apresentador curtas, para um instrutor substituto ter de onde partir.",
       "Quando o processo mudar, peça à IA para atualizar aquele slide e deixar o resto em paz.",
-      "Envie o material prévio como link e você vai saber se ele foi aberto antes da sessão, e quais slides foram vistos (básico no plano gratuito, completo no Pro).",
+      "Envie o material prévio como link e você vai saber se ele foi aberto antes da sessão, e quais slides foram vistos, em todos os planos.",
     ],
     examplePrompts: [
       "Onboarding de primeira semana para novos atendentes de suporte: o básico dos chamados, tom de voz e quando escalonar, com base no manual em PDF anexo.",
@@ -578,7 +578,7 @@ export const PRESENTATIONS_PT: PresentationPage[] = [
       },
       {
         q: "Consigo saber se as pessoas abriram antes da reunião?",
-        a: "Sim. Compartilhe como link e você vê quando foi aberto e quais slides foram vistos: básico no plano gratuito, completo no Pro. Útil na véspera, quando você está decidindo quanto recapitular.",
+        a: "Sim. Compartilhe como link e você vê quando foi aberto e quais slides foram vistos, em todos os planos. Útil na véspera, quando você está decidindo quanto recapitular.",
       },
       {
         q: "Por que não colar o relatório no ChatGPT?",
@@ -667,7 +667,7 @@ export const PRESENTATIONS_PT: PresentationPage[] = [
       },
       {
         q: "Vou saber se a atualização foi aberta?",
-        a: "Sim, se ela for enviada como link. Você vê quando foi aberta e quais slides foram vistos, com detalhe básico no plano gratuito e o quadro completo no Pro. Vale saber antes da ligação de follow-up.",
+        a: "Sim, se ela for enviada como link. Você vê quando foi aberta e quais slides foram vistos, em todos os planos. Vale saber antes da ligação de follow-up.",
       },
       {
         q: "Quanto custa a cada trimestre?",

@@ -706,11 +706,11 @@ export const REDESIGNS_PT: RedesignPage[] = [
       },
       {
         "q": "Meu cliente pode ver quem visualizou?",
-        "a": "Não. A análise de visualizadores é para você: você vê as aberturas, e no Pro o tempo por slide. O cliente vê um deck limpo."
+        "a": "Não. A análise de visualizadores é para você: você vê as aberturas e o tempo por slide. O cliente vê um deck limpo."
       },
       {
         "q": "Quanto custa?",
-        "a": "Um deck de IA por mês é gratuito, até 10 slides, com um pequeno badge. Starter é $7 por mês para até 25 slides e sem badge. Pro é $29 por mês com análise completa e domínios personalizados."
+        "a": "Um deck de IA por mês é gratuito, até 10 slides, com um pequeno badge. Starter é $7 por mês para até 25 slides e sem badge. Pro é $29 por mês para até 60 slides e domínios personalizados."
       }
     ],
     "ctaHeadline": "Faça a revisão parecer que o relacionamento importa.",
@@ -854,7 +854,7 @@ export const REDESIGNS_PT: RedesignPage[] = [
       },
       {
         "q": "Quanto custa?",
-        "a": "Um deck AI por mês é grátis, até 10 slides, com um pequeno badge. Starter é $7 por mês para até 25 slides e sem badge; Pro é $29 por mês com análises completas e domínios personalizados."
+        "a": "Um deck AI por mês é grátis, até 10 slides, com um pequeno badge. Starter é $7 por mês para até 25 slides e sem badge; Pro é $29 por mês para até 60 slides e domínios personalizados."
       }
     ],
     "ctaHeadline": "Faça o deck tão afiado quanto a análise.",
@@ -903,7 +903,7 @@ export const REDESIGNS_PT: RedesignPage[] = [
       },
       {
         "q": "Quanto custa embelezar um deck?",
-        "a": "O plano gratuito inclui um deck de IA por mês, até 10 slides, com um pequeno badge Powered by PitchBoost. Starter é $7 por mês para até 25 slides e sem badge: Pro é $29 por mês para até 60 slides com análise completa de visualizadores."
+        "a": "O plano gratuito inclui um deck de IA por mês, até 10 slides, com um pequeno badge Powered by PitchBoost. Starter é $7 por mês para até 25 slides e sem badge: Pro é $29 por mês para até 60 slides e domínios personalizados."
       }
     ],
     "ctaHeadline": "Envie o deck. Receba de volta bonito e ainda seu.",
@@ -1008,7 +1008,7 @@ export const REDESIGNS_PT: RedesignPage[] = [
       },
       {
         "q": "Quanto custa modernizar um deck?",
-        "a": "Um deck com IA por mês é gratuito, até 10 slides, com um pequeno badge. Starter é $7 por mês para até 25 slides e sem badge. Pro é $29 por mês para até 60 slides, analytics completo e domínios personalizados. Decks mais longos podem ser condensados antes."
+        "a": "Um deck com IA por mês é gratuito, até 10 slides, com um pequeno badge. Starter é $7 por mês para até 25 slides e sem badge. Pro é $29 por mês para até 60 slides e domínios personalizados. Decks mais longos podem ser condensados antes."
       }
     ],
     "ctaHeadline": "Mantenha a história que funciona. Aposente o template que não funciona.",

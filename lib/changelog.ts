@@ -14,6 +14,12 @@ export interface ChangelogEntry {
 export const CHANGELOG: ChangelogEntry[] = [
   {
     date: "2026-11-05",
+    title: "Full analytics and saved templates, on every plan",
+    body: "Time per slide, drop-off, repeat visits and your Template Library are now on every plan, Free included. Nobody has to upgrade to find out which slides got read.",
+    area: "Sharing",
+  },
+  {
+    date: "2026-11-05",
     title: "Your team, on every plan",
     body: "Any plan can now invite teammates, Free included, at no charge per person. Everyone shares the workspace's AI credits. And if you move to a lower plan, we show you what it changes on your account before anything happens.",
     area: "Billing",

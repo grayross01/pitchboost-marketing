@@ -288,7 +288,7 @@ export const ANSWERS: AnswerPage[] = [
       },
       {
         "title": "Know who opened it",
-        "body": "An attachment tells you nothing once it leaves your outbox. A PitchBoost deck goes out as a link, so you see when it is opened and when the recipient comes back to it; Pro adds time spent on each slide. You know who is interested before you follow up."
+        "body": "An attachment tells you nothing once it leaves your outbox. A PitchBoost deck goes out as a link, so you see when it is opened, when the recipient comes back to it, and the time spent on each slide. You know who is interested before you follow up."
       },
       {
         "title": "How to connect PitchBoost to Claude",
@@ -338,7 +338,7 @@ export const ANSWERS: AnswerPage[] = [
       },
       {
         "title": "Where PitchBoost is different",
-        "body": "Upload the whole .pptx, point PitchBoost at your website, and every slide is rebuilt in your brand in a few minutes, with your text and numbers kept exactly. No template or Microsoft subscription is required. The deck goes out as a trackable link, so you see when a prospect opens it and, on Pro, how long they spend on each slide. Download the editable PowerPoint whenever you need the file."
+        "body": "Upload the whole .pptx, point PitchBoost at your website, and every slide is rebuilt in your brand in a few minutes, with your text and numbers kept exactly. No template or Microsoft subscription is required. The deck goes out as a trackable link, so you see when a prospect opens it and how long they spend on each slide. Download the editable PowerPoint whenever you need the file."
       },
       {
         "title": "Using both",
@@ -360,7 +360,7 @@ export const ANSWERS: AnswerPage[] = [
       },
       {
         "q": "What does PitchBoost cost?",
-        "a": "One AI deck a month is free, up to 10 slides, with a small badge. Starter is $7 a month for decks up to 25 slides with no badge; Pro is $29 a month for up to 60 slides and full viewer analytics."
+        "a": "One AI deck a month is free, up to 10 slides, with a small badge. Starter is $7 a month for decks up to 25 slides with no badge; Pro is $29 a month for up to 60 slides and custom domains."
       }
     ],
     "related": "powerpoint-designer-alternative",
@@ -392,7 +392,7 @@ export const ANSWERS: AnswerPage[] = [
       },
       {
         "title": "After the deck is sent",
-        "body": "Decks from PitchBoost go out as links, so you see when each one is opened; Pro adds time per slide. A .pptx built by a file-level server is just a file, and a file tells you nothing once it is emailed."
+        "body": "Decks from PitchBoost go out as links, so you see when each one is opened and the time spent on each slide. A .pptx built by a file-level server is just a file, and a file tells you nothing once it is emailed."
       }
     ],
     "faqs": [

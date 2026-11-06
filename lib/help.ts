@@ -93,7 +93,7 @@ export const HELP_ARTICLES: HelpArticle[] = [
       },
       {
         q: "What does it cost?",
-        a: "The free plan includes one AI deck a month, up to 10 slides, with a small PitchBoost badge. Starter is $7 a month for up to 25 slides and no badge; Pro is $29 a month for up to 60 slides with full analytics.",
+        a: "The free plan includes one AI deck a month, up to 10 slides, with a small PitchBoost badge. Starter is $7 a month for up to 25 slides and no badge; Pro is $29 a month for up to 60 slides and custom domains.",
       },
     ],
     related: ["google-slides-and-keynote", "slide-limits-by-plan", "download-powerpoint-or-pdf", "how-long-does-a-deck-take"],
@@ -250,9 +250,9 @@ export const HELP_ARTICLES: HelpArticle[] = [
     category: "sharing",
     title: "How to share a deck as a link and see who opened it",
     metaDescription:
-      "Publish a deck to get an unlisted link, send it to a prospect, and get notified the moment they open it. What the free plan tracks and what Pro adds.",
+      "Publish a deck to get an unlisted link, send it to a prospect, and get notified the moment they open it. What the link tracks, on every plan.",
     answer:
-      "Click \"Publish & copy link\" on the deck's share screen. That creates an unlisted link (anyone with it can view; nobody can find it otherwise) and copies it to your clipboard. When a prospect opens the link, PitchBoost emails you. Free and Starter show basic analytics (opens and views); Pro and Business show which slides each viewer read and for how long.",
+      "Click \"Publish & copy link\" on the deck's share screen. That creates an unlisted link (anyone with it can view; nobody can find it otherwise) and copies it to your clipboard. When a prospect opens the link, PitchBoost emails you. Every plan shows which slides each viewer read and for how long.",
     steps: [
       {
         title: "Publish the deck",
@@ -264,7 +264,7 @@ export const HELP_ARTICLES: HelpArticle[] = [
       },
       {
         title: "Watch the deal",
-        body: "You get an email the moment the deck is opened. The deal page shows every visit; on Pro and Business it also shows time per slide and which slides were skipped.",
+        body: "You get an email the moment the deck is opened. The deal page shows every visit, with time per slide and which slides were skipped.",
       },
       {
         title: "Take it offline when you want",
@@ -422,11 +422,11 @@ export const HELP_ARTICLES: HelpArticle[] = [
       {
         heading: "The plans",
         paragraphs: [
-          "Free: 150 credits a month, one deal, decks up to 10 slides with a small badge, a shareable live link with basic analytics. Downloading a file takes a paid plan or a one-time $9 for that deck. No card required.",
+          "Free: 150 credits a month, one deal, decks up to 10 slides with a small badge, a shareable live link with full viewer analytics and saved templates. Downloading a file takes a paid plan or a one-time $9 for that deck. No card required.",
           "Starter, $7 a month: more AI credits, 300 a month, unlimited deals, decks up to 25 slides, no badge anywhere, PowerPoint, PDF and Google Slides downloads, top-up packs.",
-          "Pro, $29 a month: even more AI credits, 1,200 a month, decks up to 60 slides, full viewer analytics with time per slide, saved templates, custom domains, API and MCP access.",
+          "Pro, $29 a month: even more AI credits, 1,200 a month, decks up to 60 slides, custom domains, API and MCP access.",
           "Business, $79 a month: our largest AI credit allowance, 3,300 a month, analytics export, and sending from your own domain.",
-          "Teammates are on every plan, Free included, at no charge per person. Everyone shares the workspace's AI credits.",
+          "Full viewer analytics, saved templates and teammates are on every plan, Free included, at no charge per person. Everyone shares the workspace's AI credits.",
           "Annual billing is cheaper: Starter $70 a year (about $5.83 a month), Pro $24 and Business $66 a month when paid yearly.",
         ],
       },

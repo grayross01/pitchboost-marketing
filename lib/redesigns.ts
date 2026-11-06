@@ -786,11 +786,11 @@ export const REDESIGNS: RedesignPage[] = [
       },
       {
         "q": "Can my customer see who viewed it?",
-        "a": "No. Viewer analytics are for you: you see opens, and on Pro time per slide. The customer sees a clean deck."
+        "a": "No. Viewer analytics are for you: you see opens and time per slide. The customer sees a clean deck."
       },
       {
         "q": "What does it cost?",
-        "a": "One AI deck a month is free, up to 10 slides, with a small badge. Starter is $7 a month for up to 25 slides and no badge; Pro is $29 a month with full analytics and custom domains."
+        "a": "One AI deck a month is free, up to 10 slides, with a small badge. Starter is $7 a month for up to 25 slides and no badge; Pro is $29 a month for up to 60 slides and custom domains."
       }
     ],
     "ctaHeadline": "Make the review look like the relationship matters.",
@@ -934,7 +934,7 @@ export const REDESIGNS: RedesignPage[] = [
       },
       {
         "q": "What does it cost?",
-        "a": "One AI deck a month is free, up to 10 slides, with a small badge. Starter is $7 a month for up to 25 slides and no badge; Pro is $29 a month with full analytics and custom domains."
+        "a": "One AI deck a month is free, up to 10 slides, with a small badge. Starter is $7 a month for up to 25 slides and no badge; Pro is $29 a month for up to 60 slides and custom domains."
       }
     ],
     "ctaHeadline": "Make the deck as sharp as the analysis.",
@@ -983,7 +983,7 @@ export const REDESIGNS: RedesignPage[] = [
       },
       {
         "q": "What does it cost to beautify a deck?",
-        "a": "The free plan includes one AI deck a month, up to 10 slides, with a small PitchBoost badge. Starter is $7 a month for up to 25 slides and no badge; Pro is $29 a month for up to 60 slides with full viewer analytics."
+        "a": "The free plan includes one AI deck a month, up to 10 slides, with a small PitchBoost badge. Starter is $7 a month for up to 25 slides and no badge; Pro is $29 a month for up to 60 slides and custom domains."
       }
     ],
     "ctaHeadline": "Upload the deck. Get it back beautiful, and still yours.",
@@ -1088,7 +1088,7 @@ export const REDESIGNS: RedesignPage[] = [
       },
       {
         "q": "What does it cost to modernize a deck?",
-        "a": "One AI deck a month is free, up to 10 slides, with a small badge. Starter is $7 a month for up to 25 slides and no badge; Pro is $29 a month for up to 60 slides, full analytics and custom domains. Longer decks can be condensed first."
+        "a": "One AI deck a month is free, up to 10 slides, with a small badge. Starter is $7 a month for up to 25 slides and no badge; Pro is $29 a month for up to 60 slides and custom domains. Longer decks can be condensed first."
       }
     ],
     "ctaHeadline": "Keep the story that works. Retire the template that does not.",
@@ -1136,7 +1136,7 @@ export const REDESIGNS: RedesignPage[] = [
       },
       {
         "q": "What does it cost?",
-        "a": "One AI deck a month is free, up to 10 slides, with a small badge. Starter is $7 a month for decks up to 25 slides with no badge; Pro is $29 a month for up to 60 slides and full viewer analytics."
+        "a": "One AI deck a month is free, up to 10 slides, with a small badge. Starter is $7 a month for decks up to 25 slides with no badge; Pro is $29 a month for up to 60 slides and custom domains."
       }
     ],
     "ctaHeadline": "Stop fixing slides one at a time.",
@@ -1232,7 +1232,7 @@ export const REDESIGNS: RedesignPage[] = [
       },
       {
         "q": "Does it cost anything?",
-        "a": "One AI deck a month is free, up to 10 slides, with a small badge. Starter is $7 a month for decks up to 25 slides with no badge; Pro is $29 a month for up to 60 slides and full viewer analytics."
+        "a": "One AI deck a month is free, up to 10 slides, with a small badge. Starter is $7 a month for decks up to 25 slides with no badge; Pro is $29 a month for up to 60 slides and custom domains."
       }
     ],
     "ctaHeadline": "Download once. Send something you are proud of.",

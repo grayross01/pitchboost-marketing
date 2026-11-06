@@ -81,7 +81,7 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "Is there really a free plan?",
-    a: "Yes. Start free, build your first presentation, and try the closing-timeline tool with no credit card. Upgrade when you are winning enough listings to want reminders, unlimited deals, and read receipts.",
+    a: "Yes. Start free, build your first presentation, and try the closing-timeline tool with no credit card. Upgrade when you are winning enough listings to want reminders and unlimited deals.",
   },
 ];
 
