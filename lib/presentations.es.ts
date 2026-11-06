@@ -359,7 +359,7 @@ export const PRESENTATIONS_ES: PresentationPage[] = [
       "La presentación de la reunión de laboratorio del mes pasado, subida como .pptx, vuelve rediseñada con cada diapositiva y cada cifra intactas.",
       "Pide una versión más sencilla de una diapositiva para un público mixto, y el resto de la presentación queda como está.",
       "Notas del orador breves en el PowerPoint editable, para que la explicación no dependa de tu memoria.",
-      "Envíala al grupo como enlace antes de la reunión y ve qué diapositivas se vieron, con analíticas básicas en el plan gratuito y completas en Pro.",
+      "Envíala al grupo como enlace antes de la reunión y ve qué diapositivas se vieron, en todos los planes.",
     ],
     examplePrompts: [
       "Club de revistas sobre el artículo adjunto, 15 minutos, para residentes de cardiología. Dale a las limitaciones del estudio su propia diapositiva.",
@@ -457,7 +457,7 @@ export const PRESENTATIONS_ES: PresentationPage[] = [
       "La presentación de inducción que ya tienes se puede subir como .pptx o PDF y rediseñar sin perder una diapositiva, un paso ni una cifra.",
       "El PowerPoint editable lleva notas del orador breves, para que un capacitador suplente tenga de dónde partir.",
       "Cuando el proceso cambie, pídele a la IA que actualice esa diapositiva y deje el resto como está.",
-      "Envía el material previo como enlace y sabrás si se abrió antes de la sesión, y qué diapositivas se vieron (básico en el plan gratuito, completo en Pro).",
+      "Envía el material previo como enlace y sabrás si se abrió antes de la sesión, y qué diapositivas se vieron, en todos los planes.",
     ],
     examplePrompts: [
       "Inducción de primera semana para nuevos agentes de soporte: lo básico de los tickets, el tono de voz y cuándo escalar, según el manual en PDF adjunto.",
@@ -578,7 +578,7 @@ export const PRESENTATIONS_ES: PresentationPage[] = [
       },
       {
         q: "¿Puedo saber si la abrieron antes de la reunión?",
-        a: "Sí. Compártela como enlace y verás cuándo se abre y qué diapositivas se vieron: básico en el plan gratuito, completo en Pro. Útil la noche anterior, cuando decides cuánto repasar.",
+        a: "Sí. Compártela como enlace y verás cuándo se abre y qué diapositivas se vieron, en todos los planes. Útil la noche anterior, cuando decides cuánto repasar.",
       },
       {
         q: "¿Por qué no pegar el informe en ChatGPT?",
@@ -667,7 +667,7 @@ export const PRESENTATIONS_ES: PresentationPage[] = [
       },
       {
         q: "¿Sabré si abrieron la actualización?",
-        a: "Sí, si la envías como enlace. Verás cuándo se abrió y qué diapositivas se vieron, con un detalle básico en el plan gratuito y el panorama completo en Pro. Vale la pena saberlo antes de la llamada de seguimiento.",
+        a: "Sí, si la envías como enlace. Verás cuándo se abrió y qué diapositivas se vieron, en todos los planes. Vale la pena saberlo antes de la llamada de seguimiento.",
       },
       {
         q: "¿Cuánto cuesta cada trimestre?",

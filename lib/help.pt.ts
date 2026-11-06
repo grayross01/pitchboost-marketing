@@ -66,7 +66,7 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
       },
       {
         "q": "Quanto custa?",
-        "a": "O plano Free inclui uma apresentação AI por mês, até 10 slides, com um pequeno selo PitchBoost. Starter custa $7 por mês para até 25 slides e sem selo; Pro custa $29 por mês para até 60 slides com analytics completo."
+        "a": "O plano Free inclui uma apresentação AI por mês, até 10 slides, com um pequeno selo PitchBoost. Starter custa $7 por mês para até 25 slides e sem selo; Pro custa $29 por mês para até 60 slides e domínios personalizados."
       }
     ],
     "related": [
@@ -229,8 +229,8 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
     "slug": "share-a-deck-link",
     "category": "sharing",
     "title": "Como compartilhar uma apresentação por link e ver quem abriu",
-    "metaDescription": "Publique uma apresentação para obter um link não listado, envie para um prospect e seja notificado no momento em que ele abrir. O que o plano gratuito rastreia e o que o Pro adiciona.",
-    "answer": "Clique em \"Publicar e copiar link\" na tela de compartilhamento da apresentação. Isso cria um link não listado (qualquer pessoa com ele pode visualizar; ninguém pode encontrá-lo de outra forma) e o copia para sua área de transferência. Quando um prospect abre o link, o PitchBoost envia um email para você. Free e Starter mostram análises básicas (aberturas e visualizações); Pro e Business mostram quais slides cada visualizador leu e por quanto tempo.",
+    "metaDescription": "Publique uma apresentação para obter um link não listado, envie para um prospect e seja notificado no momento em que ele abrir. O que o link rastreia, em todos os planos.",
+    "answer": "Clique em \"Publicar e copiar link\" na tela de compartilhamento da apresentação. Isso cria um link não listado (qualquer pessoa com ele pode visualizar; ninguém pode encontrá-lo de outra forma) e o copia para sua área de transferência. Quando um prospect abre o link, o PitchBoost envia um email para você. Todos os planos mostram quais slides cada visualizador leu e por quanto tempo.",
     "steps": [
       {
         "title": "Publique a apresentação",
@@ -242,7 +242,7 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
       },
       {
         "title": "Acompanhe o negócio",
-        "body": "Você recebe um email no momento em que a apresentação é aberta. A página do negócio mostra cada visita; no Pro e Business também mostra o tempo por slide e quais slides foram pulados."
+        "body": "Você recebe um email no momento em que a apresentação é aberta. A página do negócio mostra cada visita, com o tempo por slide e quais slides foram pulados."
       },
       {
         "title": "Tire do ar quando quiser",
@@ -397,10 +397,10 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
       {
         "heading": "Os planos",
         "paragraphs": [
-          "Free: 150 créditos por mês, um negócio, apresentações de até 10 slides com um pequeno selo, um link ao vivo compartilhável com análises básicas. Baixar um arquivo exige um plano pago ou um pagamento único de US$ 9 por essa apresentação. Não requer cartão.",
+          "Free: 150 créditos por mês, um negócio, apresentações de até 10 slides com um pequeno selo, um link ao vivo compartilhável com análises completas e modelos salvos. Baixar um arquivo exige um plano pago ou um pagamento único de US$ 9 por essa apresentação. Não requer cartão.",
           "Starter, $7 por mês: mais créditos de IA, 300 por mês, negócios ilimitados, apresentações de até 25 slides, sem selo em lugar algum, downloads em PowerPoint, PDF e Google Slides, pacotes extras.",
-          "Pro, $29 por mês: ainda mais créditos de IA, 1.200 por mês, apresentações de até 60 slides, análises completas do visualizador com tempo por slide, modelos salvos, domínios personalizados, acesso à API e MCP.",
-          "Business, $79 por mês: nossa maior cota de créditos de IA, 3.300 por mês, assentos e permissões de equipe, exportação de análises e envio a partir do seu próprio domínio.",
+          "Pro, $29 por mês: ainda mais créditos de IA, 1.200 por mês, apresentações de até 60 slides, domínios personalizados, acesso à API e MCP.",
+          "Business, $79 por mês: nossa maior cota de créditos de IA, 3.300 por mês, exportação de análises e envio a partir do seu próprio domínio.",
           "Cobrança anual é mais barata: Starter $70 por ano (cerca de $5,83 por mês), Pro $24 e Business $66 por mês quando pago anualmente."
         ]
       },

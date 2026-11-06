@@ -28,11 +28,11 @@ export const FAQS = [
   },
   {
     q: "Can I track who views my deck?",
-    a: "Yes. Pro and Business plans include analytics so you can see who opened your deck, which slides they viewed, and how long they spent on each one.",
+    a: "Yes. Every plan includes analytics, so you can see who opened your deck, which slides they viewed, and how long they spent on each one.",
   },
   {
     q: "Is there a free plan?",
-    a: "Yes. The Free plan includes one AI-generated deck a month with basic analytics. It's a great way to try PitchBoost before committing to a paid plan.",
+    a: "Yes. The Free plan includes one AI-generated deck a month with full viewer analytics. It's a great way to try PitchBoost before committing to a paid plan.",
   },
   {
     q: "Can I build decks from Claude or my own tools?",

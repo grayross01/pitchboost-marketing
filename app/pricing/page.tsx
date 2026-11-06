@@ -30,7 +30,7 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "What is the difference between Starter, Pro and Business?",
-    a: "Starter removes the badge and adds more AI credits. Pro is for people who do this for a living: even more AI credits (1,200 a month), decks up to 60 slides, full viewer analytics, saved templates, custom domains, and API access. Business adds analytics export, sending from your own domain and our largest AI credit allowance, 3,300 a month.",
+    a: "Starter removes the badge and adds more AI credits. Pro is for people who do this for a living: even more AI credits (1,200 a month), decks up to 60 slides, custom domains, and API access. Business adds analytics export, sending from your own domain and our largest AI credit allowance, 3,300 a month.",
   },
   {
     q: "Do I pay per person?",

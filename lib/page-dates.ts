@@ -34,10 +34,10 @@ export const STATIC_PAGE_DATES: Record<string, string> = {
   "/about": "2026-09-17",
   "/research": "2026-09-17",
   "/security": "2026-09-17",
-  "/changelog": "2026-10-29",
+  "/changelog": "2026-11-05",
   "/ideas": "2026-10-29",
   "/features": "2026-08-31",
-  "/answers": "2026-09-12",
+  "/answers": "2026-11-05",
   "/redesign": "2026-09-08",
 };
 
@@ -51,14 +51,14 @@ export const FEATURE_PAGE_DATES: Record<string, string> = {
   "research-and-fact-checking": "2026-08-24",
   "team-and-permissions": "2026-11-05",
   "templates-and-slides": "2026-09-12",
-  "upload-and-redesign": "2026-09-16",
+  "upload-and-redesign": "2026-11-05",
   "viewer-analytics": "2026-09-12",
 };
 
-export const INDUSTRIES_UPDATED = "2026-09-12";
-export const COMPETITORS_UPDATED = "2026-10-22";
-export const REDESIGNS_UPDATED = "2026-09-16";
-export const HELP_UPDATED = "2026-09-16";
+export const INDUSTRIES_UPDATED = "2026-11-05";
+export const COMPETITORS_UPDATED = "2026-11-05";
+export const REDESIGNS_UPDATED = "2026-11-05";
+export const HELP_UPDATED = "2026-11-05";
 export const CITIES_UPDATED = "2026-07-10";
 export const NET_SHEET_UPDATED = "2026-07-16";
 

@@ -66,7 +66,7 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       },
       {
         "q": "¿Cuánto cuesta?",
-        "a": "El plan gratuito incluye una presentación AI al mes, hasta 10 diapositivas, con una pequeña insignia de PitchBoost. Starter cuesta $7 al mes para hasta 25 diapositivas y sin insignia; Pro cuesta $29 al mes para hasta 60 diapositivas con análisis completo."
+        "a": "El plan gratuito incluye una presentación AI al mes, hasta 10 diapositivas, con una pequeña insignia de PitchBoost. Starter cuesta $7 al mes para hasta 25 diapositivas y sin insignia; Pro cuesta $29 al mes para hasta 60 diapositivas y dominios personalizados."
       }
     ],
     "related": [
@@ -229,8 +229,8 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
     "slug": "share-a-deck-link",
     "category": "sharing",
     "title": "Cómo compartir una presentación como enlace y ver quién la abrió",
-    "metaDescription": "Publica una presentación para obtener un enlace no listado, envíalo a un prospecto y recibe una notificación en cuanto lo abra. Qué rastrea el plan Free y qué añade Pro.",
-    "answer": "Haz clic en \"Publicar y copiar enlace\" en la pantalla de compartir de la presentación. Eso crea un enlace no listado (cualquiera que lo tenga puede verlo; nadie puede encontrarlo de otra manera) y lo copia a tu portapapeles. Cuando un prospecto abre el enlace, PitchBoost te envía un correo. Free y Starter muestran análisis básicos (aperturas y vistas); Pro y Business muestran qué diapositivas leyó cada espectador y por cuánto tiempo.",
+    "metaDescription": "Publica una presentación para obtener un enlace no listado, envíalo a un prospecto y recibe una notificación en cuanto lo abra. Qué rastrea el enlace, en todos los planes.",
+    "answer": "Haz clic en \"Publicar y copiar enlace\" en la pantalla de compartir de la presentación. Eso crea un enlace no listado (cualquiera que lo tenga puede verlo; nadie puede encontrarlo de otra manera) y lo copia a tu portapapeles. Cuando un prospecto abre el enlace, PitchBoost te envía un correo. Todos los planes muestran qué diapositivas leyó cada espectador y por cuánto tiempo.",
     "steps": [
       {
         "title": "Publica la presentación",
@@ -242,7 +242,7 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       },
       {
         "title": "Monitorea el trato",
-        "body": "Recibes un correo en el momento en que se abre la presentación. La página del trato muestra cada visita; en Pro y Business también muestra tiempo por diapositiva y qué diapositivas se omitieron."
+        "body": "Recibes un correo en el momento en que se abre la presentación. La página del trato muestra cada visita, con el tiempo por diapositiva y qué diapositivas se omitieron."
       },
       {
         "title": "Desconéctala cuando quieras",
@@ -397,10 +397,10 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       {
         "heading": "Los planes",
         "paragraphs": [
-          "Free: 150 créditos al mes, un trato, presentaciones de hasta 10 diapositivas con una marca pequeña, enlace en vivo compartible con análisis básicos. Descargar un archivo requiere un plan de pago o un pago único de $9 por esa presentación. No se requiere tarjeta.",
+          "Free: 150 créditos al mes, un trato, presentaciones de hasta 10 diapositivas con una marca pequeña, enlace en vivo compartible con análisis completo y plantillas guardadas. Descargar un archivo requiere un plan de pago o un pago único de $9 por esa presentación. No se requiere tarjeta.",
           "Starter, $7 al mes: más créditos de IA, 300 al mes, tratos ilimitados, presentaciones de hasta 25 diapositivas, sin marca en ningún lugar, descargas de PowerPoint, PDF y Google Slides, paquetes adicionales.",
-          "Pro, $29 al mes: aún más créditos de IA, 1200 al mes, presentaciones de hasta 60 diapositivas, análisis completo del visor con tiempo por diapositiva, plantillas guardadas, dominios personalizados, acceso a API y MCP.",
-          "Business, $79 al mes: nuestra mayor asignación de créditos de IA, 3300 al mes, puestos y permisos de equipo, exportar análisis y enviar desde tu propio dominio.",
+          "Pro, $29 al mes: aún más créditos de IA, 1200 al mes, presentaciones de hasta 60 diapositivas, dominios personalizados, acceso a API y MCP.",
+          "Business, $79 al mes: nuestra mayor asignación de créditos de IA, 3300 al mes, exportar análisis y enviar desde tu propio dominio.",
           "La facturación anual es más económica: Starter $70 al año (unos $5.83 al mes), Pro $24 y Business $66 al mes cuando se paga anualmente."
         ]
       },

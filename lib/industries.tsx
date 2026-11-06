@@ -108,11 +108,11 @@ export const INDUSTRIES: Industry[] = [
       },
       {
         q: "Can I save my best-performing sales decks as reusable templates?",
-        a: "Yes. On Pro and Business plans you can save any generated sales deck as a template. If a particular format performs well for enterprise deals or a specific vertical, lock it in and use it as a starting point, while still letting AI tailor the content for each new prospect.",
+        a: "Yes. On every plan you can save any generated sales deck as a template. If a particular format performs well for enterprise deals or a specific vertical, lock it in and use it as a starting point, while still letting AI tailor the content for each new prospect.",
       },
       {
         q: "Can I track whether prospects have viewed my sales deck?",
-        a: "Yes, on Pro and Business plans. You'll see who opened the deck, which slides they spent the most time on, and when they came back for a second look, so your follow-up timing is always right.",
+        a: "Yes, on every plan. You'll see who opened the deck, which slides they spent the most time on, and when they came back for a second look, so your follow-up timing is always right.",
       },
       {
         q: "Is PitchBoost a B2B sales deck template or an AI sales deck generator?",
@@ -336,7 +336,7 @@ export const INDUSTRIES: Industry[] = [
       },
       {
         q: "Can I track whether investors have viewed my pitch deck?",
-        a: "Yes, on Pro and Business plans. You'll see which investors opened your deck, which slides they spent the most time on, and whether they came back for a second look, so you know who's warm before you follow up.",
+        a: "Yes, on every plan. You'll see which investors opened your deck, which slides they spent the most time on, and whether they came back for a second look, so you know who's warm before you follow up.",
       },
       {
         q: "Can I save my best startup pitch deck as a template?",
@@ -449,7 +449,7 @@ export const INDUSTRIES: Industry[] = [
       },
       {
         q: "Can I track whether a brand's team has viewed my sponsorship deck?",
-        a: "Yes, on Pro and Business plans. You'll see who on the brand's marketing team opened the deck, which sponsorship packages they spent time reviewing, and when they came back, so you follow up when engagement is highest.",
+        a: "Yes, on every plan. You'll see who on the brand's marketing team opened the deck, which sponsorship packages they spent time reviewing, and when they came back, so you follow up when engagement is highest.",
       },
       {
         q: "Is there an AI sponsorship proposal maker for media companies and creators?",
@@ -560,11 +560,11 @@ export const INDUSTRIES: Industry[] = [
       },
       {
         q: "Can I save my agency pitch deck as a reusable template?",
-        a: "Yes. On Pro and Business plans you can save any generated deck as a template for your agency. If a format works well for a particular type of client pitch, lock it in and use it as a starting point, while still letting AI tailor the content for each new client.",
+        a: "Yes. On every plan you can save any generated deck as a template for your agency. If a format works well for a particular type of client pitch, lock it in and use it as a starting point, while still letting AI tailor the content for each new client.",
       },
       {
         q: "Can I see which clients have viewed my pitch deck?",
-        a: "Yes, on Pro and Business plans. You'll see which prospective clients opened the deck, which slides they spent time on, and when they viewed it, so you can follow up at exactly the right moment.",
+        a: "Yes, on every plan. You'll see which prospective clients opened the deck, which slides they spent time on, and when they viewed it, so you can follow up at exactly the right moment.",
       },
       {
         q: "Is there an AI pitch deck maker for agencies and creative studios?",
@@ -670,7 +670,7 @@ export const INDUSTRIES: Industry[] = [
       },
       {
         q: "Can I track whether a prospect has reviewed our proposal?",
-        a: "Yes, on Pro and Business plans. You'll see who on the client's team opened the proposal, which sections they spent time on, and how many times they came back, so your follow-up is always informed by actual engagement data.",
+        a: "Yes, on every plan. You'll see who on the client's team opened the proposal, which sections they spent time on, and how many times they came back, so your follow-up is always informed by actual engagement data.",
       },
       {
         q: "Can I save engagement proposals as templates for specific practice areas?",
@@ -779,7 +779,7 @@ export const INDUSTRIES: Industry[] = [
       },
       {
         q: "Can I track whether hiring managers reviewed my agency proposal?",
-        a: "Yes, on Pro and Business plans. You'll see who opened the proposal, which sections they spent the most time on, and whether they shared it internally, so you know when to follow up and who to address.",
+        a: "Yes, on every plan. You'll see who opened the proposal, which sections they spent the most time on, and whether they shared it internally, so you know when to follow up and who to address.",
       },
       {
         q: "Can I save my best-performing recruiting pitch decks as templates?",
@@ -1114,7 +1114,7 @@ export const INDUSTRIES: Industry[] = [
       },
       {
         q: "Can I track whether an investor or tenant reviewed my deck?",
-        a: "Yes, on Pro and Business plans. You'll see who opened the deck, how long each stakeholder spent on it, and which sections they reviewed most carefully, so you know what questions to expect on the next call.",
+        a: "Yes, on every plan. You'll see who opened the deck, how long each stakeholder spent on it, and which sections they reviewed most carefully, so you know what questions to expect on the next call.",
       },
       {
         q: "Can I include market data and comparable transactions?",
@@ -1227,7 +1227,7 @@ export const INDUSTRIES: Industry[] = [
       },
       {
         q: "Can I see whether the seller actually opened my presentation?",
-        a: "Yes, on Pro and Business plans. You will see when the seller opened the link, how long they spent, and which sections they came back to, so you can time your follow-up instead of guessing.",
+        a: "Yes, on every plan. You will see when the seller opened the link, how long they spent, and which sections they came back to, so you can time your follow-up instead of guessing.",
       },
       {
         q: "Is there an AI listing presentation maker for real estate agents?",
@@ -1444,7 +1444,7 @@ export const INDUSTRIES: Industry[] = [
       },
       {
         q: "Can I track whether a prospect reviewed my pitch presentation?",
-        a: "Yes, on Pro and Business plans. You'll see who opened the presentation, which sections they spent time on, and when they returned for a second review, so you know who is actively evaluating your services before you follow up.",
+        a: "Yes, on every plan. You'll see who opened the presentation, which sections they spent time on, and when they returned for a second review, so you know who is actively evaluating your services before you follow up.",
       },
       {
         q: "Can I use PitchBoost for existing client communications, not just new prospect pitches?",

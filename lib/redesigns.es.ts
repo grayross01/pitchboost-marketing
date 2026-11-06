@@ -706,11 +706,11 @@ export const REDESIGNS_ES: RedesignPage[] = [
       },
       {
         "q": "¿Puede mi cliente ver quién la vio?",
-        "a": "No. Las analíticas de visualización son para ti: tú ves las aperturas, y en Pro el tiempo por diapositiva. El cliente ve una presentación limpia."
+        "a": "No. Las analíticas de visualización son para ti: tú ves las aperturas y el tiempo por diapositiva. El cliente ve una presentación limpia."
       },
       {
         "q": "¿Cuánto cuesta?",
-        "a": "Una presentación con IA al mes es gratis, hasta 10 diapositivas, con una pequeña insignia. Starter cuesta $7 al mes para hasta 25 diapositivas y sin insignia. Pro cuesta $29 al mes con analíticas completas y dominios personalizados."
+        "a": "Una presentación con IA al mes es gratis, hasta 10 diapositivas, con una pequeña insignia. Starter cuesta $7 al mes para hasta 25 diapositivas y sin insignia. Pro cuesta $29 al mes para hasta 60 diapositivas y dominios personalizados."
       }
     ],
     "ctaHeadline": "Haz que la revisión refleje que la relación importa.",
@@ -854,7 +854,7 @@ export const REDESIGNS_ES: RedesignPage[] = [
       },
       {
         "q": "¿Cuánto cuesta?",
-        "a": "Un deck con IA al mes es gratis, hasta 10 slides, con una pequeña insignia. Starter es $7 al mes para hasta 25 slides y sin insignia; Pro es $29 al mes con analíticas completas y dominios personalizados."
+        "a": "Un deck con IA al mes es gratis, hasta 10 slides, con una pequeña insignia. Starter es $7 al mes para hasta 25 slides y sin insignia; Pro es $29 al mes para hasta 60 slides y dominios personalizados."
       }
     ],
     "ctaHeadline": "Haz que el deck sea tan afilado como el análisis.",
@@ -903,7 +903,7 @@ export const REDESIGNS_ES: RedesignPage[] = [
       },
       {
         "q": "¿Cuánto cuesta embellecer un mazo?",
-        "a": "El plan gratuito incluye un mazo con IA al mes, hasta 10 diapositivas, con una pequeña insignia de PitchBoost. Starter cuesta $7 al mes para hasta 25 diapositivas y sin insignia. Pro cuesta $29 al mes para hasta 60 diapositivas con analíticas completas del visor."
+        "a": "El plan gratuito incluye un mazo con IA al mes, hasta 10 diapositivas, con una pequeña insignia de PitchBoost. Starter cuesta $7 al mes para hasta 25 diapositivas y sin insignia. Pro cuesta $29 al mes para hasta 60 diapositivas y dominios personalizados."
       }
     ],
     "ctaHeadline": "Sube el mazo. Recíbelo hermoso y aún tuyo.",
@@ -1008,7 +1008,7 @@ export const REDESIGNS_ES: RedesignPage[] = [
       },
       {
         "q": "¿Cuánto cuesta modernizar un archivo?",
-        "a": "Un archivo con IA al mes es gratis, hasta 10 diapositivas, con una pequeña insignia. Starter cuesta $7 al mes para hasta 25 diapositivas y sin insignia; Pro cuesta $29 al mes para hasta 60 diapositivas, analíticas completas y dominios personalizados. Los archivos más largos pueden condensarse primero."
+        "a": "Un archivo con IA al mes es gratis, hasta 10 diapositivas, con una pequeña insignia. Starter cuesta $7 al mes para hasta 25 diapositivas y sin insignia; Pro cuesta $29 al mes para hasta 60 diapositivas y dominios personalizados. Los archivos más largos pueden condensarse primero."
       }
     ],
     "ctaHeadline": "Conserva la historia que funciona. Retira la plantilla que no.",

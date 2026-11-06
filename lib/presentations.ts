@@ -34,7 +34,7 @@ export interface PresentationPage {
   updated: string;             // "2026-10-22"
 }
 
-export const PRESENTATIONS_UPDATED = "2026-10-22";
+export const PRESENTATIONS_UPDATED = "2026-11-05";
 
 export const PRESENTATIONS: PresentationPage[] = [
   {
@@ -395,7 +395,7 @@ export const PRESENTATIONS: PresentationPage[] = [
       "Last month's lab meeting deck, uploaded as a .pptx, comes back redesigned with every slide and every number kept.",
       "Ask for a simpler version of one slide for a mixed audience, and the rest of the deck stays as it is.",
       "Short speaker notes in the editable PowerPoint, so the walk-through doesn't depend on memory.",
-      "Send it to the group as a link before the meeting and see which slides were viewed, basic on Free and full on Pro.",
+      "Send it to the group as a link before the meeting and see which slides were viewed, on every plan.",
     ],
     examplePrompts: [
       "Journal club presentation on the attached paper, 15 minutes, for cardiology fellows. Give the study's limitations their own slide.",
@@ -494,7 +494,7 @@ export const PRESENTATIONS: PresentationPage[] = [
       "The onboarding deck you already have can be uploaded as a .pptx or PDF and redesigned without losing a slide, a step or a number.",
       "The editable PowerPoint carries short speaker notes, so a stand-in trainer has something to work from.",
       "When the process changes, ask the AI to update that one slide and leave the rest alone.",
-      "Send pre-work as a link and you'll know whether it was opened before the session, and which slides were viewed (basic on Free, full on Pro).",
+      "Send pre-work as a link and you'll know whether it was opened before the session, and which slides were viewed, on every plan.",
     ],
     examplePrompts: [
       "Week-one onboarding for new customer support hires: our ticketing basics, tone of voice and when to escalate, from the attached handbook PDF.",
@@ -615,7 +615,7 @@ export const PRESENTATIONS: PresentationPage[] = [
       },
       {
         q: "Can I tell whether people opened it before the meeting?",
-        a: "Yes. Share it as a link and you see when it's opened and which slides were viewed: basic on Free, full on Pro. Useful the night before, when you're deciding how much to recap.",
+        a: "Yes. Share it as a link and you see when it's opened and which slides were viewed, on every plan. Useful the night before, when you're deciding how much to recap.",
       },
       {
         q: "Why not paste the report into ChatGPT?",
@@ -705,7 +705,7 @@ export const PRESENTATIONS: PresentationPage[] = [
       },
       {
         q: "Will I know if the update was opened?",
-        a: "Yes, if it goes out as a link. You'll see when it was opened and which slides got viewed, with basic detail on Free and the full picture on Pro. Worth knowing before the follow-up call.",
+        a: "Yes, if it goes out as a link. You'll see when it was opened and which slides got viewed, on every plan. Worth knowing before the follow-up call.",
       },
       {
         q: "What does it cost each quarter?",

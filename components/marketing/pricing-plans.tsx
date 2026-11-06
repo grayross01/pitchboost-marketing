@@ -26,7 +26,7 @@ export default function PricingPlans({ className = "pricing-grid", oneDeckNote =
           <li><CheckIcon /> 150 credits a month (1 AI deck)</li>
           <li><CheckIcon /> Decks up to 10 slides</li>
           <li><CheckIcon /> Share as a live link, with badge</li>
-          <li><CheckIcon /> Shareable link and basic analytics</li>
+          <li><CheckIcon /> Full viewer analytics and saved templates</li>
           <li><CheckIcon /> Research and fact checking included</li>
           <li><CheckIcon /> Your team, at no charge per person</li>
         </ul>
@@ -43,6 +43,7 @@ export default function PricingPlans({ className = "pricing-grid", oneDeckNote =
           <li><CheckIcon /> No PitchBoost badge, anywhere</li>
           <li><CheckIcon /> PowerPoint, PDF and Google Slides downloads</li>
           <li><CheckIcon /> Top-up credit packs</li>
+          <li><CheckIcon /> Full viewer analytics and saved templates</li>
           <li><CheckIcon /> Your team, at no charge per person</li>
         </ul>
         <a href={SIGNUP_URL} className="btn btn-secondary">Start with Starter</a>
@@ -56,10 +57,10 @@ export default function PricingPlans({ className = "pricing-grid", oneDeckNote =
         <ul className="pricing-features">
           <li><CheckIcon /> Even more AI credits: 1,200 a month</li>
           <li><CheckIcon /> Decks up to 60 slides</li>
-          <li><CheckIcon /> Full viewer analytics and read receipts</li>
-          <li><CheckIcon /> Custom domains and saved templates</li>
+          <li><CheckIcon /> Custom domains</li>
           <li><CheckIcon /> API and MCP access</li>
           <li><CheckIcon /> Unlimited deals, no badge</li>
+          <li><CheckIcon /> Full viewer analytics and saved templates</li>
           <li><CheckIcon /> Your team, at no charge per person</li>
         </ul>
         <a href={SIGNUP_URL} className="btn btn-primary">Start Free Trial</a>
