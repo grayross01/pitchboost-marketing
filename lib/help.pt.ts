@@ -414,7 +414,7 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
       {
         "heading": "Acúmulo e pacotes",
         "paragraphs": [
-          "Nos planos pagos, créditos não usados são transferidos para o próximo mês até o limite de uma cota mensal. No plano gratuito eles são reiniciados. Pacotes extras de 200 ($5), 700 ($15) e 1.900 ($40) créditos estão disponíveis nos planos pagos e nunca expiram enquanto você estiver inscrito."
+          "Os créditos do plano são renovados todo mês, em todos os planos, e os não usados não passam para o mês seguinte. Os créditos comprados em um pacote passam. Pacotes extras de 200 ($5), 700 ($15) e 1.900 ($40) créditos estão disponíveis nos planos pagos e nunca expiram enquanto você estiver inscrito."
         ]
       },
       {

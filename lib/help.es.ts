@@ -414,7 +414,7 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       {
         "heading": "Acumulación y paquetes",
         "paragraphs": [
-          "En los planes de pago, los créditos no usados pasan al siguiente mes hasta la asignación de un mes. En el plan gratuito se reinician. Los paquetes adicionales de 200 ($5), 700 ($15) y 1,900 ($40) créditos están disponibles en planes de pago y nunca expiran mientras tengas una suscripción activa."
+          "Los créditos del plan se renuevan cada mes, en todos los planes, y los que no uses no pasan al mes siguiente. Los créditos que compras en un paquete sí. Los paquetes adicionales de 200 ($5), 700 ($15) y 1,900 ($40) créditos están disponibles en planes de pago y nunca expiran mientras tengas una suscripción activa."
         ]
       },
       {
