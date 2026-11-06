@@ -28,6 +28,7 @@ export default function PricingPlans({ className = "pricing-grid", oneDeckNote =
           <li><CheckIcon /> Share as a live link, with badge</li>
           <li><CheckIcon /> Shareable link and basic analytics</li>
           <li><CheckIcon /> Research and fact checking included</li>
+          <li><CheckIcon /> Your team, at no charge per person</li>
         </ul>
         <a href={SIGNUP_URL} className="btn btn-secondary">Get Started</a>
       </div>
@@ -42,6 +43,7 @@ export default function PricingPlans({ className = "pricing-grid", oneDeckNote =
           <li><CheckIcon /> No PitchBoost badge, anywhere</li>
           <li><CheckIcon /> PowerPoint, PDF and Google Slides downloads</li>
           <li><CheckIcon /> Top-up credit packs</li>
+          <li><CheckIcon /> Your team, at no charge per person</li>
         </ul>
         <a href={SIGNUP_URL} className="btn btn-secondary">Start with Starter</a>
       </div>
@@ -58,6 +60,7 @@ export default function PricingPlans({ className = "pricing-grid", oneDeckNote =
           <li><CheckIcon /> Custom domains and saved templates</li>
           <li><CheckIcon /> API and MCP access</li>
           <li><CheckIcon /> Unlimited deals, no badge</li>
+          <li><CheckIcon /> Your team, at no charge per person</li>
         </ul>
         <a href={SIGNUP_URL} className="btn btn-primary">Start Free Trial</a>
       </div>
@@ -69,9 +72,9 @@ export default function PricingPlans({ className = "pricing-grid", oneDeckNote =
         <ul className="pricing-features">
           <li><CheckIcon /> Everything in Pro</li>
           <li><CheckIcon /> Our largest AI credit allowance: 3,300 a month</li>
-          <li><CheckIcon /> Team collaboration</li>
           <li><CheckIcon /> Analytics export</li>
           <li><CheckIcon /> Sending from your own domain</li>
+          <li><CheckIcon /> Your team, at no charge per person</li>
         </ul>
         <a href={SIGNUP_URL} className="btn btn-secondary">Get Started</a>
       </div>

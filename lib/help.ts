@@ -425,7 +425,8 @@ export const HELP_ARTICLES: HelpArticle[] = [
           "Free: 150 credits a month, one deal, decks up to 10 slides with a small badge, a shareable live link with basic analytics. Downloading a file takes a paid plan or a one-time $9 for that deck. No card required.",
           "Starter, $7 a month: more AI credits, 300 a month, unlimited deals, decks up to 25 slides, no badge anywhere, PowerPoint, PDF and Google Slides downloads, top-up packs.",
           "Pro, $29 a month: even more AI credits, 1,200 a month, decks up to 60 slides, full viewer analytics with time per slide, saved templates, custom domains, API and MCP access.",
-          "Business, $79 a month: our largest AI credit allowance, 3,300 a month, team seats and permissions, analytics export, and sending from your own domain.",
+          "Business, $79 a month: our largest AI credit allowance, 3,300 a month, analytics export, and sending from your own domain.",
+          "Teammates are on every plan, Free included, at no charge per person. Everyone shares the workspace's AI credits.",
           "Annual billing is cheaper: Starter $70 a year (about $5.83 a month), Pro $24 and Business $66 a month when paid yearly.",
         ],
       },
@@ -464,7 +465,7 @@ export const HELP_ARTICLES: HelpArticle[] = [
       },
     ],
     related: ["slide-limits-by-plan", "download-powerpoint-or-pdf", "share-a-deck-link"],
-    updated: "2026-10-23",
+    updated: "2026-11-05",
   },
 
   {

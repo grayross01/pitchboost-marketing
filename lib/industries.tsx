@@ -100,7 +100,7 @@ export const INDUSTRIES: Industry[] = [
       },
       {
         q: "Can my whole sales team use the same PitchBoost account?",
-        a: "Yes. Business plan accounts support team collaboration, so your entire sales org can generate personalized pitch decks from a shared set of brand assets and product content. Everyone pitches consistently, nobody starts from scratch.",
+        a: "Yes. Every plan includes your team at no charge per person, so your entire sales org can generate personalized pitch decks from a shared set of brand assets and product content. Everyone pitches consistently, nobody starts from scratch.",
       },
       {
         q: "Is PitchBoost better than using a B2B sales pitch deck template?",
@@ -226,7 +226,7 @@ export const INDUSTRIES: Industry[] = [
       },
       {
         q: "Can my whole sales team use PitchBoost?",
-        a: "Yes. Business plan accounts support team collaboration so AEs, SEs, and sales managers all work from the same brand assets and product content, generating consistent, personalized pitch decks for every enterprise prospect.",
+        a: "Yes. Every plan includes your team at no charge per person, so AEs, SEs, and sales managers all work from the same brand assets and product content, generating consistent, personalized pitch decks for every enterprise prospect.",
       },
       {
         q: "Is there an AI pitch deck maker for SaaS companies?",
