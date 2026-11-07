@@ -13,6 +13,12 @@ export interface ChangelogEntry {
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    date: "2026-11-07",
+    title: "AI edits change what you asked and leave the rest alone",
+    body: "The AI now names the exact pieces it's changing instead of rewriting the slide, on one slide or across the whole deck, so sizes, fonts and wording you didn't mention stay put. Moving a slide keeps it exactly as it was, \"put it back\" brings back the real earlier version, and whole-deck edits are about three times faster.",
+    area: "Decks",
+  },
+  {
     date: "2026-11-06",
     title: "Drag anything on a slide",
     body: "Move a card, a picture or a block of text with the mouse. Edges and centres line up as you go, the arrow keys nudge it, and handouts work the same way.",
