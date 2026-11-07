@@ -64,7 +64,7 @@ export const HELP_ARTICLES: HelpArticle[] = [
       },
       {
         title: "Review, edit, share",
-        body: "Open any slide in the editor to tweak it, publish the deck as an unlisted link, or download it as PowerPoint or PDF from the share screen.",
+        body: "Open any slide in the editor to type on it, drag things around or ask the AI for a change, publish the deck as an unlisted link, or download it as PowerPoint or PDF from the share screen.",
       },
     ],
     sections: [
@@ -97,7 +97,7 @@ export const HELP_ARTICLES: HelpArticle[] = [
       },
     ],
     related: ["google-slides-and-keynote", "slide-limits-by-plan", "download-powerpoint-or-pdf", "how-long-does-a-deck-take"],
-    updated: "2026-09-30",
+    updated: "2026-11-06",
   },
 
   {

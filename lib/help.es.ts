@@ -37,7 +37,7 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       },
       {
         "title": "Revisa, edita, comparte",
-        "body": "Abre cualquier diapositiva en el editor para ajustarla, publica la presentación como un enlace no listado o descárgala como PowerPoint o PDF desde la pantalla de compartir."
+        "body": "Abre cualquier diapositiva en el editor para escribir en ella, arrastrar lo que quieras o pedirle un cambio a la IA, publica la presentación como un enlace no listado o descárgala como PowerPoint o PDF desde la pantalla de compartir."
       }
     ],
     "sections": [
@@ -75,7 +75,7 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       "download-powerpoint-or-pdf",
       "how-long-does-a-deck-take"
     ],
-    "updated": "2026-09-16"
+    "updated": "2026-11-06"
   },
   {
     "slug": "google-slides-and-keynote",
