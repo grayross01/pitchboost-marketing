@@ -14,6 +14,18 @@ export interface ChangelogEntry {
 export const CHANGELOG: ChangelogEntry[] = [
   {
     date: "2026-11-06",
+    title: "Drag anything on a slide",
+    body: "Move a card, a picture or a block of text with the mouse. Edges and centres line up as you go, the arrow keys nudge it, and handouts work the same way.",
+    area: "Decks",
+  },
+  {
+    date: "2026-11-06",
+    title: "The AI checks its work before it tells you it's done",
+    body: "After an edit it looks at the real slide, before and after, and only tells you what it can see. If it missed, it tries again for free. If it still misses, it says so and you aren't charged.",
+    area: "Decks",
+  },
+  {
+    date: "2026-11-06",
     title: "Plan credits start fresh every month",
     body: "Your plan's credits now reset at each renewal, and unused ones don't carry over. Credits you buy in a pack do.",
     area: "Billing",
