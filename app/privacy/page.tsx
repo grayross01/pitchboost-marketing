@@ -12,7 +12,7 @@ export default function PrivacyPage() {
       <section className="legal-hero">
         <div className="mkt-container">
           <h1>Privacy Policy</h1>
-          <p>Last updated: September 29, 2026</p>
+          <p>Last updated: November 9, 2026</p>
         </div>
       </section>
 
@@ -58,6 +58,11 @@ export default function PrivacyPage() {
           <li>
             To send transactional emails (e.g., receipts, account
             notifications).
+          </li>
+          <li>
+            To send emails about your account and your decks, such as
+            follow-ups on a deck you made or a purchase you started. You can
+            unsubscribe from these at any time.
           </li>
           <li>
             To improve our product through aggregated, anonymized analytics.
