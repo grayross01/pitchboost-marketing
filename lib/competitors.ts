@@ -34,6 +34,10 @@ export interface Competitor {
   pricingUrl?: string;
   /** Short slug for the alternatives page: /alternatives/<altSlug>. */
   altSlug?: string;
+  /** The name people search for, when it differs from `name` (e.g.
+   *  "Perceptis AI"). Used in the alternatives page title, heading and
+   *  description so the search result matches the query. */
+  altName?: string;
   /** Which shelf the tool sits on. The alternatives page compares a tool
    *  against the others on its shelf, so the matrix stays readable: the
    *  general AI presentation makers on one, the tools built around
@@ -1312,10 +1316,10 @@ export const COMPETITORS: Competitor[] = [
     "slug": "pitchboost-vs-perceptis",
     "name": "Perceptis",
     "metaTitle": "PitchBoost vs Perceptis (2026): Consulting-Style Slides vs a Full Deck Rebuild, Prices Compared",
-    "metaDescription": "Perceptis generates consulting-style PowerPoint slides and unlocks upload-to-edit on its $129 Pro plan; PitchBoost rebuilds an uploaded deck in your brand from your website on every plan, free included. Compared and priced, September 2026.",
+    "metaDescription": "Perceptis generates consulting-style PowerPoint slides and unlocks upload-to-edit on its $129 Pro plan; PitchBoost rebuilds an uploaded deck in your brand from your website on every plan, free included. Compared and priced, November 2026.",
     "heroHeadline": "PitchBoost vs Perceptis: consulting slide layouts, or your deck rebuilt in your brand",
     "heroSubhead": "Perceptis builds McKinsey-style slides natively in PowerPoint from a slide library and charges by slides per month. PitchBoost starts from the deck you already have, rebuilds it in your brand from your website, and gives the file back editable, from a free plan.",
-    "verdict": "Perceptis suits consultants who want native PowerPoint slides in a consulting idiom (Gantt charts, maps, framework layouts) and are happy to pay $129 a month for the upload-to-edit feature. PitchBoost is for everyone else with an existing deck: the redesign of an upload is on every plan including the free one, the brand comes from your website, the numbers are checked, and Starter is $9.",
+    "verdict": "Perceptis suits consultants who want native PowerPoint slides in a consulting idiom (Gantt charts, maps, framework layouts) and are happy to pay $129 a month for the upload-to-edit feature. PitchBoost is for everyone else with an existing deck: the redesign of an upload is on every plan including the free one, the brand comes from your website, the numbers are checked, and Starter is $7.",
     "competitorSummary": "Perceptis is an AI slide generator aimed at consulting and business slides: single and multi-slide generation from a library of 50 or more professional layouts, complex visuals like maps and Gantt charts, and PowerPoint-native export with real charts, tables and shapes. Plans are priced by slides per month: Free (10), Starter $29 (50), Pro $129 (100, plus upload-to-edit and one corporate theme).",
     "pitchboostPricing": "Free plan. Starter $7/mo. Pro $29/mo. Business $79/mo.",
     "competitorPricing": "Free: 10 slides a month. Starter $29/mo: 50 slides, remove Perceptis branding. Pro $129/mo: 100 slides, upload-to-edit, one corporate theme.",
@@ -1366,9 +1370,10 @@ export const COMPETITORS: Competitor[] = [
         "competitor": "None listed"
       }
     ],
-    "updated": "2026-09-19",
+    "updated": "2026-11-09",
     "pricingUrl": "https://perceptis.ai/pricing",
     "altSlug": "perceptis",
+    "altName": "Perceptis AI",
     "family": "redesign",
     "features": [
       {

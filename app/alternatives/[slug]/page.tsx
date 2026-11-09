@@ -31,9 +31,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const c = byAlt(slug);
   if (!c) return {};
-  const count = peersOf(c).length + 2; // the tool, PitchBoost, and the others on its shelf
-  const title = `${c.name} alternatives (2026): ${count} tools compared, prices checked`;
-  const description = `${count} alternatives to ${c.name} including PitchBoost, with checked prices, free plans, PowerPoint export, brand handling and when to stay with ${c.name}. Last checked ${c.updated ?? COMPETITORS_UPDATED}.`;
+  const others = peersOf(c);
+  const searchName = c.altName ?? c.name;
+  const alternatives = others.length + 1; // PitchBoost and the others on the tool's shelf
+  const title = `${searchName} alternatives (2026): ${alternatives} tools compared, prices checked`;
+  // Name the tools in the snippet: a searcher picks the result that shows the answer.
+  const checked = new Date(`${c.updated ?? COMPETITORS_UPDATED}T00:00:00Z`).toLocaleDateString("en-US", { month: "short", year: "numeric", timeZone: "UTC" });
+  const description = `${searchName} alternatives compared: PitchBoost (free, redesigns your deck), ${others.map((o) => o.name).join(", ")}. Prices checked ${checked}.`;
   return {
     title: { absolute: `${title} | PitchBoost` },
     description,
@@ -113,7 +117,7 @@ export default async function AlternativesPage({ params }: Props) {
             </div>
           </div>
           <h1 style={{ fontSize: "clamp(1.75rem, 3.5vw, 2.4rem)", fontWeight: 800, color: "var(--ds-dark)", maxWidth: 820, margin: "0 auto 16px", lineHeight: 1.15, textWrap: "balance" }}>
-            Alternatives to {c.name} in 2026
+            {c.altName ?? c.name} alternatives in 2026
           </h1>
           <p style={{ color: "var(--ds-text-light)", fontSize: "1.05rem", maxWidth: 640, margin: "0 auto", lineHeight: 1.7 }}>
             {count} tools, one of them ours, compared on the things that decide a purchase: free plan, first paid tier, what happens to a deck you already have, and who each tool is actually for. Checked on {updated}.
