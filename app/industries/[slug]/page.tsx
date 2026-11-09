@@ -66,19 +66,63 @@ export default async function IndustryPage({ params }: Props) {
   const signupUrl = industry.signupIntent
     ? `${SIGNUP_URL}?intent=${encodeURIComponent(industry.signupIntent)}`
     : SIGNUP_URL;
+  // Every redesign CTA lands the new user on the upload screen.
+  const rebuildUrl = `${SIGNUP_URL}?intent=rebuild`;
+  const isRedesign = industry.focus === "redesign";
+  // Section copy. Sales pages talk about prospects; redesign pages talk
+  // about the decks a team already has.
+  const copy = isRedesign
+    ? {
+        heroPrimary: { href: rebuildUrl, label: `Redesign your ${shortLabel} deck` },
+        heroSecondary: { href: signupUrl, label: "Or build a new one" },
+        materialsLabel: "Common presentations",
+        materialsTitle: `The ${shortLabel} presentations teams send most, and where they fall short`,
+        materialsBody: `Most ${shortLabelPlural} already have the content. It sits in decks built over years by different people, in different templates, with numbers that cannot change.`,
+        problemTitle: `Why ${shortLabel} decks lose the room`,
+        problemBody: "The work behind the slides is usually solid. The slides are what let it down.",
+        includeBody: `A strong ${industryTerm} is clear before it is beautiful: one point per slide, numbers that can be checked, and a design that looks like your organization.`,
+        includeFoot: "Upload the deck you have. PitchBoost keeps every number, lists each one for you to check, and rebuilds the design around it.",
+        includeCta: { href: rebuildUrl, label: `Redesign your ${industryTerm} free` },
+        howTitle: `How PitchBoost rebuilds your ${shortLabel} ${industryTerm}`,
+        howBody: "No design tools, no template to fight, no retyping your numbers.",
+        ctaBody: "Upload the deck you have and get it back in your brand, with every number kept. Your first deck is free, no credit card needed.",
+        ctaButton: { href: rebuildUrl, label: `Redesign your ${shortLabel} deck free` },
+      }
+    : {
+        heroPrimary: { href: signupUrl, label: `Generate your ${shortLabel} ${industryTerm}` },
+        heroSecondary: industry.redesign
+          ? { href: rebuildUrl, label: "Redesign a deck you have" }
+          : { href: "#sample-deck", label: `See a sample ${industryTerm}` },
+        materialsLabel: "Sales materials",
+        materialsTitle: `Common ${shortLabel} sales materials, and where most fall short`,
+        materialsBody: `Most ${shortLabelPlural} rely on a mix of documents to win new business. The challenge is making each one feel like it was built for the specific client in the room.`,
+        problemTitle: `Why generic ${industryTerm}s lose deals`,
+        problemBody: "It's rarely about the quality of your work or your offering. It's about how well the materials reflect the specific situation in the room.",
+        includeBody: `The difference between a ${industryTerm} that wins and one that gets “we'll think about it” is how specifically it addresses this client's situation, not how polished the template looks.`,
+        includeFoot: "PitchBoost pulls all of this from your existing credentials and the prospect's context, automatically.",
+        includeCta: { href: signupUrl, label: `Build your first ${industryTerm} free` },
+        howTitle: `How PitchBoost turns your credentials into a tailored ${shortLabel} ${industryTerm}`,
+        howBody: "No design tools. No starting from a blank slide. No generic templates you have to gut and rebuild for every prospect.",
+        ctaBody: `Stop adapting generic templates. Generate your first tailored ${industryTerm} free, no design skills required, no credit card needed.`,
+        ctaButton: { href: signupUrl, label: `Generate your ${shortLabel} ${industryTerm} free` },
+      };
 
   // Cross-links to related product pages, a comparison, and the blog. Real
   // estate industries also surface the free agent tools and listing roundup.
   const isRealEstate = REAL_ESTATE_SLUGS.includes(slug);
   const relatedFeatureSlugs = isRealEstate
     ? ["ai-deck-builder", "output-types", "viewer-analytics"]
-    : ["ai-deck-builder", "viewer-analytics", "publishing-and-sharing"];
+    : industry.focus === "redesign"
+      ? ["upload-and-redesign", "research-and-fact-checking", "brand-and-images"]
+      : ["ai-deck-builder", "upload-and-redesign", "viewer-analytics"];
   const relatedLinks: { href: string; label: string; desc: string }[] = [
     ...relatedFeatureSlugs
       .map((s) => featureMap[s])
       .filter(Boolean)
       .map((f) => ({ href: `/features/${f.slug}`, label: f.navLabel, desc: f.shortDescription })),
-    { href: "/compare/pitchboost-vs-gamma", label: "PitchBoost vs Gamma", desc: "See how PitchBoost compares to Gamma for pitch and sales decks." },
+    industry.focus === "redesign"
+      ? { href: "/redesign/data-heavy-deck-redesign", label: "Data-heavy deck redesign", desc: "Charts, tables and dense slides rebuilt without losing a number." }
+      : { href: "/compare/pitchboost-vs-gamma", label: "PitchBoost vs Gamma", desc: "See how PitchBoost compares to Gamma for pitch and sales decks." },
     { href: "/blog", label: "From the blog", desc: "Guides on pitch decks, sales presentations, and outreach." },
   ];
   if (isRealEstate) {
@@ -140,46 +184,66 @@ export default async function IndustryPage({ params }: Props) {
             {industry.heroSubhead}
           </p>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 16, marginTop: 36, flexWrap: "wrap" }}>
-            <a href={signupUrl} className="btn btn-primary btn-lg">
-              Generate your {shortLabel} {industryTerm}
+            <a href={copy.heroPrimary.href} className="btn btn-primary btn-lg">
+              {copy.heroPrimary.label}
             </a>
-            <a href="#sample-deck" className="btn btn-ghost btn-lg">
-              See a sample {industryTerm}
+            <a href={copy.heroSecondary.href} className="btn btn-ghost btn-lg">
+              {copy.heroSecondary.label}
             </a>
           </div>
         </div>
       </section>
 
-      {/* ── Sample Deck Embed ── */}
-      <section id="sample-deck" className="mkt-section">
-        <div className="mkt-container">
-          <div className="section-header wide-header fade-up">
-            <div className="section-label"><span>See it in action</span></div>
-            <h2>A real {shortLabel} {industryTerm}, built with PitchBoost</h2>
-            <p>Personalized to a specific prospect and their business, generated in a few minutes.</p>
+      {/* ── Already have a deck? (the second offer on sales pages) ── */}
+      {industry.redesign && (
+        <section className="mkt-section" style={{ background: "var(--ds-bg)" }}>
+          <div className="mkt-container">
+            <div className="section-header wide-header fade-up">
+              <div className="section-label"><span>Already have a deck?</span></div>
+              <h2>{industry.redesign.headline}</h2>
+              <p>{industry.redesign.body}</p>
+            </div>
+            <div className="fade-up" style={{ display: "flex", flexWrap: "wrap", gap: 12, justifyContent: "center", marginTop: 32 }}>
+              {industry.redesign.deckTypes.map((t) => (
+                <span key={t} style={{ background: "var(--ds-bg-light)", border: "1px solid var(--ds-border)", borderRadius: 100, padding: "8px 18px", fontSize: 14, color: "var(--ds-text-secondary)", fontWeight: 500 }}>
+                  {t}
+                </span>
+              ))}
+            </div>
+            <div className="fade-up" style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap", marginTop: 32 }}>
+              <a href={rebuildUrl} className="btn btn-primary">Upload your deck free</a>
+              <Link href="/redesign/powerpoint-redesign" className="btn btn-ghost">How the redesign works</Link>
+            </div>
           </div>
-          <div className="fade-up" style={{ marginTop: 48, borderRadius: 16, overflow: "hidden", border: "1px solid var(--ds-border)", background: "var(--ds-bg-light)", minHeight: 520, display: "flex", alignItems: "center", justifyContent: "center" }}>
-            {industry.sampleDeckUrl ? (
+        </section>
+      )}
+
+      {/* ── Sample Deck Embed (only when there is a real sample) ── */}
+      {industry.sampleDeckUrl && (
+        <section id="sample-deck" className="mkt-section">
+          <div className="mkt-container">
+            <div className="section-header wide-header fade-up">
+              <div className="section-label"><span>See it in action</span></div>
+              <h2>A real {shortLabel} {industryTerm}, built with PitchBoost</h2>
+              <p>Personalized to a specific prospect and their business, generated in a few minutes.</p>
+            </div>
+            <div className="fade-up" style={{ marginTop: 48, borderRadius: 16, overflow: "hidden", border: "1px solid var(--ds-border)", background: "var(--ds-bg-light)", minHeight: 520 }}>
               <iframe src={industry.sampleDeckUrl} width="100%" height="520" frameBorder="0" allowFullScreen style={{ display: "block" }} />
-            ) : (
-              <div style={{ textAlign: "center", color: "var(--ds-text-tertiary)", padding: 40 }}>
-                <div style={{ fontSize: 13 }}>Deck embed coming soon</div>
-              </div>
-            )}
+            </div>
+            <p style={{ textAlign: "center", fontSize: 12, color: "var(--ds-text-tertiary)", marginTop: 16 }}>
+              Interactive {industryTerm}, built with PitchBoost in a few minutes.
+            </p>
           </div>
-          <p style={{ textAlign: "center", fontSize: 12, color: "var(--ds-text-tertiary)", marginTop: 16 }}>
-            Interactive {industryTerm}, built with PitchBoost in a few minutes.
-          </p>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* ── Common Sales Materials ── */}
       <section className="mkt-section" style={{ background: "var(--ds-bg-light)" }}>
         <div className="mkt-container">
           <div className="section-header wide-header fade-up">
-            <div className="section-label"><span>Sales materials</span></div>
-            <h2>Common {shortLabel} sales materials, and where most fall short</h2>
-            <p>Most {shortLabelPlural} rely on a mix of documents to win new business. The challenge is making each one feel like it was built for the specific client in the room.</p>
+            <div className="section-label"><span>{copy.materialsLabel}</span></div>
+            <h2>{copy.materialsTitle}</h2>
+            <p>{copy.materialsBody}</p>
           </div>
           <div className="fade-up" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20, marginTop: 48 }}>
             {industry.salesMaterials.map(({ name, description }) => (
@@ -197,8 +261,8 @@ export default async function IndustryPage({ params }: Props) {
         <div className="mkt-container">
           <div className="section-header wide-header fade-up">
             <div className="section-label"><span>The problem</span></div>
-            <h2>Why generic {industryTerm}s lose deals</h2>
-            <p>It&apos;s rarely about the quality of your work or your offering. It&apos;s about how well the materials reflect the specific situation in the room.</p>
+            <h2>{copy.problemTitle}</h2>
+            <p>{copy.problemBody}</p>
           </div>
           <div className="fade-up" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 24, marginTop: 48 }}>
             {industry.painPoints.map(({ title, body }) => (
@@ -220,7 +284,7 @@ export default async function IndustryPage({ params }: Props) {
           <div className="section-header wide-header fade-up">
             <div className="section-label"><span>What to include</span></div>
             <h2>What to include in a strong {shortLabel} {industryTerm}</h2>
-            <p>The difference between a {industryTerm} that wins and one that gets &ldquo;we&apos;ll think about it&rdquo; is how specifically it addresses this client&apos;s situation, not how polished the template looks.</p>
+            <p>{copy.includeBody}</p>
           </div>
           <div className="fade-up" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 16, marginTop: 48, maxWidth: 900, margin: "48px auto 0" }}>
             {industry.whatToInclude.map((item) => (
@@ -232,9 +296,9 @@ export default async function IndustryPage({ params }: Props) {
           </div>
           <div className="fade-up" style={{ textAlign: "center", marginTop: 40 }}>
             <p style={{ fontSize: 15, color: "var(--ds-text-secondary)", marginBottom: 20 }}>
-              PitchBoost pulls all of this from your existing credentials and the prospect&apos;s context, automatically.
+              {copy.includeFoot}
             </p>
-            <a href={signupUrl} className="btn btn-primary">Build your first {industryTerm} free</a>
+            <a href={copy.includeCta.href} className="btn btn-primary">{copy.includeCta.label}</a>
           </div>
         </div>
       </section>
@@ -244,8 +308,8 @@ export default async function IndustryPage({ params }: Props) {
         <div className="mkt-container">
           <div className="section-header wide-header fade-up">
             <div className="section-label"><span>How it works</span></div>
-            <h2>How PitchBoost turns your credentials into a tailored {shortLabel} {industryTerm}</h2>
-            <p>No design tools. No starting from a blank slide. No generic templates you have to gut and rebuild for every prospect.</p>
+            <h2>{copy.howTitle}</h2>
+            <p>{copy.howBody}</p>
           </div>
           <div className="fade-up" style={{ display: "flex", flexDirection: "column", gap: 24, maxWidth: 720, margin: "48px auto 0" }}>
             {industry.howItWorks.map(({ step, title, body }) => (
@@ -277,7 +341,7 @@ export default async function IndustryPage({ params }: Props) {
             ))}
           </div>
           <div style={{ textAlign: "center", marginTop: 40 }}>
-            <a href={signupUrl} className="btn btn-primary">Start building free</a>
+            <a href={isRedesign ? rebuildUrl : signupUrl} className="btn btn-primary">Start building free</a>
           </div>
         </div>
       </section>
@@ -326,11 +390,9 @@ export default async function IndustryPage({ params }: Props) {
         <div className="mkt-container">
           <div className="cta-box">
             <h2>{industry.ctaHeadline}</h2>
-            <p>
-              Stop adapting generic templates. Generate your first tailored {industryTerm} free, no design skills required, no credit card needed.
-            </p>
-            <a href={signupUrl} className="btn btn-primary btn-lg">
-              Generate your {shortLabel} {industryTerm} free
+            <p>{copy.ctaBody}</p>
+            <a href={copy.ctaButton.href} className="btn btn-primary btn-lg">
+              {copy.ctaButton.label}
             </a>
           </div>
         </div>

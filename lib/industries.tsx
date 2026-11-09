@@ -26,6 +26,13 @@ export interface Industry {
   shortLabelPlural: string;
   salesMaterials: { name: string; description: string }[];
   whatToInclude: string[];
+  /** "redesign" pages are about rebuilding decks a team already has
+   *  (technical, internal and client presentations), so the template's
+   *  section headings and buttons talk about redesigning, not prospects. */
+  focus?: "sales" | "redesign";
+  /** The second offer on a sales-focused page: rebuild a deck you already
+   *  have. Rendered as its own section with a ?intent=rebuild CTA. */
+  redesign?: { headline: string; body: string; deckTypes: string[] };
 }
 
 export const INDUSTRIES: Industry[] = [
@@ -36,6 +43,11 @@ export const INDUSTRIES: Industry[] = [
     navLabel: "B2B Sales Teams",
     label: "B2B Sales Teams",
     navGroup: "sales",
+    redesign: {
+      headline: "Redesign the sales deck your team already uses",
+      body: "Most sales teams do not need another deck. They need the one that works to look current. Upload it and PitchBoost rebuilds every slide in your brand from your website, keeping your messaging, numbers and customer proof exactly as they are.",
+      deckTypes: ["Master sales deck", "Discovery deck", "Product overview", "Customer case studies", "QBR and renewal decks"],
+    },
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>,
     metaTitle: "B2B Sales Pitch Deck Software: Close More Deals | PitchBoost",
     metaDescription:
@@ -95,6 +107,10 @@ export const INDUSTRIES: Industry[] = [
     ],
     faqs: [
       {
+        q: "Can PitchBoost redesign a sales deck we already have?",
+        a: "Yes. Upload the PowerPoint or PDF you have, up to 50 MB, and PitchBoost rebuilds every slide in your brand taken from your website. Choose to keep every word as written and only the design changes; every number in the rebuilt deck is listed with its source slide so you can check it. Every plan shares it as a tracked link; the PDF and editable PowerPoint downloads come with a paid plan or a one-time price for that deck.",
+      },
+      {
         q: "How does PitchBoost personalize a sales pitch deck for each prospect?",
         a: "PitchBoost takes your uploaded product capabilities and maps them to the specific prospect you describe, their industry, company size, and pain points. The result is a sales pitch deck where every slide is relevant to that buyer, not a generic overview of everything you do.",
       },
@@ -150,6 +166,11 @@ export const INDUSTRIES: Industry[] = [
     navLabel: "SaaS & Technology",
     label: "SaaS & Technology Companies",
     navGroup: "sales",
+    redesign: {
+      headline: "Redesign the product and sales decks you already have",
+      body: "Platform overviews, security decks and enterprise pitches drift every release. Upload the current version and get it back in one consistent design, with every metric and customer logo kept.",
+      deckTypes: ["Platform overview", "Security and compliance deck", "Enterprise pitch", "Customer onboarding deck", "QBR deck"],
+    },
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>,
     metaTitle: "SaaS Pitch Deck Software: Win More Enterprise Deals | PitchBoost",
     metaDescription:
@@ -209,6 +230,10 @@ export const INDUSTRIES: Industry[] = [
     ],
     faqs: [
       {
+        q: "Can PitchBoost redesign a sales deck we already have?",
+        a: "Yes. Upload the PowerPoint or PDF you have, up to 50 MB, and PitchBoost rebuilds every slide in your brand taken from your website. Choose to keep every word as written and only the design changes; every number in the rebuilt deck is listed with its source slide so you can check it. Every plan shares it as a tracked link; the PDF and editable PowerPoint downloads come with a paid plan or a one-time price for that deck.",
+      },
+      {
         q: "Can PitchBoost handle technical SaaS pitches with complex product details?",
         a: "Yes. When you upload your product documentation, integration details, and technical differentiators, PitchBoost incorporates them naturally into the deck, leading with depth for technical buyers and ROI for business buyers, depending on the persona you're pitching.",
       },
@@ -264,6 +289,11 @@ export const INDUSTRIES: Industry[] = [
     navLabel: "Startups",
     label: "Startups",
     navGroup: "sales",
+    redesign: {
+      headline: "Already have a pitch deck? Make it look funded",
+      body: "Upload the deck you have been iterating on. PitchBoost rebuilds every slide in your brand, keeps your traction numbers exactly as written and lists each one for you to check before an investor sees it.",
+      deckTypes: ["Investor pitch deck", "Investor update", "Customer sales deck", "Demo day deck", "Board update"],
+    },
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>,
     metaTitle: "Startup Pitch Deck Software: Look Enterprise-Grade on a Startup Budget | PitchBoost",
     metaDescription:
@@ -323,6 +353,10 @@ export const INDUSTRIES: Industry[] = [
     ],
     faqs: [
       {
+        q: "Can PitchBoost redesign a pitch deck we already have?",
+        a: "Yes. Upload the PowerPoint or PDF you have, up to 50 MB, and PitchBoost rebuilds every slide in your brand taken from your website. Choose to keep every word as written and only the design changes; every number in the rebuilt deck is listed with its source slide so you can check it. Every plan shares it as a tracked link; the PDF and editable PowerPoint downloads come with a paid plan or a one-time price for that deck.",
+      },
+      {
         q: "Can I use PitchBoost for both fundraising and sales pitches?",
         a: "Yes, and this is actually one of PitchBoost's best use cases for startups. You can build separate decks for investor meetings and customer pitches from the same set of brand assets, each one tailored to what that audience cares about, without starting over each time.",
       },
@@ -378,6 +412,11 @@ export const INDUSTRIES: Industry[] = [
     navLabel: "Sponsorship & Media Sales",
     label: "Sponsorship & Media Sales",
     navGroup: "sales",
+    redesign: {
+      headline: "Redesign the media kit and sponsorship deck you have",
+      body: "Audience numbers, rate cards and past sponsor results are the whole pitch. Upload last season's deck and get it back current and on brand, with every figure kept.",
+      deckTypes: ["Media kit", "Sponsorship deck", "Rate card", "Post-campaign recap", "Event prospectus"],
+    },
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>,
     metaTitle: "Sponsorship Pitch Deck Software: Close More Sponsorship Deals | PitchBoost",
     metaDescription:
@@ -436,6 +475,10 @@ export const INDUSTRIES: Industry[] = [
     ],
     faqs: [
       {
+        q: "Can PitchBoost redesign a proposal we already have?",
+        a: "Yes. Upload the PowerPoint or PDF you have, up to 50 MB, and PitchBoost rebuilds every slide in your brand taken from your website. Choose to keep every word as written and only the design changes; every number in the rebuilt deck is listed with its source slide so you can check it. Every plan shares it as a tracked link; the PDF and editable PowerPoint downloads come with a paid plan or a one-time price for that deck.",
+      },
+      {
         q: "Can I use PitchBoost to replace my existing media kit?",
         a: "PitchBoost doesn't just replace a static media kit, it generates tailored sponsorship proposals for each brand you pitch. Instead of one generic PDF sent to every sponsor, every brand gets a deck built around their specific marketing objectives and how your audience fits them.",
       },
@@ -489,11 +532,15 @@ export const INDUSTRIES: Industry[] = [
     navLabel: "Agencies & Creative Studios",
     label: "Agencies & Creative Studios",
     navGroup: "services",
+    redesign: {
+      headline: "Redesign your credentials deck and old proposals",
+      body: "The agency deck is usually the oldest thing the agency makes. Upload your credentials or capabilities deck, case studies or a past proposal, and get it back in one clean design with every result and client name kept.",
+      deckTypes: ["Credentials deck", "Capabilities presentation", "Case studies", "Pitch and proposal decks", "Client reporting decks"],
+    },
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>,
     metaTitle: "Agency Pitch Deck Software: Win More Clients | PitchBoost",
-    metaDescription:
-      "PitchBoost helps marketing agencies, creative studios, and PR firms generate tailored pitch decks for every prospective client in a few minutes. Upload your credentials once, win more clients with decks built around their business.",
-    heroHeadline: "Agency pitch decks that win clients, built in minutes",
+    metaDescription: "PitchBoost helps agencies build a tailored pitch deck for each prospective client, or redesign the credentials deck, case studies and past proposals you already have, in your brand with every result kept.",
+    heroHeadline: "Agency pitch decks and credentials: built for each client, or redesigned from the one you have",
     heroSubhead:
       "Stop sending credentials decks that weren't built for the room. PitchBoost generates a tailored pitch deck for every prospective client, from your agency credentials, mapped to their specific brief, in a few minutes.",
     painPoints: [
@@ -546,6 +593,10 @@ export const INDUSTRIES: Industry[] = [
       "Full-service marketing agencies",
     ],
     faqs: [
+      {
+        q: "Can PitchBoost redesign a proposal we already have?",
+        a: "Yes. Upload the PowerPoint or PDF you have, up to 50 MB, and PitchBoost rebuilds every slide in your brand taken from your website. Choose to keep every word as written and only the design changes; every number in the rebuilt deck is listed with its source slide so you can check it. Every plan shares it as a tracked link; the PDF and editable PowerPoint downloads come with a paid plan or a one-time price for that deck.",
+      },
       {
         q: "Can I use PitchBoost to respond to client RFPs?",
         a: "Yes. Paste in the client brief and your agency's credentials and PitchBoost generates a structured pitch deck that addresses the brief directly. You can edit any slide before sharing with the prospective client.",
@@ -603,11 +654,15 @@ export const INDUSTRIES: Industry[] = [
     navLabel: "Consultancies",
     label: "Consultancies & Professional Services",
     navGroup: "services",
+    redesign: {
+      headline: "Redesign the decks your consultants already wrote",
+      body: "Consulting decks are dense by design: frameworks, data, recommendations. Upload a proposal, a findings deck or a steering committee update, keep every word and number as written, and get it back in one consistent firm design.",
+      deckTypes: ["Proposals", "Findings and recommendations", "Steering committee updates", "Workshop materials", "Statements of qualifications"],
+    },
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>,
     metaTitle: "Consulting Pitch Deck Software: Win More Engagements | PitchBoost",
-    metaDescription:
-      "PitchBoost helps consultancies and professional services firms generate tailored proposals and pitch decks for every prospective client in a few minutes. Demonstrate expertise before the first meeting with decks built around each client's specific situation.",
-    heroHeadline: "Consulting proposals that prove you understand the client",
+    metaDescription: "PitchBoost helps consultancies build a tailored proposal for each prospective client, or redesign the proposals, findings decks and steering committee updates your team already wrote, in your firm's brand with every number kept.",
+    heroHeadline: "Consulting proposals and client decks: built for the client, or redesigned from the deck you have",
     heroSubhead:
       "In consulting, demonstrating deep understanding of a prospect's situation is half the win. PitchBoost connects your firm's expertise to each client's specific challenges, so you walk into every conversation looking prepared, not generic.",
     painPoints: [
@@ -661,6 +716,10 @@ export const INDUSTRIES: Industry[] = [
     ],
     faqs: [
       {
+        q: "Can PitchBoost redesign a proposal we already have?",
+        a: "Yes. Upload the PowerPoint or PDF you have, up to 50 MB, and PitchBoost rebuilds every slide in your brand taken from your website. Choose to keep every word as written and only the design changes; every number in the rebuilt deck is listed with its source slide so you can check it. Every plan shares it as a tracked link; the PDF and editable PowerPoint downloads come with a paid plan or a one-time price for that deck.",
+      },
+      {
         q: "Can PitchBoost handle complex multi-service consulting proposals?",
         a: "Yes. When you upload your firm's full service offering and methodology, PitchBoost surfaces the specific practices most relevant to each prospect, whether that's a single-service engagement or a multi-workstream transformation program.",
       },
@@ -712,6 +771,11 @@ export const INDUSTRIES: Industry[] = [
     navLabel: "Recruiting & Staffing",
     label: "Recruiting & Staffing Agencies",
     navGroup: "services",
+    redesign: {
+      headline: "Redesign your capabilities and client decks",
+      body: "Upload the agency overview, market report or client review deck you already send. PitchBoost rebuilds it in your brand with every placement number and fee detail kept.",
+      deckTypes: ["Agency capabilities deck", "Market and salary reports", "Client account reviews", "RFP responses", "Candidate shortlist presentations"],
+    },
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>,
     metaTitle: "Recruiting Pitch Deck Software: Win More Clients | PitchBoost",
     metaDescription:
@@ -770,6 +834,10 @@ export const INDUSTRIES: Industry[] = [
     ],
     faqs: [
       {
+        q: "Can PitchBoost redesign a pitch deck we already have?",
+        a: "Yes. Upload the PowerPoint or PDF you have, up to 50 MB, and PitchBoost rebuilds every slide in your brand taken from your website. Choose to keep every word as written and only the design changes; every number in the rebuilt deck is listed with its source slide so you can check it. Every plan shares it as a tracked link; the PDF and editable PowerPoint downloads come with a paid plan or a one-time price for that deck.",
+      },
+      {
         q: "Can I customize the recruiting pitch deck for different types of roles or industries?",
         a: "Yes. When you describe the prospective client's specific hiring needs, whether they're building an engineering team, scaling a sales org, or hiring for senior leadership, PitchBoost tailors the pitch to emphasize the relevant parts of your agency's track record.",
       },
@@ -821,6 +889,11 @@ export const INDUSTRIES: Industry[] = [
     navLabel: "Training & Coaching",
     label: "Training, Coaching & Speaking Professionals",
     navGroup: "services",
+    redesign: {
+      headline: "Redesign your workshop and program decks",
+      body: "Training decks are used for years and edited by everyone. Upload the program deck or workshop slides you deliver, and get them back in one consistent design with every exercise and outcome kept.",
+      deckTypes: ["Workshop slides", "Program overview", "Keynote presentations", "Course modules", "Corporate proposals"],
+    },
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>,
     metaTitle: "Coaching & Training Proposal Software: Win More Corporate Clients | PitchBoost",
     metaDescription:
@@ -879,6 +952,10 @@ export const INDUSTRIES: Industry[] = [
     ],
     faqs: [
       {
+        q: "Can PitchBoost redesign a proposal we already have?",
+        a: "Yes. Upload the PowerPoint or PDF you have, up to 50 MB, and PitchBoost rebuilds every slide in your brand taken from your website. Choose to keep every word as written and only the design changes; every number in the rebuilt deck is listed with its source slide so you can check it. Every plan shares it as a tracked link; the PDF and editable PowerPoint downloads come with a paid plan or a one-time price for that deck.",
+      },
+      {
         q: "Can PitchBoost generate a speaker one-sheet or speaking proposal?",
         a: "Yes. Whether you need a speaking proposal for a conference organizer, a one-sheet for a speaker bureau, or a training program proposal for a corporate L&D team, PitchBoost generates the right format from your credentials in a few minutes.",
       },
@@ -932,6 +1009,11 @@ export const INDUSTRIES: Industry[] = [
     navLabel: "Home Services & Contractors",
     label: "Home Services & Contractors",
     navGroup: "verticals",
+    redesign: {
+      headline: "Redesign the proposal and company deck you already have",
+      body: "Upload your company overview, service menu or a past project proposal. PitchBoost rebuilds it in your brand with every price, scope line and warranty term kept exactly as written.",
+      deckTypes: ["Company overview", "Project proposals", "Service and pricing menus", "Before-and-after showcases", "Commercial bid decks"],
+    },
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>,
     metaTitle: "Contractor Proposal Software: Win More Jobs | PitchBoost",
     metaDescription:
@@ -991,6 +1073,10 @@ export const INDUSTRIES: Industry[] = [
     ],
     faqs: [
       {
+        q: "Can PitchBoost redesign a proposal we already have?",
+        a: "Yes. Upload the PowerPoint or PDF you have, up to 50 MB, and PitchBoost rebuilds every slide in your brand taken from your website. Choose to keep every word as written and only the design changes; every number in the rebuilt deck is listed with its source slide so you can check it. Every plan shares it as a tracked link; the PDF and editable PowerPoint downloads come with a paid plan or a one-time price for that deck.",
+      },
+      {
         q: "Can I include photos of past projects in my contractor proposal?",
         a: "Yes. When you set up your business profile you can upload photos of past work, and PitchBoost will pull relevant examples into your proposals. Showing a homeowner a deck or patio you've built that looks similar to what they're imagining is one of the most effective ways to win the bid.",
       },
@@ -1046,6 +1132,11 @@ export const INDUSTRIES: Industry[] = [
     navLabel: "Commercial Real Estate",
     label: "Commercial Real Estate",
     navGroup: "verticals",
+    redesign: {
+      headline: "Redesign offering memos and property decks you have",
+      body: "Upload an existing property overview, offering memorandum or tour book. PitchBoost rebuilds it in your brand with every rent, cap rate and square footage kept exactly as written.",
+      deckTypes: ["Offering memorandums", "Property overviews", "Tour books", "Lease proposals", "Investor updates"],
+    },
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"/></svg>,
     sampleDeckUrl: "https://app.pitchboost.ai/d/ZaNMt4Z5Ok",
     metaTitle: "Commercial Real Estate Pitch Deck Software: Close More Deals | PitchBoost",
@@ -1105,6 +1196,10 @@ export const INDUSTRIES: Industry[] = [
     ],
     faqs: [
       {
+        q: "Can PitchBoost redesign a pitch deck we already have?",
+        a: "Yes. Upload the PowerPoint or PDF you have, up to 50 MB, and PitchBoost rebuilds every slide in your brand taken from your website. Choose to keep every word as written and only the design changes; every number in the rebuilt deck is listed with its source slide so you can check it. Every plan shares it as a tracked link; the PDF and editable PowerPoint downloads come with a paid plan or a one-time price for that deck.",
+      },
+      {
         q: "What types of CRE decks can PitchBoost generate?",
         a: "PitchBoost can generate property overview decks, tenant pitch packages, lease proposal presentations, investment offering memoranda, market update decks, and management pitch materials, each formatted appropriately for the audience and transaction type.",
       },
@@ -1156,6 +1251,11 @@ export const INDUSTRIES: Industry[] = [
     navLabel: "Real Estate Agents",
     label: "Real Estate Agents",
     navGroup: "verticals",
+    redesign: {
+      headline: "Redesign the listing presentation you already use",
+      body: "Upload the listing presentation you take to appointments, or a past one. PitchBoost rebuilds it in your brand with your stats, market data and testimonials kept.",
+      deckTypes: ["Listing presentation", "Buyer presentation", "Market update", "Agent bio and track record", "Open house materials"],
+    },
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9 21v-6h6v6"/></svg>,
     metaTitle: "Real Estate Listing Presentation Software: Win More Listings | PitchBoost",
     metaDescription:
@@ -1214,6 +1314,10 @@ export const INDUSTRIES: Industry[] = [
     ],
     faqs: [
       {
+        q: "Can PitchBoost redesign a listing presentation we already have?",
+        a: "Yes. Upload the PowerPoint or PDF you have, up to 50 MB, and PitchBoost rebuilds every slide in your brand taken from your website. Choose to keep every word as written and only the design changes; every number in the rebuilt deck is listed with its source slide so you can check it. Every plan shares it as a tracked link; the PDF and editable PowerPoint downloads come with a paid plan or a one-time price for that deck.",
+      },
+      {
         q: "What kinds of real estate presentations can PitchBoost create?",
         a: "Listing presentations, pricing and CMA presentations, pre-listing packages, buyer consultation decks, just-listed and just-sold property features, open house brochures, and post-appointment follow-ups. Each one is formatted for the audience and the specific home or buyer.",
       },
@@ -1267,6 +1371,11 @@ export const INDUSTRIES: Industry[] = [
     navLabel: "Brokerages & Teams",
     label: "Real Estate Brokerages & Teams",
     navGroup: "verticals",
+    redesign: {
+      headline: "Put every agent's old decks on the same brand",
+      body: "Upload the listing and recruiting decks agents already use. Each one comes back in the brokerage brand, so the office stops presenting in twenty different templates.",
+      deckTypes: ["Agent listing presentations", "Recruiting deck", "Brokerage overview", "Market reports", "Training decks"],
+    },
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>,
     metaTitle: "Listing Presentation Software for Real Estate Brokerages & Teams | PitchBoost",
     metaDescription:
@@ -1324,6 +1433,10 @@ export const INDUSTRIES: Industry[] = [
     ],
     faqs: [
       {
+        q: "Can PitchBoost redesign a listing presentation we already have?",
+        a: "Yes. Upload the PowerPoint or PDF you have, up to 50 MB, and PitchBoost rebuilds every slide in your brand taken from your website. Choose to keep every word as written and only the design changes; every number in the rebuilt deck is listed with its source slide so you can check it. Every plan shares it as a tracked link; the PDF and editable PowerPoint downloads come with a paid plan or a one-time price for that deck.",
+      },
+      {
         q: "Can my whole office use PitchBoost under one brand?",
         a: "Yes. Set the brokerage brand kit once (logo, colors, office stats, compliance line) and every agent's presentations are generated on it. Agents personalize their own bio, headshot, and production numbers without being able to drift off-brand.",
       },
@@ -1377,6 +1490,11 @@ export const INDUSTRIES: Industry[] = [
     navLabel: "Financial Advisors",
     label: "Financial Advisors & Wealth Management",
     navGroup: "verticals",
+    redesign: {
+      headline: "Redesign your client review and prospect decks",
+      body: "Upload the quarterly review, planning presentation or firm overview you already send. PitchBoost rebuilds it in your brand and keeps every figure exactly as written, then lists each one for you to check.",
+      deckTypes: ["Quarterly client reviews", "Firm overview", "Financial planning presentations", "Seminar and webinar slides", "Market commentary decks"],
+    },
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>,
     metaTitle: "Financial Advisor Pitch Deck Software: Convert More Prospects | PitchBoost",
     metaDescription:
@@ -1435,6 +1553,10 @@ export const INDUSTRIES: Industry[] = [
     ],
     faqs: [
       {
+        q: "Can PitchBoost redesign a presentation we already have?",
+        a: "Yes. Upload the PowerPoint or PDF you have, up to 50 MB, and PitchBoost rebuilds every slide in your brand taken from your website. Choose to keep every word as written and only the design changes; every number in the rebuilt deck is listed with its source slide so you can check it. Every plan shares it as a tracked link; the PDF and editable PowerPoint downloads come with a paid plan or a one-time price for that deck.",
+      },
+      {
         q: "Is using PitchBoost compliant with financial services regulations?",
         a: "PitchBoost is a content generation tool, not a regulated financial services provider. The pitch decks and materials it generates should be reviewed by your compliance team before use with clients, in the same way any marketing material would be. We recommend treating PitchBoost-generated content as a first draft that your compliance process reviews before distribution.",
       },
@@ -1486,6 +1608,11 @@ export const INDUSTRIES: Industry[] = [
     navLabel: "Nonprofits",
     label: "Nonprofits & Social Impact Organizations",
     navGroup: "verticals",
+    redesign: {
+      headline: "Redesign your donor deck and impact report",
+      body: "Upload the donor presentation, impact report or grant deck you already have. PitchBoost rebuilds it in your brand with every outcome and dollar figure kept.",
+      deckTypes: ["Donor presentation", "Impact report", "Grant presentation", "Board deck", "Gala and event slides"],
+    },
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>,
     metaTitle: "Nonprofit Pitch Deck Software: Move Donors and Funders to Act | PitchBoost",
     metaDescription:
@@ -1544,6 +1671,10 @@ export const INDUSTRIES: Industry[] = [
     ],
     faqs: [
       {
+        q: "Can PitchBoost redesign a pitch deck we already have?",
+        a: "Yes. Upload the PowerPoint or PDF you have, up to 50 MB, and PitchBoost rebuilds every slide in your brand taken from your website. Choose to keep every word as written and only the design changes; every number in the rebuilt deck is listed with its source slide so you can check it. Every plan shares it as a tracked link; the PDF and editable PowerPoint downloads come with a paid plan or a one-time price for that deck.",
+      },
+      {
         q: "Can PitchBoost help with grant applications?",
         a: "Yes. While PitchBoost isn't a grant writing tool for narrative applications, it excels at generating the pitch presentation components, program overviews, impact summaries, theory of change decks, and funder-facing presentations, that accompany grant applications or stand alone in foundation pitches.",
       },
@@ -1589,6 +1720,334 @@ export const INDUSTRIES: Industry[] = [
       "A specific ask with clear allocation, funders want to know exactly what their investment funds",
     ],
   },
+  // ── TECHNICAL & REGULATED (redesign-first) ───────────────────────────────
+
+  {
+    slug: "life-sciences-healthcare",
+    navLabel: "Life Sciences & Healthcare",
+    label: "Life Sciences and Healthcare Teams",
+    navGroup: "verticals",
+    focus: "redesign",
+    icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M10 2v7.31"/><path d="M14 9.3V2"/><path d="M8.5 2h7"/><path d="M14 9.3a6.5 6.5 0 1 1-4 0"/><path d="M5.52 16h12.96"/></svg>,
+    metaTitle: "Life Sciences and Healthcare Presentation Redesign: Keep Every Number",
+    metaDescription:
+      "Redesign scientific, clinical and medical presentations in your brand without losing a number. PitchBoost rebuilds the PowerPoint or PDF you already have, lists every figure for you to check, and returns an editable PowerPoint.",
+    heroHeadline: "Life sciences and healthcare presentations, redesigned without losing a single number",
+    heroSubhead:
+      "Upload the deck you already have: the study readout, the product training, the investor update. PitchBoost rebuilds every slide in your brand, keeps your data exactly as written, and lists each figure so you can check it before anyone sees it.",
+    painPoints: [
+      {
+        title: "The data is right and the slides are unreadable",
+        body: "Scientific and clinical decks grow by accretion: a results table pasted from a report, a figure from a poster, three fonts from three authors. The findings are solid. Nobody past slide four can follow them.",
+      },
+      {
+        title: "A redesign that changes a number is worse than no redesign",
+        body: "Generic AI tools rewrite and round. In a deck with doses, p-values, sample sizes or sensitivity figures, one quietly changed number is a correction email to the whole room, or worse.",
+      },
+      {
+        title: "Nobody has time to rebuild 40 slides by hand",
+        body: "Medical affairs, R&D and commercial teams present constantly and design for none of it. The deck gets fixed the night before, by whoever is presenting, one slide at a time.",
+      },
+    ],
+    howItWorks: [
+      {
+        step: "1",
+        title: "Upload the PowerPoint or PDF you already have",
+        body: "Up to 50 MB. Google Slides and Keynote decks export to PowerPoint in one step. Choose to keep every word as written, so only the design changes: every line, number and citation stays on its slide.",
+      },
+      {
+        step: "2",
+        title: "Point it at your website for the brand",
+        body: "PitchBoost picks up your logo and colors from your own site, or works from your organization's name if you would rather not. You review the brand before anything generates.",
+      },
+      {
+        step: "3",
+        title: "Check every figure, then download or share",
+        body: "Every number, name and claim in the rebuilt deck is listed with the slide it came from, so a reviewer can confirm each one. Download an editable PowerPoint or a PDF, or share a link that shows you when it has been opened.",
+      },
+    ],
+    outcomes: [
+      "Dense scientific slides rebuilt with one clear point each",
+      "Numbers, units and citations kept exactly as written",
+      "A checklist of every figure in the deck, with its source slide",
+      "One consistent design across decks written by different authors",
+      "An editable PowerPoint your team can keep working in",
+      "A tracked link for decks sent to partners, investors or KOLs",
+    ],
+    whoItsFor: [
+      "Medical affairs teams",
+      "R&D and clinical teams",
+      "Diagnostics companies",
+      "Biotech startups",
+      "Pharma commercial and training teams",
+      "Hospital and clinic leadership",
+      "Researchers presenting at conferences",
+      "Healthcare consultants",
+    ],
+    faqs: [
+      {
+        q: "Will PitchBoost change my data when it redesigns the deck?",
+        a: "Not if you choose to keep every word as written: only the design changes, and every line, number and citation stays on its slide. Every figure in the rebuilt deck is also listed with the slide it came from, so you can confirm each one before you present. If you let it condense a long deck, it rewrites slides to fit, so check those against your source.",
+      },
+      {
+        q: "Can I upload a PDF of a slide deck or poster?",
+        a: "Yes. PitchBoost accepts PowerPoint (.pptx) and PDF files up to 50 MB, and rebuilds them as an editable PowerPoint in your brand.",
+      },
+      {
+        q: "Is my deck content used to train AI models?",
+        a: "No. PitchBoost writes decks with Claude models through Anthropic's commercial API, whose terms do not permit training on the data you send. Deck content is stored encrypted at rest. PitchBoost does not have SOC 2 certification yet; the security page lists every processor and what it receives.",
+      },
+      {
+        q: "Is PitchBoost suitable for regulatory submissions or promotional review?",
+        a: "PitchBoost is a presentation design tool, not a validated system. Use it to make decks clear and consistent, then run them through your normal medical, legal and regulatory review like any other material.",
+      },
+      {
+        q: "How long a deck can it rebuild?",
+        a: "The free plan rebuilds up to 10 slides of a deck and shows the rest blurred, with a one-time option to finish that deck. Starter rebuilds decks up to 25 slides and Pro up to 60, with every slide rebuilt one to one.",
+      },
+      {
+        q: "Can my whole team use the same brand?",
+        a: "Yes. Teammates are included on every plan with no charge per person, so decks from different authors come out in the same design.",
+      },
+    ],
+    ctaHeadline: "Your findings deserve slides people can read. Redesign your next deck free.",
+    industryTerm: "presentation",
+    shortLabel: "life sciences",
+    shortLabelPlural: "life sciences and healthcare teams",
+    salesMaterials: [
+      { name: "Study or data readout", description: "Results from a trial, study or validation run, usually built from report tables and figures. The most numbers per slide of any deck a team sends." },
+      { name: "Medical education and training deck", description: "Product, disease-state or procedure training for sales teams, clinicians or new hires. Updated often, by many hands." },
+      { name: "Scientific conference talk", description: "A 15 to 20 minute talk that has to read from the back of the room and survive being photographed slide by slide." },
+      { name: "Investor or board update", description: "Pipeline, milestones and runway for investors or a board, where every number gets checked against last quarter's deck." },
+      { name: "Partner and distributor presentation", description: "The company and product story for hospitals, labs, distributors or pharma partners, often adapted country by country." },
+    ],
+    whatToInclude: [
+      "One finding per slide, stated in the slide title",
+      "Numbers with their units, sample sizes and the source they came from",
+      "Charts with labeled axes and the reading of the data in one sentence beneath",
+      "Limitations and caveats stated plainly, not hidden in footnotes",
+      "A consistent design across every section and every author",
+      "Citations kept on the slide where the claim is made",
+      "An appendix for detail, so the main deck stays readable",
+    ],
+  },
+
+  {
+    slug: "engineering-consulting",
+    navLabel: "Engineering Consulting",
+    label: "Engineering and Environmental Consulting Firms",
+    navGroup: "verticals",
+    focus: "redesign",
+    icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 20h20"/><path d="M5 20V8l7-5 7 5v12"/><path d="M9 20v-6h6v6"/></svg>,
+    metaTitle: "Engineering and Environmental Consulting Presentations, Redesigned in Your Brand",
+    metaDescription:
+      "Rebuild project proposals, client briefings and technical findings decks in your firm's brand, with every figure kept. PitchBoost redesigns the PowerPoint or PDF you already have and returns an editable PowerPoint.",
+    heroHeadline: "Engineering and environmental consulting decks, rebuilt in your firm's brand",
+    heroSubhead:
+      "Your team writes the technical content. PitchBoost makes it look like one firm wrote it. Upload the proposal, the project update or the findings briefing you already have, keep every figure, and get back a consistent, editable deck in minutes.",
+    painPoints: [
+      {
+        title: "Every project team has its own template",
+        body: "A firm with ten offices has ten versions of the corporate template, plus whatever the last proposal used. The client sees the inconsistency long before they read the method.",
+      },
+      {
+        title: "Technical slides are dense by necessity",
+        body: "Site data, quantities, schedules and cost tables cannot be cut to three bullets. They need structure and hierarchy, not less content, and that is the slow part to do by hand.",
+      },
+      {
+        title: "Bids are due before design help is free",
+        body: "Proposal and interview decks are finished the night before the deadline by the engineers who wrote them. There is no time to send them to marketing and wait.",
+      },
+    ],
+    howItWorks: [
+      {
+        step: "1",
+        title: "Upload the proposal or briefing deck you have",
+        body: "PowerPoint or PDF, up to 50 MB. Choose to keep every word as written, so your technical language, quantities and figures stay exactly as your team wrote them.",
+      },
+      {
+        step: "2",
+        title: "Point it at your firm's website",
+        body: "PitchBoost picks up your logo and colors from your own site and applies them to every slide. You review the brand before anything generates.",
+      },
+      {
+        step: "3",
+        title: "Check the figures, then send a tracked link",
+        body: "Every number and claim in the rebuilt deck is listed with its source slide for a quick check. Download an editable PowerPoint or PDF, or send the client a link and see when they open it and which slides they spend time on.",
+      },
+    ],
+    outcomes: [
+      "Proposals and briefings in one consistent firm design",
+      "Quantities, schedules and cost figures kept exactly as written",
+      "Dense technical slides given real hierarchy",
+      "Decks finished in minutes, not the night before a deadline",
+      "An editable PowerPoint the project team can keep updating",
+      "Visibility into when a client opens the proposal deck",
+    ],
+    whoItsFor: [
+      "Environmental consultants",
+      "Civil and structural engineering firms",
+      "Water and infrastructure consultants",
+      "Project and program managers",
+      "Proposal and bid managers",
+      "Energy and utilities consultants",
+      "EPC and construction firms",
+      "Technical directors presenting to clients",
+    ],
+    faqs: [
+      {
+        q: "Can PitchBoost redesign a proposal deck without changing our technical content?",
+        a: "Yes. Choose to keep every word as written and only the design changes: every line, number and citation stays on its slide. Every figure in the rebuilt deck is also listed with the slide it came from, so the project lead can confirm them before submission.",
+      },
+      {
+        q: "Will the result match our corporate brand?",
+        a: "PitchBoost takes your logo and colors from your firm's website and applies them to every slide, so decks from different offices and project teams come out in the same design. You review the captured brand before anything generates.",
+      },
+      {
+        q: "Can we still edit the deck in PowerPoint afterwards?",
+        a: "Yes. Paid plans and the one-time deck option download an editable PowerPoint with real text and shapes you can change, plus a PDF. It is close to the web version, not pixel-identical, so give it a final look before you submit.",
+      },
+      {
+        q: "Does it work for long decks?",
+        a: "Starter rebuilds decks up to 25 slides and Pro up to 60, every slide one to one. The free plan rebuilds the first 10 slides and shows the rest blurred, with a one-time option to finish that deck.",
+      },
+      {
+        q: "Is client data kept confidential?",
+        a: "Deck content is stored encrypted at rest and is not used to train AI models: PitchBoost uses Claude through Anthropic's commercial API, whose terms do not permit training on it. PitchBoost does not hold SOC 2 certification yet; the security page lists every processor.",
+      },
+      {
+        q: "Can the whole firm use it?",
+        a: "Yes. Teammates are included on every plan with no charge per person.",
+      },
+    ],
+    ctaHeadline: "Make every proposal look like one firm wrote it. Redesign your next deck free.",
+    industryTerm: "proposal deck",
+    shortLabel: "consulting",
+    shortLabelPlural: "engineering and environmental consulting firms",
+    salesMaterials: [
+      { name: "Project proposal and interview deck", description: "The presentation that accompanies a bid or a shortlist interview: approach, team, schedule, relevant projects. Written by engineers against a deadline." },
+      { name: "Client project update", description: "Progress, issues, schedule and budget for a client steering meeting. Updated monthly from the last version, so it drifts." },
+      { name: "Technical findings briefing", description: "Site investigation, modeling or monitoring results presented to a client or regulator. Dense, data-heavy and easy to misread." },
+      { name: "Statement of qualifications", description: "The firm's capabilities, sectors and project sheets, rebuilt for every pursuit from slides of very different ages." },
+      { name: "Internal strategy and pursuit review", description: "Go/no-go and pipeline decks for leadership, where a clear page beats a long one." },
+    ],
+    whatToInclude: [
+      "The client's problem and objective in their own words, on slide two",
+      "Your approach as a clear sequence, not a paragraph",
+      "Quantities, schedules and costs with units and assumptions stated",
+      "Relevant past projects with outcomes, not just names",
+      "The team, with the role each person plays on this project",
+      "Risks and how you will manage them",
+      "One design throughout, whichever office wrote which section",
+    ],
+  },
+
+  {
+    slug: "manufacturing",
+    navLabel: "Manufacturing & Industrial",
+    label: "Manufacturing and Industrial Companies",
+    navGroup: "verticals",
+    focus: "redesign",
+    icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 20V9l6 4V9l6 4V4h6v16H2z"/></svg>,
+    metaTitle: "Manufacturing and Industrial Presentations: Redesign Product and Capability Decks",
+    metaDescription:
+      "Redesign product, capability and technical presentations for distributors, customers and trade shows. PitchBoost rebuilds the PowerPoint or PDF you have in your brand, keeps every specification, and returns an editable PowerPoint.",
+    heroHeadline: "Manufacturing and industrial presentations that look as precise as your product",
+    heroSubhead:
+      "Product decks, capability presentations and distributor trainings built up over years, in a dozen templates. Upload the one you have, keep every specification and figure, and get it back in one clean, consistent design.",
+    painPoints: [
+      {
+        title: "The product deck is ten years of slides",
+        body: "Every product line, every trade show and every new market added slides in whatever template was current. Customers see a company that is less organized than its factory.",
+      },
+      {
+        title: "Specifications cannot be approximated",
+        body: "Tolerances, ratings, dimensions and certifications have to be exactly right. A redesign tool that rounds or paraphrases them creates a problem your sales engineers have to clean up.",
+      },
+      {
+        title: "Distributors and regions rebuild it anyway",
+        body: "When the master deck looks dated, regional teams and distributors make their own versions, and the brand fragments a little more with each one.",
+      },
+    ],
+    howItWorks: [
+      {
+        step: "1",
+        title: "Upload the product or capability deck",
+        body: "PowerPoint or PDF, up to 50 MB. Choose to keep every word as written, so specifications, ratings and certifications stay exactly as they are.",
+      },
+      {
+        step: "2",
+        title: "Point it at your company website",
+        body: "PitchBoost picks up your logo and colors from your own site and applies them to every slide. You review the brand before anything generates.",
+      },
+      {
+        step: "3",
+        title: "Check the numbers, then share or download",
+        body: "Every figure in the rebuilt deck is listed with the slide it came from. Download an editable PowerPoint or PDF for distributors, or share a link and see when customers open it.",
+      },
+    ],
+    outcomes: [
+      "One consistent design across product lines and regions",
+      "Specifications and figures kept exactly as written",
+      "Trade show and customer decks that look current",
+      "A master deck distributors no longer need to rebuild",
+      "An editable PowerPoint your team can keep updating",
+      "A tracked link for quotes and customer presentations",
+    ],
+    whoItsFor: [
+      "Industrial equipment manufacturers",
+      "Component and parts suppliers",
+      "Packaging and machinery companies",
+      "Product and marketing managers",
+      "Sales engineers",
+      "Distributor and channel managers",
+      "Plant and operations leaders",
+      "Industrial startups",
+    ],
+    faqs: [
+      {
+        q: "Will PitchBoost keep our technical specifications exactly as they are?",
+        a: "Yes, when you choose to keep every word as written: only the design changes, and every line and number stays on its slide. Every figure in the rebuilt deck is also listed with its source slide, so a sales engineer can confirm them in a few minutes.",
+      },
+      {
+        q: "Can it make one consistent design out of decks from different product lines?",
+        a: "Yes. Each deck you upload is rebuilt in the brand taken from your website, so product lines and regions come out in the same design.",
+      },
+      {
+        q: "Can distributors edit the result?",
+        a: "Paid plans and the one-time deck option download an editable PowerPoint with real text and shapes, plus a PDF. Teammates are included on every plan at no charge per person.",
+      },
+      {
+        q: "We present in several languages. Does that work?",
+        a: "PitchBoost keeps the language your deck is written in, including right-to-left languages. Upload each language version and each comes back in the same design.",
+      },
+      {
+        q: "How long a deck can it rebuild?",
+        a: "Starter rebuilds decks up to 25 slides and Pro up to 60. The free plan rebuilds the first 10 slides and shows the rest blurred, with a one-time option to finish that deck.",
+      },
+    ],
+    ctaHeadline: "Make your product deck as precise as your product. Redesign it free.",
+    industryTerm: "product deck",
+    shortLabel: "manufacturing",
+    shortLabelPlural: "manufacturing and industrial companies",
+    salesMaterials: [
+      { name: "Product line presentation", description: "Features, specifications and applications for each product family, used by sales, distributors and at trade shows." },
+      { name: "Company capability deck", description: "Facilities, certifications, capacity and key customers. The deck that gets you onto an approved supplier list." },
+      { name: "Distributor and partner training", description: "How to position, quote and support the product, sent to every new distributor and updated every season." },
+      { name: "Customer quote presentation", description: "The proposal for a specific order or project, built from the product deck and a pricing sheet." },
+      { name: "Operations and board review", description: "Output, quality, safety and cost figures for leadership, where the numbers matter more than the design until the design hides them." },
+    ],
+    whatToInclude: [
+      "The customer's application and requirement on the first slides",
+      "Specifications with units, tolerances and test standards",
+      "Certifications and approvals, stated plainly",
+      "Real applications and customer results, with figures",
+      "Lead times, capacity and support, the questions buyers always ask",
+      "One design across every product line and region",
+      "A clear next step: sample, quote or site visit",
+    ],
+  },
+
 ];
 
 export const INDUSTRY_GROUPS = [
@@ -1603,6 +2062,10 @@ export const INDUSTRY_GROUPS = [
   {
     label: "Industry Verticals",
     slugs: ["home-services", "commercial-real-estate", "real-estate-agents", "real-estate-brokerages", "financial-advisors", "nonprofits"],
+  },
+  {
+    label: "Technical & Regulated",
+    slugs: ["life-sciences-healthcare", "engineering-consulting", "manufacturing"],
   },
 ] as const;
 

@@ -162,7 +162,7 @@ export default function MarketingNavbar() {
 
               {activeDropdown === "industry" && (
                 <div className="nav-dropdown">
-                  {INDUSTRY_GROUPS.map((group, gi) => (
+                  {INDUSTRY_GROUPS.slice(0, 3).map((group, gi) => (
                     <div key={group.label}>
                       <div className="nav-dropdown-group-label">{group.label}</div>
                       {group.slugs.map((slug) => {
@@ -175,6 +175,22 @@ export default function MarketingNavbar() {
                           </Link>
                         );
                       })}
+                      {/* Groups past the third stack under the first column. */}
+                      {gi === 0 && INDUSTRY_GROUPS.slice(3).map((extra) => (
+                        <div key={extra.label} style={{ marginTop: 14 }}>
+                          <div className="nav-dropdown-group-label">{extra.label}</div>
+                          {extra.slugs.map((slug) => {
+                            const ind = industryMap[slug];
+                            if (!ind) return null;
+                            return (
+                              <Link key={slug} href={`/industries/${slug}`} onClick={() => setActiveDropdown(null)}>
+                                {dot}
+                                {ind.navLabel}
+                              </Link>
+                            );
+                          })}
+                        </div>
+                      ))}
                       {/* The grid is three columns; the non-industry audiences
                           stack under the second, the shortest group. */}
                       {gi === 1 && AUDIENCE_GROUPS.map((aud) => (
