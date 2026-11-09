@@ -12,7 +12,7 @@ export default function TermsPage() {
       <section className="legal-hero">
         <div className="mkt-container">
           <h1>Terms of Service</h1>
-          <p>Last updated: September 15, 2026</p>
+          <p>Last updated: November 9, 2026</p>
         </div>
       </section>
 
@@ -81,7 +81,15 @@ export default function TermsPage() {
           period. AI credit top-ups are non-refundable once used.
         </p>
 
-        <h2>6. Referral Program</h2>
+        <h2>6. Emails</h2>
+        <p>
+          We send emails about your account and how you use PitchBoost, for
+          example when a deck is ready or when you started a purchase and
+          didn&apos;t finish. Every one of these emails has an unsubscribe
+          link. Receipts and security messages about your account still go.
+        </p>
+
+        <h2>7. Referral Program</h2>
         <p>
           Referrers earn a commission on payments made by customers who sign up
           through their referral link. Commissions accrue on eligible referrals
@@ -101,7 +109,7 @@ export default function TermsPage() {
           reduce the rate on referrals already made.
         </p>
 
-        <h2>7. Service Availability</h2>
+        <h2>8. Service Availability</h2>
         <p>
           We strive for high availability but do not guarantee uninterrupted
           access. We may perform maintenance or updates that temporarily affect
@@ -109,7 +117,7 @@ export default function TermsPage() {
           with reasonable notice.
         </p>
 
-        <h2>8. Limitation of Liability</h2>
+        <h2>9. Limitation of Liability</h2>
         <p>
           To the maximum extent permitted by law, PitchBoost shall not be liable
           for any indirect, incidental, special, consequential, or punitive
@@ -122,7 +130,7 @@ export default function TermsPage() {
           preceding the claim.
         </p>
 
-        <h2>9. Termination</h2>
+        <h2>10. Termination</h2>
         <p>
           We may suspend or terminate your account if you violate these terms.
           You may delete your account at any time. Upon termination, your right
@@ -131,14 +139,14 @@ export default function TermsPage() {
           <Link href="/privacy">Privacy Policy</Link>.
         </p>
 
-        <h2>10. Changes to Terms</h2>
+        <h2>11. Changes to Terms</h2>
         <p>
           We may update these terms from time to time. We will notify you of
           material changes via email or through the Service. Continued use after
           changes constitutes acceptance of the updated terms.
         </p>
 
-        <h2>11. Contact</h2>
+        <h2>12. Contact</h2>
         <p>
           For questions about these terms, contact us at{" "}
           <a href="mailto:legal@pitchboost.ai">legal@pitchboost.ai</a>.
