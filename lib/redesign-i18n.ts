@@ -5,15 +5,15 @@
  * to its siblings with hreflang. Page copy is data (lib/redesigns*.ts); the
  * strings here are the shared chrome around it.
  */
-export type Locale = "en" | "es" | "pt";
+export type Locale = "en" | "es" | "pt" | "fr";
 
-export const LOCALES: Locale[] = ["en", "es", "pt"];
+export const LOCALES: Locale[] = ["en", "es", "pt", "fr"];
 
-export const LOCALE_PREFIX: Record<Locale, string> = { en: "", es: "/es", pt: "/pt" };
+export const LOCALE_PREFIX: Record<Locale, string> = { en: "", es: "/es", pt: "/pt", fr: "/fr" };
 
-export const OG_LOCALE: Record<Locale, string> = { en: "en_US", es: "es_ES", pt: "pt_BR" };
+export const OG_LOCALE: Record<Locale, string> = { en: "en_US", es: "es_ES", pt: "pt_BR", fr: "fr_FR" };
 
-export const LOCALE_NAME: Record<Locale, string> = { en: "English", es: "Español", pt: "Português" };
+export const LOCALE_NAME: Record<Locale, string> = { en: "English", es: "Español", pt: "Português", fr: "Français" };
 
 export interface RedesignUi {
   breadcrumbHome: string;
@@ -141,6 +141,37 @@ export const REDESIGN_UI: Record<Locale, RedesignUi> = {
     galleryFoot: "Quer ver isso nos seus próprios slides antes de se cadastrar?",
     galleryFootLink: "A prévia gratuita reconstrói dois deles.",
   },
+  fr: {
+    breadcrumbHome: "Accueil",
+    breadcrumbHub: "Refonte",
+    ctaPrimary: "Importez votre présentation gratuitement",
+    ctaSecondary: "Comment fonctionne la refonte",
+    finePrint: "L'offre gratuite inclut une présentation IA par mois. Sans carte bancaire.",
+    howLabel: "Comment ça marche",
+    howTitle: "Importez, indiquez votre site web, c'est prêt",
+    howBody: "Le tout prend quelques minutes, et vous vérifiez l'identité visuelle détectée avant toute génération.",
+    whyLabel: "Pourquoi maintenant",
+    whyTitle: "La situation à laquelle répond cette page",
+    getLabel: "Ce que vous obtenez",
+    getTitle: "Ce que vous recevez",
+    faqLabel: "FAQ",
+    faqTitle: "Questions fréquentes",
+    relatedLabel: "Voir aussi",
+    relatedTitle: "D'autres façons d'utiliser la refonte",
+    relatedFeatureTitle: "Importer et refondre",
+    relatedFeatureBody: "La fonctionnalité derrière chaque page de cette section : comment la reconstruction fonctionne vraiment.",
+    relatedBulkTitle: "Reconstruction en masse",
+    relatedBulkBody: "Convertissez tout un dossier de PowerPoint aux couleurs de votre marque en une seule fois.",
+    ctaBody: "Importez la présentation, indiquez votre site web à PitchBoost et jugez la refonte par vous-même. Une présentation gratuite par mois, sans carte bancaire.",
+    alsoIn: "Aussi en",
+    galleryLabel: "Avant et après",
+    galleryTitle: "La même présentation, reconstruite",
+    galleryBody: "Une présentation commerciale de six diapositives pour une entreprise fictive d'analyse de flottes, conçue comme la plupart des présentations (Calibri, un bandeau bleu marine, cinq longues puces), puis importée et reconstruite diapositive par diapositive aux couleurs de l'entreprise. Rien n'a été ressaisi.",
+    galleryBefore: "Avant",
+    galleryAfter: "Après",
+    galleryFoot: "Vous voulez voir le résultat sur vos propres diapositives avant de vous inscrire ?",
+    galleryFootLink: "L'aperçu gratuit en reconstruit deux.",
+  },
 };
 
 export interface RedesignHubCopy {
@@ -169,6 +200,7 @@ export function languageAlternates(path: string): Record<string, string> {
     en: path,
     es: `/es${path}`,
     pt: `/pt${path}`,
+    fr: `/fr${path}`,
     "x-default": path,
   };
 }

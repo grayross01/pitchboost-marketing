@@ -392,7 +392,7 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
     "category": "account",
     "title": "Cómo funcionan los créditos y planes",
     "metaDescription": "Créditos mensuales en cada plan: una presentación de hasta 10 diapositivas cuesta 100 y cada diapositiva extra suma 8. Qué incluye cada plan y cómo comprar más.",
-    "answer": "Cada plan de PitchBoost incluye una asignación mensual de créditos y cada acción de IA tiene un precio fijo: una presentación (nueva o mejorada) de hasta 10 diapositivas cuesta 100 créditos, cada diapositiva adicional suma 8 (4 con el nuevo motor de presentaciones), una imagen con IA 10, editar una diapositiva 10, editar la presentación completa 50, escanear un sitio web 10. Free incluye 150 créditos al mes (una presentación), Starter 300, Pro 1,200 y Business 3,300. Los planes de pago acumulan los créditos no usados durante un mes y pueden comprar paquetes adicionales. En la aplicación ves el porcentaje de tu asignación usado, nunca una cifra en dólares.",
+    "answer": "Cada plan de PitchBoost incluye una asignación mensual de créditos y cada acción de IA tiene un precio fijo: una presentación (nueva o mejorada) de hasta 10 diapositivas cuesta 100 créditos, cada diapositiva adicional suma 8 (4 con el nuevo motor de presentaciones), una imagen con IA 10, editar una diapositiva 10, editar la presentación completa 50, escanear un sitio web 10. Free incluye 150 créditos al mes (una presentación), Starter 300, Pro 1,200 y Business 3,300. Los créditos del plan se renuevan cada mes; los créditos comprados en un paquete adicional (planes de pago) se conservan. En la aplicación ves el porcentaje de tu asignación usado, nunca una cifra en dólares.",
     "sections": [
       {
         "heading": "Los planes",

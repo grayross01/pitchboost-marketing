@@ -369,6 +369,8 @@ export default function StudentsPage() {
             <Link href="/es/redesign" hrefLang="es" style={{ color: "#1F6B6B", fontWeight: 600 }}>Español</Link>
             {" "}· Guias em{" "}
             <Link href="/pt/redesign" hrefLang="pt" style={{ color: "#1F6B6B", fontWeight: 600 }}>Português</Link>
+            {" "}· Guides en{" "}
+            <Link href="/fr/redesign" hrefLang="fr" style={{ color: "#1F6B6B", fontWeight: 600 }}>Français</Link>
           </p>
         </div>
       </section>

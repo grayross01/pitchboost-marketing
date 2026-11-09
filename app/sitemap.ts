@@ -85,24 +85,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const f of FEATURES) {
     entries.push({ url: `${BASE}/features/${f.slug}`, changeFrequency: "monthly", priority: 0.8, lastModified: FEATURE_PAGE_DATES[f.slug] ?? STATIC_PAGE_DATES["/features"] });
   }
-  // The redesign cluster exists in English, Spanish (/es) and Brazilian
-  // Portuguese (/pt); every URL lists its siblings as hreflang alternates.
+  // The redesign cluster exists in English and every translated locale
+  // (/es, /pt, /fr); every URL lists its siblings as hreflang alternates.
   // Only locales that actually have the page are listed as alternates: a new
   // English entry whose translation has not landed yet must not advertise a
-  // Spanish URL that 404s.
-  const esSlugs = new Set(getRedesigns("es").map((r) => r.slug));
-  const ptSlugs = new Set(getRedesigns("pt").map((r) => r.slug));
+  // translated URL that 404s.
+  const translated = LOCALES.filter((l) => l !== "en");
+  const slugsByLocale = Object.fromEntries(translated.map((l) => [l, new Set(getRedesigns(l).map((r) => r.slug))]));
   const redesignPaths = ["/redesign", ...REDESIGNS.map((r) => `/redesign/${r.slug}`)];
   for (const path of redesignPaths) {
     const slug = path.replace("/redesign/", "");
-    const hasEs = path === "/redesign" || esSlugs.has(slug);
-    const hasPt = path === "/redesign" || ptSlugs.has(slug);
+    const has = translated.filter((l) => path === "/redesign" || slugsByLocale[l].has(slug));
     const languages: Record<string, string> = { en: `${BASE}${path}`, "x-default": `${BASE}${path}` };
-    if (hasEs) languages.es = `${BASE}/es${path}`;
-    if (hasPt) languages.pt = `${BASE}/pt${path}`;
+    for (const l of has) languages[l] = `${BASE}${LOCALE_PREFIX[l]}${path}`;
     const entry = REDESIGNS.find((r) => r.slug === slug);
     const lastModified = entry?.updated ?? REDESIGNS_UPDATED;
-    for (const prefix of ["", ...(hasEs ? ["/es"] : []), ...(hasPt ? ["/pt"] : [])]) {
+    for (const prefix of ["", ...has.map((l) => LOCALE_PREFIX[l])]) {
       entries.push({
         url: `${BASE}${prefix}${path}`,
         changeFrequency: "monthly",
@@ -112,12 +110,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       });
     }
   }
-  // Help center: every article exists in all three locales (the translation
-  // job writes whole files), so each URL lists all its siblings.
+  // Help center: every article exists in every locale (translations are
+  // whole files), so each URL lists all its siblings.
   for (const path of ["/help", ...HELP_ARTICLES.map((a) => `/help/${a.slug}`)]) {
-    const languages = { en: `${BASE}${path}`, es: `${BASE}/es${path}`, pt: `${BASE}/pt${path}`, "x-default": `${BASE}${path}` };
+    const languages: Record<string, string> = { "x-default": `${BASE}${path}` };
+    for (const l of LOCALES) languages[l] = `${BASE}${LOCALE_PREFIX[l]}${path}`;
     const lastModified = HELP_ARTICLES.find((a) => `/help/${a.slug}` === path)?.updated ?? HELP_UPDATED;
-    for (const prefix of ["", "/es", "/pt"]) {
+    for (const prefix of LOCALES.map((l) => LOCALE_PREFIX[l])) {
       entries.push({ url: `${BASE}${prefix}${path}`, changeFrequency: "monthly", priority: prefix ? 0.7 : 0.8, lastModified, alternates: { languages } });
     }
   }

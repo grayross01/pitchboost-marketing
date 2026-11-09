@@ -392,7 +392,7 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
     "category": "account",
     "title": "Como funcionam os créditos e planos",
     "metaDescription": "Todo plano inclui créditos mensais; uma apresentação de até 10 slides custa 100 e cada slide a mais soma 8. O que cada plano inclui e como comprar mais.",
-    "answer": "Todo plano do PitchBoost inclui uma cota mensal de créditos e cada ação de IA tem um preço fixo: uma apresentação (nova ou reconstruída) de até 10 slides custa 100 créditos, cada slide a mais soma 8 (4 no novo motor de apresentações), uma imagem com IA 10, uma edição de slide 10, uma edição de apresentação completa 50, uma varredura de site 10. Free inclui 150 créditos por mês (uma apresentação), Starter 300, Pro 1.200 e Business 3.300. Planos pagos acumulam créditos não usados por um mês e podem comprar pacotes extras. No aplicativo você vê a porcentagem da sua cota usada, nunca um valor em dólar corrente.",
+    "answer": "Todo plano do PitchBoost inclui uma cota mensal de créditos e cada ação de IA tem um preço fixo: uma apresentação (nova ou reconstruída) de até 10 slides custa 100 créditos, cada slide a mais soma 8 (4 no novo motor de apresentações), uma imagem com IA 10, uma edição de slide 10, uma edição de apresentação completa 50, uma varredura de site 10. Free inclui 150 créditos por mês (uma apresentação), Starter 300, Pro 1.200 e Business 3.300. Os créditos do plano renovam todo mês; os créditos comprados em um pacote extra (planos pagos) são mantidos. No aplicativo você vê a porcentagem da sua cota usada, nunca um valor em dólar corrente.",
     "sections": [
       {
         "heading": "Os planos",

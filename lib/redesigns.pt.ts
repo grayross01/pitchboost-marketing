@@ -191,7 +191,7 @@ export const REDESIGNS_PT: RedesignPage[] = [
       },
       {
         "q": "Quanto custa rebrandar uma biblioteca?",
-        "a": "Cada deck reconstruído é uma geração. O plano gratuito cobre três; para uma biblioteca real, planos a partir de $29/mês incluem um orçamento mensal de IA que cobre aproximadamente um deck por dia."
+        "a": "Um deck de até 10 slides usa 100 créditos. O plano gratuito cobre um deck por mês; para uma biblioteca real, o Pro ($29/mês) cobre cerca de 12 decks por mês e o Business ($79/mês) cerca de 33, aproximadamente um por dia."
       }
     ],
     "ctaHeadline": "Finalize o rebranding: decks incluídos."
@@ -285,7 +285,7 @@ export const REDESIGNS_PT: RedesignPage[] = [
       },
       {
         "q": "Qual o custo comparado a um projeto de renovação de design?",
-        "a": "Uma geração por deck contra as três do plano grátis, depois planos a partir de $29/mês. Projetos internos de design para o mesmo trabalho são normalmente cotados em semanas e milhares."
+        "a": "Um deck por mês no plano grátis (até 10 slides; um pagamento único de $9 termina um deck mais longo), depois planos a partir de $7/mês. Projetos internos de design para o mesmo trabalho são normalmente cotados em semanas e milhares."
       }
     ],
     "ctaHeadline": "A reunião de sexta não deveria rodar no deck de 2023."
@@ -324,7 +324,7 @@ export const REDESIGNS_PT: RedesignPage[] = [
       },
       {
         "q": "Quanto custa comparado a uma agência?",
-        "a": "Agências normalmente cobram R$ 10.000 a R$ 40.000 por deck com taxas por revisão. O plano gratuito do PitchBoost cobre três gerações; planos pagos começam em $29/mês com revisões feitas no editor integrado."
+        "a": "Agências normalmente cobram R$ 10.000 a R$ 40.000 por deck com taxas por revisão. O plano gratuito do PitchBoost cobre um deck por mês de até 10 slides; planos pagos começam em $7/mês com revisões feitas no editor integrado."
       },
       {
         "q": "Posso recuperar o arquivo fonte?",

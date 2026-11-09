@@ -27,6 +27,7 @@ const nextConfig: NextConfig = {
       // There is no locale homepage; the translated sections start at /redesign.
       { source: "/es", destination: "/es/redesign", permanent: true },
       { source: "/pt", destination: "/pt/redesign", permanent: true },
+      { source: "/fr", destination: "/fr/redesign", permanent: true },
     ];
   },
   async headers() {

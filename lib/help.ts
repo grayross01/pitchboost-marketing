@@ -417,7 +417,7 @@ export const HELP_ARTICLES: HelpArticle[] = [
     metaDescription:
       "Monthly credits on every plan: a deck of up to 10 slides costs 100, each slide past 10 adds 8. What each plan includes, what resets each month, and how to buy more.",
     answer:
-      "Every PitchBoost plan includes a monthly credit allowance and every AI action has a fixed price: a deck (new or rebuilt) of up to 10 slides costs 100 credits, each slide past 10 adds 8 (4 on the new deck engine), an AI image is 10, a slide edit 10, a full-deck edit 50, a website scan 10. Free includes 150 credits a month (one deck), Starter 300, Pro 1,200 and Business 3,300. Paid plans roll unused credits over for a month and can buy top-up packs. In the app you see the percentage of your allowance used, never a running dollar figure.",
+      "Every PitchBoost plan includes a monthly credit allowance and every AI action has a fixed price: a deck (new or rebuilt) of up to 10 slides costs 100 credits, each slide past 10 adds 8 (4 on the new deck engine), an AI image is 10, a slide edit 10, a full-deck edit 50, a website scan 10. Free includes 150 credits a month (one deck), Starter 300, Pro 1,200 and Business 3,300. Plan credits reset every month; credits bought in a top-up pack (paid plans) carry over. In the app you see the percentage of your allowance used, never a running dollar figure.",
     sections: [
       {
         heading: "The plans",
@@ -631,10 +631,11 @@ export function getHelpArticle(slug: string): HelpArticle | undefined {
 // ---- locale access (Spanish and Brazilian Portuguese live in generated siblings)
 import { HELP_ARTICLES_ES } from "./help.es";
 import { HELP_ARTICLES_PT } from "./help.pt";
+import { HELP_ARTICLES_FR } from "./help.fr";
 import type { Locale } from "./redesign-i18n";
 
 export function getHelpArticles(locale: Locale): HelpArticle[] {
-  return locale === "es" ? HELP_ARTICLES_ES : locale === "pt" ? HELP_ARTICLES_PT : HELP_ARTICLES;
+  return locale === "es" ? HELP_ARTICLES_ES : locale === "pt" ? HELP_ARTICLES_PT : locale === "fr" ? HELP_ARTICLES_FR : HELP_ARTICLES;
 }
 export function getHelpArticleFor(locale: Locale, slug: string): HelpArticle | undefined {
   return getHelpArticles(locale).find((a) => a.slug === slug);

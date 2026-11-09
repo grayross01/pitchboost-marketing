@@ -317,8 +317,10 @@ export default function UploadAndRedesignPage() {
           <p style={{ textAlign: "center", fontSize: 14, color: "var(--ds-text-secondary)", marginTop: 28 }}>
             Prefer another language? The redesign guides are also in{" "}
             <Link href="/es/redesign" hrefLang="es" style={{ color: "#1F6B6B", fontWeight: 600 }}>Español</Link>
+            ,{" "}
+            <Link href="/pt/redesign" hrefLang="pt" style={{ color: "#1F6B6B", fontWeight: 600 }}>Português</Link>
             {" "}and{" "}
-            <Link href="/pt/redesign" hrefLang="pt" style={{ color: "#1F6B6B", fontWeight: 600 }}>Português</Link>.
+            <Link href="/fr/redesign" hrefLang="fr" style={{ color: "#1F6B6B", fontWeight: 600 }}>Français</Link>.
           </p>
         </div>
       </section>

@@ -31,11 +31,11 @@ export default function MarketingNavbar() {
   const [mobileSection, setMobileSection] = useState<"features" | "industry" | null>(null);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const pathname = usePathname();
-  // The /es and /pt redesign pages are in the visitor's language; the two
+  // The /es, /pt and /fr pages are in the visitor's language; the two
   // account buttons follow, the rest of the nav stays English (those pages are).
-  const navLocale = pathname?.startsWith("/es") ? "es" : pathname?.startsWith("/pt") ? "pt" : "en";
-  const loginLabel = navLocale === "es" ? "Iniciar sesión" : navLocale === "pt" ? "Entrar" : "Log In";
-  const startLabel = navLocale === "es" ? "Empezar" : navLocale === "pt" ? "Começar" : "Get Started";
+  const navLocale = pathname?.startsWith("/es") ? "es" : pathname?.startsWith("/pt") ? "pt" : pathname?.startsWith("/fr") ? "fr" : "en";
+  const loginLabel = navLocale === "es" ? "Iniciar sesión" : navLocale === "pt" ? "Entrar" : navLocale === "fr" ? "Se connecter" : "Log In";
+  const startLabel = navLocale === "es" ? "Empezar" : navLocale === "pt" ? "Começar" : navLocale === "fr" ? "Commencer" : "Get Started";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);

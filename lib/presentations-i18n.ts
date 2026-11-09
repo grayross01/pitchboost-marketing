@@ -8,10 +8,11 @@
 import { PRESENTATIONS, type PresentationPage } from "./presentations";
 import { PRESENTATIONS_ES } from "./presentations.es";
 import { PRESENTATIONS_PT } from "./presentations.pt";
+import { PRESENTATIONS_FR } from "./presentations.fr";
 import type { Locale } from "./redesign-i18n";
 
 export function getPresentations(locale: Locale): PresentationPage[] {
-  return locale === "es" ? PRESENTATIONS_ES : locale === "pt" ? PRESENTATIONS_PT : PRESENTATIONS;
+  return locale === "es" ? PRESENTATIONS_ES : locale === "pt" ? PRESENTATIONS_PT : locale === "fr" ? PRESENTATIONS_FR : PRESENTATIONS;
 }
 
 export function getPresentationFor(locale: Locale, slug: string): PresentationPage | undefined {
@@ -134,6 +135,34 @@ export const PRESENTATION_UI: Record<Locale, PresentationUi> = {
     guidesLabel: "Guias",
     ctaNote: "Grátis na sua primeira apresentação. $9 uma única vez para baixar uma pronta, ou planos a partir de $7/mês.",
     inEnglish: " (em inglês)",
+  },
+  fr: {
+    breadcrumbHome: "Accueil",
+    breadcrumbHub: "Créateur de présentations IA",
+    topicLabel: "Quel est le sujet de votre présentation ?",
+    topicButton: "Créer ma présentation",
+    haveSlides: "Vous avez déjà des diapositives ?",
+    redesignLink: "Refondez la présentation que vous avez déjà",
+    redesignTail: ".",
+    freeNote: "Gratuit pour votre première présentation. Sans carte bancaire.",
+    deckLabel: "La présentation que vous recevez",
+    deckTitle: "Comment PitchBoost construit {forLabel}",
+    deckBody: "Pas un pitch dans lequel on a collé votre sujet. Les diapositives suivent l'ordre dont ce type de présentation a vraiment besoin.",
+    whyLabel: "Pourquoi c'est plus difficile qu'il n'y paraît",
+    whyTitle: "Les erreurs les plus courantes",
+    getLabel: "Ce que vous obtenez",
+    getTitle: "Ce que vous recevez",
+    tryLabel: "Essayez",
+    tryTitle: "Des prompts qui fonctionnent",
+    tryBody: "Mieux vaut précis que court : dites à qui elle s'adresse, combien de temps elle dure et ce qu'elle doit absolument contenir. Choisissez-en un pour démarrer avec le texte déjà rempli.",
+    tryLink: "Commencer avec ce prompt",
+    faqLabel: "FAQ",
+    faqTitle: "Les questions qu'on nous pose",
+    relatedLabel: "Voir aussi",
+    relatedTitle: "D'autres présentations réalisées par PitchBoost",
+    guidesLabel: "Guides",
+    ctaNote: "Gratuit pour votre première présentation. $9 une seule fois pour télécharger une présentation terminée, ou des offres à partir de $7 par mois.",
+    inEnglish: " (en anglais)",
   },
 };
 
@@ -320,5 +349,56 @@ export const PRESENTATION_HUB: Record<Locale, PresentationHubCopy> = {
     ],
     ctaHeadline: "Sua próxima apresentação, sem brigar com a formatação.",
     ctaPlaceholder: "Resultados do terceiro trimestre para o conselho: receita, churn e a decisão de contratação",
+  },
+  fr: {
+    title: "Créateur de présentations IA : créez ou refondez | PitchBoost",
+    description:
+      "Créez une présentation à partir d'un prompt ou refondez celle que vous avez. Cours, rapports, conférences et pitchs, chacun avec sa structure, à votre image et dans votre langue.",
+    h1: "Dites à quoi elle sert. Recevez une présentation pensée pour ce public.",
+    subhead:
+      "PitchBoost rédige et met en page toute la présentation : un cours qui se termine sur les points clés, un point au conseil d'administration qui commence par le résultat, un pitch écrit pour un seul acheteur. Ou apportez la présentation que vous avez déjà et récupérez-la refondue, sans perdre un seul chiffre.",
+    placeholder: "La photosynthèse pour mon cours de SVT de troisième, 10 diapositives",
+    ogSubtitle: "Cours, rapports, conférences et pitchs à partir d'un prompt, ou votre présentation refondue. Dans toutes les langues, à votre image.",
+    listName: "Présentations réalisées par PitchBoost",
+    pickLabel: "Choisissez la vôtre",
+    pickTitle: "Que préparez-vous ?",
+    pickBody: "Chaque type de présentation a sa propre logique. Voici comment PitchBoost construit les plus courantes.",
+    redesignCard: { title: "Une présentation que vous avez déjà", body: "Refondue à votre image, une diapositive pour chaque diapositive d'origine, tous les chiffres conservés." },
+    pitchCard: { title: "Pitchs commerciaux et pour investisseurs", body: "Rédigés pour un prospect ou un investisseur précis, avec une prochaine étape claire." },
+    howLabel: "Comment ça marche",
+    howTitle: "Quelques minutes, du début à la fin",
+    steps: [
+      { title: "Dites à quoi elle sert", body: "Saisissez le sujet, le public et le temps dont vous disposez. Collez vos notes ou joignez un PDF si vous en avez : plus vous fournissez de matière, moins il y a à deviner." },
+      { title: "PitchBoost construit toute la présentation", body: "Il choisit la structure adaptée à l'objectif, rédige chaque diapositive, cite les chiffres qu'il ajoute et applique votre identité visuelle, reprise du site web que vous lui indiquez." },
+      { title: "Modifiez, partagez, téléchargez", body: "Modifiez n'importe quelle diapositive en une phrase. Partagez un lien et voyez quand il est ouvert, ou téléchargez en PowerPoint, PDF ou Google Slides." },
+    ],
+    whyLabel: "Pourquoi PitchBoost",
+    whyTitle: "Ce que les générateurs de diapositives génériques oublient",
+    why: [
+      { title: "Pensée pour son objectif", body: "Un cours n'est pas un pitch. PitchBoost change la structure, pas seulement les mots : un cours se termine sur les points clés et les questions, un rapport sur la décision attendue, un pitch sur une prochaine étape." },
+      { title: "Des chiffres que vous pouvez défendre", body: "Les chiffres qu'il ajoute sont accompagnés de leur source sur la diapositive. Tout ce qu'il ne peut pas retracer est signalé pour que vous le vérifiiez avant de présenter, et dans les pitchs et les rapports, les chiffres sans source sont tout simplement supprimés." },
+      { title: "Respecte la présentation que vous avez déjà", body: "Importez un PowerPoint ou un PDF et recevez une diapositive refondue pour chaque diapositive d'origine, avec vos mots et vos chiffres intacts. Des diapositives brouillonnes en entrée, des diapositives nettes en sortie." },
+      { title: "Un PowerPoint qui s'ouvre sans surprise", body: "Téléchargez un PowerPoint fidèle à l'affichage, ou une version modifiable avec de vraies zones de texte et des notes du présentateur. Le PDF et Google Slides aussi, donc l'ordinateur de la salle de cours ne pose pas de problème." },
+      { title: "Toutes les langues", body: "Les présentations sont rédigées dans la langue dans laquelle vous écrivez, y compris les écritures de droite à gauche comme l'arabe, le persan et l'hébreu, jusque dans le PowerPoint modifiable." },
+      { title: "Une présentation, un prix", body: "Votre première présentation de chaque mois est gratuite. Finaliser une présentation pour la télécharger coûte $9 une seule fois, sans abonnement à penser à résilier. Les offres commencent à $7 par mois." },
+    ],
+    compareLabel: "Une comparaison honnête",
+    compareTitle: "Quand un autre outil convient mieux",
+    compare: [
+      { name: "Gamma", body: "Un canevas rapide, pensé pour le web, pour les présentations, les documents et les sites simples, idéal si vous présentez directement depuis Gamma. PitchBoost est le bon choix quand la présentation doit fonctionner en PowerPoint ou en PDF, ou part d'une présentation que vous avez déjà.", link: "PitchBoost vs Gamma" },
+      { name: "ChatGPT seul", body: "Il rédige un bon plan, puis vous laisse faire les diapositives. PitchBoost transforme ce plan en une présentation mise en page, et fonctionne directement dans ChatGPT, y compris avec un compte gratuit.", link: "PitchBoost dans ChatGPT" },
+      { name: "Copilot dans PowerPoint", body: "Il crée directement dans PowerPoint si votre abonnement Microsoft 365 l'inclut. PitchBoost fonctionne dans n'importe quel navigateur, refond votre présentation diapositive par diapositive et ne demande pas d'abonnement pour une seule présentation.", link: "Alternatives à Copilot" },
+    ],
+    faqs: [
+      { q: "PitchBoost est-il gratuit ?", a: "Votre première présentation IA de chaque mois est gratuite, jusqu'à 10 diapositives avec un petit badge, partagée sous forme de lien. Pour télécharger les fichiers (PowerPoint, PDF, Google Slides), il faut une offre payante à partir de $7 par mois, ou $9 une seule fois pour finaliser cette présentation." },
+      { q: "Quels types de présentations peut-il créer ?", a: "Cours magistraux, exposés, soutenances de mémoire ou de thèse, présentations de recherche, formations, rapports et points au conseil d'administration, points aux investisseurs, interventions en conférence, et pitchs commerciaux ou pour investisseurs. Il adapte la structure à l'objectif au lieu de couler chaque sujet dans le même modèle." },
+      { q: "Est-ce qu'il invente des choses ?", a: "Il est conçu pour ne pas le faire. Les chiffres qu'il ajoute sont accompagnés de leur source sur la diapositive ; tout ce qu'il ne peut pas retracer est signalé dans un panneau de vérification pour que vous le contrôliez, et dans les pitchs et les rapports, les chiffres sans source sont supprimés avant même que vous voyiez la présentation. Lisez ce panneau avant de présenter, comme avec n'importe quel outil d'IA." },
+      { q: "Peut-il refondre le PowerPoint que j'ai déjà ?", a: "Oui. Importez un fichier .pptx ou une présentation en PDF, jusqu'à 50 Mo et 75 diapositives. Vous recevez une diapositive refondue pour chaque diapositive d'origine, à votre image, avec vos mots et vos chiffres conservés. Les présentations Google Slides et Keynote fonctionnent une fois exportées en .pptx." },
+      { q: "Dans quelles langues fonctionne-t-il ?", a: "Dans la langue dans laquelle vous écrivez, y compris les écritures de droite à gauche comme l'arabe, le persan, l'hébreu et l'ourdou. Les présentations de droite à gauche le restent dans le PowerPoint modifiable." },
+      { q: "Puis-je l'utiliser dans ChatGPT ou Claude ?", a: "Oui. PitchBoost figure dans l'annuaire d'applications de ChatGPT et fonctionne avec les comptes ChatGPT gratuits, et Claude peut l'utiliser via son serveur MCP. Demandez une présentation dans la conversation et vous recevez un lien en retour." },
+      { q: "En quoi est-il différent de Gamma ?", a: "Gamma est un canevas rapide, pensé pour le web, pour les présentations, les documents et les sites simples. PitchBoost ne fait que des présentations, et il est conçu pour la présentation qui doit fonctionner en tant que fichier : refondue à partir de celle que vous avez, chiffres vérifiés, exportée vers un PowerPoint qui s'ouvre sans surprise, et $9 pour une seule présentation au lieu d'un abonnement." },
+    ],
+    ctaHeadline: "Votre prochaine présentation, sans vous battre avec la mise en forme.",
+    ctaPlaceholder: "Résultats du troisième trimestre pour le conseil d'administration : chiffre d'affaires, attrition et décision de recrutement",
   },
 };

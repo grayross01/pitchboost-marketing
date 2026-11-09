@@ -252,7 +252,7 @@ export const REDESIGNS: RedesignPage[] = [
       },
       {
         q: "What does rebranding a library cost?",
-        a: "Each rebuilt deck is one generation. The free plan covers three; for a real library, plans from $29/month include a monthly AI budget that covers roughly a deck-a-day pace.",
+        a: "A deck of up to 10 slides uses 100 credits. The free plan covers one deck a month; for a real library, Pro ($29/month) covers about 12 decks a month and Business ($79/month) about 33, roughly a deck a day.",
       },
     ],
     ctaHeadline: "Finish the rebrand: decks included.",
@@ -352,7 +352,7 @@ export const REDESIGNS: RedesignPage[] = [
       },
       {
         q: "What's the cost against a design refresh project?",
-        a: "A generation per deck against the free plan's three, then plans from $29/month. Internal design projects for the same work are usually quoted in weeks and thousands.",
+        a: "One deck a month on the free plan (up to 10 slides; a one-time $9 finishes a longer deck), then plans from $7/month. Internal design projects for the same work are usually quoted in weeks and thousands.",
       },
     ],
     ctaHeadline: "Friday's call shouldn't run on 2023's deck.",
@@ -394,7 +394,7 @@ export const REDESIGNS: RedesignPage[] = [
       },
       {
         q: "What does it cost versus an agency?",
-        a: "Agencies typically quote $2,000-8,000 per deck with per-revision fees. PitchBoost's free plan covers three generations; paid plans start at $29/month with revisions handled in the built-in editor.",
+        a: "Agencies typically quote $2,000-8,000 per deck with per-revision fees. PitchBoost's free plan covers one deck a month up to 10 slides; paid plans start at $7/month, with revisions handled in the built-in editor.",
       },
       {
         q: "Can I get the source file back?",
@@ -1295,17 +1295,18 @@ export function getRedesign(slug: string): RedesignPage | undefined {
 // ---- locale access (Spanish and Brazilian Portuguese live in generated siblings)
 import { REDESIGNS_ES, REDESIGN_STEPS_ES, HUB_ES } from "./redesigns.es";
 import { REDESIGNS_PT, REDESIGN_STEPS_PT, HUB_PT } from "./redesigns.pt";
+import { REDESIGNS_FR, REDESIGN_STEPS_FR, HUB_FR } from "./redesigns.fr";
 import { HUB_EN, type Locale, type RedesignHubCopy } from "./redesign-i18n";
 
 export function getRedesigns(locale: Locale): RedesignPage[] {
-  return locale === "es" ? REDESIGNS_ES : locale === "pt" ? REDESIGNS_PT : REDESIGNS;
+  return locale === "es" ? REDESIGNS_ES : locale === "pt" ? REDESIGNS_PT : locale === "fr" ? REDESIGNS_FR : REDESIGNS;
 }
 export function getRedesignFor(locale: Locale, slug: string): RedesignPage | undefined {
   return getRedesigns(locale).find((r) => r.slug === slug);
 }
 export function getRedesignSteps(locale: Locale): { step: string; title: string; body: string }[] {
-  return locale === "es" ? REDESIGN_STEPS_ES : locale === "pt" ? REDESIGN_STEPS_PT : REDESIGN_STEPS;
+  return locale === "es" ? REDESIGN_STEPS_ES : locale === "pt" ? REDESIGN_STEPS_PT : locale === "fr" ? REDESIGN_STEPS_FR : REDESIGN_STEPS;
 }
 export function getHubCopy(locale: Locale): RedesignHubCopy {
-  return locale === "es" ? HUB_ES : locale === "pt" ? HUB_PT : HUB_EN;
+  return locale === "es" ? HUB_ES : locale === "pt" ? HUB_PT : locale === "fr" ? HUB_FR : HUB_EN;
 }

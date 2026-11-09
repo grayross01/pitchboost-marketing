@@ -191,7 +191,7 @@ export const REDESIGNS_ES: RedesignPage[] = [
       },
       {
         "q": "¿Cuánto cuesta cambiar la marca de una biblioteca?",
-        "a": "Cada deck reconstruido es una generación. El plan gratuito cubre tres; para una biblioteca real, los planes desde $29 al mes incluyen un presupuesto de IA mensual que cubre aproximadamente un deck por día."
+        "a": "Un deck de hasta 10 diapositivas usa 100 créditos. El plan gratuito cubre un deck al mes; para una biblioteca real, Pro ($29 al mes) cubre unos 12 decks al mes y Business ($79 al mes) unos 33, aproximadamente uno por día."
       }
     ],
     "ctaHeadline": "Termina el cambio de marca: presentaciones incluidas."
@@ -285,7 +285,7 @@ export const REDESIGNS_ES: RedesignPage[] = [
       },
       {
         "q": "¿Cuál es el costo frente a un proyecto de rediseño?",
-        "a": "Una generación por deck contra las tres del plan gratuito, luego planes desde $29/mes. Los proyectos internos de diseño para el mismo trabajo suelen cotizarse en semanas y miles de dólares."
+        "a": "Un deck al mes en el plan gratuito (hasta 10 diapositivas; un pago único de $9 termina un deck más largo), luego planes desde $7/mes. Los proyectos internos de diseño para el mismo trabajo suelen cotizarse en semanas y miles de dólares."
       }
     ],
     "ctaHeadline": "La llamada del viernes no debería usar el deck de 2023."
@@ -324,7 +324,7 @@ export const REDESIGNS_ES: RedesignPage[] = [
       },
       {
         "q": "¿Qué cuesta versus una agencia?",
-        "a": "Las agencias típicamente cotizan $2,000-8,000 por presentación con tarifas por revisión. El plan gratuito de PitchBoost cubre tres generaciones; los planes de pago comienzan en $29/mes con revisiones manejadas en el editor integrado."
+        "a": "Las agencias típicamente cotizan $2,000-8,000 por presentación con tarifas por revisión. El plan gratuito de PitchBoost cubre un deck al mes de hasta 10 diapositivas; los planes de pago comienzan en $7/mes con revisiones manejadas en el editor integrado."
       },
       {
         "q": "¿Puedo recuperar el archivo fuente?",
