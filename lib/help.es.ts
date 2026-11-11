@@ -13,15 +13,15 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
     "category": "redesign",
     "title": "Cómo rediseñar un PowerPoint con PitchBoost",
     "metaDescription": "Sube un .pptx, indica tu sitio web a PitchBoost y recibe la presentación rediseñada con tu marca en pocos minutos. Paso a paso, con lo que ocurre a tu contenido.",
-    "answer": "Para rediseñar un PowerPoint en PitchBoost, elige \"Mejorar una que ya tengo\" después de iniciar sesión, sube el .pptx (hasta 50 MB), ingresa el sitio web de tu empresa para que capture tu logo y colores, y haz clic en Generar. La presentación reconstruida llega en unos 3 a 5 minutos como una presentación web que puedes editar, compartir como enlace o descargar como PowerPoint o PDF. El contenido de tus diapositivas se conserva; el diseño, tipografía, espaciado y marca se reconstruyen.",
+    "answer": "Para rediseñar un PowerPoint en PitchBoost, elige \"Rediseñar una presentación\" después de iniciar sesión, sube el .pptx o un PDF de la presentación (hasta 50 MB y 75 diapositivas), ingresa el sitio web de tu empresa para que capture tu logo y tus colores, e inicia la reconstrucción. La presentación reconstruida llega en unos 2 a 5 minutos como una presentación web que puedes editar, compartir como enlace, descargar como PowerPoint o PDF, o abrir en Google Slides. El contenido de tus diapositivas se conserva; el diseño, la tipografía, el espaciado y la marca se reconstruyen.",
     "steps": [
       {
-        "title": "Inicia sesión y elige \"Mejorar una que ya tengo\"",
-        "body": "Crea una cuenta gratuita o inicia sesión. En la primera pantalla selecciona la opción de reconstrucción. Si llegaste desde una página de rediseño en este sitio, aterrizas allí automáticamente."
+        "title": "Inicia sesión y elige \"Rediseñar una presentación\"",
+        "body": "Crea una cuenta gratuita o inicia sesión. Una cuenta nueva elige \"Rediseñar una presentación que ya tengo\" en su primera pantalla; después, es la tarjeta \"Rediseñar una presentación\" de Inicio. Si vienes de una página de rediseño de este sitio, llegas ahí automáticamente."
       },
       {
-        "title": "Sube el .pptx",
-        "body": "Arrastra el archivo PowerPoint o haz clic para explorar. Se aceptan archivos de hasta 50 MB. Los usuarios de Keynote y Google Slides deben exportar primero a .pptx (un clic de menú en cualquiera de las dos aplicaciones)."
+        "title": "Sube el .pptx o el PDF",
+        "body": "Arrastra el archivo de PowerPoint, o un PDF de la presentación, o haz clic para buscarlo. Se aceptan archivos de hasta 50 MB y 75 diapositivas. Los usuarios de Keynote y Google Slides exportan primero a .pptx (un clic de menú en cualquiera de las dos aplicaciones)."
       },
       {
         "title": "Ingresa el sitio web de tu empresa",
@@ -32,12 +32,12 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
         "body": "Si la presentación tiene más diapositivas de las que tu plan reconstruye, PitchBoost pregunta si condensarla para que quepa o reconstruir solo las primeras diapositivas. La mayoría de las presentaciones dentro del límite omiten este paso."
       },
       {
-        "title": "Haz clic en Generar y espera, o sal",
-        "body": "La reconstrucción suele tardar de 3 a 5 minutos incluyendo una revisión de calidad. Puedes ver cómo llegan las diapositivas o cerrar la pestaña: PitchBoost te envía por correo un enlace a la presentación terminada."
+        "title": "Inicia la reconstrucción y espera, o sal",
+        "body": "En Inicio, pulsa la flecha del cuadro de texto; en la primera pantalla de una cuenta nueva, haz clic en Generar. La reconstrucción suele tardar de 2 a 5 minutos, incluida una revisión de calidad. Puedes ver cómo llegan las diapositivas o cerrar la pestaña: PitchBoost te envía por correo un enlace a la presentación terminada."
       },
       {
         "title": "Revisa, edita, comparte",
-        "body": "Abre cualquier diapositiva en el editor para escribir en ella, arrastrar lo que quieras o pedirle un cambio a la IA, publica la presentación como un enlace no listado o descárgala como PowerPoint o PDF desde la pantalla de compartir."
+        "body": "Abre cualquier diapositiva en el editor para escribir en ella, arrastrar lo que quieras o pedirle un cambio a la IA, publica la presentación como un enlace no listado, o descárgala como PowerPoint o PDF o ábrela en Google Slides desde la pantalla de compartir."
       }
     ],
     "sections": [
@@ -66,7 +66,7 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       },
       {
         "q": "¿Cuánto cuesta?",
-        "a": "El plan gratuito incluye una presentación AI al mes, hasta 10 diapositivas, con una pequeña insignia de PitchBoost. Starter cuesta $7 al mes para hasta 25 diapositivas y sin insignia; Pro cuesta $29 al mes para hasta 60 diapositivas y dominios personalizados."
+        "a": "El plan gratuito incluye una presentación con IA al mes, hasta 10 diapositivas, con una pequeña insignia de PitchBoost. Starter cuesta $7 al mes para hasta 25 diapositivas y sin insignia; Pro cuesta $29 al mes para hasta 60 diapositivas y dominios personalizados."
       }
     ],
     "related": [
@@ -75,14 +75,14 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       "download-powerpoint-or-pdf",
       "how-long-does-a-deck-take"
     ],
-    "updated": "2026-11-06"
+    "updated": "2026-11-10"
   },
   {
     "slug": "google-slides-and-keynote",
     "category": "redesign",
     "title": "Cómo rediseñar presentaciones de Google Slides o Keynote",
-    "metaDescription": "PitchBoost lee archivos .pptx. Exporta tu presentación de Google Slides o Keynote a PowerPoint en un paso, súbela y recíbela rediseñada con tu marca.",
-    "answer": "PitchBoost acepta archivos de PowerPoint (.pptx), y tanto Google Slides como Keynote exportan a .pptx en un solo paso con el texto, las imágenes y los gráficos intactos. Exporta el archivo, súbelo a PitchBoost y el rediseño funciona exactamente igual que con una presentación de PowerPoint.",
+    "metaDescription": "PitchBoost lee archivos de PowerPoint y PDF. Exporta tu presentación de Google Slides o Keynote a PowerPoint en un paso, súbela y recíbela rediseñada con tu marca.",
+    "answer": "PitchBoost acepta archivos de PowerPoint (.pptx) y PDF, y tanto Google Slides como Keynote exportan a .pptx en un solo paso con el texto, las imágenes y los gráficos intactos. Exporta el archivo, súbelo a PitchBoost y el rediseño funciona exactamente igual que con una presentación de PowerPoint.",
     "steps": [
       {
         "title": "Google Slides: Archivo > Descargar > Microsoft PowerPoint (.pptx)",
@@ -94,14 +94,14 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       },
       {
         "title": "Sube el .pptx a PitchBoost",
-        "body": "Inicia sesión, elige \"Mejorar una que ya tengo\" y arrastra el archivo exportado. Luego agrega tu sitio web para que el rediseño use tu marca."
+        "body": "Inicia sesión, elige \"Rediseñar una presentación\" y arrastra el archivo exportado. Luego agrega tu sitio web para que el rediseño use tu marca."
       }
     ],
     "sections": [
       {
         "heading": "Volver a Google Slides o Keynote después",
         "paragraphs": [
-          "Descarga el PowerPoint editable desde la pantalla de compartir y ábrelo en cualquiera de las dos aplicaciones: Google Slides importa .pptx a través de Archivo > Importar diapositivas o subiéndolo a Drive, Keynote abre .pptx directamente. Cada palabra sigue siendo editable. El enlace de la presentación web también funciona por sí solo, sin necesidad de ninguna aplicación."
+          "En la pantalla de compartir, la fila Google Slides del apartado Descargar guarda una copia editable de la presentación en tu Google Drive, lista para abrir en Google Slides (la primera vez, Google te pide que lo permitas). Para Keynote, descarga el PowerPoint editable: Keynote abre .pptx directamente. Cada palabra sigue siendo editable. El enlace de la presentación web también funciona por sí solo, sin necesidad de ninguna aplicación."
         ]
       }
     ],
@@ -112,7 +112,7 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       },
       {
         "q": "¿Puedo subir un PDF en su lugar?",
-        "a": "No para un rediseño. Un PDF no tiene estructura de diapositivas que se pueda leer. Exporta .pptx desde la aplicación original. Si solo tienes un PDF, crea una nueva presentación y pega el contenido."
+        "a": "Sí. Sube un PDF de la presentación de la misma forma: PitchBoost lee cada página, incluidos los gráficos, las tablas y las diapositivas que son solo imágenes, y la reconstruye con tu marca. Un PDF protegido con contraseña hay que desbloquearlo primero."
       }
     ],
     "related": [
@@ -120,7 +120,7 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       "download-powerpoint-or-pdf",
       "brand-from-your-website"
     ],
-    "updated": "2026-10-28"
+    "updated": "2026-11-10"
   },
   {
     "slug": "slide-limits-by-plan",
@@ -132,7 +132,7 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       {
         "heading": "Los límites",
         "paragraphs": [
-          "Free: hasta 10 diapositivas por presentación, una presentación con IA al mes. Starter ($7 al mes): hasta 25 diapositivas. Pro ($29 al mes) y Business ($79 al mes): hasta 60 diapositivas. El límite se aplica a la presentación que PitchBoost produce, no al archivo que subes; puedes subir una presentación de 45 diapositivas en cualquier plan."
+          "Free: hasta 10 diapositivas por presentación, una presentación con IA al mes. Starter ($7 al mes): hasta 25 diapositivas. Pro ($29 al mes) y Business ($79 al mes): hasta 60 diapositivas. El límite se aplica a la presentación que PitchBoost produce, no al archivo que subes; puedes subir una presentación de 45 diapositivas en cualquier plan. El archivo en sí puede tener hasta 75 diapositivas."
         ]
       },
       {
@@ -145,14 +145,14 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       {
         "heading": "Presentaciones muy largas",
         "paragraphs": [
-          "Las presentaciones de más de 40 diapositivas siempre se condensan o se cortan a 40 antes de que se aplique el límite del plan, así que una presentación de capacitación de 90 diapositivas en Pro vuelve con 40 diapositivas como máximo. Divide las presentaciones muy largas en módulos y rediseña cada uno."
+          "PitchBoost acepta PowerPoints de hasta 75 diapositivas y lee las primeras 60, así que una presentación de 70 diapositivas en Pro vuelve con 60 diapositivas como máximo, condensada o cortada. Un archivo de más de 75 diapositivas se rechaza al subirlo, con un aviso que lo explica. Divide las presentaciones muy largas en módulos y rediseña cada uno."
         ]
       }
     ],
     "faqs": [
       {
         "q": "¿Al mejorar el plan se rediseñan las diapositivas faltantes automáticamente?",
-        "a": "No. Después de mejorar tu plan, abre la presentación y ejecuta el rediseño de nuevo; la pantalla de compartir tiene un botón para eso. La presentación completa reemplaza a la condensada."
+        "a": "No. Después de mejorar tu plan, abre el negocio y ejecuta el rediseño de nuevo; la pantalla de compartir tiene un botón para eso. La presentación completa reemplaza a la condensada."
       },
       {
         "q": "¿El límite también se aplica a presentaciones nuevas?",
@@ -174,12 +174,12 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
     "slug": "download-powerpoint-or-pdf",
     "category": "output",
     "title": "Cómo descargar tu presentación como PowerPoint o PDF",
-    "metaDescription": "Descarga una presentación como PowerPoint editable, PowerPoint de aspecto exacto o PDF con cualquier plan de pago o por $9 la presentación. Dónde están los botones y qué archivo elegir.",
+    "metaDescription": "Descarga una presentación como PowerPoint editable, PowerPoint de aspecto exacto o PDF con cualquier plan de pago o por $9 cada una. Dónde están los botones y qué elegir.",
     "answer": "Abre la pantalla de compartir de la presentación y usa los botones de descarga: \"Descargar PowerPoint\" te da un .pptx de aspecto exacto donde cada diapositiva es una imagen de la presentación web, \"PowerPoint editable\" te da un .pptx que se ve como la presentación web, con cada palabra como un cuadro de texto real de PowerPoint que puedes cambiar, y \"PDF\" te da una página por diapositiva. Las descargas vienen con todos los planes de pago. En el plan gratuito, compartir la presentación como enlace en vivo sigue siendo gratis, y puedes desbloquear las descargas de una presentación con un pago único de $9 (presentaciones de hasta 25 diapositivas), que además quita la insignia.",
     "steps": [
       {
         "title": "Abre la presentación",
-        "body": "Desde tu panel, abre el deal y haz clic en la presentación. La pantalla de compartir muestra la vista previa con los controles de descarga y publicación al lado."
+        "body": "Desde tu panel, abre el negocio y haz clic en la presentación. La pantalla de compartir muestra la vista previa con los controles de descarga y publicación al lado."
       },
       {
         "title": "Elige el archivo que necesitas",
@@ -215,7 +215,7 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       },
       {
         "q": "¿Hay una exportación a Google Slides?",
-        "a": "Descarga el PowerPoint editable e impórtalo en Google Slides a través de Archivo > Importar diapositivas. Todo permanece editable."
+        "a": "Sí. En la pantalla de compartir, la fila Google Slides del apartado Descargar guarda una copia editable de la presentación en tu Google Drive, lista para abrir en Google Slides. Viene con los mismos planes que las descargas de PowerPoint y PDF."
       }
     ],
     "related": [
@@ -223,13 +223,13 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       "google-slides-and-keynote",
       "credits-and-plans"
     ],
-    "updated": "2026-10-28"
+    "updated": "2026-11-10"
   },
   {
     "slug": "share-a-deck-link",
     "category": "sharing",
     "title": "Cómo compartir una presentación como enlace y ver quién la abrió",
-    "metaDescription": "Publica una presentación para obtener un enlace no listado, envíalo a un prospecto y recibe una notificación en cuanto lo abra. Qué rastrea el enlace, en todos los planes.",
+    "metaDescription": "Publica una presentación para obtener un enlace no listado, envíalo a un prospecto y recibe un aviso en cuanto lo abra. Qué rastrea el enlace, en todos los planes.",
     "answer": "Haz clic en \"Publicar y copiar enlace\" en la pantalla de compartir de la presentación. Eso crea un enlace no listado (cualquiera que lo tenga puede verlo; nadie puede encontrarlo de otra manera) y lo copia a tu portapapeles. Cuando un prospecto abre el enlace, PitchBoost te envía un correo. Todos los planes muestran qué diapositivas leyó cada espectador y por cuánto tiempo.",
     "steps": [
       {
@@ -238,11 +238,11 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       },
       {
         "title": "Envía el enlace o añade destinatarios",
-        "body": "Pega el enlace donde quieras. Para rastreo con nombre, añade destinatarios en el trato: cada uno obtiene un enlace privado para que sepas exactamente quién abrió qué."
+        "body": "Pega el enlace donde quieras. Para rastreo con nombre, añade destinatarios en el negocio: cada uno obtiene un enlace privado para que sepas exactamente quién abrió qué."
       },
       {
-        "title": "Monitorea el trato",
-        "body": "Recibes un correo en el momento en que se abre la presentación. La página del trato muestra cada visita, con el tiempo por diapositiva y qué diapositivas se omitieron."
+        "title": "Sigue el negocio",
+        "body": "Recibes un correo en el momento en que se abre la presentación. La página del negocio muestra cada visita, con el tiempo por diapositiva y qué diapositivas se omitieron."
       },
       {
         "title": "Desconéctala cuando quieras",
@@ -251,9 +251,9 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
     ],
     "sections": [
       {
-        "heading": "La sala de trato",
+        "heading": "La sala de negocio",
         "paragraphs": [
-          "El enlace abre una página que contiene la presentación más cualquier otra cosa que hayas adjuntado al trato (una hoja resumen, un Q&A). Los espectadores pueden hacer una pregunta desde la página; llega a tu bandeja de entrada con su correo electrónico si lo dejaron. Un espectador ve la presentación, nunca tus notas ni el resto de tu cuenta."
+          "El enlace abre una página que contiene la presentación más cualquier otra cosa que hayas adjuntado al negocio (una hoja resumen, un Q&A). Los espectadores pueden hacer una pregunta desde la página; llega a tu bandeja de entrada con su correo electrónico si lo dejaron. Un espectador ve la presentación, nunca tus notas ni el resto de tu cuenta."
         ]
       }
     ],
@@ -268,7 +268,7 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       },
       {
         "q": "¿El enlace expira?",
-        "a": "No. Funciona hasta que hagas la presentación privada o elimines el trato."
+        "a": "No. Funciona hasta que hagas la presentación privada o elimines el negocio."
       }
     ],
     "related": [
@@ -282,47 +282,53 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
     "slug": "connect-chatgpt",
     "category": "assistants",
     "title": "Cómo usar PitchBoost en ChatGPT",
-    "metaDescription": "Añade PitchBoost a ChatGPT como conector, inicia sesión una vez y pide a ChatGPT que rediseñe una presentación, cree una nueva o liste tus presentaciones. Los pasos exactos.",
-    "answer": "Añade PitchBoost a ChatGPT como conector usando la dirección del servidor https://app.pitchboost.ai/api/mcp, inicia sesión en tu cuenta de PitchBoost cuando ChatGPT lo pida y luego habla con él normalmente: sube una presentación y di \"hazla lucir profesional\", o describe un prospecto y pide una presentación comercial. ChatGPT llama a PitchBoost, que devuelve un enlace a la presentación terminada. Una ficha de aplicación de PitchBoost para ChatGPT está en revisión; hasta que aparezca en el directorio, la ruta del conector a continuación funciona en cuentas con modo desarrollador activado.",
+    "metaDescription": "Añade el plugin de PitchBoost a ChatGPT, inicia sesión una vez y pídele que rediseñe tu presentación o cree una nueva. Funciona con ChatGPT gratis. Los pasos exactos.",
+    "answer": "PitchBoost es un plugin del directorio de plugins de ChatGPT y funciona en cuentas gratuitas de ChatGPT. Añádelo, inicia sesión en PitchBoost una vez (basta con una cuenta gratuita) y luego habla con ChatGPT con normalidad: adjunta un .pptx y di \"haz que se vea profesional\", o describe la presentación que necesitas. ChatGPT envía el trabajo a PitchBoost y responde con un enlace a la presentación terminada; ábrela en PitchBoost para ver la vista previa completa y las descargas de PowerPoint y PDF.",
     "steps": [
       {
-        "title": "Activa el modo desarrollador",
-        "body": "En ChatGPT abre Configuración, luego Conectores, luego Avanzado, y activa el modo desarrollador. Este es el interruptor que permite conectores personalizados."
-      },
-      {
-        "title": "Crea el conector",
-        "body": "Aún en Conectores, haz clic en Crear. Nómbralo PitchBoost, pega https://app.pitchboost.ai/api/mcp como URL del servidor MCP, elige OAuth como autenticación y guarda. Si el inicio de sesión falla con un error de cliente desconocido, abre la configuración avanzada del conector y establece el registro de cliente en dinámico (DCR)."
+        "title": "Añade el plugin de PitchBoost",
+        "body": "En ChatGPT, abre el directorio de plugins, busca PitchBoost y añádelo. Está disponible en las cuentas gratuitas de ChatGPT y también en los planes de pago."
       },
       {
         "title": "Inicia sesión en PitchBoost",
-        "body": "ChatGPT abre una ventana de inicio de sesión de PitchBoost. Usa tu cuenta existente o crea una gratuita. Haces esto una sola vez."
+        "body": "La primera vez que lo uses, ChatGPT abre una ventana de inicio de sesión de PitchBoost. Inicia sesión o crea una cuenta gratuita. Lo haces una sola vez: ChatGPT recuerda la conexión."
       },
       {
-        "title": "Úsalo en un chat",
-        "body": "Inicia un nuevo chat, activa el conector de PitchBoost en el menú de herramientas y pregunta. Para un rediseño, adjunta el .pptx y pide que se mejore: ChatGPT lee las diapositivas y las envía a PitchBoost, que reconstruye la presentación con tu marca y devuelve el enlace."
+        "title": "Adjunta una presentación y pide lo que quieres",
+        "body": "En un chat, adjunta tu .pptx (Google Slides y Keynote exportan a .pptx en un solo paso) y di lo que quieres: \"rediseña esto con nuestra marca\", \"haz que mi presentación de clase se vea profesional\", o describe una presentación nueva desde cero. Si tienes un sitio web para la marca, indícalo."
+      },
+      {
+        "title": "Abre la presentación en PitchBoost",
+        "body": "Unos minutos después, ChatGPT responde con el enlace. Haz clic en \"Open the deck in PitchBoost\" para ver la vista previa completa, descargar el PowerPoint editable o un PDF y compartir el enlace con seguimiento."
       }
     ],
     "sections": [
       {
         "heading": "Qué puede hacer ChatGPT con PitchBoost",
         "paragraphs": [
-          "Reconstruir una presentación que subas, verificar si una reconstrucción ha terminado, crear una presentación nueva para un prospecto específico, listar tus presentaciones recientes, obtener el enlace de una y publicar un borrador. También puede hacer una presentación de muestra sin cuenta, con una insignia, que puedes reclamar más tarde.",
-          "No puede cambiar tu plan, eliminar nada ni ver presentaciones fuera de tu cuenta. Las reconstrucciones y presentaciones nuevas usan la misma cuota mensual que la aplicación: una presentación al mes en el plan gratuito."
+          "Reconstruir una presentación que adjuntes, comprobar si una reconstrucción ha terminado, crear una presentación nueva a partir de una descripción, listar tus presentaciones recientes, obtener el enlace de una y publicar un borrador. También puede crear una presentación de muestra antes de que inicies sesión, con una insignia, que puedes reclamar más tarde.",
+          "No puede cambiar tu plan, eliminar nada ni ver presentaciones fuera de tu cuenta. Las reconstrucciones y las presentaciones nuevas usan la misma cuota mensual que la aplicación: una presentación al mes en el plan gratuito, de hasta 10 diapositivas."
+        ]
+      },
+      {
+        "heading": "Si prefieres usar la dirección MCP",
+        "paragraphs": [
+          "El plugin funciona sobre el servidor MCP de PitchBoost. Los desarrolladores que quieran conectarlo a mano, en el modo desarrollador de ChatGPT o en cualquier otro cliente MCP, pueden usar https://app.pitchboost.ai/api/mcp con OAuth; el artículo sobre Claude tiene los detalles."
         ]
       }
     ],
     "faqs": [
       {
-        "q": "¿Funciona el conector en una cuenta gratuita de ChatGPT?",
-        "a": "Los conectores personalizados necesitan un plan de ChatGPT con modo desarrollador disponible. Revisa Configuración > Conectores > Avanzado en tu cuenta; si el interruptor no está ahí, la ficha del directorio, una vez aprobada, será la ruta."
+        "q": "¿El plugin funciona en una cuenta gratuita de ChatGPT?",
+        "a": "Sí. Añádelo desde el directorio de plugins como cualquier otro plugin. Una cuenta gratuita de PitchBoost también sirve, con una presentación al mes."
       },
       {
         "q": "¿Dónde va la presentación reconstruida?",
-        "a": "A tu cuenta de PitchBoost, bajo un trato nombrado según la presentación. El enlace que te da ChatGPT la abre directamente; puedes editar y descargar desde ahí como cualquier otra presentación."
+        "a": "A tu cuenta de PitchBoost, dentro de un negocio con el nombre de la presentación. El enlace que te da ChatGPT la abre directamente; desde ahí puedes editarla, descargarla y compartirla como cualquier otra presentación."
       },
       {
         "q": "¿Se envía el contenido de mi presentación a PitchBoost?",
-        "a": "Sí, el texto de las diapositivas que ChatGPT extrae se envía a PitchBoost para reconstruir la presentación y se almacena en tu cuenta con el resultado. La política de privacidad explica la retención y eliminación."
+        "a": "Sí, el contenido de las diapositivas que ChatGPT extrae se envía a PitchBoost para reconstruir la presentación, y se guarda en tu cuenta junto con el resultado. La política de privacidad explica cómo se conservan y se eliminan los datos."
       }
     ],
     "related": [
@@ -330,7 +336,7 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       "redesign-a-powerpoint",
       "credits-and-plans"
     ],
-    "updated": "2026-09-16"
+    "updated": "2026-09-30"
   },
   {
     "slug": "connect-claude",
@@ -390,52 +396,53 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
   {
     "slug": "credits-and-plans",
     "category": "account",
-    "title": "Cómo funcionan los créditos y planes",
-    "metaDescription": "Créditos mensuales en cada plan: una presentación de hasta 10 diapositivas cuesta 100 y cada diapositiva extra suma 8. Qué incluye cada plan y cómo comprar más.",
-    "answer": "Cada plan de PitchBoost incluye una asignación mensual de créditos y cada acción de IA tiene un precio fijo: una presentación (nueva o mejorada) de hasta 10 diapositivas cuesta 100 créditos, cada diapositiva adicional suma 8 (4 con el nuevo motor de presentaciones), una imagen con IA 10, editar una diapositiva 10, editar la presentación completa 50, escanear un sitio web 10. Free incluye 150 créditos al mes (una presentación), Starter 300, Pro 1,200 y Business 3,300. Los créditos del plan se renuevan cada mes; los créditos comprados en un paquete adicional (planes de pago) se conservan. En la aplicación ves el porcentaje de tu asignación usado, nunca una cifra en dólares.",
+    "title": "Cómo funcionan los créditos y los planes",
+    "metaDescription": "Créditos mensuales en cada plan: hasta 10 diapositivas cuestan 100 y cada diapositiva por encima de 10 suma 8. Qué incluye cada plan, qué se renueva y cómo comprar más.",
+    "answer": "Cada plan de PitchBoost incluye una asignación mensual de créditos y cada acción de IA tiene un precio fijo: una presentación (nueva o reconstruida) de hasta 10 diapositivas cuesta 100 créditos, cada diapositiva por encima de 10 suma 8 (4 con el nuevo motor de presentaciones), una imagen con IA 10, editar una diapositiva 10, editar la presentación completa 50, escanear un sitio web 10. Free incluye 150 créditos al mes (una presentación), Starter 300, Pro 1,200 y Business 3,300. Los créditos del plan se renuevan cada mes; los créditos comprados en un paquete adicional (planes de pago) se conservan. En la aplicación ves el porcentaje de tu asignación que has usado, nunca una cifra en dólares que vaya sumando.",
     "sections": [
       {
         "heading": "Los planes",
         "paragraphs": [
-          "Free: 150 créditos al mes, un trato, presentaciones de hasta 10 diapositivas con una marca pequeña, enlace en vivo compartible con análisis completo y plantillas guardadas. Descargar un archivo requiere un plan de pago o un pago único de $9 por esa presentación. No se requiere tarjeta.",
-          "Starter, $7 al mes: más créditos de IA, 300 al mes, tratos ilimitados, presentaciones de hasta 25 diapositivas, sin marca en ningún lugar, descargas de PowerPoint, PDF y Google Slides, paquetes adicionales.",
-          "Pro, $29 al mes: aún más créditos de IA, 1200 al mes, presentaciones de hasta 60 diapositivas, dominios personalizados, acceso a API y MCP.",
-          "Business, $79 al mes: nuestra mayor asignación de créditos de IA, 3300 al mes, exportar análisis y enviar desde tu propio dominio.",
-          "La facturación anual es más económica: Starter $70 al año (unos $5.83 al mes), Pro $24 y Business $66 al mes cuando se paga anualmente."
+          "Free: 150 créditos al mes, un negocio, presentaciones de hasta 10 diapositivas con una pequeña insignia, un enlace en vivo para compartir con analíticas completas de visualización y plantillas guardadas. Descargar un archivo requiere un plan de pago o un pago único de $9 por esa presentación. No se requiere tarjeta.",
+          "Starter, $7 al mes: más créditos de IA, 300 al mes, negocios ilimitados, presentaciones de hasta 25 diapositivas, sin insignia en ningún lugar, descargas de PowerPoint, PDF y Google Slides, paquetes adicionales.",
+          "Pro, $29 al mes: aún más créditos de IA, 1,200 al mes, presentaciones de hasta 60 diapositivas, dominios personalizados, acceso a la API y al MCP.",
+          "Business, $79 al mes: nuestra mayor asignación de créditos de IA, 3,300 al mes, exportación de analíticas y envío desde tu propio dominio.",
+          "Las analíticas completas de visualización, las plantillas guardadas y los compañeros de equipo están en todos los planes, Free incluido, sin costo por persona. Todos comparten los créditos de IA del espacio de trabajo.",
+          "La facturación anual sale más barata: Starter $70 al año (unos $5.83 al mes), y Pro $24 y Business $66 al mes con pago anual."
         ]
       },
       {
         "heading": "Cuánto cuesta una presentación",
         "paragraphs": [
-          "Una presentación tiene un precio según su tamaño, de esta lista, sin presupuesto antes de crearla: hasta 10 diapositivas son 100 créditos; cada diapositiva adicional, 8 más (4 con el nuevo motor de presentaciones en Ajustes); cada imagen con IA, 10. Los documentos adjuntos están incluidos hasta unas 10 páginas de texto y después suman cerca de 1 crédito por página.",
-          "Al empezar, se apartan los créditos del tamaño esperado y luego se ajusta a lo que entrega: si sale más corta, se devuelve la diferencia. Una presentación de 24 diapositivas son 212 créditos; una de 60, 500. Si no te alcanza, el mensaje dice cuánto necesita y cuánto te queda."
+          "Una presentación tiene un precio según su tamaño, de esta lista, sin presupuesto antes de crearla: hasta 10 diapositivas son 100 créditos; cada diapositiva por encima de 10, 8 más (4 con el nuevo motor de presentaciones de Configuración); cada imagen con IA, 10. Los documentos adjuntos están incluidos hasta unas 10 páginas de texto; a partir de ahí suman cerca de 1 crédito por página.",
+          "Cuando empieza una presentación, se apartan los créditos del tamaño que se espera que tenga, y al final se ajusta a lo que entrega: si sale más corta, se devuelve la diferencia. Una presentación de 24 diapositivas son 212 créditos; una de 60, 500. Si no te alcanza, el mensaje dice cuánto necesita la presentación y cuánto te queda."
         ]
       },
       {
         "heading": "Acumulación y paquetes",
         "paragraphs": [
-          "Los créditos del plan se renuevan cada mes, en todos los planes, y los que no uses no pasan al mes siguiente. Los créditos que compras en un paquete sí. Los paquetes adicionales de 200 ($5), 700 ($15) y 1,900 ($40) créditos están disponibles en planes de pago y nunca expiran mientras tengas una suscripción activa."
+          "Los créditos del plan se renuevan cada mes, en todos los planes, y los que no uses no pasan al mes siguiente. Los créditos que compras en un paquete sí. Los paquetes adicionales de 200 ($5), 700 ($15) y 1,900 ($40) créditos están disponibles en los planes de pago y nunca caducan mientras mantengas tu suscripción."
         ]
       },
       {
         "heading": "Qué es gratis",
         "paragraphs": [
-          "Verificar datos, extraer gráficos, publicar, compartir, ver análisis y descargar archivos nunca cuestan créditos. Solo la generación con IA lo hace."
+          "Verificar datos, extraer gráficos, publicar, compartir, ver analíticas y descargar archivos nunca cuesta créditos. Solo la generación con IA los usa."
         ]
       }
     ],
     "faqs": [
       {
         "q": "¿Qué pasa cuando se me acaban?",
-        "a": "Las acciones de IA se pausan hasta el siguiente periodo, o inmediatamente después de comprar un paquete o mejorar de plan. Todo lo ya generado permanece disponible: las descargas y enlaces siguen funcionando."
+        "a": "Las acciones de IA se pausan hasta el siguiente periodo, o hasta justo después de que compres un paquete o mejores tu plan. Todo lo ya generado sigue disponible; las descargas y los enlaces siguen funcionando."
       },
       {
         "q": "¿Cómo cambio o cancelo mi plan?",
-        "a": "En la aplicación, abre Configuración y selecciona Plan. Los cambios aplican de inmediato: cancelar mantiene el plan de pago hasta el final del periodo que ya pagaste."
+        "a": "En la aplicación, abre Configuración y elige Plan. Los cambios se aplican de inmediato; si cancelas, conservas el plan de pago hasta el final del periodo que ya pagaste."
       },
       {
-        "q": "¿Puedo quitar la marca sin una suscripción?",
-        "a": "Sí. La pantalla de compartir ofrece una eliminación única para esa presentación. Starter la elimina de todas las presentaciones."
+        "q": "¿Puedo quitar la insignia sin una suscripción?",
+        "a": "Sí. La pantalla de compartir ofrece quitarla de esa presentación con un pago único. Starter la quita de todas las presentaciones."
       }
     ],
     "related": [
@@ -443,14 +450,14 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       "download-powerpoint-or-pdf",
       "share-a-deck-link"
     ],
-    "updated": "2026-10-23"
+    "updated": "2026-11-05"
   },
   {
     "slug": "how-long-does-a-deck-take",
     "category": "redesign",
     "title": "Cuánto tarda una presentación y qué hacer mientras esperas",
-    "metaDescription": "Una reconstrucción o presentación nueva tarda entre 3 y 5 minutos, incluyendo la revisión de calidad. Puedes cerrar la pestaña: PitchBoost te envía un enlace por correo cuando está lista.",
-    "answer": "Una reconstrucción o presentación nueva tarda entre 3 y 5 minutos, incluyendo una revisión de calidad y verificación de datos que se ejecutan después de redactar las diapositivas. No tienes que esperar en la página: cierra la pestaña y PitchBoost te envía por correo un enlace a la presentación terminada, con una vista previa y la descarga de PowerPoint. La presentación también aparece en tu panel de control tan pronto como está lista.",
+    "metaDescription": "Rediseñar o crear una presentación suele tardar de 2 a 5 minutos, revisión de calidad incluida. Puedes cerrar la pestaña: PitchBoost te envía un enlace cuando esté lista.",
+    "answer": "Una reconstrucción o una presentación nueva suele tardar de 2 a 5 minutos, incluidas una revisión de calidad y una verificación de datos que se ejecutan después de redactar las diapositivas. No tienes que esperar en la página: cierra la pestaña y PitchBoost te envía por correo un enlace a la presentación terminada, con una vista previa y la descarga de PowerPoint. La presentación también aparece en tu panel de control tan pronto como está lista.",
     "sections": [
       {
         "heading": "Qué ocurre durante esos minutos",
@@ -461,7 +468,7 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       {
         "heading": "Si parece estancado",
         "paragraphs": [
-          "Actualiza la página; la pantalla de progreso se reanuda desde el estado actual. Si pasan diez minutos sin borrador, la reconstrucción falló y no se cobran créditos. Inténtalo de nuevo, y si falla dos veces escribe a support@pitchboost.ai con el enlace del proyecto para que podamos revisar el archivo exacto."
+          "Actualiza la página; la pantalla de progreso se reanuda desde el estado actual. Si pasan diez minutos sin borrador, la reconstrucción falló y no se cobran créditos. Inténtalo de nuevo, y si falla dos veces escribe a support@pitchboost.ai con el enlace del negocio para que podamos revisar el archivo exacto."
         ]
       }
     ],
@@ -472,7 +479,7 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       },
       {
         "q": "¿Puedo iniciar otra presentación mientras una se está generando?",
-        "a": "En los planes de pago, sí. El plan Free incluye un proyecto, así que termina la primera presentación antes de iniciar otra."
+        "a": "En los planes de pago, sí. El plan gratuito incluye un negocio, así que termina la primera presentación antes de iniciar otra."
       }
     ],
     "related": [
@@ -480,7 +487,7 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       "download-powerpoint-or-pdf",
       "share-a-deck-link"
     ],
-    "updated": "2026-09-16"
+    "updated": "2026-11-10"
   },
   {
     "slug": "brand-from-your-website",
@@ -499,7 +506,7 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       },
       {
         "title": "Añade imágenes si las tienes",
-        "body": "Agrega fotos de productos, retratos o capturas de pantalla. Son la mayor mejora en cómo se ve una presentación. Todo lo que no encaje en el diseño generado se guarda en los recursos de marca del proyecto para usarse en el editor."
+        "body": "Agrega fotos de productos, retratos o capturas de pantalla. Son la mayor mejora en cómo se ve una presentación. Todo lo que no encaje en el diseño generado se guarda en los recursos de marca del negocio para usarse en el editor."
       }
     ],
     "sections": [

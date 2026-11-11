@@ -40,15 +40,15 @@ export const HELP_ARTICLES: HelpArticle[] = [
     metaDescription:
       "Upload a .pptx, point PitchBoost at your website, and get the deck back redesigned in your brand in a few minutes. Step by step, with what happens to your content.",
     answer:
-      "To redesign a PowerPoint in PitchBoost, choose \"Make a deck I have better\" after signing in, upload the .pptx (up to 50 MB and 75 slides), enter your company website so it can pick up your logo and colors, and click Generate. The rebuilt deck arrives in about 3 to 5 minutes as a web deck you can edit, share as a link, or download as PowerPoint or PDF. Your slide content is kept; the layout, typography, spacing and brand are rebuilt.",
+      "To redesign a PowerPoint in PitchBoost, choose \"Redesign a deck\" after signing in, upload the .pptx or a PDF of the deck (up to 50 MB and 75 slides), enter your company website so it can pick up your logo and colors, and start the rebuild. The rebuilt deck arrives in about 2 to 5 minutes as a web deck you can edit, share as a link, download as PowerPoint or PDF, or open in Google Slides. Your slide content is kept; the layout, typography, spacing and brand are rebuilt.",
     steps: [
       {
-        title: "Sign in and choose \"Make a deck I have better\"",
-        body: "Create a free account or sign in. On the first screen pick the rebuild option. If you arrived from a redesign page on this site, you land there automatically.",
+        title: "Sign in and choose \"Redesign a deck\"",
+        body: "Create a free account or sign in. A new account picks \"Redesign a deck I have\" on its first screen; after that, it is the \"Redesign a deck\" card on Home. If you arrived from a redesign page on this site, you land there automatically.",
       },
       {
-        title: "Upload the .pptx",
-        body: "Drop in the PowerPoint file or click to browse. Files up to 50 MB and 75 slides are accepted. Keynote and Google Slides users export to .pptx first (one menu click in either app).",
+        title: "Upload the .pptx or PDF",
+        body: "Drop in the PowerPoint file, or a PDF of the deck, or click to browse. Files up to 50 MB and 75 slides are accepted. Keynote and Google Slides users export to .pptx first (one menu click in either app).",
       },
       {
         title: "Enter your company website",
@@ -59,12 +59,12 @@ export const HELP_ARTICLES: HelpArticle[] = [
         body: "If the deck has more slides than your plan rebuilds, PitchBoost asks whether to condense it to fit or rebuild the first slides only. Most decks under the limit skip this step.",
       },
       {
-        title: "Click Generate and wait, or leave",
-        body: "The rebuild usually takes 3 to 5 minutes including a quality review. You can watch the slides land, or close the tab: PitchBoost emails you a link to the finished deck.",
+        title: "Start the rebuild and wait, or leave",
+        body: "On Home, press the arrow in the prompt box; on a new account's first screen, click Generate. The rebuild usually takes 2 to 5 minutes including a quality review. You can watch the slides land, or close the tab: PitchBoost emails you a link to the finished deck.",
       },
       {
         title: "Review, edit, share",
-        body: "Open any slide in the editor to type on it, drag things around or ask the AI for a change, publish the deck as an unlisted link, or download it as PowerPoint or PDF from the share screen.",
+        body: "Open any slide in the editor to type on it, drag things around or ask the AI for a change, publish the deck as an unlisted link, or download it as PowerPoint or PDF or open it in Google Slides from the share screen.",
       },
     ],
     sections: [
@@ -97,7 +97,7 @@ export const HELP_ARTICLES: HelpArticle[] = [
       },
     ],
     related: ["google-slides-and-keynote", "slide-limits-by-plan", "download-powerpoint-or-pdf", "how-long-does-a-deck-take"],
-    updated: "2026-11-06",
+    updated: "2026-11-10",
   },
 
   {
@@ -105,9 +105,9 @@ export const HELP_ARTICLES: HelpArticle[] = [
     category: "redesign",
     title: "How to redesign Google Slides or Keynote decks",
     metaDescription:
-      "PitchBoost reads .pptx files. Export your Google Slides or Keynote deck to PowerPoint in one step, upload it, and get it back redesigned in your brand.",
+      "PitchBoost reads PowerPoint and PDF files. Export your Google Slides or Keynote deck to PowerPoint in one step, upload it, and get it back redesigned in your brand.",
     answer:
-      "PitchBoost accepts PowerPoint (.pptx) files, and both Google Slides and Keynote export to .pptx in one step with the text, images and charts intact. Export the file, upload it to PitchBoost, and the redesign works exactly as it does for a PowerPoint deck.",
+      "PitchBoost accepts PowerPoint (.pptx) and PDF files, and both Google Slides and Keynote export to .pptx in one step with the text, images and charts intact. Export the file, upload it to PitchBoost, and the redesign works exactly as it does for a PowerPoint deck.",
     steps: [
       {
         title: "Google Slides: File > Download > Microsoft PowerPoint (.pptx)",
@@ -119,14 +119,14 @@ export const HELP_ARTICLES: HelpArticle[] = [
       },
       {
         title: "Upload the .pptx to PitchBoost",
-        body: "Sign in, choose \"Make a deck I have better\", and drop the exported file in. Then add your website so the rebuild uses your brand.",
+        body: "Sign in, choose \"Redesign a deck\", and drop the exported file in. Then add your website so the rebuild uses your brand.",
       },
     ],
     sections: [
       {
         heading: "Going back to Google Slides or Keynote afterwards",
         paragraphs: [
-          "Download the editable PowerPoint from the share screen and open it in either app: Google Slides imports .pptx through File > Import slides or by uploading to Drive; Keynote opens .pptx directly. Every word stays editable. The web deck link also works on its own, without any app.",
+          "On the share screen, the Google Slides row under Download puts an editable copy of the deck in your Google Drive, ready to open in Google Slides (the first time, Google asks you to allow it). For Keynote, download the editable PowerPoint: Keynote opens .pptx directly. Every word stays editable. The web deck link also works on its own, without any app.",
         ],
       },
     ],
@@ -137,11 +137,11 @@ export const HELP_ARTICLES: HelpArticle[] = [
       },
       {
         q: "Can I upload a PDF instead?",
-        a: "Not for a rebuild. A PDF has no slide structure to read. Export .pptx from the original app; if you only have a PDF, build a new deck and paste the content in.",
+        a: "Yes. Upload a PDF of the deck the same way: PitchBoost reads every page, including charts, tables and slides that are only pictures, and rebuilds it in your brand. A password-protected PDF has to be unlocked first.",
       },
     ],
     related: ["redesign-a-powerpoint", "download-powerpoint-or-pdf", "brand-from-your-website"],
-    updated: "2026-10-28",
+    updated: "2026-11-10",
   },
 
   {
@@ -238,11 +238,11 @@ export const HELP_ARTICLES: HelpArticle[] = [
       },
       {
         q: "Is there a Google Slides export?",
-        a: "Download the editable PowerPoint and import it into Google Slides through File > Import slides. Everything stays editable.",
+        a: "Yes. On the share screen, the Google Slides row under Download puts an editable copy of the deck in your Google Drive, ready to open in Google Slides. It comes with the same plans as the PowerPoint and PDF downloads.",
       },
     ],
     related: ["share-a-deck-link", "google-slides-and-keynote", "credits-and-plans"],
-    updated: "2026-10-28",
+    updated: "2026-11-10",
   },
 
   {
@@ -473,9 +473,9 @@ export const HELP_ARTICLES: HelpArticle[] = [
     category: "redesign",
     title: "How long a deck takes, and what to do while you wait",
     metaDescription:
-      "A rebuild or a new deck usually takes 3 to 5 minutes including the quality review. You can close the tab: PitchBoost emails you a link when the deck is ready.",
+      "A rebuild or a new deck usually takes 2 to 5 minutes including the quality review. You can close the tab: PitchBoost emails you a link when the deck is ready.",
     answer:
-      "A rebuild or a new deck usually takes 3 to 5 minutes, including a quality review and fact check that run after the slides are drafted. You do not have to wait on the page: close the tab and PitchBoost emails you a link to the finished deck, with a preview and a PowerPoint download. The deck also appears in your dashboard as soon as it is done.",
+      "A rebuild or a new deck usually takes 2 to 5 minutes, including a quality review and fact check that run after the slides are drafted. You do not have to wait on the page: close the tab and PitchBoost emails you a link to the finished deck, with a preview and a PowerPoint download. The deck also appears in your dashboard as soon as it is done.",
     sections: [
       {
         heading: "What happens during those minutes",
@@ -501,7 +501,7 @@ export const HELP_ARTICLES: HelpArticle[] = [
       },
     ],
     related: ["redesign-a-powerpoint", "download-powerpoint-or-pdf", "share-a-deck-link"],
-    updated: "2026-09-16",
+    updated: "2026-11-10",
   },
 
   {

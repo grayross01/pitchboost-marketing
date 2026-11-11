@@ -58,7 +58,7 @@ export const FEATURE_PAGE_DATES: Record<string, string> = {
 export const INDUSTRIES_UPDATED = "2026-11-05";
 export const COMPETITORS_UPDATED = "2026-11-05";
 export const REDESIGNS_UPDATED = "2026-11-05";
-export const HELP_UPDATED = "2026-11-06";
+export const HELP_UPDATED = "2026-11-10";
 export const CITIES_UPDATED = "2026-07-10";
 export const NET_SHEET_UPDATED = "2026-07-16";
 

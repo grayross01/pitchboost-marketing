@@ -11,7 +11,7 @@ export const REDESIGNS_ES: RedesignPage[] = [
   {
     "slug": "powerpoint-redesign",
     "navLabel": "Rediseño de PowerPoint",
-    "metaTitle": "Rediseño de PowerPoint: IA que rediseña tu presentación | PitchBoost",
+    "metaTitle": "Rediseño de PowerPoint con IA para tu presentación | PitchBoost",
     "metaDescription": "Sube tu PowerPoint y recíbelo rediseñado profesionalmente con tu marca. Mismo contenido, diseño moderno, en minutos. Pruébalo gratis, sin conocimientos de diseño.",
     "heroHeadline": "Tu PowerPoint, rediseñado por IA en minutos",
     "heroSubhead": "Conserva el contenido. Arregla todo lo demás. PitchBoost lee tu .pptx, aprende tu marca desde tu sitio web y reconstruye cada diapositiva con diseño, tipografía y color profesionales mientras observas.",
@@ -51,6 +51,10 @@ export const REDESIGNS_ES: RedesignPage[] = [
       {
         "q": "¿Cuánto cuesta un rediseño de PowerPoint?",
         "a": "El plan gratuito incluye una generación de presentación por IA al mes, y un rediseño cuenta como tal. Después de eso, Starter cuesta $7 al mes sin insignia y Pro $29 al mes, frente a cotizaciones de agencias que comienzan alrededor de $2,000 por presentación."
+      },
+      {
+        "q": "¿Puedo hacerlo desde ChatGPT?",
+        "a": "Sí. Añade el plugin de PitchBoost desde el directorio de plugins de ChatGPT (también en cuentas gratuitas de ChatGPT), adjunta tu .pptx en un chat y pide un rediseño. ChatGPT lo envía a PitchBoost y te responde con el enlace; ábrelo en PitchBoost para ver la vista previa completa y las descargas."
       }
     ],
     "ctaHeadline": "Sube la presentación. Conserva la historia. Olvida los degradados de 2014."
@@ -105,7 +109,7 @@ export const REDESIGNS_ES: RedesignPage[] = [
   {
     "slug": "make-powerpoint-look-professional",
     "navLabel": "Hacer una presentación de PowerPoint profesional",
-    "metaTitle": "Cómo hacer que tu PowerPoint se vea profesional (rápido) | PitchBoost",
+    "metaTitle": "Cómo hacer que tu PowerPoint se vea profesional | PitchBoost",
     "metaDescription": "Haz que tu PowerPoint se vea profesional: súbelo y la IA reconstruye el diseño con tu marca. Mismas diapositivas, diseño profesional, minutos en vez de días.",
     "heroHeadline": "Haz que tu PowerPoint se vea profesional sin volverte diseñador",
     "heroSubhead": "Hay dos formas: pasar un fin de semana aprendiendo principios de diseño, o subir la presentación y dejar que PitchBoost los aplique por ti: alineación, jerarquía, espaciado, colores de marca, todo.",
@@ -152,7 +156,7 @@ export const REDESIGNS_ES: RedesignPage[] = [
   {
     "slug": "rebrand-presentation",
     "navLabel": "Cambiar la marca de una presentación",
-    "metaTitle": "Cambia la marca de tus presentaciones: aplica nueva identidad | PitchBoost",
+    "metaTitle": "Cambia la marca de tus presentaciones antiguas | PitchBoost",
     "metaDescription": "¿Marca nueva, presentaciones viejas? Sube cada deck y PitchBoost aplica tu nuevo logo, colores y tono automáticamente. Cambia toda una biblioteca en una tarde.",
     "heroHeadline": "Cambiaste la marca de la empresa. Ahora cambia la de cada presentación que creó.",
     "heroSubhead": "Un cambio de marca no está terminado mientras ventas siga mostrando el logo viejo. Sube cada deck, apunta PitchBoost al sitio nuevo y pon todo en marca otra vez: un deck o la biblioteca completa.",
@@ -199,7 +203,7 @@ export const REDESIGNS_ES: RedesignPage[] = [
   {
     "slug": "investor-deck-redesign",
     "navLabel": "Rediseño de presentaciones para inversores",
-    "metaTitle": "Rediseño de Presentaciones para Inversores en Minutos | PitchBoost",
+    "metaTitle": "Rediseño de Presentación para Inversores en Minutos | PitchBoost",
     "metaDescription": "Rediseña tu deck para inversores con IA antes de la próxima reunión. Conserva tu historia de tracción y recíbelo con tu marca, listo para el fundraising.",
     "heroHeadline": "Rediseña la presentación para inversores antes de la próxima reunión con socios",
     "heroSubhead": "Entre la intro y la reunión con socios suele haber un fin de semana. Es suficiente. Sube tu presentación actual y recibe una que se ve como la empresa que estás describiendo.",
@@ -293,7 +297,7 @@ export const REDESIGNS_ES: RedesignPage[] = [
   {
     "slug": "presentation-redesign-service",
     "navLabel": "Servicio de rediseño de presentaciones",
-    "metaTitle": "Servicio de Rediseño de Presentaciones: Alternativa IA | PitchBoost",
+    "metaTitle": "Servicio de Rediseño de Presentaciones con IA | PitchBoost",
     "metaDescription": "¿Comparas servicios de rediseño de presentaciones? El rediseño con IA frente a las agencias: minutos y dólares en vez de semanas y miles, y tú mantienes el control.",
     "heroHeadline": "El servicio de rediseño de presentaciones que es software, no un estudio",
     "heroSubhead": "Las agencias rediseñan presentaciones hermosamente: en dos semanas, por cuatro cifras, con tres rondas de ajustes. PitchBoost hace el mismo trabajo en minutos por el precio de un almuerzo, y tú mantienes el control.",
@@ -387,7 +391,7 @@ export const REDESIGNS_ES: RedesignPage[] = [
   {
     "slug": "google-slides-and-keynote-redesign",
     "navLabel": "Google Slides y Keynote",
-    "metaTitle": "Rediseña presentaciones de Google Slides o Keynote con IA | PitchBoost",
+    "metaTitle": "Rediseña tus Google Slides o Keynote con IA | PitchBoost",
     "metaDescription": "Exporta tu presentación de Google Slides o Keynote a .pptx, súbela y obtén una versión rediseñada profesionalmente con tu marca en minutos. Prueba gratis.",
     "heroHeadline": "No solo PowerPoint: Google Slides y Keynote, rediseñados",
     "heroSubhead": "Ambas herramientas exportan a .pptx en un clic. Sube ese archivo y PitchBoost mantiene tu historia, aprende tu marca desde tu sitio web y reconstruye cada diapositiva. Luego te devuelve un PowerPoint editable, un PDF o un enlace.",
@@ -481,7 +485,7 @@ export const REDESIGNS_ES: RedesignPage[] = [
   {
     "slug": "proposal-deck-redesign",
     "navLabel": "Propuestas y respuestas a licitaciones",
-    "metaTitle": "Rediseña una Propuesta o Respuesta a Licitación con IA | PitchBoost",
+    "metaTitle": "Rediseña Propuestas o Respuestas a Licitación con IA | PitchBoost",
     "metaDescription": "Sube tu propuesta, RFP o respuesta a licitación y recíbela con diseño profesional en tu marca, con alcance, precios y compromisos exactos. Prueba gratis.",
     "heroHeadline": "Propuestas que lucen tan cuidadas como la oferta",
     "heroSubhead": "Alcance, niveles de servicio, tablas de precios, planes de transición. PitchBoost conserva cada compromiso palabra por palabra y reconstruye el deck para que el comité evaluador lea una empresa que tiene todo bajo control.",
@@ -654,7 +658,7 @@ export const REDESIGNS_ES: RedesignPage[] = [
       },
       {
         "q": "¿Puedo usar la relación de aspecto del evento?",
-        "a": "Las presentaciones se construyen en 16:9, que es lo que usa casi todas las pantallas de conferencias. Exporta a PowerPoint y ajusta en segundos si el lugar pide 4:3."
+        "a": "Las presentaciones se construyen en 16:9, que es lo que usan casi todas las pantallas de conferencias. Exporta a PowerPoint y ajusta en segundos si el lugar pide 4:3."
       },
       {
         "q": "¿Recibo un archivo editable?",
@@ -677,7 +681,7 @@ export const REDESIGNS_ES: RedesignPage[] = [
     "heroSubhead": "Sube la QBR que tienes, en el estado en que esté. PitchBoost conserva cada métrica y cada próximo paso, reconstruye el diseño con tu marca y te entrega una presentación que se lee como un plan de cuenta, no como un volcado de datos.",
     "painPoints": [
       {
-        "title": "Misma plantilla, doceavo trimestre",
+        "title": "Misma plantilla, duodécimo trimestre",
         "body": "Las presentaciones QBR se copian trimestre tras trimestre hasta que nadie recuerda por qué existe la diapositiva 7. Secciones obsoletas y colores del año pasado le dicen al cliente exactamente cuánta atención recibe."
       },
       {
@@ -766,7 +770,7 @@ export const REDESIGNS_ES: RedesignPage[] = [
   },
   {
     "slug": "pitch-competition-deck-redesign",
-    "navLabel": "Pitch competition deck",
+    "navLabel": "Deck para concursos de pitch",
     "metaTitle": "Rediseño de Presentación para Competencias de Pitch | PitchBoost",
     "metaDescription": "Rediseña tu presentación para aceleradoras o competencias de pitch en tres minutos: misma historia, una idea por diapositiva, tu marca, listo para el demo day.",
     "heroHeadline": "Tres minutos en el escenario. Diapositivas que van al mismo ritmo.",
@@ -864,14 +868,14 @@ export const REDESIGNS_ES: RedesignPage[] = [
   {
     "slug": "beautify-powerpoint",
     "navLabel": "Embellecer un PowerPoint",
-    "metaTitle": "Embellece tu PowerPoint con IA: las mismas diapositivas, mejor aspecto | PitchBoost",
+    "metaTitle": "Embellece tu PowerPoint con IA: mismas diapositivas | PitchBoost",
     "metaDescription": "Embellece una presentación de PowerPoint con IA. Sube el .pptx, conserva el contenido de cada diapositiva y recíbelo con diseños limpios, tipografía real y los colores de tu marca en minutos.",
     "heroHeadline": "Embellece tu PowerPoint sin reconstruirlo",
     "heroSubhead": "La mayoría de las herramientas de embellecimiento PPT intercambian tus diapositivas en una plantilla más bonita y lo dan por hecho. PitchBoost lee lo que cada diapositiva intenta decir y luego la diseña correctamente con tu propia marca: espaciado, jerarquía, tipografía, color e imágenes que se ajustan al contenido en lugar de pelearse con él.",
     "painPoints": [
       {
         "title": "Los embellecedores de un clic todos lucen igual",
-        "body": "Pasa un mazo por una herramienta de intercambio de plantillas y obtienes el aspecto de la plantilla, no el tuyo. Manchas degradadas, iconos de stock, un esquema de color que no pertenece a nadie. Es más bonito que lo que tenías y aún así se ve como mil otros mazos."
+        "body": "Pasa una presentación por una herramienta de intercambio de plantillas y obtienes el aspecto de la plantilla, no el tuyo. Manchas degradadas, iconos de stock, un esquema de color que no pertenece a nadie. Es más bonito que lo que tenías y aún así se ve como otras mil presentaciones."
       },
       {
         "title": "Las diapositivas feas suelen ser un problema de diseño, no de decoración",
@@ -879,7 +883,7 @@ export const REDESIGNS_ES: RedesignPage[] = [
       },
       {
         "title": "No tienes una tarde para ajustar cuadros de texto",
-        "body": "Alinear, redimensionar y recolorear a mano es el tipo de trabajo que se come una noche y aún luce ligeramente mal por la mañana. El mazo vence pronto, el pulido es lo que se omite."
+        "body": "Alinear, redimensionar y recolorear a mano es el tipo de trabajo que se come una noche y aún luce ligeramente mal por la mañana. Hay que entregar la presentación, y lo que se omite es el pulido."
       }
     ],
     "outcomes": [
@@ -895,18 +899,18 @@ export const REDESIGNS_ES: RedesignPage[] = [
       },
       {
         "q": "¿En qué se diferencia esto de una herramienta de IA para embellecer PPT?",
-        "a": "Las herramientas de intercambio de plantillas rediseñan tus cuadros existentes. PitchBoost lee el mazo, entiende el trabajo de cada diapositiva y la diseña desde cero con tu marca. La diferencia se nota más en diapositivas densas, gráficos y cualquier cosa que nunca encajó en la plantilla desde el principio."
+        "a": "Las herramientas de intercambio de plantillas rediseñan tus cuadros existentes. PitchBoost lee la presentación, entiende el trabajo de cada diapositiva y la diseña desde cero con tu marca. La diferencia se nota más en diapositivas densas, gráficos y cualquier cosa que nunca encajó en la plantilla desde el principio."
       },
       {
         "q": "¿Puedo subir Google Slides o Keynote?",
         "a": "Sí, exportándolo primero a .pptx. Ambos lo hacen en un paso sin perder nada. Se aceptan archivos de hasta 50 MB."
       },
       {
-        "q": "¿Cuánto cuesta embellecer un mazo?",
-        "a": "El plan gratuito incluye un mazo con IA al mes, hasta 10 diapositivas, con una pequeña insignia de PitchBoost. Starter cuesta $7 al mes para hasta 25 diapositivas y sin insignia. Pro cuesta $29 al mes para hasta 60 diapositivas y dominios personalizados."
+        "q": "¿Cuánto cuesta embellecer una presentación?",
+        "a": "El plan gratuito incluye una presentación con IA al mes, hasta 10 diapositivas, con una pequeña insignia de PitchBoost. Starter cuesta $7 al mes para hasta 25 diapositivas y sin insignia. Pro cuesta $29 al mes para hasta 60 diapositivas y dominios personalizados."
       }
     ],
-    "ctaHeadline": "Sube el mazo. Recíbelo hermoso y aún tuyo.",
+    "ctaHeadline": "Sube la presentación. Recíbela hermosa y aún tuya.",
     "updated": "2026-09-16"
   },
 
@@ -920,7 +924,7 @@ export const REDESIGNS_ES: RedesignPage[] = [
       { "before": "/redesign/makeover/before-6.webp", "after": "/redesign/makeover/after-6.webp", "caption": "Próximos pasos: un cierre con la petición, el calendario y una forma de responder." }
     ],
     "navLabel": "Renovación de PowerPoint: antes y después",
-    "metaTitle": "Renovación de PowerPoint Antes y Después: Qué Cambia con IA | PitchBoost",
+    "metaTitle": "Renovación de PowerPoint Antes y Después con IA | PitchBoost",
     "metaDescription": "Qué cambia realmente en una renovación de PowerPoint, diapositiva por diapositiva: portada, agenda, muros de texto, gráficos, equipo y cierre. Sube tu presentación y ve el antes y después en minutos.",
     "heroHeadline": "Renovación de PowerPoint, antes y después, diapositiva por diapositiva",
     "heroSubhead": "La forma más rápida de evaluar una renovación es ver la misma presentación dos veces. Esto es lo que cambia en cada tipo de diapositiva cuando PitchBoost reconstruye una presentación, y cómo hacer el antes y después con tu propio archivo gratis.",
@@ -1013,6 +1017,202 @@ export const REDESIGNS_ES: RedesignPage[] = [
     ],
     "ctaHeadline": "Conserva la historia que funciona. Retira la plantilla que no.",
     "updated": "2026-09-16"
+  },
+
+  {
+    "slug": "powerpoint-designer-alternative",
+    "navLabel": "Alternativa al Diseñador de PowerPoint",
+    "metaTitle": "Diseñador de PowerPoint no funciona: alternativa IA | PitchBoost",
+    "metaDescription": "Por qué el Diseñador de PowerPoint no muestra ideas de diseño, cómo arreglarlo y cómo rediseñar toda la presentación con tu marca de una vez. Pruébalo gratis.",
+    "heroHeadline": "Si el Diseñador de PowerPoint se queda sin ideas, rediseña toda la presentación",
+    "heroSubhead": "El Diseñador sugiere diseños diapositiva por diapositiva, y solo cuando una diapositiva cumple sus reglas. PitchBoost toma tu .pptx completo, aprende tu marca desde tu sitio web y reconstruye todas las diapositivas de una sola pasada; luego te entrega un PowerPoint editable y un enlace que te muestra quién lo abrió.",
+    "painPoints": [
+      {
+        "title": "\"Lo sentimos, no hay ideas de diseño para esta diapositiva\"",
+        "body": "El Diseñador necesita conexión a internet, un tema integrado, un diseño \"Diapositiva de título\" o \"Título y objetos\", y ningún cuadro de texto ni forma adicional. Las presentaciones reales rompen esas reglas en casi todas las diapositivas, que es justo cuando necesitas la ayuda."
+      },
+      {
+        "title": "Una diapositiva a la vez sigue siendo un día de trabajo",
+        "body": "Incluso cuando funciona, el Diseñador ofrece opciones diapositiva por diapositiva. Treinta diapositivas son treinta decisiones, y los resultados rara vez parecen de la misma presentación."
+      },
+      {
+        "title": "Conoce los temas de PowerPoint, no tu marca",
+        "body": "El Diseñador funciona mejor con los temas que trae PowerPoint. Los temas personalizados y descargados, los que de verdad usan las empresas, a menudo no reciben ninguna sugerencia."
+      }
+    ],
+    "outcomes": [
+      "Todas las diapositivas rediseñadas de una sola pasada, coherentes de la primera a la última",
+      "Funciona con diapositivas recargadas, temas personalizados y los cuadros de texto que el Diseñador omite",
+      "Tu logo, tus colores y tu tono, tomados de tu sitio web",
+      "Un PowerPoint editable, más un enlace rastreable que muestra quién lo abrió"
+    ],
+    "faqs": [
+      {
+        "q": "¿Por qué el Diseñador de PowerPoint dice que no hay ideas de diseño?",
+        "a": "Las causas habituales: no tienes conexión, la presentación usa un tema personalizado o descargado, la diapositiva no tiene el diseño \"Diapositiva de título\" o \"Título y objetos\", tiene formas o cuadros de texto fuera de los marcadores de posición, hay más de una diapositiva seleccionada o alguien más está editando la misma diapositiva. Los archivos .ppt antiguos y las cuentas sin suscripción a Microsoft 365 tampoco reciben sugerencias."
+      },
+      {
+        "q": "¿Cómo vuelvo a activar el Diseñador?",
+        "a": "Ve a Archivo, Opciones, General y, en Diseñador de PowerPoint, marca \"Mostrarme automáticamente ideas de diseño\". Si la casilla aparece atenuada, es probable que tu administrador de TI la haya desactivado. En las versiones con Copilot, la función aparece en la pestaña Inicio como Sugerencias de diseño."
+      },
+      {
+        "q": "¿Necesito Microsoft 365 para usar PitchBoost?",
+        "a": "No. PitchBoost funciona en el navegador. Sube un .pptx de cualquier versión de PowerPoint, o una exportación de Google Slides o Keynote, y descarga el resultado como PowerPoint o PDF."
+      },
+      {
+        "q": "¿Cuánto cuesta?",
+        "a": "Una presentación con IA al mes es gratis, hasta 10 diapositivas, con una pequeña insignia. Starter cuesta $7 al mes para presentaciones de hasta 25 diapositivas y sin insignia; Pro cuesta $29 al mes para hasta 60 diapositivas y dominios personalizados."
+      }
+    ],
+    "ctaHeadline": "Deja de arreglar diapositivas una por una.",
+    "updated": "2026-09-25"
+  },
+
+  {
+    "slug": "keynote-to-powerpoint",
+    "navLabel": "De Keynote a PowerPoint",
+    "metaTitle": "Keynote a PowerPoint: convierte y rediseña a la vez | PitchBoost",
+    "metaDescription": "Exporta tu Keynote a PowerPoint y arregla fuentes, espaciado y diseños rotos: PitchBoost lo reconstruye como un .pptx limpio y editable con tu marca. Pruébalo gratis.",
+    "heroHeadline": "De Keynote a PowerPoint, sin diapositivas rotas",
+    "heroSubhead": "Keynote exporta a .pptx con un clic, pero por el camino las fuentes cambian, el texto se desborda y los diseños se descolocan. Sube la exportación y PitchBoost reconstruye cada diapositiva como PowerPoint nativo con tu marca, para que se vea bien en cada laptop de la sala.",
+    "painPoints": [
+      {
+        "title": "Las fuentes de Apple no sobreviven al viaje",
+        "body": "Las presentaciones de Keynote usan fuentes que PowerPoint en Windows no tiene. PowerPoint las sustituye por otras parecidas, y con ellas se mueven todos los saltos de línea y todos los cuadros de texto."
+      },
+      {
+        "title": "Las animaciones y los diseños llegan aplanados",
+        "body": "El Movimiento mágico, las animaciones personalizadas y algunos objetos agrupados se convierten en aproximaciones estáticas o torpes. La presentación se abre, pero ya no es la que diseñaste."
+      },
+      {
+        "title": "Arreglar la exportación lleva más tiempo que empezar de cero",
+        "body": "Así se esfuma una tarde: recolocando cuadros de texto diapositiva por diapositiva. El cliente o la conferencia necesita un .pptx que funcione, hoy."
+      }
+    ],
+    "outcomes": [
+      "Diseños nativos de PowerPoint, no una conversión remendada",
+      "Fuentes y espaciado elegidos para verse bien en Windows y en Mac",
+      "Tu texto, tus cifras y tus gráficos, trasladados diapositiva por diapositiva",
+      "Un .pptx editable, un PDF y un enlace que muestra quién lo abrió"
+    ],
+    "faqs": [
+      {
+        "q": "¿Cómo exporto un archivo de Keynote a PowerPoint?",
+        "a": "En Keynote elige Archivo, Exportar a, PowerPoint, y guarda el .pptx. Sube ese archivo a PitchBoost. El texto de cada diapositiva y las imágenes que colocaste van con él."
+      },
+      {
+        "q": "¿Por qué mi presentación de Keynote se ve distinta en PowerPoint?",
+        "a": "Sobre todo por las fuentes y los efectos. PowerPoint en Windows no tiene muchas de las fuentes de Apple, así que las sustituye, y eso cambia los saltos de línea y el espaciado. Algunas animaciones y transiciones no tienen equivalente en PowerPoint y se simplifican."
+      },
+      {
+        "q": "¿Se conservarán mis animaciones?",
+        "a": "PitchBoost reconstruye la maquetación y el diseño, no las animaciones propias de Keynote. Obtienes diapositivas limpias a las que puedes añadir transiciones de PowerPoint si las necesitas."
+      },
+      {
+        "q": "¿Puedo seguir trabajando en Keynote después?",
+        "a": "Sí. Keynote abre archivos .pptx, así que puedes volver a llevar la presentación rediseñada a Keynote cuando quieras."
+      }
+    ],
+    "ctaHeadline": "Hecha en Keynote. Presentada en cualquier lugar.",
+    "updated": "2026-09-25"
+  },
+
+  {
+    "slug": "google-slides-to-powerpoint",
+    "navLabel": "De Google Slides a PowerPoint",
+    "metaTitle": "Google Slides a PowerPoint: convierte y rediseña | PitchBoost",
+    "metaDescription": "Descarga tu presentación de Google Slides como PowerPoint y recíbela rediseñada con tu marca y sin errores de conversión. Un .pptx editable en minutos. Pruébalo gratis.",
+    "heroHeadline": "De Google Slides a PowerPoint, y mejor al llegar",
+    "heroSubhead": "Tu equipo trabaja en Slides; el cliente, el directorio o el evento quiere PowerPoint. Descarga el .pptx, súbelo y PitchBoost reconstruye cada diapositiva con tu marca, para que lo que llegue se vea diseñado y no convertido.",
+    "painPoints": [
+      {
+        "title": "La conversión rompe cosas sin avisar",
+        "body": "Google Fonts que no están instaladas en la computadora de quien ve la presentación, cuadros de texto que cambian de tamaño, formas que se desplazan. El .pptx se abre sin problemas y se ve un poco mal en todas partes."
+      },
+      {
+        "title": "Los temas de Slides parecen temas de Slides",
+        "body": "Los temas integrados se reconocen a simple vista. Cuando la presentación llega a una empresa que trabaja en PowerPoint, parece un trabajo hecho deprisa."
+      },
+      {
+        "title": "Los gráficos vinculados llegan como imágenes",
+        "body": "Los gráficos vinculados a Google Sheets suelen pasar como imágenes estáticas, así que nadie puede actualizar los números sin volver al original."
+      }
+    ],
+    "outcomes": [
+      "Diapositivas nativas de PowerPoint, limpias, no un tema de Slides convertido",
+      "Tu marca, tomada de tu sitio web, aplicada a cada diapositiva",
+      "Los números, exactamente como los indica tu presentación",
+      "Un .pptx editable, un PDF y un enlace rastreable para enviar"
+    ],
+    "faqs": [
+      {
+        "q": "¿Cómo convierto Google Slides a PowerPoint?",
+        "a": "En Google Slides elige Archivo, Descargar, Microsoft PowerPoint (.pptx). Sube ese archivo a PitchBoost. Las notas del orador y las imágenes viajan con él."
+      },
+      {
+        "q": "¿Por qué mi presentación de Google Slides se ve mal en PowerPoint?",
+        "a": "Las fuentes suelen ser la causa: las Google Fonts que no están instaladas se sustituyen, y eso mueve el texto. Algunas formas, los gráficos vinculados a Sheets y los videos incrustados tampoco se convierten del todo bien."
+      },
+      {
+        "q": "¿Puedo volver a llevar el rediseño a Google Slides?",
+        "a": "Sí. En la pantalla de compartir, la fila Google Slides del apartado Descargar guarda una copia editable de la presentación rediseñada en tu Google Drive, lista para abrir en Google Slides. O envía el enlace de PitchBoost, que se ve igual en cualquier dispositivo y te muestra cuándo lo abren."
+      },
+      {
+        "q": "¿Cuesta algo?",
+        "a": "Una presentación con IA al mes es gratis, hasta 10 diapositivas, con una pequeña insignia. Starter cuesta $7 al mes para presentaciones de hasta 25 diapositivas y sin insignia; Pro cuesta $29 al mes para hasta 60 diapositivas y dominios personalizados."
+      }
+    ],
+    "ctaHeadline": "Descarga una vez. Envía algo que te enorgullezca.",
+    "updated": "2026-09-25"
+  },
+
+  {
+    "slug": "change-powerpoint-template",
+    "navLabel": "Aplicar una plantilla nueva",
+    "metaTitle": "Cómo cambiar la plantilla de un PowerPoint existente | PitchBoost",
+    "metaDescription": "Aplicar a mano una plantilla nueva a un PowerPoint rompe los diseños uno a uno. El método manual y cómo pasar toda la presentación a tu marca en minutos. Pruébalo gratis.",
+    "heroHeadline": "Pasa un PowerPoint existente a una plantilla nueva, todo de una vez",
+    "heroSubhead": "Cambiar el tema es fácil. Lo difícil es que cada diapositiva encaje de verdad en él. PitchBoost lee tu presentación, toma tu marca de tu sitio web y reconstruye cada diapositiva para que parezca hecha para el nuevo estilo, no forzada a entrar en él.",
+    "painPoints": [
+      {
+        "title": "Un tema nuevo solo cambia el estilo de los marcadores de posición",
+        "body": "Los cuadros de texto, las formas y las imágenes que agregaste a mano conservan sus fuentes, colores y posiciones de antes. Tras el cambio, media presentación sigue la nueva plantilla y la otra mitad la ignora."
+      },
+      {
+        "title": "Los diseños antiguos no tienen equivalente en los nuevos",
+        "body": "Tu presentación usaba diseños que la nueva plantilla no tiene, así que PowerPoint adivina. Los títulos saltan, las columnas se desarman y hay que revisar cada diapositiva."
+      },
+      {
+        "title": "Un cambio de marca multiplica el trabajo",
+        "body": "Una marca nueva implica todas las presentaciones de la empresa, no una. Arreglar cada una a mano son semanas de trabajo que nadie presupuestó."
+      }
+    ],
+    "outcomes": [
+      "Cada diapositiva reconstruida para el nuevo estilo, incluidos los cuadros de texto hechos a mano",
+      "Logo, colores y tono tomados de tu sitio web actual",
+      "Contenido y cifras conservados diapositiva por diapositiva",
+      "Reconstrucción masiva para pasar toda una biblioteca de presentaciones a la vez"
+    ],
+    "faqs": [
+      {
+        "q": "¿Cómo aplico a mano una plantilla nueva a un PowerPoint existente?",
+        "a": "Abre la presentación, ve a Diseño, despliega la galería de Temas y elige Buscar temas para seleccionar el archivo de la plantilla. Después ve diapositiva por diapositiva: elige Inicio, Diseño, escoge el diseño más parecido y haz clic en Restablecer para llevar el contenido a los nuevos marcadores de posición. Lo que quede fuera de un marcador de posición hay que reformatearlo a mano."
+      },
+      {
+        "q": "¿Por qué cambiar la plantilla no actualizó todas mis diapositivas?",
+        "a": "Los temas solo cambian el estilo de los marcadores de posición y los colores del tema. Los cuadros de texto, las formas y las fuentes aplicados directamente en una diapositiva tienen prioridad sobre la plantilla, así que se quedan exactamente como estaban."
+      },
+      {
+        "q": "¿Puede PitchBoost usar nuestra nueva marca?",
+        "a": "Sí. Trabaja a partir de tu marca tal como aparece en tu sitio web (logo, colores y tono de voz), y puedes revisar el logo antes de que se genere nada. Indícale el sitio que muestra la nueva marca y cada presentación que subas volverá con ella. Además, puedes guardar diapositivas como plantillas para reutilizarlas."
+      },
+      {
+        "q": "Tenemos decenas de presentaciones que migrar. ¿Hay una forma más rápida?",
+        "a": "La reconstrucción masiva procesa hasta 12 PowerPoints por ejecución con la misma marca, para que toda la biblioteca acabe siendo uniforme."
+      }
+    ],
+    "ctaHeadline": "Plantilla nueva. Cada diapositiva. Una sola pasada.",
+    "updated": "2026-09-25"
   },
 ];
 

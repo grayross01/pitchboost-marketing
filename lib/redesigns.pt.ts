@@ -51,6 +51,10 @@ export const REDESIGNS_PT: RedesignPage[] = [
       {
         "q": "Quanto custa um redesign de PowerPoint?",
         "a": "O plano gratuito inclui uma geração de deck por IA por mês, e um redesign conta como uma. Além disso, o Starter custa $7/mês sem selo e o Pro $29/mês, contra orçamentos de agências que começam em torno de $2.000 por deck."
+      },
+      {
+        "q": "Posso fazer isso de dentro do ChatGPT?",
+        "a": "Sim. Adicione o plugin do PitchBoost pelo diretório de plugins do ChatGPT (contas gratuitas do ChatGPT incluídas), anexe seu .pptx em um chat e peça um redesign. O ChatGPT envia o arquivo ao PitchBoost e responde com o link; abra-o no PitchBoost para ver a prévia completa e os downloads."
       }
     ],
     "ctaHeadline": "Envie o deck. Mantenha a história. Abandone os degradês de 2014."
@@ -199,7 +203,7 @@ export const REDESIGNS_PT: RedesignPage[] = [
   {
     "slug": "investor-deck-redesign",
     "navLabel": "Redesign de deck para investidores",
-    "metaTitle": "Redesign de Deck para Investidores: Pronto em Minutos | PitchBoost",
+    "metaTitle": "Redesign de Deck para Investidores em Minutos | PitchBoost",
     "metaDescription": "Redesenhe seu deck para investidores com IA antes da próxima reunião. Faça upload do deck, mantenha sua história de tração e receba design profissional na sua marca.",
     "heroHeadline": "Redesenhe o deck para investidores antes da próxima reunião com sócios",
     "heroSubhead": "Entre a intro e a reunião com sócios costuma haver um fim de semana. Isso basta. Faça upload do deck atual e receba de volta um que parece com a empresa que você está descrevendo.",
@@ -247,7 +251,7 @@ export const REDESIGNS_PT: RedesignPage[] = [
     "slug": "sales-deck-refresh",
     "navLabel": "Renovação de deck de vendas",
     "metaTitle": "Renovação de Deck de Vendas com IA | PitchBoost",
-    "metaDescription": "Seu deck de vendas tem três anos e dá para notar. Envie o arquivo e receba um redesign moderno na sua marca em minutos, com o conteúdo intacto.",
+    "metaDescription": "Seu deck de vendas tem três anos e dá para notar. Envie e receba um redesign moderno na sua marca em minutos, conteúdo intacto, com rastreamento em cada envio.",
     "heroHeadline": "A renovação de deck de vendas que não espera pelo marketing",
     "heroSubhead": "Todo time tem aquele deck: fechou negócios de verdade, atualizado por ninguém, visivelmente envelhecendo. Faça upload e receba de volta uma versão moderna na sua marca atual. Mesmo pitch, design desta década.",
     "painPoints": [
@@ -293,8 +297,8 @@ export const REDESIGNS_PT: RedesignPage[] = [
   {
     "slug": "presentation-redesign-service",
     "navLabel": "Serviço de redesign de apresentação",
-    "metaTitle": "Serviço de Redesign de Apresentação: Alternativa AI a Agências | PitchBoost",
-    "metaDescription": "Comparando serviços de redesign de apresentação? Veja como o redesign por IA se compara a agências em velocidade, custo e controle: minutos e reais versus semanas e milhares.",
+    "metaTitle": "Serviço de Redesign de Apresentação: IA vs. Agências | PitchBoost",
+    "metaDescription": "Comparando serviços de redesign de apresentação? Veja como a IA se compara às agências em velocidade, custo e controle: minutos e dólares versus semanas e milhares.",
     "heroHeadline": "O serviço de redesign de apresentação que é software, não estúdio",
     "heroSubhead": "Agências redesenham decks lindamente: em duas semanas, por quatro dígitos, com três rodadas de feedback. PitchBoost faz o mesmo trabalho em minutos pelo preço de um almoço, e você mantém o controle.",
     "painPoints": [
@@ -304,7 +308,7 @@ export const REDESIGNS_PT: RedesignPage[] = [
       },
       {
         "title": "O orçamento escala com o número de slides",
-        "body": "Precificação por slide significa que o deck de 40 slides que você realmente usa custa R$ 15.000 a R$ 40.000 para redesenhar. E a próxima revisão abre uma nova fatura."
+        "body": "Precificação por slide significa que o deck de 40 slides que você realmente usa custa $3.000-8.000 para redesenhar. E a próxima revisão abre uma nova fatura."
       },
       {
         "title": "Você perde o controle",
@@ -324,7 +328,7 @@ export const REDESIGNS_PT: RedesignPage[] = [
       },
       {
         "q": "Quanto custa comparado a uma agência?",
-        "a": "Agências normalmente cobram R$ 10.000 a R$ 40.000 por deck com taxas por revisão. O plano gratuito do PitchBoost cobre um deck por mês de até 10 slides; planos pagos começam em $7/mês com revisões feitas no editor integrado."
+        "a": "Agências normalmente cobram $2.000-8.000 por deck, com taxas por revisão. O plano gratuito do PitchBoost cobre um deck por mês de até 10 slides; os planos pagos começam em $7/mês, com as revisões feitas no editor integrado."
       },
       {
         "q": "Posso recuperar o arquivo fonte?",
@@ -386,7 +390,7 @@ export const REDESIGNS_PT: RedesignPage[] = [
   },
   {
     "slug": "google-slides-and-keynote-redesign",
-    "navLabel": "Google Slides and Keynote",
+    "navLabel": "Google Slides e Keynote",
     "metaTitle": "Redesenhe Google Slides ou Keynote com IA | PitchBoost",
     "metaDescription": "Exporte seu deck do Google Slides ou Keynote para .pptx, carregue e receba uma versão redesenhada profissionalmente na sua marca em minutos. Teste grátis.",
     "heroHeadline": "Não só PowerPoint: Google Slides e Keynote, redesenhados",
@@ -481,7 +485,7 @@ export const REDESIGNS_PT: RedesignPage[] = [
   {
     "slug": "proposal-deck-redesign",
     "navLabel": "Propostas e respostas a licitações",
-    "metaTitle": "Redesenhe uma Proposta ou Resposta a Licitação com IA | PitchBoost",
+    "metaTitle": "Redesenhe Proposta ou Resposta a Licitação com IA | PitchBoost",
     "metaDescription": "Envie sua proposta, RFP ou resposta a licitação e receba de volta com layout profissional na sua marca, mantendo escopo, preços e compromissos exatos. Grátis para testar.",
     "heroHeadline": "Propostas com aparência tão cuidada quanto a oferta",
     "heroSubhead": "Escopo, níveis de serviço, faixas de preço, planos de transição. O PitchBoost mantém cada compromisso palavra por palavra e reconstrói o deck para que a comissão de avaliação veja uma empresa organizada.",
@@ -623,7 +627,7 @@ export const REDESIGNS_PT: RedesignPage[] = [
   {
     "slug": "conference-talk-slides-redesign",
     "navLabel": "Slides para palestra",
-    "metaTitle": "Redesign de Slides para Palestra: Deck Pronto pro Palco | PitchBoost",
+    "metaTitle": "Redesign de Slides para Palestra: Prontos pro Palco | PitchBoost",
     "metaDescription": "Envie sua palestra e receba slides feitos para o palco: uma ideia por slide, tipo grande, sua marca. O conteúdo continua seu; o design finalmente combina.",
     "heroHeadline": "Sua palestra é boa. Seus slides são uma parede de texto.",
     "heroSubhead": "PitchBoost reconstrói um deck de conferência para a última fileira: uma ideia por slide, tipo que você lê a trinta metros, sua marca em tudo, e cada ponto que você escreveu mantido no lugar.",
@@ -670,8 +674,8 @@ export const REDESIGNS_PT: RedesignPage[] = [
   },
   {
     "slug": "qbr-deck-redesign",
-    "navLabel": "QBR deck redesign",
-    "metaTitle": "QBR Deck Redesign: Slides de Quarterly Business Review | PitchBoost",
+    "navLabel": "Redesign de apresentação de QBR",
+    "metaTitle": "QBR Deck Redesign: Slides de Revisão Trimestral | PitchBoost",
     "metaDescription": "Transforme o QBR do último trimestre em uma revisão limpa, na sua marca, que o cliente vai ler de verdade. Mesmas métricas, layout melhor, pronto em minutos.",
     "heroHeadline": "O trimestre acabou. O deck não precisa parecer que passou por ele.",
     "heroSubhead": "Faça upload do QBR que você tem, no estado em que estiver. O PitchBoost mantém cada métrica e cada próximo passo, reconstrói o layout na sua marca e entrega um deck que se lê como um plano de conta, não como um despejo de status.",
@@ -719,7 +723,7 @@ export const REDESIGNS_PT: RedesignPage[] = [
   {
     "slug": "capabilities-deck-redesign",
     "navLabel": "Redesign de apresentação de capacidades",
-    "metaTitle": "Redesign de Apresentação de Capacidades para Agências | PitchBoost",
+    "metaTitle": "Redesign de Apresentação de Capacidades da Agência | PitchBoost",
     "metaDescription": "Redesenhe a apresentação de capacidades da sua agência ou consultoria: mesmos cases e serviços, layout profissional na sua marca, pronta em minutos.",
     "heroHeadline": "Uma apresentação de credenciais com a cara do que você cobra.",
     "heroSubhead": "Envie a apresentação de capacidades que você manda para cada prospect. PitchBoost mantém seus serviços, cases e logos de clientes, reconstrói o design na sua marca e entrega uma versão que você colocaria ao lado da sua tabela de preços.",
@@ -766,7 +770,7 @@ export const REDESIGNS_PT: RedesignPage[] = [
   },
   {
     "slug": "pitch-competition-deck-redesign",
-    "navLabel": "Pitch competition deck",
+    "navLabel": "Deck para competição de pitch",
     "metaTitle": "Redesign de Deck para Pitch Competition: Demo Day | PitchBoost",
     "metaDescription": "Redesenhe seu deck de aceleradora ou competição para três minutos: mesma história, uma ideia por slide, sua marca, pronto para o demo day em minutos.",
     "heroHeadline": "Três minutos no palco. Slides que acompanham.",
@@ -815,7 +819,7 @@ export const REDESIGNS_PT: RedesignPage[] = [
   {
     "slug": "consulting-slides-redesign",
     "navLabel": "Redesign de slides de consultoria",
-    "metaTitle": "Redesign de Slides de Consultoria: Decks Profissionais | PitchBoost",
+    "metaTitle": "Redesign de Slides de Consultoria: Deck Profissional | PitchBoost",
     "metaDescription": "Faça seu deck de consultoria parecer com as empresas que você enfrenta: títulos de ação, um gráfico por slide, layout limpo na sua marca. Envie, receba em minutos.",
     "heroHeadline": "Slides de nível consultoria sem o time de design da consultoria.",
     "heroSubhead": "Envie sua análise. PitchBoost mantém cada conclusão e cada valor dos gráficos, reconstrói cada slide com um título de ação e uma mensagem, e aplica a marca da sua empresa a partir do seu site.",
@@ -864,7 +868,7 @@ export const REDESIGNS_PT: RedesignPage[] = [
   {
     "slug": "beautify-powerpoint",
     "navLabel": "Embelezar um PowerPoint",
-    "metaTitle": "Embeleze Seu PowerPoint com IA: Mesmos Slides, Mais Bonitos | PitchBoost",
+    "metaTitle": "Embeleze Seu PowerPoint com IA: Mesmos Slides | PitchBoost",
     "metaDescription": "Embeleze uma apresentação PowerPoint com IA. Envie o .pptx, mantenha o conteúdo de cada slide e receba de volta com layouts limpos, tipografia real e as cores da sua marca em minutos. Grátis para testar.",
     "heroHeadline": "Embeleze seu PowerPoint sem reconstruí-lo",
     "heroSubhead": "A maioria das ferramentas de embelezamento de PPT troca seus slides por um modelo mais bonito e considera pronto. PitchBoost lê o que cada slide está tentando dizer e então organiza adequadamente na sua própria marca: espaçamento, hierarquia, tipografia, cor e imagens que se encaixam no conteúdo em vez de brigar com ele.",
@@ -920,7 +924,7 @@ export const REDESIGNS_PT: RedesignPage[] = [
       { "before": "/redesign/makeover/before-6.webp", "after": "/redesign/makeover/after-6.webp", "caption": "Próximos passos: um fechamento com o pedido, o cronograma e um jeito de responder." }
     ],
     "navLabel": "Reforma de PowerPoint: antes e depois",
-    "metaTitle": "Reforma de PowerPoint Antes e Depois: O Que Muda com IA | PitchBoost",
+    "metaTitle": "Reforma de PowerPoint Antes e Depois com IA | PitchBoost",
     "metaDescription": "O que uma reforma de PowerPoint realmente muda, slide por slide: título, agenda, paredes de bullet points, gráficos, equipe e fechamento. Envie seu próprio deck e veja o antes e depois em minutos.",
     "heroHeadline": "Reforma de PowerPoint, antes e depois, slide por slide",
     "heroSubhead": "A forma mais rápida de avaliar uma reforma é ver o mesmo deck duas vezes. Veja o que muda em cada tipo de slide quando o PitchBoost reconstrói um deck, e como fazer o antes e depois com seu próprio arquivo de graça.",
@@ -969,7 +973,7 @@ export const REDESIGNS_PT: RedesignPage[] = [
   {
     "slug": "modernize-old-powerpoint",
     "navLabel": "Modernizar um PowerPoint antigo",
-    "metaTitle": "Modernizar um PowerPoint Antigo: Atualize Slides com IA | PitchBoost",
+    "metaTitle": "Modernizar um PowerPoint Antigo: Atualize com IA | PitchBoost",
     "metaDescription": "Modernize um PowerPoint antigo ou desatualizado com IA. Carregue o arquivo, mantenha o conteúdo e receba layouts modernos, fontes atuais, sua marca de hoje e slides widescreen em minutos.",
     "heroHeadline": "Modernize o PowerPoint antigo que você continua reutilizando",
     "heroSubhead": "O conteúdo ainda funciona. O template de 2014, as barras com gradiente, o logo de dois rebrandings atrás e os slides 4:3 não. O PitchBoost lê o deck antigo e reconstrói como um atual, na marca que você tem hoje.",
@@ -1013,6 +1017,198 @@ export const REDESIGNS_PT: RedesignPage[] = [
     ],
     "ctaHeadline": "Mantenha a história que funciona. Aposente o template que não funciona.",
     "updated": "2026-09-16"
+  },
+  {
+    "slug": "powerpoint-designer-alternative",
+    "navLabel": "Alternativa ao PowerPoint Designer",
+    "metaTitle": "PowerPoint Designer Não Funciona? Alternativa com IA | PitchBoost",
+    "metaDescription": "Por que o PowerPoint Designer não mostra ideias, como resolver e como redesenhar o deck inteiro na sua marca quando as sugestões slide a slide não bastam. Grátis.",
+    "heroHeadline": "Quando o PowerPoint Designer fica sem ideias, redesenhe o deck inteiro",
+    "heroSubhead": "O Designer sugere layouts um slide por vez, e só quando o slide se encaixa nas regras dele. O PitchBoost pega seu .pptx inteiro, aprende sua marca pelo seu site e reconstrói todos os slides de uma vez, depois entrega um PowerPoint editável e um link que mostra quem abriu.",
+    "painPoints": [
+      {
+        "title": "\"Desculpe, não há ideias de design para este slide\"",
+        "body": "O Designer precisa de conexão com a internet, um tema integrado, um layout Título ou Título e Conteúdo e nenhuma caixa de texto ou forma extra. Decks reais quebram essas regras em quase todo slide, que é justamente quando você precisa de ajuda."
+      },
+      {
+        "title": "Um slide por vez ainda é um dia de trabalho",
+        "body": "Mesmo quando funciona, o Designer oferece opções slide a slide. Trinta slides significam trinta decisões, e os resultados raramente parecem pertencer ao mesmo deck."
+      },
+      {
+        "title": "Ele conhece os temas do PowerPoint, não a sua marca",
+        "body": "O Designer funciona melhor com os temas que vêm com o PowerPoint. Temas personalizados e baixados, os que as empresas realmente usam, muitas vezes não recebem sugestão nenhuma."
+      }
+    ],
+    "outcomes": [
+      "Todos os slides redesenhados de uma vez, consistentes do primeiro ao último",
+      "Funciona em slides lotados, temas personalizados e caixas de texto que o Designer ignora",
+      "Seu logo, suas cores e seu tom de voz extraídos do seu site",
+      "Um PowerPoint editável, mais um link rastreável que mostra quem abriu"
+    ],
+    "faqs": [
+      {
+        "q": "Por que o PowerPoint Designer diz que não há ideias de design?",
+        "a": "As causas mais comuns: você está offline, o deck usa um tema personalizado ou baixado, o slide não está num layout Título ou Título e Conteúdo, há formas ou caixas de texto fora dos espaços reservados, mais de um slide está selecionado ou outra pessoa está editando o mesmo slide. Arquivos .ppt antigos e contas sem assinatura do Microsoft 365 também não recebem sugestões."
+      },
+      {
+        "q": "Como reativo o Designer?",
+        "a": "Vá em Arquivo, Opções, Geral e, em PowerPoint Designer, marque \"Mostre-me automaticamente ideias de design\". Se a caixa estiver acinzentada, provavelmente o administrador de TI desativou o recurso. Nas versões com Copilot, ele aparece na guia Página Inicial como Sugestões de Design."
+      },
+      {
+        "q": "Preciso do Microsoft 365 para usar o PitchBoost?",
+        "a": "Não. O PitchBoost roda no navegador. Envie um .pptx de qualquer versão do PowerPoint, ou um arquivo exportado do Google Slides ou do Keynote, e baixe o resultado em PowerPoint ou PDF."
+      },
+      {
+        "q": "Quanto custa?",
+        "a": "Um deck com IA por mês é grátis, de até 10 slides, com um pequeno selo. O Starter custa $7 por mês para decks de até 25 slides, sem selo; o Pro custa $29 por mês para até 60 slides e domínios personalizados."
+      }
+    ],
+    "ctaHeadline": "Pare de consertar slides um por um.",
+    "updated": "2026-09-25"
+  },
+  {
+    "slug": "keynote-to-powerpoint",
+    "navLabel": "Keynote para PowerPoint",
+    "metaTitle": "Keynote para PowerPoint: Converta e Redesenhe | PitchBoost",
+    "metaDescription": "Exporte o Keynote para PowerPoint e conserte fontes, espaçamento e layouts quebrados na conversão: o PitchBoost refaz o deck em .pptx limpo e editável na sua marca.",
+    "heroHeadline": "Do Keynote para o PowerPoint, sem slides quebrados",
+    "heroSubhead": "O Keynote exporta para .pptx em um clique, mas no caminho as fontes mudam, o texto transborda e os layouts saem do lugar. Envie o arquivo exportado e o PitchBoost reconstrói cada slide como PowerPoint nativo na sua marca, para que ele fique certo em qualquer laptop da sala.",
+    "painPoints": [
+      {
+        "title": "As fontes da Apple não sobrevivem à viagem",
+        "body": "Decks do Keynote dependem de fontes que o PowerPoint no Windows não tem. O PowerPoint troca por algo parecido, e cada quebra de linha e caixa de texto se desloca junto."
+      },
+      {
+        "title": "Animações e layouts saem achatados",
+        "body": "O Movimento Mágico, as animações personalizadas e alguns objetos agrupados viram aproximações estáticas ou desajeitadas. O deck abre, mas já não é o deck que você criou."
+      },
+      {
+        "title": "Consertar a exportação é mais lento que começar do zero",
+        "body": "Empurrar caixas de texto de volta para o lugar, slide por slide, é como uma tarde desaparece. O cliente ou a conferência precisa de um .pptx que funcione, hoje."
+      }
+    ],
+    "outcomes": [
+      "Layouts nativos de PowerPoint, não uma conversão remendada",
+      "Fontes e espaçamentos escolhidos para funcionar no Windows e no Mac",
+      "Seus textos, números e gráficos transferidos slide por slide",
+      "Um .pptx editável, um PDF e um link que mostra quem abriu"
+    ],
+    "faqs": [
+      {
+        "q": "Como exporto um arquivo do Keynote para PowerPoint?",
+        "a": "No Keynote, escolha Arquivo, Exportar para, PowerPoint e salve o .pptx. Envie esse arquivo para o PitchBoost. O texto de cada slide e as imagens que você colocou vão junto."
+      },
+      {
+        "q": "Por que meu deck do Keynote fica diferente no PowerPoint?",
+        "a": "Principalmente por causa de fontes e efeitos. O PowerPoint no Windows não tem muitas das fontes da Apple, então as substitui, o que muda as quebras de linha e o espaçamento. Algumas animações e transições não têm equivalente no PowerPoint e são simplificadas."
+      },
+      {
+        "q": "Minhas animações vão junto?",
+        "a": "O PitchBoost reconstrói o layout e o design, não as animações específicas do Keynote. Você recebe slides limpos, aos quais pode adicionar transições do PowerPoint se precisar."
+      },
+      {
+        "q": "Posso continuar trabalhando no Keynote depois?",
+        "a": "Sim. O Keynote abre arquivos .pptx, então você pode levar o deck redesenhado de volta para o Keynote quando quiser."
+      }
+    ],
+    "ctaHeadline": "Feito no Keynote. Apresentado em qualquer lugar.",
+    "updated": "2026-09-25"
+  },
+  {
+    "slug": "google-slides-to-powerpoint",
+    "navLabel": "Google Slides para PowerPoint",
+    "metaTitle": "Google Slides para PowerPoint: Converta e Redesenhe | PitchBoost",
+    "metaDescription": "Baixe o deck do Google Slides como PowerPoint e receba-o redesenhado na sua marca, sem a formatação que quebra na conversão. .pptx editável em minutos. Grátis.",
+    "heroHeadline": "Do Google Slides para o PowerPoint, e melhor na chegada",
+    "heroSubhead": "Seu time cria no Slides; o cliente, o conselho ou o evento quer PowerPoint. Baixe o .pptx, envie e o PitchBoost reconstrói cada slide na sua marca, para que o que chega pareça desenhado, e não convertido.",
+    "painPoints": [
+      {
+        "title": "A conversão quebra coisas sem avisar",
+        "body": "Google Fonts que não estão instaladas no computador de quem abre, caixas de texto que mudam de tamanho, formas que saem do lugar. O .pptx abre normalmente e fica um pouco errado em todo lugar."
+      },
+      {
+        "title": "Temas do Slides têm cara de temas do Slides",
+        "body": "Os temas integrados são reconhecíveis à primeira vista. Quando o deck chega a uma empresa que vive no PowerPoint, parece um trabalho feito às pressas."
+      },
+      {
+        "title": "Gráficos vinculados chegam como imagens",
+        "body": "Gráficos vinculados ao Google Sheets muitas vezes chegam como imagens estáticas, então ninguém consegue atualizar os números sem voltar ao original."
+      }
+    ],
+    "outcomes": [
+      "Slides de PowerPoint nativos e limpos, não um tema do Slides convertido",
+      "Sua marca, extraída do seu site, aplicada a cada slide",
+      "Números mantidos exatamente como estão no seu deck",
+      "Um .pptx editável, um PDF e um link rastreável para enviar"
+    ],
+    "faqs": [
+      {
+        "q": "Como converto Google Slides para PowerPoint?",
+        "a": "No Google Slides, escolha Arquivo, Fazer o download, Microsoft PowerPoint (.pptx). Envie esse arquivo para o PitchBoost. As anotações do apresentador e as imagens vão junto."
+      },
+      {
+        "q": "Por que meu deck do Google Slides fica errado no PowerPoint?",
+        "a": "As fontes costumam ser a causa: Google Fonts que não estão instaladas são substituídas, o que tira o texto do lugar. Algumas formas, gráficos vinculados ao Sheets e vídeos incorporados também não convertem perfeitamente."
+      },
+      {
+        "q": "Posso levar o redesign de volta para o Google Slides?",
+        "a": "Sim. Na tela de compartilhamento, a linha Google Slides, em Baixar, salva uma cópia editável do deck redesenhado no seu Google Drive, pronta para abrir no Google Slides. Ou mande o link do PitchBoost, que fica igual em qualquer dispositivo e mostra quando ele é aberto."
+      },
+      {
+        "q": "Custa alguma coisa?",
+        "a": "Um deck com IA por mês é grátis, de até 10 slides, com um pequeno selo. O Starter custa $7 por mês para decks de até 25 slides, sem selo; o Pro custa $29 por mês para até 60 slides e domínios personalizados."
+      }
+    ],
+    "ctaHeadline": "Baixe uma vez. Envie algo de que você se orgulhe.",
+    "updated": "2026-09-25"
+  },
+  {
+    "slug": "change-powerpoint-template",
+    "navLabel": "Aplicar um novo template",
+    "metaTitle": "Como Mudar o Template de um PowerPoint Existente | PitchBoost",
+    "metaDescription": "Aplicar à mão um template novo a um PowerPoint existente quebra os layouts slide a slide. O método manual e como levar o deck todo para sua marca em minutos. Grátis.",
+    "heroHeadline": "Leve um PowerPoint existente para um novo template, tudo de uma vez",
+    "heroSubhead": "Trocar o tema é fácil. Fazer cada slide realmente se encaixar nele é a parte difícil. O PitchBoost lê seu deck, pega sua marca do seu site e reconstrói cada slide para que pareça feito para o novo visual, e não forçado a caber nele.",
+    "painPoints": [
+      {
+        "title": "Um tema novo só muda o estilo dos espaços reservados",
+        "body": "Caixas de texto, formas e imagens que você adicionou à mão mantêm as fontes, cores e posições antigas. Depois da troca, metade do deck segue o novo template e metade o ignora."
+      },
+      {
+        "title": "Layouts antigos não correspondem aos novos",
+        "body": "Seu deck usava layouts que o novo template não tem, então o PowerPoint tenta adivinhar. Títulos pulam, colunas desmontam, e cada slide precisa ser conferido."
+      },
+      {
+        "title": "Um rebranding multiplica o trabalho",
+        "body": "Uma marca nova significa todos os decks da empresa, não um só. Consertar cada um à mão são semanas de trabalho que ninguém previu no orçamento."
+      }
+    ],
+    "outcomes": [
+      "Cada slide reconstruído para o novo visual, inclusive as caixas de texto feitas à mão",
+      "Logo, cores e tom de voz extraídos do seu site atual",
+      "Conteúdo e números preservados slide por slide",
+      "Reconstrução em lote para levar uma biblioteca inteira de decks de uma vez"
+    ],
+    "faqs": [
+      {
+        "q": "Como aplico um novo template a um PowerPoint existente à mão?",
+        "a": "Abra o deck, vá até a guia Design, abra a galeria de Temas e escolha Procurar Temas para selecionar o arquivo do template. Depois, vá slide por slide: escolha Página Inicial, Layout, selecione o layout mais próximo e clique em Redefinir para levar o conteúdo para os novos espaços reservados. Tudo o que estiver fora de um espaço reservado precisa ser reformatado manualmente."
+      },
+      {
+        "q": "Por que mudar o template não atualizou todos os meus slides?",
+        "a": "Temas mudam o estilo apenas dos espaços reservados e das cores do tema. Caixas de texto, formas e fontes definidas diretamente no slide se sobrepõem ao template, então ficam exatamente como estavam."
+      },
+      {
+        "q": "O PitchBoost pode usar nossa nova marca?",
+        "a": "Sim. Ele parte da sua marca como ela aparece no seu site, com logo, cores e tom de voz, e você pode revisar o logo antes de qualquer geração. Aponte para o site que mostra a nova marca, e cada deck que você enviar volta nela. Você também pode salvar slides como templates para reutilizar."
+      },
+      {
+        "q": "Temos dezenas de decks para migrar. Existe um jeito mais rápido?",
+        "a": "A reconstrução em lote processa até 12 PowerPoints por rodada na mesma marca, para que a biblioteca inteira fique padronizada."
+      }
+    ],
+    "ctaHeadline": "Template novo. Todos os slides. De uma vez.",
+    "updated": "2026-09-25"
   },
 ];
 
