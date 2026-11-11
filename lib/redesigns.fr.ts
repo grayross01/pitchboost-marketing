@@ -1150,7 +1150,7 @@ export const REDESIGNS_FR: RedesignPage[] = [
       },
       {
         "q": "Puis-je ramener la refonte dans Google Slides ?",
-        "a": "Oui. Importez le .pptx redessiné dans Google Drive et ouvrez-le avec Google Slides. Ou envoyez le lien PitchBoost, qui s'affiche de la même façon sur tous les appareils et vous indique quand il est ouvert."
+        "a": "Oui. Dans la liste « Télécharger » de l'écran de partage, la ligne « Google Slides » enregistre une copie modifiable de la présentation redessinée dans votre Google Drive, prête à être ouverte dans Google Slides. Ou envoyez le lien PitchBoost, qui s'affiche de la même façon sur tous les appareils et vous indique quand il est ouvert."
       },
       {
         "q": "Est-ce payant ?",
@@ -1198,7 +1198,7 @@ export const REDESIGNS_FR: RedesignPage[] = [
       },
       {
         "q": "PitchBoost peut-il utiliser notre nouvelle marque ?",
-        "a": "Oui. Il part de votre marque telle qu'elle apparaît sur votre site web (logo, couleurs et ton), et vous pouvez vérifier le logo avant toute génération. Indiquez le site qui affiche la nouvelle marque, et chaque présentation importée revient dans cette charte. Pro enregistre aussi des modèles pour les réutiliser."
+        "a": "Oui. Il part de votre marque telle qu'elle apparaît sur votre site web (logo, couleurs et ton), et vous pouvez vérifier le logo avant toute génération. Indiquez le site qui affiche la nouvelle marque, et chaque présentation importée revient dans cette charte. Vous pouvez aussi enregistrer des diapositives comme modèles pour les réutiliser."
       },
       {
         "q": "Nous avons des dizaines de présentations à migrer. Existe-t-il un moyen plus rapide ?",

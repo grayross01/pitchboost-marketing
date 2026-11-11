@@ -1228,7 +1228,7 @@ export const REDESIGNS: RedesignPage[] = [
       },
       {
         "q": "Can I bring the redesign back into Google Slides?",
-        "a": "Yes. Upload the redesigned .pptx to Google Drive and open it with Google Slides. Or send the PitchBoost link, which looks the same on any device and shows you when it is opened."
+        "a": "Yes. On the share screen, the Google Slides row under Download puts an editable copy of the redesigned deck in your Google Drive, ready to open in Google Slides. Or send the PitchBoost link, which looks the same on any device and shows you when it is opened."
       },
       {
         "q": "Does it cost anything?",
@@ -1276,7 +1276,7 @@ export const REDESIGNS: RedesignPage[] = [
       },
       {
         "q": "Can PitchBoost use our new brand?",
-        "a": "Yes. It builds from your brand as it appears on your website, logo, colors and tone of voice, and you can review the logo before anything generates. Point it at the site that shows the new brand, and every deck you upload comes back in it. Pro also saves templates for reuse."
+        "a": "Yes. It builds from your brand as it appears on your website, logo, colors and tone of voice, and you can review the logo before anything generates. Point it at the site that shows the new brand, and every deck you upload comes back in it. You can also save slides as templates to reuse."
       },
       {
         "q": "We have dozens of decks to move over. Is there a faster way?",

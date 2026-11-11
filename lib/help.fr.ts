@@ -4,7 +4,10 @@ import type { HelpArticle } from "./help";
  * French (France, "vous") translation of lib/help.ts. Slugs match the
  * English articles one to one so hreflang works. Keep in sync: when a fact,
  * price or step changes in help.ts, change it here too and move `updated`.
- * On-screen labels from the app (which is in English) stay in English.
+ * On-screen labels from the app are quoted as the French app shows them
+ * (src/i18n/fr in the app repo), in « ». Labels on Claude's, ChatGPT's and
+ * the CRM's screens (PitchBoost's page inside the CRM included) stay in
+ * English; PowerPoint, Google Slides and Keynote menus use their French names.
  */
 export const HELP_ARTICLES_FR: HelpArticle[] = [
   {
@@ -12,15 +15,15 @@ export const HELP_ARTICLES_FR: HelpArticle[] = [
     "category": "redesign",
     "title": "Comment refaire le design d'un PowerPoint avec PitchBoost",
     "metaDescription": "Importez un .pptx, indiquez votre site web à PitchBoost et récupérez en quelques minutes la présentation refaite aux couleurs de votre marque. Étape par étape, avec ce qu'il advient de votre contenu.",
-    "answer": "Pour refaire le design d'un PowerPoint dans PitchBoost, choisissez « Make a deck I have better » après vous être connecté, importez le .pptx (jusqu'à 50 Mo et 75 diapositives), saisissez le site web de votre entreprise pour qu'il récupère votre logo et vos couleurs, puis cliquez sur « Generate ». La présentation refaite arrive en 3 à 5 minutes environ sous forme de présentation web que vous pouvez modifier, partager par lien ou télécharger en PowerPoint ou en PDF. Le contenu de vos diapositives est conservé ; la mise en page, la typographie, les espacements et la marque sont refaits.",
+    "answer": "Pour refaire le design d'un PowerPoint dans PitchBoost, choisissez « Relooker une présentation » après vous être connecté, importez le .pptx ou un PDF de la présentation (jusqu'à 50 Mo et 75 diapositives), saisissez le site web de votre entreprise pour qu'il récupère votre logo et vos couleurs, puis lancez la refonte. La présentation refaite arrive en 2 à 5 minutes environ sous forme de présentation web que vous pouvez modifier, partager par lien, télécharger en PowerPoint ou en PDF, ou ouvrir dans Google Slides. Le contenu de vos diapositives est conservé ; la mise en page, la typographie, les espacements et la marque sont refaits.",
     "steps": [
       {
-        "title": "Connectez-vous et choisissez « Make a deck I have better »",
-        "body": "Créez un compte gratuit ou connectez-vous. Sur le premier écran, choisissez l'option de refonte. Si vous arrivez depuis une page de refonte de ce site, vous y êtes dirigé automatiquement."
+        "title": "Connectez-vous et choisissez « Relooker une présentation »",
+        "body": "Créez un compte gratuit ou connectez-vous. Avec un nouveau compte, choisissez « Relooker une présentation existante » sur le premier écran ; ensuite, c'est la carte « Relooker une présentation » de la page « Accueil ». Si vous arrivez depuis une page de refonte de ce site, vous y êtes dirigé automatiquement."
       },
       {
-        "title": "Importez le .pptx",
-        "body": "Déposez le fichier PowerPoint ou cliquez pour le parcourir. Les fichiers jusqu'à 50 Mo et 75 diapositives sont acceptés. Les utilisateurs de Keynote et de Google Slides exportent d'abord en .pptx (un clic dans le menu de l'une ou l'autre application)."
+        "title": "Importez le .pptx ou le PDF",
+        "body": "Déposez le fichier PowerPoint, ou un PDF de la présentation, ou cliquez pour parcourir vos fichiers. Les fichiers jusqu'à 50 Mo et 75 diapositives sont acceptés. Les utilisateurs de Keynote et de Google Slides exportent d'abord en .pptx (un clic dans le menu de l'une ou l'autre application)."
       },
       {
         "title": "Saisissez le site web de votre entreprise",
@@ -31,12 +34,12 @@ export const HELP_ARTICLES_FR: HelpArticle[] = [
         "body": "Si la présentation compte plus de diapositives que votre offre n'en refait, PitchBoost vous demande s'il faut la condenser pour qu'elle tienne ou ne refaire que les premières diapositives. La plupart des présentations sous la limite sautent cette étape."
       },
       {
-        "title": "Cliquez sur « Generate » et patientez, ou partez",
-        "body": "La refonte prend généralement 3 à 5 minutes, contrôle qualité compris. Vous pouvez regarder les diapositives arriver, ou fermer l'onglet : PitchBoost vous envoie par e-mail un lien vers la présentation terminée."
+        "title": "Lancez la refonte et patientez, ou partez",
+        "body": "Sur la page « Accueil », appuyez sur la flèche de la zone de saisie ; sur le premier écran d'un nouveau compte, cliquez sur « Générer ». La refonte prend généralement 2 à 5 minutes, contrôle qualité compris. Vous pouvez regarder les diapositives arriver, ou fermer l'onglet : PitchBoost vous envoie par e-mail un lien vers la présentation terminée."
       },
       {
         "title": "Relisez, modifiez, partagez",
-        "body": "Ouvrez n'importe quelle diapositive dans l'éditeur pour y taper du texte, déplacer des éléments ou demander une modification à l'IA, publiez la présentation sous forme de lien non répertorié, ou téléchargez-la en PowerPoint ou en PDF depuis l'écran de partage."
+        "body": "Ouvrez n'importe quelle diapositive dans l'éditeur pour y taper du texte, déplacer des éléments ou demander une modification à l'IA, publiez la présentation sous forme de lien non répertorié, ou, depuis l'écran de partage, téléchargez-la en PowerPoint ou en PDF ou ouvrez-la dans Google Slides."
       }
     ],
     "sections": [
@@ -69,15 +72,15 @@ export const HELP_ARTICLES_FR: HelpArticle[] = [
       }
     ],
     "related": ["google-slides-and-keynote", "slide-limits-by-plan", "download-powerpoint-or-pdf", "how-long-does-a-deck-take"],
-    "updated": "2026-11-06"
+    "updated": "2026-11-10"
   },
 
   {
     "slug": "google-slides-and-keynote",
     "category": "redesign",
     "title": "Comment refaire le design de présentations Google Slides ou Keynote",
-    "metaDescription": "PitchBoost lit les fichiers .pptx. Exportez votre présentation Google Slides ou Keynote en PowerPoint en une étape, importez-la et récupérez-la refaite aux couleurs de votre marque.",
-    "answer": "PitchBoost accepte les fichiers PowerPoint (.pptx), et Google Slides comme Keynote exportent en .pptx en une étape, avec le texte, les images et les graphiques intacts. Exportez le fichier, importez-le dans PitchBoost, et la refonte se déroule exactement comme pour une présentation PowerPoint.",
+    "metaDescription": "PitchBoost lit les fichiers PowerPoint et PDF. Exportez votre présentation Google Slides ou Keynote en PowerPoint en une étape, importez-la et récupérez-la refaite aux couleurs de votre marque.",
+    "answer": "PitchBoost accepte les fichiers PowerPoint (.pptx) et PDF, et Google Slides comme Keynote exportent en .pptx en une étape, avec le texte, les images et les graphiques intacts. Exportez le fichier, importez-le dans PitchBoost, et la refonte se déroule exactement comme pour une présentation PowerPoint.",
     "steps": [
       {
         "title": "Google Slides : Fichier > Télécharger > Microsoft PowerPoint (.pptx)",
@@ -89,14 +92,14 @@ export const HELP_ARTICLES_FR: HelpArticle[] = [
       },
       {
         "title": "Importez le .pptx dans PitchBoost",
-        "body": "Connectez-vous, choisissez « Make a deck I have better » et déposez le fichier exporté. Ajoutez ensuite votre site web pour que la refonte utilise votre marque."
+        "body": "Connectez-vous, choisissez « Relooker une présentation » et déposez le fichier exporté. Ajoutez ensuite votre site web pour que la refonte utilise votre marque."
       }
     ],
     "sections": [
       {
         "heading": "Revenir ensuite à Google Slides ou Keynote",
         "paragraphs": [
-          "Téléchargez le PowerPoint modifiable depuis l'écran de partage et ouvrez-le dans l'une ou l'autre application : Google Slides importe les .pptx via Fichier > Importer des diapositives ou par un dépôt dans Drive ; Keynote ouvre directement les .pptx. Chaque mot reste modifiable. Le lien de la présentation web fonctionne aussi seul, sans aucune application."
+          "Dans la liste « Télécharger » de l'écran de partage, la ligne « Google Slides » enregistre une copie modifiable de la présentation dans votre Google Drive, prête à être ouverte dans Google Slides (la première fois, Google vous demande votre autorisation). Pour Keynote, téléchargez le PowerPoint modifiable : Keynote ouvre directement les .pptx. Chaque mot reste modifiable. Le lien de la présentation web fonctionne aussi seul, sans aucune application."
         ]
       }
     ],
@@ -107,11 +110,11 @@ export const HELP_ARTICLES_FR: HelpArticle[] = [
       },
       {
         "q": "Puis-je importer un PDF à la place ?",
-        "a": "Pas pour une refonte. Un PDF n'a pas de structure de diapositives à lire. Exportez un .pptx depuis l'application d'origine ; si vous n'avez qu'un PDF, créez une nouvelle présentation et collez-y le contenu."
+        "a": "Oui. Importez de la même façon un PDF de la présentation : PitchBoost lit chaque page, y compris les graphiques, les tableaux et les diapositives qui ne sont que des images, et refait la présentation aux couleurs de votre marque. Un PDF protégé par mot de passe doit d'abord être déverrouillé."
       }
     ],
     "related": ["redesign-a-powerpoint", "download-powerpoint-or-pdf", "brand-from-your-website"],
-    "updated": "2026-10-28"
+    "updated": "2026-11-10"
   },
 
   {
@@ -164,7 +167,7 @@ export const HELP_ARTICLES_FR: HelpArticle[] = [
     "category": "output",
     "title": "Comment télécharger votre présentation en PowerPoint ou en PDF",
     "metaDescription": "Téléchargez une présentation en PowerPoint modifiable, en PowerPoint fidèle au rendu ou en PDF avec n'importe quelle offre payante, ou pour $9 par présentation. Où se trouvent les boutons et quel fichier choisir.",
-    "answer": "Ouvrez l'écran de partage de la présentation et utilisez les boutons de téléchargement : « Download PowerPoint » vous donne un .pptx fidèle au rendu, où chaque diapositive est une image de la présentation web ; « Editable PowerPoint » vous donne un .pptx qui ressemble à la présentation web, où chaque mot est une vraie zone de texte PowerPoint que vous pouvez modifier ; et « PDF » vous donne une page par diapositive. Les téléchargements sont inclus dans toutes les offres payantes. Avec l'offre gratuite, le partage de la présentation sous forme de lien en direct reste gratuit, et vous pouvez débloquer les téléchargements d'une présentation avec un paiement unique de $9 (présentations jusqu'à 25 diapositives), qui retire aussi le badge.",
+    "answer": "Ouvrez l'écran de partage de la présentation et utilisez les boutons de téléchargement : « Télécharger le PowerPoint » vous donne un .pptx fidèle au rendu, où chaque diapositive est une image de la présentation web ; « PowerPoint modifiable » vous donne un .pptx qui ressemble à la présentation web, où chaque mot est une vraie zone de texte PowerPoint que vous pouvez modifier ; et « PDF » vous donne une page par diapositive. Les téléchargements sont inclus dans toutes les offres payantes. Avec l'offre gratuite, le partage de la présentation sous forme de lien en direct reste gratuit, et vous pouvez débloquer les téléchargements d'une présentation avec un paiement unique de $9 (présentations jusqu'à 25 diapositives), qui retire aussi le badge.",
     "steps": [
       {
         "title": "Ouvrez la présentation",
@@ -176,7 +179,7 @@ export const HELP_ARTICLES_FR: HelpArticle[] = [
       },
       {
         "title": "Attendez le fichier",
-        "body": "Le bouton affiche « Preparing » pendant la création du fichier, généralement quelques secondes. Le téléchargement démarre automatiquement."
+        "body": "Le bouton affiche « Préparation… » pendant la création du fichier, généralement quelques secondes. Le téléchargement démarre automatiquement."
       }
     ],
     "sections": [
@@ -204,11 +207,11 @@ export const HELP_ARTICLES_FR: HelpArticle[] = [
       },
       {
         "q": "Existe-t-il un export Google Slides ?",
-        "a": "Téléchargez le PowerPoint modifiable et importez-le dans Google Slides via Fichier > Importer des diapositives. Tout reste modifiable."
+        "a": "Oui. Dans la liste « Télécharger » de l'écran de partage, la ligne « Google Slides » enregistre une copie modifiable de la présentation dans votre Google Drive, prête à être ouverte dans Google Slides. L'export Google Slides est inclus dans les mêmes offres que les téléchargements PowerPoint et PDF."
       }
     ],
     "related": ["share-a-deck-link", "google-slides-and-keynote", "credits-and-plans"],
-    "updated": "2026-10-28"
+    "updated": "2026-11-10"
   },
 
   {
@@ -216,11 +219,11 @@ export const HELP_ARTICLES_FR: HelpArticle[] = [
     "category": "sharing",
     "title": "Comment partager une présentation par lien et voir qui l'a ouverte",
     "metaDescription": "Publiez une présentation pour obtenir un lien non répertorié, envoyez-le à un prospect et soyez averti dès qu'il l'ouvre. Ce que le lien suit, avec toutes les offres.",
-    "answer": "Cliquez sur « Publish & copy link » dans l'écran de partage de la présentation. Cela crée un lien non répertorié (toute personne qui l'a peut voir la présentation ; personne ne peut la trouver autrement) et le copie dans votre presse-papiers. Quand un prospect ouvre le lien, PitchBoost vous envoie un e-mail. Toutes les offres indiquent quelles diapositives chaque lecteur a lues et pendant combien de temps.",
+    "answer": "Cliquez sur « Publier et copier le lien » dans l'écran de partage de la présentation. Cela crée un lien non répertorié (toute personne qui l'a peut voir la présentation ; personne ne peut la trouver autrement) et le copie dans votre presse-papiers. Quand un prospect ouvre le lien, PitchBoost vous envoie un e-mail. Toutes les offres indiquent quelles diapositives chaque lecteur a lues et pendant combien de temps.",
     "steps": [
       {
         "title": "Publiez la présentation",
-        "body": "Dans l'écran de partage, cliquez sur « Publish & copy link ». Tant que vous ne l'avez pas fait, la présentation est un brouillon privé que seuls vous et votre équipe pouvez voir."
+        "body": "Dans l'écran de partage, cliquez sur « Publier et copier le lien ». Tant que vous ne l'avez pas fait, la présentation est un brouillon privé que seuls vous et votre équipe pouvez voir."
       },
       {
         "title": "Envoyez le lien, ou ajoutez des destinataires",
@@ -232,7 +235,7 @@ export const HELP_ARTICLES_FR: HelpArticle[] = [
       },
       {
         "title": "Mettez-la hors ligne quand vous le souhaitez",
-        "body": "« Make private » dans l'écran de partage désactive le lien jusqu'à ce que vous publiiez à nouveau."
+        "body": "« Passer en privé » dans l'écran de partage désactive le lien jusqu'à ce que vous publiiez à nouveau."
       }
     ],
     "sections": [
@@ -391,7 +394,7 @@ export const HELP_ARTICLES_FR: HelpArticle[] = [
       {
         "heading": "Ce que coûte une présentation",
         "paragraphs": [
-          "Une présentation est facturée selon sa taille, d'après ce barème, sans devis avant la création : jusqu'à 10 diapositives, 100 crédits ; chaque diapositive au-delà de 10, 8 de plus (4 avec le nouveau moteur de présentation, dans « Settings ») ; chaque image IA, 10. Les documents joints sont inclus jusqu'à environ 10 pages de texte, puis ajoutent environ 1 crédit par page.",
+          "Une présentation est facturée selon sa taille, d'après ce barème, sans devis avant la création : jusqu'à 10 diapositives, 100 crédits ; chaque diapositive au-delà de 10, 8 de plus (4 avec le nouveau moteur de présentation, dans « Paramètres ») ; chaque image IA, 10. Les documents joints sont inclus jusqu'à environ 10 pages de texte, puis ajoutent environ 1 crédit par page.",
           "Quand une présentation démarre, les crédits correspondant à la taille prévue sont mis de côté, puis le montant est ajusté à ce qui est livré : une présentation plus courte que prévu vous rend la différence. Une présentation de 24 diapositives coûte 212 crédits ; une présentation de 60 diapositives, 500. S'il vous en manque, le message indique ce dont la présentation a besoin et ce qu'il vous reste."
         ]
       },
@@ -415,7 +418,7 @@ export const HELP_ARTICLES_FR: HelpArticle[] = [
       },
       {
         "q": "Comment changer ou résilier mon offre ?",
-        "a": "Dans l'application, ouvrez « Settings » et choisissez « Plan ». Les changements s'appliquent immédiatement ; en cas de résiliation, vous gardez l'offre payante jusqu'à la fin de la période déjà payée."
+        "a": "Dans l'application, ouvrez « Paramètres » et choisissez « Offre ». Les changements s'appliquent immédiatement ; en cas de résiliation, vous gardez l'offre payante jusqu'à la fin de la période déjà payée."
       },
       {
         "q": "Puis-je retirer le badge sans abonnement ?",
@@ -430,8 +433,8 @@ export const HELP_ARTICLES_FR: HelpArticle[] = [
     "slug": "how-long-does-a-deck-take",
     "category": "redesign",
     "title": "Combien de temps prend une présentation, et que faire en attendant",
-    "metaDescription": "Une refonte ou une nouvelle présentation prend généralement 3 à 5 minutes, contrôle qualité compris. Vous pouvez fermer l'onglet : PitchBoost vous envoie un lien par e-mail quand la présentation est prête.",
-    "answer": "Une refonte ou une nouvelle présentation prend généralement 3 à 5 minutes, y compris un contrôle qualité et une vérification des faits effectués après la rédaction des diapositives. Vous n'avez pas à attendre sur la page : fermez l'onglet et PitchBoost vous envoie par e-mail un lien vers la présentation terminée, avec un aperçu et un téléchargement PowerPoint. La présentation apparaît aussi dans votre tableau de bord dès qu'elle est prête.",
+    "metaDescription": "Une refonte ou une nouvelle présentation prend généralement 2 à 5 minutes, contrôle qualité compris. Vous pouvez fermer l'onglet : PitchBoost vous envoie un lien par e-mail quand la présentation est prête.",
+    "answer": "Une refonte ou une nouvelle présentation prend généralement 2 à 5 minutes, y compris un contrôle qualité et une vérification des faits effectués après la rédaction des diapositives. Vous n'avez pas à attendre sur la page : fermez l'onglet et PitchBoost vous envoie par e-mail un lien vers la présentation terminée, avec un aperçu et un téléchargement PowerPoint. La présentation apparaît aussi dans votre tableau de bord dès qu'elle est prête.",
     "sections": [
       {
         "heading": "Ce qui se passe pendant ces minutes",
@@ -457,7 +460,7 @@ export const HELP_ARTICLES_FR: HelpArticle[] = [
       }
     ],
     "related": ["redesign-a-powerpoint", "download-powerpoint-or-pdf", "share-a-deck-link"],
-    "updated": "2026-09-16"
+    "updated": "2026-11-10"
   },
 
   {
@@ -473,7 +476,7 @@ export const HELP_ARTICLES_FR: HelpArticle[] = [
       },
       {
         "title": "Vérifiez la marque récupérée",
-        "body": "L'écran suivant montre ce qui a été trouvé. Si le logo n'est pas le bon (le badge d'un partenaire, une icône au lieu du logotype), cliquez sur « Not your logo? Replace it » et importez un PNG ou un SVG."
+        "body": "L'écran suivant montre ce qui a été trouvé. Si le logo n'est pas le bon (le badge d'un partenaire, une icône au lieu du logotype), cliquez sur « Ce n'est pas votre logo ? Remplacez-le » et importez un PNG ou un SVG."
       },
       {
         "title": "Ajoutez des images si vous en avez",
@@ -484,7 +487,7 @@ export const HELP_ARTICLES_FR: HelpArticle[] = [
       {
         "heading": "Pas encore de site web",
         "paragraphs": [
-          "Choisissez « I don't have a website » à l'étape du site web et décrivez plutôt votre activité. PitchBoost choisit une palette et une typographie adaptées à la description, et vous pouvez importer un logo à la main."
+          "Choisissez « Je n'ai pas de site web » à l'étape du site web et décrivez plutôt votre activité. PitchBoost choisit une palette et une typographie adaptées à la description, et vous pouvez importer un logo à la main."
         ]
       }
     ],
