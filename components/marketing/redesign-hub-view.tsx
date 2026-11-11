@@ -4,6 +4,7 @@ import HtmlLang from "@/components/marketing/html-lang";
 import { LocaleSwitch } from "@/components/marketing/redesign-page-view";
 import { getHubCopy, getRedesigns } from "@/lib/redesigns";
 import { LOCALE_PREFIX, OG_LOCALE, REDESIGN_UI, languageAlternates, type Locale } from "@/lib/redesign-i18n";
+import { localeDir, sharedCard } from "@/lib/locale-dir";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 const SIGNUP_URL = `${APP_URL}/signup?intent=rebuild`;
@@ -15,7 +16,7 @@ export function hubMetadata(locale: Locale): Metadata {
     title: { absolute: hub.metaTitle },
     description: hub.metaDescription,
     alternates: { canonical: `${LOCALE_PREFIX[locale]}/redesign`, languages: languageAlternates("/redesign") },
-    openGraph: { title: hub.metaTitle, description: hub.metaDescription, locale: OG_LOCALE[locale] },
+    openGraph: { title: hub.metaTitle, description: hub.metaDescription, locale: OG_LOCALE[locale], ...sharedCard(locale) },
   };
 }
 
@@ -33,7 +34,7 @@ export default function RedesignHubView({ locale }: { locale: Locale }) {
     publisher: { "@type": "Organization", name: "PitchBoost", url: BASE },
   };
   return (
-    <div lang={locale}>
+    <div lang={locale} dir={localeDir(locale)}>
       {locale !== "en" && <HtmlLang lang={locale} />}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <section style={{ padding: "120px 0 80px", background: "var(--ds-bg-light)", textAlign: "center" }}>

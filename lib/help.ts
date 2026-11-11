@@ -632,10 +632,11 @@ export function getHelpArticle(slug: string): HelpArticle | undefined {
 import { HELP_ARTICLES_ES } from "./help.es";
 import { HELP_ARTICLES_PT } from "./help.pt";
 import { HELP_ARTICLES_FR } from "./help.fr";
+import { HELP_ARTICLES_AR } from "./help.ar";
 import type { Locale } from "./redesign-i18n";
 
 export function getHelpArticles(locale: Locale): HelpArticle[] {
-  return locale === "es" ? HELP_ARTICLES_ES : locale === "pt" ? HELP_ARTICLES_PT : locale === "fr" ? HELP_ARTICLES_FR : HELP_ARTICLES;
+  return locale === "es" ? HELP_ARTICLES_ES : locale === "pt" ? HELP_ARTICLES_PT : locale === "fr" ? HELP_ARTICLES_FR : locale === "ar" ? HELP_ARTICLES_AR : HELP_ARTICLES;
 }
 export function getHelpArticleFor(locale: Locale, slug: string): HelpArticle | undefined {
   return getHelpArticles(locale).find((a) => a.slug === slug);

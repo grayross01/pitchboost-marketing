@@ -4,6 +4,7 @@
  */
 import type { Locale } from "./redesign-i18n";
 import type { HelpCategory } from "./help";
+import { HELP_UI_AR } from "./i18n.ar";
 
 export interface HelpUi {
   hubTitle: string;
@@ -139,4 +140,5 @@ export const HELP_UI: Record<Locale, HelpUi> = {
       account: "Offres et crédits",
     },
   },
+  ar: HELP_UI_AR,
 };

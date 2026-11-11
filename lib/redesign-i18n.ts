@@ -1,19 +1,22 @@
 /**
  * Locale scaffolding for the /redesign cluster, the pages ChatGPT sends
  * "redesign my PowerPoint" traffic to from everywhere. English lives at the
- * root, Spanish under /es, Brazilian Portuguese under /pt; every page links
+ * root, Spanish under /es, Brazilian Portuguese under /pt, French under /fr,
+ * Arabic under /ar (right to left, see lib/locale-dir.ts); every page links
  * to its siblings with hreflang. Page copy is data (lib/redesigns*.ts); the
  * strings here are the shared chrome around it.
  */
-export type Locale = "en" | "es" | "pt" | "fr";
+import { REDESIGN_UI_AR } from "./i18n.ar";
 
-export const LOCALES: Locale[] = ["en", "es", "pt", "fr"];
+export type Locale = "en" | "es" | "pt" | "fr" | "ar";
 
-export const LOCALE_PREFIX: Record<Locale, string> = { en: "", es: "/es", pt: "/pt", fr: "/fr" };
+export const LOCALES: Locale[] = ["en", "es", "pt", "fr", "ar"];
 
-export const OG_LOCALE: Record<Locale, string> = { en: "en_US", es: "es_ES", pt: "pt_BR", fr: "fr_FR" };
+export const LOCALE_PREFIX: Record<Locale, string> = { en: "", es: "/es", pt: "/pt", fr: "/fr", ar: "/ar" };
 
-export const LOCALE_NAME: Record<Locale, string> = { en: "English", es: "Español", pt: "Português", fr: "Français" };
+export const OG_LOCALE: Record<Locale, string> = { en: "en_US", es: "es_ES", pt: "pt_BR", fr: "fr_FR", ar: "ar_AR" };
+
+export const LOCALE_NAME: Record<Locale, string> = { en: "English", es: "Español", pt: "Português", fr: "Français", ar: "العربية" };
 
 export interface RedesignUi {
   breadcrumbHome: string;
@@ -172,6 +175,7 @@ export const REDESIGN_UI: Record<Locale, RedesignUi> = {
     galleryFoot: "Vous voulez voir le résultat sur vos propres diapositives avant de vous inscrire ?",
     galleryFootLink: "L'aperçu gratuit en reconstruit deux.",
   },
+  ar: REDESIGN_UI_AR,
 };
 
 export interface RedesignHubCopy {
@@ -201,6 +205,7 @@ export function languageAlternates(path: string): Record<string, string> {
     es: `/es${path}`,
     pt: `/pt${path}`,
     fr: `/fr${path}`,
+    ar: `/ar${path}`,
     "x-default": path,
   };
 }

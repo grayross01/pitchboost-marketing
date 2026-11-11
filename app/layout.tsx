@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
-import { Inter } from "next/font/google";
+import { IBM_Plex_Sans_Arabic, Inter } from "next/font/google";
 import "./globals.css";
 import MarketingNavbar from "@/components/marketing/navbar";
 import MarketingFooter from "@/components/marketing/footer";
@@ -35,6 +35,16 @@ const CONSENT_DEFAULTS_JS =
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+});
+
+// Arabic letters, which Inter does not have. It follows Inter in the font
+// stacks (globals.css), so it is used only for Arabic, and a browser fetches it
+// only on a page that shows Arabic.
+const arabic = IBM_Plex_Sans_Arabic({
+  variable: "--font-arabic",
+  subsets: ["arabic"],
+  weight: ["400", "500", "600", "700"],
+  preload: false,
 });
 
 const geistMono = Geist_Mono({
@@ -105,7 +115,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${inter.variable}`}
+      className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${arabic.variable}`}
     >
       <head>
         {/* Consent mode defaults first, before GTM or gtag can fire. */}

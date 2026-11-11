@@ -5,6 +5,7 @@ import TopicBox from "@/components/marketing/topic-box";
 import { STATIC_PAGE_DATES } from "@/lib/page-dates";
 import { PRESENTATION_HUB, PRESENTATION_UI, getPresentations } from "@/lib/presentations-i18n";
 import { LOCALES, LOCALE_NAME, LOCALE_PREFIX, OG_LOCALE, REDESIGN_UI, languageAlternates, type Locale } from "@/lib/redesign-i18n";
+import { localeDir, sharedCard } from "@/lib/locale-dir";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 const SIGNUP_REBUILD = `${APP_URL}/signup?intent=rebuild`;
@@ -20,7 +21,7 @@ export function presentationHubMetadata(locale: Locale): Metadata {
     title: { absolute: hub.title },
     description: hub.description,
     alternates: { canonical: `${LOCALE_PREFIX[locale]}${PATH}`, languages: languageAlternates(PATH) },
-    openGraph: { title: hub.title, description: hub.description, url: `${BASE}${LOCALE_PREFIX[locale]}${PATH}`, locale: OG_LOCALE[locale] },
+    openGraph: { title: hub.title, description: hub.description, url: `${BASE}${LOCALE_PREFIX[locale]}${PATH}`, locale: OG_LOCALE[locale], ...sharedCard(locale) },
   };
 }
 
@@ -57,7 +58,7 @@ export default function PresentationHubView({ locale }: { locale: Locale }) {
   };
 
   return (
-    <div lang={locale}>
+    <div lang={locale} dir={localeDir(locale)}>
       {locale !== "en" && <HtmlLang lang={locale} />}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(listSchema) }} />
@@ -69,7 +70,7 @@ export default function PresentationHubView({ locale }: { locale: Locale }) {
           <div style={{ marginBottom: 20, display: "flex", justifyContent: "center" }}>
             <div className="section-label"><span>{ui.breadcrumbHub}</span></div>
           </div>
-          <h1 style={{ fontSize: "clamp(1.9rem, 4vw, 2.75rem)", fontWeight: 800, color: "var(--ds-dark)", maxWidth: 860, margin: "0 auto 20px", lineHeight: 1.12, fontFamily: "var(--font-inter, 'Inter'), sans-serif" }}>
+          <h1 style={{ fontSize: "clamp(1.9rem, 4vw, 2.75rem)", fontWeight: 800, color: "var(--ds-dark)", maxWidth: 860, margin: "0 auto 20px", lineHeight: 1.12, fontFamily: "var(--font-inter, 'Inter'), var(--font-arabic), sans-serif" }}>
             {hub.h1}
           </h1>
           <p style={{ color: "var(--ds-text-light)", fontSize: "1.1rem", maxWidth: 680, margin: "0 auto 32px", lineHeight: 1.7 }}>
@@ -160,7 +161,7 @@ export default function PresentationHubView({ locale }: { locale: Locale }) {
               <div key={c.name} style={{ ...card, background: "var(--ds-bg)" }}>
                 <h3 style={{ fontSize: 15, fontWeight: 700, color: "var(--ds-text-primary)", marginBottom: 6 }}>{c.name}</h3>
                 <p style={{ fontSize: 13.5, color: "var(--ds-text-secondary)", lineHeight: 1.65, margin: "0 0 8px" }}>{c.body}</p>
-                <Link href={COMPARE_LINKS[i]} hrefLang={locale !== "en" ? "en" : undefined} style={{ fontSize: 13, fontWeight: 600, color: "#1F6B6B" }}>{c.link}{ui.inEnglish} &rarr;</Link>
+                <Link href={COMPARE_LINKS[i]} hrefLang={locale !== "en" ? "en" : undefined} style={{ fontSize: 13, fontWeight: 600, color: "#1F6B6B" }}>{c.link}{ui.inEnglish} {localeDir(locale) === "rtl" ? "\u2190" : "\u2192"}</Link>
               </div>
             ))}
           </div>

@@ -8,6 +8,7 @@ import { PRESENTATION_UI, getPresentationFor, getPresentations } from "@/lib/pre
 import { LOCALES, LOCALE_PREFIX, OG_LOCALE, type Locale } from "@/lib/redesign-i18n";
 import { getRedesignFor } from "@/lib/redesigns";
 import { guidesForPresentation } from "@/lib/guides";
+import { localeDir, sharedCard } from "@/lib/locale-dir";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 // The other way in: a deck they already have, straight to the upload screen.
@@ -23,7 +24,7 @@ export function presentationPageMetadata(locale: Locale, slug: string): Metadata
     title: { absolute: page.metaTitle },
     description: page.metaDescription,
     alternates: { canonical: path, languages: availableAlternates(slug) },
-    openGraph: { title: page.metaTitle, description: page.metaDescription, url: `${BASE}${path}`, locale: OG_LOCALE[locale] },
+    openGraph: { title: page.metaTitle, description: page.metaDescription, url: `${BASE}${path}`, locale: OG_LOCALE[locale], ...sharedCard(locale) },
   };
 }
 
@@ -86,7 +87,7 @@ export default function PresentationPageView({ locale, page }: { locale: Locale;
   };
 
   return (
-    <div lang={locale}>
+    <div lang={locale} dir={localeDir(locale)}>
       {locale !== "en" && <HtmlLang lang={locale} />}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
@@ -98,11 +99,11 @@ export default function PresentationPageView({ locale, page }: { locale: Locale;
           <div style={{ marginBottom: 20, display: "flex", justifyContent: "center" }}>
             <div className="section-label" style={{ gap: 6 }}>
               <Link href={`${prefix}/ai-presentation-maker`} style={{ color: "inherit", textDecoration: "none" }}>{ui.breadcrumbHub}</Link>
-              <span style={{ opacity: 0.4 }}>&rsaquo;</span>
+              <span style={{ opacity: 0.4 }}>{localeDir(locale) === "rtl" ? "\u2039" : "\u203a"}</span>
               <span>{page.navLabel}</span>
             </div>
           </div>
-          <h1 style={{ fontSize: "clamp(1.75rem, 3.5vw, 2.4rem)", fontWeight: 800, color: "var(--ds-dark)", maxWidth: 860, margin: "0 auto 20px", lineHeight: 1.15, fontFamily: "var(--font-inter, 'Inter'), sans-serif" }}>
+          <h1 style={{ fontSize: "clamp(1.75rem, 3.5vw, 2.4rem)", fontWeight: 800, color: "var(--ds-dark)", maxWidth: 860, margin: "0 auto 20px", lineHeight: 1.15, fontFamily: "var(--font-inter, 'Inter'), var(--font-arabic), sans-serif" }}>
             {page.heroHeadline}
           </h1>
           <p style={{ color: "var(--ds-text-light)", fontSize: "1.1rem", maxWidth: 640, margin: "0 auto 32px", lineHeight: 1.7 }}>
@@ -187,7 +188,7 @@ export default function PresentationPageView({ locale, page }: { locale: Locale;
             {page.examplePrompts.map((p) => (
               <a key={p} href={presentSignupUrl(p, page.forLabel)} style={{ ...card, background: "var(--ds-bg)", display: "block", textDecoration: "none", color: "var(--ds-text-primary)", fontSize: 14.5, lineHeight: 1.6 }}>
                 &ldquo;{p}&rdquo;
-                <span style={{ display: "block", fontSize: 12.5, fontWeight: 600, color: "#1F6B6B", marginTop: 6 }}>{ui.tryLink} &rarr;</span>
+                <span style={{ display: "block", fontSize: 12.5, fontWeight: 600, color: "#1F6B6B", marginTop: 6 }}>{ui.tryLink} {localeDir(locale) === "rtl" ? "\u2190" : "\u2192"}</span>
               </a>
             ))}
           </div>
