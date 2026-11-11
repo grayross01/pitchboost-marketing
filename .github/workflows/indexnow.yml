@@ -43,13 +43,28 @@ jobs:
           def under(prefix):
               return {p for p in paths if p == prefix or p.startswith(prefix + "/")}
 
-          # Data files and shared components that feed whole sections.
+          # Every language a section is published in (English at the root).
+          LOC = ["", "/es", "/pt", "/fr", "/ar"]
+          def each(*paths):
+              return [l + p for l in LOC for p in paths]
+
+          # Data files and shared components that feed whole sections. A
+          # translation (lib/redesigns.fr.ts, lib/redesigns.ar.part1.ts) counts
+          # as its section's file; see the stem below.
           SECTIONS = {
-              "lib/redesigns": ["/redesign", "/es/redesign", "/pt/redesign"],
-              "lib/redesign-i18n": ["/redesign", "/es/redesign", "/pt/redesign"],
-              "components/marketing/redesign-page-view": ["/redesign", "/es/redesign", "/pt/redesign"],
+              "lib/redesigns": each("/redesign"),
+              "lib/redesign-i18n": each("/redesign", "/ai-presentation-maker", "/presentations", "/help"),
+              "components/marketing/redesign-page-view": each("/redesign"),
+              "components/marketing/redesign-hub-view": each("/redesign"),
+              "lib/presentations": each("/ai-presentation-maker", "/presentations"),
+              "lib/presentations-i18n": each("/ai-presentation-maker", "/presentations"),
+              "components/marketing/presentation-page-view": each("/presentations"),
+              "components/marketing/presentation-hub-view": each("/ai-presentation-maker"),
+              "lib/i18n": ["/ar/redesign", "/ar/ai-presentation-maker", "/ar/presentations", "/ar/help"],
               "lib/answers": ["/answers"],
-              "lib/help": ["/help", "/es/help", "/pt/help"],
+              "lib/help": each("/help"),
+              "lib/help-i18n": each("/help"),
+              "components/marketing/help-views": each("/help"),
               "lib/research": ["/research"],
               "lib/competitors": ["/compare", "/alternatives"],
               "lib/industries": ["/industries"],
@@ -72,8 +87,8 @@ jobs:
               if m:
                   out |= {f"/blog/{m.group(1)}", "/blog"}
                   continue
-              stem = re.sub(r"\.(es|pt)?\.?tsx?$", "", f)
-              stem = re.sub(r"\.(es|pt)$", "", stem)
+              stem = re.sub(r"\.tsx?$", "", f)
+              stem = re.sub(r"\.(es|pt|fr|ar)(\.part\d+)?$", "", stem)
               for key, prefixes in SECTIONS.items():
                   if stem == key:
                       for p in prefixes:

@@ -56,7 +56,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: var(--font-inter, 'Inter'), -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--font-inter, 'Inter'), var(--font-arabic), -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--ds-text);
   background: var(--ds-bg);
   -webkit-font-smoothing: antialiased;
@@ -118,7 +118,7 @@ body {
   line-height: 1.15;
   margin-bottom: 16px;
   color: var(--ds-dark);
-  font-family: var(--font-inter, 'Inter'), -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--font-inter, 'Inter'), var(--font-arabic), -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .marketing .section-header p {
@@ -162,7 +162,7 @@ body {
   transition: var(--ds-transition);
   cursor: pointer;
   border: none;
-  font-family: var(--font-inter, 'Inter'), -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--font-inter, 'Inter'), var(--font-arabic), -apple-system, BlinkMacSystemFont, sans-serif;
   line-height: 1.5;
 }
 
@@ -622,7 +622,7 @@ body {
   line-height: 1.1;
   margin-bottom: 24px;
   color: #ffffff;
-  font-family: var(--font-inter, 'Inter'), -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--font-inter, 'Inter'), var(--font-arabic), -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .marketing .hero p {
@@ -722,7 +722,7 @@ body {
   font-weight: 800;
   color: var(--ds-dark);
   margin-bottom: 16px;
-  font-family: var(--font-inter, 'Inter'), -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--font-inter, 'Inter'), var(--font-arabic), -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .marketing .step-showcase p {
@@ -1060,7 +1060,7 @@ body {
   color: var(--ds-dark);
   line-height: 1;
   margin-bottom: 4px;
-  font-family: var(--font-inter, 'Inter'), -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--font-inter, 'Inter'), var(--font-arabic), -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .marketing .pricing-card .plan-price span {
@@ -1135,11 +1135,11 @@ body {
   background: none;
   border: none;
   width: 100%;
-  text-align: left;
+  text-align: start;
   font-size: 1rem;
   font-weight: 600;
   color: var(--ds-dark);
-  font-family: var(--font-inter, 'Inter'), -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--font-inter, 'Inter'), var(--font-arabic), -apple-system, BlinkMacSystemFont, sans-serif;
   transition: var(--ds-transition);
 }
 
@@ -1232,7 +1232,7 @@ body {
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 16px;
-  font-family: var(--font-inter, 'Inter'), -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--font-inter, 'Inter'), var(--font-arabic), -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .marketing .cta-box p {
@@ -1338,7 +1338,7 @@ body {
   font-weight: 800;
   color: var(--ds-dark);
   margin-bottom: 12px;
-  font-family: var(--font-inter, 'Inter'), -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--font-inter, 'Inter'), var(--font-arabic), -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .marketing .legal-hero p {
@@ -1372,7 +1372,7 @@ body {
 
 .marketing .legal-content ul,
 .marketing .legal-content ol {
-  padding-left: 24px;
+  padding-inline-start: 24px;
   margin-bottom: 16px;
 }
 
@@ -1419,7 +1419,7 @@ body {
   font-weight: 800;
   color: var(--ds-dark);
   margin-bottom: 12px;
-  font-family: var(--font-inter, 'Inter'), -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--font-inter, 'Inter'), var(--font-arabic), -apple-system, BlinkMacSystemFont, sans-serif;
 }
 .marketing .blog-hero p {
   color: var(--ds-text-light);
@@ -1655,7 +1655,7 @@ body {
   color: var(--ds-dark);
   margin-bottom: 12px;
   line-height: 1.25;
-  font-family: var(--font-inter, 'Inter'), -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--font-inter, 'Inter'), var(--font-arabic), -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .marketing .use-case-desc {

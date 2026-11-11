@@ -9,10 +9,12 @@ import { PRESENTATIONS, type PresentationPage } from "./presentations";
 import { PRESENTATIONS_ES } from "./presentations.es";
 import { PRESENTATIONS_PT } from "./presentations.pt";
 import { PRESENTATIONS_FR } from "./presentations.fr";
+import { PRESENTATIONS_AR } from "./presentations.ar";
 import type { Locale } from "./redesign-i18n";
+import { PRESENTATION_UI_AR, PRESENTATION_HUB_AR } from "./i18n.ar";
 
 export function getPresentations(locale: Locale): PresentationPage[] {
-  return locale === "es" ? PRESENTATIONS_ES : locale === "pt" ? PRESENTATIONS_PT : locale === "fr" ? PRESENTATIONS_FR : PRESENTATIONS;
+  return locale === "es" ? PRESENTATIONS_ES : locale === "pt" ? PRESENTATIONS_PT : locale === "fr" ? PRESENTATIONS_FR : locale === "ar" ? PRESENTATIONS_AR : PRESENTATIONS;
 }
 
 export function getPresentationFor(locale: Locale, slug: string): PresentationPage | undefined {
@@ -164,6 +166,7 @@ export const PRESENTATION_UI: Record<Locale, PresentationUi> = {
     ctaNote: "Gratuit pour votre première présentation. $9 une seule fois pour télécharger une présentation terminée, ou des offres à partir de $7 par mois.",
     inEnglish: " (en anglais)",
   },
+  ar: PRESENTATION_UI_AR,
 };
 
 type Item = { title: string; body: string };
@@ -401,4 +404,5 @@ export const PRESENTATION_HUB: Record<Locale, PresentationHubCopy> = {
     ctaHeadline: "Votre prochaine présentation, sans vous battre avec la mise en forme.",
     ctaPlaceholder: "Résultats du troisième trimestre pour le conseil d'administration : chiffre d'affaires, attrition et décision de recrutement",
   },
+  ar: PRESENTATION_HUB_AR,
 };

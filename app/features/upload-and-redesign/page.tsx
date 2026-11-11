@@ -319,8 +319,10 @@ export default function UploadAndRedesignPage() {
             <Link href="/es/redesign" hrefLang="es" style={{ color: "#1F6B6B", fontWeight: 600 }}>Español</Link>
             ,{" "}
             <Link href="/pt/redesign" hrefLang="pt" style={{ color: "#1F6B6B", fontWeight: 600 }}>Português</Link>
+            ,{" "}
+            <Link href="/fr/redesign" hrefLang="fr" style={{ color: "#1F6B6B", fontWeight: 600 }}>Français</Link>
             {" "}and{" "}
-            <Link href="/fr/redesign" hrefLang="fr" style={{ color: "#1F6B6B", fontWeight: 600 }}>Français</Link>.
+            <Link href="/ar/redesign" hrefLang="ar" style={{ color: "#1F6B6B", fontWeight: 600 }}>العربية</Link>.
           </p>
         </div>
       </section>

@@ -5,6 +5,7 @@ import HtmlLang from "@/components/marketing/html-lang";
 import { getRedesigns, getRedesignFor, getRedesignSteps, type RedesignPage } from "@/lib/redesigns";
 import { guidesForRedesign } from "@/lib/guides";
 import { LOCALE_NAME, LOCALE_PREFIX, LOCALES, OG_LOCALE, REDESIGN_UI, languageAlternates, type Locale } from "@/lib/redesign-i18n";
+import { localeDir, sharedCard } from "@/lib/locale-dir";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 // Every CTA in this cluster carries the rebuild intent: the app reads it and
@@ -25,6 +26,7 @@ export function redesignPageMetadata(locale: Locale, slug: string): Metadata {
       title: page.metaTitle,
       description: page.metaDescription,
       locale: OG_LOCALE[locale],
+      ...sharedCard(locale),
     },
   };
 }
@@ -114,7 +116,7 @@ export default function RedesignPageView({ locale, page }: { locale: Locale; pag
   };
 
   return (
-    <div lang={locale}>
+    <div lang={locale} dir={localeDir(locale)}>
       {locale !== "en" && <HtmlLang lang={locale} />}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
@@ -126,11 +128,11 @@ export default function RedesignPageView({ locale, page }: { locale: Locale; pag
           <div style={{ marginBottom: 20, display: "flex", justifyContent: "center" }}>
             <div className="section-label" style={{ gap: 6 }}>
               <Link href={`${prefix}/redesign`} style={{ color: "inherit", textDecoration: "none" }}>{ui.breadcrumbHub}</Link>
-              <span style={{ opacity: 0.4 }}>&rsaquo;</span>
+              <span style={{ opacity: 0.4 }}>{localeDir(locale) === "rtl" ? "\u2039" : "\u203a"}</span>
               <span>{page.navLabel}</span>
             </div>
           </div>
-          <h1 style={{ fontSize: "clamp(1.75rem, 3.5vw, 2.4rem)", fontWeight: 800, color: "var(--ds-dark)", maxWidth: 860, margin: "0 auto 20px", lineHeight: 1.15, fontFamily: "var(--font-inter, 'Inter'), sans-serif" }}>
+          <h1 style={{ fontSize: "clamp(1.75rem, 3.5vw, 2.4rem)", fontWeight: 800, color: "var(--ds-dark)", maxWidth: 860, margin: "0 auto 20px", lineHeight: 1.15, fontFamily: "var(--font-inter, 'Inter'), var(--font-arabic), sans-serif" }}>
             {page.heroHeadline}
           </h1>
           <p style={{ color: "var(--ds-text-light)", fontSize: "1.1rem", maxWidth: 620, margin: "0 auto", lineHeight: 1.7 }}>

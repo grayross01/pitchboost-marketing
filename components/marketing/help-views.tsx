@@ -5,6 +5,7 @@ import { HELP_CATEGORY_ORDER, getHelpArticleFor, getHelpArticles, type HelpArtic
 import { HELP_UI } from "@/lib/help-i18n";
 import { HELP_UPDATED } from "@/lib/page-dates";
 import { LOCALES, LOCALE_NAME, LOCALE_PREFIX, OG_LOCALE, languageAlternates, type Locale } from "@/lib/redesign-i18n";
+import { localeDir, sharedCard } from "@/lib/locale-dir";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 const SIGNUP_URL = `${APP_URL}/signup?intent=rebuild`;
@@ -18,7 +19,7 @@ export function helpHubMetadata(locale: Locale): Metadata {
     title: { absolute: `${ui.hubMetaTitle} | PitchBoost` },
     description: ui.hubMetaDescription,
     alternates: { canonical: `${LOCALE_PREFIX[locale]}/help`, languages: languageAlternates("/help") },
-    openGraph: { title: ui.hubMetaTitle, description: ui.hubMetaDescription, locale: OG_LOCALE[locale] },
+    openGraph: { title: ui.hubMetaTitle, description: ui.hubMetaDescription, locale: OG_LOCALE[locale], ...sharedCard(locale) },
   };
 }
 
@@ -30,7 +31,7 @@ export function helpArticleMetadata(locale: Locale, slug: string): Metadata {
     title: { absolute: `${a.title} | PitchBoost Help` },
     description: a.metaDescription,
     alternates: { canonical: `${LOCALE_PREFIX[locale]}${path}`, languages: languageAlternates(path) },
-    openGraph: { title: a.title, description: a.metaDescription, locale: OG_LOCALE[locale], type: "article" },
+    openGraph: { title: a.title, description: a.metaDescription, locale: OG_LOCALE[locale], type: "article", ...sharedCard(locale) },
   };
 }
 
@@ -75,7 +76,7 @@ export function HelpHubView({ locale }: { locale: Locale }) {
     hasPart: articles.map((a) => ({ "@type": "TechArticle", headline: a.title, url: `${BASE}${prefix}/help/${a.slug}` })),
   };
   return (
-    <div lang={locale}>
+    <div lang={locale} dir={localeDir(locale)}>
       {locale !== "en" && <HtmlLang lang={locale} />}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <section style={{ padding: "120px 0 64px", background: "var(--ds-bg-light)", textAlign: "center" }}>
@@ -169,7 +170,7 @@ export function HelpArticleView({ locale, article }: { locale: Locale; article: 
   };
 
   return (
-    <div lang={locale}>
+    <div lang={locale} dir={localeDir(locale)}>
       {locale !== "en" && <HtmlLang lang={locale} />}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       {howToSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />}
