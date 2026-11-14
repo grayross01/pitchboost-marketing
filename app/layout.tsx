@@ -8,6 +8,7 @@ import MarketingFooter from "@/components/marketing/footer";
 import ChromeGate from "@/components/marketing/chrome-gate";
 import FadeUpObserver from "@/components/marketing/fade-up-observer";
 import { AttributionCapture } from "@/components/marketing/attribution-capture";
+import { Analytics } from "@vercel/analytics/next";
 
 const GTM_ID = "GTM-TGJD79J4";
 
@@ -162,6 +163,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </ChromeGate>
           <FadeUpObserver />
         </div>
+        {/* Vercel Web Analytics: visits, pages and referrers (ChatGPT's share
+            of visitors as well as of signups). Cookieless, first-party. */}
+        <Analytics />
       </body>
     </html>
   );
