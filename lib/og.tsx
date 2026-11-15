@@ -17,6 +17,14 @@ import { ImageResponse } from "next/og";
 export const OG_SIZE = { width: 1200, height: 630 };
 export const OG_CONTENT_TYPE = "image/png";
 
+/** The site-wide card: pages without a card of their own, and the Arabic
+ *  pages (lib/locale-dir.ts), which satori can't letter. */
+export const SITE_CARD = {
+  eyebrow: "AI presentation maker",
+  title: "The deck that speaks their language.",
+  subtitle: "Lessons, reports, talks and pitches, made from a prompt or redesigned from the deck you have, in your brand and in any language.",
+};
+
 export interface OgCard {
   /** Small label above the title: the page family ("Help center", "Compared"). */
   eyebrow: string;

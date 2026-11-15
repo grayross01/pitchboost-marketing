@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import HtmlLang from "@/components/marketing/html-lang";
 import { HELP_CATEGORY_ORDER, getHelpArticleFor, getHelpArticles, type HelpArticle } from "@/lib/help";
 import { HELP_UI } from "@/lib/help-i18n";
 import { HELP_UPDATED } from "@/lib/page-dates";
@@ -77,7 +76,6 @@ export function HelpHubView({ locale }: { locale: Locale }) {
   };
   return (
     <div lang={locale} dir={localeDir(locale)}>
-      {locale !== "en" && <HtmlLang lang={locale} />}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <section style={{ padding: "120px 0 64px", background: "var(--ds-bg-light)", textAlign: "center" }}>
         <div className="mkt-container">
@@ -171,7 +169,6 @@ export function HelpArticleView({ locale, article }: { locale: Locale; article: 
 
   return (
     <div lang={locale} dir={localeDir(locale)}>
-      {locale !== "en" && <HtmlLang lang={locale} />}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       {howToSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />

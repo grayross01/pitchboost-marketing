@@ -84,7 +84,7 @@ export default async function BlogPostPage({ params }: Props) {
       logo: { "@type": "ImageObject", url: "https://pitchboost.ai/icon.png" },
     },
     mainEntityOfPage: { "@type": "WebPage", "@id": postUrl },
-    image: post.image || `https://pitchboost.ai/blog/${slug}/opengraph-image`,
+    image: post.image || `https://pitchboost.ai/blog/${slug}/card.png`,
   };
 
   const breadcrumbSchema = {
@@ -125,7 +125,7 @@ export default async function BlogPostPage({ params }: Props) {
 
       <div className="blog-hero-image">
         <img
-          src={`/blog/${slug}/opengraph-image`}
+          src={`/blog/${slug}/card.png`}
           alt={post.title}
           width={1200}
           height={630}
