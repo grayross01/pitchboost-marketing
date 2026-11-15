@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import HtmlLang from "@/components/marketing/html-lang";
 import TopicBox from "@/components/marketing/topic-box";
 import { STATIC_PAGE_DATES } from "@/lib/page-dates";
 import { PRESENTATION_HUB, PRESENTATION_UI, getPresentations } from "@/lib/presentations-i18n";
@@ -59,7 +58,6 @@ export default function PresentationHubView({ locale }: { locale: Locale }) {
 
   return (
     <div lang={locale} dir={localeDir(locale)}>
-      {locale !== "en" && <HtmlLang lang={locale} />}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(listSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />

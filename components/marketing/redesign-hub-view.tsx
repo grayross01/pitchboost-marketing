@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import HtmlLang from "@/components/marketing/html-lang";
 import { LocaleSwitch } from "@/components/marketing/redesign-page-view";
 import { getHubCopy, getRedesigns } from "@/lib/redesigns";
 import { LOCALE_PREFIX, OG_LOCALE, REDESIGN_UI, languageAlternates, type Locale } from "@/lib/redesign-i18n";
@@ -35,7 +34,6 @@ export default function RedesignHubView({ locale }: { locale: Locale }) {
   };
   return (
     <div lang={locale} dir={localeDir(locale)}>
-      {locale !== "en" && <HtmlLang lang={locale} />}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <section style={{ padding: "120px 0 80px", background: "var(--ds-bg-light)", textAlign: "center" }}>
         <div className="mkt-container">

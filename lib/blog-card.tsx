@@ -1,18 +1,15 @@
 import { ImageResponse } from "next/og";
-import { getPostBySlug, getAllSlugs } from "@/lib/blog";
+import { getPostBySlug } from "@/lib/blog";
 
-export const size = { width: 1200, height: 630 };
-export const contentType = "image/png";
+export const BLOG_CARD_SIZE = { width: 1200, height: 630 };
 
-export async function generateStaticParams() {
-  return getAllSlugs().map((slug) => ({ slug }));
-}
-
-export default async function OgImage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
+/** A blog post's card: its og:image (app/(en)/blog/[slug]/opengraph-image.tsx)
+ *  and the picture at the top of the post (.../card.png). */
+export function blogCard(slug: string): ImageResponse {
   const post = getPostBySlug(slug);
   const title = post?.title ?? "PitchBoost Blog";
   const description = post?.description ?? "AI-powered pitch decks for sales teams.";
+  const size = BLOG_CARD_SIZE;
 
   return new ImageResponse(
     (

@@ -6,7 +6,7 @@ export function localeDir(locale: string): "rtl" | "ltr" {
 }
 
 /** The card generator (satori, in lib/og.tsx) can't join Arabic letters, so
- *  right-to-left pages share the site-wide card (app/opengraph-image.tsx,
+ *  right-to-left pages share the site-wide card (app/opengraph-image.tsx, at the plain address,
  *  "The deck that speaks their language.") instead of a card with their own
  *  title. Spread into a page's openGraph metadata; empty for other languages,
  *  whose opengraph-image files supply their cards. */

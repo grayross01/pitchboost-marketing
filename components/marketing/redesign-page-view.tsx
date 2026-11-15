@@ -1,7 +1,6 @@
 import { REDESIGNS_UPDATED } from "@/lib/page-dates";
 import type { Metadata } from "next";
 import Link from "next/link";
-import HtmlLang from "@/components/marketing/html-lang";
 import { getRedesigns, getRedesignFor, getRedesignSteps, type RedesignPage } from "@/lib/redesigns";
 import { guidesForRedesign } from "@/lib/guides";
 import { LOCALE_NAME, LOCALE_PREFIX, LOCALES, OG_LOCALE, REDESIGN_UI, languageAlternates, type Locale } from "@/lib/redesign-i18n";
@@ -117,7 +116,6 @@ export default function RedesignPageView({ locale, page }: { locale: Locale; pag
 
   return (
     <div lang={locale} dir={localeDir(locale)}>
-      {locale !== "en" && <HtmlLang lang={locale} />}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />

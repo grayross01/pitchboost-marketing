@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import HtmlLang from "@/components/marketing/html-lang";
 import { LocaleLinks } from "@/components/marketing/presentation-hub-view";
 import TopicBox, { presentSignupUrl } from "@/components/marketing/topic-box";
 import { PRESENTATIONS_UPDATED, type PresentationPage } from "@/lib/presentations";
@@ -88,7 +87,6 @@ export default function PresentationPageView({ locale, page }: { locale: Locale;
 
   return (
     <div lang={locale} dir={localeDir(locale)}>
-      {locale !== "en" && <HtmlLang lang={locale} />}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />

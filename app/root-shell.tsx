@@ -59,7 +59,8 @@ const inter = Inter({
   weight: ["400", "500", "600", "700", "800"],
 });
 
-export const metadata: Metadata = {
+/** The site-wide metadata every root layout exports (one per language). */
+export const rootMetadata: Metadata = {
   title: {
     default: "PitchBoost: AI Presentation Maker",
     template: "%s | PitchBoost",
@@ -108,14 +109,23 @@ const websiteSchema = {
   publisher: { "@type": "Organization", name: "PitchBoost", url: "https://pitchboost.ai" },
 };
 
-export default function RootLayout({
+/**
+ * The page around every page: html, head scripts, navbar, footer and
+ * analytics. Each language has its own root layout (app/(en), app/(es) and so
+ * on) so the html tag says the page's real language: search engines read it,
+ * Bing (and with it ChatGPT search) among them. Pages in one language share
+ * this shell; moving between languages reloads the page.
+ */
+export function RootShell({
+  lang,
   children,
 }: Readonly<{
+  lang: "en" | "es" | "pt" | "fr" | "ar";
   children: React.ReactNode;
 }>) {
   return (
     <html
-      lang="en"
+      lang={lang}
       className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${arabic.variable}`}
     >
       <head>
