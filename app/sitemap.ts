@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { INDUSTRIES } from "@/lib/industries";
 import { COMPETITORS } from "@/lib/competitors";
+import { comparisonModified } from "@/lib/comparison-tests";
 import { FEATURES } from "@/lib/features";
 import { CITIES } from "@/lib/cities";
 import { NET_SHEET_STATES } from "@/lib/net-sheet-states";
@@ -131,7 +132,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entries.push({ url: `${BASE}/industries/${i.slug}`, changeFrequency: "monthly", priority: 0.8, lastModified: INDUSTRIES_UPDATED });
   }
   for (const c of COMPETITORS) {
-    entries.push({ url: `${BASE}/compare/${c.slug}`, changeFrequency: "monthly", priority: 0.8, lastModified: c.updated ?? COMPETITORS_UPDATED });
+    entries.push({ url: `${BASE}/compare/${c.slug}`, changeFrequency: "monthly", priority: 0.8, lastModified: comparisonModified(c) });
   }
   for (const c of COMPETITORS) {
     if (c.altSlug) entries.push({ url: `${BASE}/alternatives/${c.altSlug}`, changeFrequency: "monthly", priority: 0.75, lastModified: c.updated ?? COMPETITORS_UPDATED });
