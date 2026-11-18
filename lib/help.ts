@@ -316,7 +316,7 @@ export const HELP_ARTICLES: HelpArticle[] = [
       },
       {
         title: "Attach a deck and ask",
-        body: "In a chat, attach your .pptx (Google Slides and Keynote export to .pptx in one step) and say what you want: \"redesign this in our brand\", \"make my class presentation look professional\", or describe a new deck from scratch. Name a website for the brand if you have one.",
+        body: "In a chat, attach your .pptx (Google Slides and Keynote export to .pptx in one step) and say what you want: \"redesign this in our brand\", \"make my class presentation look professional\", or describe a new deck from scratch. Redesigns use the brand saved in your PitchBoost account.",
       },
       {
         title: "Open the deck in PitchBoost",
@@ -353,7 +353,7 @@ export const HELP_ARTICLES: HelpArticle[] = [
       },
     ],
     related: ["connect-claude", "redesign-a-powerpoint", "credits-and-plans"],
-    updated: "2026-09-30",
+    updated: "2026-11-17",
   },
 
   {

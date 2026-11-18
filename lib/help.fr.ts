@@ -281,7 +281,7 @@ export const HELP_ARTICLES_FR: HelpArticle[] = [
       },
       {
         "title": "Joignez une présentation et faites votre demande",
-        "body": "Dans une conversation, joignez votre .pptx (Google Slides et Keynote exportent en .pptx en une étape) et dites ce que vous voulez : « refais-la aux couleurs de notre marque », « donne un aspect professionnel à ma présentation de cours », ou décrivez une nouvelle présentation à partir de zéro. Indiquez un site web pour la marque si vous en avez un."
+        "body": "Dans une conversation, joignez votre .pptx (Google Slides et Keynote exportent en .pptx en une étape) et dites ce que vous voulez : « refais-la aux couleurs de notre marque », « donne un aspect professionnel à ma présentation de cours », ou décrivez une nouvelle présentation à partir de zéro. Les refontes utilisent la marque enregistrée dans votre compte PitchBoost."
       },
       {
         "title": "Ouvrez la présentation dans PitchBoost",
@@ -318,7 +318,7 @@ export const HELP_ARTICLES_FR: HelpArticle[] = [
       }
     ],
     "related": ["connect-claude", "redesign-a-powerpoint", "credits-and-plans"],
-    "updated": "2026-09-30"
+    "updated": "2026-11-17"
   },
 
   {

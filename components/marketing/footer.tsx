@@ -23,7 +23,7 @@ const FEATURE_LINKS = [
   { label: "Viewer Analytics", href: "/features/viewer-analytics" },
   { label: "Team & Permissions", href: "/features/team-and-permissions" },
   { label: "API & MCP", href: "/features/api-and-mcp" },
-  { label: "ChatGPT Plugin", href: "/chatgpt" },
+  { label: "Works with ChatGPT", href: "/chatgpt" },
 ] as const;
 
 const COMPARE_LINKS = [

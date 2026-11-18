@@ -1841,8 +1841,9 @@ body {
 .topic-input::placeholder { color: var(--ds-text-tertiary); }
 .topic-input-dark::placeholder { color: rgba(255, 255, 255, 0.6); }
 
-/* /chatgpt: landing page for ads inside ChatGPT. One big action, the plugin
-   listing beside it, and a sticky button on phones. */
+/* /chatgpt: how PitchBoost and ChatGPT work together. The hero keeps one big
+   action (the plugin), with its listing beside it and a sticky button on
+   phones; the sections below it are styled at the end of this file. */
 .marketing .chatgpt-hero {
   padding: 120px 0 72px;
   background: var(--ds-bg-light);
@@ -1994,5 +1995,389 @@ body {
   }
   .marketing:has(.chatgpt-sticky-cta) .footer {
     padding-bottom: 96px;
+  }
+}
+
+/* /chatgpt, below the hero: who does what, one slide before and after, the
+   two ways to pair them, prompts, the plugin's steps and the questions. */
+.marketing .chatgpt-narrow {
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.marketing .chatgpt-head h2,
+.marketing .chatgpt-head p,
+.marketing .chatgpt-foot,
+.marketing .chatgpt-pair figcaption {
+  text-wrap: balance;
+}
+.marketing .chatgpt-foot {
+  max-width: 640px;
+  margin: 28px auto 0;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ds-text-light);
+}
+.marketing .chatgpt-foot a,
+.marketing .chatgpt-pair figcaption a {
+  color: var(--ds-teal);
+  font-weight: 600;
+}
+
+/* Who does what: two cards and the hand-off between them. */
+.marketing .chatgpt-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: stretch;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+.marketing .chatgpt-split-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--ds-bg);
+  border: 1px solid var(--ds-border);
+  border-radius: var(--ds-radius-lg);
+  padding: 32px 34px 20px;
+}
+.marketing .chatgpt-split-card.is-ours {
+  background: linear-gradient(160deg, rgba(31, 107, 107, 0.07), rgba(232, 102, 90, 0.06));
+  border-color: rgba(31, 107, 107, 0.28);
+}
+.marketing .chatgpt-split-kicker {
+  margin: 0 0 6px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ds-text-light);
+}
+.marketing .chatgpt-split-card.is-ours .chatgpt-split-kicker {
+  color: var(--ds-teal);
+}
+.marketing .chatgpt-split-card h3 {
+  margin: 0 0 16px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--ds-dark);
+}
+.marketing .chatgpt-split-card dl {
+  flex: 1;
+  display: grid;
+  grid-auto-rows: 1fr;
+  margin: 0;
+}
+.marketing .chatgpt-split-card dl > div {
+  padding: 14px 0;
+  border-top: 1px solid var(--ds-border);
+}
+.marketing .chatgpt-split-card.is-ours dl > div {
+  border-top-color: rgba(31, 107, 107, 0.16);
+}
+.marketing .chatgpt-split-card dt {
+  margin: 0 0 3px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ds-dark);
+}
+.marketing .chatgpt-split-card dd {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ds-text-light);
+}
+.marketing .chatgpt-split-join {
+  align-self: center;
+  z-index: 1;
+  width: 44px;
+  height: 44px;
+  margin: 0 -8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ds-gradient);
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(31, 107, 107, 0.28);
+}
+
+/* One slide, before and after. */
+.marketing .chatgpt-pair {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.marketing .chatgpt-pair-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+.marketing .chatgpt-pair-label {
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ds-text-light);
+}
+.marketing .chatgpt-pair-label.is-after {
+  color: var(--ds-teal);
+}
+.marketing .chatgpt-pair img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--ds-border);
+  background: #fff;
+}
+.marketing .chatgpt-pair img.is-after {
+  box-shadow: 0 18px 40px rgba(15, 18, 32, 0.14);
+}
+.marketing .chatgpt-pair figcaption {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ds-text-light);
+}
+
+/* The two ways to pair them. */
+.marketing .chatgpt-ways {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+.marketing .chatgpt-way {
+  display: flex;
+  flex-direction: column;
+  background: var(--ds-bg);
+  border: 1px solid var(--ds-border);
+  border-radius: var(--ds-radius-lg);
+  padding: 32px 34px;
+}
+.marketing .chatgpt-way-tag {
+  align-self: flex-start;
+  margin-bottom: 16px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: rgba(31, 107, 107, 0.08);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ds-teal);
+}
+.marketing .chatgpt-way h3 {
+  margin: 0 0 10px;
+  font-size: 1.3rem;
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--ds-dark);
+}
+.marketing .chatgpt-way > p {
+  margin: 0 0 22px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--ds-text);
+}
+.marketing .chatgpt-way dl {
+  display: grid;
+  gap: 14px;
+  margin: 0 0 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--ds-border);
+}
+.marketing .chatgpt-way dt {
+  margin: 0 0 3px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ds-text-light);
+}
+.marketing .chatgpt-way dd {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ds-text);
+}
+.marketing .chatgpt-way-actions {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 18px;
+}
+.marketing .chatgpt-way-link {
+  display: inline-block;
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ds-teal);
+}
+
+/* Prompts, set as messages someone would send. */
+.marketing .chatgpt-prompts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+.marketing .chatgpt-prompts h3 {
+  margin: 0 0 2px;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--ds-dark);
+}
+.marketing .chatgpt-prompts-sub {
+  margin: 0 0 16px;
+  font-size: 13px;
+  color: var(--ds-text-light);
+}
+.marketing .chatgpt-prompts ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.marketing .chatgpt-prompts li {
+  padding: 14px 18px;
+  border: 1px solid var(--ds-border);
+  border-radius: 18px 18px 4px 18px;
+  background: var(--ds-bg);
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ds-text);
+}
+.marketing .chatgpt-prompts ul.is-ours li {
+  border-color: rgba(31, 107, 107, 0.28);
+  background: linear-gradient(160deg, rgba(31, 107, 107, 0.05), rgba(232, 102, 90, 0.04)), #fff;
+}
+
+/* The plugin's three steps. */
+.marketing .chatgpt-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.marketing .chatgpt-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+  padding: 26px 30px;
+  border: 1px solid var(--ds-border);
+  border-radius: 16px;
+  background: var(--ds-bg-light);
+}
+.marketing .chatgpt-step-num {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1F6B6B, #E8665A);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 800;
+}
+.marketing .chatgpt-step h3 {
+  margin: 0 0 6px;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--ds-dark);
+}
+.marketing .chatgpt-step p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--ds-text-light);
+}
+
+/* Questions. */
+.marketing .chatgpt-faq {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+.marketing .chatgpt-faq details {
+  padding: 16px 20px;
+  border: 1px solid var(--ds-border);
+  border-radius: 12px;
+  background: var(--ds-bg);
+}
+.marketing .chatgpt-faq summary {
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ds-dark);
+}
+.marketing .chatgpt-faq summary:focus-visible {
+  outline: 2px solid var(--ds-teal);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+.marketing .chatgpt-faq p {
+  margin: 10px 0 0;
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--ds-text);
+}
+
+/* Under the closing button: the web path, and whose trademark is whose. */
+.marketing .cta-box p.chatgpt-cta-alt {
+  margin: 18px 0 0;
+  font-size: 15px;
+  opacity: 1;
+}
+.marketing .cta-box p.chatgpt-cta-alt a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.marketing .cta-box p.chatgpt-legal {
+  margin: 34px 0 0;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+@media (max-width: 900px) {
+  .marketing .chatgpt-split {
+    grid-template-columns: 1fr;
+  }
+  .marketing .chatgpt-split-join {
+    margin: -8px auto;
+    transform: rotate(90deg);
+  }
+  .marketing .chatgpt-split-card {
+    padding: 26px 22px 14px;
+  }
+  .marketing .chatgpt-pair-grid,
+  .marketing .chatgpt-ways,
+  .marketing .chatgpt-prompts {
+    grid-template-columns: 1fr;
+  }
+  .marketing .chatgpt-prompts {
+    gap: 32px;
+  }
+  .marketing .chatgpt-way {
+    padding: 26px 22px;
+  }
+  .marketing .chatgpt-step {
+    gap: 16px;
+    padding: 22px 20px;
   }
 }

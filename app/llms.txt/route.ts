@@ -77,7 +77,7 @@ export function GET() {
     "## Use PitchBoost from ChatGPT or Claude",
     "",
     `- [API and MCP](${BASE}/features/api-and-mcp): the MCP server at ${APP}/api/mcp and the REST API; in ChatGPT add the PitchBoost plugin from the directory, in Claude add it as a custom connector`,
-    `- [PitchBoost in ChatGPT](${BASE}/chatgpt): the PitchBoost plugin in ChatGPT's plugin directory; attach a PowerPoint, ask, get it back redesigned; free ChatGPT accounts included`,
+    `- [PitchBoost and ChatGPT](${BASE}/chatgpt): how the two work together: ChatGPT drafts the outline and wording, PitchBoost designs the deck. Inside ChatGPT, add the PitchBoost plugin from the plugin directory, attach a PowerPoint, ask, and get it back redesigned (free ChatGPT accounts included); or bring the outline or .pptx ChatGPT made to pitchboost.ai`,
     `- [Use PitchBoost in ChatGPT, step by step](${BASE}/help/connect-chatgpt): add the plugin, sign in once, attach a .pptx, ask`,
     `- [Connect to Claude](${BASE}/help/connect-claude): step by step`,
     "",

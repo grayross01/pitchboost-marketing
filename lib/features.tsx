@@ -71,7 +71,7 @@ export const FEATURES: FeatureMeta[] = [
  *  pages. Rendered at the end of their group (desktop) and after the
  *  feature list (mobile). */
 export const FEATURE_EXTRA_LINKS: { group: string; label: string; href: string }[] = [
-  { group: "Build", label: "ChatGPT Plugin", href: "/chatgpt" },
+  { group: "Build", label: "Works with ChatGPT", href: "/chatgpt" },
 ];
 
 export const FEATURE_GROUPS: FeatureGroup[] = [

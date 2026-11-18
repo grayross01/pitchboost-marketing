@@ -295,7 +295,7 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
       },
       {
         "title": "Anexe uma apresentação e peça",
-        "body": "Em um chat, anexe seu .pptx (Google Slides e Keynote exportam para .pptx em um passo) e diga o que você quer: \"redesenhe isto na nossa marca\", \"deixe minha apresentação da aula com cara profissional\" ou descreva uma apresentação nova do zero. Informe um site para a marca, se tiver um."
+        "body": "Em um chat, anexe seu .pptx (Google Slides e Keynote exportam para .pptx em um passo) e diga o que você quer: \"redesenhe isto na nossa marca\", \"deixe minha apresentação da aula com cara profissional\" ou descreva uma apresentação nova do zero. Os redesenhos usam a marca salva na sua conta do PitchBoost."
       },
       {
         "title": "Abra a apresentação no PitchBoost",
@@ -336,7 +336,7 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
       "redesign-a-powerpoint",
       "credits-and-plans"
     ],
-    "updated": "2026-09-30"
+    "updated": "2026-11-17"
   },
   {
     "slug": "connect-claude",
