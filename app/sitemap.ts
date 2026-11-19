@@ -11,6 +11,7 @@ import { CHANGELOG } from "@/lib/changelog";
 import { RESEARCH } from "@/lib/research";
 import { PRESENTATIONS } from "@/lib/presentations";
 import { MAKERS } from "@/lib/makers";
+import { getMakerFor, makerLocales } from "@/lib/makers-i18n";
 import { getPresentationFor } from "@/lib/presentations-i18n";
 import { LOCALES, LOCALE_PREFIX } from "@/lib/redesign-i18n";
 import { getAllPosts } from "@/lib/blog";
@@ -82,9 +83,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       entries.push({ url: languages[l], changeFrequency: "monthly", priority: l === "en" ? 0.85 : 0.75, lastModified: getPresentationFor(l, p.slug)?.updated ?? p.updated, alternates: { languages } });
     }
   }
-  // Free makers (lib/makers): generators and converters under /tools.
+  // Free makers (lib/makers): generators and converters under /tools, in each language that has them.
   for (const m of MAKERS) {
-    entries.push({ url: `${BASE}/tools/${m.slug}`, changeFrequency: "monthly", priority: 0.9, lastModified: m.updated });
+    const locales = makerLocales(m.slug);
+    const languages: Record<string, string> = { "x-default": `${BASE}/tools/${m.slug}` };
+    for (const l of locales) languages[l] = `${BASE}${LOCALE_PREFIX[l]}/tools/${m.slug}`;
+    for (const l of locales) {
+      entries.push({ url: languages[l], changeFrequency: "monthly", priority: l === "en" ? 0.9 : 0.8, lastModified: getMakerFor(l, m.slug)?.updated ?? m.updated, alternates: { languages } });
+    }
   }
 
   entries.push({ url: `${BASE}/features`, changeFrequency: "monthly", priority: 0.85, lastModified: STATIC_PAGE_DATES["/features"] });

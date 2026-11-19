@@ -3,6 +3,7 @@ import Link from "next/link";
 import TopicBox from "@/components/marketing/topic-box";
 import { STATIC_PAGE_DATES } from "@/lib/page-dates";
 import { PRESENTATION_HUB, PRESENTATION_UI, getPresentations } from "@/lib/presentations-i18n";
+import { MAKER_UI, getMakers } from "@/lib/makers-i18n";
 import { LOCALES, LOCALE_NAME, LOCALE_PREFIX, OG_LOCALE, REDESIGN_UI, languageAlternates, type Locale } from "@/lib/redesign-i18n";
 import { localeDir, sharedCard } from "@/lib/locale-dir";
 
@@ -107,6 +108,16 @@ export default function PresentationHubView({ locale }: { locale: Locale }) {
               <p style={{ fontSize: 13, color: "var(--ds-text-secondary)", lineHeight: 1.6, margin: 0 }}>{hub.pitchCard.body}</p>
             </Link>
           </div>
+          {/* The free makers in this language: a box that builds one kind of deck with no account. */}
+          <p className="fade-up" style={{ fontSize: 14, color: "var(--ds-text-secondary)", marginTop: 28, textAlign: "center", lineHeight: 1.9 }}>
+            <strong style={{ color: "var(--ds-text-primary)" }}>{MAKER_UI[locale].moreLabel}:</strong>{" "}
+            {getMakers(locale).map((m, i) => (
+              <span key={m.slug}>
+                {i > 0 && " · "}
+                <Link href={`${prefix}/tools/${m.slug}`} style={{ color: "#1F6B6B" }}>{m.navLabel}</Link>
+              </span>
+            ))}
+          </p>
         </div>
       </section>
 

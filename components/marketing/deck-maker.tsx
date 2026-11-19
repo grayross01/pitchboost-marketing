@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { trackEvent } from "@/lib/analytics";
+import { DECK_MAKER_STRINGS, type DeckMakerStrings } from "@/components/marketing/deck-maker-strings";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 const TRY_API = `${APP_URL}/api/public/try-deck`;
@@ -14,41 +15,6 @@ type State =
   | { kind: "sending" }
   | { kind: "made"; shareUrl: string; typed: string }
   | { kind: "error"; message: string };
-
-/** The words around the box. English unless a page passes its own. */
-export interface DeckMakerStrings {
-  examplesLabel: string;
-  sending: string;
-  progress: string;
-  openFull: string;
-  linkLife: string;
-  keep: string;
-  another: string;
-  keepNote: string;
-  frameTitle: string;
-  failed: string;
-  unreachable: string;
-  /** Shown when the box holds all it takes, so a paste that was cut short is not a mystery. */
-  full: string;
-  /** Shown when the button is pressed with nothing in the box. */
-  empty: string;
-}
-
-export const DECK_MAKER_STRINGS: DeckMakerStrings = {
-  examplesLabel: "Or start from one of these",
-  sending: "Starting...",
-  progress: "It takes about two minutes, and the deck appears above when it is done.",
-  openFull: "Open it full screen",
-  linkLife: "The link works for 7 days.",
-  keep: "Keep it, edit it, make more",
-  another: "Make another",
-  keepNote: "A free account builds the full version in your brand: your first deck each month is free.",
-  frameTitle: "Your presentation",
-  failed: "That did not work. Try again in a minute, or sign up free and make it there.",
-  unreachable: "We could not reach PitchBoost just now. Try again in a minute.",
-  full: "This box is full. A free account takes much longer text.",
-  empty: "Add a line or two in the box first.",
-};
 
 /** The live deck page, scaled into a 16:9 box. It shows its own progress
  *  while the deck is being written and swaps itself in when it is ready. */
@@ -135,7 +101,12 @@ export default function DeckMaker({
       const res = await fetch(TRY_API, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(kind ? { prompt: t, shape: kind } : { prompt: t }) });
       const data = (await res.json().catch(() => ({}))) as { shareUrl?: string; error?: string };
       if (!res.ok || !data.shareUrl) {
-        setState({ kind: "error", message: data.error || strings.failed });
+        // The app explains a refusal in English. A page in another language uses its own words for the two
+        // refusals a visitor can meet, and its general line for anything else.
+        // (A translated set is known by having those words: the English set has none and shows the app's own.)
+        const own = res.status === 429 ? strings.limit : res.status === 503 ? strings.busy : undefined;
+        const translated = strings.limit !== undefined;
+        setState({ kind: "error", message: own ?? (translated ? undefined : data.error) ?? strings.failed });
         return;
       }
       trackEvent("tool_deck_made", { tool });
