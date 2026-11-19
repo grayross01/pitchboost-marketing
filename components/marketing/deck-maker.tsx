@@ -10,6 +10,7 @@ const MAX_SENT = 1000;
 
 type State =
   | { kind: "idle" }
+  | { kind: "empty" }
   | { kind: "sending" }
   | { kind: "made"; shareUrl: string; typed: string }
   | { kind: "error"; message: string };
@@ -29,6 +30,8 @@ export interface DeckMakerStrings {
   unreachable: string;
   /** Shown when the box holds all it takes, so a paste that was cut short is not a mystery. */
   full: string;
+  /** Shown when the button is pressed with nothing in the box. */
+  empty: string;
 }
 
 export const DECK_MAKER_STRINGS: DeckMakerStrings = {
@@ -44,6 +47,7 @@ export const DECK_MAKER_STRINGS: DeckMakerStrings = {
   failed: "That did not work. Try again in a minute, or sign up free and make it there.",
   unreachable: "We could not reach PitchBoost just now. Try again in a minute.",
   full: "This box is full. A free account takes much longer text.",
+  empty: "Add a line or two in the box first.",
 };
 
 /** The live deck page, scaled into a 16:9 box. It shows its own progress
@@ -108,10 +112,21 @@ export default function DeckMaker({
   const box = useRef<HTMLTextAreaElement>(null);
   const room = MAX_SENT - (kind ? kind.length + 2 : 0);
 
+  /** New words in the box, typed or from an example: the note about an empty box has done its job. */
+  function write(value: string) {
+    setTyped(value);
+    if (state.kind === "empty") setState({ kind: "idle" });
+  }
+
   async function make(e: React.FormEvent) {
     e.preventDefault();
     const t = typed.trim().slice(0, room);
-    if (t.length < 3) return;
+    // The button is never greyed out for an empty box: pressed, it says what is missing and puts the cursor there.
+    if (t.length < 3) {
+      setState({ kind: "empty" });
+      box.current?.focus();
+      return;
+    }
     setState({ kind: "sending" });
     try {
       const prompt = kind ? `${kind}\n\n${t}` : t;
@@ -148,7 +163,6 @@ export default function DeckMaker({
     );
   }
 
-  const tooShort = typed.trim().length < 3;
   return (
     <form onSubmit={make} style={{ maxWidth: 720, margin: "0 auto", background: "var(--ds-bg)", border: "1px solid var(--ds-border)", borderRadius: 18, padding: 18, textAlign: "start" }}>
       <label htmlFor={id} style={{ display: "block", fontSize: 14, fontWeight: 600, color: "var(--ds-text-primary)", marginBottom: 8 }}>
@@ -158,7 +172,7 @@ export default function DeckMaker({
         id={id}
         ref={box}
         value={typed}
-        onChange={(e) => setTyped(e.target.value)}
+        onChange={(e) => write(e.target.value)}
         maxLength={room}
         rows={5}
         placeholder={placeholder}
@@ -168,11 +182,13 @@ export default function DeckMaker({
       {typed.length >= room && <p role="status" style={{ margin: "8px 0 0", fontSize: 12.5, fontWeight: 600, color: "var(--ds-text-secondary)" }}>{strings.full}</p>}
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, flexWrap: "wrap", marginTop: 12 }}>
         <span style={{ fontSize: 12.5, color: "var(--ds-text-tertiary)", flex: "1 1 260px" }}>{hint}</span>
-        <button type="submit" className="btn btn-primary btn-lg" disabled={state.kind === "sending" || tooShort}>
+        <button type="submit" className="btn btn-primary btn-lg" disabled={state.kind === "sending"}>
           {state.kind === "sending" ? strings.sending : button}
         </button>
       </div>
-      {state.kind === "error" && <p role="alert" style={{ marginTop: 12, fontSize: 14, color: "#b42318" }}>{state.message}</p>}
+      {(state.kind === "error" || state.kind === "empty") && (
+        <p role="alert" style={{ marginTop: 12, fontSize: 14, color: "#b42318" }}>{state.kind === "error" ? state.message : strings.empty}</p>
+      )}
       {examples.length > 0 && (
         <div style={{ marginTop: 16, paddingTop: 14, borderTop: "1px solid var(--ds-border)" }}>
           <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: ".06em", textTransform: "uppercase", color: "var(--ds-text-secondary)", marginBottom: 8 }}>{strings.examplesLabel}</div>
@@ -181,7 +197,7 @@ export default function DeckMaker({
               <button
                 key={ex}
                 type="button"
-                onClick={() => { setTyped(ex.slice(0, room)); box.current?.focus(); }}
+                onClick={() => { write(ex.slice(0, room)); box.current?.focus(); }}
                 style={{ textAlign: "start", fontSize: 13.5, lineHeight: 1.55, color: "var(--ds-text-primary)", background: "var(--ds-bg-light)", border: "1px solid var(--ds-border)", borderRadius: 10, padding: "10px 12px", cursor: "pointer", fontFamily: "inherit" }}
               >
                 {ex}
