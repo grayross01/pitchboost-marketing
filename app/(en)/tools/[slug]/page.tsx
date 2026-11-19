@@ -17,7 +17,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  return makerPageMetadata(slug);
+  return makerPageMetadata("en", slug);
 }
 
 export default async function MakerPage({ params }: Props) {
