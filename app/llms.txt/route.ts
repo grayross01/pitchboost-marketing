@@ -7,6 +7,7 @@ import { getAllPosts } from "@/lib/blog";
 import { HELP_ARTICLES } from "@/lib/help";
 import { RESEARCH } from "@/lib/research";
 import { PRESENTATIONS } from "@/lib/presentations";
+import { MAKERS } from "@/lib/makers";
 
 /**
  * /llms.txt, a plain-text map of the site for LLMs and AI agents, following
@@ -117,6 +118,7 @@ export function GET() {
     "## Free tools, no sign-up",
     "",
     `- [Free AI presentation maker](${BASE}/tools/free-ai-presentation-maker): say what the presentation is about and get a designed deck at a link in about two minutes; two a day, no account`,
+    ...MAKERS.map((m) => `- [${m.navLabel}](${BASE}/tools/${m.slug}): ${m.metaDescription}`),
     `- [PowerPoint redesign preview](${BASE}/tools/redesign-preview): upload a .pptx and see the title slide and the busiest content slide redesigned in about a minute, every number kept; no account`,
     `- [Pitch deck evaluator](${BASE}/tools/deck-evaluator): graded evaluation of any .pptx with prioritized fixes and the claims to verify`,
     `- [Free tools hub](${BASE}/tools): every free, no-signup tool in one place`,

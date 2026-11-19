@@ -10,6 +10,7 @@ import { HELP_ARTICLES } from "@/lib/help";
 import { CHANGELOG } from "@/lib/changelog";
 import { RESEARCH } from "@/lib/research";
 import { PRESENTATIONS } from "@/lib/presentations";
+import { MAKERS } from "@/lib/makers";
 import { getPresentationFor } from "@/lib/presentations-i18n";
 import { LOCALES, LOCALE_PREFIX } from "@/lib/redesign-i18n";
 import { getAllPosts } from "@/lib/blog";
@@ -81,6 +82,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       entries.push({ url: languages[l], changeFrequency: "monthly", priority: l === "en" ? 0.85 : 0.75, lastModified: getPresentationFor(l, p.slug)?.updated ?? p.updated, alternates: { languages } });
     }
   }
+  // Free makers (lib/makers): generators and converters under /tools.
+  for (const m of MAKERS) {
+    entries.push({ url: `${BASE}/tools/${m.slug}`, changeFrequency: "monthly", priority: 0.9, lastModified: m.updated });
+  }
+
   entries.push({ url: `${BASE}/features`, changeFrequency: "monthly", priority: 0.85, lastModified: STATIC_PAGE_DATES["/features"] });
   for (const f of FEATURES) {
     entries.push({ url: `${BASE}/features/${f.slug}`, changeFrequency: "monthly", priority: 0.8, lastModified: FEATURE_PAGE_DATES[f.slug] ?? STATIC_PAGE_DATES["/features"] });
