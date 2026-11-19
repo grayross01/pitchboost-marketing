@@ -194,7 +194,7 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       {
         "heading": "Editable versus aspecto exacto",
         "paragraphs": [
-          "El PowerPoint editable se ve como la presentación web: el diseño de cada diapositiva (fondo, imágenes, formas y gráficos) llega como una sola imagen, y cada palabra va encima como un cuadro de texto real de PowerPoint que puedes editar, mover o cambiar de estilo. Si tu computadora no tiene alguna de las fuentes de la presentación, PowerPoint usa una parecida, así que una línea puede cortarse un poco distinto. El archivo de aspecto exacto es idéntico pixel por pixel porque cada diapositiva es una sola imagen de alta resolución, lo que también significa que su texto no se puede editar. En caso de duda, llévate ambos; una vez desbloqueadas las descargas de una presentación, cada archivo no cuesta nada más."
+          "El PowerPoint editable se ve como la presentación web: el diseño de cada diapositiva (fondo, imágenes, formas y gráficos) llega como una sola imagen, y cada palabra va encima como un cuadro de texto real de PowerPoint que puedes editar, mover o cambiar de estilo. El archivo lleva dentro las fuentes de la presentación, así que PowerPoint la muestra igual en una computadora que nunca las tuvo. El archivo de aspecto exacto es idéntico pixel por pixel porque cada diapositiva es una sola imagen de alta resolución, lo que también significa que su texto no se puede editar. En caso de duda, llévate ambos; una vez desbloqueadas las descargas de una presentación, cada archivo no cuesta nada más."
         ]
       },
       {
@@ -211,7 +211,7 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       },
       {
         "q": "¿Las fuentes están incrustadas en el PowerPoint editable?",
-        "a": "El archivo nombra las fuentes de tu marca; si una máquina no las tiene instaladas, PowerPoint sustituye una fuente similar. El archivo de aspecto exacto no tiene ese problema porque las diapositivas son imágenes."
+        "a": "Sí. El PowerPoint editable lleva las fuentes de la presentación dentro del archivo, así que se ve igual en una computadora que no las tiene instaladas. El archivo de aspecto exacto nunca las necesitó, porque sus diapositivas son imágenes."
       },
       {
         "q": "¿Hay una exportación a Google Slides?",
@@ -223,7 +223,7 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       "google-slides-and-keynote",
       "credits-and-plans"
     ],
-    "updated": "2026-11-10"
+    "updated": "2026-11-19"
   },
   {
     "slug": "share-a-deck-link",
