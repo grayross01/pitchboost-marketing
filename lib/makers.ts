@@ -3,7 +3,7 @@
  * their head or on their desk. Two kinds live here.
  *
  * - "generator": a business deck from a few lines (an investor pitch, a sales
- *   pitch, a client proposal). The box on the page makes a real deck with no
+ *   pitch, a client proposal, a quarterly business review, a board deck). The box on the page makes a real deck with no
  *   account, through the same quick maker as /tools/free-ai-presentation-maker.
  * - "converter": material turned into slides (pasted text, a PDF). Text works
  *   in the box with no account; a file needs a free account, so that page's
@@ -290,6 +290,164 @@ export const MAKERS: MakerPage[] = [
       { href: "/redesign/proposal-deck-redesign", label: "Already have a proposal? Proposal deck redesign" },
     ],
     ctaHeadline: "They asked for a proposal by Friday. It can be Tuesday.",
+    updated: "2026-11-19",
+  },
+
+  {
+    slug: "ai-qbr-generator",
+    family: "generator",
+    navLabel: "AI QBR generator",
+    hubDesc: "Name the customer, the goals you agreed and the quarter's numbers. Get a quarterly business review deck in about two minutes, awkward slide included. No account.",
+    hubTag: "For customer success teams",
+    metaTitle: "Free AI QBR Generator: Quarterly Business Reviews | PitchBoost",
+    metaDescription:
+      "Name the customer and the quarter's numbers and get a QBR deck in about two minutes: their goals, results, what went wrong and next quarter's plan. Free.",
+    ogTitle: "The QBR deck, in about two minutes.",
+    eyebrow: "Free tool, no sign-up",
+    heroHeadline: "Free AI QBR generator: the quarterly business review, without the lost weekend",
+    heroSubhead:
+      "Name the customer, the goals you agreed and what the quarter's numbers were. It builds the review in the order a customer wants to hear it, in about two minutes. Saying the awkward slide out loud is still your job.",
+    box: {
+      label: "Which customer, which quarter, and what happened?",
+      placeholder:
+        "Q3 review for Alder Hotels. Goal: faster check-in. Results: average check-in down from 4.2 to 2.9 minutes, 14 of 18 hotels live, 6 support tickets (2 still open). Missed: the loyalty integration slipped to November. Next quarter: the last 4 hotels, loyalty live. Renewal is in January.",
+      button: "Generate my QBR",
+      hint: "Give it the goals and the quarter's real numbers: it adds none. Two free decks a day, no account.",
+      kind: "A quarterly business review (QBR) deck for one named customer. 8 slides: a cover that names the customer and the quarter, then executive summary, their goals, results against those goals, adoption and usage, what did not go well and what we are doing about it, recommendations, next quarter's goals and plan.",
+      forLabel: "a quarterly business review",
+    },
+    examples: [
+      "QBR for Northwind Freight, Q2. Their goal: fewer empty miles. Route planning is live on all 80 trucks. Empty miles down from 18% to 14%. 9 of 11 dispatchers use it daily. Two outages in May, both under an hour. Next: the driver app pilot. The contract renews in September.",
+      "Quarterly review for Brookside School, autumn term. Their goal: no lesson lost to IT. 212 support tickets, 96% closed within a day. New laptops rolled out to 3 of 5 year groups, 2 delayed by supply. Next term: finish the rollout and run staff security training.",
+      "Q4 business review for Castell Property Group. Their goal: 30 enquiries from social. 36 posts published, followers up 22%, 41 enquiries. Video posts underperformed. Next quarter: fewer videos, a monthly market report, and a review of the retainer.",
+    ],
+    outlineLabel: "The deck it builds",
+    outlineTitle: "Seven slides after the cover, and one of them is the awkward one",
+    outlineBody: "A QBR is not a usage report with a logo on it. It is proof the quarter was worth paying for, and an agreement about the next one.",
+    outline: [
+      { title: "Executive summary", body: "The value delivered this quarter in a sentence, and the headline results. The slide their boss will read." },
+      { title: "Their goals", body: "What they said they wanted, so type it in. Everything after this is measured against it." },
+      { title: "Results against those goals", body: "Outcomes, not activity, from the numbers you typed. It adds none of its own." },
+      { title: "Adoption and usage", body: "Who is using it, where it is strong and where it is lagging, from what you gave it." },
+      { title: "What did not go well", body: "The missed milestone or the outage, named before they name it, with what you are doing about it." },
+      { title: "Recommendations", body: "Two or three things that would get them more out of it next quarter." },
+      { title: "Next quarter", body: "The goals and the plan, ready to be agreed in the room." },
+    ],
+    gets: [
+      { title: "About their goals, not your features", body: "The deck is built around what the customer wanted from the quarter. That is the part that gets skipped when the deck is copied forward from the last one." },
+      { title: "The numbers you typed, and no others", body: "It uses the figures you give it and adds none. An invented adoption figure, in front of the customer who owns the data, makes for a short meeting." },
+      { title: "The awkward slide, included", body: "What went wrong gets its own slide, with what you are doing about it. Customers forgive a miss. They do not forgive hearing about it second." },
+      { title: "Sent ahead, and seen", body: "With a free account the review goes out as a link in your brand, and you can see whether it was opened before the call." },
+    ],
+    faqs: [
+      { q: "Is the QBR generator really free?", a: FREE_ANSWER },
+      {
+        q: "What should a QBR deck include?",
+        a: "The customer's goals, results measured against those goals, adoption and usage, what did not go well, your recommendations, and the plan for next quarter. Lead with a one-slide summary for the executive who was not in the weekly calls.",
+      },
+      {
+        q: "What should I type to get a good QBR?",
+        a: "The customer, the quarter, the goals you agreed, the results in numbers, anything that went wrong, and what is planned next. Five or six sentences is enough. If a renewal is coming, say when.",
+      },
+      {
+        q: "Will it make up usage numbers or results?",
+        a: "No. It uses the figures you type and adds none. Where you gave it no number, the slide says it in words instead of inventing one.",
+      },
+      { q: "Can I download the QBR as PowerPoint or PDF?", a: DOWNLOAD_ANSWER },
+      {
+        q: "Can I make one for every customer, every quarter?",
+        a: "Yes. Each deck starts from the customer you name. With an account it is in your brand, and you can give a new review the look of last quarter's so the set stays consistent.",
+      },
+      {
+        q: "I already have last quarter's QBR deck. Can it update that?",
+        a: "Yes. Upload the PowerPoint and PitchBoost redesigns it in your brand, keeping every slide and number. Then type this quarter's figures onto the slides.",
+      },
+    ],
+    guides: [
+      { href: "/blog/qbr-deck", label: "How to build a QBR deck your customer will actually use" },
+      { href: "/redesign/qbr-deck-redesign", label: "Already have a deck? QBR deck redesign" },
+      { href: "/presentations/report-presentation", label: "Report presentations" },
+    ],
+    ctaHeadline: "The quarter is over. The deck does not have to take the next one.",
+    updated: "2026-11-19",
+  },
+
+  {
+    slug: "ai-board-deck-generator",
+    family: "generator",
+    navLabel: "AI board deck generator",
+    hubDesc: "Give it the quarter against plan, the cash position and the decisions you need. Get a board meeting deck in about two minutes, with the asks up front. No account.",
+    hubTag: "For the next board meeting",
+    metaTitle: "Free AI Board Deck Generator for Board Meetings | PitchBoost",
+    metaDescription:
+      "Give it the quarter against plan, your cash and the decisions you need and get a board meeting deck in about two minutes. Asks up front. Free, no account.",
+    ogTitle: "The board deck, with the asks up front.",
+    eyebrow: "Free tool, no sign-up",
+    heroHeadline: "Free AI board deck generator: the board meeting deck, with the decisions up front",
+    heroSubhead:
+      "Give it how the quarter went against plan, where the cash stands and what you need the board to decide. It builds a deck directors can read on a phone the night before, in about two minutes. The bad news still has to come from you.",
+    box: {
+      label: "How did the quarter go, and what do you need from the board?",
+      placeholder:
+        "Q3 board meeting for Ledgerly. Revenue $412k against a plan of $450k. 163 clinics, up from 140. Churn 2.1%. Cash $1.9M, 14 months of runway. The UK launch slipped to January. Decisions: approve two sales hires, and a $500k venture debt line.",
+      button: "Generate my board deck",
+      hint: "Give it actuals and plan: it adds no figures. Two free decks a day, no account.",
+      kind: "A board meeting deck for a company's board of directors. 8 slides: a cover with the company and the meeting, then executive summary, decisions requested, key metrics against plan, financials (only the figures given), what went well and what did not, key initiatives, risks and where we need help.",
+      forLabel: "a board meeting deck",
+    },
+    examples: [
+      "Board deck for Brightloop, Q2: 74 HVAC companies paying, plan was 80. Monthly revenue $29.6k, up 9% a month. Cash $1.4M, 16 months of runway. A competitor cut prices in May. Decisions: approve the plumbing pilot and the head of sales hire.",
+      "Quarterly board meeting for Kindred Kitchen: revenue $640k, 4% over plan. Gross margin fell from 71% to 66% on ingredient costs. 4,600 subscribers. The second kitchen opens in March, two months late. Decision needed: raise prices 6% in January.",
+      "Trustees meeting for Harbor Youth Sports, a nonprofit: 1,240 children enrolled, up 11%. Income $318k against a budget of $300k. Two coaches left. The pitch lease ends in June. Decisions: renew the lease for 5 years, and approve a part-time fundraiser.",
+    ],
+    outlineLabel: "The deck it builds",
+    outlineTitle: "Seven slides after the cover, with the decisions second",
+    outlineBody: "A board deck exists to get decisions made, and directors read it on a phone the night before. So the asks go up front, and nothing important waits for the appendix.",
+    outline: [
+      { title: "Executive summary", body: "How the quarter went against plan, in the few things a director should know if they read nothing else." },
+      { title: "Decisions requested", body: "What you need them to decide, stated as decisions. Early, so the meeting is spent on them." },
+      { title: "Key metrics against plan", body: "The numbers you gave it, each against plan. It does not round a miss up." },
+      { title: "Financials", body: "Revenue, burn, cash and runway, from your figures only. No figure given, no figure shown." },
+      { title: "What went well, what did not", body: "Both, plainly. Directors forgive misses. They do not forgive surprises." },
+      { title: "Key initiatives", body: "Where the big projects stand, and anything that changes the plan." },
+      { title: "Risks", body: "The few that could actually hurt, and where you need the board's help." },
+    ],
+    gets: [
+      { title: "The asks up front", body: "Decisions are the second slide, not the last. A decision left for slide 30 gets made on a follow-up call three weeks later." },
+      { title: "Your actuals, untouched", body: "It shows the figures you type against the plan you type, and adds none. A director who catches one invented number stops trusting the other forty." },
+      { title: "Readable the night before", body: "One point a slide, in type large enough for a phone. The deck is a link, so nobody has to find the right attachment." },
+      { title: "Know the pre-read was read", body: "With a free account the deck goes out as a link in your brand, and you can see when it was opened before the meeting." },
+    ],
+    faqs: [
+      { q: "Is the board deck generator really free?", a: FREE_ANSWER },
+      {
+        q: "What should a board deck include?",
+        a: "A one-slide summary, the decisions you need, key metrics against plan, the financials with cash and runway, what went well and what did not, where the big initiatives stand, and the risks. Detail goes in an appendix.",
+      },
+      {
+        q: "What should I type to get a good board deck?",
+        a: "The period, the headline numbers against plan, cash and runway, the wins and the misses, and the decisions you need. Five or six sentences is enough. The more actuals you give it, the less it has to say in words.",
+      },
+      {
+        q: "Will it make up financials or metrics?",
+        a: "No. It uses the figures you type and adds none. If you leave out cash or runway, the financials slide says so in words: it does not guess.",
+      },
+      { q: "Can I download the board deck as PowerPoint or PDF?", a: DOWNLOAD_ANSWER },
+      {
+        q: "Is it safe to put board numbers into a free tool?",
+        a: "The deck lives at an unlisted link that works for seven days: anyone with the link can open it, and it is not listed anywhere. For real board material, make it in a free account, where the link can be locked with a password.",
+      },
+      {
+        q: "I already have last quarter's board deck. Can it update that?",
+        a: "Yes. Upload the PowerPoint and PitchBoost redesigns it in your brand, keeping every slide and number. Then type this quarter's figures onto the slides.",
+      },
+    ],
+    guides: [
+      { href: "/blog/board-presentation", label: "How to make a board presentation directors actually read" },
+      { href: "/redesign/board-deck-redesign", label: "Already have a deck? Board deck redesign" },
+      { href: "/presentations/investor-update", label: "Investor updates" },
+    ],
+    ctaHeadline: "The meeting is on the calendar. The deck can be done by lunch.",
     updated: "2026-11-19",
   },
 
