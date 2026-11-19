@@ -194,7 +194,7 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
       {
         "heading": "Editável versus aparência exata",
         "paragraphs": [
-          "O PowerPoint editável tem a aparência da apresentação web: o design de cada slide (fundo, imagens, formas e gráficos) vem como uma única imagem, e cada palavra fica por cima como uma caixa de texto real do PowerPoint que você pode editar, mover ou mudar de estilo. Se o seu computador não tiver alguma das fontes da apresentação, o PowerPoint usa uma parecida, então uma linha pode quebrar um pouco diferente. O arquivo de aparência exata é pixel a pixel idêntico porque cada slide é uma única imagem de alta resolução, o que também significa que o texto dele não pode ser editado. Em caso de dúvida, pegue os dois; depois que os downloads de uma apresentação estão liberados, cada arquivo não custa nada a mais."
+          "O PowerPoint editável tem a aparência da apresentação web: o design de cada slide (fundo, imagens, formas e gráficos) vem como uma única imagem, e cada palavra fica por cima como uma caixa de texto real do PowerPoint que você pode editar, mover ou mudar de estilo. O arquivo leva dentro as fontes da apresentação, então o PowerPoint a mostra igual em um computador que nunca as teve. O arquivo de aparência exata é pixel a pixel idêntico porque cada slide é uma única imagem de alta resolução, o que também significa que o texto dele não pode ser editado. Em caso de dúvida, pegue os dois; depois que os downloads de uma apresentação estão liberados, cada arquivo não custa nada a mais."
         ]
       },
       {
@@ -211,7 +211,7 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
       },
       {
         "q": "As fontes estão incorporadas no PowerPoint editável?",
-        "a": "O arquivo nomeia suas fontes da marca; se uma máquina não as tem instaladas, o PowerPoint substitui por uma fonte similar. O arquivo de aparência exata não tem esse problema porque os slides são imagens."
+        "a": "Sim. O PowerPoint editável leva as fontes da apresentação dentro do arquivo, então fica igual em um computador que não as tem instaladas. O arquivo de aparência exata nunca precisou delas, porque seus slides são imagens."
       },
       {
         "q": "Existe exportação para Google Slides?",
@@ -223,7 +223,7 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
       "google-slides-and-keynote",
       "credits-and-plans"
     ],
-    "updated": "2026-11-10"
+    "updated": "2026-11-19"
   },
   {
     "slug": "share-a-deck-link",

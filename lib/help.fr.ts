@@ -186,7 +186,7 @@ export const HELP_ARTICLES_FR: HelpArticle[] = [
       {
         "heading": "Modifiable ou fidèle au rendu",
         "paragraphs": [
-          "Le PowerPoint modifiable ressemble à la présentation web : le design de chaque diapositive (arrière-plan, images, formes et graphiques) arrive sous forme d'une seule image, et chaque mot est placé par-dessus dans une vraie zone de texte PowerPoint que vous pouvez modifier, déplacer ou remettre en forme. Si votre ordinateur n'a pas l'une des polices de la présentation, PowerPoint la remplace par une police proche, si bien qu'une ligne peut passer à la ligne un peu différemment. Le fichier fidèle au rendu est identique au pixel près, car chaque diapositive est une seule image haute résolution, ce qui signifie aussi que son texte n'est pas modifiable. Dans le doute, prenez les deux ; une fois les téléchargements d'une présentation débloqués, chaque fichier ne coûte rien de plus."
+          "Le PowerPoint modifiable ressemble à la présentation web : le design de chaque diapositive (arrière-plan, images, formes et graphiques) arrive sous forme d'une seule image, et chaque mot est placé par-dessus dans une vraie zone de texte PowerPoint que vous pouvez modifier, déplacer ou remettre en forme. Le fichier contient les polices de la présentation, si bien que PowerPoint l'affiche à l'identique sur un ordinateur qui ne les a jamais eues. Le fichier fidèle au rendu est identique au pixel près, car chaque diapositive est une seule image haute résolution, ce qui signifie aussi que son texte n'est pas modifiable. Dans le doute, prenez les deux ; une fois les téléchargements d'une présentation débloqués, chaque fichier ne coûte rien de plus."
         ]
       },
       {
@@ -203,7 +203,7 @@ export const HELP_ARTICLES_FR: HelpArticle[] = [
       },
       {
         "q": "Les polices sont-elles intégrées dans le PowerPoint modifiable ?",
-        "a": "Le fichier indique les polices de votre marque ; si elles ne sont pas installées sur un ordinateur, PowerPoint les remplace par une police proche. Le fichier fidèle au rendu n'a pas ce problème, car les diapositives sont des images."
+        "a": "Oui. Le PowerPoint modifiable contient les polices de la présentation dans le fichier : il s'affiche donc à l'identique sur un ordinateur où elles ne sont pas installées. Le fichier fidèle au rendu n'en a jamais eu besoin, car ses diapositives sont des images."
       },
       {
         "q": "Existe-t-il un export Google Slides ?",
@@ -211,7 +211,7 @@ export const HELP_ARTICLES_FR: HelpArticle[] = [
       }
     ],
     "related": ["share-a-deck-link", "google-slides-and-keynote", "credits-and-plans"],
-    "updated": "2026-11-10"
+    "updated": "2026-11-19"
   },
 
   {

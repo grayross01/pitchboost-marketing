@@ -13,6 +13,48 @@ export interface ChangelogEntry {
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    date: "2026-11-19",
+    title: "Seven free tools, no account",
+    body: "Free generators on the website for a pitch deck, a sales pitch, a proposal, a QBR and a board deck, plus text to presentation and PDF to presentation. Type a few lines and a deck appears at a link. In English, Spanish, Portuguese, French and Arabic.",
+    area: "Site",
+  },
+  {
+    date: "2026-11-19",
+    title: "The editable PowerPoint carries its fonts",
+    body: "The editable PowerPoint now holds the deck's fonts inside the file, so it opens looking the same on a computer that never had them. Right-to-left paragraphs read right to left there too.",
+    area: "Decks",
+  },
+  {
+    date: "2026-11-19",
+    title: "Drag a corner to resize",
+    body: "Click a picture or a box and drag one of its corners to make it bigger or smaller. The plus and minus keys do it too.",
+    area: "Decks",
+  },
+  {
+    date: "2026-11-19",
+    title: "A whole-deck change that was not done costs nothing",
+    body: "After a change across the whole deck, the AI looks at the slides. If the change is not there it tries once more for free, and if it still is not there your credits come back. Asking to go back puts the earlier version back exactly.",
+    area: "Decks",
+  },
+  {
+    date: "2026-11-19",
+    title: "Thank-yous are free",
+    body: "Typing \"thanks\" or \"excellent\" to the AI no longer uses a credit. And when the words you want changed are on another slide, it tells you the cheapest way to change them.",
+    area: "Decks",
+  },
+  {
+    date: "2026-11-18",
+    title: "A new deck opens one slide at a time",
+    body: "When a deck finishes you see it first, one slide at a time at full size, before the share screen.",
+    area: "Decks",
+  },
+  {
+    date: "2026-11-18",
+    title: "A PDF brings its pictures",
+    body: "Turn a PDF into a deck and the pictures in it come along, ready to place on the slides.",
+    area: "Decks",
+  },
+  {
     date: "2026-11-07",
     title: "AI edits change what you asked and leave the rest alone",
     body: "The AI now names the exact pieces it's changing instead of rewriting the slide, on one slide or across the whole deck, so sizes, fonts and wording you didn't mention stay put. Moving a slide keeps it exactly as it was, \"put it back\" brings back the real earlier version, and whole-deck edits are about three times faster.",

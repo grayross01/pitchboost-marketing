@@ -34,7 +34,7 @@ export const STATIC_PAGE_DATES: Record<string, string> = {
   "/about": "2026-09-17",
   "/research": "2026-09-17",
   "/security": "2026-09-17",
-  "/changelog": "2026-11-06",
+  "/changelog": "2026-11-19",
   "/ideas": "2026-10-29",
   "/features": "2026-08-31",
   "/answers": "2026-11-05",

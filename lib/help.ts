@@ -217,7 +217,7 @@ export const HELP_ARTICLES: HelpArticle[] = [
       {
         heading: "Editable versus exact-look",
         paragraphs: [
-          "The editable PowerPoint looks like the web deck: each slide's design (background, images, shapes and charts) comes in as one picture, and every word sits on top as a real PowerPoint text box you can edit, move or restyle. If your computer doesn't have one of the deck's fonts, PowerPoint swaps in a similar one, so a line can wrap a little differently. The exact-look file is pixel-identical because each slide is a single high-resolution image, which also means its text cannot be edited. When in doubt, take both; once a deck's downloads are unlocked, each file costs nothing extra.",
+          "The editable PowerPoint looks like the web deck: each slide's design (background, images, shapes and charts) comes in as one picture, and every word sits on top as a real PowerPoint text box you can edit, move or restyle. The file carries the deck's fonts inside it, so PowerPoint shows it the same on a computer that never had them. The exact-look file is pixel-identical because each slide is a single high-resolution image, which also means its text cannot be edited. When in doubt, take both; once a deck's downloads are unlocked, each file costs nothing extra.",
         ],
       },
       {
@@ -234,7 +234,7 @@ export const HELP_ARTICLES: HelpArticle[] = [
       },
       {
         q: "Are the fonts embedded in the editable PowerPoint?",
-        a: "The file names your brand fonts; if a machine does not have them installed, PowerPoint substitutes a similar font. The exact-look file has no such issue because the slides are images.",
+        a: "Yes. The editable PowerPoint carries the deck's fonts inside the file, so it looks the same on a computer that does not have them installed. The exact-look file never needed them, because its slides are images.",
       },
       {
         q: "Is there a Google Slides export?",
@@ -242,7 +242,7 @@ export const HELP_ARTICLES: HelpArticle[] = [
       },
     ],
     related: ["share-a-deck-link", "google-slides-and-keynote", "credits-and-plans"],
-    updated: "2026-11-10",
+    updated: "2026-11-19",
   },
 
   {
