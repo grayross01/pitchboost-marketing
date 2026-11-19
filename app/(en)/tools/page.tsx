@@ -5,7 +5,7 @@ import { MAKERS } from "@/lib/makers";
 export const metadata: Metadata = {
   title: "Free Tools: AI Presentation, Pitch Deck and Proposal Generators",
   description:
-    "Free, no-signup tools: make a presentation, a pitch deck, a sales pitch or a proposal with AI, turn text or a PDF into slides, preview a PowerPoint redesign, grade a deck, and real estate tools for agents.",
+    "Free, no-signup tools: make a presentation, a pitch deck, a sales pitch, a proposal, a QBR or a board deck with AI, turn text or a PDF into slides, preview a PowerPoint redesign, grade a deck, and real estate tools for agents.",
   alternates: { canonical: "/tools" },
 };
 
