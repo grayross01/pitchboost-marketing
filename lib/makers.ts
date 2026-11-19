@@ -12,8 +12,9 @@
  * One query family per page. Resist near-duplicates (a "startup deck maker"
  * beside the pitch deck generator): doorway pages get a whole family ignored.
  *
- * `kind` is put in front of what the visitor types before it is sent, so the
- * quick maker builds the right shape. It names the slides in order because the
+ * `kind` is sent with what the visitor types (as `shape`), and the app puts it
+ * in front of their words for the writer, so the quick maker builds the right
+ * shape. It names the slides in order because the
  * "deck it builds" list on the page promises exactly those, and it says how
  * many (cover included) because the quick maker writes six to eight unless a
  * number is asked for. Keep the two in step, and try a changed `kind` against
@@ -38,7 +39,7 @@ export interface MakerPage {
     placeholder: string;       // a realistic example, <= 320 characters
     button: string;
     hint: string;              // one line under the box
-    kind: string;              // sent in front of what is typed; "" sends the text alone
+    kind: string;              // sent beside what is typed, as `shape`; "" sends the text alone
     forLabel: string;          // what the app is told it is making when the deck is kept
   };
   /** Only for a page whose real job needs a file: the first button goes to the upload screen. */
@@ -88,8 +89,8 @@ export const MAKERS: MakerPage[] = [
     },
     examples: [
       "Brightloop: an app that turns field technicians' voice notes into job reports. 60 HVAC companies pay $400 a month, growing 9% a month. Raising a $2M seed for sales hires.",
-      "Pre-revenue: a marketplace for refurbished lab equipment, for university labs. Three pilot universities signed. Raising a $500k pre-seed to build the listing tools.",
-      "Series A for a meal-kit company for people with kidney disease: $2.4M annual revenue, 71% gross margin, 4,200 subscribers. Raising $8M to open a second kitchen.",
+      "Benchmate, pre-revenue: a marketplace for refurbished lab equipment, for university labs. Three pilot universities signed. Raising a $500k pre-seed to build the listing tools.",
+      "Series A for Kindred Kitchen, meal kits for people with kidney disease: $2.4M annual revenue, 71% gross margin, 4,200 subscribers. Raising $8M to open a second kitchen.",
     ],
     outlineLabel: "The deck it builds",
     outlineTitle: "The eight slides investors look for, in the order they read them",
@@ -165,7 +166,7 @@ export const MAKERS: MakerPage[] = [
     },
     examples: [
       "Pitch our commercial cleaning service to Harbor Dental Group (6 clinics). They use three different cleaners today. We offer one contract, nightly service and a monthly audit.",
-      "Selling payroll software to a 40-person architecture firm that runs payroll in spreadsheets. The decision maker is the office manager. Going live takes two weeks.",
+      "Selling our payroll software to Tidewater Studio, a 40-person architecture firm that runs payroll in spreadsheets. The decision maker is the office manager. Going live takes two weeks.",
       "Renewal pitch for a current client, Alder Hotels: usage is up 30%. Propose moving from the Team plan to Enterprise, with single sign-on and a dedicated manager.",
     ],
     outlineLabel: "The deck it builds",
@@ -240,7 +241,7 @@ export const MAKERS: MakerPage[] = [
     },
     examples: [
       "Proposal to Castell Property Group for a 6-month social media retainer: 12 posts a month and a monthly report, $3,500 a month, starting in January.",
-      "Consulting proposal for a county health department: a review of their appointment system in 8 weeks, three workshops and a final report. $62,000 fixed fee.",
+      "Consulting proposal for the Larkmoor County health department: a review of their appointment system in 8 weeks, three workshops and a final report. $62,000 fixed fee.",
       "Proposal to renew and extend our IT support contract with Brookside School: same price, plus weekend cover and a yearly security review.",
     ],
     outlineLabel: "The deck it builds",

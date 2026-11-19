@@ -79,8 +79,9 @@ function DeckFrame({ src, title }: { src: string; title: string }) {
  * The box that makes a real deck with no account: what is typed goes to the
  * app's quick maker, and the deck's own page is shown while it is written.
  *
- * `kind` goes in front of what is typed (a pitch deck generator's box says
- * which slides it wants), so the room left for typing is what the quick maker
+ * `kind` is sent beside what is typed, as `shape` (a pitch deck generator's
+ * box says which slides it wants). The app puts it in front of the visitor's
+ * words for the writer, so the room left for typing is what the quick maker
  * takes less that. `forLabel` is what the app is told the deck is when it is
  * kept. `tool` names the page in the events.
  */
@@ -129,8 +130,9 @@ export default function DeckMaker({
     }
     setState({ kind: "sending" });
     try {
-      const prompt = kind ? `${kind}\n\n${t}` : t;
-      const res = await fetch(TRY_API, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ prompt }) });
+      // The instruction travels beside the visitor's words, not in front of them: the app hands both to the
+      // writer, and names the deck by the words alone.
+      const res = await fetch(TRY_API, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(kind ? { prompt: t, shape: kind } : { prompt: t }) });
       const data = (await res.json().catch(() => ({}))) as { shareUrl?: string; error?: string };
       if (!res.ok || !data.shareUrl) {
         setState({ kind: "error", message: data.error || strings.failed });
