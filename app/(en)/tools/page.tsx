@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { MAKERS } from "@/lib/makers";
 
 export const metadata: Metadata = {
-  title: "Free Tools: AI Presentation Maker, Redesign Preview and Real Estate Tools",
+  title: "Free Tools: AI Presentation, Pitch Deck and Proposal Generators",
   description:
-    "Free, no-signup tools: make a presentation with AI, preview a PowerPoint redesign, grade a deck, and real estate tools for agents (closing timelines, net sheets, open-house sign-in).",
+    "Free, no-signup tools: make a presentation, a pitch deck, a sales pitch or a proposal with AI, turn text or a PDF into slides, preview a PowerPoint redesign, grade a deck, and real estate tools for agents.",
   alternates: { canonical: "/tools" },
 };
 
@@ -15,6 +16,7 @@ const TOOLS = [
     desc: "Say what your presentation is about and get a designed deck at a link in about two minutes. A lesson, a report, a talk or a pitch. No account.",
     tag: "For anyone who presents",
   },
+  ...MAKERS.map((m) => ({ href: `/tools/${m.slug}`, title: m.navLabel, desc: m.hubDesc, tag: m.hubTag })),
   {
     href: "/tools/redesign-preview",
     title: "PowerPoint redesign preview",

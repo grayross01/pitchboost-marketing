@@ -1,6 +1,11 @@
+import { Fragment } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
-import MakerClient from "./maker-client";
+import DeckMaker from "@/components/marketing/deck-maker";
+import { MAKERS } from "@/lib/makers";
+
+/** A maker's name inside a sentence: "Text to presentation" loses its capital, "AI ..." and "PDF ..." keep theirs. */
+const inSentence = (label: string) => (/^(AI|PDF)\b/.test(label) ? label : label.charAt(0).toLowerCase() + label.slice(1));
 
 const TITLE = "Free AI Presentation Maker, No Sign-Up | PitchBoost";
 const DESCRIPTION =
@@ -90,7 +95,14 @@ export default function FreePresentationMakerPage() {
 
       <section style={{ padding: "0 0 64px", background: "var(--ds-bg-light)" }}>
         <div className="mkt-container">
-          <MakerClient />
+          <DeckMaker
+            tool="free-ai-presentation-maker"
+            label="What is your presentation about?"
+            placeholder="A 7-slide lesson on the causes of the French Revolution for my 10th grade history class, ending with three discussion questions"
+            button="Make my presentation"
+            hint="Say who it is for and how long. Two free decks a day, no account."
+            id="free-maker-prompt"
+          />
         </div>
       </section>
 
@@ -115,6 +127,15 @@ export default function FreePresentationMakerPage() {
           </div>
           <p style={{ textAlign: "center", fontSize: 14, color: "var(--ds-text-secondary)", marginTop: 28 }}>
             Already have slides? The <Link href="/tools/redesign-preview" style={{ color: "#1F6B6B" }}>free redesign preview</Link> rebuilds two of them, no account either. Or see <Link href="/ai-presentation-maker" style={{ color: "#1F6B6B" }}>how PitchBoost builds each kind of presentation</Link>.
+          </p>
+          <p style={{ textAlign: "center", fontSize: 14, color: "var(--ds-text-secondary)", marginTop: 10 }}>
+            Making something specific? There is a free tool for each:{" "}
+            {MAKERS.map((m, i) => (
+              <Fragment key={m.slug}>
+                {i > 0 && (i === MAKERS.length - 1 ? " and " : ", ")}
+                <Link href={`/tools/${m.slug}`} style={{ color: "#1F6B6B" }}>{inSentence(m.navLabel)}</Link>
+              </Fragment>
+            ))}.
           </p>
         </div>
       </section>
