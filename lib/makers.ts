@@ -145,7 +145,7 @@ export const MAKERS: MakerPage[] = [
     family: "generator",
     navLabel: "AI sales pitch generator",
     hubDesc: "Name the prospect and what you sell. Get a short sales pitch deck built around that one buyer's problem, in about two minutes. No account.",
-    hubTag: "For anyone with a meeting on Thursday",
+    hubTag: "For Thursday's meeting",
     metaTitle: "Free AI Sales Pitch Generator, No Sign-Up | PitchBoost",
     metaDescription:
       "Name the prospect and what you sell and get a sales pitch deck built for that buyer in about two minutes: their problem, your fix, proof and a next step. Free.",
@@ -220,7 +220,7 @@ export const MAKERS: MakerPage[] = [
     family: "generator",
     navLabel: "AI proposal generator",
     hubDesc: "Say who the client is, what the work is and what it costs. Get the proposal as a designed deck in about two minutes: scope, timeline, price and next steps. No account.",
-    hubTag: "For agencies, consultants and freelancers",
+    hubTag: "For agencies and consultants",
     metaTitle: "Free AI Proposal Generator, No Sign-Up | PitchBoost",
     metaDescription:
       "Describe the client, the work and the price and get a proposal as a designed deck in about two minutes: what you understood, approach, scope, timeline. Free.",
@@ -374,7 +374,7 @@ export const MAKERS: MakerPage[] = [
     family: "converter",
     navLabel: "PDF to presentation",
     hubDesc: "Upload a PDF report, brief or paper and get slides that keep its points, numbers and pictures. Free account, no card.",
-    hubTag: "For anyone handed a PDF and asked for slides",
+    hubTag: "For anyone handed a PDF",
     metaTitle: "PDF to Presentation: Turn a PDF into Slides with AI | PitchBoost",
     metaDescription:
       "Upload a PDF report, brief or paper and get a designed presentation that keeps its points, numbers and pictures. One free deck a month, no card needed.",
