@@ -76,6 +76,8 @@ export interface FooterCopy {
   company: { about: string; help: string; changelog: string; ideas: string; security: string; contact: string; privacy: string; terms: string };
   /** Follows "© 2026 PitchBoost." at the very bottom. */
   rights: string;
+  /** What a screen reader calls the list of languages at the bottom (each language is shown by its own name). */
+  language: string;
   /** One line under a column whose links all lead to pages published only in English. */
   inEnglish: string;
 }
@@ -422,6 +424,7 @@ export const FOOTER_COPY: Record<Locale, FooterCopy> = {
       terms: "Terms of Service",
     },
     rights: "All rights reserved.",
+    language: "Language",
     inEnglish: "These pages are in English.",
   },
   es: {
@@ -453,6 +456,7 @@ export const FOOTER_COPY: Record<Locale, FooterCopy> = {
       terms: "Términos del servicio",
     },
     rights: "Todos los derechos reservados.",
+    language: "Idioma",
     inEnglish: "Estas páginas están en inglés.",
   },
   pt: {
@@ -484,6 +488,7 @@ export const FOOTER_COPY: Record<Locale, FooterCopy> = {
       terms: "Termos de serviço",
     },
     rights: "Todos os direitos reservados.",
+    language: "Idioma",
     inEnglish: "Estas páginas estão em inglês.",
   },
   fr: {
@@ -515,6 +520,7 @@ export const FOOTER_COPY: Record<Locale, FooterCopy> = {
       terms: "Conditions d'utilisation",
     },
     rights: "Tous droits réservés.",
+    language: "Langue",
     inEnglish: "Ces pages sont en anglais.",
   },
   ar: {
@@ -546,6 +552,7 @@ export const FOOTER_COPY: Record<Locale, FooterCopy> = {
       terms: "شروط الخدمة",
     },
     rights: "جميع الحقوق محفوظة.",
+    language: "اللغة",
     inEnglish: "هذه الصفحات بالإنجليزية.",
   },
   de: {
@@ -577,6 +584,7 @@ export const FOOTER_COPY: Record<Locale, FooterCopy> = {
       terms: "Nutzungsbedingungen",
     },
     rights: "Alle Rechte vorbehalten.",
+    language: "Sprache",
     inEnglish: "Diese Seiten sind auf Englisch.",
   },
 };
