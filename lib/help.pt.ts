@@ -398,15 +398,15 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
     "category": "account",
     "title": "Como funcionam os créditos e os planos",
     "metaDescription": "Todo plano tem créditos mensais: até 10 slides custam 100 créditos e cada slide além de 10 soma 8. O que cada plano inclui, o que renova todo mês e como comprar mais.",
-    "answer": "Todo plano do PitchBoost inclui uma cota mensal de créditos, e cada ação de IA tem um preço fixo: uma apresentação (nova ou reconstruída) de até 10 slides custa 100 créditos, cada slide além de 10 soma 8 (4 no novo motor de apresentações), uma imagem com IA custa 10, uma edição de slide 10, uma edição da apresentação inteira 50, uma varredura de site 10. O Free inclui 150 créditos por mês (uma apresentação), o Starter 300, o Pro 1.200 e o Business 3.300. Os créditos do plano renovam todo mês; os créditos comprados em um pacote extra (planos pagos) passam para o mês seguinte. No app você vê a porcentagem da sua cota já usada, nunca um valor corrente em dólares.",
+    "answer": "Todo plano do PitchBoost inclui uma cota mensal de créditos, e cada ação de IA tem um preço fixo: uma apresentação (nova ou reconstruída) de até 10 slides custa 100 créditos, cada slide além de 10 soma 8 (4 no novo motor de apresentações), uma imagem com IA custa 10, uma edição de slide 10, uma edição da apresentação inteira 50, uma varredura de site 10. O Free inclui 150 créditos por mês (uma apresentação), o Starter 300, o Pro 1.500 e o Business 4.400. Os créditos do plano renovam todo mês; os créditos comprados em um pacote extra (planos pagos) passam para o mês seguinte. No app você vê a porcentagem da sua cota já usada, nunca um valor corrente em dólares.",
     "sections": [
       {
         "heading": "Os planos",
         "paragraphs": [
           "Free: 150 créditos por mês, um negócio, apresentações de até 10 slides com um pequeno selo, um link ao vivo compartilhável com análises completas dos visualizadores e modelos salvos. Baixar um arquivo exige um plano pago ou um pagamento único de US$ 9 por essa apresentação. Não precisa de cartão.",
           "Starter, $7 por mês: mais créditos de IA, 300 por mês, negócios ilimitados, apresentações de até 25 slides, sem selo em lugar nenhum, downloads em PowerPoint, PDF e Google Slides, pacotes extras.",
-          "Pro, $29 por mês: ainda mais créditos de IA, 1.200 por mês, apresentações de até 60 slides, domínios personalizados, acesso à API e ao MCP.",
-          "Business, $79 por mês: nossa maior cota de créditos de IA, 3.300 por mês, exportação de análises e envio a partir do seu próprio domínio.",
+          "Pro, $29 por mês: ainda mais créditos de IA, 1.500 por mês, apresentações de até 60 slides, domínios personalizados, acesso à API e ao MCP.",
+          "Business, $79 por mês: nossa maior cota de créditos de IA, 4.400 por mês, exportação de análises e envio a partir do seu próprio domínio.",
           "Análises completas dos visualizadores, modelos salvos e colegas de equipe estão em todos os planos, inclusive no Free, sem custo por pessoa. Todos compartilham os créditos de IA do espaço de trabalho.",
           "A cobrança anual é mais barata: Starter $70 por ano (cerca de $5,83 por mês), Pro $24 e Business $66 por mês no pagamento anual."
         ]
@@ -450,7 +450,7 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
       "download-powerpoint-or-pdf",
       "share-a-deck-link"
     ],
-    "updated": "2026-11-05"
+    "updated": "2026-11-23"
   },
   {
     "slug": "how-long-does-a-deck-take",

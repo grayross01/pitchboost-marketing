@@ -195,10 +195,11 @@ export const REDESIGNS_PT: RedesignPage[] = [
       },
       {
         "q": "Quanto custa rebrandar uma biblioteca?",
-        "a": "Um deck de até 10 slides usa 100 créditos. O plano gratuito cobre um deck por mês; para uma biblioteca real, o Pro ($29/mês) cobre cerca de 12 decks por mês e o Business ($79/mês) cerca de 33, aproximadamente um por dia."
+        "a": "Um deck de até 10 slides usa 100 créditos. O plano gratuito cobre um deck por mês; para uma biblioteca real, o Pro ($29/mês) cobre cerca de 15 decks por mês e o Business ($79/mês) cerca de 44, mais de um por dia."
       }
     ],
-    "ctaHeadline": "Finalize o rebranding: decks incluídos."
+    "ctaHeadline": "Finalize o rebranding: decks incluídos.",
+    "updated": "2026-11-23"
   },
   {
     "slug": "investor-deck-redesign",

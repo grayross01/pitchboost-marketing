@@ -13,6 +13,12 @@ export interface ChangelogEntry {
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    date: "2026-11-23",
+    title: "More credits on Pro and Business",
+    body: "Pro now comes with 1,500 credits a month and Business with 4,400, at the same prices.",
+    area: "Billing",
+  },
+  {
     date: "2026-11-19",
     title: "Seven free tools, no account",
     body: "Free generators on the website for a pitch deck, a sales pitch, a proposal, a QBR and a board deck, plus text to presentation and PDF to presentation. Type a few lines and a deck appears at a link. In English, Spanish, Portuguese, French and Arabic.",
