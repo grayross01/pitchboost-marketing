@@ -83,6 +83,8 @@ export interface HomeCopy {
       moreLabel: string;
       /** Seven links, in the order lineup.tsx lists their addresses. */
       more: string[];
+      /** One line under those links, shown only on a page in another language when some of them lead to pages published only in English (each of those carries hreflang="en"). The English page never shows it; it is the source for the others. */
+      moreInEnglish: string;
     };
     /** The handwritten line that leads from one act to the next. */
     thenPosts: string;
@@ -237,6 +239,7 @@ export const HOME_EN: HomeCopy = {
         "Link, PDF or editable PowerPoint",
         "Viewer analytics",
       ],
+      moreInEnglish: "Some of these pages are only in English.",
     },
     thenPosts: "then turn that deck into this",
     posts: {

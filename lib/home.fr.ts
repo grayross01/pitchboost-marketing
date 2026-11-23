@@ -3,15 +3,15 @@ import type { HomeCopy } from "./home-i18n";
 /** French (France, "vous") for the home page. lib/home-i18n.ts holds the English; keep the two in step. The theatre is rewritten, not translated word for word: à l'affiche, la distribution, la billetterie, le dernier rang. A no-break space goes before ? ! : and ; as on the site's other French pages. */
 export const HOME_FR: HomeCopy = {
   meta: {
-    title: "PitchBoost : refondez votre PowerPoint ou créez une présentation, à votre image",
+    title: "PitchBoost : refondez votre PowerPoint ou créez une présentation à vos couleurs",
     description:
-      "Importez le PowerPoint que vous avez déjà et PitchBoost reconstruit chaque diapositive à votre image, ou partez d'une description et recevez une nouvelle présentation, écrite pour votre public. Partagez-la sous forme de lien avec suivi, de PDF ou de PowerPoint modifiable.",
+      "Importez le PowerPoint que vous avez déjà et PitchBoost reconstruit chaque diapositive à vos couleurs, ou partez d'une description et recevez une nouvelle présentation, écrite pour votre public. Partagez-la sous forme de lien avec suivi, de PDF ou de PowerPoint modifiable.",
     schemaDescription:
-      "Créateur de présentations IA qui construit une nouvelle présentation à partir d'un prompt (un cours, un rapport, une conférence ou un pitch) ou refond à votre image un PowerPoint ou un PDF existant, en quelques minutes.",
+      "Créateur de présentations IA qui construit une nouvelle présentation à partir d'un prompt (un cours, un rapport, une conférence ou un pitch) ou refond à vos couleurs un PowerPoint ou un PDF existant, en quelques minutes.",
   },
   hero: {
     h1: { lead: "Des diapositives qui", mark: "réveillent", tail: " la salle.", sub: "Avec les publications, les publicités et le site web assortis." },
-    body: "Dites à PitchBoost sur quoi vous travaillez, ou confiez-lui le PowerPoint que vous avez déjà. Il met en page chaque diapositive à votre image, puis transforme la présentation en publications pour les réseaux, en publicités et en site web d'une page.",
+    body: "Dites à PitchBoost sur quoi vous travaillez, ou confiez-lui le PowerPoint que vous avez déjà. Il met en page chaque diapositive à vos couleurs, puis transforme la présentation en publications pour les réseaux, en publicités et en site web d'une page.",
     fine: "Offre gratuite, pour toujours. Sans carte bancaire.",
     alt: {
       deck: "La couverture d'une présentation : Brightwell Solar, bilan d'activité du troisième trimestre 2026",
@@ -22,7 +22,7 @@ export const HOME_FR: HomeCopy = {
     labels: { deck: "la présentation", site: "le site web", posts: "les publications", ad: "la publicité" },
     bubbles: {
       ooh: { text: "ouah.", width: 120 },
-      awake: { text: "je ne dors pas ?", width: 214 },
+      awake: { text: "moi, réveillé ?", width: 186 },
       encore: { text: "une autre !", width: 166 },
     },
   },
@@ -61,7 +61,7 @@ export const HOME_FR: HomeCopy = {
     decks: {
       tag: "ACTE I · LE CLOU DU SPECTACLE",
       title: "Présentations",
-      body: "Dites ce que vous présentez, ou importez le PowerPoint ou le PDF que vous avez déjà. Chaque diapositive revient mise en page à votre image, avec votre contenu et vos chiffres conservés.",
+      body: "Dites ce que vous présentez, ou importez le PowerPoint ou le PDF que vous avez déjà. Chaque diapositive revient mise en page à vos couleurs, avec votre contenu et vos chiffres conservés.",
       points: [
         "Partez d'une phrase, ou d'un .pptx ou d'un PDF jusqu'à 50 Mo",
         "Partagez un lien et voyez qui l'a ouvert et quelles diapositives ont retenu l'attention",
@@ -84,8 +84,9 @@ export const HOME_FR: HomeCopy = {
         "Lien, PDF ou PowerPoint modifiable",
         "Statistiques de lecture",
       ],
+      moreInEnglish: "Certaines de ces pages n'existent qu'en anglais.",
     },
-    thenPosts: "puis transformez cette présentation en ceci",
+    thenPosts: "puis faites-en ça",
     posts: {
       tag: "ACTE II · LE BOUCHE-À-OREILLE",
       title: "Publications pour les réseaux",
@@ -93,7 +94,7 @@ export const HOME_FR: HomeCopy = {
       points: ["Portrait, carré ou story", "Une légende écrite pour chaque plateforme", "À vous de les télécharger et de les publier, quand vous voulez"],
       cta: "Créer une publication",
       cards: [
-        "Visuel 1 du carrousel : 412 installations résidentielles, 18% de plus qu'au deuxième trimestre",
+        "Visuel 1 du carrousel : 412 installations résidentielles, 18 % de plus qu'au deuxième trimestre",
         "Visuel 2 du carrousel : 34 jours, délai moyen d'installation au troisième trimestre",
         "Visuel 3 du carrousel : les clients signent plus gros et restent",
         "Visuel 4 du carrousel : ce qui pourrait nous ralentir ensuite",
@@ -103,7 +104,7 @@ export const HOME_FR: HomeCopy = {
       weekLabel: "OU CINQ PUBLICATIONS POUR LA SEMAINE",
       week: [
         "Publication 1 de la semaine : 412 installations résidentielles au troisième trimestre",
-        "Publication 2 de la semaine : 27%, la part des ventes issue des recommandations",
+        "Publication 2 de la semaine : 27 %, la part des ventes issue des recommandations",
         "Publication 3 de la semaine : où en sont nos opérations après le troisième trimestre",
         "Publication 4 de la semaine : les risques que nous surveillons",
         "Publication 5 de la semaine : 30 jours, l'objectif du quatrième trimestre",
@@ -113,8 +114,8 @@ export const HOME_FR: HomeCopy = {
     ads: {
       tag: "ACTE III · LES AFFICHES",
       title: "Publicités",
-      body: "Écrivez la publicité une fois. PitchBoost la dessine à chaque taille diffusée sur Meta et LinkedIn : aucune taille n'est le mauvais recadrage d'une autre.",
-      points: ["Cinq tailles en un seul téléchargement, chacune nommée d'après son emplacement", "Des variantes à tester les unes contre les autres", "Envoyez un lien pour validation avant de la diffuser"],
+      body: "Écrivez la publicité une fois. PitchBoost la décline dans chaque format diffusé sur Meta et LinkedIn : aucun format n'est un recadrage raté d'un autre.",
+      points: ["Cinq formats en un seul téléchargement, chacun nommé d'après son emplacement", "Des variantes à tester les unes contre les autres", "Envoyez un lien pour validation avant de la diffuser"],
       cta: "Créer une publicité",
       sizes: [
         { alt: "La publicité en 16:9 pour le fil Facebook", caption: "Fil Facebook · 16:9" },
@@ -123,16 +124,16 @@ export const HOME_FR: HomeCopy = {
         { alt: "La publicité en 4:5 pour le fil Instagram", caption: "Instagram · 4:5" },
         { alt: "La publicité en 9:16 pour les stories et les Reels", caption: "Stories · 9:16" },
       ],
-      note: ["une pub.", "cinq tailles.", "zéro recadrage raté."],
+      note: ["une pub.", "cinq formats.", "zéro recadrage raté."],
     },
-    thenSites: "et une porte d'entrée pour le tout",
+    thenSites: "et une vitrine pour le tout",
     sites: {
-      tag: "ACTE IV · LA PORTE D'ENTRÉE",
+      tag: "ACTE IV · LA VITRINE",
       title: "Sites web",
       body: "Un site d'une page écrit à partir de votre présentation, de quelques phrases ou du site que vous avez déjà. Modifiez le texte directement sur la page, puis publiez. Nous l'hébergeons.",
       points: ["Écrit à partir d'une présentation, d'une description ou de votre site actuel", "S'adapte au téléphone sans que vous y touchiez", "En ligne à notre adresse, ou sur votre propre domaine"],
       cta: "Créer un site web",
-      altFull: "Le site d'une page complet de Brightwell Solar : un titre, ce que vous obtenez, le dernier trimestre en chiffres, des questions et un moyen de prendre contact",
+      altFull: "Le site complet de Brightwell Solar, sur une seule page : un titre, ce que vous obtenez, le dernier trimestre en chiffres, des questions et un moyen de prendre contact",
       altPhone: "Le même site sur un téléphone",
     },
   },
@@ -141,7 +142,7 @@ export const HOME_FR: HomeCopy = {
     title: "Pour ceux qui ont quelque chose à montrer, et pas d'équipe de design.",
     people: [
       { name: "Fondateurs et petites équipes", line: "Lever des fonds, vendre et recruter, en général le tout avant le déjeuner." },
-      { name: "Étudiants et universitaires", line: "Soutenances de thèse, cours, et ce travail de groupe qui, on ne sait comment, est devenu le vôtre." },
+      { name: "Étudiants et universitaires", line: "Soutenances de thèse, cours, et ce travail de groupe qui, comme par hasard, vous est retombé dessus." },
       { name: "Agences et consultants", line: "Présentations, publications, publicités et sites pour vos clients, comme si vous aviez un designer dans l'équipe." },
       { name: "Équipes commerciales", line: "Une présentation conçue pour chaque prospect, et les publications et publicités pour préparer le terrain." },
     ],
@@ -150,7 +151,7 @@ export const HOME_FR: HomeCopy = {
   alsoPlaying: {
     eyebrow: "AUSSI À L'AFFICHE CHEZ",
     title: "Vous parlez déjà à un robot ? Présentez-lui le nôtre.",
-    body: "Ajoutez le plugin PitchBoost dans ChatGPT, ou connectez-le à Claude ou à Cursor, et récupérez une présentation terminée, à votre image, sur un lien à partager. Sans copier-coller d'un onglet à l'autre.",
+    body: "Ajoutez le plugin PitchBoost dans ChatGPT, ou connectez-le à Claude ou à Cursor, et récupérez une présentation terminée, à vos couleurs, sur un lien à partager. Sans copier-coller d'un onglet à l'autre.",
     cta: "Voir comment ça marche avec ChatGPT",
     api: "API et MCP",
     ask: "Refais cette présentation à nos couleurs. C'est pour jeudi.",
@@ -169,8 +170,8 @@ export const HOME_FR: HomeCopy = {
     title: "Ce que PitchBoost ne fera pas à votre travail.",
     stamp: "NIET",
     rules: [
-      { title: "Pas de haussement d'épaules devant vos chiffres.", body: "Une refonte conserve les chiffres de votre original et les compare à celui-ci." },
-      { title: "Pas de faits d'origine inconnue.", body: "Tout ce qu'il recherche arrive avec sa source, pour que vous puissiez vérifier aussi." },
+      { title: "Pas de haussement d'épaules devant vos chiffres.", body: "Une refonte conserve les chiffres de votre fichier et les recoupe avec l'original." },
+      { title: "Pas de faits d'origine inconnue.", body: "Tout ce qu'il recherche arrive avec sa source, pour que vous puissiez vérifier vous aussi." },
       { title: "Rien qui détonne avec votre marque.", body: "Votre logo, vos couleurs et vos polices sur chaque diapositive, publication, publicité et page, repris de votre site web ou définis par vous." },
       { title: "Rien de publié dans votre dos.", body: "Les publications et les publicités sont à vous, à télécharger et à diffuser. Rien ne part tant que vous ne l'avez pas envoyé." },
     ],
@@ -179,18 +180,18 @@ export const HOME_FR: HomeCopy = {
   faqs: [
     {
       q: "Comment PitchBoost utilise-t-il l'IA pour créer des présentations ?",
-      a: "Vous dites à quoi sert la présentation et qui la verra (une classe, un conseil d'administration, une conférence, un prospect) et vous ajoutez les notes, les chiffres ou les documents dont vous disposez. PitchBoost rédige et met en page une présentation complète, à votre image et pensée pour cet objectif : un cours se termine sur les points clés et les questions, un rapport sur la décision attendue, un pitch sur une prochaine étape claire. Vous pouvez ensuite modifier chaque diapositive.",
+      a: "Vous dites à quoi sert la présentation et qui la verra (une classe, un conseil d'administration, une conférence, un prospect) et vous ajoutez les notes, les chiffres ou les documents dont vous disposez. PitchBoost rédige et met en page une présentation complète, à vos couleurs et pensée pour cet objectif : un cours se termine sur les points clés et les questions, un rapport sur la décision attendue, un pitch sur une prochaine étape claire. Vous pouvez ensuite modifier chaque diapositive.",
     },
     {
       q: "Puis-je importer le PowerPoint que j'ai déjà ?",
-      a: "Oui. Importez un fichier .pptx jusqu'à 50 Mo et PitchBoost reconstruit chaque diapositive à votre image, en conservant votre contenu et vos chiffres. Les présentations en PDF fonctionnent de la même façon, et celles de Google Slides et de Keynote aussi : exportez-les d'abord en .pptx. Vous récupérez le résultat sous forme de lien à partager, de PDF et de PowerPoint modifiable.",
+      a: "Oui. Importez un fichier .pptx jusqu'à 50 Mo et PitchBoost reconstruit chaque diapositive à vos couleurs, en conservant votre contenu et vos chiffres. Les présentations en PDF fonctionnent de la même façon, et celles de Google Slides et de Keynote aussi : exportez-les d'abord en .pptx. Vous récupérez le résultat sous forme de lien à partager, de PDF et de PowerPoint modifiable.",
     },
     {
       q: "Puis-je utiliser ma propre identité visuelle ?",
       a: "Oui. Indiquez votre site web à PitchBoost (ou celui de votre école ou de votre entreprise) et il en reprend le logo, les couleurs et les polices, ou définissez-les vous-même. Chaque présentation utilise ensuite cette identité automatiquement.",
     },
     {
-      q: "Sous quel format sont les présentations ?",
+      q: "Dans quels formats recevez-vous vos présentations ?",
       a: "Chaque présentation arrive sous forme de lien à partager, qui vous montre quand elle est ouverte et quelles diapositives ont été lues, ainsi qu'en PDF, en PowerPoint modifiable et en copie Google Slides.",
     },
     {
@@ -207,7 +208,7 @@ export const HOME_FR: HomeCopy = {
     },
     {
       q: "Puis-je créer des présentations depuis Claude ou mes propres outils ?",
-      a: "Oui. PitchBoost dispose d'un serveur MCP et d'une API REST : vous pouvez générer une présentation terminée, à votre image, directement depuis Claude, Cursor ou votre CRM, et récupérer un lien à partager avec les statistiques de lecture. Les détails se trouvent sur la page API et MCP.",
+      a: "Oui. PitchBoost dispose d'un serveur MCP et d'une API REST : vous pouvez générer une présentation terminée, à vos couleurs, directement depuis Claude, Cursor ou votre CRM, et récupérer un lien à partager avec les statistiques de lecture. Les détails se trouvent sur la page API et MCP.",
     },
     {
       q: "Puis-je résilier à tout moment ?",

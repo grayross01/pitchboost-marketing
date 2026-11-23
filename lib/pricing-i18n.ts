@@ -93,7 +93,7 @@ export const PLANS_COPY: Record<Locale, PlansCopy> = {
   },
   es: {
     perMonth: "/mes",
-    popular: "El favorito",
+    popular: "Favorito",
     free: {
       desc: "Ideal para probar PitchBoost",
       period: "Gratis para siempre",
@@ -154,7 +154,7 @@ export const PLANS_COPY: Record<Locale, PlansCopy> = {
   },
   pt: {
     perMonth: "/mês",
-    popular: "O favorito",
+    popular: "Favorito",
     free: {
       desc: "Perfeito para experimentar o PitchBoost",
       period: "Grátis para sempre",

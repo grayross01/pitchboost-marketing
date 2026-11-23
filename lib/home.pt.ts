@@ -3,15 +3,15 @@ import type { HomeCopy } from "./home-i18n";
 /** Brazilian Portuguese (você) for the home page. lib/home-i18n.ts holds the English; keep the two in step. The theatre is rewritten, not translated word for word: em cartaz, elenco, bilheteria, plateia, a turma do fundão. */
 export const HOME_PT: HomeCopy = {
   meta: {
-    title: "PitchBoost: redesenhe seu PowerPoint ou crie uma apresentação nova, na sua marca",
+    title: "PitchBoost: redesenhe seu PowerPoint ou crie uma apresentação nova, com a sua marca",
     description:
-      "Envie o PowerPoint que você já tem e o PitchBoost refaz cada slide na sua marca, ou comece com uma descrição e receba uma apresentação nova, escrita para o seu público. Compartilhe como link rastreável, PDF ou PowerPoint editável.",
+      "Envie o PowerPoint que você já tem e o PitchBoost refaz cada slide com a sua marca, ou comece com uma descrição e receba uma apresentação nova, escrita para o seu público. Compartilhe como link rastreável, PDF ou PowerPoint editável.",
     schemaDescription:
-      "Criador de apresentações com IA que monta uma apresentação nova a partir de um prompt (uma aula, um relatório, uma palestra ou um pitch) ou redesenha na sua marca um PowerPoint ou PDF que você já tem, em poucos minutos.",
+      "Criador de apresentações com IA que monta uma apresentação nova a partir de um prompt (uma aula, um relatório, uma palestra ou um pitch) ou redesenha com a sua marca um PowerPoint ou PDF que você já tem, em poucos minutos.",
   },
   hero: {
     h1: { lead: "Slides que", mark: "não dão sono", tail: ".", sub: "E os posts, anúncios e site para combinar." },
-    body: "Conte ao PitchBoost no que você está trabalhando, ou entregue o PowerPoint que você já tem. Ele faz o design de cada slide na sua marca e depois transforma a apresentação em posts para redes sociais, anúncios e um site de uma página.",
+    body: "Conte ao PitchBoost no que você está trabalhando, ou entregue o PowerPoint que você já tem. Ele faz o design de cada slide com a sua marca e depois transforma a apresentação em posts para redes sociais, anúncios e um site de uma página.",
     fine: "Plano gratuito para sempre. Sem cartão de crédito.",
     alt: {
       deck: "A capa de uma apresentação: Brightwell Solar, revisão de negócios do terceiro trimestre de 2026",
@@ -61,7 +61,7 @@ export const HOME_PT: HomeCopy = {
     decks: {
       tag: "ATO I · A ATRAÇÃO PRINCIPAL",
       title: "Apresentações",
-      body: "Diga o que você vai apresentar, ou envie o PowerPoint ou PDF que você já tem. Cada slide volta com design na sua marca, com o seu conteúdo e os seus números mantidos.",
+      body: "Diga o que você vai apresentar, ou envie o PowerPoint ou PDF que você já tem. Cada slide volta redesenhado com a sua marca, com o seu conteúdo e os seus números mantidos.",
       points: [
         "Comece com uma frase, ou com um .pptx ou PDF de até 50 MB",
         "Compartilhe um link e veja quem abriu e quais slides prenderam a atenção",
@@ -84,18 +84,19 @@ export const HOME_PT: HomeCopy = {
         "Link, PDF ou PowerPoint editável",
         "Análises dos visualizadores",
       ],
+      moreInEnglish: "Algumas dessas páginas estão só em inglês.",
     },
     thenPosts: "depois transforme essa apresentação nisto",
     posts: {
       tag: "ATO II · O BOCA A BOCA",
       title: "Posts para redes sociais",
       body: "Um carrossel, um post único ou uma semana de posts para LinkedIn, Facebook e Instagram. Um card feito a partir de uma apresentação diz de qual slide ele veio, então conferir um número leva um segundo.",
-      points: ["Retrato, quadrado ou story", "Uma legenda escrita para cada plataforma", "Seus para baixar e postar, quando você quiser"],
+      points: ["Vertical, quadrado ou story", "Uma legenda escrita para cada plataforma", "Você baixa e posta quando quiser"],
       cta: "Criar um post",
       cards: [
         "Card 1 do carrossel: 412 instalações residenciais, 18% a mais que no segundo trimestre",
         "Card 2 do carrossel: 34 dias, o tempo médio de instalação no terceiro trimestre",
-        "Card 3 do carrossel: os clientes estão fechando contratos maiores e ficando",
+        "Card 3 do carrossel: os clientes estão fechando contratos maiores e ficando por mais tempo",
         "Card 4 do carrossel: o que pode nos atrasar daqui para a frente",
         "Card 5 do carrossel: a seguir, 450 instalações e instalação em 30 dias",
       ],
@@ -113,7 +114,7 @@ export const HOME_PT: HomeCopy = {
     ads: {
       tag: "ATO III · OS CARTAZES",
       title: "Anúncios",
-      body: "Escreva o anúncio uma vez. O PitchBoost desenha em cada tamanho em que ele é veiculado na Meta e no LinkedIn, então nenhum tamanho é um corte malfeito de outro.",
+      body: "Escreva o anúncio uma vez. O PitchBoost cria o anúncio em cada tamanho veiculado na Meta e no LinkedIn, então nenhum tamanho é um corte malfeito de outro.",
       points: ["Cinco tamanhos em um download, cada um com o nome do lugar para onde vai", "Variações para testar uma contra a outra", "Envie um link para aprovação antes de veicular"],
       cta: "Criar um anúncio",
       sizes: [
@@ -150,18 +151,18 @@ export const HOME_PT: HomeCopy = {
   alsoPlaying: {
     eyebrow: "TAMBÉM EM CARTAZ EM",
     title: "Já conversa com um robô? Apresente o nosso a ele.",
-    body: "Adicione o plugin do PitchBoost no ChatGPT, ou conecte ao Claude ou ao Cursor, e receba uma apresentação pronta, na sua marca, em um link compartilhável. Sem copiar e colar entre abas.",
+    body: "Adicione o plugin do PitchBoost no ChatGPT, ou conecte ao Claude ou ao Cursor, e receba uma apresentação pronta, com a sua marca, em um link compartilhável. Sem copiar e colar entre abas.",
     cta: "Veja como funciona com o ChatGPT",
     api: "API e MCP",
-    ask: "Redesenhe esta apresentação na nossa marca. É para quinta.",
+    ask: "Redesenhe esta apresentação com a nossa marca. É para quinta.",
     answer: "Pronto. 14 slides, suas cores, seus números mantidos.",
     aside: "quinta? corajoso.",
   },
   boxOffice: {
     eyebrow: "A BILHETERIA",
     title: "Escolha seu lugar. Os mais baratos são de graça.",
-    body: "Comece grátis e mude de plano quando quiser. Todo plano inclui um orçamento mensal de IA que renova sozinho, e sua equipe vem junto sem custo por pessoa. Os planos pagos são mensais, ou anuais com desconto.",
-    foot: "Os mesmos créditos fazem apresentações, posts para redes sociais, anúncios e sites. No Free você faz os quatro com marca d'água; os downloads e a publicação vêm com um plano.",
+    body: "Comece grátis e mude de plano quando quiser. Todo plano inclui um orçamento mensal de IA que se renova sozinho, e sua equipe vem junto sem custo por pessoa. Os planos pagos são mensais, ou anuais com desconto.",
+    foot: "Os mesmos créditos valem para apresentações, posts para redes sociais, anúncios e sites. No plano Free você faz os quatro com marca d'água; downloads e publicação vêm com um plano pago.",
     tickets: ["ENTRADA FRANCA", "LUGAR MARCADO", "PRIMEIRA FILA", "A FILA INTEIRA"],
   },
   houseRules: {
@@ -172,18 +173,18 @@ export const HOME_PT: HomeCopy = {
       { title: "Nada de dar de ombros para os seus números.", body: "Um redesign mantém os números do seu original e os confere com ele." },
       { title: "Nada de dados misteriosos.", body: "Tudo o que ele pesquisa vem com a fonte, para você conferir também." },
       { title: "Nada fora da sua marca.", body: "Seu logo, suas cores e suas fontes em cada slide, post, anúncio e página, tirados do seu site ou definidos por você." },
-      { title: "Nada de postar pelas suas costas.", body: "Os posts e os anúncios são seus para baixar e veicular. Nada sai até você enviar." },
+      { title: "Nada de postar pelas suas costas.", body: "Você baixa os posts e os anúncios e publica quando quiser. Nada sai sem você mandar." },
     ],
   },
   heckles: { eyebrow: "GRITOS DA TURMA DO FUNDÃO", title: "Perguntas justas, gritadas com educação." },
   faqs: [
     {
       q: "Como o PitchBoost usa IA para criar apresentações?",
-      a: "Você diz para que serve a apresentação e quem vai assistir (uma turma, um conselho, um congresso, um cliente em potencial) e acrescenta as anotações, os números ou os documentos que tiver. O PitchBoost escreve e faz o design de uma apresentação completa, na sua marca e pensada para esse objetivo: uma aula termina com os pontos principais e perguntas, um relatório com a decisão necessária, um pitch com um próximo passo claro. Depois, você pode editar cada slide.",
+      a: "Você diz para que serve a apresentação e quem vai assistir (uma turma, um conselho, um congresso, um cliente em potencial) e acrescenta as anotações, os números ou os documentos que tiver. O PitchBoost escreve e faz o design de uma apresentação completa, com a sua marca e pensada para esse objetivo: uma aula termina com os pontos principais e perguntas, um relatório com a decisão necessária, um pitch com um próximo passo claro. Depois, você pode editar cada slide.",
     },
     {
       q: "Posso enviar o PowerPoint que eu já tenho?",
-      a: "Sim. Envie um .pptx de até 50 MB e o PitchBoost refaz cada slide na sua marca, mantendo o seu conteúdo e os seus números. Apresentações em PDF funcionam do mesmo jeito, e as do Google Slides e do Keynote também: exporte para .pptx antes. Você recebe o resultado como link compartilhável, PDF e PowerPoint editável.",
+      a: "Sim. Envie um .pptx de até 50 MB e o PitchBoost refaz cada slide com a sua marca, mantendo o seu conteúdo e os seus números. Apresentações em PDF funcionam do mesmo jeito, e as do Google Slides e do Keynote também: exporte para .pptx antes. Você recebe o resultado como link compartilhável, PDF e PowerPoint editável.",
     },
     {
       q: "Posso usar a minha própria marca?",
@@ -207,7 +208,7 @@ export const HOME_PT: HomeCopy = {
     },
     {
       q: "Posso criar apresentações pelo Claude ou pelas minhas próprias ferramentas?",
-      a: "Sim. O PitchBoost tem um servidor MCP e uma API REST, então você gera uma apresentação pronta, na sua marca, direto do Claude, do Cursor ou do seu CRM e recebe um link compartilhável com análises dos visualizadores. Os detalhes estão na página de API e MCP.",
+      a: "Sim. O PitchBoost tem um servidor MCP e uma API REST, então você gera uma apresentação pronta, com a sua marca, direto do Claude, do Cursor ou do seu CRM e recebe um link compartilhável com análises dos visualizadores. Os detalhes estão na página de API e MCP.",
     },
     {
       q: "Posso cancelar quando quiser?",

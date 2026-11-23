@@ -18,11 +18,19 @@ const MORE_ON_DECKS = [
   "/features/viewer-analytics",
 ];
 
+/** On a page in another language, the first two lead to that language's own pages instead of the English feature pages: the presentation maker for new decks, the redesign hub for upload and redesign. */
+const MORE_ON_DECKS_TRANSLATED: Record<string, string> = {
+  "/features/ai-deck-builder": "/ai-presentation-maker",
+  "/features/upload-and-redesign": "/redesign",
+};
+
 /** The four things PitchBoost makes, each with real output for the same made-up company. */
 export default function Lineup({ locale }: { locale: Locale }) {
   const t = HOME_COPY[locale].lineup;
   const go = arrow(locale);
   const rtl = localeDir(locale) === "rtl";
+  // The links under the decks, in this page's language where the site has the page. The ones still in English carry hreflang="en", and one line under the links says so (not a note on each).
+  const more = MORE_ON_DECKS.map((href) => localLink(locale, locale === "en" ? href : (MORE_ON_DECKS_TRANSLATED[href] ?? href)));
   // The example is an English-language company and its pieces are real output, so they stay as they were made: its caption keeps its language on every page.
   const example = locale === "en" ? {} : ({ lang: "en", dir: "ltr" } as const);
   return (
@@ -64,11 +72,11 @@ export default function Lineup({ locale }: { locale: Locale }) {
         </div>
         <p className="sh-more">
           <span>{t.decks.moreLabel}</span>
-          {MORE_ON_DECKS.map((href, i) => {
-            const to = localLink(locale, href);
-            return <Link key={href} href={to.href} hrefLang={to.hrefLang}>{t.decks.more[i]}{to.inEnglish}</Link>;
-          })}
+          {more.map((to, i) => (
+            <Link key={MORE_ON_DECKS[i]} href={to.href} hrefLang={to.hrefLang}>{t.decks.more[i]}</Link>
+          ))}
         </p>
+        {more.some((to) => to.hrefLang === "en") && <p className="sh-more-note">{t.decks.moreInEnglish}</p>}
         <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "10px", margin: "12px 0 8px" }}>
           <svg aria-hidden="true" viewBox="0 0 80 56" style={{ width: "66px", height: "46px", flex: "none", transform: rtl ? "scaleX(-1)" : undefined }}><path d="M 8 6 C 30 8 46 20 50 44" style={{ fill: "none", stroke: "#A93A2C", strokeWidth: "3", strokeLinecap: "round", strokeDasharray: "2 9" }}></path><path d="M 40 36 L 50 46 L 58 34" style={{ fill: "none", stroke: "#A93A2C", strokeWidth: "3", strokeLinecap: "round", strokeLinejoin: "round" }}></path></svg>
           <span style={{ fontFamily: "var(--font-caveat), cursive", fontWeight: "700", fontSize: "30px", lineHeight: "1", color: "#A93A2C", transform: "rotate(-2deg)" }}>{t.thenPosts}</span>

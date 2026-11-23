@@ -221,6 +221,8 @@
   text-decoration: none;
 }
 .sh-home .sh-more a:hover { border-color: #0E5A64; color: #0E5A64; }
+/* On a page in another language: one line under those links when some of them lead to pages published only in English. */
+.sh-more-note { margin-top: 10px; font-size: 13px; color: #5E7378; }
 .sh-castlinks { margin-top: 28px; display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 30px; }
 .sh-home .sh-castlinks a { padding: 10px 0; font-weight: 700; font-size: 16px; color: #0E5A64; }
 .sh-home .sh-finale-file { padding: 8px 0; font-weight: 700; font-size: 16px; color: #FFD15C; }
@@ -385,6 +387,9 @@
   .sh-maker-foot span { display: none; }
   /* The four choices fit on one line in English. In the other languages they are longer, so there they wrap. */
   .sh-home[lang] .sh-chips { flex-wrap: wrap; justify-content: flex-start; }
+  /* There the words before them ("Necesito" and the rest) stay, on a line of their own, because the choices finish
+     that sentence; the English choices are plain names and read well without their "I need a". */
+  .sh-home[lang] .sh-chips-label { display: block; flex-basis: 100%; }
 }
 @media (prefers-reduced-motion: reduce) {
   .sh-bob, .sh-wob, .sh-glow, .sh-fall, .sh-scroll { animation: none; }

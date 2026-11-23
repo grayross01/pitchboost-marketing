@@ -11,7 +11,7 @@ export const HOME_ES: HomeCopy = {
   },
   hero: {
     h1: { lead: "Diapositivas que", mark: "no dan sueño", tail: ".", sub: "Y las publicaciones, los anuncios y el sitio web que hacen juego." },
-    body: "Cuéntale a PitchBoost en qué estás trabajando, o pásale el PowerPoint que ya tienes. Diseña cada diapositiva con tu marca y después convierte la presentación en publicaciones para redes, anuncios y un sitio web de una página.",
+    body: "Cuéntale a PitchBoost en qué estás trabajando, o pásale el PowerPoint que ya tienes. PitchBoost diseña cada diapositiva con tu marca y luego convierte la presentación en publicaciones para redes, anuncios y un sitio web de una página.",
     fine: "Plan gratuito para siempre. Sin tarjeta de crédito.",
     alt: {
       deck: "La portada de una presentación: Brightwell Solar, revisión de negocio del tercer trimestre de 2026",
@@ -21,7 +21,7 @@ export const HOME_ES: HomeCopy = {
     },
     labels: { deck: "la presentación", site: "el sitio web", posts: "las publicaciones", ad: "el anuncio" },
     bubbles: {
-      ooh: { text: "guau.", width: 116 },
+      ooh: { text: "oooh.", width: 116 },
       awake: { text: "¿sigo despierto?", width: 214 },
       encore: { text: "¡otra, otra!", width: 170 },
     },
@@ -61,7 +61,7 @@ export const HOME_ES: HomeCopy = {
     decks: {
       tag: "ACTO I · EL PLATO FUERTE",
       title: "Presentaciones",
-      body: "Di qué vas a presentar, o sube el PowerPoint o PDF que ya tienes. Cada diapositiva vuelve diseñada con tu marca, con tu contenido y tus cifras intactos.",
+      body: "Di qué vas a presentar, o sube el PowerPoint o PDF que ya tienes. Cada diapositiva vuelve diseñada con tu marca, conservando tu contenido y tus cifras.",
       points: [
         "Empieza con una frase, o con un .pptx o PDF de hasta 50 MB",
         "Comparte un enlace y mira quién lo abrió y en qué diapositivas se detuvo",
@@ -84,13 +84,14 @@ export const HOME_ES: HomeCopy = {
         "Enlace, PDF o PowerPoint editable",
         "Analíticas de visualización",
       ],
+      moreInEnglish: "Algunas de estas páginas solo están en inglés.",
     },
     thenPosts: "y después convierte esa presentación en esto",
     posts: {
       tag: "ACTO II · EL BOCA A BOCA",
       title: "Publicaciones para redes",
       body: "Un carrusel, una sola publicación o una semana de publicaciones para LinkedIn, Facebook e Instagram. Cada tarjeta hecha a partir de una presentación dice de qué diapositiva salió, así que comprobar una cifra lleva un segundo.",
-      points: ["Vertical, cuadrado o historia", "Un texto escrito para cada plataforma", "Tuyas para descargar y publicar cuando quieras"],
+      points: ["Vertical, cuadrado o historia", "Un texto escrito para cada plataforma", "Las descargas y las publicas cuando quieras"],
       cta: "Crear una publicación",
       cards: [
         "Tarjeta 1 del carrusel: 412 instalaciones residenciales, un 18% más que en el segundo trimestre",
@@ -99,7 +100,7 @@ export const HOME_ES: HomeCopy = {
         "Tarjeta 4 del carrusel: qué podría frenarnos ahora",
         "Tarjeta 5 del carrusel: lo que sigue, 450 instalaciones y 30 días de instalación",
       ],
-      captionLabel: "SU TEXTO PARA LINKEDIN",
+      captionLabel: "EL TEXTO PARA LINKEDIN",
       weekLabel: "O CINCO PUBLICACIONES PARA LA SEMANA",
       week: [
         "Publicación 1 de la semana: 412 instalaciones residenciales en el tercer trimestre",
@@ -113,8 +114,8 @@ export const HOME_ES: HomeCopy = {
     ads: {
       tag: "ACTO III · LOS CARTELES",
       title: "Anuncios",
-      body: "Escribe el anuncio una vez. PitchBoost lo dibuja en cada tamaño en que se publica en Meta y LinkedIn, así que ningún tamaño es un mal recorte de otro.",
-      points: ["Cinco tamaños en una sola descarga, cada uno con el nombre del lugar adonde va", "Variaciones para probar unas contra otras", "Envía un enlace para el visto bueno antes de publicarlo"],
+      body: "Escribe el anuncio una vez. PitchBoost lo diseña de nuevo para cada tamaño que usan Meta y LinkedIn, así que ningún tamaño es un mal recorte de otro.",
+      points: ["Cinco tamaños en una sola descarga, cada uno con el nombre del lugar adonde va", "Variantes para comparar entre sí", "Envía un enlace para el visto bueno antes de publicarlo"],
       cta: "Crear un anuncio",
       sizes: [
         { alt: "El anuncio en 16:9 para el feed de Facebook", caption: "Feed de Facebook · 16:9" },
@@ -150,18 +151,18 @@ export const HOME_ES: HomeCopy = {
   alsoPlaying: {
     eyebrow: "TAMBIÉN SE PRESENTA EN",
     title: "¿Ya hablas con un robot? Preséntale el nuestro.",
-    body: "Añade el plugin de PitchBoost en ChatGPT, o conéctalo a Claude o Cursor, y recibe una presentación terminada, con tu marca, en un enlace para compartir. Sin copiar y pegar entre pestañas.",
+    body: "Agrega el plugin de PitchBoost en ChatGPT, o conéctalo a Claude o Cursor, y recibe una presentación terminada, con tu marca, en un enlace para compartir. Sin copiar y pegar entre pestañas.",
     cta: "Mira cómo funciona con ChatGPT",
     api: "API y MCP",
     ask: "Rediseña esta presentación con nuestra marca. Es para el jueves.",
-    answer: "Listo. 14 diapositivas, tus colores, tus cifras intactas.",
+    answer: "Listo. 14 diapositivas, tus colores, tus cifras conservadas.",
     aside: "¿el jueves? qué valiente.",
   },
   boxOffice: {
     eyebrow: "LA TAQUILLA",
     title: "Elige tu butaca. Las baratas son gratis.",
     body: "Empieza gratis y cambia de plan cuando quieras. Cada plan incluye un presupuesto mensual de IA que se renueva solo, y tu equipo entra sin costo por persona. Los planes de pago son mes a mes, o anuales con descuento.",
-    foot: "Los mismos créditos sirven para presentaciones, publicaciones para redes, anuncios y sitios web. En Free puedes crear los cuatro con marca de agua; las descargas y la publicación vienen con un plan.",
+    foot: "Los mismos créditos sirven para presentaciones, publicaciones para redes, anuncios y sitios web. En Free puedes crear los cuatro con marca de agua; las descargas y la publicación vienen con un plan de pago.",
     tickets: ["ENTRADA GENERAL", "BUTACA NUMERADA", "PRIMERA FILA", "LA FILA ENTERA"],
   },
   houseRules: {
@@ -171,8 +172,8 @@ export const HOME_ES: HomeCopy = {
     rules: [
       { title: "Nada de encogerse de hombros ante tus cifras.", body: "Un rediseño conserva las cifras de tu original y las compara con él." },
       { title: "Nada de datos misteriosos.", body: "Todo lo que busca viene con su fuente, para que tú también puedas comprobarlo." },
-      { title: "Nada fuera de tu marca.", body: "Tu logo, tus colores y tus fuentes en cada diapositiva, publicación, anuncio y página, tomados de tu sitio web o definidos por ti." },
-      { title: "Nada de publicar a tus espaldas.", body: "Las publicaciones y los anuncios son tuyos para descargar y publicar. Nada sale hasta que tú lo envías." },
+      { title: "Nada que desentone con tu marca.", body: "Tu logo, tus colores y tus fuentes en cada diapositiva, publicación, anuncio y página, tomados de tu sitio web o definidos por ti." },
+      { title: "Nada de publicar a tus espaldas.", body: "Tú descargas las publicaciones y los anuncios, y tú decides cuándo publicarlos. Nada sale hasta que lo envíes." },
     ],
   },
   heckles: { eyebrow: "GRITOS DESDE LA ÚLTIMA FILA", title: "Preguntas justas, gritadas con educación." },
@@ -187,7 +188,7 @@ export const HOME_ES: HomeCopy = {
     },
     {
       q: "¿Puedo usar mi propia marca?",
-      a: "Sí. Indícale a PitchBoost tu sitio web (o el de tu escuela o empresa) y toma de ahí el logo, los colores y las fuentes, o defínelos tú. Todas las presentaciones usan esa identidad automáticamente.",
+      a: "Sí. Si le indicas tu sitio web (o el de tu escuela o empresa), PitchBoost toma de ahí el logo, los colores y las fuentes. También puedes definirlos tú. Todas las presentaciones usan esa identidad automáticamente.",
     },
     {
       q: "¿En qué formato están las presentaciones?",
@@ -215,7 +216,7 @@ export const HOME_ES: HomeCopy = {
     },
     {
       q: "¿PitchBoost publica las cosas o lanza los anuncios por mí?",
-      a: "Los crea; publicarlos te toca a ti. Las publicaciones y los anuncios se descargan con el tamaño y el nombre del lugar adonde van. El sitio web es la excepción: pulsas publicar y nosotros lo alojamos.",
+      a: "Los crea; publicarlos te toca a ti. Las publicaciones y los anuncios se descargan con el tamaño y el nombre del lugar adonde van. El sitio web es la excepción: haces clic en Publicar y nosotros lo alojamos.",
     },
   ],
   finale: {
