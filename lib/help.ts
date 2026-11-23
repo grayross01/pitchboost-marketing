@@ -417,15 +417,15 @@ export const HELP_ARTICLES: HelpArticle[] = [
     metaDescription:
       "Monthly credits on every plan: a deck of up to 10 slides costs 100, each slide past 10 adds 8. What each plan includes, what resets each month, and how to buy more.",
     answer:
-      "Every PitchBoost plan includes a monthly credit allowance and every AI action has a fixed price: a deck (new or rebuilt) of up to 10 slides costs 100 credits, each slide past 10 adds 8 (4 on the new deck engine), an AI image is 10, a slide edit 10, a full-deck edit 50, a website scan 10. Free includes 150 credits a month (one deck), Starter 300, Pro 1,200 and Business 3,300. Plan credits reset every month; credits bought in a top-up pack (paid plans) carry over. In the app you see the percentage of your allowance used, never a running dollar figure.",
+      "Every PitchBoost plan includes a monthly credit allowance and every AI action has a fixed price: a deck (new or rebuilt) of up to 10 slides costs 100 credits, each slide past 10 adds 8 (4 on the new deck engine), an AI image is 10, a slide edit 10, a full-deck edit 50, a website scan 10. Free includes 150 credits a month (one deck), Starter 300, Pro 1,500 and Business 4,400. Plan credits reset every month; credits bought in a top-up pack (paid plans) carry over. In the app you see the percentage of your allowance used, never a running dollar figure.",
     sections: [
       {
         heading: "The plans",
         paragraphs: [
           "Free: 150 credits a month, one deal, decks up to 10 slides with a small badge, a shareable live link with full viewer analytics and saved templates. Downloading a file takes a paid plan or a one-time $9 for that deck. No card required.",
           "Starter, $7 a month: more AI credits, 300 a month, unlimited deals, decks up to 25 slides, no badge anywhere, PowerPoint, PDF and Google Slides downloads, top-up packs.",
-          "Pro, $29 a month: even more AI credits, 1,200 a month, decks up to 60 slides, custom domains, API and MCP access.",
-          "Business, $79 a month: our largest AI credit allowance, 3,300 a month, analytics export, and sending from your own domain.",
+          "Pro, $29 a month: even more AI credits, 1,500 a month, decks up to 60 slides, custom domains, API and MCP access.",
+          "Business, $79 a month: our largest AI credit allowance, 4,400 a month, analytics export, and sending from your own domain.",
           "Full viewer analytics, saved templates and teammates are on every plan, Free included, at no charge per person. Everyone shares the workspace's AI credits.",
           "Annual billing is cheaper: Starter $70 a year (about $5.83 a month), Pro $24 and Business $66 a month when paid yearly.",
         ],
@@ -465,7 +465,7 @@ export const HELP_ARTICLES: HelpArticle[] = [
       },
     ],
     related: ["slide-limits-by-plan", "download-powerpoint-or-pdf", "share-a-deck-link"],
-    updated: "2026-11-05",
+    updated: "2026-11-23",
   },
 
   {

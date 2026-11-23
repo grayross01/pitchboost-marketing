@@ -195,10 +195,11 @@ export const REDESIGNS_ES: RedesignPage[] = [
       },
       {
         "q": "¿Cuánto cuesta cambiar la marca de una biblioteca?",
-        "a": "Un deck de hasta 10 diapositivas usa 100 créditos. El plan gratuito cubre un deck al mes; para una biblioteca real, Pro ($29 al mes) cubre unos 12 decks al mes y Business ($79 al mes) unos 33, aproximadamente uno por día."
+        "a": "Un deck de hasta 10 diapositivas usa 100 créditos. El plan gratuito cubre un deck al mes; para una biblioteca real, Pro ($29 al mes) cubre unos 15 decks al mes y Business ($79 al mes) unos 44, más de uno por día."
       }
     ],
-    "ctaHeadline": "Termina el cambio de marca: presentaciones incluidas."
+    "ctaHeadline": "Termina el cambio de marca: presentaciones incluidas.",
+    "updated": "2026-11-23"
   },
   {
     "slug": "investor-deck-redesign",

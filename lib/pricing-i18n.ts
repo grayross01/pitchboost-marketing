@@ -64,7 +64,7 @@ export const PLANS_COPY: Record<Locale, PlansCopy> = {
       desc: "For people who present every week",
       period: "or $24/mo billed annually",
       features: [
-        "Even more AI credits: 1,200 a month",
+        "Even more AI credits: 1,500 a month",
         "Decks up to 60 slides",
         "Custom domains",
         "API and MCP access",
@@ -79,7 +79,7 @@ export const PLANS_COPY: Record<Locale, PlansCopy> = {
       period: "or $66/mo billed annually",
       features: [
         "Everything in Pro",
-        "Our largest AI credit allowance: 3,300 a month",
+        "Our largest AI credit allowance: 4,400 a month",
         "Analytics export",
         "Sending from your own domain",
         "Your team, at no charge per person",
@@ -125,7 +125,7 @@ export const PLANS_COPY: Record<Locale, PlansCopy> = {
       desc: "Para quienes presentan todas las semanas",
       period: "o $24/mes con facturación anual",
       features: [
-        "Aún más créditos de IA: 1,200 al mes",
+        "Aún más créditos de IA: 1,500 al mes",
         "Presentaciones de hasta 60 diapositivas",
         "Dominios personalizados",
         "Acceso a la API y al MCP",
@@ -140,7 +140,7 @@ export const PLANS_COPY: Record<Locale, PlansCopy> = {
       period: "o $66/mes con facturación anual",
       features: [
         "Todo lo de Pro",
-        "Nuestra mayor asignación de créditos de IA: 3,300 al mes",
+        "Nuestra mayor asignación de créditos de IA: 4,400 al mes",
         "Exportación de analíticas",
         "Envío desde tu propio dominio",
         "Tu equipo, sin costo por persona",
@@ -186,7 +186,7 @@ export const PLANS_COPY: Record<Locale, PlansCopy> = {
       desc: "Para quem apresenta toda semana",
       period: "ou $24/mês com cobrança anual",
       features: [
-        "Ainda mais créditos de IA: 1.200 por mês",
+        "Ainda mais créditos de IA: 1.500 por mês",
         "Apresentações de até 60 slides",
         "Domínios personalizados",
         "Acesso à API e ao MCP",
@@ -201,7 +201,7 @@ export const PLANS_COPY: Record<Locale, PlansCopy> = {
       period: "ou $66/mês com cobrança anual",
       features: [
         "Tudo do Pro",
-        "Nossa maior cota de créditos de IA: 3.300 por mês",
+        "Nossa maior cota de créditos de IA: 4.400 por mês",
         "Exportação de análises",
         "Envio a partir do seu próprio domínio",
         "Sua equipe, sem custo por pessoa",
@@ -247,7 +247,7 @@ export const PLANS_COPY: Record<Locale, PlansCopy> = {
       desc: "Pour ceux qui présentent chaque semaine",
       period: "ou $24/mois en facturation annuelle",
       features: [
-        "Encore plus de crédits IA : 1 200 par mois",
+        "Encore plus de crédits IA : 1 500 par mois",
         "Présentations jusqu'à 60 diapositives",
         "Domaines personnalisés",
         "Accès API et MCP",
@@ -262,7 +262,7 @@ export const PLANS_COPY: Record<Locale, PlansCopy> = {
       period: "ou $66/mois en facturation annuelle",
       features: [
         "Tout ce que comprend Pro",
-        "Notre plus grande allocation de crédits IA : 3 300 par mois",
+        "Notre plus grande allocation de crédits IA : 4 400 par mois",
         "Export des statistiques",
         "Envoi depuis votre propre domaine",
         "Votre équipe, sans frais par personne",
@@ -308,7 +308,7 @@ export const PLANS_COPY: Record<Locale, PlansCopy> = {
       desc: "لمن يقدّمون عروضًا كل أسبوع",
       period: "أو $24 شهريًا عند الدفع سنويًا",
       features: [
-        "أرصدة ذكاء اصطناعي أكثر وأكثر: 1,200 شهريًا",
+        "أرصدة ذكاء اصطناعي أكثر وأكثر: 1,500 شهريًا",
         "عروض حتى 60 شريحة",
         "نطاقات مخصّصة",
         "الوصول إلى API وMCP",
@@ -323,7 +323,7 @@ export const PLANS_COPY: Record<Locale, PlansCopy> = {
       period: "أو $66 شهريًا عند الدفع سنويًا",
       features: [
         "كل ما في Pro",
-        "أكبر حصة لدينا من أرصدة الذكاء الاصطناعي: 3,300 شهريًا",
+        "أكبر حصة لدينا من أرصدة الذكاء الاصطناعي: 4,400 شهريًا",
         "تصدير التحليلات",
         "الإرسال من نطاقك الخاص",
         "فريقك، دون رسوم عن كل شخص",

@@ -378,15 +378,15 @@ export const HELP_ARTICLES_FR: HelpArticle[] = [
     "category": "account",
     "title": "Comment fonctionnent les crédits et les offres",
     "metaDescription": "Des crédits mensuels avec chaque offre : une présentation jusqu'à 10 diapositives coûte 100 crédits, chaque diapositive au-delà de 10 en ajoute 8. Ce que comprend chaque offre, ce qui se renouvelle chaque mois et comment en acheter davantage.",
-    "answer": "Chaque offre PitchBoost comprend une allocation mensuelle de crédits, et chaque action IA a un prix fixe : une présentation (nouvelle ou refaite) jusqu'à 10 diapositives coûte 100 crédits, chaque diapositive au-delà de 10 en ajoute 8 (4 avec le nouveau moteur de présentation), une image IA coûte 10, la modification d'une diapositive 10, la modification de toute la présentation 50, l'analyse d'un site web 10. L'offre gratuite comprend 150 crédits par mois (une présentation), Starter 300, Pro 1 200 et Business 3 300. Les crédits de l'offre se renouvellent chaque mois ; les crédits achetés en pack de recharge (offres payantes) sont reportés. Dans l'application, vous voyez le pourcentage de votre allocation utilisé, jamais un montant en dollars cumulé.",
+    "answer": "Chaque offre PitchBoost comprend une allocation mensuelle de crédits, et chaque action IA a un prix fixe : une présentation (nouvelle ou refaite) jusqu'à 10 diapositives coûte 100 crédits, chaque diapositive au-delà de 10 en ajoute 8 (4 avec le nouveau moteur de présentation), une image IA coûte 10, la modification d'une diapositive 10, la modification de toute la présentation 50, l'analyse d'un site web 10. L'offre gratuite comprend 150 crédits par mois (une présentation), Starter 300, Pro 1 500 et Business 4 400. Les crédits de l'offre se renouvellent chaque mois ; les crédits achetés en pack de recharge (offres payantes) sont reportés. Dans l'application, vous voyez le pourcentage de votre allocation utilisé, jamais un montant en dollars cumulé.",
     "sections": [
       {
         "heading": "Les offres",
         "paragraphs": [
           "Gratuit : 150 crédits par mois, un deal, des présentations jusqu'à 10 diapositives avec un petit badge, un lien de partage en direct avec les statistiques de lecture complètes et les modèles enregistrés. Télécharger un fichier nécessite une offre payante ou un paiement unique de $9 pour cette présentation. Aucune carte bancaire requise.",
           "Starter, $7 par mois : plus de crédits IA, 300 par mois, des deals illimités, des présentations jusqu'à 25 diapositives, aucun badge nulle part, téléchargements PowerPoint, PDF et Google Slides, packs de recharge.",
-          "Pro, $29 par mois : encore plus de crédits IA, 1 200 par mois, des présentations jusqu'à 60 diapositives, les domaines personnalisés, l'accès API et MCP.",
-          "Business, $79 par mois : notre plus grande allocation de crédits IA, 3 300 par mois, l'export des statistiques et l'envoi depuis votre propre domaine.",
+          "Pro, $29 par mois : encore plus de crédits IA, 1 500 par mois, des présentations jusqu'à 60 diapositives, les domaines personnalisés, l'accès API et MCP.",
+          "Business, $79 par mois : notre plus grande allocation de crédits IA, 4 400 par mois, l'export des statistiques et l'envoi depuis votre propre domaine.",
           "Les statistiques de lecture complètes, les modèles enregistrés et les coéquipiers sont inclus dans toutes les offres, y compris l'offre gratuite, sans frais par personne. Tout le monde partage les crédits IA de l'espace de travail.",
           "La facturation annuelle est moins chère : Starter $70 par an (environ $5.83 par mois), Pro $24 et Business $66 par mois en paiement annuel."
         ]
@@ -426,7 +426,7 @@ export const HELP_ARTICLES_FR: HelpArticle[] = [
       }
     ],
     "related": ["slide-limits-by-plan", "download-powerpoint-or-pdf", "share-a-deck-link"],
-    "updated": "2026-11-05"
+    "updated": "2026-11-23"
   },
 
   {

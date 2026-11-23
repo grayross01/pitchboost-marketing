@@ -196,10 +196,11 @@ export const REDESIGNS_FR: RedesignPage[] = [
       },
       {
         "q": "Combien coûte le rebranding d'une bibliothèque ?",
-        "a": "Une présentation jusqu'à 10 diapositives utilise 100 crédits. L'offre gratuite couvre une présentation par mois ; pour une vraie bibliothèque, Pro ($29 par mois) couvre environ 12 présentations par mois et Business ($79 par mois) environ 33, soit à peu près une par jour."
+        "a": "Une présentation jusqu'à 10 diapositives utilise 100 crédits. L'offre gratuite couvre une présentation par mois ; pour une vraie bibliothèque, Pro ($29 par mois) couvre environ 15 présentations par mois et Business ($79 par mois) environ 44, soit plus d'une par jour."
       }
     ],
-    "ctaHeadline": "Terminez le rebranding, présentations comprises."
+    "ctaHeadline": "Terminez le rebranding, présentations comprises.",
+    "updated": "2026-11-23"
   },
   {
     "slug": "investor-deck-redesign",

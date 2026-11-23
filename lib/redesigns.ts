@@ -252,10 +252,11 @@ export const REDESIGNS: RedesignPage[] = [
       },
       {
         q: "What does rebranding a library cost?",
-        a: "A deck of up to 10 slides uses 100 credits. The free plan covers one deck a month; for a real library, Pro ($29/month) covers about 12 decks a month and Business ($79/month) about 33, roughly a deck a day.",
+        a: "A deck of up to 10 slides uses 100 credits. The free plan covers one deck a month; for a real library, Pro ($29/month) covers about 15 decks a month and Business ($79/month) about 44, more than a deck a day.",
       },
     ],
     ctaHeadline: "Finish the rebrand: decks included.",
+    updated: "2026-11-23",
   },
 
   {
