@@ -403,6 +403,13 @@ body {
   padding: 0 !important;
   background: none !important;
 }
+/* The menu on the Arabic pages reads right to left (navbar.tsx sets dir="rtl"
+   on it and on the phone menu): the sides set as left and right above swap,
+   and the group labels drop their letter spacing, which would pull joined
+   Arabic letters apart. */
+.marketing :is(.navbar, #mobileMenu)[dir="rtl"] .nav-logo { margin-right: 0; margin-left: 32px; }
+.marketing .navbar[dir="rtl"] :is(.nav-actions, .mobile-toggle) { margin-left: 0; margin-right: auto; }
+.marketing .navbar[dir="rtl"] .nav-dropdown-group-label { letter-spacing: 0; }
 
 /* Mobile industry expand */
 .marketing .mobile-industry-toggle {
@@ -1325,6 +1332,18 @@ body {
   font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.7);
 }
+
+/* On a page in another language: the line under a column whose links all lead to pages published only in English. */
+.marketing .footer-col .footer-note {
+  margin: 10px 0 0;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.5);
+}
+/* The footer on the Arabic pages reads right to left (footer.tsx sets dir="rtl"): the logo's margin swaps sides, and
+   the headings drop their letter spacing, which would pull joined Arabic letters apart. */
+.marketing .footer[dir="rtl"] .nav-logo { margin-right: 0; margin-left: 32px; }
+.marketing .footer[dir="rtl"] .footer-col .footer-heading { letter-spacing: 0; }
 
 /* --- Legal Pages --- */
 .marketing .legal-hero {

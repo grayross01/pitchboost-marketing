@@ -1,180 +1,176 @@
 import Link from "next/link";
 import Image from "next/image";
-import { PRESENTATIONS } from "@/lib/presentations";
+import { getPresentations } from "@/lib/presentations-i18n";
+import { FOOTER_COPY, MENU_COPY, chromeArrow, chromeLink } from "@/lib/chrome-i18n";
+import { localeDir } from "@/lib/locale-dir";
+import type { Locale } from "@/lib/redesign-i18n";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 const SIGNUP_URL = `${APP_URL}/signup`;
 
-const PRODUCT_LINKS = [
-  { label: "Pricing", href: "/pricing" },
-  { label: "Templates", href: `${APP_URL}/templates` },
-  { label: "Blog", href: "/blog" },
-  { label: "Research", href: "/research" },
-  { label: "Get Started", href: SIGNUP_URL },
-] as const;
+/** The feature pages the footer lists, by slug. The ChatGPT page follows them. */
+const FEATURE_SLUGS = ["ai-deck-builder", "upload-and-redesign", "output-types", "templates-and-slides", "brand-and-images", "publishing-and-sharing", "viewer-analytics", "team-and-permissions", "api-and-mcp"];
 
-const FEATURE_LINKS = [
-  { label: "AI Deck Builder", href: "/features/ai-deck-builder" },
-  { label: "Upload & Redesign", href: "/features/upload-and-redesign" },
-  { label: "Output Types", href: "/features/output-types" },
-  { label: "Templates & Saved Slides", href: "/features/templates-and-slides" },
-  { label: "Brand & Image Library", href: "/features/brand-and-images" },
-  { label: "Publishing & Sharing", href: "/features/publishing-and-sharing" },
-  { label: "Viewer Analytics", href: "/features/viewer-analytics" },
-  { label: "Team & Permissions", href: "/features/team-and-permissions" },
-  { label: "API & MCP", href: "/features/api-and-mcp" },
-  { label: "Works with ChatGPT", href: "/chatgpt" },
-] as const;
+/** The products the comparison pages set PitchBoost against. */
+const COMPETITORS = [
+  { name: "Gamma", href: "/compare/pitchboost-vs-gamma" },
+  { name: "Beautiful.ai", href: "/compare/pitchboost-vs-beautiful-ai" },
+  { name: "Pitch", href: "/compare/pitchboost-vs-pitch" },
+  { name: "Tome", href: "/compare/pitchboost-vs-tome" },
+];
 
-const COMPARE_LINKS = [
-  { label: "PitchBoost vs Gamma", href: "/compare/pitchboost-vs-gamma" },
-  { label: "PitchBoost vs Beautiful.ai", href: "/compare/pitchboost-vs-beautiful-ai" },
-  { label: "PitchBoost vs Pitch", href: "/compare/pitchboost-vs-pitch" },
-  { label: "PitchBoost vs Tome", href: "/compare/pitchboost-vs-tome" },
-] as const;
+type FooterLink = { label: string; href: string };
 
-const COMPANY_LINKS = [
-  { label: "About", href: "/about" },
-  { label: "Help center", href: "/help" },
-  { label: "Changelog", href: "/changelog" },
-  { label: "Suggest a feature", href: "/ideas" },
-  { label: "Security", href: "/security" },
-  { label: "Contact", href: "mailto:support@pitchboost.ai" },
-  { label: "Privacy Policy", href: "/privacy" },
-  { label: "Terms of Service", href: "/terms" },
-] as const;
+/**
+ * The footer, in the page's language (app/root-shell.tsx hands it over; the
+ * words are in lib/chrome-i18n.ts). A link leads to the page in that language
+ * where the site has one, and otherwise to the English page, marked
+ * hreflang="en"; a column whose links all lead to English pages says so once,
+ * under them. Arabic reads right to left.
+ */
+export default function MarketingFooter({ locale }: { locale: Locale }) {
+  const menu = MENU_COPY[locale];
+  const names = menu.names;
+  const t = FOOTER_COPY[locale];
+  const go = chromeArrow(locale);
+  const prefix = locale === "en" ? "" : `/${locale}`;
+  const dir = localeDir(locale) === "rtl" ? { dir: "rtl" as const } : {};
+  const home = chromeLink(locale, "/");
+  const maker = chromeLink(locale, "/ai-presentation-maker");
+  const allIndustries = chromeLink(locale, "/industries");
+  const allComparisons = chromeLink(locale, "/compare");
 
-const INDUSTRY_LINKS = [
-  { label: "Students", href: "/students" },
-  { label: "B2B Sales Teams", href: "/industries/b2b-sales" },
-  { label: "Agencies", href: "/industries/agencies" },
-  { label: "SaaS & Technology", href: "/industries/saas" },
-  { label: "Startups", href: "/industries/startups" },
-  { label: "Home Services", href: "/industries/home-services" },
-  { label: "Commercial Real Estate", href: "/industries/commercial-real-estate" },
-  { label: "Real Estate Agents", href: "/industries/real-estate-agents" },
-  { label: "Consultancies", href: "/industries/consultancies" },
-  { label: "Nonprofits", href: "/industries/nonprofits" },
-] as const;
+  const productLinks: FooterLink[] = [
+    { label: menu.pricing, href: "/pricing" },
+    { label: t.templates, href: `${APP_URL}/templates` },
+    { label: menu.blog, href: "/blog" },
+    { label: t.research, href: "/research" },
+    { label: menu.start, href: SIGNUP_URL },
+  ];
+  const featureLinks: FooterLink[] = [
+    ...FEATURE_SLUGS.map((slug) => ({ label: names.features[slug], href: `/features/${slug}` })),
+    { label: names.featureExtras["/chatgpt"], href: "/chatgpt" },
+  ];
+  const compareLinks: FooterLink[] = COMPETITORS.map(({ name, href }) => ({ label: t.versus.replace("{name}", name), href }));
+  const companyLinks: FooterLink[] = [
+    { label: t.company.about, href: "/about" },
+    { label: t.company.help, href: "/help" },
+    { label: t.company.changelog, href: "/changelog" },
+    { label: t.company.ideas, href: "/ideas" },
+    { label: t.company.security, href: "/security" },
+    { label: t.company.contact, href: "mailto:support@pitchboost.ai" },
+    { label: t.company.privacy, href: "/privacy" },
+    { label: t.company.terms, href: "/terms" },
+  ];
+  // The footer's own short list: the menu's names, except two it shortens.
+  const industryLinks: FooterLink[] = [
+    { label: names.audiences["/students"], href: "/students" },
+    { label: names.industries["b2b-sales"], href: "/industries/b2b-sales" },
+    { label: t.agencies, href: "/industries/agencies" },
+    { label: names.industries.saas, href: "/industries/saas" },
+    { label: names.industries.startups, href: "/industries/startups" },
+    { label: t.homeServices, href: "/industries/home-services" },
+    { label: names.industries["commercial-real-estate"], href: "/industries/commercial-real-estate" },
+    { label: names.industries["real-estate-agents"], href: "/industries/real-estate-agents" },
+    { label: names.industries.consultancies, href: "/industries/consultancies" },
+    { label: names.industries.nonprofits, href: "/industries/nonprofits" },
+  ];
+  const realEstateLinks: FooterLink[] = [
+    { label: t.realEstate.tools, href: "/tools" },
+    { label: t.realEstate.openHouse, href: "/tools/open-house-sign-in" },
+    { label: t.realEstate.netSheet, href: "/tools/seller-net-sheet" },
+    { label: t.realEstate.closingTimeline, href: "/tools/closing-timeline" },
+    { label: t.realEstate.agents, href: "/real-estate" },
+    { label: t.realEstate.bestSoftware, href: "/best-listing-presentation-software" },
+  ];
 
-const REAL_ESTATE_LINKS = [
-  { label: "Free tools", href: "/tools" },
-  { label: "Open house sign-in", href: "/tools/open-house-sign-in" },
-  { label: "Seller net sheet", href: "/tools/seller-net-sheet" },
-  { label: "Closing timeline", href: "/tools/closing-timeline" },
-  { label: "Real estate agents", href: "/real-estate" },
-  { label: "Best listing software", href: "/best-listing-presentation-software" },
-] as const;
+  /** One link in a column: an email address as it is, a page in this language where the site has one. */
+  const item = ({ label, href }: FooterLink) => {
+    const link = chromeLink(locale, href);
+    return (
+      <li key={href}>
+        {href.startsWith("mailto:") ? <a href={href}>{label}</a> : <Link href={link.href} hrefLang={link.hrefLang}>{label}</Link>}
+      </li>
+    );
+  };
+  /** The line under a column whose links all lead to pages published only in English. An English page never has one. */
+  const inEnglish = (hrefs: string[]) => hrefs.every((href) => chromeLink(locale, href).hrefLang === "en") && <p className="footer-note">{t.inEnglish}</p>;
 
-export default function MarketingFooter() {
   return (
-    <footer className="footer">
+    <footer className="footer" {...dir}>
       <div className="mkt-container">
         <div className="footer-grid" style={{ gridTemplateColumns: "1.6fr repeat(7, 1fr)", gap: 32 }}>
           <div className="footer-brand">
-            <Link href="/" className="nav-logo" style={{ color: "white" }}>
+            <Link href={home.href} className="nav-logo" style={{ color: "white" }}>
               <Image src="/icon.png" alt="PitchBoost" width={28} height={28} />
               PitchBoost
             </Link>
-            <p>
-              AI presentation maker for anyone who presents. Start from a prompt or the deck
-              you have, get every slide designed in your brand, and see how it lands.
-            </p>
+            <p>{t.about}</p>
           </div>
 
           <div className="footer-col">
-            <p className="footer-heading">Features</p>
-            <ul>
-              {FEATURE_LINKS.map(({ label, href }) => (
-                <li key={label}>
-                  <Link href={href}>{label}</Link>
-                </li>
-              ))}
-            </ul>
+            <p className="footer-heading">{menu.features}</p>
+            <ul>{featureLinks.map(item)}</ul>
+            {inEnglish(featureLinks.map((l) => l.href))}
           </div>
 
           <div className="footer-col">
-            <p className="footer-heading">Presentations</p>
+            <p className="footer-heading">{menu.presentations}</p>
             <ul>
-              {PRESENTATIONS.map(({ navLabel, slug }) => (
+              {getPresentations(locale).map(({ navLabel, slug }) => (
                 <li key={slug}>
-                  <Link href={`/presentations/${slug}`}>{navLabel}</Link>
+                  <Link href={`${prefix}/presentations/${slug}`}>{navLabel}</Link>
                 </li>
               ))}
               <li>
-                <Link href="/ai-presentation-maker" style={{ fontWeight: 600 }}>AI presentation maker →</Link>
+                <Link href={maker.href} hrefLang={maker.hrefLang} style={{ fontWeight: 600 }}>{`${t.presentationMaker} ${go}`}</Link>
               </li>
             </ul>
           </div>
 
           <div className="footer-col">
-            <p className="footer-heading">Product</p>
-            <ul>
-              {PRODUCT_LINKS.map(({ label, href }) => (
-                <li key={label}>
-                  <Link href={href}>{label}</Link>
-                </li>
-              ))}
-            </ul>
+            <p className="footer-heading">{t.headings.product}</p>
+            <ul>{productLinks.map(item)}</ul>
+            {inEnglish(productLinks.map((l) => l.href))}
           </div>
 
           <div className="footer-col">
-            <p className="footer-heading">Who It&apos;s For</p>
+            <p className="footer-heading">{menu.whoFor}</p>
             <ul>
-              {INDUSTRY_LINKS.map(({ label, href }) => (
-                <li key={label}>
-                  <Link href={href}>{label}</Link>
-                </li>
-              ))}
+              {industryLinks.map(item)}
               <li>
-                <Link href="/industries" style={{ fontWeight: 600 }}>View all →</Link>
+                <Link href={allIndustries.href} hrefLang={allIndustries.hrefLang} style={{ fontWeight: 600 }}>{`${t.viewAll} ${go}`}</Link>
               </li>
             </ul>
+            {inEnglish([...industryLinks.map((l) => l.href), "/industries"])}
           </div>
 
           <div className="footer-col">
-            <p className="footer-heading">Real estate</p>
-            <ul>
-              {REAL_ESTATE_LINKS.map(({ label, href }) => (
-                <li key={label}>
-                  <Link href={href}>{label}</Link>
-                </li>
-              ))}
-            </ul>
+            <p className="footer-heading">{t.headings.realEstate}</p>
+            <ul>{realEstateLinks.map(item)}</ul>
+            {inEnglish(realEstateLinks.map((l) => l.href))}
           </div>
 
           <div className="footer-col">
-            <p className="footer-heading">Compare</p>
+            <p className="footer-heading">{menu.compare}</p>
             <ul>
-              {COMPARE_LINKS.map(({ label, href }) => (
-                <li key={label}>
-                  <Link href={href}>{label}</Link>
-                </li>
-              ))}
+              {compareLinks.map(item)}
               <li>
-                <Link href="/compare" style={{ fontWeight: 600 }}>View all →</Link>
+                <Link href={allComparisons.href} hrefLang={allComparisons.hrefLang} style={{ fontWeight: 600 }}>{`${t.viewAll} ${go}`}</Link>
               </li>
             </ul>
+            {inEnglish([...compareLinks.map((l) => l.href), "/compare"])}
           </div>
 
           <div className="footer-col">
-            <p className="footer-heading">Company</p>
-            <ul>
-              {COMPANY_LINKS.map(({ label, href }) => (
-                <li key={label}>
-                  {href.startsWith("mailto:") ? (
-                    <a href={href}>{label}</a>
-                  ) : (
-                    <Link href={href}>{label}</Link>
-                  )}
-                </li>
-              ))}
-            </ul>
+            <p className="footer-heading">{t.headings.company}</p>
+            <ul>{companyLinks.map(item)}</ul>
+            {inEnglish(companyLinks.map((l) => l.href))}
           </div>
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} PitchBoost. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()}{` PitchBoost. ${t.rights}`}</p>
           <div style={{ display: "flex", gap: 16, alignItems: "center" }}>
             <a href="https://www.linkedin.com/company/pitchboost-ai" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="footer-social-link">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
