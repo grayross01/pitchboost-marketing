@@ -628,15 +628,19 @@ export function getHelpArticle(slug: string): HelpArticle | undefined {
   return HELP_ARTICLES.find((a) => a.slug === slug);
 }
 
-// ---- locale access (Spanish and Brazilian Portuguese live in generated siblings)
+// ---- locale access (the other languages live in siblings: help.es.ts and so on)
 import { HELP_ARTICLES_ES } from "./help.es";
 import { HELP_ARTICLES_PT } from "./help.pt";
 import { HELP_ARTICLES_FR } from "./help.fr";
 import { HELP_ARTICLES_AR } from "./help.ar";
+import { HELP_ARTICLES_DE } from "./help.de";
 import type { Locale } from "./redesign-i18n";
 
+/** Each language's articles, listed so that a language added to Locale has to say what it has (never English by default). */
+const ARTICLES: Record<Locale, HelpArticle[]> = { en: HELP_ARTICLES, es: HELP_ARTICLES_ES, pt: HELP_ARTICLES_PT, fr: HELP_ARTICLES_FR, ar: HELP_ARTICLES_AR, de: HELP_ARTICLES_DE };
+
 export function getHelpArticles(locale: Locale): HelpArticle[] {
-  return locale === "es" ? HELP_ARTICLES_ES : locale === "pt" ? HELP_ARTICLES_PT : locale === "fr" ? HELP_ARTICLES_FR : locale === "ar" ? HELP_ARTICLES_AR : HELP_ARTICLES;
+  return ARTICLES[locale];
 }
 export function getHelpArticleFor(locale: Locale, slug: string): HelpArticle | undefined {
   return getHelpArticles(locale).find((a) => a.slug === slug);

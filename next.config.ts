@@ -24,8 +24,8 @@ const nextConfig: NextConfig = {
       { source: "/login", destination: "https://app.pitchboost.ai/login", permanent: false },
       // Old slug of the sales-deck post; Search Console still shows it.
       { source: "/blog/sales-deck-vs-pitch-deck-key-differences-and-when-to-use-each", destination: "/blog/sales-deck-vs-pitch-deck", permanent: true },
-      // /es, /pt, /fr and /ar are the home page in those languages
-      // (app/(es)/es/page.tsx and its siblings). They redirected to
+      // /es, /pt, /fr, /ar and /de are the home page in those languages
+      // (app/(es)/es/page.tsx and its siblings). The first four redirected to
       // /<language>/redesign before those pages existed; a redirect for one
       // of them here would hide its page.
     ];

@@ -141,4 +141,50 @@ export const HELP_UI: Record<Locale, HelpUi> = {
     },
   },
   ar: HELP_UI_AR,
+  de: {
+    hubTitle: "Hilfe-Center",
+    hubMetaTitle: "PitchBoost Hilfe-Center: Redesign, Download, Teilen, ChatGPT und Claude",
+    hubMetaDescription:
+      "Kurze, präzise Antworten darauf, wie PitchBoost funktioniert: PowerPoint neu gestalten, Folienlimits je Tarif, Download als PowerPoint oder PDF, Links teilen, ChatGPT, Claude und Credits.",
+    hubSubhead: "Klare Antworten mit den echten Schritten und den echten Zahlen. Fehlt deine Frage, schreib uns, und wir ergänzen sie.",
+    breadcrumbHome: "Startseite",
+    breadcrumbHub: "Hilfe",
+    stepsLabel: "Schritte",
+    faqLabel: "Fragen",
+    relatedLabel: "Mehr zum Thema",
+    updatedLabel: "Aktualisiert am",
+    supportTitle: "Kommst du nicht weiter?",
+    supportBody: "Schreib an support@pitchboost.ai und schick den Link zur Präsentation oder zum Deal mit. Antworten bekommst du von einem Menschen, meist innerhalb eines Werktags.",
+    supportCta: "E-Mail an den Support",
+    ctaTitle: "Probier es mit deiner eigenen Präsentation",
+    ctaBody: "Jeden Monat 150 Credits gratis, ohne Kreditkarte. Lade eine PowerPoint hoch und sieh dir das Redesign selbst an.",
+    ctaButton: "Präsentation kostenlos hochladen",
+    alsoIn: "Auch auf",
+    categories: {
+      redesign: "Präsentationen neu gestalten",
+      output: "Downloads und Dateien",
+      sharing: "Teilen und Statistiken",
+      assistants: "ChatGPT und Claude",
+      integrations: "CRM und Integrationen",
+      account: "Tarife und Credits",
+    },
+  },
 };
+
+/** What follows an article's title in the browser tab and in search, where a language has its own words for it; the others keep "PitchBoost Help". */
+const TITLE_SUFFIX: Partial<Record<Locale, string>> = { de: "PitchBoost Hilfe" };
+
+/** An article's page title: "How credits and plans work | PitchBoost Help", in German "… | PitchBoost Hilfe". */
+export function helpArticleTitle(locale: Locale, title: string): string {
+  return `${title} | ${TITLE_SUFFIX[locale] ?? "PitchBoost Help"}`;
+}
+
+/** Languages that write the date under an article's title out in words, by their Intl tag. The others show the ISO date, as they always have. */
+const LONG_DATES: Partial<Record<Locale, string>> = { de: "de-DE" };
+
+/** The date under a help article's title: "10. November 2026" in German, "2026-11-10" where the language writes no long date. */
+export function updatedDate(locale: Locale, iso: string): string {
+  const tag = LONG_DATES[locale];
+  if (!tag) return iso;
+  return new Intl.DateTimeFormat(tag, { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }).format(new Date(`${iso}T00:00:00Z`));
+}

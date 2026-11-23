@@ -1,9 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import { getPresentations } from "@/lib/presentations-i18n";
-import { FOOTER_COPY, MENU_COPY, chromeArrow, chromeLink } from "@/lib/chrome-i18n";
+import { FOOTER_COPY, MENU_COPY, PRESENTATION_NAMES, chromeArrow, chromeLink } from "@/lib/chrome-i18n";
 import { localeDir } from "@/lib/locale-dir";
-import type { Locale } from "@/lib/redesign-i18n";
+import { hasPresentations, type Locale } from "@/lib/locales";
+import { PAGE_LANGUAGES } from "@/lib/page-languages";
+import LanguageList from "./language-list";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 const SIGNUP_URL = `${APP_URL}/signup`;
@@ -26,7 +28,8 @@ type FooterLink = { label: string; href: string };
  * words are in lib/chrome-i18n.ts). A link leads to the page in that language
  * where the site has one, and otherwise to the English page, marked
  * hreflang="en"; a column whose links all lead to English pages says so once,
- * under them. Arabic reads right to left.
+ * under them. Arabic reads right to left. At the bottom, every language by its
+ * own name, each leading to this page in it (language-list.tsx).
  */
 export default function MarketingFooter({ locale }: { locale: Locale }) {
   const menu = MENU_COPY[locale];
@@ -39,6 +42,10 @@ export default function MarketingFooter({ locale }: { locale: Locale }) {
   const maker = chromeLink(locale, "/ai-presentation-maker");
   const allIndustries = chromeLink(locale, "/industries");
   const allComparisons = chromeLink(locale, "/compare");
+  // The presentation pages in this language, or, in a language that has none yet (German), the English ones under their names in this language, marked as English.
+  const presentationLinks: { label: string; href: string; hrefLang: "en" | undefined }[] = hasPresentations(locale)
+    ? getPresentations(locale).map(({ navLabel, slug }) => ({ label: navLabel, href: `${prefix}/presentations/${slug}`, hrefLang: undefined }))
+    : getPresentations("en").map(({ navLabel, slug }) => ({ label: PRESENTATION_NAMES[locale]?.[slug] ?? navLabel, href: `/presentations/${slug}`, hrefLang: "en" as const }));
 
   const productLinks: FooterLink[] = [
     { label: menu.pricing, href: "/pricing" },
@@ -117,15 +124,16 @@ export default function MarketingFooter({ locale }: { locale: Locale }) {
           <div className="footer-col">
             <p className="footer-heading">{menu.presentations}</p>
             <ul>
-              {getPresentations(locale).map(({ navLabel, slug }) => (
-                <li key={slug}>
-                  <Link href={`${prefix}/presentations/${slug}`}>{navLabel}</Link>
+              {presentationLinks.map(({ label, href, hrefLang }) => (
+                <li key={href}>
+                  <Link href={href} hrefLang={hrefLang}>{label}</Link>
                 </li>
               ))}
               <li>
                 <Link href={maker.href} hrefLang={maker.hrefLang} style={{ fontWeight: 600 }}>{`${t.presentationMaker} ${go}`}</Link>
               </li>
             </ul>
+            {presentationLinks.every((l) => l.hrefLang === "en") && maker.hrefLang === "en" && <p className="footer-note">{t.inEnglish}</p>}
           </div>
 
           <div className="footer-col">
@@ -171,6 +179,7 @@ export default function MarketingFooter({ locale }: { locale: Locale }) {
 
         <div className="footer-bottom">
           <p>&copy; {new Date().getFullYear()}{` PitchBoost. ${t.rights}`}</p>
+          <LanguageList pages={PAGE_LANGUAGES} label={t.language} />
           <div style={{ display: "flex", gap: 16, alignItems: "center" }}>
             <a href="https://www.linkedin.com/company/pitchboost-ai" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="footer-social-link">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>

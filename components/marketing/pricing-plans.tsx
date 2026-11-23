@@ -4,9 +4,10 @@ import type { Locale } from "@/lib/redesign-i18n";
 /**
  * The plan cards, shared by the homepage and /pricing so the two can't drift
  * apart. Change plans, prices or limits here. The plan names and the prices
- * are written here, once, for every language; the rest of the words are in
+ * are written here, once, for every language (lib/pricing-i18n.ts says only
+ * how each language writes a price: $7, 7 $); the rest of the words are in
  * lib/pricing-i18n.ts, and a limit or a number in them is changed there, in
- * all five languages.
+ * every language.
  */
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 const SIGNUP_URL = `${APP_URL}/signup`;
@@ -21,13 +22,14 @@ function CheckIcon() {
 
 export default function PricingPlans({ className = "pricing-grid", oneDeckNote = true, locale = "en" }: { className?: string; oneDeckNote?: boolean; locale?: Locale }) {
   const t = PLANS_COPY[locale];
+  const price = (amount: number) => t.price.replace("{amount}", String(amount));
   return (
     <>
     <div className={className}>
       <div className="pricing-card">
         <div className="plan-name">Free</div>
         <div className="plan-desc">{t.free.desc}</div>
-        <div className="plan-price">$0<span>{t.perMonth}</span></div>
+        <div className="plan-price">{price(0)}<span>{t.perMonth}</span></div>
         <div className="plan-period">{t.free.period}</div>
         <ul className="pricing-features">
           <li><CheckIcon /> {t.free.features[0]}</li>
@@ -42,7 +44,7 @@ export default function PricingPlans({ className = "pricing-grid", oneDeckNote =
       <div className="pricing-card">
         <div className="plan-name">Starter</div>
         <div className="plan-desc">{t.starter.desc}</div>
-        <div className="plan-price">$7<span>{t.perMonth}</span></div>
+        <div className="plan-price">{price(7)}<span>{t.perMonth}</span></div>
         <div className="plan-period">{t.starter.period}</div>
         <ul className="pricing-features">
           <li><CheckIcon /> {t.starter.features[0]}</li>
@@ -59,7 +61,7 @@ export default function PricingPlans({ className = "pricing-grid", oneDeckNote =
         <div className="pricing-badge">{t.popular}</div>
         <div className="plan-name">Pro</div>
         <div className="plan-desc">{t.pro.desc}</div>
-        <div className="plan-price">$29<span>{t.perMonth}</span></div>
+        <div className="plan-price">{price(29)}<span>{t.perMonth}</span></div>
         <div className="plan-period">{t.pro.period}</div>
         <ul className="pricing-features">
           <li><CheckIcon /> {t.pro.features[0]}</li>
@@ -75,7 +77,7 @@ export default function PricingPlans({ className = "pricing-grid", oneDeckNote =
       <div className="pricing-card">
         <div className="plan-name">Business</div>
         <div className="plan-desc">{t.business.desc}</div>
-        <div className="plan-price">$79<span>{t.perMonth}</span></div>
+        <div className="plan-price">{price(79)}<span>{t.perMonth}</span></div>
         <div className="plan-period">{t.business.period}</div>
         <ul className="pricing-features">
           <li><CheckIcon /> {t.business.features[0]}</li>
