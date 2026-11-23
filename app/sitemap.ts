@@ -59,12 +59,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/research", changeFrequency: "monthly", priority: 0.7 },
   ];
 
+  // The home page is published in every language (English at the root, the
+  // others at /es, /pt, /fr and /ar); each address lists all five.
+  const homeAlternates: Record<string, string> = { "x-default": BASE };
+  for (const l of LOCALES) homeAlternates[l] = `${BASE}${LOCALE_PREFIX[l]}`;
+
   const entries: MetadataRoute.Sitemap = staticPages.map((p) => ({
     url: `${BASE}${p.path}`,
     changeFrequency: p.changeFrequency,
     priority: p.priority,
     lastModified: p.path === "/changelog" ? CHANGELOG[0].date : (STATIC_PAGE_DATES[p.path.startsWith("/tools/seller-net-sheet/") ? "/tools/seller-net-sheet" : p.path] ?? NET_SHEET_UPDATED),
+    ...(p.path === "" ? { alternates: { languages: homeAlternates } } : {}),
   }));
+  for (const l of LOCALES) {
+    if (l !== "en") entries.push({ url: homeAlternates[l], changeFrequency: "weekly", priority: 0.9, lastModified: STATIC_PAGE_DATES[""], alternates: { languages: homeAlternates } });
+  }
 
   // Presentation use cases (class presentations, lecture slides, ...): the
   // family under the /ai-presentation-maker hub, in English, Spanish and

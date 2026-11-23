@@ -1,22 +1,29 @@
 /* eslint-disable @next/next/no-img-element -- these pictures are pre-sized WebP files in /public, and the site serves images as they are */
-// Part of the home page (app/(en)/page.tsx). The look was approved as a mockup in November 2026; the inline styles carry it over as drawn.
+// Part of the home page (home-view.tsx puts the sections together, in every language). The look was approved as a mockup in November 2026; the inline styles carry it over as drawn.
 import HomeMaker from "./home-maker";
+import { HOME_COPY } from "@/lib/home-i18n";
+import { localeDir } from "@/lib/locale-dir";
+import type { Locale } from "@/lib/redesign-i18n";
 
 /** The top of the page: the headline, the box, and a small stage holding a real deck, website, post and ad. */
-export default function Hero() {
+export default function Hero({ locale }: { locale: Locale }) {
+  const t = HOME_COPY[locale].hero;
+  const { ooh, awake, encore } = t.bubbles;
+  // The four pictures are part of the drawing: on a right-to-left page they keep their places, and so does the small browser bar.
+  const drawn = localeDir(locale) === "rtl" ? "ltr" : undefined;
   return (
     <section className="sh-hero">
       <div className="sh-hero-copy">
         <span style={{ display: "inline-flex", alignItems: "center", gap: "10px", padding: "8px 16px", borderRadius: "999px", background: "#12414B", color: "#C9DDDE", fontSize: "14px", fontWeight: "600", letterSpacing: "0.02em" }}>
           <span aria-hidden="true" style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#F0604F" }}></span>
-          AI design for people without a design team
+          {t.pill}
         </span>
         <div>
-          <h1 className="sh-h1" style={{ margin: "0", fontFamily: "var(--font-bricolage), var(--font-figtree), system-ui, sans-serif", fontWeight: "800", fontSize: "clamp(40px, 6vw, 86px)", lineHeight: "1.04", letterSpacing: "-0.025em", textWrap: "balance" }}>Slides worth <span style={{ position: "relative", display: "inline-block", color: "#FFD15C" }}>staying awake<svg aria-hidden="true" viewBox="0 0 300 20" preserveAspectRatio="none" style={{ position: "absolute", left: "0", bottom: "-0.14em", width: "100%", height: "0.2em", overflow: "visible" }}><path d="M 3 12 C 40 2 70 20 110 10 S 190 2 230 11 S 280 16 297 8" style={{ fill: "none", stroke: "#F0604F", strokeWidth: "5", strokeLinecap: "round", vectorEffect: "non-scaling-stroke" }}></path></svg></span> for.<span className="sh-h1-sub" style={{ display: "block", marginTop: "0.36em", fontSize: "0.42em", fontWeight: "700", lineHeight: "1.2", letterSpacing: "-0.012em", color: "#FFF8EC" }}>Plus the posts, ads and website to match.</span></h1>
+          <h1 className="sh-h1" style={{ margin: "0", fontFamily: "var(--font-bricolage), var(--font-figtree), system-ui, sans-serif", fontWeight: "800", fontSize: "clamp(40px, 6vw, 86px)", lineHeight: "1.04", letterSpacing: "-0.025em", textWrap: "balance" }}>{t.h1.lead} <span style={{ position: "relative", display: "inline-block", color: "#FFD15C" }}>{t.h1.mark}<svg aria-hidden="true" viewBox="0 0 300 20" preserveAspectRatio="none" style={{ position: "absolute", left: "0", bottom: "-0.14em", width: "100%", height: "0.2em", overflow: "visible" }}><path d="M 3 12 C 40 2 70 20 110 10 S 190 2 230 11 S 280 16 297 8" style={{ fill: "none", stroke: "#F0604F", strokeWidth: "5", strokeLinecap: "round", vectorEffect: "non-scaling-stroke" }}></path></svg></span>{t.h1.tail}<span className="sh-h1-sub" style={{ display: "block", marginTop: "0.36em", fontSize: "0.42em", fontWeight: "700", lineHeight: "1.2", letterSpacing: "-0.012em", color: "#FFF8EC" }}>{t.h1.sub}</span></h1>
         </div>
-        <p className="sh-sub" style={{ margin: "0", maxWidth: "740px", fontSize: "20px", lineHeight: "1.5", color: "#C9DDDE", textWrap: "pretty" }}>Tell PitchBoost what you&apos;re working on, or hand it the PowerPoint you already have. It designs every slide in your brand, then turns the deck into social posts, ads and a one-page website.</p>
-        <HomeMaker />
-        <p className="sh-fine">Free forever plan. No credit card required.</p>
+        <p className="sh-sub" style={{ margin: "0", maxWidth: "740px", fontSize: "20px", lineHeight: "1.5", color: "#C9DDDE", textWrap: "pretty" }}>{t.body}</p>
+        <HomeMaker t={HOME_COPY[locale].maker} />
+        <p className="sh-fine">{t.fine}</p>
       </div>
 
       {/* The stage scales as one drawing: the pictures sit between the scenery behind and the curtains and audience in front. */}
@@ -34,26 +41,26 @@ export default function Hero() {
           <ellipse cx="306" cy="462" rx="140" ry="8" style={{ fill: "#062028", opacity: "0.4" }}></ellipse>
           <ellipse cx="1130" cy="462" rx="150" ry="8" style={{ fill: "#062028", opacity: "0.4" }}></ellipse>
         </svg>
-        <div className="sh-stage-layer">
+        <div className="sh-stage-layer" dir={drawn}>
           <div className="sh-piece sh-piece-deck">
             <div className="sh-bob sh-frame sh-frame-deck">
-              <img src="/home/deck-cover.webp" width={1000} height={563} alt="A deck cover: Brightwell Solar, Q3 2026 Business Review" />
+              <img src="/home/deck-cover.webp" width={1000} height={563} alt={t.alt.deck} />
             </div>
           </div>
           <div className="sh-piece sh-piece-site">
             <div className="sh-bob sh-frame sh-frame-site" style={{ animationDelay: "-1.6s" }}>
               <div className="sh-bar" aria-hidden="true"><span /><span /><span /><span /></div>
-              <img src="/home/site-top.webp" width={800} height={488} alt="A website for Brightwell Solar: Solar for your home, installed in weeks" />
+              <img src="/home/site-top.webp" width={800} height={488} alt={t.alt.site} />
             </div>
           </div>
           <div className="sh-piece sh-piece-post">
             <div className="sh-bob sh-frame" style={{ animationDelay: "-3.1s" }}>
-              <img src="/home/post-c2.webp" width={432} height={540} alt="A social post card: 34 days, average install time in Q3" />
+              <img src="/home/post-c2.webp" width={432} height={540} alt={t.alt.post} />
             </div>
           </div>
           <div className="sh-piece sh-piece-ad">
             <div className="sh-bob sh-frame" style={{ animationDelay: "-2.2s" }}>
-              <img src="/home/ad-square.webp" width={480} height={480} alt="A square ad: Solar installed in 34 days, not 41" />
+              <img src="/home/ad-square.webp" width={480} height={480} alt={t.alt.ad} />
             </div>
           </div>
         </div>
@@ -69,11 +76,11 @@ export default function Hero() {
           <rect x="2" y="150" width="20" height="9" rx="4.5" fill="#FFD15C" />
         </svg>
         <svg aria-hidden="true" className="sh-stage-layer sh-stage-front" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMax slice">
-          <text className="sh-hide-sm" x="720" y="74" style={{ fontFamily: "var(--font-caveat), cursive", fontSize: "30px", fontWeight: "700", textAnchor: "middle", fill: "#FFE9A8" }}>the deck</text>
+          <text className="sh-hide-sm" x="720" y="74" style={{ fontFamily: "var(--font-caveat), cursive", fontSize: "30px", fontWeight: "700", textAnchor: "middle", fill: "#FFE9A8" }}>{t.labels.deck}</text>
           <g className="sh-hide-sm">
-            <text x="262" y="160" transform="rotate(-5 262 160)" style={{ fontFamily: "var(--font-caveat), cursive", fontSize: "30px", fontWeight: "700", textAnchor: "middle", fill: "#FFE9A8" }}>the website</text>
-            <text x="1066" y="128" transform="rotate(5 1066 128)" style={{ fontFamily: "var(--font-caveat), cursive", fontSize: "30px", fontWeight: "700", textAnchor: "middle", fill: "#FFE9A8" }}>the posts</text>
-            <text x="1236" y="206" transform="rotate(-4 1236 206)" style={{ fontFamily: "var(--font-caveat), cursive", fontSize: "30px", fontWeight: "700", textAnchor: "middle", fill: "#FFE9A8" }}>the ad</text>
+            <text x="262" y="160" transform="rotate(-5 262 160)" style={{ fontFamily: "var(--font-caveat), cursive", fontSize: "30px", fontWeight: "700", textAnchor: "middle", fill: "#FFE9A8" }}>{t.labels.site}</text>
+            <text x="1066" y="128" transform="rotate(5 1066 128)" style={{ fontFamily: "var(--font-caveat), cursive", fontSize: "30px", fontWeight: "700", textAnchor: "middle", fill: "#FFE9A8" }}>{t.labels.posts}</text>
+            <text x="1236" y="206" transform="rotate(-4 1236 206)" style={{ fontFamily: "var(--font-caveat), cursive", fontSize: "30px", fontWeight: "700", textAnchor: "middle", fill: "#FFE9A8" }}>{t.labels.ad}</text>
           </g>
           <g className="sh-open-l">
             <rect x="-40" y="0" width="520" height="600" style={{ fill: "#F0604F" }}></rect>
@@ -129,20 +136,21 @@ export default function Hero() {
           <path d="M 1061 523 A 44 44 0 0 1 1149 523" style={{ fill: "none", stroke: "#FFD15C", strokeWidth: "7", strokeLinecap: "round" }}></path>
           <rect x="1054" y="512" width="14" height="30" rx="7" style={{ fill: "#FFD15C" }}></rect>
           <rect x="1142" y="512" width="14" height="30" rx="7" style={{ fill: "#FFD15C" }}></rect>
+          {/* The bubbles keep their centres and tails; each one's width comes with its words. */}
           <g className="sh-wob">
-            <rect x="404" y="404" width="110" height="46" rx="23" style={{ fill: "#FFF8EC" }}></rect>
+            <rect x={459 - ooh.width / 2} y="404" width={ooh.width} height="46" rx="23" style={{ fill: "#FFF8EC" }}></rect>
             <polygon points="450,448 472,448 464,468" style={{ fill: "#FFF8EC" }}></polygon>
-            <text x="459" y="436" style={{ fontFamily: "var(--font-caveat), cursive", fontSize: "30px", fontWeight: "700", textAnchor: "middle", fill: "#0B2E36" }}>ooh.</text>
+            <text x="459" y="436" style={{ fontFamily: "var(--font-caveat), cursive", fontSize: "30px", fontWeight: "700", textAnchor: "middle", fill: "#0B2E36" }}>{ooh.text}</text>
           </g>
           <g className="sh-wob" style={{ animationDelay: "-1.3s" }}>
-            <rect x="826" y="404" width="228" height="46" rx="23" style={{ fill: "#FFF8EC" }}></rect>
+            <rect x={940 - awake.width / 2} y="404" width={awake.width} height="46" rx="23" style={{ fill: "#FFF8EC" }}></rect>
             <polygon points="962,448 984,448 978,468" style={{ fill: "#FFF8EC" }}></polygon>
-            <text x="940" y="436" style={{ fontFamily: "var(--font-caveat), cursive", fontSize: "30px", fontWeight: "700", textAnchor: "middle", fill: "#0B2E36" }}>wait, I&apos;m awake?</text>
+            <text x="940" y="436" style={{ fontFamily: "var(--font-caveat), cursive", fontSize: "30px", fontWeight: "700", textAnchor: "middle", fill: "#0B2E36" }}>{awake.text}</text>
           </g>
           <g className="sh-wob sh-hide-sm" style={{ animationDelay: "-2.4s" }}>
-            <rect x="1170" y="430" width="130" height="44" rx="22" style={{ fill: "#FFF8EC" }}></rect>
+            <rect x={1235 - encore.width / 2} y="430" width={encore.width} height="44" rx="22" style={{ fill: "#FFF8EC" }}></rect>
             <polygon points="1222,472 1244,472 1236,490" style={{ fill: "#FFF8EC" }}></polygon>
-            <text x="1235" y="461" style={{ fontFamily: "var(--font-caveat), cursive", fontSize: "28px", fontWeight: "700", textAnchor: "middle", fill: "#0B2E36" }}>encore!</text>
+            <text x="1235" y="461" style={{ fontFamily: "var(--font-caveat), cursive", fontSize: "28px", fontWeight: "700", textAnchor: "middle", fill: "#0B2E36" }}>{encore.text}</text>
           </g>
         </svg>
       </div>
