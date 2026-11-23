@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, Caveat, Figtree } from "next/font/google";
+import { Bricolage_Grotesque, Figtree } from "next/font/google";
+import localFont from "next/font/local";
 import "@/app/(en)/home.css";
 import Hero from "./hero";
 import NowShowing from "./now-showing";
@@ -40,7 +41,12 @@ export function homeMetadata(locale: Locale): Metadata {
 // handwriting face for the audience's remarks. Only this page loads them.
 const display = Bricolage_Grotesque({ subsets: ["latin"], axes: ["opsz"], variable: "--font-bricolage", display: "swap" });
 const text = Figtree({ subsets: ["latin"], variable: "--font-figtree", display: "swap" });
-const hand = Caveat({ subsets: ["latin"], weight: ["600", "700"], variable: "--font-caveat", display: "swap" });
+// The handwriting face ships with the site (Nov 2026): Google Fonts began answering
+// Caveat, some of the time, with addresses next/font could not download, and every
+// deploy failed with it. Its Latin file (Caveat v23, SIL Open Font License) holds
+// every letter of English, Spanish, Portuguese, French and German; Arabic has a face
+// of its own (withArabic below). One variable file for both weights the page uses.
+const hand = localFont({ src: "./fonts/caveat-latin.woff2", weight: "400 700", variable: "--font-caveat", display: "swap" });
 
 /**
  * None of the three faces has Arabic letters. Left alone, a browser would draw
