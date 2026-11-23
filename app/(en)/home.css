@@ -1,0 +1,383 @@
+/*
+ * The home page: a small theatre. Loaded by app/(en)/page.tsx alone.
+ * Most of the look lives in the section components as inline styles (they
+ * came over from the approved mockup as drawn); this file holds what inline
+ * styles cannot do: motion, hover, the stage that scales as one drawing, the
+ * box in the hero, the shared plan cards drawn as tickets, and phone sizes.
+ */
+
+.sh-home {
+  font-family: var(--font-figtree), system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 17px;
+  line-height: 1.55;
+  color: #0B2E36;
+  background: #081F25;
+  overflow-x: clip;
+}
+:where(.sh-home) a { color: #0E5A64; }
+:where(.sh-home) a:hover { color: #0A4A53; }
+:where(.sh-home) :is(h1, h2, h3, p, ul, figure) { margin: 0; }
+/* The navbar is fixed over the page, so a link to a section stops below it. */
+.sh-home [id] { scroll-margin-top: 96px; }
+.sh-anchor { display: block; height: 0; }
+.sh-home :is(a, button, input):focus-visible { outline: 3px solid #0E5A64; outline-offset: 3px; }
+.sh-hero :is(a, button):focus-visible, .sh-home .sh-on-dark:focus-visible { outline-color: #FFD15C; }
+.sh-wrap { max-width: 1200px; margin: 0 auto; padding: 0 32px; box-sizing: border-box; }
+.sh-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+/* --- Motion --- */
+.sh-btn { transition: transform .18s ease; }
+.sh-btn:hover { transform: translateY(-2px) rotate(-1.5deg); }
+.sh-tile { transition: transform .2s ease; }
+.sh-tile:hover { transform: translateY(-6px) rotate(-1deg); }
+.sh-poster { transition: transform .2s ease; }
+.sh-poster:hover { transform: translateY(-8px) scale(1.04); }
+.sh-bob { animation: sh-bob 5s ease-in-out infinite; }
+.sh-wob { animation: sh-wob 4s ease-in-out infinite; transform-box: fill-box; transform-origin: 50% 100%; }
+.sh-glow { animation: sh-glow 6s ease-in-out infinite; }
+.sh-fall { animation: sh-fall 7s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.sh-open-l { animation: sh-open-l 1.8s cubic-bezier(.7, 0, .2, 1) .8s both; }
+.sh-open-r { animation: sh-open-r 1.8s cubic-bezier(.7, 0, .2, 1) .8s both; }
+.sh-scroll { animation: sh-scroll 26s ease-in-out 3s infinite; }
+@keyframes sh-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+@keyframes sh-wob { 0%, 100% { transform: rotate(-2deg); } 50% { transform: rotate(2deg); } }
+@keyframes sh-glow { 0%, 100% { opacity: .7; } 50% { opacity: 1; } }
+@keyframes sh-fall { 0%, 100% { transform: translateY(-6px) rotate(-10deg); } 50% { transform: translateY(8px) rotate(12deg); } }
+/* The whole site scrolls by inside its browser frame, then comes back. */
+@keyframes sh-scroll { 0%, 100% { transform: translateY(0); } 44%, 56% { transform: translateY(-77.5%); } }
+@keyframes sh-open-l { from { transform: translateX(0); } to { transform: translateX(-500px); } }
+@keyframes sh-open-r { from { transform: translateX(0); } to { transform: translateX(500px); } }
+
+/* --- The hero --- */
+.sh-hero {
+  background: #0B2E36;
+  color: #FFF8EC;
+  overflow: hidden;
+  /* The stage below is sized from this section's width. */
+  container-type: inline-size;
+  padding-top: 75px;
+}
+.sh-hero-copy {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 44px 32px 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  text-align: center;
+}
+.sh-fine { font-size: 14px; color: #A9C4C6; }
+
+/* The box */
+.sh-maker {
+  width: 100%;
+  max-width: 760px;
+  box-sizing: border-box;
+  margin-top: 4px;
+  padding: 14px;
+  border-radius: 28px;
+  background: #FFFFFF;
+  color: #0B2E36;
+  box-shadow: 0 30px 60px -22px rgba(0, 0, 0, .6);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+}
+.sh-chips { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0 2px; }
+.sh-chips-label { font-size: 14px; font-weight: 700; color: #5E7378; margin: 0 6px 0 4px; }
+.sh-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 16px;
+  border: 2px solid #D5E7E9;
+  border-radius: 999px;
+  background: #FFFFFF;
+  color: #0B2E36;
+  font: inherit;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+}
+.sh-chip svg { width: 18px; height: 18px; flex: none; color: #0E5A64; }
+.sh-chip.on { border-color: #0B2E36; background: #0B2E36; color: #FFF8EC; font-weight: 700; }
+.sh-chip.on svg { color: #FFD15C; }
+.sh-maker :is(a, button, input):focus-visible { outline-color: #0E5A64; }
+.sh-maker-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.sh-input {
+  flex: 999 1 300px;
+  min-width: 0;
+  height: 60px;
+  box-sizing: border-box;
+  padding: 0 20px;
+  border: 2px solid #D5E7E9;
+  border-radius: 18px;
+  background: #F6FAF9;
+  font: inherit;
+  font-size: 18px;
+  color: #0B2E36;
+}
+.sh-input::placeholder { color: #5E7378; }
+.sh-home .sh-go {
+  flex: 1 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  padding: 0 28px;
+  border: 0;
+  border-radius: 18px;
+  background: #FFD15C;
+  color: #0B2E36;
+  font: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.sh-inside { flex: 999 1 300px; min-height: 60px; display: flex; align-items: center; padding: 0 6px; font-size: 16px; line-height: 1.4; color: #33474C; }
+.sh-maker-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; padding: 0 4px 2px; }
+.sh-maker-foot span { font-size: 14px; color: #5E7378; }
+.sh-home .sh-upload {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 0 16px;
+  border: 2px dashed #9CC3C7;
+  border-radius: 14px;
+  color: #0E5A64;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+}
+.sh-upload svg { width: 20px; height: 20px; flex: none; }
+
+/* The stage. One unit (--u) is a design pixel of the 1440 by 600 drawing, so
+   the pictures and the two drawn layers scale together at every width. */
+.sh-stage {
+  position: relative;
+  height: clamp(340px, 41.67cqw, 800px);
+  margin-top: 34px;
+  --u: max(0.069444cqw, 0.56667px);
+}
+.sh-stage-layer { position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: block; }
+.sh-stage-front { pointer-events: none; }
+.sh-curtain-sm { display: none; position: absolute; top: 0; width: 40px; height: 100%; pointer-events: none; }
+.sh-curtain-sm-l { left: 0; }
+.sh-curtain-sm-r { right: 0; transform: scaleX(-1); }
+.sh-piece { position: absolute; }
+.sh-piece-deck { left: calc(50% + (-250 * var(--u))); bottom: calc(227 * var(--u)); width: calc(500 * var(--u)); height: calc(281 * var(--u)); }
+.sh-piece-site { left: calc(50% + (-570 * var(--u))); bottom: calc(210 * var(--u)); width: calc(312 * var(--u)); height: calc(212 * var(--u)); transform: rotate(-5deg); }
+.sh-piece-post { left: calc(50% + (265 * var(--u))); bottom: calc(250 * var(--u)); width: calc(160 * var(--u)); height: calc(200 * var(--u)); transform: rotate(5deg); }
+.sh-piece-ad { left: calc(50% + (392 * var(--u))); bottom: calc(206 * var(--u)); width: calc(168 * var(--u)); height: calc(168 * var(--u)); transform: rotate(-4deg); }
+.sh-frame {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: calc(10 * var(--u));
+  box-shadow: 0 calc(20 * var(--u)) calc(36 * var(--u)) calc(-18 * var(--u)) rgba(0, 0, 0, .7);
+}
+.sh-frame img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.sh-frame-deck {
+  box-sizing: border-box;
+  border: calc(6 * var(--u)) solid #FFF8EC;
+  border-radius: calc(16 * var(--u));
+  background: #13343A;
+  box-shadow: 0 calc(26 * var(--u)) calc(50 * var(--u)) calc(-24 * var(--u)) rgba(0, 0, 0, .7);
+}
+.sh-frame-site { display: flex; flex-direction: column; border-radius: calc(12 * var(--u)); background: #FFFFFF; }
+.sh-frame-site img { flex: 1 1 0; min-height: 0; height: auto; object-position: top center; }
+.sh-bar { flex: none; display: flex; align-items: center; gap: calc(5 * var(--u)); height: calc(22 * var(--u)); padding: 0 calc(10 * var(--u)); background: #E9EFF0; }
+.sh-bar span { width: calc(6 * var(--u)); height: calc(6 * var(--u)); border-radius: 50%; background: #F0604F; }
+.sh-bar span:nth-child(2) { background: #FFD15C; }
+.sh-bar span:nth-child(3) { background: #7CC4A8; }
+.sh-bar span:nth-child(4) { flex: 1; height: calc(10 * var(--u)); margin-left: calc(6 * var(--u)); border-radius: 999px; background: #FFFFFF; }
+
+/* --- Small links added to keep every page the old home page linked to --- */
+.sh-more { margin-top: 30px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; font-size: 14px; }
+.sh-more span { margin-right: 6px; font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #5E7378; }
+.sh-home .sh-more a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 14px;
+  border: 2px solid #E6DCC6;
+  border-radius: 999px;
+  background: #FFFFFF;
+  color: #0B2E36;
+  font-weight: 600;
+  text-decoration: none;
+}
+.sh-home .sh-more a:hover { border-color: #0E5A64; color: #0E5A64; }
+.sh-castlinks { margin-top: 28px; display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 30px; }
+.sh-home .sh-castlinks a { padding: 10px 0; font-weight: 700; font-size: 16px; color: #0E5A64; }
+.sh-home .sh-finale-file { padding: 8px 0; font-weight: 700; font-size: 16px; color: #FFD15C; }
+
+/* --- The box office: the shared plan cards, drawn as tickets --- */
+.marketing .sh-tickets {
+  margin-top: 36px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+  gap: 20px;
+}
+.marketing .sh-tickets .pricing-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 22px 22px 20px;
+  border: 0;
+  border-radius: 22px;
+  background: #FFFFFF;
+  color: #0B2E36;
+  text-align: left;
+  box-shadow: none;
+  transition: transform .2s ease;
+}
+.marketing .sh-tickets .pricing-card:hover { transform: translateY(-6px) rotate(-.6deg); }
+.marketing .sh-tickets .pricing-card::before {
+  content: "ADMIT ONE";
+  margin-bottom: 5px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .16em;
+  color: #5E7378;
+}
+.marketing .sh-tickets .pricing-card:nth-child(2)::before { content: "A PROPER SEAT"; }
+.marketing .sh-tickets .pricing-card:nth-child(3)::before { content: "FRONT ROW"; color: #FFD15C; }
+.marketing .sh-tickets .pricing-card:nth-child(4)::before { content: "THE WHOLE ROW"; }
+.marketing .sh-tickets .pricing-card .plan-name {
+  margin: 0;
+  font-family: var(--font-bricolage), var(--font-figtree), system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 27px;
+  line-height: 1.1;
+  color: inherit;
+}
+.marketing .sh-tickets .pricing-card .plan-desc { margin: 5px 0 0; font-size: 15px; line-height: 1.4; color: #33474C; }
+.marketing .sh-tickets .pricing-card .plan-price {
+  margin: 12px 0 0;
+  font-family: var(--font-bricolage), var(--font-figtree), system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 42px;
+  line-height: 1;
+  color: inherit;
+}
+.marketing .sh-tickets .pricing-card .plan-price span {
+  margin-left: 6px;
+  font-family: var(--font-figtree), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: #5E7378;
+}
+.marketing .sh-tickets .pricing-card .plan-period { margin: 6px 0 0; font-size: 14px; color: #5E7378; }
+.marketing .sh-tickets .pricing-card .pricing-features {
+  position: relative;
+  flex: 1;
+  list-style: none;
+  margin: 14px 0 16px;
+  padding: 0 0 18px;
+  /* The tear line, with a notch punched out at each end. */
+  border-bottom: 3px dashed #BFD8DA;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 15px;
+  line-height: 1.4;
+  text-align: left;
+}
+.marketing .sh-tickets .pricing-card .pricing-features::before,
+.marketing .sh-tickets .pricing-card .pricing-features::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #E3F2F1;
+}
+.marketing .sh-tickets .pricing-card .pricing-features::before { left: -35px; }
+.marketing .sh-tickets .pricing-card .pricing-features::after { right: -35px; }
+.marketing .sh-tickets .pricing-card .pricing-features li { display: flex; align-items: flex-start; gap: 9px; margin: 0; padding: 0; border: 0; color: inherit; font-size: inherit; }
+.marketing .sh-tickets .pricing-card .pricing-features li svg { width: 18px; height: 18px; flex: none; margin-top: 2px; color: #0E5A64; stroke: currentColor; }
+.marketing .sh-tickets .pricing-card .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  min-height: 48px;
+  margin: 0;
+  padding: 0 16px;
+  border: 2px solid #0B2E36;
+  border-radius: 14px;
+  background: transparent;
+  color: #0B2E36;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  box-shadow: none;
+  transition: transform .18s ease;
+}
+.marketing .sh-tickets .pricing-card .btn:hover { transform: translateY(-2px) rotate(-1.5deg); background: transparent; color: #0B2E36; }
+/* The popular plan is the dark ticket. */
+.marketing .sh-tickets .pricing-card.featured { background: #0B2E36; color: #FFF8EC; box-shadow: none; }
+.marketing .sh-tickets .pricing-card.featured .plan-desc { color: #C9DDDE; }
+.marketing .sh-tickets .pricing-card.featured .plan-price span,
+.marketing .sh-tickets .pricing-card.featured .plan-period { color: #A9C4C6; }
+.marketing .sh-tickets .pricing-card.featured .pricing-features { border-bottom-color: #2B5A63; }
+.marketing .sh-tickets .pricing-card.featured .pricing-features li svg { color: #FFD15C; }
+.marketing .sh-tickets .pricing-card.featured .btn { border-color: #FFD15C; background: #FFD15C; color: #0B2E36; }
+.marketing .sh-tickets .pricing-card.featured .btn:hover { background: #FFD15C; color: #0B2E36; }
+.marketing .sh-tickets .pricing-card .pricing-badge {
+  top: 16px;
+  right: 14px;
+  left: auto;
+  transform: rotate(4deg);
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: #F0604F;
+  color: #0B2E36;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* --- Phones --- */
+@media (max-width: 760px) {
+  .sh-hide-sm { display: none !important; }
+  .sh-curtain-sm { display: block; }
+  /* On a phone the four pictures gather round the deck in the middle of the stage. */
+  .sh-piece-deck { left: calc(50% - 133px); bottom: auto; top: 30px; width: 266px; height: 150px; }
+  .sh-piece-site { left: calc(50% - 169px); bottom: auto; top: 126px; width: 118px; height: 80px; z-index: 2; }
+  .sh-piece-post { left: calc(50% + 63px); bottom: auto; top: 108px; width: 70px; height: 88px; z-index: 2; }
+  .sh-piece-ad { left: calc(50% + 109px); bottom: auto; top: 142px; width: 66px; height: 66px; z-index: 3; }
+  .sh-frame, .sh-frame-site { border-radius: 6px; box-shadow: 0 14px 24px -12px rgba(0, 0, 0, .7); }
+  .sh-frame-deck { border-width: 4px; border-radius: 10px; }
+  .sh-bar { height: 10px; gap: 3px; padding: 0 5px; }
+  .sh-bar span { width: 3px; height: 3px; }
+  .sh-bar span:nth-child(4) { display: none; }
+}
+@media (max-width: 520px) {
+  .sh-wrap { padding: 0 20px; }
+  .sh-hero-copy { padding: 26px 20px 0; gap: 16px; }
+  .sh-h1 { font-size: 46px !important; }
+  .sh-h1-sub { margin-top: 14px !important; font-size: 20px !important; }
+  .sh-sub { font-size: 17px !important; }
+  .sh-maker { padding: 12px; border-radius: 24px; gap: 10px; }
+  .sh-chips { flex-wrap: nowrap; justify-content: space-between; gap: 6px; padding: 0; }
+  .sh-chips-label, .sh-chip svg { display: none; }
+  .sh-chip { padding: 0 13px; font-size: 14px; }
+  .sh-input, .sh-home .sh-go { height: 56px; border-radius: 16px; }
+  .sh-home .sh-upload { flex: 1 1 100%; justify-content: center; min-height: 48px; padding: 0 12px; font-size: 15px; }
+  .sh-maker-foot span { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sh-bob, .sh-wob, .sh-glow, .sh-fall, .sh-scroll { animation: none; }
+  .sh-open-l, .sh-open-r { animation: none; display: none; }
+  .sh-btn, .sh-tile, .sh-poster, .marketing .sh-tickets .pricing-card, .marketing .sh-tickets .pricing-card .btn { transition: none; }
+}
