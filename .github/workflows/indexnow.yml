@@ -73,11 +73,19 @@ jobs:
               "lib/net-sheet-states": ["/tools/seller-net-sheet"],
               "lib/guides": ["/redesign", "/answers"],
               "components/marketing/pricing-plans": ["/pricing"],
+              "lib/pricing-i18n": ["/pricing"],
               "components/marketing/faq-data": [],
           }
+          # The home page is one address per language. Its words are in
+          # lib/home-i18n.ts (English) and lib/home.<language>.ts, and it
+          # shows the plan cards, whose words are in lib/pricing-i18n.ts.
+          HOME = ["/", "/es", "/pt", "/fr", "/ar"]
           SINGLE = {
-              "components/marketing/pricing-plans": ["/"],
+              "components/marketing/pricing-plans": HOME,
+              "lib/pricing-i18n": HOME,
               "components/marketing/faq-data": ["/"],
+              "lib/home-i18n": HOME,
+              "lib/home": HOME,
           }
 
           changed = [l.strip() for l in open("changed.txt") if l.strip()]
