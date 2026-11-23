@@ -508,6 +508,8 @@ const STAND_INS: Record<string, string> = {
  */
 export function chromeLink(locale: Locale, href: string): { href: string; hrefLang: "en" | undefined } {
   if (locale === "en" || !href.startsWith("/")) return { href, hrefLang: undefined };
+  // /pricing is in English only; the home page in each language carries the same plans, in that language.
+  if (href === "/pricing") return { href: `/${locale}#pricing`, hrefLang: undefined };
   const path = STAND_INS[href] ?? href;
   if (IN_EVERY_LANGUAGE.has(path)) return { href: path === "/" ? `/${locale}` : `/${locale}${path}`, hrefLang: undefined };
   return { href, hrefLang: "en" };
