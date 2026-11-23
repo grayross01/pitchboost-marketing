@@ -9,6 +9,7 @@ import ChromeGate from "@/components/marketing/chrome-gate";
 import FadeUpObserver from "@/components/marketing/fade-up-observer";
 import { AttributionCapture } from "@/components/marketing/attribution-capture";
 import { Analytics } from "@vercel/analytics/next";
+import type { Locale } from "@/lib/locales";
 
 const GTM_ID = "GTM-TGJD79J4";
 
@@ -120,7 +121,7 @@ export function RootShell({
   lang,
   children,
 }: Readonly<{
-  lang: "en" | "es" | "pt" | "fr" | "ar";
+  lang: Locale;
   children: React.ReactNode;
 }>) {
   return (

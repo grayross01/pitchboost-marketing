@@ -1,8 +1,8 @@
 /**
  * The home page's words in every language the site is published in: English
  * at the root, Spanish under /es, Brazilian Portuguese under /pt, French under
- * /fr and Arabic under /ar (right to left, see lib/locale-dir.ts). English is
- * the source and lives here; the other languages are one file each
+ * /fr, Arabic under /ar (right to left, see lib/locale-dir.ts) and German under
+ * /de. English is the source and lives here; the other languages are one file each
  * (lib/home.es.ts and so on), as the maker pages do it. The sections in
  * components/marketing/home take every word they show from this dictionary.
  *
@@ -16,6 +16,7 @@ import { HOME_ES } from "./home.es";
 import { HOME_PT } from "./home.pt";
 import { HOME_FR } from "./home.fr";
 import { HOME_AR } from "./home.ar";
+import { HOME_DE } from "./home.de";
 import { LOCALES, LOCALE_PREFIX, type Locale } from "./redesign-i18n";
 
 /** One of the audience's remarks on the stage. `width` is the bubble's width in the drawing's own units (the stage is 1440 across); it is sized to the words, so a longer remark needs a wider bubble. */
@@ -352,7 +353,7 @@ export const HOME_EN: HomeCopy = {
   },
 };
 
-export const HOME_COPY: Record<Locale, HomeCopy> = { en: HOME_EN, es: HOME_ES, pt: HOME_PT, fr: HOME_FR, ar: HOME_AR };
+export const HOME_COPY: Record<Locale, HomeCopy> = { en: HOME_EN, es: HOME_ES, pt: HOME_PT, fr: HOME_FR, ar: HOME_AR, de: HOME_DE };
 
 /**
  * hreflang map for the home page: every language plus x-default. English sits

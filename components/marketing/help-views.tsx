@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { HELP_CATEGORY_ORDER, getHelpArticleFor, getHelpArticles, type HelpArticle } from "@/lib/help";
-import { HELP_UI } from "@/lib/help-i18n";
+import { HELP_UI, updatedDate } from "@/lib/help-i18n";
 import { HELP_UPDATED } from "@/lib/page-dates";
 import { LOCALES, LOCALE_NAME, LOCALE_PREFIX, OG_LOCALE, languageAlternates, type Locale } from "@/lib/redesign-i18n";
 import { localeDir, sharedCard } from "@/lib/locale-dir";
@@ -10,14 +10,18 @@ const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 const SIGNUP_URL = `${APP_URL}/signup?intent=rebuild`;
 const BASE = "https://pitchboost.ai";
 
-/** Every help article exists in all three locales (the translation job
- *  refuses to write a partial file), so hreflang can list all siblings. */
+/** The languages that have this help page: every language with articles for the hub, and for an article the languages it has been
+ *  translated into (the translation job writes whole files for the first five; a new English article reaches German by hand). */
+function helpLocales(slug: string | null): Locale[] {
+  return LOCALES.filter((l) => (slug === null ? getHelpArticles(l).length > 0 : !!getHelpArticleFor(l, slug)));
+}
+
 export function helpHubMetadata(locale: Locale): Metadata {
   const ui = HELP_UI[locale];
   return {
     title: { absolute: `${ui.hubMetaTitle} | PitchBoost` },
     description: ui.hubMetaDescription,
-    alternates: { canonical: `${LOCALE_PREFIX[locale]}/help`, languages: languageAlternates("/help") },
+    alternates: { canonical: `${LOCALE_PREFIX[locale]}/help`, languages: languageAlternates("/help", helpLocales(null)) },
     openGraph: { title: ui.hubMetaTitle, description: ui.hubMetaDescription, locale: OG_LOCALE[locale], ...sharedCard(locale) },
   };
 }
@@ -29,14 +33,14 @@ export function helpArticleMetadata(locale: Locale, slug: string): Metadata {
   return {
     title: { absolute: `${a.title} | PitchBoost Help` },
     description: a.metaDescription,
-    alternates: { canonical: `${LOCALE_PREFIX[locale]}${path}`, languages: languageAlternates(path) },
+    alternates: { canonical: `${LOCALE_PREFIX[locale]}${path}`, languages: languageAlternates(path, helpLocales(slug)) },
     openGraph: { title: a.title, description: a.metaDescription, locale: OG_LOCALE[locale], type: "article", ...sharedCard(locale) },
   };
 }
 
 function LocaleSwitch({ locale, path }: { locale: Locale; path: string }) {
   const ui = HELP_UI[locale];
-  const others = LOCALES.filter((l) => l !== locale);
+  const others = helpLocales(path === "/help" ? null : path.slice("/help/".length)).filter((l) => l !== locale);
   return (
     <p style={{ fontSize: 12, color: "var(--ds-text-tertiary)", marginTop: 8 }}>
       {ui.alsoIn}{" "}
@@ -185,7 +189,7 @@ export function HelpArticleView({ locale, article }: { locale: Locale; article: 
           </div>
           <h1 style={{ textWrap: "balance" }}>{article.title}</h1>
           <p style={{ fontSize: 12, color: "var(--ds-text-tertiary)" }}>
-            {ui.updatedLabel} {article.updated}
+            {ui.updatedLabel} {updatedDate(locale, article.updated)}
           </p>
           <LocaleSwitch locale={locale} path={path} />
         </div>

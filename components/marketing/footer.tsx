@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import { getPresentations } from "@/lib/presentations-i18n";
-import { FOOTER_COPY, MENU_COPY, chromeArrow, chromeLink } from "@/lib/chrome-i18n";
+import { FOOTER_COPY, MENU_COPY, PRESENTATION_NAMES, chromeArrow, chromeLink } from "@/lib/chrome-i18n";
 import { localeDir } from "@/lib/locale-dir";
-import type { Locale } from "@/lib/redesign-i18n";
+import { hasPresentations, type Locale } from "@/lib/locales";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 const SIGNUP_URL = `${APP_URL}/signup`;
@@ -39,6 +39,10 @@ export default function MarketingFooter({ locale }: { locale: Locale }) {
   const maker = chromeLink(locale, "/ai-presentation-maker");
   const allIndustries = chromeLink(locale, "/industries");
   const allComparisons = chromeLink(locale, "/compare");
+  // The presentation pages in this language, or, in a language that has none yet (German), the English ones under their names in this language, marked as English.
+  const presentationLinks: { label: string; href: string; hrefLang: "en" | undefined }[] = hasPresentations(locale)
+    ? getPresentations(locale).map(({ navLabel, slug }) => ({ label: navLabel, href: `${prefix}/presentations/${slug}`, hrefLang: undefined }))
+    : getPresentations("en").map(({ navLabel, slug }) => ({ label: PRESENTATION_NAMES[locale]?.[slug] ?? navLabel, href: `/presentations/${slug}`, hrefLang: "en" as const }));
 
   const productLinks: FooterLink[] = [
     { label: menu.pricing, href: "/pricing" },
@@ -117,15 +121,16 @@ export default function MarketingFooter({ locale }: { locale: Locale }) {
           <div className="footer-col">
             <p className="footer-heading">{menu.presentations}</p>
             <ul>
-              {getPresentations(locale).map(({ navLabel, slug }) => (
-                <li key={slug}>
-                  <Link href={`${prefix}/presentations/${slug}`}>{navLabel}</Link>
+              {presentationLinks.map(({ label, href, hrefLang }) => (
+                <li key={href}>
+                  <Link href={href} hrefLang={hrefLang}>{label}</Link>
                 </li>
               ))}
               <li>
                 <Link href={maker.href} hrefLang={maker.hrefLang} style={{ fontWeight: 600 }}>{`${t.presentationMaker} ${go}`}</Link>
               </li>
             </ul>
+            {presentationLinks.every((l) => l.hrefLang === "en") && maker.hrefLang === "en" && <p className="footer-note">{t.inEnglish}</p>}
           </div>
 
           <div className="footer-col">

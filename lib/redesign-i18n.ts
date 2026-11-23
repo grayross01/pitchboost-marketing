@@ -2,21 +2,16 @@
  * Locale scaffolding for the /redesign cluster, the pages ChatGPT sends
  * "redesign my PowerPoint" traffic to from everywhere. English lives at the
  * root, Spanish under /es, Brazilian Portuguese under /pt, French under /fr,
- * Arabic under /ar (right to left, see lib/locale-dir.ts); every page links
- * to its siblings with hreflang. Page copy is data (lib/redesigns*.ts); the
- * strings here are the shared chrome around it.
+ * Arabic under /ar (right to left, see lib/locale-dir.ts), German under /de;
+ * every page links to its siblings with hreflang. Page copy is data
+ * (lib/redesigns*.ts); the strings here are the shared chrome around it. The
+ * list of languages itself is in lib/locales.ts, re-exported here.
  */
 import { REDESIGN_UI_AR } from "./i18n.ar";
+import { LOCALES, LOCALE_PREFIX, type Locale } from "./locales";
 
-export type Locale = "en" | "es" | "pt" | "fr" | "ar";
-
-export const LOCALES: Locale[] = ["en", "es", "pt", "fr", "ar"];
-
-export const LOCALE_PREFIX: Record<Locale, string> = { en: "", es: "/es", pt: "/pt", fr: "/fr", ar: "/ar" };
-
-export const OG_LOCALE: Record<Locale, string> = { en: "en_US", es: "es_ES", pt: "pt_BR", fr: "fr_FR", ar: "ar_AR" };
-
-export const LOCALE_NAME: Record<Locale, string> = { en: "English", es: "Español", pt: "Português", fr: "Français", ar: "العربية" };
+export { LOCALES, LOCALE_PREFIX, OG_LOCALE, LOCALE_NAME, PRESENTATION_LOCALES, hasPresentations } from "./locales";
+export type { Locale, PresentationLocale } from "./locales";
 
 export interface RedesignUi {
   breadcrumbHome: string;
@@ -48,6 +43,8 @@ export interface RedesignUi {
   galleryAfter: string;
   galleryFoot: string;
   galleryFootLink: string;
+  /** Where "How the redesign works" and the upload-and-redesign card lead, for a language with its own page on how the redesign works (German: its help article). Without it they lead to the English feature page. */
+  howHref?: string;
 }
 
 export const REDESIGN_UI: Record<Locale, RedesignUi> = {
@@ -176,6 +173,38 @@ export const REDESIGN_UI: Record<Locale, RedesignUi> = {
     galleryFootLink: "L'aperçu gratuit en reconstruit deux.",
   },
   ar: REDESIGN_UI_AR,
+  de: {
+    breadcrumbHome: "Startseite",
+    breadcrumbHub: "Redesign",
+    ctaPrimary: "Präsentation kostenlos hochladen",
+    ctaSecondary: "So funktioniert das Redesign",
+    finePrint: "Der Free-Tarif enthält 150 Credits im Monat, genug für eine Präsentation. Ohne Kreditkarte.",
+    howLabel: "So funktioniert es",
+    howTitle: "Hochladen, Website angeben, fertig",
+    howBody: "Das Ganze dauert ein paar Minuten, und du prüfst die erkannte Marke, bevor irgendetwas entsteht.",
+    whyLabel: "Warum jetzt",
+    whyTitle: "Die Lage, für die es diese Seite gibt",
+    getLabel: "Was du bekommst",
+    getTitle: "Was zurückkommt",
+    faqLabel: "Häufige Fragen",
+    faqTitle: "Was oft gefragt wird",
+    relatedLabel: "Mehr zum Thema",
+    relatedTitle: "Wofür Teams das Redesign noch nutzen",
+    relatedFeatureTitle: "Hochladen und neu gestalten",
+    relatedFeatureBody: "Was hinter jeder Seite hier steckt: wie der Neuaufbau Schritt für Schritt abläuft.",
+    relatedBulkTitle: "Mehrere auf einmal",
+    relatedBulkBody: "Einen ganzen Ordner voller PowerPoints in einem Durchgang ins Design deiner Marke bringen (auf Englisch).",
+    ctaBody: "Lade die Präsentation hoch, nenn PitchBoost deine Website und sieh dir das Redesign selbst an. Jeden Monat 150 Credits gratis, ohne Kreditkarte.",
+    alsoIn: "Auch auf",
+    galleryLabel: "Vorher und nachher",
+    galleryTitle: "Dieselbe Präsentation, neu aufgebaut",
+    galleryBody: "Eine Vertriebspräsentation mit sechs Folien für eine ausgedachte Firma, die Flottendaten auswertet. Gebaut wie die meisten Präsentationen (Calibri, ein marineblauer Balken, fünf lange Aufzählungspunkte), dann hochgeladen und Folie für Folie im Design der Firma neu aufgebaut. Abgetippt wurde nichts.",
+    galleryBefore: "Vorher",
+    galleryAfter: "Nachher",
+    galleryFoot: "Willst du das an deinen eigenen Folien sehen, bevor du dich registrierst?",
+    galleryFootLink: "Die kostenlose Vorschau (auf Englisch) baut zwei davon neu.",
+    howHref: "/de/help/redesign-a-powerpoint",
+  },
 };
 
 export interface RedesignHubCopy {
@@ -198,14 +227,15 @@ export const HUB_EN: RedesignHubCopy = {
   sectionTitle: "Every version of “this deck needs help”",
 };
 
-/** hreflang map for a redesign path ("/redesign" or "/redesign/<slug>"). */
-export function languageAlternates(path: string): Record<string, string> {
-  return {
-    en: path,
-    es: `/es${path}`,
-    pt: `/pt${path}`,
-    fr: `/fr${path}`,
-    ar: `/ar${path}`,
-    "x-default": path,
-  };
+/**
+ * hreflang map for a path that is published under the same address in each
+ * language it has ("/redesign", "/help/<slug>"): those languages, then
+ * x-default. Every language unless the page says otherwise; the presentation
+ * family passes PRESENTATION_LOCALES, as German has no presentation pages.
+ */
+export function languageAlternates(path: string, locales: readonly Locale[] = LOCALES): Record<string, string> {
+  const languages: Record<string, string> = {};
+  for (const l of locales) languages[l] = `${LOCALE_PREFIX[l]}${path}`;
+  languages["x-default"] = path;
+  return languages;
 }
