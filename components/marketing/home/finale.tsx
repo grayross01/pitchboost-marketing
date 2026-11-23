@@ -1,23 +1,27 @@
-// Part of the home page (app/(en)/page.tsx). The look was approved as a mockup in November 2026; the inline styles carry it over as drawn.
+// Part of the home page (home-view.tsx puts the sections together, in every language). The look was approved as a mockup in November 2026; the inline styles carry it over as drawn.
 import { SIGNUP_REBUILD, SIGNUP_URL } from "./links";
+import { arrow } from "./local-link";
+import { HOME_COPY } from "@/lib/home-i18n";
+import type { Locale } from "@/lib/redesign-i18n";
 
 /** The last word: the same box as the top, and the way in for a file. */
-export default function Finale() {
+export default function Finale({ locale }: { locale: Locale }) {
+  const t = HOME_COPY[locale].finale;
   return (
     <section style={{ position: "relative", marginTop: "-1px", background: "#0B2E36", color: "#FFF8EC", padding: "76px 0 0", overflow: "hidden" }}>
       <div style={{ maxWidth: "900px", margin: "0 auto", padding: "0 32px", boxSizing: "border-box", display: "flex", flexDirection: "column", alignItems: "center", gap: "20px", textAlign: "center" }}>
-        <h2 style={{ margin: "0", fontFamily: "var(--font-bricolage), var(--font-figtree), system-ui, sans-serif", fontWeight: "800", fontSize: "clamp(40px, 5vw, 72px)", lineHeight: "1.04", letterSpacing: "-0.025em", textWrap: "balance" }}>Go on. <span style={{ color: "#FFD15C" }}>The room&apos;s waiting.</span></h2>
-        <p style={{ margin: "0", fontSize: "20px", color: "#C9DDDE" }}>One deck a month is on the house. No credit card, no design degree.</p>
+        <h2 style={{ margin: "0", fontFamily: "var(--font-bricolage), var(--font-figtree), system-ui, sans-serif", fontWeight: "800", fontSize: "clamp(40px, 5vw, 72px)", lineHeight: "1.04", letterSpacing: "-0.025em", textWrap: "balance" }}>{t.lead} <span style={{ color: "#FFD15C" }}>{t.mark}</span></h2>
+        <p style={{ margin: "0", fontSize: "20px", color: "#C9DDDE" }}>{t.body}</p>
         <form action={SIGNUP_URL} method="get" style={{ width: "100%", maxWidth: "640px", boxSizing: "border-box", marginTop: "10px", padding: "12px", borderRadius: "26px", background: "#FFFFFF", display: "flex", flexWrap: "wrap", gap: "10px", alignItems: "center" }}>
           <input type="hidden" name="intent" value="present" />
-          <label htmlFor="sh-topic-2" style={{ position: "absolute", width: "1px", height: "1px", overflow: "hidden", clipPath: "inset(50%)" }}>What are you presenting?</label>
-          <input id="sh-topic-2" name="prompt" type="text" required maxLength={300} autoComplete="off" placeholder="What are you presenting?" style={{ flex: "999 1 260px", minWidth: "0", height: "58px", boxSizing: "border-box", padding: "0 18px", border: "2px solid #D5E7E9", borderRadius: "16px", background: "#F6FAF9", font: "inherit", fontSize: "18px", color: "#0B2E36" }} />
-          <button className="sh-btn" type="submit" style={{ flex: "1 0 auto", height: "58px", padding: "0 26px", border: "0", borderRadius: "16px", background: "#FFD15C", color: "#0B2E36", font: "inherit", fontWeight: "700", fontSize: "18px", cursor: "pointer" }}>Make my deck</button>
+          <label htmlFor="sh-topic-2" style={{ position: "absolute", width: "1px", height: "1px", overflow: "hidden", clipPath: "inset(50%)" }}>{t.label}</label>
+          <input id="sh-topic-2" name="prompt" type="text" required maxLength={300} autoComplete="off" placeholder={t.label} style={{ flex: "999 1 260px", minWidth: "0", height: "58px", boxSizing: "border-box", padding: "0 18px", border: "2px solid #D5E7E9", borderRadius: "16px", background: "#F6FAF9", font: "inherit", fontSize: "18px", color: "#0B2E36" }} />
+          <button className="sh-btn" type="submit" style={{ flex: "1 0 auto", height: "58px", padding: "0 26px", border: "0", borderRadius: "16px", background: "#FFD15C", color: "#0B2E36", font: "inherit", fontWeight: "700", fontSize: "18px", cursor: "pointer" }}>{t.submit}</button>
         </form>
-        <a href={SIGNUP_REBUILD} className="sh-finale-file">Or redesign the PowerPoint you already have →</a>
-        <p style={{ margin: "0", fontSize: "14px", color: "#A9C4C6" }}>Free forever plan. No credit card required.</p>
+        <a href={SIGNUP_REBUILD} className="sh-finale-file">{t.file} {arrow(locale)}</a>
+        <p style={{ margin: "0", fontSize: "14px", color: "#A9C4C6" }}>{t.fine}</p>
       </div>
-      <svg role="img" aria-label="An audience on its feet, arms in the air, under falling confetti" viewBox="0 0 1440 300" preserveAspectRatio="xMidYMax slice" style={{ display: "block", width: "100%", height: "clamp(190px, 21vw, 300px)", marginTop: "44px" }}>
+      <svg role="img" aria-label={t.audienceAlt} viewBox="0 0 1440 300" preserveAspectRatio="xMidYMax slice" style={{ display: "block", width: "100%", height: "clamp(190px, 21vw, 300px)", marginTop: "44px" }}>
         <rect className="sh-fall" x="75" y="30" width="10" height="20" rx="3" transform="rotate(20 80 40)" style={{ fill: "#FFD15C" }}></rect>
         <circle cx="150" cy="110" r="6" style={{ fill: "#F0604F" }}></circle>
         <rect x="205" y="12" width="10" height="20" rx="3" transform="rotate(-30 210 22)" style={{ fill: "#BFE0E3" }}></rect>

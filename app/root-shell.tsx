@@ -169,7 +169,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </ChromeGate>
           <main id="main">{children}</main>
           <ChromeGate>
-            <MarketingFooter />
+            <MarketingFooter locale={lang} />
           </ChromeGate>
           <FadeUpObserver />
         </div>

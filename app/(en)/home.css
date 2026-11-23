@@ -1,9 +1,16 @@
 /*
- * The home page: a small theatre. Loaded by app/(en)/page.tsx alone.
+ * The home page: a small theatre. Loaded by components/marketing/home/
+ * home-view.tsx alone, which is the home page in every language.
  * Most of the look lives in the section components as inline styles (they
  * came over from the approved mockup as drawn); this file holds what inline
  * styles cannot do: motion, hover, the stage that scales as one drawing, the
  * box in the hero, the shared plan cards drawn as tickets, and phone sizes.
+ *
+ * Sides are written as start and end (margin-inline, inset-inline, text-align:
+ * start), so the Arabic page mirrors without a second set of rules; the last
+ * block holds what Arabic needs beyond that. Left and right remain where a
+ * drawing is meant to stay as drawn (the stage and its curtains) and where the
+ * two sides match anyway (the notches punched in a ticket).
  */
 
 .sh-home {
@@ -84,10 +91,10 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-  text-align: left;
+  text-align: start;
 }
 .sh-chips { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0 2px; }
-.sh-chips-label { font-size: 14px; font-weight: 700; color: #5E7378; margin: 0 6px 0 4px; }
+.sh-chips-label { font-size: 14px; font-weight: 700; color: #5E7378; margin: 0; margin-inline: 4px 6px; }
 .sh-chip {
   display: inline-flex;
   align-items: center;
@@ -200,7 +207,7 @@
 
 /* --- Small links added to keep every page the old home page linked to --- */
 .sh-more { margin-top: 30px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; font-size: 14px; }
-.sh-more span { margin-right: 6px; font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #5E7378; }
+.sh-more span { margin-inline-end: 6px; font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #5E7378; }
 .sh-home .sh-more a {
   display: inline-flex;
   align-items: center;
@@ -214,6 +221,8 @@
   text-decoration: none;
 }
 .sh-home .sh-more a:hover { border-color: #0E5A64; color: #0E5A64; }
+/* On a page in another language: one line under those links when some of them lead to pages published only in English. */
+.sh-more-note { margin-top: 10px; font-size: 13px; color: #5E7378; }
 .sh-castlinks { margin-top: 28px; display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 30px; }
 .sh-home .sh-castlinks a { padding: 10px 0; font-weight: 700; font-size: 16px; color: #0E5A64; }
 .sh-home .sh-finale-file { padding: 8px 0; font-weight: 700; font-size: 16px; color: #FFD15C; }
@@ -234,22 +243,24 @@
   border-radius: 22px;
   background: #FFFFFF;
   color: #0B2E36;
-  text-align: left;
+  text-align: start;
   box-shadow: none;
   transition: transform .2s ease;
 }
 .marketing .sh-tickets .pricing-card:hover { transform: translateY(-6px) rotate(-.6deg); }
+/* What is printed across the top of each ticket. The words are the page's, in
+   its language: box-office.tsx hands them over as --sh-ticket-1 to -4. */
 .marketing .sh-tickets .pricing-card::before {
-  content: "ADMIT ONE";
+  content: var(--sh-ticket-1);
   margin-bottom: 5px;
   font-size: 12px;
   font-weight: 800;
   letter-spacing: .16em;
   color: #5E7378;
 }
-.marketing .sh-tickets .pricing-card:nth-child(2)::before { content: "A PROPER SEAT"; }
-.marketing .sh-tickets .pricing-card:nth-child(3)::before { content: "FRONT ROW"; color: #FFD15C; }
-.marketing .sh-tickets .pricing-card:nth-child(4)::before { content: "THE WHOLE ROW"; }
+.marketing .sh-tickets .pricing-card:nth-child(2)::before { content: var(--sh-ticket-2); }
+.marketing .sh-tickets .pricing-card:nth-child(3)::before { content: var(--sh-ticket-3); color: #FFD15C; }
+.marketing .sh-tickets .pricing-card:nth-child(4)::before { content: var(--sh-ticket-4); }
 .marketing .sh-tickets .pricing-card .plan-name {
   margin: 0;
   font-family: var(--font-bricolage), var(--font-figtree), system-ui, sans-serif;
@@ -268,7 +279,7 @@
   color: inherit;
 }
 .marketing .sh-tickets .pricing-card .plan-price span {
-  margin-left: 6px;
+  margin-inline-start: 6px;
   font-family: var(--font-figtree), system-ui, sans-serif;
   font-weight: 400;
   font-size: 15px;
@@ -288,7 +299,7 @@
   gap: 8px;
   font-size: 15px;
   line-height: 1.4;
-  text-align: left;
+  text-align: start;
 }
 .marketing .sh-tickets .pricing-card .pricing-features::before,
 .marketing .sh-tickets .pricing-card .pricing-features::after {
@@ -334,8 +345,7 @@
 .marketing .sh-tickets .pricing-card.featured .btn:hover { background: #FFD15C; color: #0B2E36; }
 .marketing .sh-tickets .pricing-card .pricing-badge {
   top: 16px;
-  right: 14px;
-  left: auto;
+  inset-inline: auto 14px;
   transform: rotate(4deg);
   padding: 4px 12px;
   border-radius: 999px;
@@ -375,9 +385,30 @@
   .sh-input, .sh-home .sh-go { height: 56px; border-radius: 16px; }
   .sh-home .sh-upload { flex: 1 1 100%; justify-content: center; min-height: 48px; padding: 0 12px; font-size: 15px; }
   .sh-maker-foot span { display: none; }
+  /* The four choices fit on one line in English. In the other languages they are longer, so there they wrap. */
+  .sh-home[lang] .sh-chips { flex-wrap: wrap; justify-content: flex-start; }
+  /* There the words before them ("Necesito" and the rest) stay, on a line of their own, because the choices finish
+     that sentence; the English choices are plain names and read well without their "I need a". */
+  .sh-home[lang] .sh-chips-label { display: block; flex-basis: 100%; }
 }
 @media (prefers-reduced-motion: reduce) {
   .sh-bob, .sh-wob, .sh-glow, .sh-fall, .sh-scroll { animation: none; }
   .sh-open-l, .sh-open-r { animation: none; display: none; }
   .sh-btn, .sh-tile, .sh-poster, .marketing .sh-tickets .pricing-card, .marketing .sh-tickets .pricing-card .btn { transition: none; }
 }
+
+/* --- Right to left (the Arabic page) --- */
+/* The example covers are drawings with English words on them. They keep their
+   left-to-right setting everywhere, or their words would start from the wrong
+   edge on a right-to-left page. */
+.sh-home .sh-poster > svg { direction: ltr; }
+/* Letters set apart, as the Latin labels and headings are, break Arabic's
+   joined script. The drawn covers keep theirs. */
+.sh-home[dir="rtl"] *:not(.sh-poster *) { letter-spacing: 0 !important; }
+.sh-home[dir="rtl"] .sh-tickets .pricing-card::before { letter-spacing: 0; }
+/* Arabic letters rise and fall further than Latin ones and carry marks above
+   and below, so lines set as tight as the Latin headings would touch. The
+   sections set their line heights inline, which is why these two rules look
+   for a style attribute and are marked important. */
+.sh-home[dir="rtl"] [style*="line-height"] { line-height: 1.6 !important; }
+.sh-home[dir="rtl"] :is(h1, h2, h3)[style*="line-height"] { line-height: 1.4 !important; }

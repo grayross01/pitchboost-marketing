@@ -1,6 +1,12 @@
+import { PLANS_COPY } from "@/lib/pricing-i18n";
+import type { Locale } from "@/lib/redesign-i18n";
+
 /**
  * The plan cards, shared by the homepage and /pricing so the two can't drift
- * apart. Change plans, prices or limits here.
+ * apart. Change plans, prices or limits here. The plan names and the prices
+ * are written here, once, for every language; the rest of the words are in
+ * lib/pricing-i18n.ts, and a limit or a number in them is changed there, in
+ * all five languages.
  */
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 const SIGNUP_URL = `${APP_URL}/signup`;
@@ -13,77 +19,78 @@ function CheckIcon() {
   );
 }
 
-export default function PricingPlans({ className = "pricing-grid", oneDeckNote = true }: { className?: string; oneDeckNote?: boolean }) {
+export default function PricingPlans({ className = "pricing-grid", oneDeckNote = true, locale = "en" }: { className?: string; oneDeckNote?: boolean; locale?: Locale }) {
+  const t = PLANS_COPY[locale];
   return (
     <>
     <div className={className}>
       <div className="pricing-card">
         <div className="plan-name">Free</div>
-        <div className="plan-desc">Perfect for trying PitchBoost</div>
-        <div className="plan-price">$0<span>/mo</span></div>
-        <div className="plan-period">Free forever</div>
+        <div className="plan-desc">{t.free.desc}</div>
+        <div className="plan-price">$0<span>{t.perMonth}</span></div>
+        <div className="plan-period">{t.free.period}</div>
         <ul className="pricing-features">
-          <li><CheckIcon /> 150 credits a month (1 AI deck)</li>
-          <li><CheckIcon /> Decks up to 10 slides</li>
-          <li><CheckIcon /> Share as a live link, with badge</li>
-          <li><CheckIcon /> Full viewer analytics and saved templates</li>
-          <li><CheckIcon /> Research and fact checking included</li>
-          <li><CheckIcon /> Your team, at no charge per person</li>
+          <li><CheckIcon /> {t.free.features[0]}</li>
+          <li><CheckIcon /> {t.free.features[1]}</li>
+          <li><CheckIcon /> {t.free.features[2]}</li>
+          <li><CheckIcon /> {t.free.features[3]}</li>
+          <li><CheckIcon /> {t.free.features[4]}</li>
+          <li><CheckIcon /> {t.free.features[5]}</li>
         </ul>
-        <a href={SIGNUP_URL} className="btn btn-secondary">Get Started</a>
+        <a href={SIGNUP_URL} className="btn btn-secondary">{t.free.cta}</a>
       </div>
       <div className="pricing-card">
         <div className="plan-name">Starter</div>
-        <div className="plan-desc">Your decks, without the badge</div>
-        <div className="plan-price">$7<span>/mo</span></div>
-        <div className="plan-period">or $5.83/mo billed annually</div>
+        <div className="plan-desc">{t.starter.desc}</div>
+        <div className="plan-price">$7<span>{t.perMonth}</span></div>
+        <div className="plan-period">{t.starter.period}</div>
         <ul className="pricing-features">
-          <li><CheckIcon /> More AI credits: 300 a month</li>
-          <li><CheckIcon /> Decks up to 25 slides</li>
-          <li><CheckIcon /> No PitchBoost badge, anywhere</li>
-          <li><CheckIcon /> PowerPoint, PDF and Google Slides downloads</li>
-          <li><CheckIcon /> Top-up credit packs</li>
-          <li><CheckIcon /> Full viewer analytics and saved templates</li>
-          <li><CheckIcon /> Your team, at no charge per person</li>
+          <li><CheckIcon /> {t.starter.features[0]}</li>
+          <li><CheckIcon /> {t.starter.features[1]}</li>
+          <li><CheckIcon /> {t.starter.features[2]}</li>
+          <li><CheckIcon /> {t.starter.features[3]}</li>
+          <li><CheckIcon /> {t.starter.features[4]}</li>
+          <li><CheckIcon /> {t.starter.features[5]}</li>
+          <li><CheckIcon /> {t.starter.features[6]}</li>
         </ul>
-        <a href={SIGNUP_URL} className="btn btn-secondary">Start with Starter</a>
+        <a href={SIGNUP_URL} className="btn btn-secondary">{t.starter.cta}</a>
       </div>
       <div className="pricing-card featured">
-        <div className="pricing-badge">Most Popular</div>
+        <div className="pricing-badge">{t.popular}</div>
         <div className="plan-name">Pro</div>
-        <div className="plan-desc">For people who present every week</div>
-        <div className="plan-price">$29<span>/mo</span></div>
-        <div className="plan-period">or $24/mo billed annually</div>
+        <div className="plan-desc">{t.pro.desc}</div>
+        <div className="plan-price">$29<span>{t.perMonth}</span></div>
+        <div className="plan-period">{t.pro.period}</div>
         <ul className="pricing-features">
-          <li><CheckIcon /> Even more AI credits: 1,200 a month</li>
-          <li><CheckIcon /> Decks up to 60 slides</li>
-          <li><CheckIcon /> Custom domains</li>
-          <li><CheckIcon /> API and MCP access</li>
-          <li><CheckIcon /> Unlimited deals, no badge</li>
-          <li><CheckIcon /> Full viewer analytics and saved templates</li>
-          <li><CheckIcon /> Your team, at no charge per person</li>
+          <li><CheckIcon /> {t.pro.features[0]}</li>
+          <li><CheckIcon /> {t.pro.features[1]}</li>
+          <li><CheckIcon /> {t.pro.features[2]}</li>
+          <li><CheckIcon /> {t.pro.features[3]}</li>
+          <li><CheckIcon /> {t.pro.features[4]}</li>
+          <li><CheckIcon /> {t.pro.features[5]}</li>
+          <li><CheckIcon /> {t.pro.features[6]}</li>
         </ul>
-        <a href={SIGNUP_URL} className="btn btn-primary">Start Free Trial</a>
+        <a href={SIGNUP_URL} className="btn btn-primary">{t.pro.cta}</a>
       </div>
       <div className="pricing-card">
         <div className="plan-name">Business</div>
-        <div className="plan-desc">For teams that share a brand</div>
-        <div className="plan-price">$79<span>/mo</span></div>
-        <div className="plan-period">or $66/mo billed annually</div>
+        <div className="plan-desc">{t.business.desc}</div>
+        <div className="plan-price">$79<span>{t.perMonth}</span></div>
+        <div className="plan-period">{t.business.period}</div>
         <ul className="pricing-features">
-          <li><CheckIcon /> Everything in Pro</li>
-          <li><CheckIcon /> Our largest AI credit allowance: 3,300 a month</li>
-          <li><CheckIcon /> Analytics export</li>
-          <li><CheckIcon /> Sending from your own domain</li>
-          <li><CheckIcon /> Your team, at no charge per person</li>
+          <li><CheckIcon /> {t.business.features[0]}</li>
+          <li><CheckIcon /> {t.business.features[1]}</li>
+          <li><CheckIcon /> {t.business.features[2]}</li>
+          <li><CheckIcon /> {t.business.features[3]}</li>
+          <li><CheckIcon /> {t.business.features[4]}</li>
         </ul>
-        <a href={SIGNUP_URL} className="btn btn-secondary">Get Started</a>
+        <a href={SIGNUP_URL} className="btn btn-secondary">{t.business.cta}</a>
       </div>
     </div>
     {/* Most people have one deck to fix, so a plan is not the only way to pay. /pricing turns this line off and shows its own fuller strip under the plans. */}
     {oneDeckNote ? (
       <p style={{ textAlign: "center", fontSize: 15, color: "var(--ds-text-secondary, #4a5a68)", margin: "22px auto 0", maxWidth: 680, lineHeight: 1.6 }}>
-        <strong style={{ color: "var(--ds-dark)" }}>Just one deck?</strong> Pay once for that deck, no subscription: $9 up to 25 slides, $19 up to 60. Every slide rebuilt, no PitchBoost badge, the PowerPoint, PDF and Google Slides downloads, and 100 credits for edits. Start Starter or Pro within 30 days and it counts toward the first month.
+        <strong style={{ color: "var(--ds-dark)" }}>{t.oneDeck.question}</strong> {t.oneDeck.body}
       </p>
     ) : null}
     </>

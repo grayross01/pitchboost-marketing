@@ -1,14 +1,21 @@
-// Part of the home page (app/(en)/page.tsx). The look was approved as a mockup in November 2026; the inline styles carry it over as drawn.
+// Part of the home page (home-view.tsx puts the sections together, in every language). The look was approved as a mockup in November 2026; the inline styles carry it over as drawn.
 import Link from "next/link";
+import { arrow, localLink } from "./local-link";
+import { HOME_COPY } from "@/lib/home-i18n";
+import type { Locale } from "@/lib/redesign-i18n";
 
 /** Who it is for. */
-export default function Cast() {
+export default function Cast({ locale }: { locale: Locale }) {
+  const t = HOME_COPY[locale].cast;
+  const go = arrow(locale);
+  const presentations = localLink(locale, "/ai-presentation-maker");
+  const industries = localLink(locale, "/industries");
   return (
     <section id="cast" style={{ position: "relative", marginTop: "-1px", background: "#FFF8EC", padding: "0 0 64px" }}>
       <div className="sh-wrap">
         <div style={{ maxWidth: "820px", margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center", gap: "16px", textAlign: "center" }}>
-          <span style={{ fontSize: "13px", fontWeight: "800", letterSpacing: "0.12em", color: "#A93A2C" }}>THE CAST</span>
-          <h2 style={{ margin: "0", fontFamily: "var(--font-bricolage), var(--font-figtree), system-ui, sans-serif", fontWeight: "700", fontSize: "clamp(34px, 3.4vw, 50px)", lineHeight: "1.06", letterSpacing: "-0.02em", textWrap: "balance" }}>For people with something to show, and no design team.</h2>
+          <span style={{ fontSize: "13px", fontWeight: "800", letterSpacing: "0.12em", color: "#A93A2C" }}>{t.eyebrow}</span>
+          <h2 style={{ margin: "0", fontFamily: "var(--font-bricolage), var(--font-figtree), system-ui, sans-serif", fontWeight: "700", fontSize: "clamp(34px, 3.4vw, 50px)", lineHeight: "1.06", letterSpacing: "-0.02em", textWrap: "balance" }}>{t.title}</h2>
         </div>
         <div style={{ marginTop: "36px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(250px, 100%), 1fr))", gap: "20px" }}>
           <div style={{ boxSizing: "border-box", padding: "26px", border: "2px solid #F0E6D2", borderRadius: "26px", background: "#FFFFFF", display: "flex", flexDirection: "column", gap: "14px" }}>
@@ -23,8 +30,8 @@ export default function Cast() {
               <rect x="20" y="40" width="48" height="8" rx="4" style={{ fill: "#C9483A" }}></rect>
               <circle cx="44" cy="19" r="6" style={{ fill: "#FFD15C" }}></circle>
             </svg>
-            <span style={{ fontFamily: "var(--font-bricolage), var(--font-figtree), system-ui, sans-serif", fontWeight: "700", fontSize: "23px", lineHeight: "1.15" }}>Founders and small teams</span>
-            <span style={{ fontSize: "16px", lineHeight: "1.45", color: "#33474C" }}>Raising, selling and hiring, usually all before lunch.</span>
+            <span style={{ fontFamily: "var(--font-bricolage), var(--font-figtree), system-ui, sans-serif", fontWeight: "700", fontSize: "23px", lineHeight: "1.15" }}>{t.people[0].name}</span>
+            <span style={{ fontSize: "16px", lineHeight: "1.45", color: "#33474C" }}>{t.people[0].line}</span>
           </div>
           <div style={{ boxSizing: "border-box", padding: "26px", border: "2px solid #F0E6D2", borderRadius: "26px", background: "#FFFFFF", display: "flex", flexDirection: "column", gap: "14px" }}>
             <svg aria-hidden="true" viewBox="0 0 88 88" style={{ width: "84px", height: "84px", borderRadius: "50%", overflow: "hidden" }}>
@@ -38,8 +45,8 @@ export default function Cast() {
               <path d="M 65 30 L 65 42" style={{ fill: "none", stroke: "#F0604F", strokeWidth: "3", strokeLinecap: "round" }}></path>
               <circle cx="65" cy="44" r="3.5" style={{ fill: "#F0604F" }}></circle>
             </svg>
-            <span style={{ fontFamily: "var(--font-bricolage), var(--font-figtree), system-ui, sans-serif", fontWeight: "700", fontSize: "23px", lineHeight: "1.15" }}>Students and academics</span>
-            <span style={{ fontSize: "16px", lineHeight: "1.45", color: "#33474C" }}>Thesis defenses, lectures, and the group project that is somehow yours.</span>
+            <span style={{ fontFamily: "var(--font-bricolage), var(--font-figtree), system-ui, sans-serif", fontWeight: "700", fontSize: "23px", lineHeight: "1.15" }}>{t.people[1].name}</span>
+            <span style={{ fontSize: "16px", lineHeight: "1.45", color: "#33474C" }}>{t.people[1].line}</span>
           </div>
           <div style={{ boxSizing: "border-box", padding: "26px", border: "2px solid #F0E6D2", borderRadius: "26px", background: "#FFFFFF", display: "flex", flexDirection: "column", gap: "14px" }}>
             <svg aria-hidden="true" viewBox="0 0 88 88" style={{ width: "84px", height: "84px", borderRadius: "50%", overflow: "hidden" }}>
@@ -53,8 +60,8 @@ export default function Cast() {
               <path d="M 42 44 L 46 44" style={{ fill: "none", stroke: "#0B2E36", strokeWidth: "2.5", strokeLinecap: "round" }}></path>
               <path d="M 37 56 Q 44 61 51 56" style={{ fill: "none", stroke: "#0B2E36", strokeWidth: "2.5", strokeLinecap: "round" }}></path>
             </svg>
-            <span style={{ fontFamily: "var(--font-bricolage), var(--font-figtree), system-ui, sans-serif", fontWeight: "700", fontSize: "23px", lineHeight: "1.15" }}>Agencies and consultants</span>
-            <span style={{ fontSize: "16px", lineHeight: "1.45", color: "#33474C" }}>Client decks, posts, ads and sites that look like you keep a designer on staff.</span>
+            <span style={{ fontFamily: "var(--font-bricolage), var(--font-figtree), system-ui, sans-serif", fontWeight: "700", fontSize: "23px", lineHeight: "1.15" }}>{t.people[2].name}</span>
+            <span style={{ fontSize: "16px", lineHeight: "1.45", color: "#33474C" }}>{t.people[2].line}</span>
           </div>
           <div style={{ boxSizing: "border-box", padding: "26px", border: "2px solid #F0E6D2", borderRadius: "26px", background: "#FFFFFF", display: "flex", flexDirection: "column", gap: "14px" }}>
             <svg aria-hidden="true" viewBox="0 0 88 88" style={{ width: "84px", height: "84px", borderRadius: "50%", overflow: "hidden" }}>
@@ -69,13 +76,13 @@ export default function Cast() {
               <rect x="63" y="42" width="9" height="15" rx="4" style={{ fill: "#0B2E36" }}></rect>
               <path d="M 20 57 Q 24 67 36 65" style={{ fill: "none", stroke: "#0B2E36", strokeWidth: "3", strokeLinecap: "round" }}></path>
             </svg>
-            <span style={{ fontFamily: "var(--font-bricolage), var(--font-figtree), system-ui, sans-serif", fontWeight: "700", fontSize: "23px", lineHeight: "1.15" }}>Sales teams</span>
-            <span style={{ fontSize: "16px", lineHeight: "1.45", color: "#33474C" }}>A deck built for each prospect, and the posts and ads to warm them up first.</span>
+            <span style={{ fontFamily: "var(--font-bricolage), var(--font-figtree), system-ui, sans-serif", fontWeight: "700", fontSize: "23px", lineHeight: "1.15" }}>{t.people[3].name}</span>
+            <span style={{ fontSize: "16px", lineHeight: "1.45", color: "#33474C" }}>{t.people[3].line}</span>
           </div>
         </div>
         <p className="sh-castlinks">
-          <Link href="/ai-presentation-maker">Lessons, reports and talks →</Link>
-          <Link href="/industries">Pages for your industry →</Link>
+          <Link href={presentations.href} hrefLang={presentations.hrefLang}>{t.links.presentations}{presentations.inEnglish} {go}</Link>
+          <Link href={industries.href} hrefLang={industries.hrefLang}>{t.links.industries}{industries.inEnglish} {go}</Link>
         </p>
       </div>
     </section>
