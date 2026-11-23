@@ -55,7 +55,6 @@ export interface HomeCopy {
   /** The page's title and description for search and sharing, and the sentence its app schema carries. */
   meta: { title: string; description: string; schemaDescription: string };
   hero: {
-    pill: string;
     /** The headline: `lead`, a space, the underlined `mark`, then `tail` (which brings its own leading space unless it is only punctuation), and `sub` on the line below. The mark stays on one line, so keep it about as short as the English one. */
     h1: { lead: string; mark: string; tail: string; sub: string };
     body: string;
@@ -164,7 +163,6 @@ export const HOME_EN: HomeCopy = {
       "AI presentation maker that builds a new presentation from a prompt (a lesson, a report, a talk or a pitch) or redesigns an existing PowerPoint or PDF deck in your brand, in a few minutes.",
   },
   hero: {
-    pill: "AI design for people without a design team",
     h1: { lead: "Slides worth", mark: "staying awake", tail: " for.", sub: "Plus the posts, ads and website to match." },
     body: "Tell PitchBoost what you're working on, or hand it the PowerPoint you already have. It designs every slide in your brand, then turns the deck into social posts, ads and a one-page website.",
     fine: "Free forever plan. No credit card required.",

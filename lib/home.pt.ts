@@ -10,7 +10,6 @@ export const HOME_PT: HomeCopy = {
       "Criador de apresentações com IA que monta uma apresentação nova a partir de um prompt (uma aula, um relatório, uma palestra ou um pitch) ou redesenha na sua marca um PowerPoint ou PDF que você já tem, em poucos minutos.",
   },
   hero: {
-    pill: "Design com IA para quem não tem equipe de design",
     h1: { lead: "Slides que", mark: "não dão sono", tail: ".", sub: "E os posts, anúncios e site para combinar." },
     body: "Conte ao PitchBoost no que você está trabalhando, ou entregue o PowerPoint que você já tem. Ele faz o design de cada slide na sua marca e depois transforma a apresentação em posts para redes sociais, anúncios e um site de uma página.",
     fine: "Plano gratuito para sempre. Sem cartão de crédito.",

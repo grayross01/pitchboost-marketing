@@ -14,10 +14,6 @@ export default function Hero({ locale }: { locale: Locale }) {
   return (
     <section className="sh-hero">
       <div className="sh-hero-copy">
-        <span style={{ display: "inline-flex", alignItems: "center", gap: "10px", padding: "8px 16px", borderRadius: "999px", background: "#12414B", color: "#C9DDDE", fontSize: "14px", fontWeight: "600", letterSpacing: "0.02em" }}>
-          <span aria-hidden="true" style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#F0604F" }}></span>
-          {t.pill}
-        </span>
         <div>
           <h1 className="sh-h1" style={{ margin: "0", fontFamily: "var(--font-bricolage), var(--font-figtree), system-ui, sans-serif", fontWeight: "800", fontSize: "clamp(40px, 6vw, 86px)", lineHeight: "1.04", letterSpacing: "-0.025em", textWrap: "balance" }}>{t.h1.lead} <span style={{ position: "relative", display: "inline-block", color: "#FFD15C" }}>{t.h1.mark}<svg aria-hidden="true" viewBox="0 0 300 20" preserveAspectRatio="none" style={{ position: "absolute", left: "0", bottom: "-0.14em", width: "100%", height: "0.2em", overflow: "visible" }}><path d="M 3 12 C 40 2 70 20 110 10 S 190 2 230 11 S 280 16 297 8" style={{ fill: "none", stroke: "#F0604F", strokeWidth: "5", strokeLinecap: "round", vectorEffect: "non-scaling-stroke" }}></path></svg></span>{t.h1.tail}<span className="sh-h1-sub" style={{ display: "block", marginTop: "0.36em", fontSize: "0.42em", fontWeight: "700", lineHeight: "1.2", letterSpacing: "-0.012em", color: "#FFF8EC" }}>{t.h1.sub}</span></h1>
         </div>
