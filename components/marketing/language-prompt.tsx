@@ -2,12 +2,21 @@
 
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { HINT_COOKIE, LANGUAGE_PROMPT, LANG_COOKIE, PROMPT_STORAGE_KEY, chooseLanguage, pageIn, promptLanguage, readCookie, type OtherLocale, type PageLanguages } from "@/lib/language-choice";
+import { LANGUAGE_PROMPT, LANG_COOKIE, PROMPT_STORAGE_KEY, chooseLanguage, pageIn, promptLanguage, readCookie, type OtherLocale, type PageLanguages } from "@/lib/language-choice";
 import { localeDir } from "@/lib/locale-dir";
 
 function readStored(): string | null {
   try {
     return window.localStorage.getItem(PROMPT_STORAGE_KEY);
+  } catch {
+    return null;
+  }
+}
+
+/** The visitor's time zone, if the browser says (Europe/Berlin). */
+function timeZone(): string | null {
+  try {
+    return Intl.DateTimeFormat().resolvedOptions().timeZone || null;
   } catch {
     return null;
   }
@@ -25,15 +34,15 @@ function store(value: string) {
  * A small, quiet note on an English page for a visitor whose browser prefers
  * a language this page also exists in: "Diese Seite gibt es auch auf
  * Deutsch." with a link to that page and a close button. It is worked out in
- * the browser after the page has loaded (navigator.languages, or the hint
- * proxy.ts leaves when only the visitor's country suggests a language), so
- * the page's own markup, and what search engines read, is the English page
- * unchanged, and it never redirects. It sits over the corner of the page
- * instead of pushing anything down, speaks the visitor's language (right to
- * left for Arabic), and stays away once closed or followed or once the
- * visitor has a language: following it remembers that language, closing it
- * remembers English (lib/language-choice.ts). app/root-shell.tsx puts it on
- * every English page; `pages` says which pages exist in which languages.
+ * the browser after the page has loaded (the language the visitor chose,
+ * navigator.languages, or for an English-first browser the visitor's time
+ * zone), so the page's own markup, and what search engines read, is the
+ * English page unchanged, and it never redirects. It sits over the corner of
+ * the page instead of pushing anything down, speaks the visitor's language
+ * (right to left for Arabic), and stays away once closed: following it
+ * remembers that language, closing it remembers English
+ * (lib/language-choice.ts). app/root-shell.tsx puts it on every English
+ * page; `pages` says which pages exist in which languages.
  */
 export default function LanguagePrompt({ pages }: { pages: PageLanguages }) {
   const pathname = usePathname();
@@ -50,9 +59,9 @@ export default function LanguagePrompt({ pages }: { pages: PageLanguages }) {
         pages,
         referrer: document.referrer,
         origin: window.location.origin,
-        stored: readStored(),
+        closed: readStored() === "closed",
         chosen: readCookie(LANG_COOKIE),
-        hint: readCookie(HINT_COOKIE),
+        timeZone: timeZone(),
       }),
     );
   }, [pathname, pages]);
@@ -89,10 +98,7 @@ export default function LanguagePrompt({ pages }: { pages: PageLanguages }) {
             <a
               href={pageIn(offer, pathname ?? "/")}
               hrefLang={offer}
-              onClick={() => {
-                store(offer);
-                chooseLanguage(offer);
-              }}
+              onClick={() => chooseLanguage(offer)}
             >
               {t.link}
             </a>
