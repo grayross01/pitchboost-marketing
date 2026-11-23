@@ -8,8 +8,10 @@ import MarketingFooter from "@/components/marketing/footer";
 import ChromeGate from "@/components/marketing/chrome-gate";
 import FadeUpObserver from "@/components/marketing/fade-up-observer";
 import { AttributionCapture } from "@/components/marketing/attribution-capture";
+import LanguagePrompt from "@/components/marketing/language-prompt";
 import { Analytics } from "@vercel/analytics/next";
 import type { Locale } from "@/lib/locales";
+import { PAGE_LANGUAGES } from "@/lib/page-languages";
 
 const GTM_ID = "GTM-TGJD79J4";
 
@@ -115,7 +117,10 @@ const websiteSchema = {
  * analytics. Each language has its own root layout (app/(en), app/(es) and so
  * on) so the html tag says the page's real language: search engines read it,
  * Bing (and with it ChatGPT search) among them. Pages in one language share
- * this shell; moving between languages reloads the page.
+ * this shell; moving between languages reloads the page. English pages also
+ * carry the language prompt, which offers a visitor whose browser prefers
+ * another of the site's languages the same page in it (it shows nothing until
+ * the browser has decided, so the page's markup is the English page).
  */
 export function RootShell({
   lang,
@@ -168,6 +173,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <ChromeGate>
             <MarketingNavbar />
           </ChromeGate>
+          {lang === "en" && <LanguagePrompt pages={PAGE_LANGUAGES} />}
           <main id="main">{children}</main>
           <ChromeGate>
             <MarketingFooter locale={lang} />

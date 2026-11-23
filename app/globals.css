@@ -1323,6 +1323,51 @@ body {
   color: white;
 }
 
+/* The quiet note on English pages that offers the same page in the visitor's language
+   (components/marketing/language-prompt.tsx). It sits over the bottom corner, on the side the
+   note reads from, so it never moves the page; empty, it shows nothing. */
+.marketing .lang-prompt {
+  position: fixed;
+  z-index: 990;
+  inset-inline-start: 16px;
+  bottom: max(16px, env(safe-area-inset-bottom));
+  max-width: min(420px, calc(100vw - 32px));
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding-block: 12px;
+  padding-inline: 16px 10px;
+  background: #fff;
+  color: var(--ds-text-primary, #0B2E36);
+  border: 1px solid var(--ds-border, #e3e8ec);
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(11, 46, 54, 0.16);
+  font-size: 14px;
+  line-height: 1.5;
+}
+.marketing .lang-prompt:empty { padding: 0; border: 0; background: none; box-shadow: none; }
+.marketing .lang-prompt p { margin: 0; }
+.marketing .lang-prompt a { color: #1F6B6B; font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+.marketing .lang-prompt button {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin: -6px 0;
+  border: 0;
+  border-radius: 8px;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+.marketing .lang-prompt button:hover { background: rgba(11, 46, 54, 0.06); }
+.marketing .lang-prompt :is(a, button):focus-visible { outline: 2px solid #1F6B6B; outline-offset: 2px; }
+@media (max-width: 480px) {
+  .marketing .lang-prompt { inset-inline-end: 16px; max-width: none; }
+}
+
 .marketing .footer-bottom {
   display: flex;
   align-items: center;
