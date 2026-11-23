@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { HELP_CATEGORY_ORDER, getHelpArticleFor, getHelpArticles, type HelpArticle } from "@/lib/help";
-import { HELP_UI, updatedDate } from "@/lib/help-i18n";
+import { HELP_UI, helpArticleTitle, updatedDate } from "@/lib/help-i18n";
 import { HELP_UPDATED } from "@/lib/page-dates";
 import { LOCALES, LOCALE_NAME, LOCALE_PREFIX, OG_LOCALE, languageAlternates, type Locale } from "@/lib/redesign-i18n";
 import { localeDir, sharedCard } from "@/lib/locale-dir";
@@ -31,7 +31,7 @@ export function helpArticleMetadata(locale: Locale, slug: string): Metadata {
   if (!a) return {};
   const path = `/help/${slug}`;
   return {
-    title: { absolute: `${a.title} | PitchBoost Help` },
+    title: { absolute: helpArticleTitle(locale, a.title) },
     description: a.metaDescription,
     alternates: { canonical: `${LOCALE_PREFIX[locale]}${path}`, languages: languageAlternates(path, helpLocales(slug)) },
     openGraph: { title: a.title, description: a.metaDescription, locale: OG_LOCALE[locale], type: "article", ...sharedCard(locale) },

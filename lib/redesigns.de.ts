@@ -46,7 +46,7 @@ export const REDESIGNS_DE: RedesignPage[] = [
       },
       {
         "q": "Welche Dateiformate kann ich hochladen?",
-        "a": "PowerPoint (.pptx) bis 50 MB. Wer mit Keynote oder Google Slides arbeitet, exportiert vorher als .pptx; beide schaffen das verlustfrei in einem Schritt."
+        "a": "PowerPoint (.pptx) bis 50 MB. Wer mit Keynote oder Google Slides arbeitet, exportiert vorher als .pptx; beide schaffen das in einem Schritt."
       },
       {
         "q": "Woher kennt PitchBoost meine Marke?",
@@ -118,7 +118,7 @@ export const REDESIGNS_DE: RedesignPage[] = [
     "metaTitle": "PowerPoint professionell gestalten, und zwar schnell | PitchBoost",
     "metaDescription": "Der schnellste Weg zur professionellen PowerPoint: hochladen, und die KI baut das Design im Stil deiner Marke neu. Gleiche Folien, Minuten statt Tagen.",
     "heroHeadline": "Mach deine PowerPoint professionell, ohne selbst Designer zu werden",
-    "heroSubhead": "Es gibt zwei Wege: ein Wochenende lang Designprinzipien pauken oder die Präsentation hochladen und PitchBoost sie für dich anwenden lassen. Ausrichtung, Hierarchie, Abstände, Markenfarben, alles davon.",
+    "heroSubhead": "Es gibt zwei Wege: ein Wochenende lang Designprinzipien pauken oder die Präsentation hochladen und PitchBoost sie für dich anwenden lassen. Ausrichtung, Hierarchie, Abstände, Markenfarben: das volle Programm.",
     "painPoints": [
       {
         "title": "Du siehst, dass etwas nicht stimmt, aber nicht, warum",
@@ -174,7 +174,7 @@ export const REDESIGNS_DE: RedesignPage[] = [
       },
       {
         "title": "Von Hand umgestalten ist die reinste Vorlagenhölle",
-        "body": "Tauschst du den Folienmaster aus, geht die Hälfte der Layouts kaputt, und trotzdem muss jemand jede Folie von Hand reparieren. Und das mal jede Präsentation auf dem Laufwerk."
+        "body": "Tauschst du den Folienmaster aus, geht die Hälfte der Layouts kaputt, und trotzdem muss jemand jede Folie von Hand reparieren. Und das für jede Präsentation auf dem Laufwerk."
       },
       {
         "title": "Zuständig ist niemand",
@@ -371,7 +371,7 @@ export const REDESIGNS_DE: RedesignPage[] = [
       },
       {
         "title": "Eine Vorlage würde alles Eigene ausradieren",
-        "body": "Kopierst du alles in eine Vorlage, fliegt deine Marke raus, und die Layout-Entscheidungen bleiben trotzdem an dir hängen. Du willst, dass der Inhalt bleibt und das Design entschieden wird, nicht umgekehrt."
+        "body": "Kopierst du alles in eine Vorlage, fliegt deine Marke raus, und die Layout-Entscheidungen bleiben trotzdem an dir hängen. Du willst, dass der Inhalt bleibt und dir jemand die Designentscheidungen abnimmt, nicht umgekehrt."
       }
     ],
     "outcomes": [
@@ -387,7 +387,7 @@ export const REDESIGNS_DE: RedesignPage[] = [
       },
       {
         "q": "Meine Präsentation hat Diagramme. Überleben die Zahlen?",
-        "a": "Dafür ist PitchBoost gebaut. Es liest Datenreihen, Kategorien und Werte der Diagramme aus der .pptx und überträgt sie in die neu aufgebauten Folien. Zahlen aus deiner Präsentation gelten als deine Fakten; was die KI weder auf deine Präsentation noch auf deine Website zurückführen kann, wird markiert oder entfernt, bevor du das Ergebnis siehst."
+        "a": "Dafür ist PitchBoost gebaut. PitchBoost liest Datenreihen, Kategorien und Werte der Diagramme aus der .pptx und überträgt sie in die neu aufgebauten Folien. Zahlen aus deiner Präsentation gelten als deine Fakten; was die KI weder auf deine Präsentation noch auf deine Website zurückführen kann, wird markiert oder entfernt, bevor du das Ergebnis siehst."
       },
       {
         "q": "Und wenn ich nur ein paar Folien reparieren will?",
@@ -431,7 +431,7 @@ export const REDESIGNS_DE: RedesignPage[] = [
     "faqs": [
       {
         "q": "Wie exportiere ich aus Google Slides?",
-        "a": "„Datei > Herunterladen > Microsoft PowerPoint (.pptx)“. Lade diese Datei bei PitchBoost hoch. Sprechernotizen und Bilder kommen mit."
+        "a": "„Datei > Herunterladen > Microsoft PowerPoint (.pptx)“. Lade diese Datei bei PitchBoost hoch. Vortragsnotizen und Bilder kommen mit."
       },
       {
         "q": "Wie exportiere ich aus Keynote?",
@@ -664,7 +664,7 @@ export const REDESIGNS_DE: RedesignPage[] = [
     "outcomes": [
       "Folien für einen Saal, nicht für ein Dokument: weniger Wörter, größere Schrift, ein Punkt pro Folie",
       "Deine Marke auf jeder Folie, direkt von deiner eigenen Website",
-      "Der volle Text bleibt in der bearbeitbaren PowerPoint-Datei erhalten, bereit für deine Sprechernotizen",
+      "Der volle Text bleibt in der bearbeitbaren PowerPoint-Datei erhalten, bereit für deine Vortragsnotizen",
       "In wenigen Minuten fertig, mit einem Link zum Teilen für das Follow-up nach dem Vortrag"
     ],
     "faqs": [
@@ -918,7 +918,7 @@ export const REDESIGNS_DE: RedesignPage[] = [
       },
       {
         "q": "Kann ich Google Slides oder Keynote hochladen?",
-        "a": "Ja, wenn du vorher als .pptx exportierst. Beide können das in einem Schritt, ohne Verluste. Dateien bis 50 MB werden angenommen."
+        "a": "Ja, wenn du vorher als .pptx exportierst. Beide können das in einem Schritt. Dateien bis 50 MB werden angenommen."
       },
       {
         "q": "Was kostet es, eine Präsentation zu verschönern?",
@@ -949,7 +949,7 @@ export const REDESIGNS_DE: RedesignPage[] = [
       },
       {
         "title": "Die Stichpunktwand: von acht Zeilen zu einer Aussage",
-        "body": "Vorher: ein Titel, acht Aufzählungspunkte, Schrift in 11 Punkt, und vorne wird alles vorgelesen. Nachher: die eine Kernaussage der Folie als Titel, die stützenden Punkte in einer Struktur, die zu ihnen passt (Schritte, ein Vergleich, ein Raster), und die Details in den Sprechernotizen oder auf einer Folgefolie."
+        "body": "Vorher: ein Titel, acht Aufzählungspunkte, Schrift in 11 Punkt, und vorne wird alles vorgelesen. Nachher: die eine Kernaussage der Folie als Titel, die stützenden Punkte in einer Struktur, die zu ihnen passt (Schritte, ein Vergleich, ein Raster), und die Details in den Vortragsnotizen oder auf einer Folgefolie."
       },
       {
         "title": "Die Diagrammfolie: vom Screenshot zum Beleg",
@@ -1021,7 +1021,7 @@ export const REDESIGNS_DE: RedesignPage[] = [
       },
       {
         "q": "Funktioniert das mit sehr alten .ppt-Dateien?",
-        "a": "Lade eine .pptx hoch. Hast du noch eine alte .ppt, öffne sie in PowerPoint und speichere sie zuerst über „Datei > Speichern unter“ als .pptx; diese Umwandlung ist verlustfrei und dauert ein paar Sekunden. Dateien bis 50 MB werden angenommen."
+        "a": "Lade eine .pptx hoch. Hast du noch eine alte .ppt, öffne sie in PowerPoint und speichere sie zuerst über „Datei > Speichern unter“ als .pptx; das dauert ein paar Sekunden. Dateien bis 50 MB werden angenommen."
       },
       {
         "q": "Was kostet es, eine Präsentation zu modernisieren?",
@@ -1157,7 +1157,7 @@ export const REDESIGNS_DE: RedesignPage[] = [
     "faqs": [
       {
         "q": "Wie wandle ich Google Slides in PowerPoint um?",
-        "a": "Wähle in Google Slides (in der deutschen Oberfläche: Google Präsentationen) „Datei > Herunterladen > Microsoft PowerPoint (.pptx)“. Lade diese Datei bei PitchBoost hoch. Sprechernotizen und Bilder kommen mit."
+        "a": "Wähle in Google Slides (in der deutschen Oberfläche: Google Präsentationen) „Datei > Herunterladen > Microsoft PowerPoint (.pptx)“. Lade diese Datei bei PitchBoost hoch. Vortragsnotizen und Bilder kommen mit."
       },
       {
         "q": "Warum sieht meine Google-Slides-Präsentation in PowerPoint falsch aus?",
@@ -1165,7 +1165,7 @@ export const REDESIGNS_DE: RedesignPage[] = [
       },
       {
         "q": "Kann ich das Redesign zurück nach Google Slides holen?",
-        "a": "Ja. Auf der Seite zum Teilen legt die Zeile „Google Slides“ unter „Download“ eine bearbeitbare Kopie der neu gestalteten Präsentation in deinem Google Drive ab, bereit zum Öffnen in Google Slides. Oder schick den PitchBoost-Link: Er sieht auf jedem Gerät gleich aus und zeigt dir, wann er geöffnet wurde."
+        "a": "Ja. In der Teilen-Ansicht legt die Zeile „Google Slides“ unter „Download“ eine bearbeitbare Kopie der neu gestalteten Präsentation in deinem Google Drive ab, bereit zum Öffnen in Google Slides. Oder schick den PitchBoost-Link: Er sieht auf jedem Gerät gleich aus und zeigt dir, wann er geöffnet wurde."
       },
       {
         "q": "Kostet das etwas?",
@@ -1247,7 +1247,7 @@ export const HUB_DE: RedesignHubCopy = {
   metaTitle: "PowerPoint neu gestalten, im Design deiner Marke | PitchBoost",
   metaDescription:
     "Präsentationen mit KI neu gestalten: .pptx hochladen, Inhalt behalten und in Minuten im Design deiner Marke zurückbekommen. Für Pitch-Decks, Rebrandings und den Vertrieb.",
-  h1: "Du bringst die Präsentation, die du hast. Du gehst mit der, die du gemeint hast.",
+  h1: "Bring uns die Präsentation, die du hast. Nimm die mit, die du im Kopf hattest.",
   subhead:
     "PitchBoost liest deine PowerPoint, behält die Story und baut das Design im Look deiner Marke neu auf, direkt von deiner Website übernommen. Ein paar Minuten statt ein paar Wochen.",
   sectionLabel: "Wo drückt der Schuh?",

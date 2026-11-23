@@ -385,7 +385,7 @@ export const PLANS_COPY: Record<Locale, PlansCopy> = {
         "Volle Aufrufstatistiken und gespeicherte Vorlagen",
         "Dein Team, ohne Aufpreis pro Person",
       ],
-      cta: "Kostenlos testen",
+      cta: "Mit Pro starten",
     },
     business: {
       desc: "Für Teams, die sich eine Marke teilen",

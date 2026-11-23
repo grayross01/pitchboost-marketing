@@ -57,14 +57,14 @@ export const HOME_DE: HomeCopy = {
   lineup: {
     eyebrow: "DAS PROGRAMM",
     title: "Mach eins. Der Rest kommt passend dazu.",
-    body: "Fang mit einer Präsentation an und mach daraus Social-Media-Posts, Anzeigen und eine Website. Alles hier unten hat PitchBoost wirklich so erstellt, für dieselbe ausgedachte Firma: gleiche Farben, gleiche Fakten, vier verschiedene Jobs.",
+    body: "Fang mit einer Präsentation an und mach daraus Social-Media-Posts, Anzeigen und eine Website. Alles hier unten hat PitchBoost wirklich so erstellt, für dieselbe ausgedachte Firma: gleiche Farben, gleiche Fakten, vier verschiedene Aufgaben.",
     decks: {
       tag: "AKT I · DIE HAUPTROLLE",
       title: "Präsentationen",
       body: "Sag, was du präsentierst, oder lade die PowerPoint oder das PDF hoch, das du schon hast. Jede Folie kommt im Design deiner Marke zurück, mit deinen Inhalten und deinen Zahlen.",
       points: [
         "Starte mit einem Satz, einer .pptx oder einem PDF bis 50 MB",
-        "Teil einen Link und sieh, wer ihn geöffnet hat und bei welchen Folien die Leute hängen geblieben sind",
+        "Teil einen Link und sieh, wer ihn geöffnet hat und bei welchen Folien die Leute am längsten geblieben sind",
         "Bearbeite danach jede Folie, selbst oder per Zuruf",
         "Lade ein PDF oder eine bearbeitbare PowerPoint herunter, wenn du eine Datei brauchst",
       ],
@@ -130,7 +130,7 @@ export const HOME_DE: HomeCopy = {
     sites: {
       tag: "AKT IV · DAS FOYER",
       title: "Websites",
-      body: "Eine einseitige Website, geschrieben aus deiner Präsentation, ein paar Sätzen oder der Website, die du schon hast. Ändere die Texte direkt auf der Seite und veröffentliche. Das Hosting übernehmen wir.",
+      body: "Eine einseitige Website, geschrieben aus deiner Präsentation, ein paar Sätzen oder der Website, die du schon hast. Ändere die Texte direkt auf der Seite und veröffentliche sie. Das Hosting übernehmen wir.",
       points: ["Geschrieben aus einer Präsentation, einer Beschreibung oder deiner jetzigen Website", "Passt aufs Handy, ohne dass du etwas anfassen musst", "Online unter unserer Adresse oder unter deiner eigenen Domain"],
       cta: "Website erstellen",
       altFull: "Die komplette einseitige Website von Brightwell Solar: eine Überschrift, was du bekommst, das letzte Quartal in Zahlen, Fragen und ein Weg, Kontakt aufzunehmen",
@@ -154,14 +154,14 @@ export const HOME_DE: HomeCopy = {
     body: "Füg das PitchBoost-Plugin in ChatGPT hinzu oder verbinde PitchBoost mit Claude oder Cursor, und du bekommst eine fertige Präsentation im Design deiner Marke als Link zum Teilen zurück. Kein Hin- und Herkopieren zwischen Tabs.",
     cta: "So funktioniert es mit ChatGPT",
     api: "API und MCP",
-    ask: "Gestalte diese Präsentation im Design unserer Marke neu. Sie ist für Donnerstag.",
+    ask: "Gestalte diese Präsentation im Design unserer Marke neu. Ich brauche sie am Donnerstag.",
     answer: "Erledigt. 14 Folien, eure Farben, eure Zahlen.",
     aside: "Donnerstag? mutig.",
   },
   boxOffice: {
     eyebrow: "AN DER KASSE",
     title: "Such dir einen Platz aus. Die billigen sind gratis.",
-    body: "Starte kostenlos und steig um, wenn du so weit bist. Jeder Tarif enthält ein monatliches KI-Budget, das sich automatisch erneuert, und dein Team kommt ohne Aufpreis pro Person mit. Kostenpflichtige Tarife sind monatlich kündbar oder jährlich mit Rabatt.",
+    body: "Starte kostenlos und steig um, wenn du so weit bist. Jeder Tarif enthält ein monatliches Credit-Kontingent, das sich automatisch erneuert, und dein Team kommt ohne Aufpreis pro Person mit. Kostenpflichtige Tarife laufen monatlich oder, mit Rabatt, jährlich.",
     foot: "Mit denselben Credits entstehen Präsentationen, Social-Media-Posts, Anzeigen und Websites. Im Free-Tarif kannst du alle vier mit Wasserzeichen erstellen; Downloads und Veröffentlichen gibt es mit einem kostenpflichtigen Tarif.",
     tickets: ["EINTRITT FREI", "MIT SITZPLATZ", "ERSTE REIHE", "DIE GANZE REIHE"],
   },
@@ -171,7 +171,7 @@ export const HOME_DE: HomeCopy = {
     stamp: "NÖ",
     rules: [
       { title: "Kein Schulterzucken bei deinen Zahlen.", body: "Ein Redesign übernimmt die Zahlen aus deinem Original und gleicht sie damit ab." },
-      { title: "Keine Fakten aus dem Nichts.", body: "Was PitchBoost nachschlägt, kommt mit Quelle, damit du es selbst prüfen kannst." },
+      { title: "Keine Fakten ohne Herkunft.", body: "Was PitchBoost nachschlägt, kommt mit Quelle, damit du es selbst prüfen kannst." },
       { title: "Nichts, was nicht nach dir aussieht.", body: "Dein Logo, deine Farben und Schriften auf jeder Folie, jedem Post, jeder Anzeige und jeder Seite, übernommen von deiner Website oder von dir festgelegt." },
       { title: "Kein Posten hinter deinem Rücken.", body: "Posts und Anzeigen lädst du herunter und veröffentlichst sie selbst. Nichts geht raus, bevor du es abschickst." },
     ],
@@ -196,7 +196,7 @@ export const HOME_DE: HomeCopy = {
     },
     {
       q: "Wie werden die Preise berechnet?",
-      a: "Jeder Tarif enthält ein monatliches KI-Budget, das sich automatisch erneuert. Es deckt das Erstellen von Präsentationen und Bearbeitungen mit KI ab. Wenn du mehr brauchst, kannst du jederzeit zusätzliche Credit-Pakete kaufen.",
+      a: "Jeder Tarif enthält ein monatliches Credit-Kontingent, das sich automatisch erneuert. Es deckt das Erstellen von Präsentationen und Bearbeitungen mit KI ab. Wenn du mehr brauchst, kannst du jederzeit zusätzliche Credit-Pakete kaufen.",
     },
     {
       q: "Kann ich sehen, wer meine Präsentation ansieht?",

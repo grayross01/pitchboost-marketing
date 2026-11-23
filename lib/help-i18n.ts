@@ -171,6 +171,14 @@ export const HELP_UI: Record<Locale, HelpUi> = {
   },
 };
 
+/** What follows an article's title in the browser tab and in search, where a language has its own words for it; the others keep "PitchBoost Help". */
+const TITLE_SUFFIX: Partial<Record<Locale, string>> = { de: "PitchBoost Hilfe" };
+
+/** An article's page title: "How credits and plans work | PitchBoost Help", in German "… | PitchBoost Hilfe". */
+export function helpArticleTitle(locale: Locale, title: string): string {
+  return `${title} | ${TITLE_SUFFIX[locale] ?? "PitchBoost Help"}`;
+}
+
 /** Languages that write the date under an article's title out in words, by their Intl tag. The others show the ISO date, as they always have. */
 const LONG_DATES: Partial<Record<Locale, string>> = { de: "de-DE" };
 

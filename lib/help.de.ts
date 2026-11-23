@@ -60,7 +60,7 @@ export const HELP_ARTICLES_DE: HelpArticle[] = [
     "faqs": [
       {
         "q": "Funktioniert das auch mit .ppt-Dateien?",
-        "a": "Lade eine .pptx-Datei hoch. Eine alte .ppt öffnest du in PowerPoint und wandelst sie mit „Speichern unter“ um; dabei geht nichts verloren."
+        "a": "Lade eine .pptx-Datei hoch. Eine alte .ppt öffnest du in PowerPoint und wandelst sie mit „Speichern unter“ um."
       },
       {
         "q": "Kann ich nur einzelne Folien neu gestalten?",
@@ -355,7 +355,7 @@ export const HELP_ARTICLES_DE: HelpArticle[] = [
       {
         "heading": "Was Claude mit PitchBoost kann",
         "paragraphs": [
-          "Eine hochgeladene Präsentation neu aufbauen, den Neuaufbau abfragen, bis er fertig ist, eine neue Präsentation aus einem Briefing erstellen, deine letzten Präsentationen auflisten, eine davon per ID abrufen und einen Entwurf veröffentlichen. Claude kann auch ohne Konto eine Beispielpräsentation erstellen. Keine dieser Aktionen ist destruktiv, und deinen Tarif ändert Claude nicht."
+          "Eine hochgeladene Präsentation neu aufbauen, den Neuaufbau abfragen, bis er fertig ist, eine neue Präsentation aus einem Briefing erstellen, deine letzten Präsentationen auflisten, eine davon per ID abrufen und einen Entwurf veröffentlichen. Claude kann auch ohne Konto eine Beispielpräsentation erstellen. Keine dieser Aktionen löscht etwas, und deinen Tarif ändert Claude nicht."
         ]
       }
     ],
