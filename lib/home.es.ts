@@ -192,7 +192,7 @@ export const HOME_ES: HomeCopy = {
     },
     {
       q: "¿En qué formato están las presentaciones?",
-      a: "Las presentaciones de PitchBoost son presentaciones web interactivas que compartes con un enlace, así que puedes ver cuándo las abren. Compartir el enlace es gratis en todos los planes; descargar un PDF o un PowerPoint editable requiere un plan de pago o un pago único de $9 por esa presentación.",
+      a: "Cada presentación llega como un enlace para compartir, que te muestra cuándo la abren y qué diapositivas leyeron, y además en PDF, en PowerPoint editable y como copia en Google Slides.",
     },
     {
       q: "¿Cómo se calcula el precio?",
