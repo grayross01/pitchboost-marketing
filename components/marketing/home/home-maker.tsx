@@ -63,7 +63,11 @@ export default function HomeMaker({ t }: { t: HomeMakerCopy }) {
             onKeyDown={(e) => {
               if (e.key === "Enter" && !e.shiftKey && !e.nativeEvent.isComposing) {
                 e.preventDefault();
-                form.current?.requestSubmit();
+                const f = form.current;
+                if (!f) return;
+                // requestSubmit checks the box is filled in; Safari before 16 lacks it.
+                if (typeof f.requestSubmit === "function") f.requestSubmit();
+                else if (f.reportValidity()) f.submit();
               }
             }}
           />
