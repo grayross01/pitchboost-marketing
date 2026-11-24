@@ -34,30 +34,44 @@ export interface HomeAct {
   cta: string;
 }
 
-/** The words in the hero's box. The box is a client component, so it is handed these and never loads the dictionary itself. */
+/**
+ * The words on the hero's two cards: redesign the deck you have, or make a
+ * new one. The cards are a client component, so they are handed these and
+ * never load the dictionary itself.
+ */
 export interface HomeMakerCopy {
-  /** What a screen reader calls the row of choices. */
-  groupLabel: string;
-  /** The words before the choices: "I need a" [Deck] [Social post] [Ad] [Website]. */
-  lead: string;
-  kinds: { deck: string; post: string; ad: string; site: string };
-  /** Shown in place of the text box for the three things that are made inside the app. */
-  inside: { post: string; ad: string; site: string };
-  topicLabel: string;
-  placeholder: string;
-  submit: string;
-  upload: string;
-  formats: string;
-  start: string;
+  /** The word in the coral circle between the two cards. */
+  or: string;
+  redesign: {
+    /** The small line over the card's heading. */
+    kicker: string;
+    title: string;
+    /** In the dashed box. A file dropped there, or a press on the button, goes to signup, which opens on the upload step. */
+    drop: string;
+    choose: string;
+    formats: string;
+    /** The line under the box. */
+    foot: string;
+  };
+  fresh: {
+    kicker: string;
+    title: string;
+    /** What a screen reader calls the box. */
+    topicLabel: string;
+    placeholder: string;
+    submit: string;
+  };
 }
 
 export interface HomeCopy {
   /** The page's title and description for search and sharing, and the sentence its app schema carries. */
   meta: { title: string; description: string; schemaDescription: string };
   hero: {
-    /** The headline: `lead`, a space, the underlined `mark`, then `tail` (which brings its own leading space unless it is only punctuation), and `sub` on the line below. The mark stays on one line, so keep it about as short as the English one. */
-    h1: { lead: string; mark: string; tail: string; sub: string };
+    /** The headline: `lead`, a space, the underlined `mark`, then `tail` (which brings its own leading space unless it is only punctuation). The mark stays on one line, so keep it about as short as the English one. */
+    h1: { lead: string; mark: string; tail: string };
     body: string;
+    /** The line under the headline on this language's share card (app/(es)/es/opengraph-image.tsx and the others). The page itself does not show it. */
+    card: string;
     fine: string;
     /** Alt text for the four pictures on the stage. */
     alt: { deck: string; site: string; post: string; ad: string };
@@ -165,8 +179,9 @@ export const HOME_EN: HomeCopy = {
       "AI presentation maker that builds a new presentation from a prompt (a lesson, a report, a talk or a pitch) or redesigns an existing PowerPoint or PDF deck in your brand, in a few minutes.",
   },
   hero: {
-    h1: { lead: "Slides worth", mark: "staying awake", tail: " for.", sub: "Plus the posts, ads and website to match." },
-    body: "Tell PitchBoost what you're working on, or hand it the PowerPoint you already have. It designs every slide in your brand, then turns the deck into social posts, ads and a one-page website.",
+    h1: { lead: "Presentations people", mark: "actually", tail: " pay attention to." },
+    body: "PitchBoost is an AI presentation maker. Start from a sentence or the deck you have, and get slides in your brand, plus the social posts, ads and website to match.",
+    card: "Plus the posts, ads and website to match.",
     fine: "Free forever plan. No credit card required.",
     alt: {
       deck: "A deck cover: Brightwell Solar, Q3 2026 Business Review",
@@ -182,20 +197,22 @@ export const HOME_EN: HomeCopy = {
     },
   },
   maker: {
-    groupLabel: "What do you need?",
-    lead: "I need a",
-    kinds: { deck: "Deck", post: "Social post", ad: "Ad", site: "Website" },
-    inside: {
-      post: "Social posts are made inside PitchBoost, from a deck or a few lines of your own.",
-      ad: "Ads are made inside PitchBoost, from a deck, a photo or a few lines of your own.",
-      site: "A website is written inside PitchBoost, from a deck, a few sentences or the site you already have.",
+    or: "or",
+    redesign: {
+      kicker: "Got a deck already?",
+      title: "Redesign it",
+      drop: "Drop a PowerPoint or PDF",
+      choose: "Choose a file",
+      formats: ".pptx or PDF, up to 50 MB",
+      foot: "Slide by slide, your words, your brand.",
     },
-    topicLabel: "What is your presentation about?",
-    placeholder: "What's it about?",
-    submit: "Make my deck",
-    upload: "Or drop in the PowerPoint you already have",
-    formats: ".pptx or PDF",
-    start: "Start free",
+    fresh: {
+      kicker: "Starting from nothing?",
+      title: "Make a new one",
+      topicLabel: "What is your presentation about?",
+      placeholder: "What's it about? A lesson, a board update, a pitch to one client...",
+      submit: "Make my deck",
+    },
   },
   nowShowing: {
     badge: "NOW SHOWING",

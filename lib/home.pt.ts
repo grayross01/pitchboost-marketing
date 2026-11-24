@@ -10,8 +10,9 @@ export const HOME_PT: HomeCopy = {
       "Criador de apresentações com IA que monta uma apresentação nova a partir de um prompt (uma aula, um relatório, uma palestra ou um pitch) ou redesenha com a sua marca um PowerPoint ou PDF que você já tem, em poucos minutos.",
   },
   hero: {
-    h1: { lead: "Slides que", mark: "não dão sono", tail: ".", sub: "E os posts, anúncios e site para combinar." },
-    body: "Conte ao PitchBoost no que você está trabalhando, ou entregue o PowerPoint que você já tem. Ele faz o design de cada slide com a sua marca e depois transforma a apresentação em posts para redes sociais, anúncios e um site de uma página.",
+    h1: { lead: "Apresentações que prendem a atenção", mark: "de verdade", tail: "." },
+    body: "O PitchBoost é um criador de apresentações com IA. Comece com uma frase ou com a apresentação que você já tem e receba slides com a sua marca, além dos posts, anúncios e site para combinar.",
+    card: "E os posts, anúncios e site para combinar.",
     fine: "Plano gratuito para sempre. Sem cartão de crédito.",
     alt: {
       deck: "A capa de uma apresentação: Brightwell Solar, revisão de negócios do terceiro trimestre de 2026",
@@ -27,20 +28,22 @@ export const HOME_PT: HomeCopy = {
     },
   },
   maker: {
-    groupLabel: "Do que você precisa?",
-    lead: "Preciso de",
-    kinds: { deck: "uma apresentação", post: "um post", ad: "um anúncio", site: "um site" },
-    inside: {
-      post: "Os posts são feitos dentro do PitchBoost, a partir de uma apresentação ou de algumas linhas suas.",
-      ad: "Os anúncios são feitos dentro do PitchBoost, a partir de uma apresentação, de uma foto ou de algumas linhas suas.",
-      site: "O site é escrito dentro do PitchBoost, a partir de uma apresentação, de algumas frases ou do site que você já tem.",
+    or: "ou",
+    redesign: {
+      kicker: "Já tem uma apresentação?",
+      title: "Redesenhe a sua",
+      drop: "Solte aqui um PowerPoint ou PDF",
+      choose: "Escolher arquivo",
+      formats: ".pptx ou PDF, de até 50 MB",
+      foot: "Slide por slide, com as suas palavras e a sua marca.",
     },
-    topicLabel: "Sobre o que é a sua apresentação?",
-    placeholder: "É sobre o quê?",
-    submit: "Criar minha apresentação",
-    upload: "Ou envie o PowerPoint que você já tem",
-    formats: ".pptx ou PDF",
-    start: "Começar grátis",
+    fresh: {
+      kicker: "Começando do zero?",
+      title: "Crie uma nova",
+      topicLabel: "Sobre o que é a sua apresentação?",
+      placeholder: "É sobre o quê? Uma aula, um relatório para a diretoria, uma proposta para um cliente...",
+      submit: "Criar minha apresentação",
+    },
   },
   nowShowing: {
     badge: "EM CARTAZ",

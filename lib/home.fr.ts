@@ -10,8 +10,9 @@ export const HOME_FR: HomeCopy = {
       "Créateur de présentations IA qui construit une nouvelle présentation à partir d'un prompt (un cours, un rapport, une conférence ou un pitch) ou refond à vos couleurs un PowerPoint ou un PDF existant, en quelques minutes.",
   },
   hero: {
-    h1: { lead: "Des diapositives qui", mark: "réveillent", tail: " la salle.", sub: "Avec les publications, les publicités et le site web assortis." },
-    body: "Dites à PitchBoost sur quoi vous travaillez, ou confiez-lui le PowerPoint que vous avez déjà. Il met en page chaque diapositive à vos couleurs, puis transforme la présentation en publications pour les réseaux, en publicités et en site web d'une page.",
+    h1: { lead: "Des présentations qui captent", mark: "vraiment", tail: " l'attention." },
+    body: "PitchBoost est un créateur de présentations IA. Partez d'une phrase ou de la présentation que vous avez déjà, et obtenez des diapositives à vos couleurs, avec les publications, les publicités et le site web assortis.",
+    card: "Avec les publications, les publicités et le site web assortis.",
     fine: "Offre gratuite, pour toujours. Sans carte bancaire.",
     alt: {
       deck: "La couverture d'une présentation : Brightwell Solar, bilan d'activité du troisième trimestre 2026",
@@ -27,20 +28,22 @@ export const HOME_FR: HomeCopy = {
     },
   },
   maker: {
-    groupLabel: "De quoi avez-vous besoin ?",
-    lead: "Il me faut",
-    kinds: { deck: "une présentation", post: "une publication", ad: "une publicité", site: "un site web" },
-    inside: {
-      post: "Les publications se créent dans PitchBoost, à partir d'une présentation ou de quelques lignes de votre main.",
-      ad: "Les publicités se créent dans PitchBoost, à partir d'une présentation, d'une photo ou de quelques lignes de votre main.",
-      site: "Un site web s'écrit dans PitchBoost, à partir d'une présentation, de quelques phrases ou du site que vous avez déjà.",
+    or: "ou",
+    redesign: {
+      kicker: "Vous avez déjà une présentation ?",
+      title: "Redessinez-la",
+      drop: "Déposez ici un PowerPoint ou un PDF",
+      choose: "Choisir un fichier",
+      formats: ".pptx ou PDF, jusqu'à 50 Mo",
+      foot: "Diapositive par diapositive, vos mots, vos couleurs.",
     },
-    topicLabel: "Quel est le sujet de votre présentation ?",
-    placeholder: "De quoi parle-t-elle ?",
-    submit: "Créer ma présentation",
-    upload: "Ou déposez le PowerPoint que vous avez déjà",
-    formats: ".pptx ou PDF",
-    start: "Commencer gratuitement",
+    fresh: {
+      kicker: "Vous partez de zéro ?",
+      title: "Créez-en une nouvelle",
+      topicLabel: "Quel est le sujet de votre présentation ?",
+      placeholder: "De quoi parle-t-elle ? Un cours, un point pour le comité de direction, une proposition pour un client...",
+      submit: "Créer ma présentation",
+    },
   },
   nowShowing: {
     badge: "À L'AFFICHE",

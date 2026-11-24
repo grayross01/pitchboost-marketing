@@ -10,6 +10,6 @@ const LOCALE = "es" as const;
 
 /** The card for the Spanish home page: its own headline, as the page says it. Any Spanish page with no card of its own gets this one too. */
 export default function Image() {
-  const { lead, mark, tail, sub } = HOME_COPY[LOCALE].hero.h1;
-  return ogImage({ eyebrow: PRESENTATION_UI[LOCALE].breadcrumbHub, title: `${lead} ${mark}${tail}`, subtitle: sub });
+  const { h1: { lead, mark, tail }, card } = HOME_COPY[LOCALE].hero;
+  return ogImage({ eyebrow: PRESENTATION_UI[LOCALE].breadcrumbHub, title: `${lead} ${mark}${tail}`, subtitle: card });
 }
