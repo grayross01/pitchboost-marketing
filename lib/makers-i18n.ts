@@ -1,7 +1,6 @@
 /**
  * Locale scaffolding for the maker pages (/tools/[slug]): English at the root,
- * the other languages under their prefix, as the presentation family does
- * (and, like it, not in German yet: PresentationLocale in lib/locales.ts).
+ * the other languages under their prefix, as the presentation family does.
  * Page copy is data (lib/makers*.ts). The strings here are the words around
  * it and around the box that makes the deck.
  */
@@ -11,7 +10,7 @@ import { MAKERS_PT, MAKER_UI_PT } from "./makers.pt";
 import { MAKERS_FR, MAKER_UI_FR } from "./makers.fr";
 import { MAKERS_AR, MAKER_UI_AR } from "./makers.ar";
 import { DECK_MAKER_STRINGS, type DeckMakerStrings } from "../components/marketing/deck-maker-strings";
-import { PRESENTATION_LOCALES, type PresentationLocale } from "./locales";
+import { LOCALES, type Locale } from "./redesign-i18n";
 
 export interface MakerUi {
   getLabel: string;
@@ -27,7 +26,7 @@ export interface MakerUi {
   box: DeckMakerStrings;
 }
 
-export const MAKER_UI: Record<PresentationLocale, MakerUi> = {
+export const MAKER_UI: Record<Locale, MakerUi> = {
   en: {
     getLabel: "What you get",
     getTitle: "A real deck, not a mockup",
@@ -45,15 +44,15 @@ export const MAKER_UI: Record<PresentationLocale, MakerUi> = {
   ar: MAKER_UI_AR,
 };
 
-export function getMakers(locale: PresentationLocale): MakerPage[] {
+export function getMakers(locale: Locale): MakerPage[] {
   return locale === "es" ? MAKERS_ES : locale === "pt" ? MAKERS_PT : locale === "fr" ? MAKERS_FR : locale === "ar" ? MAKERS_AR : MAKERS;
 }
 
-export function getMakerFor(locale: PresentationLocale, slug: string): MakerPage | undefined {
+export function getMakerFor(locale: Locale, slug: string): MakerPage | undefined {
   return getMakers(locale).find((m) => m.slug === slug);
 }
 
 /** The locales that have this page; a new English page ships before its translations. */
-export function makerLocales(slug: string): PresentationLocale[] {
-  return PRESENTATION_LOCALES.filter((l) => !!getMakerFor(l, slug));
+export function makerLocales(slug: string): Locale[] {
+  return LOCALES.filter((l) => !!getMakerFor(l, slug));
 }

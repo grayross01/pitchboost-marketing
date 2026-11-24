@@ -4,7 +4,7 @@ import TopicBox from "@/components/marketing/topic-box";
 import { STATIC_PAGE_DATES } from "@/lib/page-dates";
 import { PRESENTATION_HUB, PRESENTATION_UI, getPresentations } from "@/lib/presentations-i18n";
 import { MAKER_UI, getMakers } from "@/lib/makers-i18n";
-import { LOCALE_NAME, LOCALE_PREFIX, OG_LOCALE, PRESENTATION_LOCALES, REDESIGN_UI, languageAlternates, type Locale, type PresentationLocale } from "@/lib/redesign-i18n";
+import { LOCALES, LOCALE_NAME, LOCALE_PREFIX, OG_LOCALE, REDESIGN_UI, languageAlternates, type Locale } from "@/lib/redesign-i18n";
 import { localeDir, sharedCard } from "@/lib/locale-dir";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
@@ -15,19 +15,19 @@ const PATH = "/ai-presentation-maker";
 // The comparison pages are English only; localized hubs mark the links.
 const COMPARE_LINKS = ["/compare/pitchboost-vs-gamma", "/chatgpt", "/alternatives/copilot-in-powerpoint"];
 
-export function presentationHubMetadata(locale: PresentationLocale): Metadata {
+export function presentationHubMetadata(locale: Locale): Metadata {
   const hub = PRESENTATION_HUB[locale];
   return {
     title: { absolute: hub.title },
     description: hub.description,
-    alternates: { canonical: `${LOCALE_PREFIX[locale]}${PATH}`, languages: languageAlternates(PATH, PRESENTATION_LOCALES) },
+    alternates: { canonical: `${LOCALE_PREFIX[locale]}${PATH}`, languages: languageAlternates(PATH) },
     openGraph: { title: hub.title, description: hub.description, url: `${BASE}${LOCALE_PREFIX[locale]}${PATH}`, locale: OG_LOCALE[locale], ...sharedCard(locale) },
   };
 }
 
 const card = { background: "var(--ds-bg-light)", border: "1px solid var(--ds-border)", borderRadius: 14, padding: "22px 26px" } as const;
 
-export default function PresentationHubView({ locale }: { locale: PresentationLocale }) {
+export default function PresentationHubView({ locale }: { locale: Locale }) {
   const hub = PRESENTATION_HUB[locale];
   const ui = PRESENTATION_UI[locale];
   const prefix = LOCALE_PREFIX[locale];
@@ -207,8 +207,8 @@ export default function PresentationHubView({ locale }: { locale: PresentationLo
   );
 }
 
-/** "Also in: Español · Português" (or English), limited to the locales that have the page: by default, every language with the presentation pages. */
-export function LocaleLinks({ locale, path, available = PRESENTATION_LOCALES }: { locale: Locale; path: string; available?: Locale[] }) {
+/** "Also in: Español · Português" (or English), limited to the locales that have the page. */
+export function LocaleLinks({ locale, path, available = LOCALES }: { locale: Locale; path: string; available?: Locale[] }) {
   const others = available.filter((l) => l !== locale);
   if (others.length === 0) return null;
   return (

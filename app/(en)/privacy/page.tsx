@@ -12,7 +12,7 @@ export default function PrivacyPage() {
       <section className="legal-hero">
         <div className="mkt-container">
           <h1>Privacy Policy</h1>
-          <p>Last updated: November 23, 2026</p>
+          <p>Last updated: November 9, 2026</p>
         </div>
       </section>
 
@@ -162,15 +162,6 @@ export default function PrivacyPage() {
         <p>
           We use essential cookies for authentication and session management,
           and analytics cookies to understand how the service is used.
-        </p>
-        <p>
-          Our <code>pb_lang</code> cookie is set only when you choose a
-          language: in the list at the foot of each page, or in the note that
-          offers a page in your language, where closing the note keeps
-          English. It is kept for a year and remembers your choice. Closing
-          the note also leaves{" "}
-          <code>pb-language-prompt</code> in your browser&apos;s local
-          storage, so it stays closed.
         </p>
         <p>
           We also use advertising cookies from Google and Meta (such as{" "}

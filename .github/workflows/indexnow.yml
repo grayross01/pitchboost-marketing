@@ -44,28 +44,22 @@ jobs:
               return {p for p in paths if p == prefix or p.startswith(prefix + "/")}
 
           # Every language a section is published in (English at the root).
-          LOC = ["", "/es", "/pt", "/fr", "/ar", "/de"]
+          LOC = ["", "/es", "/pt", "/fr", "/ar"]
           def each(*paths):
               return [l + p for l in LOC for p in paths]
-          # The presentation family (the presentation maker, its pages and the
-          # free tools) is not in German yet (lib/locales.ts).
-          LOC_PRESENTATIONS = ["", "/es", "/pt", "/fr", "/ar"]
-          def each_p(*paths):
-              return [l + p for l in LOC_PRESENTATIONS for p in paths]
 
           # Data files and shared components that feed whole sections. A
           # translation (lib/redesigns.fr.ts, lib/redesigns.ar.part1.ts) counts
           # as its section's file; see the stem below.
           SECTIONS = {
               "lib/redesigns": each("/redesign"),
-              "lib/redesign-i18n": each("/redesign", "/help") + each_p("/ai-presentation-maker", "/presentations"),
-              "lib/locales": each("/redesign", "/help") + each_p("/ai-presentation-maker", "/presentations"),
+              "lib/redesign-i18n": each("/redesign", "/ai-presentation-maker", "/presentations", "/help"),
               "components/marketing/redesign-page-view": each("/redesign"),
               "components/marketing/redesign-hub-view": each("/redesign"),
-              "lib/presentations": each_p("/ai-presentation-maker", "/presentations"),
-              "lib/presentations-i18n": each_p("/ai-presentation-maker", "/presentations"),
-              "components/marketing/presentation-page-view": each_p("/presentations"),
-              "components/marketing/presentation-hub-view": each_p("/ai-presentation-maker"),
+              "lib/presentations": each("/ai-presentation-maker", "/presentations"),
+              "lib/presentations-i18n": each("/ai-presentation-maker", "/presentations"),
+              "components/marketing/presentation-page-view": each("/presentations"),
+              "components/marketing/presentation-hub-view": each("/ai-presentation-maker"),
               "lib/i18n": ["/ar/redesign", "/ar/ai-presentation-maker", "/ar/presentations", "/ar/help"],
               "lib/answers": ["/answers"],
               "lib/help": each("/help"),
@@ -85,14 +79,13 @@ jobs:
           # The home page is one address per language. Its words are in
           # lib/home-i18n.ts (English) and lib/home.<language>.ts, and it
           # shows the plan cards, whose words are in lib/pricing-i18n.ts.
-          HOME = ["/", "/es", "/pt", "/fr", "/ar", "/de"]
+          HOME = ["/", "/es", "/pt", "/fr", "/ar"]
           SINGLE = {
               "components/marketing/pricing-plans": HOME,
               "lib/pricing-i18n": HOME,
               "components/marketing/faq-data": ["/"],
               "lib/home-i18n": HOME,
               "lib/home": HOME,
-              "lib/locales": HOME,
           }
 
           changed = [l.strip() for l in open("changed.txt") if l.strip()]
@@ -103,7 +96,7 @@ jobs:
                   out |= {f"/blog/{m.group(1)}", "/blog"}
                   continue
               stem = re.sub(r"\.tsx?$", "", f)
-              stem = re.sub(r"\.(es|pt|fr|ar|de)(\.part\d+)?$", "", stem)
+              stem = re.sub(r"\.(es|pt|fr|ar)(\.part\d+)?$", "", stem)
               for key, prefixes in SECTIONS.items():
                   if stem == key:
                       for p in prefixes:
@@ -111,9 +104,7 @@ jobs:
               out |= set(SINGLE.get(stem, []))
               m = re.match(r"app/(.+?)/(?:\[[^/]+\]/)?(?:page|layout)\.tsx$", f)
               if m:
-                  # Route groups such as (en) and (de) are not part of the address.
-                  route = re.sub(r"\([^/]+\)(/|$)", "", m.group(1).split("/[")[0])
-                  out |= under("/" + route)
+                  out |= under("/" + m.group(1).split("/[")[0])
               elif f == "app/page.tsx":
                   out.add("/")
 

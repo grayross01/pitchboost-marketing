@@ -5,7 +5,7 @@ import { LocaleLinks } from "@/components/marketing/presentation-hub-view";
 import { MAKERS_UPDATED, type MakerPage } from "@/lib/makers";
 import { MAKER_UI, getMakerFor, getMakers, makerLocales } from "@/lib/makers-i18n";
 import { PRESENTATION_UI, getPresentationFor } from "@/lib/presentations-i18n";
-import { LOCALE_PREFIX, OG_LOCALE, type PresentationLocale } from "@/lib/redesign-i18n";
+import { LOCALE_PREFIX, OG_LOCALE, type Locale } from "@/lib/redesign-i18n";
 import { getRedesignFor } from "@/lib/redesigns";
 import { localeDir, sharedCard } from "@/lib/locale-dir";
 
@@ -24,7 +24,7 @@ function availableAlternates(slug: string): Record<string, string> {
   return out;
 }
 
-export function makerPageMetadata(locale: PresentationLocale, slug: string): Metadata {
+export function makerPageMetadata(locale: Locale, slug: string): Metadata {
   const page = getMakerFor(locale, slug);
   if (!page) return {};
   const path = `${LOCALE_PREFIX[locale]}/tools/${slug}`;
@@ -42,7 +42,7 @@ export function makerPageMetadata(locale: PresentationLocale, slug: string): Met
  * the same page in the language when the site has one, and the English page,
  * marked as English, when it does not (the blog is English only).
  */
-function localLink(locale: PresentationLocale, href: string): { href: string; english: boolean } {
+function localLink(locale: Locale, href: string): { href: string; english: boolean } {
   if (locale === "en") return { href, english: false };
   const prefix = LOCALE_PREFIX[locale];
   const [, family, slug] = /^\/(tools|presentations|redesign)\/([^/]+)$/.exec(href) ?? [];
@@ -56,7 +56,7 @@ function localLink(locale: PresentationLocale, href: string): { href: string; en
 
 const card = { background: "var(--ds-bg-light)", border: "1px solid var(--ds-border)", borderRadius: 14, padding: "22px 24px" } as const;
 
-export default function MakerPageView({ locale = "en", page }: { locale?: PresentationLocale; page: MakerPage }) {
+export default function MakerPageView({ locale = "en", page }: { locale?: Locale; page: MakerPage }) {
   const ui = MAKER_UI[locale];
   const chrome = PRESENTATION_UI[locale];
   const prefix = LOCALE_PREFIX[locale];
