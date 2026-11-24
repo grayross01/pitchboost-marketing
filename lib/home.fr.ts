@@ -12,6 +12,7 @@ export const HOME_FR: HomeCopy = {
   hero: {
     h1: { lead: "Des présentations qui captent", mark: "vraiment", tail: " l'attention." },
     body: "PitchBoost est un créateur de présentations IA. Partez d'une phrase ou de la présentation que vous avez déjà, et obtenez des diapositives à vos couleurs, avec les publications, les publicités et le site web assortis.",
+    card: "Avec les publications, les publicités et le site web assortis.",
     fine: "Offre gratuite, pour toujours. Sans carte bancaire.",
     alt: {
       deck: "La couverture d'une présentation : Brightwell Solar, bilan d'activité du troisième trimestre 2026",

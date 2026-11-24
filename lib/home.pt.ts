@@ -12,6 +12,7 @@ export const HOME_PT: HomeCopy = {
   hero: {
     h1: { lead: "Apresentações que prendem a atenção", mark: "de verdade", tail: "." },
     body: "O PitchBoost é um criador de apresentações com IA. Comece com uma frase ou com a apresentação que você já tem e receba slides com a sua marca, além dos posts, anúncios e site para combinar.",
+    card: "E os posts, anúncios e site para combinar.",
     fine: "Plano gratuito para sempre. Sem cartão de crédito.",
     alt: {
       deck: "A capa de uma apresentação: Brightwell Solar, revisão de negócios do terceiro trimestre de 2026",

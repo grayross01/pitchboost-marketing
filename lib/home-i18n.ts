@@ -70,6 +70,8 @@ export interface HomeCopy {
     /** The headline: `lead`, a space, the underlined `mark`, then `tail` (which brings its own leading space unless it is only punctuation). The mark stays on one line, so keep it about as short as the English one. */
     h1: { lead: string; mark: string; tail: string };
     body: string;
+    /** The line under the headline on this language's share card (app/(es)/es/opengraph-image.tsx and the others). The page itself does not show it. */
+    card: string;
     fine: string;
     /** Alt text for the four pictures on the stage. */
     alt: { deck: string; site: string; post: string; ad: string };
@@ -179,6 +181,7 @@ export const HOME_EN: HomeCopy = {
   hero: {
     h1: { lead: "Presentations people", mark: "actually", tail: " pay attention to." },
     body: "PitchBoost is an AI presentation maker. Start from a sentence or the deck you have, and get slides in your brand, plus the social posts, ads and website to match.",
+    card: "Plus the posts, ads and website to match.",
     fine: "Free forever plan. No credit card required.",
     alt: {
       deck: "A deck cover: Brightwell Solar, Q3 2026 Business Review",
