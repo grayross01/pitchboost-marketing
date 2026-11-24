@@ -4,7 +4,7 @@ import { LocaleLinks } from "@/components/marketing/presentation-hub-view";
 import TopicBox, { presentSignupUrl } from "@/components/marketing/topic-box";
 import { PRESENTATIONS_UPDATED, type PresentationPage } from "@/lib/presentations";
 import { PRESENTATION_UI, getPresentationFor, getPresentations } from "@/lib/presentations-i18n";
-import { LOCALE_PREFIX, OG_LOCALE, PRESENTATION_LOCALES, type PresentationLocale } from "@/lib/redesign-i18n";
+import { LOCALES, LOCALE_PREFIX, OG_LOCALE, type Locale } from "@/lib/redesign-i18n";
 import { getRedesignFor } from "@/lib/redesigns";
 import { guidesForPresentation } from "@/lib/guides";
 import { localeDir, sharedCard } from "@/lib/locale-dir";
@@ -14,7 +14,7 @@ const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 const SIGNUP_REBUILD = `${APP_URL}/signup?intent=rebuild`;
 const BASE = "https://pitchboost.ai";
 
-export function presentationPageMetadata(locale: PresentationLocale, slug: string): Metadata {
+export function presentationPageMetadata(locale: Locale, slug: string): Metadata {
   const page = getPresentationFor(locale, slug);
   if (!page) return {};
   const path = `${LOCALE_PREFIX[locale]}/presentations/${slug}`;
@@ -28,8 +28,8 @@ export function presentationPageMetadata(locale: PresentationLocale, slug: strin
 }
 
 /** The locales that have this page; a new English page ships before its translations. */
-export function presentationLocales(slug: string): PresentationLocale[] {
-  return PRESENTATION_LOCALES.filter((l) => !!getPresentationFor(l, slug));
+export function presentationLocales(slug: string): Locale[] {
+  return LOCALES.filter((l) => !!getPresentationFor(l, slug));
 }
 
 /** hreflang alternates limited to the locales that actually have this page. */
@@ -50,7 +50,7 @@ function CheckIcon() {
 
 const card = { background: "var(--ds-bg-light)", border: "1px solid var(--ds-border)", borderRadius: 14, padding: "22px 26px" } as const;
 
-export default function PresentationPageView({ locale, page }: { locale: PresentationLocale; page: PresentationPage }) {
+export default function PresentationPageView({ locale, page }: { locale: Locale; page: PresentationPage }) {
   const ui = PRESENTATION_UI[locale];
   const prefix = LOCALE_PREFIX[locale];
   const pageUrl = `${BASE}${prefix}/presentations/${page.slug}`;

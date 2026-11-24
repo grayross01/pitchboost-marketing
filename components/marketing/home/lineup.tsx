@@ -2,7 +2,7 @@
 // Part of the home page (home-view.tsx puts the sections together, in every language). The look was approved as a mockup in November 2026; the inline styles carry it over as drawn.
 import Link from "next/link";
 import { SIGNUP_URL } from "./links";
-import { arrow, inLanguage, localLink } from "./local-link";
+import { arrow, localLink } from "./local-link";
 import { HOME_COPY } from "@/lib/home-i18n";
 import { localeDir } from "@/lib/locale-dir";
 import type { Locale } from "@/lib/redesign-i18n";
@@ -18,7 +18,7 @@ const MORE_ON_DECKS = [
   "/features/viewer-analytics",
 ];
 
-/** On a page in another language, the first two lead to that language's own pages instead of the English feature pages, where it has them: the presentation maker for new decks, the redesign hub for upload and redesign. */
+/** On a page in another language, the first two lead to that language's own pages instead of the English feature pages: the presentation maker for new decks, the redesign hub for upload and redesign. */
 const MORE_ON_DECKS_TRANSLATED: Record<string, string> = {
   "/features/ai-deck-builder": "/ai-presentation-maker",
   "/features/upload-and-redesign": "/redesign",
@@ -30,10 +30,7 @@ export default function Lineup({ locale }: { locale: Locale }) {
   const go = arrow(locale);
   const rtl = localeDir(locale) === "rtl";
   // The links under the decks, in this page's language where the site has the page. The ones still in English carry hreflang="en", and one line under the links says so (not a note on each).
-  const more = MORE_ON_DECKS.map((href) => {
-    const own = MORE_ON_DECKS_TRANSLATED[href];
-    return localLink(locale, locale !== "en" && own && inLanguage(locale, own) ? own : href);
-  });
+  const more = MORE_ON_DECKS.map((href) => localLink(locale, locale === "en" ? href : (MORE_ON_DECKS_TRANSLATED[href] ?? href)));
   // The example is an English-language company and its pieces are real output, so they stay as they were made: its caption keeps its language on every page.
   const example = locale === "en" ? {} : ({ lang: "en", dir: "ltr" } as const);
   return (

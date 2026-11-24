@@ -138,7 +138,7 @@ export default function RedesignPageView({ locale, page }: { locale: Locale; pag
           </p>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 16, marginTop: 36, flexWrap: "wrap" }}>
             <a href={SIGNUP_URL} className="btn btn-primary btn-lg">{ui.ctaPrimary}</a>
-            <Link href={ui.howHref ?? "/features/upload-and-redesign"} className="btn btn-ghost btn-lg">{ui.ctaSecondary}</Link>
+            <Link href="/features/upload-and-redesign" className="btn btn-ghost btn-lg">{ui.ctaSecondary}</Link>
           </div>
           <p style={{ fontSize: 12, color: "var(--ds-text-tertiary)", marginTop: 14 }}>{ui.finePrint}</p>
           <LocaleSwitch locale={locale} path={`/redesign/${page.slug}`} />
@@ -271,7 +271,7 @@ export default function RedesignPageView({ locale, page }: { locale: Locale; pag
             ))}
           </div>
           <div className="fade-up" style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 20, marginTop: 20 }}>
-            <Link href={ui.howHref ?? "/features/upload-and-redesign"} style={{ textDecoration: "none", background: "var(--ds-bg-light)", border: "1px solid var(--ds-border)", borderRadius: 14, padding: "22px 26px", display: "block" }}>
+            <Link href="/features/upload-and-redesign" style={{ textDecoration: "none", background: "var(--ds-bg-light)", border: "1px solid var(--ds-border)", borderRadius: 14, padding: "22px 26px", display: "block" }}>
               <h3 style={{ fontSize: 15, fontWeight: 700, color: "var(--ds-text-primary)", marginBottom: 8 }}>{ui.relatedFeatureTitle}</h3>
               <p style={{ fontSize: 13, color: "var(--ds-text-secondary)", lineHeight: 1.6, margin: 0 }}>{ui.relatedFeatureBody}</p>
             </Link>

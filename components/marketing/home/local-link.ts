@@ -1,13 +1,7 @@
-import { inEnglishMark } from "@/lib/presentations-i18n";
-import { LOCALE_PREFIX, hasPresentations, type Locale } from "@/lib/locales";
+import { PRESENTATION_UI } from "@/lib/presentations-i18n";
+import { LOCALE_PREFIX, type Locale } from "@/lib/redesign-i18n";
 import { getRedesignFor } from "@/lib/redesigns";
 import { localeDir } from "@/lib/locale-dir";
-
-/** Whether a language has this page of the home page's links: the redesign hub and the redesign pages it has, and the presentation maker where it has the presentation pages (German does not, yet). */
-export function inLanguage(locale: Locale, href: string): boolean {
-  const [, slug] = /^\/redesign\/([^/]+)$/.exec(href) ?? [];
-  return (href === "/ai-presentation-maker" && hasPresentations(locale)) || href === "/redesign" || (!!slug && !!getRedesignFor(locale, slug));
-}
 
 /**
  * Where one of the home page's links into this site leads in a given
@@ -23,7 +17,9 @@ export function inLanguage(locale: Locale, href: string): boolean {
  */
 export function localLink(locale: Locale, href: string): { href: string; hrefLang: "en" | undefined; inEnglish: string } {
   if (locale === "en") return { href, hrefLang: undefined, inEnglish: "" };
-  return inLanguage(locale, href) ? { href: `${LOCALE_PREFIX[locale]}${href}`, hrefLang: undefined, inEnglish: "" } : { href, hrefLang: "en", inEnglish: inEnglishMark(locale) };
+  const [, slug] = /^\/redesign\/([^/]+)$/.exec(href) ?? [];
+  const here = href === "/ai-presentation-maker" || href === "/redesign" || (!!slug && !!getRedesignFor(locale, slug));
+  return here ? { href: `${LOCALE_PREFIX[locale]}${href}`, hrefLang: undefined, inEnglish: "" } : { href, hrefLang: "en", inEnglish: PRESENTATION_UI[locale].inEnglish };
 }
 
 /** The arrow after a link. It points the way the page reads. */
