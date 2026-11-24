@@ -10,8 +10,8 @@ export const HOME_ES: HomeCopy = {
       "Creador de presentaciones con IA que arma una presentación nueva a partir de un prompt (una clase, un informe, una charla o un pitch) o rediseña con tu marca un PowerPoint o PDF que ya tienes, en unos minutos.",
   },
   hero: {
-    h1: { lead: "Diapositivas que", mark: "no dan sueño", tail: ".", sub: "Y las publicaciones, los anuncios y el sitio web que hacen juego." },
-    body: "Cuéntale a PitchBoost en qué estás trabajando, o pásale el PowerPoint que ya tienes. PitchBoost diseña cada diapositiva con tu marca y luego convierte la presentación en publicaciones para redes, anuncios y un sitio web de una página.",
+    h1: { lead: "Presentaciones que", mark: "de verdad", tail: " captan la atención." },
+    body: "PitchBoost es un creador de presentaciones con IA. Empieza con una frase o con la presentación que ya tienes y obtén diapositivas con tu marca, además de las publicaciones, los anuncios y el sitio web que hacen juego.",
     fine: "Plan gratuito para siempre. Sin tarjeta de crédito.",
     alt: {
       deck: "La portada de una presentación: Brightwell Solar, revisión de negocio del tercer trimestre de 2026",
@@ -27,20 +27,22 @@ export const HOME_ES: HomeCopy = {
     },
   },
   maker: {
-    groupLabel: "¿Qué necesitas?",
-    lead: "Necesito",
-    kinds: { deck: "una presentación", post: "una publicación", ad: "un anuncio", site: "un sitio web" },
-    inside: {
-      post: "Las publicaciones para redes se crean dentro de PitchBoost, a partir de una presentación o de unas líneas tuyas.",
-      ad: "Los anuncios se crean dentro de PitchBoost, a partir de una presentación, una foto o unas líneas tuyas.",
-      site: "El sitio web se escribe dentro de PitchBoost, a partir de una presentación, unas frases o el sitio que ya tienes.",
+    or: "o",
+    redesign: {
+      kicker: "¿Ya tienes una presentación?",
+      title: "Rediséñala",
+      drop: "Suelta aquí un PowerPoint o PDF",
+      choose: "Elegir un archivo",
+      formats: ".pptx o PDF, de hasta 50 MB",
+      foot: "Diapositiva a diapositiva, con tus palabras y tu marca.",
     },
-    topicLabel: "¿De qué trata tu presentación?",
-    placeholder: "¿De qué trata?",
-    submit: "Crear mi presentación",
-    upload: "O sube el PowerPoint que ya tienes",
-    formats: ".pptx o PDF",
-    start: "Empezar gratis",
+    fresh: {
+      kicker: "¿Empiezas de cero?",
+      title: "Crea una nueva",
+      topicLabel: "¿De qué trata tu presentación?",
+      placeholder: "¿De qué trata? Una clase, un informe para la dirección, una propuesta para un cliente...",
+      submit: "Crear mi presentación",
+    },
   },
   nowShowing: {
     badge: "EN CARTELERA",

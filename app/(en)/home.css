@@ -27,8 +27,8 @@
 /* The navbar is fixed over the page, so a link to a section stops below it. */
 .sh-home [id] { scroll-margin-top: 96px; }
 .sh-anchor { display: block; height: 0; }
-.sh-home :is(a, button, input):focus-visible { outline: 3px solid #0E5A64; outline-offset: 3px; }
-.sh-hero :is(a, button):focus-visible, .sh-home .sh-on-dark:focus-visible { outline-color: #FFD15C; }
+.sh-home :is(a, button, input, textarea):focus-visible { outline: 3px solid #0E5A64; outline-offset: 3px; }
+.sh-home .sh-on-dark:focus-visible { outline-color: #FFD15C; }
 .sh-wrap { max-width: 1200px; margin: 0 auto; padding: 0 32px; box-sizing: border-box; }
 .sh-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 
@@ -56,16 +56,17 @@
 @keyframes sh-open-r { from { transform: translateX(0); } to { transform: translateX(500px); } }
 
 /* --- The hero --- */
+/* Light teal since Nov 24 2026 (Ross); the rest of the page keeps its dark. */
 .sh-hero {
-  background: #0B2E36;
-  color: #FFF8EC;
+  background: #D6EFEE;
+  color: #0B2E36;
   overflow: hidden;
   /* The stage below is sized from this section's width. */
   container-type: inline-size;
   padding-top: 75px;
 }
 .sh-hero-copy {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 44px 32px 0;
   box-sizing: border-box;
@@ -75,69 +76,100 @@
   gap: 22px;
   text-align: center;
 }
-.sh-fine { font-size: 14px; color: #A9C4C6; }
+.sh-fine { font-size: 14px; color: #46636A; }
 
-/* The box */
-.sh-maker {
+/* The two ways in, side by side, with "or" between them */
+.sh-doors {
+  position: relative;
   width: 100%;
-  max-width: 760px;
+  max-width: 1000px;
+  margin-top: 6px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 56px;
+  text-align: start;
+}
+.sh-door {
   box-sizing: border-box;
-  margin-top: 4px;
-  padding: 14px;
+  padding: 22px;
   border-radius: 28px;
   background: #FFFFFF;
   color: #0B2E36;
-  box-shadow: 0 30px 60px -22px rgba(0, 0, 0, .6);
+  box-shadow: 0 30px 60px -30px rgba(11, 46, 54, .35), 0 0 0 1px rgba(11, 46, 54, .06);
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  text-align: start;
+  gap: 14px;
 }
-.sh-chips { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0 2px; }
-.sh-chips-label { font-size: 14px; font-weight: 700; color: #5E7378; margin: 0; margin-inline: 4px 6px; }
-.sh-chip {
+.sh-door-head { display: flex; flex-direction: column; gap: 2px; }
+.sh-kicker { font-size: 13px; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; color: #0E5A64; }
+.sh-door-title {
+  font-family: var(--font-bricolage), var(--font-figtree), system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 1.1;
+  letter-spacing: -.015em;
+}
+.sh-home .sh-drop {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 172px;
+  box-sizing: border-box;
+  padding: 18px;
+  border: 2px dashed #9CC3C7;
+  border-radius: 20px;
+  background: #F6FAF9;
+  color: #0B2E36;
+  text-align: center;
+  text-decoration: none;
+}
+.sh-home .sh-drop:hover { border-color: #0E5A64; color: #0B2E36; }
+.sh-drop-icon { display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 50%; background: #FFD15C; }
+.sh-drop-icon svg { width: 22px; height: 22px; fill: none; stroke: #0B2E36; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.sh-drop-line { font-weight: 700; font-size: 18px; }
+.sh-drop-btn {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
   min-height: 44px;
-  padding: 0 16px;
-  border: 2px solid #D5E7E9;
-  border-radius: 999px;
-  background: #FFFFFF;
-  color: #0B2E36;
-  font: inherit;
-  font-weight: 600;
-  font-size: 15px;
-  cursor: pointer;
+  padding: 0 22px;
+  border-radius: 14px;
+  background: #0B2E36;
+  color: #FFF8EC;
+  font-weight: 700;
+  font-size: 16px;
+  transition: transform .18s ease;
 }
-.sh-chip svg { width: 18px; height: 18px; flex: none; color: #0E5A64; }
-.sh-chip.on { border-color: #0B2E36; background: #0B2E36; color: #FFF8EC; font-weight: 700; }
-.sh-chip.on svg { color: #FFD15C; }
-.sh-maker :is(a, button, input):focus-visible { outline-color: #0E5A64; }
-.sh-maker-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
-.sh-input {
-  flex: 999 1 300px;
-  min-width: 0;
-  height: 60px;
+.sh-drop:hover .sh-drop-btn { transform: translateY(-2px) rotate(-1.5deg); }
+.sh-drop-formats { font-size: 14px; color: #5E7378; }
+.sh-door-foot { font-size: 15px; color: #5E7378; }
+.sh-fresh { flex: 1; display: flex; flex-direction: column; gap: 14px; }
+.sh-topic {
+  flex: 1;
+  min-height: 120px;
   box-sizing: border-box;
-  padding: 0 20px;
+  padding: 16px 18px;
   border: 2px solid #D5E7E9;
   border-radius: 18px;
   background: #F6FAF9;
   font: inherit;
-  font-size: 18px;
+  font-size: 17px;
+  line-height: 1.45;
   color: #0B2E36;
+  resize: none;
 }
-.sh-input::placeholder { color: #5E7378; }
+.sh-topic::placeholder { color: #5E7378; }
 .sh-home .sh-go {
-  flex: 1 0 auto;
+  flex: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 60px;
-  padding: 0 28px;
+  height: 56px;
+  padding: 0 26px;
   border: 0;
-  border-radius: 18px;
+  border-radius: 16px;
   background: #FFD15C;
   color: #0B2E36;
   font: inherit;
@@ -146,23 +178,25 @@
   cursor: pointer;
   text-decoration: none;
 }
-.sh-inside { flex: 999 1 300px; min-height: 60px; display: flex; align-items: center; padding: 0 6px; font-size: 16px; line-height: 1.4; color: #33474C; }
-.sh-maker-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; padding: 0 4px 2px; }
-.sh-maker-foot span { font-size: 14px; color: #5E7378; }
-.sh-home .sh-upload {
-  display: inline-flex;
+.sh-or {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-8deg);
+  display: flex;
   align-items: center;
-  gap: 10px;
-  min-height: 46px;
-  padding: 0 16px;
-  border: 2px dashed #9CC3C7;
-  border-radius: 14px;
-  color: #0E5A64;
-  font-weight: 600;
-  font-size: 16px;
-  text-decoration: none;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #F0604F;
+  color: #FFF8EC;
+  font-family: var(--font-caveat), cursive;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1;
+  box-shadow: 0 10px 20px -8px rgba(11, 46, 54, .45);
 }
-.sh-upload svg { width: 20px; height: 20px; flex: none; }
 
 /* The stage. One unit (--u) is a design pixel of the 1440 by 600 drawing, so
    the pictures and the two drawn layers scale together at every width. */
@@ -360,6 +394,8 @@
 /* --- Phones --- */
 @media (max-width: 760px) {
   .sh-hide-sm { display: none !important; }
+  .sh-doors { grid-template-columns: 1fr; gap: 18px; max-width: 520px; }
+  .sh-or { display: none; }
   .sh-curtain-sm { display: block; }
   /* On a phone the four pictures gather round the deck in the middle of the stage. */
   .sh-piece-deck { left: calc(50% - 133px); bottom: auto; top: 30px; width: 266px; height: 150px; }
@@ -375,21 +411,12 @@
 @media (max-width: 520px) {
   .sh-wrap { padding: 0 20px; }
   .sh-hero-copy { padding: 26px 20px 0; gap: 16px; }
-  .sh-h1 { font-size: 46px !important; }
-  .sh-h1-sub { margin-top: 14px !important; font-size: 20px !important; }
+  .sh-h1 { font-size: 40px !important; }
   .sh-sub { font-size: 17px !important; }
-  .sh-maker { padding: 12px; border-radius: 24px; gap: 10px; }
-  .sh-chips { flex-wrap: nowrap; justify-content: space-between; gap: 6px; padding: 0; }
-  .sh-chips-label, .sh-chip svg { display: none; }
-  .sh-chip { padding: 0 13px; font-size: 14px; }
-  .sh-input, .sh-home .sh-go { height: 56px; border-radius: 16px; }
-  .sh-home .sh-upload { flex: 1 1 100%; justify-content: center; min-height: 48px; padding: 0 12px; font-size: 15px; }
-  .sh-maker-foot span { display: none; }
-  /* The four choices fit on one line in English. In the other languages they are longer, so there they wrap. */
-  .sh-home[lang] .sh-chips { flex-wrap: wrap; justify-content: flex-start; }
-  /* There the words before them ("Necesito" and the rest) stay, on a line of their own, because the choices finish
-     that sentence; the English choices are plain names and read well without their "I need a". */
-  .sh-home[lang] .sh-chips-label { display: block; flex-basis: 100%; }
+  .sh-door { padding: 18px; border-radius: 24px; }
+  .sh-door-title { font-size: 26px; }
+  .sh-home .sh-drop { min-height: 150px; }
+  .sh-topic { min-height: 100px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .sh-bob, .sh-wob, .sh-glow, .sh-fall, .sh-scroll { animation: none; }
