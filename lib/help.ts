@@ -56,7 +56,7 @@ export const HELP_ARTICLES: HelpArticle[] = [
       },
       {
         title: "Decide what to do with a long deck",
-        body: "If the deck has more slides than your plan rebuilds, PitchBoost asks whether to condense it to fit or rebuild the first slides only. Most decks under the limit skip this step.",
+        body: "If the deck has more slides than your plan opens, PitchBoost still builds it and locks the extra slides until you unlock them, or you can choose to condense it to fit. Most decks under the limit skip this step.",
       },
       {
         title: "Start the rebuild and wait, or leave",
@@ -78,7 +78,7 @@ export const HELP_ARTICLES: HelpArticle[] = [
       {
         heading: "Slide limits by plan",
         paragraphs: [
-          "The free plan rebuilds up to 10 slides, Starter up to 25 and Pro up to 60. A longer deck can be condensed to fit before the rebuild starts, and the share screen tells you how many slides were kept.",
+          "The free plan opens the first 10 slides of a deck, Starter up to 25 and Pro up to 60. A longer deck is still built (up to 20 slides on the free plan) with the extra slides locked, or it can be condensed to fit before the rebuild starts. The share screen shows which slides are locked and how to open them.",
         ],
       },
     ],
@@ -97,7 +97,7 @@ export const HELP_ARTICLES: HelpArticle[] = [
       },
     ],
     related: ["google-slides-and-keynote", "slide-limits-by-plan", "download-powerpoint-or-pdf", "how-long-does-a-deck-take"],
-    updated: "2026-11-10",
+    updated: "2026-11-25",
   },
 
   {
@@ -149,34 +149,34 @@ export const HELP_ARTICLES: HelpArticle[] = [
     category: "redesign",
     title: "How many slides PitchBoost rebuilds on each plan",
     metaDescription:
-      "Free rebuilds up to 10 slides, Starter up to 25, Pro and Business up to 60. What happens to a longer deck: condense to fit, or rebuild the first slides.",
+      "Free opens the first 10 slides of a deck, Starter up to 25, Pro and Business up to 60. A longer deck is still built: the extra slides are locked until you unlock them.",
     answer:
-      "The free plan rebuilds decks up to 10 slides, Starter up to 25, and Pro and Business up to 60. If your deck is longer, PitchBoost offers to condense it to fit (same story, fewer slides) or to rebuild only the first slides. The share screen shows how many of your original slides were kept and how to rebuild the rest: once for that deck ($9, for decks up to 25 slides) or with a plan.",
+      "The free plan opens the first 10 slides of a deck, Starter up to 25, and Pro and Business up to 60. A longer deck is still built, up to 20 slides on the free plan: the slides past your limit are finished but locked. They open with a plan, or with a one-time payment for that deck ($9 for decks up to 25 slides, $19 up to 60). If you would rather have a shorter deck, PitchBoost can condense it to fit your limit instead.",
     sections: [
       {
         heading: "The limits",
         paragraphs: [
-          "Free: up to 10 slides per deck, one AI deck a month. Starter ($7 a month): up to 25 slides. Pro ($29 a month) and Business ($79 a month): up to 60 slides. The limit applies to the deck PitchBoost produces, not the file you upload; you can upload a 45-slide deck on any plan. The file itself can have up to 75 slides.",
+          "Free: the first 10 slides of each deck are open, a deck can have up to 20 slides, one AI deck a month. Starter ($7 a month): up to 25 slides. Pro ($29 a month) and Business ($79 a month): up to 60 slides. The limit applies to the deck PitchBoost produces, not the file you upload; you can upload a 45-slide deck on any plan. The file itself can have up to 75 slides.",
         ],
       },
       {
-        heading: "Condense or cut",
+        heading: "Locked slides, or a shorter deck",
         paragraphs: [
-          "When a deck is over the limit, you choose before anything generates. Condense keeps the narrative and merges or drops the least essential slides so the whole story fits. Rebuild the first N keeps every slide up to the limit exactly and leaves the rest out.",
-          "Condensing is usually the better choice for a pitch: most strong pitch decks are 10 to 15 slides. Cutting is better when the deck is a sequence (a training module, a step-by-step process) where the order matters more than the length.",
+          "When a deck is over your limit, PitchBoost builds it anyway. The slides inside your limit are open; the rest are finished too, and shown blurred with a lock. The free link shows the open slides to anyone, and every slide from the moment you unlock. You unlock from the share screen, with a plan whose limit covers the deck or with a one-time payment for that deck, which also brings the PowerPoint, PDF and Google Slides downloads and removes the badge.",
+          "Prefer a shorter deck? Before it builds you can choose to condense it to your limit instead. Condensing keeps the story and rewrites slides to fit, which suits a pitch: most strong pitch decks are 10 to 15 slides. Keep every slide when the deck is a sequence (a training module, a step-by-step process) where the order matters more than the length.",
         ],
       },
       {
         heading: "Very long decks",
         paragraphs: [
-          "PitchBoost accepts PowerPoints of up to 75 slides and reads the first 60, so a 70-slide deck on Pro comes back as 60 slides at most, condensed or cut. A file over 75 slides is turned away at upload with a note saying so. Split very long decks into modules and rebuild each one.",
+          "PitchBoost accepts PowerPoints of up to 75 slides and reads the first 60, so a 70-slide deck on Pro comes back as 60 slides at most. On the free plan a deck stops at 20 slides: from a longer file PitchBoost builds the first 20, or you upgrade first and it rebuilds up to your plan's limit. A file over 75 slides is turned away at upload with a note saying so. Split very long decks into modules and rebuild each one.",
         ],
       },
     ],
     faqs: [
       {
-        q: "Does upgrading rebuild the missing slides automatically?",
-        a: "No. After upgrading, open the deal and run the rebuild again; the share screen has a button for it. The full deck replaces the condensed one.",
+        q: "Do locked slides open when I upgrade?",
+        a: "Yes, at once: they are already built. A deck that was condensed, or cut at 20 slides on the free plan, is different: after upgrading, open the deal and run the rebuild again; the share screen has a button for it.",
       },
       {
         q: "Does the limit apply to new decks too?",
@@ -188,7 +188,7 @@ export const HELP_ARTICLES: HelpArticle[] = [
       },
     ],
     related: ["redesign-a-powerpoint", "credits-and-plans", "download-powerpoint-or-pdf"],
-    updated: "2026-10-27",
+    updated: "2026-11-25",
   },
 
   {
@@ -250,13 +250,13 @@ export const HELP_ARTICLES: HelpArticle[] = [
     category: "sharing",
     title: "How to share a deck as a link and see who opened it",
     metaDescription:
-      "Publish a deck to get an unlisted link, send it to a prospect, and get notified the moment they open it. What the link tracks, on every plan.",
+      "Every finished deck has an unlisted link. Send it to a prospect and get notified the moment they open it. What the link tracks, on every plan.",
     answer:
-      "Click \"Publish & copy link\" on the deck's share screen. That creates an unlisted link (anyone with it can view; nobody can find it otherwise) and copies it to your clipboard. When a prospect opens the link, PitchBoost emails you. Every plan shows which slides each viewer read and for how long.",
+      "A finished deck is published for you: open its share screen and click \"Copy link\". The link is unlisted (anyone with it can view; nobody can find it otherwise). When a prospect opens the link, PitchBoost emails you. Every plan shows which slides each viewer read and for how long.",
     steps: [
       {
-        title: "Publish the deck",
-        body: "On the share screen click \"Publish & copy link\". Until you do, the deck is a private draft only you and your team can see.",
+        title: "Copy the link",
+        body: "When a deck finishes building, PitchBoost publishes it as an unlisted link. On the share screen click \"Copy link\". A deck you have made private shows \"Publish & copy link\" instead.",
       },
       {
         title: "Send the link, or add recipients",
@@ -294,7 +294,7 @@ export const HELP_ARTICLES: HelpArticle[] = [
       },
     ],
     related: ["download-powerpoint-or-pdf", "credits-and-plans", "redesign-a-powerpoint"],
-    updated: "2026-09-16",
+    updated: "2026-11-25",
   },
 
   {

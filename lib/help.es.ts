@@ -29,7 +29,7 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       },
       {
         "title": "Decide qué hacer con una presentación larga",
-        "body": "Si la presentación tiene más diapositivas de las que tu plan reconstruye, PitchBoost pregunta si condensarla para que quepa o reconstruir solo las primeras diapositivas. La mayoría de las presentaciones dentro del límite omiten este paso."
+        "body": "Si la presentación tiene más diapositivas de las que tu plan abre, PitchBoost la reconstruye igual y bloquea las diapositivas de más hasta que las desbloquees, o puedes elegir condensarla para que quepa. La mayoría de las presentaciones dentro del límite omiten este paso."
       },
       {
         "title": "Inicia la reconstrucción y espera, o sal",
@@ -51,7 +51,7 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       {
         "heading": "Límites de diapositivas por plan",
         "paragraphs": [
-          "El plan gratuito reconstruye hasta 10 diapositivas, Starter hasta 25 y Pro hasta 60. Una presentación más larga puede condensarse para ajustarse antes de que comience la reconstrucción, y la pantalla de compartir te indica cuántas diapositivas se conservaron."
+          "El plan gratuito abre las primeras 10 diapositivas de una presentación, Starter hasta 25 y Pro hasta 60. Una presentación más larga se reconstruye igual (hasta 20 diapositivas en el plan gratuito) con las diapositivas de más bloqueadas, o puede condensarse para ajustarse antes de que comience la reconstrucción. La pantalla de compartir muestra qué diapositivas están bloqueadas y cómo abrirlas."
         ]
       }
     ],
@@ -75,7 +75,7 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       "download-powerpoint-or-pdf",
       "how-long-does-a-deck-take"
     ],
-    "updated": "2026-11-10"
+    "updated": "2026-11-25"
   },
   {
     "slug": "google-slides-and-keynote",
@@ -126,33 +126,33 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
     "slug": "slide-limits-by-plan",
     "category": "redesign",
     "title": "Cuántas diapositivas rediseña PitchBoost en cada plan",
-    "metaDescription": "Free rediseña hasta 10 diapositivas, Starter hasta 25, Pro y Business hasta 60. Qué pasa con una presentación más larga: condensar o rediseñar solo las primeras.",
-    "answer": "El plan gratuito rediseña presentaciones de hasta 10 diapositivas, Starter hasta 25, y Pro y Business hasta 60. Si tu presentación es más larga, PitchBoost te ofrece condensarla para que quepa (la misma historia, menos diapositivas) o rediseñar solo las primeras diapositivas. La pantalla de compartir muestra cuántas de tus diapositivas originales se conservaron y cómo rediseñar el resto: con un pago único para esa presentación ($9, para presentaciones de hasta 25 diapositivas) o con un plan.",
+    "metaDescription": "Free abre las primeras 10 diapositivas de una presentación, Starter hasta 25, Pro y Business hasta 60. Una presentación más larga se rediseña igual: las diapositivas de más quedan bloqueadas hasta que las desbloquees.",
+    "answer": "El plan gratuito abre las primeras 10 diapositivas de una presentación, Starter hasta 25, y Pro y Business hasta 60. Una presentación más larga se rediseña igual, hasta 20 diapositivas en el plan gratuito: las diapositivas que pasan de tu límite quedan terminadas pero bloqueadas. Se abren con un plan o con un pago único para esa presentación ($9 para presentaciones de hasta 25 diapositivas, $19 hasta 60). Si prefieres una presentación más corta, PitchBoost puede condensarla para que quepa en tu límite.",
     "sections": [
       {
         "heading": "Los límites",
         "paragraphs": [
-          "Free: hasta 10 diapositivas por presentación, una presentación con IA al mes. Starter ($7 al mes): hasta 25 diapositivas. Pro ($29 al mes) y Business ($79 al mes): hasta 60 diapositivas. El límite se aplica a la presentación que PitchBoost produce, no al archivo que subes; puedes subir una presentación de 45 diapositivas en cualquier plan. El archivo en sí puede tener hasta 75 diapositivas."
+          "Free: las primeras 10 diapositivas de cada presentación quedan abiertas, una presentación puede tener hasta 20 diapositivas, una presentación con IA al mes. Starter ($7 al mes): hasta 25 diapositivas. Pro ($29 al mes) y Business ($79 al mes): hasta 60 diapositivas. El límite se aplica a la presentación que PitchBoost produce, no al archivo que subes; puedes subir una presentación de 45 diapositivas en cualquier plan. El archivo en sí puede tener hasta 75 diapositivas."
         ]
       },
       {
-        "heading": "Condensar o cortar",
+        "heading": "Diapositivas bloqueadas, o una presentación más corta",
         "paragraphs": [
-          "Cuando una presentación supera el límite, eliges antes de que se genere nada. Condensar mantiene la narrativa y fusiona o elimina las diapositivas menos esenciales para que la historia completa quepa. Rediseñar las primeras N conserva cada diapositiva hasta el límite exactamente y deja el resto fuera.",
-          "Condensar suele ser la mejor opción para un pitch: la mayoría de las presentaciones de pitch fuertes tienen entre 10 y 15 diapositivas. Cortar es mejor cuando la presentación es una secuencia (un módulo de capacitación, un proceso paso a paso) donde el orden importa más que la longitud."
+          "Cuando una presentación supera tu límite, PitchBoost la rediseña de todos modos. Las diapositivas dentro de tu límite quedan abiertas; el resto también se termina y se muestra difuminado con un candado. El enlace gratuito muestra a cualquiera las diapositivas abiertas, y todas desde el momento en que desbloqueas. Se desbloquea desde la pantalla de compartir, con un plan cuyo límite cubra la presentación o con un pago único para esa presentación, que además incluye las descargas en PowerPoint, PDF y Google Slides y quita la insignia.",
+          "¿Prefieres una presentación más corta? Antes de que se genere puedes elegir condensarla a tu límite. Condensar mantiene la historia y reescribe diapositivas para que quepa, lo que le va bien a un pitch: la mayoría de las presentaciones de pitch fuertes tienen entre 10 y 15 diapositivas. Conserva todas las diapositivas cuando la presentación es una secuencia (un módulo de capacitación, un proceso paso a paso) donde el orden importa más que la longitud."
         ]
       },
       {
         "heading": "Presentaciones muy largas",
         "paragraphs": [
-          "PitchBoost acepta PowerPoints de hasta 75 diapositivas y lee las primeras 60, así que una presentación de 70 diapositivas en Pro vuelve con 60 diapositivas como máximo, condensada o cortada. Un archivo de más de 75 diapositivas se rechaza al subirlo, con un aviso que lo explica. Divide las presentaciones muy largas en módulos y rediseña cada uno."
+          "PitchBoost acepta PowerPoints de hasta 75 diapositivas y lee las primeras 60, así que una presentación de 70 diapositivas en Pro vuelve con 60 diapositivas como máximo. En el plan gratuito una presentación llega hasta 20 diapositivas: de un archivo más largo PitchBoost rediseña las primeras 20, o mejoras tu plan antes y rediseña hasta el límite de ese plan. Un archivo de más de 75 diapositivas se rechaza al subirlo, con un aviso que lo explica. Divide las presentaciones muy largas en módulos y rediseña cada uno."
         ]
       }
     ],
     "faqs": [
       {
-        "q": "¿Al mejorar el plan se rediseñan las diapositivas faltantes automáticamente?",
-        "a": "No. Después de mejorar tu plan, abre el negocio y ejecuta el rediseño de nuevo; la pantalla de compartir tiene un botón para eso. La presentación completa reemplaza a la condensada."
+        "q": "¿Las diapositivas bloqueadas se abren al mejorar el plan?",
+        "a": "Sí, al instante: ya están terminadas. Una presentación que se condensó, o que se cortó en 20 diapositivas en el plan gratuito, es distinta: después de mejorar tu plan, abre el negocio y ejecuta el rediseño de nuevo; la pantalla de compartir tiene un botón para eso."
       },
       {
         "q": "¿El límite también se aplica a presentaciones nuevas?",
@@ -168,7 +168,7 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       "credits-and-plans",
       "download-powerpoint-or-pdf"
     ],
-    "updated": "2026-10-27"
+    "updated": "2026-11-25"
   },
   {
     "slug": "download-powerpoint-or-pdf",
@@ -229,12 +229,12 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
     "slug": "share-a-deck-link",
     "category": "sharing",
     "title": "Cómo compartir una presentación como enlace y ver quién la abrió",
-    "metaDescription": "Publica una presentación para obtener un enlace no listado, envíalo a un prospecto y recibe un aviso en cuanto lo abra. Qué rastrea el enlace, en todos los planes.",
-    "answer": "Haz clic en \"Publicar y copiar enlace\" en la pantalla de compartir de la presentación. Eso crea un enlace no listado (cualquiera que lo tenga puede verlo; nadie puede encontrarlo de otra manera) y lo copia a tu portapapeles. Cuando un prospecto abre el enlace, PitchBoost te envía un correo. Todos los planes muestran qué diapositivas leyó cada espectador y por cuánto tiempo.",
+    "metaDescription": "Cada presentación terminada tiene un enlace no listado. Envíalo a un prospecto y recibe un aviso en cuanto lo abra. Qué rastrea el enlace, en todos los planes.",
+    "answer": "Una presentación terminada se publica sola: abre su pantalla de compartir y haz clic en \"Copiar enlace\". El enlace no está listado (cualquiera que lo tenga puede verlo; nadie puede encontrarlo de otra manera). Cuando un prospecto abre el enlace, PitchBoost te envía un correo. Todos los planes muestran qué diapositivas leyó cada espectador y por cuánto tiempo.",
     "steps": [
       {
-        "title": "Publica la presentación",
-        "body": "En la pantalla de compartir haz clic en \"Publicar y copiar enlace\". Hasta que lo hagas, la presentación es un borrador privado que solo tú y tu equipo pueden ver."
+        "title": "Copia el enlace",
+        "body": "Cuando una presentación termina de generarse, PitchBoost la publica como un enlace no listado. En la pantalla de compartir haz clic en \"Copiar enlace\". Una presentación que hiciste privada muestra \"Publicar y copiar enlace\" en su lugar."
       },
       {
         "title": "Envía el enlace o añade destinatarios",
@@ -276,7 +276,7 @@ export const HELP_ARTICLES_ES: HelpArticle[] = [
       "credits-and-plans",
       "redesign-a-powerpoint"
     ],
-    "updated": "2026-09-16"
+    "updated": "2026-11-25"
   },
   {
     "slug": "connect-chatgpt",

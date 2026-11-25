@@ -29,7 +29,7 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
       },
       {
         "title": "Decida o que fazer com uma apresentação longa",
-        "body": "Se a apresentação tem mais slides do que seu plano reconstrói, o PitchBoost pergunta se deve condensá-la para caber ou reconstruir apenas os primeiros slides. A maioria das apresentações abaixo do limite pula esta etapa."
+        "body": "Se a apresentação tem mais slides do que seu plano abre, o PitchBoost a reconstrói mesmo assim e bloqueia os slides extras até você desbloquear, ou você pode escolher condensá-la para caber. A maioria das apresentações abaixo do limite pula esta etapa."
       },
       {
         "title": "Inicie a reconstrução e aguarde, ou saia",
@@ -51,7 +51,7 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
       {
         "heading": "Limites de slides por plano",
         "paragraphs": [
-          "O plano Free reconstrói até 10 slides, Starter até 25 e Pro até 60. Uma apresentação mais longa pode ser condensada para caber antes da reconstrução começar, e a tela de compartilhamento informa quantos slides foram mantidos."
+          "O plano Free abre os primeiros 10 slides de uma apresentação, Starter até 25 e Pro até 60. Uma apresentação mais longa é reconstruída mesmo assim (até 20 slides no plano Free) com os slides extras bloqueados, ou pode ser condensada para caber antes da reconstrução começar. A tela de compartilhamento mostra quais slides estão bloqueados e como abri-los."
         ]
       }
     ],
@@ -75,7 +75,7 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
       "download-powerpoint-or-pdf",
       "how-long-does-a-deck-take"
     ],
-    "updated": "2026-11-10"
+    "updated": "2026-11-25"
   },
   {
     "slug": "google-slides-and-keynote",
@@ -126,33 +126,33 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
     "slug": "slide-limits-by-plan",
     "category": "redesign",
     "title": "Quantos slides o PitchBoost reconstrói em cada plano",
-    "metaDescription": "Free reconstrói até 10 slides, Starter até 25, Pro e Business até 60. O que acontece com decks mais longos: condensar ou reconstruir os primeiros.",
-    "answer": "O plano gratuito reconstrói decks com até 10 slides, Starter até 25, e Pro e Business até 60. Se o seu deck for mais longo, o PitchBoost oferece a opção de condensá-lo para caber (mesma história, menos slides) ou reconstruir apenas os primeiros slides. A tela de compartilhamento mostra quantos dos seus slides originais foram mantidos e como reconstruir o restante: com um pagamento único para essa apresentação (US$ 9, para decks de até 25 slides) ou com um plano.",
+    "metaDescription": "Free abre os primeiros 10 slides de um deck, Starter até 25, Pro e Business até 60. Um deck mais longo é reconstruído mesmo assim: os slides extras ficam bloqueados até você desbloquear.",
+    "answer": "O plano gratuito abre os primeiros 10 slides de um deck, Starter até 25, e Pro e Business até 60. Um deck mais longo é reconstruído mesmo assim, até 20 slides no plano gratuito: os slides além do seu limite ficam prontos, mas bloqueados. Eles abrem com um plano ou com um pagamento único para aquele deck (US$ 9 para decks de até 25 slides, US$ 19 até 60). Se preferir um deck mais curto, o PitchBoost pode condensá-lo para caber no seu limite.",
     "sections": [
       {
         "heading": "Os limites",
         "paragraphs": [
-          "Free: até 10 slides por deck, um deck com IA por mês. Starter ($7 por mês): até 25 slides. Pro ($29 por mês) e Business ($79 por mês): até 60 slides. O limite se aplica ao deck que o PitchBoost produz, não ao arquivo que você envia: você pode enviar um deck de 45 slides em qualquer plano. O próprio arquivo pode ter até 75 slides."
+          "Free: os primeiros 10 slides de cada deck ficam abertos, um deck pode ter até 20 slides, um deck com IA por mês. Starter ($7 por mês): até 25 slides. Pro ($29 por mês) e Business ($79 por mês): até 60 slides. O limite se aplica ao deck que o PitchBoost produz, não ao arquivo que você envia: você pode enviar um deck de 45 slides em qualquer plano. O próprio arquivo pode ter até 75 slides."
         ]
       },
       {
-        "heading": "Condensar ou cortar",
+        "heading": "Slides bloqueados, ou um deck mais curto",
         "paragraphs": [
-          "Quando um deck ultrapassa o limite, você escolhe antes de qualquer geração. Condensar mantém a narrativa e mescla ou descarta os slides menos essenciais para que toda a história caiba. Reconstruir os primeiros N mantém cada slide até o limite exatamente e deixa o restante de fora.",
-          "Condensar geralmente é a melhor escolha para um pitch: a maioria dos bons pitch decks tem de 10 a 15 slides. Cortar é melhor quando o deck é uma sequência (um módulo de treinamento, um processo passo a passo) onde a ordem importa mais que a extensão."
+          "Quando um deck ultrapassa o seu limite, o PitchBoost o reconstrói mesmo assim. Os slides dentro do seu limite ficam abertos; os demais também ficam prontos e aparecem desfocados, com um cadeado. O link gratuito mostra os slides abertos para qualquer pessoa, e todos os slides a partir do momento em que você desbloqueia. O desbloqueio é feito na tela de compartilhamento, com um plano cujo limite cubra o deck ou com um pagamento único para aquele deck, que também traz os downloads em PowerPoint, PDF e Google Slides e remove o selo.",
+          "Prefere um deck mais curto? Antes da geração você pode escolher condensá-lo para o seu limite. Condensar mantém a história e reescreve slides para caber, o que combina com um pitch: a maioria dos bons pitch decks tem de 10 a 15 slides. Mantenha todos os slides quando o deck é uma sequência (um módulo de treinamento, um processo passo a passo) onde a ordem importa mais que a extensão."
         ]
       },
       {
         "heading": "Decks muito longos",
         "paragraphs": [
-          "O PitchBoost aceita PowerPoints de até 75 slides e lê os primeiros 60, então um deck de 70 slides no Pro volta com no máximo 60 slides, condensado ou cortado. Um arquivo com mais de 75 slides é recusado no envio, com um aviso explicando o motivo. Divida decks muito longos em módulos e reconstrua cada um."
+          "O PitchBoost aceita PowerPoints de até 75 slides e lê os primeiros 60, então um deck de 70 slides no Pro volta com no máximo 60 slides. No plano gratuito um deck vai até 20 slides: de um arquivo mais longo o PitchBoost reconstrói os primeiros 20, ou você faz upgrade antes e ele reconstrói até o limite do seu plano. Um arquivo com mais de 75 slides é recusado no envio, com um aviso explicando o motivo. Divida decks muito longos em módulos e reconstrua cada um."
         ]
       }
     ],
     "faqs": [
       {
-        "q": "Fazer upgrade reconstrói os slides faltantes automaticamente?",
-        "a": "Não. Após fazer upgrade, abra o negócio e execute a reconstrução novamente: a tela de compartilhamento tem um botão para isso. O deck completo substitui o condensado."
+        "q": "Os slides bloqueados abrem quando faço upgrade?",
+        "a": "Sim, na hora: eles já estão prontos. Um deck que foi condensado, ou cortado em 20 slides no plano gratuito, é diferente: após fazer upgrade, abra o negócio e execute a reconstrução novamente; a tela de compartilhamento tem um botão para isso."
       },
       {
         "q": "O limite se aplica também a novos decks?",
@@ -168,7 +168,7 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
       "credits-and-plans",
       "download-powerpoint-or-pdf"
     ],
-    "updated": "2026-10-27"
+    "updated": "2026-11-25"
   },
   {
     "slug": "download-powerpoint-or-pdf",
@@ -229,12 +229,12 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
     "slug": "share-a-deck-link",
     "category": "sharing",
     "title": "Como compartilhar uma apresentação por link e ver quem abriu",
-    "metaDescription": "Publique uma apresentação para obter um link não listado, envie para um prospect e seja notificado no momento em que ele abrir. O que o link rastreia, em todos os planos.",
-    "answer": "Clique em \"Publicar e copiar link\" na tela de compartilhamento da apresentação. Isso cria um link não listado (qualquer pessoa com ele pode visualizar; ninguém pode encontrá-lo de outra forma) e o copia para sua área de transferência. Quando um prospect abre o link, o PitchBoost envia um email para você. Todos os planos mostram quais slides cada visualizador leu e por quanto tempo.",
+    "metaDescription": "Toda apresentação finalizada tem um link não listado. Envie para um prospect e seja notificado no momento em que ele abrir. O que o link rastreia, em todos os planos.",
+    "answer": "Uma apresentação finalizada é publicada automaticamente: abra a tela de compartilhamento dela e clique em \"Copiar link\". O link não é listado (qualquer pessoa com ele pode visualizar; ninguém pode encontrá-lo de outra forma). Quando um prospect abre o link, o PitchBoost envia um email para você. Todos os planos mostram quais slides cada visualizador leu e por quanto tempo.",
     "steps": [
       {
-        "title": "Publique a apresentação",
-        "body": "Na tela de compartilhamento, clique em \"Publicar e copiar link\". Até você fazer isso, a apresentação é um rascunho privado que só você e sua equipe podem ver."
+        "title": "Copie o link",
+        "body": "Quando uma apresentação termina de ser gerada, o PitchBoost a publica como um link não listado. Na tela de compartilhamento, clique em \"Copiar link\". Uma apresentação que você tornou privada mostra \"Publicar e copiar link\" no lugar."
       },
       {
         "title": "Envie o link ou adicione destinatários",
@@ -276,7 +276,7 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
       "credits-and-plans",
       "redesign-a-powerpoint"
     ],
-    "updated": "2026-09-16"
+    "updated": "2026-11-25"
   },
   {
     "slug": "connect-chatgpt",
