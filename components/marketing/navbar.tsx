@@ -8,6 +8,9 @@ import { AUDIENCE_GROUPS, INDUSTRIES, INDUSTRY_GROUPS } from "@/lib/industries";
 import { FEATURES, FEATURE_EXTRA_LINKS, FEATURE_GROUPS } from "@/lib/features";
 import { MENU_COPY, chromeArrow, chromeLink, localeOfPath } from "@/lib/chrome-i18n";
 import { localeDir } from "@/lib/locale-dir";
+import { LOCALE_NAME } from "@/lib/locales";
+import { languageLinks, rememberLanguage, type PageLanguages } from "@/lib/language-choice";
+import LanguageMenu, { GlobeIcon } from "./language-menu";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 const LOGIN_URL = `${APP_URL}/login`;
@@ -24,13 +27,14 @@ function ChevronDown({ size = 14 }: { size?: number }) {
   );
 }
 
-type ActiveDropdown = "features" | "industry" | null;
+type ActiveDropdown = "features" | "industry" | "language" | null;
 
-export default function MarketingNavbar() {
+/** `pages` says which pages exist in which languages (lib/page-languages.ts, read on the server): the language menu needs it. */
+export default function MarketingNavbar({ pages }: { pages: PageLanguages }) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<ActiveDropdown>(null);
-  const [mobileSection, setMobileSection] = useState<"features" | "industry" | null>(null);
+  const [mobileSection, setMobileSection] = useState<"features" | "industry" | "language" | null>(null);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const pathname = usePathname();
   // The /es, /pt, /fr, /ar and /de pages are in the visitor's language, and so is
@@ -49,6 +53,8 @@ export default function MarketingNavbar() {
   const everyone = to("/industries");
   const compare = to("/compare");
   const blog = to("/blog");
+  // Every language of the site, with where it leads from this page.
+  const languages = languageLinks(pathname ?? "/", pages);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -74,6 +80,13 @@ export default function MarketingNavbar() {
   function scheduleClose() {
     closeTimer.current = setTimeout(() => setActiveDropdown(null), 120);
   }
+  // The language menu opens on a press, not on hover. It shares the one
+  // "which menu is open" with the two above, so it closes when one of them
+  // opens, and a close they had scheduled cannot shut it.
+  const setLanguageOpen = useCallback((open: boolean) => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setActiveDropdown((v) => (open ? "language" : v === "language" ? null : v));
+  }, []);
 
   const closeMobile = useCallback(() => {
     setMobileOpen(false);
@@ -116,8 +129,8 @@ export default function MarketingNavbar() {
             PitchBoost
           </Link>
 
-          {/* Centred on the page in English. The other languages' words are longer, so there the links take the room between the logo and the buttons, and centre in that. */}
-          <div className="nav-links" style={navLocale === "en" ? { position: "absolute", left: "50%", transform: "translateX(-50%)" } : { flex: "1 1 auto", justifyContent: "center" }}>
+          {/* The links take the room between the logo and the language menu, and centre in that (globals.css). */}
+          <div className="nav-links">
 
             {/* Features dropdown */}
             <div
@@ -132,10 +145,10 @@ export default function MarketingNavbar() {
                 {`${t.features} `}<ChevronDown />
               </button>
 
-              {/* In English this hangs centred under its button. In the other languages the links sit nearer the logo, so it
-                  opens from the button's start edge toward the middle of the page (leftward in Arabic) and stays on screen. */}
+              {/* The first link sits near the logo, so its menu opens from the button's start edge toward the middle of
+                  the page (leftward in Arabic) and stays on screen. */}
               {activeDropdown === "features" && (
-                <div className="nav-dropdown" style={navLocale === "en" ? { gridTemplateColumns: "auto auto auto" } : { gridTemplateColumns: "auto auto auto", insetInlineStart: 0, insetInlineEnd: "auto", transform: "none" }}>
+                <div className="nav-dropdown" style={{ gridTemplateColumns: "auto auto auto", insetInlineStart: 0, insetInlineEnd: "auto", transform: "none" }}>
                   {FEATURE_GROUPS.map((group) => (
                     <div key={group.label}>
                       <div className="nav-dropdown-group-label">{t.names.featureGroups[group.label]}</div>
@@ -246,12 +259,15 @@ export default function MarketingNavbar() {
 
           </div>
 
+          {/* On every page and at every width: beside the buttons on a wide screen, beside the menu button on a narrow one. */}
+          <LanguageMenu links={languages} current={navLocale} label={t.language} open={activeDropdown === "language"} onOpenChange={setLanguageOpen} />
+
           <div className="nav-actions">
             <a href={LOGIN_URL} className="btn btn-secondary">{t.logIn}</a>
             <a href={SIGNUP_URL} className="btn btn-primary">{t.start}</a>
           </div>
 
-          <button className="mobile-toggle" id="mobileToggle" aria-label={t.openMenu} onClick={() => setMobileOpen(true)}>
+          <button className="mobile-toggle" id="mobileToggle" aria-label={t.openMenu} onClick={() => { setActiveDropdown(null); setMobileOpen(true); }}>
             <span /><span /><span />
           </button>
         </div>
@@ -355,6 +371,47 @@ export default function MarketingNavbar() {
 
         <Link href={compare.href} hrefLang={compare.hrefLang} onClick={closeMobile} style={navItemStyle}>{t.compare}</Link>
         <Link href={blog.href} hrefLang={blog.hrefLang} onClick={closeMobile} style={navItemStyle}>{t.blog}</Link>
+
+        {/* Language accordion: the globe and the page's language by its own name, which a visitor who cannot read the page still can. */}
+        <button
+          onClick={() => setMobileSection((v) => v === "language" ? null : "language")}
+          aria-expanded={mobileSection === "language"}
+          aria-label={`${t.language}: ${LOCALE_NAME[navLocale]}`}
+          style={{ ...navItemStyle, display: "flex", justifyContent: "space-between", alignItems: "center", background: "none", border: "none", borderBottom: "1px solid var(--ds-border)", cursor: "pointer", fontFamily: "inherit" }}
+        >
+          <span style={{ display: "inline-flex", alignItems: "center", gap: 10 }}>
+            <GlobeIcon size={18} />
+            {LOCALE_NAME[navLocale]}
+          </span>
+          <span style={{ transition: "transform 0.2s", display: "inline-block", transform: mobileSection === "language" ? "rotate(180deg)" : "none" }}>
+            <ChevronDown size={16} />
+          </span>
+        </button>
+
+        {mobileSection === "language" && (
+          <div style={{ background: "var(--ds-bg-light)", borderBottom: "1px solid var(--ds-border)" }}>
+            {languages.map(({ locale, href, current }) => (
+              <a
+                key={locale}
+                href={href}
+                hrefLang={locale}
+                lang={locale}
+                aria-current={current ? "true" : undefined}
+                onClick={(e) => {
+                  rememberLanguage(locale);
+                  if (current) {
+                    e.preventDefault();
+                    closeMobile();
+                  }
+                }}
+                style={current ? { ...subItemStyle, fontWeight: 700, color: "#1F6B6B" } : subItemStyle}
+              >
+                <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#1F6B6B", flexShrink: 0, display: "inline-block" }} />
+                {LOCALE_NAME[locale]}
+              </a>
+            ))}
+          </div>
+        )}
 
         <div style={{ padding: "24px 24px 40px", display: "flex", flexDirection: "column", gap: 12, marginTop: "auto" }}>
           <a href={LOGIN_URL} className="btn btn-secondary" onClick={closeMobile} style={{ width: "100%", textAlign: "center" }}>{t.logIn}</a>

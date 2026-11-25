@@ -10,6 +10,7 @@ import FadeUpObserver from "@/components/marketing/fade-up-observer";
 import { AttributionCapture } from "@/components/marketing/attribution-capture";
 import { Analytics } from "@vercel/analytics/next";
 import type { Locale } from "@/lib/locales";
+import { PAGE_LANGUAGES } from "@/lib/page-languages";
 
 const GTM_ID = "GTM-TGJD79J4";
 
@@ -115,7 +116,8 @@ const websiteSchema = {
  * analytics. Each language has its own root layout (app/(en), app/(es) and so
  * on) so the html tag says the page's real language: search engines read it,
  * Bing (and with it ChatGPT search) among them. Pages in one language share
- * this shell; moving between languages reloads the page. The footer lists
+ * this shell; moving between languages reloads the page. The top bar has a
+ * language menu (components/marketing/language-menu.tsx) and the footer lists
  * every language (components/marketing/language-list.tsx); nobody is sent to
  * one automatically.
  */
@@ -168,7 +170,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <AttributionCapture />
         <div className="marketing">
           <ChromeGate>
-            <MarketingNavbar />
+            <MarketingNavbar pages={PAGE_LANGUAGES} />
           </ChromeGate>
           <main id="main">{children}</main>
           <ChromeGate>

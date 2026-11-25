@@ -12,7 +12,7 @@ export default function PrivacyPage() {
       <section className="legal-hero">
         <div className="mkt-container">
           <h1>Privacy Policy</h1>
-          <p>Last updated: November 9, 2026</p>
+          <p>Last updated: November 24, 2026</p>
         </div>
       </section>
 
@@ -187,6 +187,13 @@ export default function PrivacyPage() {
             optout.aboutads.info
           </a>
           . You can also block or delete cookies in your browser settings.
+        </p>
+        <p>
+          Our <code>pb_locale</code> cookie is set only when you choose a
+          language: in the menu at the top of each page, in the list at the
+          foot of each page, or in the app&apos;s settings. It is kept for a
+          year and remembers your choice, so the app opens in that language
+          when you sign up or log in.
         </p>
 
         <h2>6. Your Rights</h2>
