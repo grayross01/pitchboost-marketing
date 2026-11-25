@@ -1,8 +1,580 @@
 import type { Metadata } from "next";
-import HomeView, { homeMetadata } from "@/components/marketing/home/home-view";
+import Link from "next/link";
+import FAQ from "@/components/marketing/faq";
+import { FAQS } from "@/components/marketing/faq-data";
+import PricingPlans from "@/components/marketing/pricing-plans";
+import { homeLanguages } from "@/lib/home-i18n";
 
-export const metadata: Metadata = homeMetadata("en");
+const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
+const SIGNUP_URL = `${APP_URL}/signup`;
+const SIGNUP_REBUILD = `${APP_URL}/signup?intent=rebuild`;
+
+// Redesign-first on purpose: most ChatGPT referrals land here, and this is
+// the wording that earned them. /ai-presentation-maker carries that search.
+const TITLE = "PitchBoost: Redesign Your PowerPoint or Build a New Deck, in Your Brand";
+const DESCRIPTION =
+  "Upload the PowerPoint you already have and PitchBoost rebuilds every slide in your brand, or start from a brief and get a new deck written for your audience. Share it as a tracked link, a PDF or an editable PowerPoint.";
+
+// The page is the one that was live until Nov 22 2026, put back as it was. Only
+// the language alternates are new: the other languages have home pages of their
+// own now, and each of them names this page as its English version.
+export const metadata: Metadata = {
+  title: { absolute: TITLE },
+  description: DESCRIPTION,
+  alternates: { canonical: "/", languages: homeLanguages() },
+  openGraph: { title: TITLE, description: DESCRIPTION },
+};
+
+function CheckIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+      <polyline points="20 6 9 17 4 12" />
+    </svg>
+  );
+}
+
+const softwareSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "PitchBoost",
+  url: "https://pitchboost.ai",
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Web",
+  description: "AI presentation maker that builds a new presentation from a prompt (a lesson, a report, a talk or a pitch) or redesigns an existing PowerPoint or PDF deck in your brand, in a few minutes.",
+  offers: {
+    "@type": "AggregateOffer",
+    priceCurrency: "USD",
+    lowPrice: "0",
+    offerCount: "4",
+  },
+  publisher: { "@type": "Organization", name: "PitchBoost", url: "https://pitchboost.ai" },
+};
 
 export default function MarketingPage() {
-  return <HomeView locale="en" />;
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }} />
+      {/* ── Hero ── */}
+      <section className="hero">
+        <div className="hero-orb" />
+        <div className="hero-orb" />
+        <div className="hero-orb" />
+
+        <div className="mkt-container">
+          <div className="rise">
+            <div className="hero-badge">
+              <span style={{ width: 8, height: 8, borderRadius: "50%", background: "linear-gradient(135deg, #1F6B6B, #E8665A)", display: "inline-block" }} />
+              AI presentation design for new decks and redesigns
+            </div>
+          </div>
+
+          <h1 className="rise rise-1">
+            Designer-quality slides,<br />
+            <span className="gradient-text">in your brand.</span>
+          </h1>
+
+          <p className="rise rise-2">
+            Start from the slides you already have or from a quick brief. PitchBoost designs every slide in your brand&apos;s style and shapes it for the people you&apos;re presenting to, then hands it back as a tracked link, a PDF, or an editable PowerPoint.
+          </p>
+
+          <div className="hero-actions rise rise-3">
+            <a href={SIGNUP_REBUILD} className="btn btn-primary btn-lg">Redesign My Slides</a>
+            <a href={SIGNUP_URL} className="btn btn-light btn-lg">Start From Scratch</a>
+          </div>
+          <p className="rise rise-3" style={{ marginTop: 14, fontSize: 13, color: "rgba(255,255,255,0.7)" }}>
+            Free forever plan. No credit card required.
+          </p>
+
+          <div className="hero-proof-bar rise rise-4">
+            <div className="proof-item">
+              <span className="proof-icon">◎</span>
+              <span>Your slides rebuilt,<br />content and numbers kept</span>
+            </div>
+            <div className="proof-sep" />
+            <div className="proof-item">
+              <span className="proof-icon">◎</span>
+              <span>Your brand, pulled<br />from your website</span>
+            </div>
+            <div className="proof-sep" />
+            <div className="proof-item">
+              <span className="proof-icon">◎</span>
+              <span>Send a link and see<br />when it&apos;s opened</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Redesign an existing deck ── */}
+      <section id="redesign" className="mkt-section">
+        <div className="mkt-container">
+          <div className="step-showcase fade-up">
+            <div>
+              <div className="section-label"><span>Already have a deck?</span></div>
+              <h3>Upload your PowerPoint. Get it back looking like a designer made it.</h3>
+              <p>Bring a dated, text-heavy, or off-brand deck. PitchBoost reads every slide, keeps your content and numbers, and rebuilds the layout in your brand. Thesis defenses, lectures, proposals, pitch decks, and sales decks all work.</p>
+              <ul className="step-highlights">
+                <li><CheckIcon /> Upload a .pptx up to 50 MB (export Google Slides or Keynote first)</li>
+                <li><CheckIcon /> Logo, colors, and voice pulled from your website</li>
+                <li><CheckIcon /> Numbers from your deck preserved and fact-checked</li>
+                <li><CheckIcon /> Get it back as a tracked link, a PDF, and an editable PowerPoint</li>
+              </ul>
+              <div style={{ display: "flex", gap: 20, alignItems: "center", flexWrap: "wrap", marginTop: 24 }}>
+                <a href={SIGNUP_REBUILD} className="btn btn-primary">Redesign My PowerPoint</a>
+                <Link href="/redesign/powerpoint-redesign" style={{ fontSize: 14, fontWeight: 600, color: "#1F6B6B", textDecoration: "none" }}>
+                  How PowerPoint redesign works →
+                </Link>
+              </div>
+            </div>
+            <div className="step-visual">
+              <div className="browser-frame">
+                <div className="browser-bar">
+                  <div className="browser-dots"><span /><span /><span /></div>
+                  <div className="browser-url">pitchboost.ai/rebuild</div>
+                </div>
+                <div className="browser-content">
+                  <div style={{ background: "#f8f9fb", padding: "20px 24px", minHeight: 300 }}>
+                    <div style={{ border: "2px dashed #cbd5e1", borderRadius: 10, padding: "16px", textAlign: "center", marginBottom: 16, background: "white" }}>
+                      <div style={{ fontWeight: 600, fontSize: 12, color: "#0f172a" }}>Q3-strategy-review.pptx</div>
+                      <div style={{ fontSize: 10, color: "#64748b" }}>18 slides &middot; 6.2 MB &middot; uploaded</div>
+                    </div>
+                    <div style={{ display: "grid", gridTemplateColumns: "1fr auto 1fr", gap: 10, alignItems: "center" }}>
+                      <div style={{ background: "white", border: "1px solid #e2e8f0", borderRadius: 8, padding: "12px", minHeight: 120 }}>
+                        <div style={{ fontSize: 9, color: "#94a3b8", marginBottom: 6 }}>BEFORE</div>
+                        <div style={{ fontSize: 11, fontWeight: 700, color: "#0f172a", marginBottom: 6, fontFamily: "Times New Roman, serif" }}>Q3 Strategy Review</div>
+                        {[92, 100, 86, 97, 74, 90].map((w, i) => (
+                          <div key={i} style={{ height: 4, width: `${w}%`, background: "#cbd5e1", borderRadius: 2, marginBottom: 4 }} />
+                        ))}
+                      </div>
+                      <div style={{ fontSize: 16, color: "#1F6B6B" }}>→</div>
+                      <div style={{ background: "linear-gradient(135deg, #1F6B6B, #2A8A8A)", borderRadius: 8, padding: "12px", minHeight: 120, color: "white" }}>
+                        <div style={{ fontSize: 9, opacity: 0.7, marginBottom: 6 }}>AFTER</div>
+                        <div style={{ fontSize: 11, fontWeight: 700, marginBottom: 10 }}>Q3 Strategy Review</div>
+                        <div style={{ display: "flex", gap: 6 }}>
+                          {["+18%", "$2.4M", "3 wins"].map((t) => (
+                            <div key={t} style={{ flex: 1, background: "rgba(255,255,255,0.15)", borderRadius: 4, padding: "8px 4px", fontSize: 10, fontWeight: 700, textAlign: "center" }}>{t}</div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                    <div style={{ display: "flex", gap: 8, marginTop: 16, justifyContent: "flex-end" }}>
+                      {["PDF", "PowerPoint"].map((t) => (
+                        <div key={t} style={{ background: "white", border: "1px solid #e2e8f0", padding: "6px 14px", borderRadius: 8, fontSize: 11, fontWeight: 600, color: "#0f172a" }}>{t}</div>
+                      ))}
+                      <div style={{ background: "linear-gradient(135deg, #1F6B6B, #E8665A)", color: "white", padding: "6px 14px", borderRadius: 8, fontSize: 11, fontWeight: 600 }}>Share link</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Sample Deck ── */}
+      <section id="sample-deck" className="mkt-section" style={{ background: "var(--ds-bg-light)" }}>
+        <div className="mkt-container">
+          <div className="section-header fade-up">
+            <div className="section-label"><span>See it in action</span></div>
+            <h2>A real PitchBoost deck, built for a specific prospect</h2>
+          </div>
+          <div className="fade-up">
+            <p style={{ fontSize: 15, color: "var(--ds-text-secondary)", lineHeight: 1.7, textAlign: "center", marginBottom: 32 }}>
+              Every deck comes out in the sender&apos;s brand: logo, colors, and voice lifted from their
+              website, prospect context from the company they&apos;re pitching. Browse finished layouts
+              from the same engine in the template gallery.
+            </p>
+            <div style={{ textAlign: "center" }}>
+              <a
+                href="https://app.pitchboost.ai/templates"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary"
+                style={{ fontSize: 15, fontWeight: 600 }}
+              >
+                Browse the template gallery →
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── How It Works ── */}
+      <section id="how-it-works" className="mkt-section">
+        <div className="mkt-container">
+          <div className="section-header fade-up">
+            <div className="section-label"><span>How It Works</span></div>
+            <h2>From a rough deck or a brief to one worth sending</h2>
+            <p>Three steps, whether you start from slides you already have or from a description of what you need.</p>
+          </div>
+
+          {/* Step 1 */}
+          <div className="step-showcase fade-up" style={{ marginBottom: 80 }}>
+            <div>
+              <div className="step-number">1</div>
+              <h3>Bring your deck, or tell PitchBoost what you need</h3>
+              <p>Upload an existing PowerPoint, or describe the presentation and who it&apos;s for. Point PitchBoost at your website and it picks up your logo, colors, and voice.</p>
+              <ul className="step-highlights">
+                <li><CheckIcon /> Upload a .pptx, or start from a brief</li>
+                <li><CheckIcon /> Brand pulled from your website</li>
+                <li><CheckIcon /> Add audience context and supporting docs</li>
+              </ul>
+            </div>
+            <div className="step-visual">
+              <div className="browser-frame">
+                <div className="browser-bar">
+                  <div className="browser-dots"><span /><span /><span /></div>
+                  <div className="browser-url">pitchboost.ai/dashboard</div>
+                </div>
+                <div className="browser-content">
+                  <div style={{ background: "#f8f9fb", padding: "20px 24px", minHeight: 300 }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 20 }}>
+                      <div>
+                        <div style={{ fontWeight: 700, fontSize: 18, color: "#0f172a" }}>Dashboard</div>
+                        <div style={{ fontSize: 12, color: "#64748b" }}>Welcome back, Sarah</div>
+                      </div>
+                      <div style={{ background: "linear-gradient(135deg, #1F6B6B, #E8665A)", color: "white", padding: "8px 16px", borderRadius: 8, fontSize: 12, fontWeight: 600 }}>+ New Deal</div>
+                    </div>
+                    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 12, marginBottom: 20 }}>
+                      {[["Active Deals", "6"], ["Total Decks", "12"], ["Published", "8"]].map(([label, val]) => (
+                        <div key={label} style={{ background: "white", border: "1px solid #e2e8f0", borderRadius: 10, padding: "14px 16px" }}>
+                          <div style={{ fontSize: 11, color: "#64748b" }}>{label}</div>
+                          <div style={{ fontSize: 22, fontWeight: 800, color: "#0f172a" }}>{val}</div>
+                        </div>
+                      ))}
+                    </div>
+                    <div style={{ background: "white", border: "1px solid #e2e8f0", borderRadius: 10, padding: "14px 16px" }}>
+                      <div style={{ fontWeight: 600, fontSize: 13, color: "#0f172a", marginBottom: 12 }}>Recent Deals</div>
+                      {[["Q2 Enterprise Proposal", "Acme Corp", "3 decks"], ["Partnership One-Sheet", "Meridian Group", "2 decks"], ["Product Capabilities Deck", "NovaTech", "1 deck"]].map(([name, co, decks]) => (
+                        <div key={name} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "10px 0", borderTop: "1px solid #f1f5f9" }}>
+                          <div>
+                            <div style={{ fontWeight: 600, fontSize: 12, color: "#0f172a" }}>{name}</div>
+                            <div style={{ fontSize: 11, color: "#94a3b8" }}>{co} &middot; {decks}</div>
+                          </div>
+                          <div style={{ fontSize: 11, color: "#1F6B6B", fontWeight: 500 }}>active</div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Step 2 */}
+          <div className="step-showcase reverse fade-up" style={{ marginBottom: 80 }}>
+            <div>
+              <div className="step-number">2</div>
+              <h3>Get every slide rebuilt, or a new deck written</h3>
+              <p>An uploaded deck comes back with every slide redesigned in your brand, your content and numbers intact. A new deck comes back structured and written for the specific audience, with your credentials presented in the way most likely to land.</p>
+              <ul className="step-highlights">
+                <li><CheckIcon /> Your content and numbers preserved</li>
+                <li><CheckIcon /> Auto-branded with your colors and logo</li>
+                <li><CheckIcon /> Edit any slide after generation</li>
+              </ul>
+            </div>
+            <div className="step-visual">
+              <div className="browser-frame">
+                <div className="browser-bar">
+                  <div className="browser-dots"><span /><span /><span /></div>
+                  <div className="browser-url">pitchboost.ai/deck/edit</div>
+                </div>
+                <div className="browser-content">
+                  <div style={{ background: "#f8f9fb", padding: "20px 24px", minHeight: 300 }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 16 }}>
+                      <div style={{ fontWeight: 700, fontSize: 16, color: "#0f172a" }}>Acme Corp: Enterprise Proposal</div>
+                      <div style={{ display: "flex", gap: 8 }}>
+                        <div style={{ background: "white", border: "1px solid #e2e8f0", padding: "6px 14px", borderRadius: 8, fontSize: 11, fontWeight: 600, color: "#0f172a" }}>PDF</div>
+                        <div style={{ background: "linear-gradient(135deg, #1F6B6B, #E8665A)", color: "white", padding: "6px 14px", borderRadius: 8, fontSize: 11, fontWeight: 600 }}>Publish</div>
+                      </div>
+                    </div>
+                    <div style={{ background: "white", border: "1px solid #e2e8f0", borderRadius: 10, marginBottom: 12, overflow: "hidden" }}>
+                      <div style={{ display: "flex", justifyContent: "space-between", padding: "8px 14px", borderBottom: "1px solid #f1f5f9", fontSize: 11, color: "#94a3b8" }}>
+                        <span>Slide 1 &middot; Title</span><span style={{ color: "#cbd5e1" }}>Edit</span>
+                      </div>
+                      <div style={{ background: "linear-gradient(135deg, #4338ca, #7c3aed)", padding: "28px 24px", color: "white" }}>
+                        <div style={{ fontSize: 10, opacity: 0.7, marginBottom: 4 }}>ACME CORP</div>
+                        <div style={{ fontSize: 16, fontWeight: 700, marginBottom: 6 }}>Enterprise Solutions Overview</div>
+                        <div style={{ fontSize: 10, opacity: 0.6 }}>Tailored capabilities for your team&apos;s needs</div>
+                      </div>
+                    </div>
+                    <div style={{ background: "white", border: "1px solid #e2e8f0", borderRadius: 10, overflow: "hidden" }}>
+                      <div style={{ display: "flex", justifyContent: "space-between", padding: "8px 14px", borderBottom: "1px solid #f1f5f9", fontSize: 11, color: "#94a3b8" }}>
+                        <span>Slide 2 &middot; The Problem</span><span style={{ color: "#cbd5e1" }}>Edit</span>
+                      </div>
+                      <div style={{ padding: "20px 24px" }}>
+                        <div style={{ fontSize: 13, fontWeight: 700, color: "#0f172a", marginBottom: 8 }}>Your Team Deserves Better Tools</div>
+                        <div style={{ display: "flex", gap: 12 }}>
+                          {["87% say onboarding is too slow", "$2.4M avg. cost of poor tooling", "Siloed workflows"].map(s => (
+                            <div key={s} style={{ flex: 1, background: "#f8f9fb", borderRadius: 6, padding: "10px 12px", fontSize: 10, color: "#64748b", textAlign: "center" }}>{s}</div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Step 3 */}
+          <div className="step-showcase fade-up">
+            <div>
+              <div className="step-number">3</div>
+              <h3>Share it, then know exactly how it landed</h3>
+              <p>Send a branded link, or download a PDF or an editable PowerPoint. A link tells you who opened it, which slides held their attention, and when they came back. A file sent as an attachment tells you nothing.</p>
+              <ul className="step-highlights">
+                <li><CheckIcon /> Publish a branded shareable link</li>
+                <li><CheckIcon /> Download a PDF or editable PowerPoint</li>
+                <li><CheckIcon /> See which slides they spent time on</li>
+              </ul>
+            </div>
+            <div className="step-visual">
+              <div className="browser-frame">
+                <div className="browser-bar">
+                  <div className="browser-dots"><span /><span /><span /></div>
+                  <div className="browser-url">pitchboost.ai/analytics</div>
+                </div>
+                <div className="browser-content">
+                  <div style={{ background: "#f8f9fb", padding: "20px 24px", minHeight: 300 }}>
+                    <div style={{ fontWeight: 700, fontSize: 16, color: "#0f172a", marginBottom: 4 }}>Analytics</div>
+                    <div style={{ fontSize: 12, color: "#64748b", marginBottom: 16 }}>Track performance across all your decks</div>
+                    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: 10, marginBottom: 16 }}>
+                      {[["Total Views", "247", "#0f172a"], ["Unique Viewers", "83", "#0f172a"], ["Avg. Time", "2m 34s", "#1F6B6B"], ["Completion", "72%", "#1F6B6B"]].map(([label, val, color]) => (
+                        <div key={label} style={{ background: "white", border: "1px solid #e2e8f0", borderRadius: 10, padding: "12px 14px" }}>
+                          <div style={{ fontSize: 10, color: "#64748b" }}>{label}</div>
+                          <div style={{ fontSize: 18, fontWeight: 800, color }}>{val}</div>
+                        </div>
+                      ))}
+                    </div>
+                    <div style={{ background: "white", border: "1px solid #e2e8f0", borderRadius: 10, padding: "14px 16px", marginBottom: 14 }}>
+                      <div style={{ fontWeight: 600, fontSize: 12, color: "#0f172a", marginBottom: 12 }}>Views Over Time</div>
+                      <div style={{ display: "flex", alignItems: "flex-end", gap: 6, height: 60 }}>
+                        {[20, 35, 28, 45, 52, 38, 65, 48, 72, 58, 80, 63].map((h, i) => (
+                          <div key={i} style={{ flex: 1, background: "linear-gradient(to top, #1F6B6B, #2A8A8A)", borderRadius: "3px 3px 0 0", height: `${h}%`, opacity: 0.7 + (i * 0.025) }} />
+                        ))}
+                      </div>
+                      <div style={{ display: "flex", justifyContent: "space-between", fontSize: 9, color: "#94a3b8", marginTop: 6 }}>
+                        <span>Mar 1</span><span>Mar 31</span>
+                      </div>
+                    </div>
+                    <div style={{ background: "white", border: "1px solid #e2e8f0", borderRadius: 10, padding: "14px 16px" }}>
+                      <div style={{ fontWeight: 600, fontSize: 12, color: "#0f172a", marginBottom: 10 }}>Deck Performance</div>
+                      {[["Acme Corp Proposal", "142 views", "2m 48s"], ["Partnership One-Sheet", "68 views", "1m 52s"], ["NovaTech Overview", "37 views", "3m 12s"]].map(([name, views, time]) => (
+                        <div key={name} style={{ display: "flex", justifyContent: "space-between", padding: "8px 0", borderTop: "1px solid #f1f5f9", fontSize: 11 }}>
+                          <span style={{ fontWeight: 500, color: "#0f172a" }}>{name}</span>
+                          <div style={{ display: "flex", gap: 16 }}>
+                            <span style={{ color: "#64748b" }}>{views}</span>
+                            <span style={{ color: "#64748b" }}>{time}</span>
+                            <span style={{ color: "#1F6B6B", fontWeight: 500 }}>published</span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Who It's For ── */}
+      <section className="mkt-section" style={{ background: "var(--ds-bg-light)" }}>
+        <div className="mkt-container">
+          <div className="section-header fade-up">
+            <div className="section-label"><span>Who It&apos;s For</span></div>
+            <h2>Built for people who present, but don&apos;t have a design team</h2>
+            <p>PitchBoost gives anyone with a deck to deliver materials that look professionally designed and feel built for the specific person, company, or room they&apos;re presenting to.</p>
+          </div>
+          <div className="fade-up" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 20, marginTop: 48 }}>
+            {[
+              {
+                icon: (
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+                ),
+                title: "Founders and small teams",
+                body: "Show up to every sales conversation with a deck that makes you look like you have a full team behind you, because the quality of your materials shouldn't depend on headcount.",
+              },
+              {
+                icon: (
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z" /><path d="M6 12v5c3 2 9 2 12 0v-5" /></svg>
+                ),
+                title: "Students and academics",
+                body: "Thesis defenses, lectures, and conference talks that look as considered as the work behind them. Upload the deck you have and get it back clean, consistent, and readable.",
+              },
+              {
+                icon: (
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" /><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" /></svg>
+                ),
+                title: "Agencies and consultants",
+                body: "Win more pitches by showing prospects you understand their specific situation, not just that you do good work in general.",
+              },
+              {
+                icon: (
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></svg>
+                ),
+                title: "Sales and business development teams",
+                body: "Send a deck that reflects what you learned about this account, not the same slide sequence you sent the last ten prospects.",
+              },
+            ].map(({ icon, title, body }) => (
+              <div key={title} style={{ background: "var(--ds-bg)", border: "1px solid var(--ds-border)", borderRadius: 16, padding: "24px 28px" }}>
+                <div style={{ width: 44, height: 44, borderRadius: 12, background: "linear-gradient(135deg, rgba(31,107,107,0.1), rgba(232,102,90,0.08))", display: "flex", alignItems: "center", justifyContent: "center", color: "#1F6B6B", marginBottom: 16 }}>
+                  {icon}
+                </div>
+                <h3 style={{ fontSize: 15, fontWeight: 700, color: "var(--ds-text-primary)", marginBottom: 8 }}>{title}</h3>
+                <p style={{ fontSize: 13, color: "var(--ds-text-secondary)", lineHeight: 1.65, margin: 0 }}>{body}</p>
+              </div>
+            ))}
+          </div>
+          <div className="fade-up" style={{ textAlign: "center", marginTop: 36 }}>
+            <Link href="/ai-presentation-maker" style={{ fontSize: 14, fontWeight: 600, color: "#1F6B6B", textDecoration: "none", marginRight: 28 }}>
+              Lessons, reports and talks →
+            </Link>
+            <Link href="/industries" style={{ fontSize: 14, fontWeight: 600, color: "#1F6B6B", textDecoration: "none" }}>
+              Pages for your industry →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Features ── */}
+      <section id="features" className="mkt-section features-section">
+        <div className="mkt-container">
+          <div className="section-header fade-up">
+            <div className="section-label"><span>Features</span></div>
+            <h2>Everything between the first draft and the room</h2>
+            <p>From the first draft to the follow-up, PitchBoost makes the deck, delivers it and tells you how it landed, whether the room is a class, a board or a buyer.</p>
+          </div>
+          <div className="features-grid fade-up">
+            {[
+              {
+                color: "blue",
+                href: "/features/ai-deck-builder",
+                icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z" /><path d="M2 17l10 5 10-5" /><path d="M2 12l10 5 10-5" /></svg>,
+                title: "New decks from a prompt",
+                body: "Say what the presentation is for and who will see it. A lesson comes back ending on takeaways, a report on the decision you need, a pitch written for one specific prospect.",
+              },
+              {
+                color: "purple",
+                href: "/features/brand-and-images",
+                icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="13.5" cy="6.5" r="2.5" /><path d="M17 2H7a5 5 0 0 0-5 5v10a5 5 0 0 0 5 5h10a5 5 0 0 0 5-5V7a5 5 0 0 0-5-5z" /></svg>,
+                title: "Brand-aware content and design",
+                body: "Every deck looks like it came from your team (your logo, your colors, your voice) without any manual design work.",
+              },
+              {
+                color: "pink",
+                href: "/features/research-and-fact-checking",
+                icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>,
+                title: "Researched, cited facts",
+                body: "PitchBoost researches your prospect while it writes and cites every stat it adds, with the source linked on the slide. Numbers it cannot back up never make the deck.",
+              },
+              {
+                color: "blue",
+                href: "/features/upload-and-redesign",
+                icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" /><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" /></svg>,
+                title: "Upload and redesign",
+                body: "Upload an existing PowerPoint and get every slide rebuilt in your brand, with your content kept. Then refine any single slide with AI without touching the rest.",
+              },
+              {
+                color: "purple",
+                href: "/features/output-types",
+                icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg>,
+                title: "Link, PDF, or editable PowerPoint",
+                body: "Send a branded interactive link your audience opens in the browser, or download a PDF or an editable PowerPoint, whichever fits the situation.",
+              },
+              {
+                color: "pink",
+                href: "/features/viewer-analytics",
+                icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" /></svg>,
+                title: "Viewer analytics",
+                body: "See who opened your deck and which slides held their attention, so the follow-up lands at the right moment.",
+              },
+            ].map(({ color, href, icon, title, body }) => (
+              <Link key={title} href={href} className="feature-card">
+                <div className={`feature-icon ${color}`}>{icon}</div>
+                <h3>{title}</h3>
+                <p>{body}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── AI / MCP band ── */}
+      <section className="mkt-section">
+        <div className="mkt-container">
+          <div style={{ borderRadius: 20, border: "1px solid var(--ds-border)", background: "var(--ds-bg-light)", padding: "clamp(28px, 5vw, 48px)", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 28 }}>
+            <div style={{ maxWidth: 640 }}>
+              <div className="section-label" style={{ marginBottom: 14 }}><span>AI-native</span></div>
+              <h2 style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)", fontWeight: 800, color: "var(--ds-dark)", lineHeight: 1.15, marginBottom: 12 }}>
+                Redesign or build decks from inside ChatGPT or Claude
+              </h2>
+              <p style={{ color: "var(--ds-text-light)", fontSize: "1.02rem", lineHeight: 1.7, margin: 0 }}>
+                Add the PitchBoost plugin in ChatGPT, or connect the MCP server in Claude, Cursor or your own tools, and get back a finished, branded deck on a shareable link with viewer analytics, not a rough slide file to clean up. Free ChatGPT accounts included.
+              </p>
+            </div>
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 10 }}>
+              <Link href="/chatgpt" className="btn btn-primary btn-lg" style={{ whiteSpace: "nowrap" }}>
+                Use it in ChatGPT →
+              </Link>
+              <Link href="/features/api-and-mcp" style={{ fontSize: 14, fontWeight: 600, color: "#1F6B6B", textDecoration: "none" }}>
+                Claude, Cursor and the API
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Pricing ── */}
+      <section id="pricing" className="mkt-section" style={{ background: "var(--ds-bg-light)" }}>
+        <div className="mkt-container">
+          <div className="section-header fade-up">
+            <div className="section-label"><span>Pricing</span></div>
+            <h2>Simple, transparent pricing</h2>
+            <p>Start free and upgrade when you&apos;re ready. Every plan includes a monthly AI budget that resets automatically.</p>
+          </div>
+          <PricingPlans className="pricing-grid fade-up" />
+        </div>
+      </section>
+
+      {/* ── FAQ ── */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: FAQS.map(({ q, a }) => ({
+              "@type": "Question",
+              name: q,
+              acceptedAnswer: { "@type": "Answer", text: a },
+            })),
+          }),
+        }}
+      />
+      <section className="mkt-section">
+        <div className="mkt-container">
+          <div className="section-header fade-up">
+            <div className="section-label"><span>FAQ</span></div>
+            <h2>Frequently asked questions</h2>
+            <p>Everything you need to know about PitchBoost.</p>
+          </div>
+          <div className="fade-up">
+            <FAQ />
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA ── */}
+      <section className="mkt-section cta-section">
+        <div className="mkt-container">
+          <div className="cta-box fade-up">
+            <h2>Your next deck, done in minutes.</h2>
+            <p>Redesign the PowerPoint you have or build a new one, in your brand, and know when it&apos;s been read.</p>
+            <a href={SIGNUP_REBUILD} className="btn btn-primary btn-lg">Redesign My PowerPoint</a>
+          </div>
+        </div>
+      </section>
+    </>
+  );
 }
