@@ -1323,10 +1323,17 @@ body {
   color: white;
 }
 
+/* The languages at the bottom of the footer (language-list.tsx): each by its own name, the page's own in white. */
+.marketing .footer-languages ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 14px; margin: 0; padding: 0; list-style: none; }
+.marketing .footer-languages a { color: rgba(255, 255, 255, 0.7); text-decoration: none; }
+.marketing .footer-languages a:hover { color: #fff; }
+.marketing .footer-languages a[aria-current] { color: #fff; font-weight: 600; }
+
 .marketing .footer-bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
   padding-top: 32px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   font-size: 0.85rem;

@@ -6,14 +6,14 @@ import { CITIES } from "@/lib/cities";
 import { NET_SHEET_STATES } from "@/lib/net-sheet-states";
 import { REDESIGNS, getRedesigns } from "@/lib/redesigns";
 import { ANSWERS } from "@/lib/answers";
-import { HELP_ARTICLES } from "@/lib/help";
+import { HELP_ARTICLES, getHelpArticleFor } from "@/lib/help";
 import { CHANGELOG } from "@/lib/changelog";
 import { RESEARCH } from "@/lib/research";
 import { PRESENTATIONS } from "@/lib/presentations";
 import { MAKERS } from "@/lib/makers";
 import { getMakerFor, makerLocales } from "@/lib/makers-i18n";
 import { getPresentationFor } from "@/lib/presentations-i18n";
-import { LOCALES, LOCALE_PREFIX } from "@/lib/redesign-i18n";
+import { LOCALES, LOCALE_PREFIX, PRESENTATION_LOCALES } from "@/lib/redesign-i18n";
 import { getAllPosts } from "@/lib/blog";
 import { STATIC_PAGE_DATES, FEATURE_PAGE_DATES, INDUSTRIES_UPDATED, COMPETITORS_UPDATED, REDESIGNS_UPDATED, HELP_UPDATED, CITIES_UPDATED, NET_SHEET_UPDATED } from "@/lib/page-dates";
 
@@ -60,7 +60,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   // The home page is published in every language (English at the root, the
-  // others at /es, /pt, /fr and /ar); each address lists all five.
+  // others at /es, /pt, /fr, /ar and /de); each address lists all six.
   const homeAlternates: Record<string, string> = { "x-default": BASE };
   for (const l of LOCALES) homeAlternates[l] = `${BASE}${LOCALE_PREFIX[l]}`;
 
@@ -76,16 +76,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   // Presentation use cases (class presentations, lecture slides, ...): the
-  // family under the /ai-presentation-maker hub, in English, Spanish and
-  // Portuguese. As with the redesign cluster, a page lists only the locales
-  // it actually exists in.
+  // family under the /ai-presentation-maker hub, in every language that has
+  // it (not German yet: PRESENTATION_LOCALES). As with the redesign cluster,
+  // a page lists only the locales it actually exists in.
   const hubLanguages: Record<string, string> = { "x-default": `${BASE}/ai-presentation-maker` };
-  for (const l of LOCALES) hubLanguages[l] = `${BASE}${LOCALE_PREFIX[l]}/ai-presentation-maker`;
-  for (const l of LOCALES) {
+  for (const l of PRESENTATION_LOCALES) hubLanguages[l] = `${BASE}${LOCALE_PREFIX[l]}/ai-presentation-maker`;
+  for (const l of PRESENTATION_LOCALES) {
     entries.push({ url: hubLanguages[l], changeFrequency: "monthly", priority: l === "en" ? 0.95 : 0.85, lastModified: STATIC_PAGE_DATES["/ai-presentation-maker"], alternates: { languages: hubLanguages } });
   }
   for (const p of PRESENTATIONS) {
-    const locales = LOCALES.filter((l) => !!getPresentationFor(l, p.slug));
+    const locales = PRESENTATION_LOCALES.filter((l) => !!getPresentationFor(l, p.slug));
     const languages: Record<string, string> = { "x-default": `${BASE}/presentations/${p.slug}` };
     for (const l of locales) languages[l] = `${BASE}${LOCALE_PREFIX[l]}/presentations/${p.slug}`;
     for (const l of locales) {
@@ -107,7 +107,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entries.push({ url: `${BASE}/features/${f.slug}`, changeFrequency: "monthly", priority: 0.8, lastModified: FEATURE_PAGE_DATES[f.slug] ?? STATIC_PAGE_DATES["/features"] });
   }
   // The redesign cluster exists in English and every translated locale
-  // (/es, /pt, /fr); every URL lists its siblings as hreflang alternates.
+  // (/es, /pt, /fr, /ar, /de); every URL lists its siblings as hreflang alternates.
   // Only locales that actually have the page are listed as alternates: a new
   // English entry whose translation has not landed yet must not advertise a
   // translated URL that 404s.
@@ -131,13 +131,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       });
     }
   }
-  // Help center: every article exists in every locale (translations are
-  // whole files), so each URL lists all its siblings.
+  // Help center: each URL lists the languages its article exists in. The
+  // translation job writes whole files for the first five languages; German
+  // is kept by hand, so a new English article may not have it yet.
   for (const path of ["/help", ...HELP_ARTICLES.map((a) => `/help/${a.slug}`)]) {
+    const has = LOCALES.filter((l) => path === "/help" || !!getHelpArticleFor(l, path.slice("/help/".length)));
     const languages: Record<string, string> = { "x-default": `${BASE}${path}` };
-    for (const l of LOCALES) languages[l] = `${BASE}${LOCALE_PREFIX[l]}${path}`;
+    for (const l of has) languages[l] = `${BASE}${LOCALE_PREFIX[l]}${path}`;
     const lastModified = HELP_ARTICLES.find((a) => `/help/${a.slug}` === path)?.updated ?? HELP_UPDATED;
-    for (const prefix of LOCALES.map((l) => LOCALE_PREFIX[l])) {
+    for (const prefix of has.map((l) => LOCALE_PREFIX[l])) {
       entries.push({ url: `${BASE}${prefix}${path}`, changeFrequency: "monthly", priority: prefix ? 0.7 : 0.8, lastModified, alternates: { languages } });
     }
   }

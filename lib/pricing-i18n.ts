@@ -3,7 +3,7 @@
  * language the site is published in. English is the source and is what /pricing
  * and the English home page show. The plan names (Free, Starter, Pro, Business)
  * and the four prices are not here: they are the same in every language and
- * stay in the component. The terms follow the "credits and plans" help article
+ * stay in the component (each language says only how a price is written). The terms follow the "credits and plans" help article
  * in each language (lib/help.*.ts), so a plan reads the same in both places.
  */
 import type { Locale } from "./redesign-i18n";
@@ -17,6 +17,8 @@ export interface PlanCopy {
 }
 
 export interface PlansCopy {
+  /** How a price is written, {amount} being the number: "$7" in English, "7 $" in German. */
+  price: string;
   /** Follows the price: "$7" then "/mo". */
   perMonth: string;
   /** The badge on the Pro card. On the home page it shares a line with the label printed on that ticket ("FRONT ROW"), and neither can wrap, so keep both short: the two together should be no longer than the English pair. */
@@ -31,6 +33,7 @@ export interface PlansCopy {
 
 export const PLANS_COPY: Record<Locale, PlansCopy> = {
   en: {
+    price: "${amount}",
     perMonth: "/mo",
     popular: "Most Popular",
     free: {
@@ -92,6 +95,7 @@ export const PLANS_COPY: Record<Locale, PlansCopy> = {
     },
   },
   es: {
+    price: "${amount}",
     perMonth: "/mes",
     popular: "Favorito",
     free: {
@@ -153,6 +157,7 @@ export const PLANS_COPY: Record<Locale, PlansCopy> = {
     },
   },
   pt: {
+    price: "${amount}",
     perMonth: "/mês",
     popular: "Favorito",
     free: {
@@ -214,6 +219,7 @@ export const PLANS_COPY: Record<Locale, PlansCopy> = {
     },
   },
   fr: {
+    price: "${amount}",
     perMonth: "/mois",
     popular: "Le favori",
     free: {
@@ -275,6 +281,7 @@ export const PLANS_COPY: Record<Locale, PlansCopy> = {
     },
   },
   ar: {
+    price: "${amount}",
     perMonth: "شهريًا",
     popular: "الأكثر رواجًا",
     free: {
@@ -333,6 +340,68 @@ export const PLANS_COPY: Record<Locale, PlansCopy> = {
     oneDeck: {
       question: "عرض واحد فقط؟",
       body: "ادفع مرة واحدة عن ذلك العرض، دون اشتراك: $9 حتى 25 شريحة، و$19 حتى 60. يُعاد بناء كل شريحة، بلا شارة PitchBoost، مع تنزيلات PowerPoint وPDF وGoogle Slides و100 رصيد للتعديلات. وإن بدأت Starter أو Pro خلال 30 يومًا، يُحتسب ما دفعته من الشهر الأول.",
+    },
+  },
+  de: {
+    price: "{amount} $",
+    perMonth: "/Monat",
+    popular: "Favorit",
+    free: {
+      desc: "Ideal, um PitchBoost auszuprobieren",
+      period: "Für immer kostenlos",
+      features: [
+        "150 Credits im Monat (1 KI-Präsentation)",
+        "Präsentationen bis 10 Folien",
+        "Teilen als Live-Link, mit Badge",
+        "Volle Aufrufstatistiken und gespeicherte Vorlagen",
+        "Recherche und Faktencheck inklusive",
+        "Dein Team, ohne Aufpreis pro Person",
+      ],
+      cta: "Loslegen",
+    },
+    starter: {
+      desc: "Deine Präsentationen, ohne Badge",
+      period: "oder 5,83 $/Monat bei jährlicher Zahlung",
+      features: [
+        "Mehr KI-Credits: 300 im Monat",
+        "Präsentationen bis 25 Folien",
+        "Kein PitchBoost-Badge, nirgends",
+        "Downloads als PowerPoint, PDF und Google Slides",
+        "Credit-Pakete zum Nachkaufen",
+        "Volle Aufrufstatistiken und gespeicherte Vorlagen",
+        "Dein Team, ohne Aufpreis pro Person",
+      ],
+      cta: "Mit Starter loslegen",
+    },
+    pro: {
+      desc: "Für alle, die jede Woche präsentieren",
+      period: "oder 24 $/Monat bei jährlicher Zahlung",
+      features: [
+        "Noch mehr KI-Credits: 1.500 im Monat",
+        "Präsentationen bis 60 Folien",
+        "Eigene Domains",
+        "Zugang zu API und MCP",
+        "Unbegrenzt viele Deals, ohne Badge",
+        "Volle Aufrufstatistiken und gespeicherte Vorlagen",
+        "Dein Team, ohne Aufpreis pro Person",
+      ],
+      cta: "Mit Pro starten",
+    },
+    business: {
+      desc: "Für Teams, die sich eine Marke teilen",
+      period: "oder 66 $/Monat bei jährlicher Zahlung",
+      features: [
+        "Alles aus Pro",
+        "Unser größtes KI-Credit-Kontingent: 4.400 im Monat",
+        "Export der Statistiken",
+        "Versand über deine eigene Domain",
+        "Dein Team, ohne Aufpreis pro Person",
+      ],
+      cta: "Loslegen",
+    },
+    oneDeck: {
+      question: "Nur eine Präsentation?",
+      body: "Zahl einmal für diese Präsentation, ohne Abo: 9 $ bis 25 Folien, 19 $ bis 60. Alle Folien neu aufgebaut, kein PitchBoost-Badge, die Downloads als PowerPoint, PDF und Google Slides und 100 Credits für Änderungen. Startest du innerhalb von 30 Tagen Starter oder Pro, wird der Betrag auf den ersten Monat angerechnet.",
     },
   },
 };

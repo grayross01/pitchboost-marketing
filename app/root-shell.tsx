@@ -9,6 +9,7 @@ import ChromeGate from "@/components/marketing/chrome-gate";
 import FadeUpObserver from "@/components/marketing/fade-up-observer";
 import { AttributionCapture } from "@/components/marketing/attribution-capture";
 import { Analytics } from "@vercel/analytics/next";
+import type { Locale } from "@/lib/locales";
 
 const GTM_ID = "GTM-TGJD79J4";
 
@@ -114,13 +115,15 @@ const websiteSchema = {
  * analytics. Each language has its own root layout (app/(en), app/(es) and so
  * on) so the html tag says the page's real language: search engines read it,
  * Bing (and with it ChatGPT search) among them. Pages in one language share
- * this shell; moving between languages reloads the page.
+ * this shell; moving between languages reloads the page. The footer lists
+ * every language (components/marketing/language-list.tsx); nobody is sent to
+ * one automatically.
  */
 export function RootShell({
   lang,
   children,
 }: Readonly<{
-  lang: "en" | "es" | "pt" | "fr" | "ar";
+  lang: Locale;
   children: React.ReactNode;
 }>) {
   return (
