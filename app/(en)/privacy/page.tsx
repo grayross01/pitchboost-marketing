@@ -189,8 +189,9 @@ export default function PrivacyPage() {
           . You can also block or delete cookies in your browser settings.
         </p>
         <p>
-          Our <code>pb_locale</code> cookie is set only when you choose a
-          language: in the menu at the top of each page, in the list at the
+          Our <code>pb_locale</code>{" "}
+          cookie is set only when you choose a language: in the menu at the
+          top of each page, in the list at the
           foot of each page, or in the app&apos;s settings. It is kept for a
           year and remembers your choice, so the app opens in that language
           when you sign up or log in.
