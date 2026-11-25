@@ -31,7 +31,7 @@ export const HELP_ARTICLES_FR: HelpArticle[] = [
       },
       {
         "title": "Décidez quoi faire d'une longue présentation",
-        "body": "Si la présentation compte plus de diapositives que votre offre n'en refait, PitchBoost vous demande s'il faut la condenser pour qu'elle tienne ou ne refaire que les premières diapositives. La plupart des présentations sous la limite sautent cette étape."
+        "body": "Si la présentation compte plus de diapositives que votre offre n'en ouvre, PitchBoost la refait quand même et verrouille les diapositives en trop jusqu'au déverrouillage, ou vous pouvez choisir de la condenser pour qu'elle tienne. La plupart des présentations sous la limite sautent cette étape."
       },
       {
         "title": "Lancez la refonte et patientez, ou partez",
@@ -53,7 +53,7 @@ export const HELP_ARTICLES_FR: HelpArticle[] = [
       {
         "heading": "Limites de diapositives par offre",
         "paragraphs": [
-          "L'offre gratuite refait jusqu'à 10 diapositives, Starter jusqu'à 25 et Pro jusqu'à 60. Une présentation plus longue peut être condensée avant le début de la refonte, et l'écran de partage vous indique combien de diapositives ont été conservées."
+          "L'offre gratuite ouvre les 10 premières diapositives d'une présentation, Starter jusqu'à 25 et Pro jusqu'à 60. Une présentation plus longue est refaite quand même (jusqu'à 20 diapositives avec l'offre gratuite), avec les diapositives en trop verrouillées, ou elle peut être condensée avant le début de la refonte. L'écran de partage indique quelles diapositives sont verrouillées et comment les ouvrir."
         ]
       }
     ],
@@ -72,7 +72,7 @@ export const HELP_ARTICLES_FR: HelpArticle[] = [
       }
     ],
     "related": ["google-slides-and-keynote", "slide-limits-by-plan", "download-powerpoint-or-pdf", "how-long-does-a-deck-take"],
-    "updated": "2026-11-10"
+    "updated": "2026-11-25"
   },
 
   {
@@ -121,33 +121,33 @@ export const HELP_ARTICLES_FR: HelpArticle[] = [
     "slug": "slide-limits-by-plan",
     "category": "redesign",
     "title": "Combien de diapositives PitchBoost refait selon l'offre",
-    "metaDescription": "L'offre gratuite refait jusqu'à 10 diapositives, Starter jusqu'à 25, Pro et Business jusqu'à 60. Ce qui arrive à une présentation plus longue : la condenser pour qu'elle tienne, ou refaire les premières diapositives.",
-    "answer": "L'offre gratuite refait les présentations jusqu'à 10 diapositives, Starter jusqu'à 25, et Pro et Business jusqu'à 60. Si votre présentation est plus longue, PitchBoost propose de la condenser pour qu'elle tienne (même récit, moins de diapositives) ou de ne refaire que les premières diapositives. L'écran de partage indique combien de vos diapositives d'origine ont été conservées et comment refaire le reste : une seule fois pour cette présentation ($9, pour les présentations jusqu'à 25 diapositives) ou avec une offre.",
+    "metaDescription": "L'offre gratuite ouvre les 10 premières diapositives d'une présentation, Starter jusqu'à 25, Pro et Business jusqu'à 60. Une présentation plus longue est refaite quand même : les diapositives en trop restent verrouillées jusqu'au déverrouillage.",
+    "answer": "L'offre gratuite ouvre les 10 premières diapositives d'une présentation, Starter jusqu'à 25, et Pro et Business jusqu'à 60. Une présentation plus longue est refaite quand même, jusqu'à 20 diapositives avec l'offre gratuite : les diapositives au-delà de votre limite sont terminées, mais verrouillées. Elles s'ouvrent avec une offre, ou avec un paiement unique pour cette présentation ($9 pour les présentations jusqu'à 25 diapositives, $19 jusqu'à 60). Si vous préférez une présentation plus courte, PitchBoost peut la condenser pour qu'elle tienne dans votre limite.",
     "sections": [
       {
         "heading": "Les limites",
         "paragraphs": [
-          "Gratuit : jusqu'à 10 diapositives par présentation, une présentation IA par mois. Starter ($7 par mois) : jusqu'à 25 diapositives. Pro ($29 par mois) et Business ($79 par mois) : jusqu'à 60 diapositives. La limite s'applique à la présentation que PitchBoost produit, pas au fichier que vous importez ; vous pouvez importer une présentation de 45 diapositives avec n'importe quelle offre. Le fichier lui-même peut compter jusqu'à 75 diapositives."
+          "Gratuit : les 10 premières diapositives de chaque présentation sont ouvertes, une présentation peut compter jusqu'à 20 diapositives, une présentation IA par mois. Starter ($7 par mois) : jusqu'à 25 diapositives. Pro ($29 par mois) et Business ($79 par mois) : jusqu'à 60 diapositives. La limite s'applique à la présentation que PitchBoost produit, pas au fichier que vous importez ; vous pouvez importer une présentation de 45 diapositives avec n'importe quelle offre. Le fichier lui-même peut compter jusqu'à 75 diapositives."
         ]
       },
       {
-        "heading": "Condenser ou couper",
+        "heading": "Diapositives verrouillées, ou présentation plus courte",
         "paragraphs": [
-          "Quand une présentation dépasse la limite, vous choisissez avant toute génération. Condenser conserve le fil du récit et fusionne ou supprime les diapositives les moins essentielles pour que toute l'histoire tienne. Refaire les N premières conserve exactement chaque diapositive jusqu'à la limite et laisse le reste de côté.",
-          "Condenser est généralement le meilleur choix pour un pitch : la plupart des bons pitch decks font 10 à 15 diapositives. Couper vaut mieux quand la présentation est une séquence (un module de formation, un processus étape par étape) où l'ordre compte plus que la longueur."
+          "Quand une présentation dépasse votre limite, PitchBoost la refait quand même. Les diapositives comprises dans votre limite sont ouvertes ; les autres sont terminées elles aussi, et affichées floutées avec un cadenas. Le lien gratuit montre les diapositives ouvertes à tout le monde, et toutes les diapositives dès que vous déverrouillez. Le déverrouillage se fait depuis l'écran de partage, avec une offre dont la limite couvre la présentation ou avec un paiement unique pour cette présentation, qui donne aussi les téléchargements PowerPoint, PDF et Google Slides et retire le badge.",
+          "Vous préférez une présentation plus courte ? Avant la génération, vous pouvez choisir de la condenser à votre limite. Condenser conserve le fil du récit et réécrit des diapositives pour que tout tienne, ce qui convient à un pitch : la plupart des bons pitch decks font 10 à 15 diapositives. Gardez toutes les diapositives quand la présentation est une séquence (un module de formation, un processus étape par étape) où l'ordre compte plus que la longueur."
         ]
       },
       {
         "heading": "Très longues présentations",
         "paragraphs": [
-          "PitchBoost accepte les PowerPoint jusqu'à 75 diapositives et lit les 60 premières : une présentation de 70 diapositives sur Pro revient donc avec 60 diapositives au maximum, condensée ou coupée. Un fichier de plus de 75 diapositives est refusé à l'import, avec un message qui l'explique. Découpez les très longues présentations en modules et refaites chacun d'eux."
+          "PitchBoost accepte les PowerPoint jusqu'à 75 diapositives et lit les 60 premières : une présentation de 70 diapositives sur Pro revient donc avec 60 diapositives au maximum. Avec l'offre gratuite, une présentation s'arrête à 20 diapositives : à partir d'un fichier plus long, PitchBoost refait les 20 premières, ou vous changez d'offre avant et il refait jusqu'à la limite de cette offre. Un fichier de plus de 75 diapositives est refusé à l'import, avec un message qui l'explique. Découpez les très longues présentations en modules et refaites chacun d'eux."
         ]
       }
     ],
     "faqs": [
       {
-        "q": "Passer à une offre supérieure refait-il automatiquement les diapositives manquantes ?",
-        "a": "Non. Après la mise à niveau, ouvrez le deal et relancez la refonte ; l'écran de partage a un bouton pour cela. La présentation complète remplace la version condensée."
+        "q": "Les diapositives verrouillées s'ouvrent-elles quand je passe à une offre supérieure ?",
+        "a": "Oui, tout de suite : elles sont déjà terminées. Pour une présentation qui a été condensée, ou coupée à 20 diapositives avec l'offre gratuite, c'est différent : après la mise à niveau, ouvrez le deal et relancez la refonte ; l'écran de partage a un bouton pour cela."
       },
       {
         "q": "La limite s'applique-t-elle aussi aux nouvelles présentations ?",
@@ -159,7 +159,7 @@ export const HELP_ARTICLES_FR: HelpArticle[] = [
       }
     ],
     "related": ["redesign-a-powerpoint", "credits-and-plans", "download-powerpoint-or-pdf"],
-    "updated": "2026-10-27"
+    "updated": "2026-11-25"
   },
 
   {
@@ -218,12 +218,12 @@ export const HELP_ARTICLES_FR: HelpArticle[] = [
     "slug": "share-a-deck-link",
     "category": "sharing",
     "title": "Comment partager une présentation par lien et voir qui l'a ouverte",
-    "metaDescription": "Publiez une présentation pour obtenir un lien non répertorié, envoyez-le à un prospect et soyez averti dès qu'il l'ouvre. Ce que le lien suit, avec toutes les offres.",
-    "answer": "Cliquez sur « Publier et copier le lien » dans l'écran de partage de la présentation. Cela crée un lien non répertorié (toute personne qui l'a peut voir la présentation ; personne ne peut la trouver autrement) et le copie dans votre presse-papiers. Quand un prospect ouvre le lien, PitchBoost vous envoie un e-mail. Toutes les offres indiquent quelles diapositives chaque lecteur a lues et pendant combien de temps.",
+    "metaDescription": "Chaque présentation terminée a un lien non répertorié. Envoyez-le à un prospect et soyez averti dès qu'il l'ouvre. Ce que le lien suit, avec toutes les offres.",
+    "answer": "Une présentation terminée est publiée d'elle-même : ouvrez son écran de partage et cliquez sur « Copier le lien ». Le lien n'est pas répertorié (toute personne qui l'a peut voir la présentation ; personne ne peut la trouver autrement). Quand un prospect ouvre le lien, PitchBoost vous envoie un e-mail. Toutes les offres indiquent quelles diapositives chaque lecteur a lues et pendant combien de temps.",
     "steps": [
       {
-        "title": "Publiez la présentation",
-        "body": "Dans l'écran de partage, cliquez sur « Publier et copier le lien ». Tant que vous ne l'avez pas fait, la présentation est un brouillon privé que seuls vous et votre équipe pouvez voir."
+        "title": "Copiez le lien",
+        "body": "Quand une présentation est terminée, PitchBoost la publie sous forme de lien non répertorié. Dans l'écran de partage, cliquez sur « Copier le lien ». Une présentation que vous avez passée en privé affiche « Publier et copier le lien » à la place."
       },
       {
         "title": "Envoyez le lien, ou ajoutez des destinataires",
@@ -261,7 +261,7 @@ export const HELP_ARTICLES_FR: HelpArticle[] = [
       }
     ],
     "related": ["download-powerpoint-or-pdf", "credits-and-plans", "redesign-a-powerpoint"],
-    "updated": "2026-09-16"
+    "updated": "2026-11-25"
   },
 
   {
