@@ -106,7 +106,8 @@ export default function MarketingFooter({ locale }: { locale: Locale }) {
   return (
     <footer className="footer" {...dir}>
       <div className="mkt-container">
-        <div className="footer-grid" style={{ gridTemplateColumns: "1.6fr repeat(7, 1fr)", gap: 32 }}>
+        {/* German words are long ("Forschungspräsentationen"): seven columns in one row ran past the page, so there they take two rows (globals.css). */}
+        <div className={`footer-grid${locale === "de" ? " footer-grid-two-rows" : ""}`} style={{ gridTemplateColumns: "1.6fr repeat(7, 1fr)", gap: 32 }}>
           <div className="footer-brand">
             <Link href={home.href} className="nav-logo" style={{ color: "white" }}>
               <Image src="/icon.png" alt="PitchBoost" width={28} height={28} />

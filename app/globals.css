@@ -1323,6 +1323,15 @@ body {
   color: white;
 }
 
+/* The German footer: its words are too long for seven columns in a row (the row ran 41px past a 1440px
+   page and 121px past a 1280px one), so beside the brand they take two rows, four then three, and a long
+   word may hyphenate. Wide screens only: below 1025px the footer is two columns in every language. */
+@media (min-width: 1025px) {
+  .marketing .footer-grid.footer-grid-two-rows { grid-template-columns: minmax(0, 1.6fr) repeat(4, minmax(0, 1fr)) !important; }
+  .marketing .footer-grid.footer-grid-two-rows .footer-brand { grid-row: span 2; }
+}
+.marketing .footer-grid.footer-grid-two-rows :is(a, p) { hyphens: auto; overflow-wrap: break-word; }
+
 /* The languages at the bottom of the footer (language-list.tsx): each by its own name, the page's own in white. */
 .marketing .footer-languages ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 14px; margin: 0; padding: 0; list-style: none; }
 .marketing .footer-languages a { color: rgba(255, 255, 255, 0.7); text-decoration: none; }
