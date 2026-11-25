@@ -53,6 +53,8 @@ export interface MenuCopy {
   /** What a screen reader calls the button that opens the menu on a phone, and the one that closes it. */
   openMenu: string;
   closeMenu: string;
+  /** What a screen reader calls the language menu; the footer's list uses the same word (FOOTER_COPY). */
+  language: string;
   names: PageNames;
 }
 
@@ -105,6 +107,7 @@ export const MENU_COPY: Record<Locale, MenuCopy> = {
     start: "Get Started",
     openMenu: "Open menu",
     closeMenu: "Close menu",
+    language: "Language",
     names: NAMES_EN,
   },
   es: {
@@ -119,6 +122,7 @@ export const MENU_COPY: Record<Locale, MenuCopy> = {
     start: "Empezar",
     openMenu: "Abrir el menú",
     closeMenu: "Cerrar el menú",
+    language: "Idioma",
     names: {
       featureGroups: { Build: "Crear", "Brand & Content": "Marca y contenido", "Share & Scale": "Compartir y crecer" },
       features: {
@@ -176,6 +180,7 @@ export const MENU_COPY: Record<Locale, MenuCopy> = {
     start: "Começar",
     openMenu: "Abrir o menu",
     closeMenu: "Fechar o menu",
+    language: "Idioma",
     names: {
       featureGroups: { Build: "Criar", "Brand & Content": "Marca e conteúdo", "Share & Scale": "Compartilhar e crescer" },
       features: {
@@ -233,6 +238,7 @@ export const MENU_COPY: Record<Locale, MenuCopy> = {
     start: "Commencer",
     openMenu: "Ouvrir le menu",
     closeMenu: "Fermer le menu",
+    language: "Langue",
     names: {
       featureGroups: { Build: "Créer", "Brand & Content": "Marque et contenu", "Share & Scale": "Partager et développer" },
       features: {
@@ -290,6 +296,7 @@ export const MENU_COPY: Record<Locale, MenuCopy> = {
     start: "ابدأ الآن",
     openMenu: "فتح القائمة",
     closeMenu: "إغلاق القائمة",
+    language: "اللغة",
     names: {
       featureGroups: { Build: "الإنشاء", "Brand & Content": "العلامة التجارية والمحتوى", "Share & Scale": "المشاركة والتوسّع" },
       features: {
@@ -347,6 +354,7 @@ export const MENU_COPY: Record<Locale, MenuCopy> = {
     start: "Loslegen",
     openMenu: "Menü öffnen",
     closeMenu: "Menü schließen",
+    language: "Sprache",
     names: {
       featureGroups: { Build: "Erstellen", "Brand & Content": "Marke und Inhalte", "Share & Scale": "Teilen und wachsen" },
       features: {
