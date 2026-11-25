@@ -14,19 +14,11 @@ export const metadata: Metadata = {
 const FAQS: { q: string; a: string }[] = [
   {
     q: "Is there a free plan?",
-    a: "Yes. The Free plan is free forever: one AI-generated deck a month (up to 10 slides), a few AI edits, a small PitchBoost badge, and a shareable live link, free. Downloading the deck as a PowerPoint, PDF or Google Slides file takes a paid plan or a one-time payment for that deck: $9 up to 25 slides, $19 up to 60. No credit card required.",
-  },
-  {
-    q: "How do credits work?",
-    a: "Every plan includes a monthly credit allowance and every AI action has a fixed price: a deck of up to 10 slides costs 100 credits, each slide past 10 adds 8 (4 on the new deck engine), an AI image is 10, a slide edit 10, a full-deck edit 50, a website scan 10. Fact checking and chart extraction are free. Paid plans roll unused credits over for a month and can buy top-up packs. In the app you see a simple percentage of your allowance, never a running dollar figure.",
+    a: "Yes. The Free plan is free forever: one AI-generated deck a month (up to 10 slides), a few AI edits, a small PitchBoost badge, and a shareable live link, free.",
   },
   {
     q: "What does Starter add over Free?",
     a: "Starter is $7 a month: more AI credits (300 a month, double the free plan's 150), decks up to 25 slides, no PitchBoost badge on any deck or export, PowerPoint, PDF and Google Slides downloads, and top-up packs when you need more. Cancel anytime.",
-  },
-  {
-    q: "Can I pay once instead of subscribing?",
-    a: "Yes. Finish this deck is a one-time payment for the deck in front of you: $9 for decks up to 25 slides, $19 up to 60. It opens every slide of that deck plus the PowerPoint, PDF and Google Slides downloads, removes the badge from that deck, and includes 100 credits for edits. If you start Starter or Pro within 30 days, it counts toward the first month. It is offered in the app once your deck is built: a free upload longer than 10 slides is built in full with the extra slides locked, the free link always works and shows the free slides, and the share screen offers the same choice for any deck.",
   },
   {
     q: "What is the difference between Starter, Pro and Business?",
