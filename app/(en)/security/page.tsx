@@ -136,8 +136,8 @@ export default function SecurityPage() {
 
         <h2>Reporting a security issue</h2>
         <p>
-          Email <a href="mailto:support@pitchboost.ai">support@pitchboost.ai</a> with
-          &quot;Security&quot; in the subject line. Include the URL or feature involved and steps to
+          Email <a href="mailto:support@pitchboost.ai">support@pitchboost.ai</a>{" "}
+          with &quot;Security&quot; in the subject line. Include the URL or feature involved and steps to
           reproduce. We acknowledge reports within two business days and do not pursue legal
           action against good-faith research that avoids customer data and service disruption.
           See also the <Link href="/privacy">privacy policy</Link> and{" "}
