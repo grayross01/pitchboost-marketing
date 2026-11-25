@@ -189,7 +189,7 @@ export default function RedesignPageView({ locale, page }: { locale: Locale; pag
             <h2>{ui.howTitle}</h2>
             <p>{ui.howBody}</p>
           </div>
-          <div className="fade-up" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20, marginTop: 48 }}>
+          <div className="fade-up rd-stack" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20, marginTop: 48 }}>
             {steps.map(({ step, title, body }) => (
               <div key={step} style={{ background: "var(--ds-bg-light)", border: "1px solid var(--ds-border)", borderRadius: 14, padding: "26px 28px" }}>
                 <div style={{ width: 32, height: 32, borderRadius: 10, background: "#1F6B6B", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 700, fontSize: 14, marginBottom: 14 }}>{step}</div>
@@ -208,7 +208,7 @@ export default function RedesignPageView({ locale, page }: { locale: Locale; pag
             <div className="section-label"><span>{ui.whyLabel}</span></div>
             <h2>{ui.whyTitle}</h2>
           </div>
-          <div className="fade-up" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20, marginTop: 48 }}>
+          <div className="fade-up rd-stack" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20, marginTop: 48 }}>
             {page.painPoints.map(({ title, body }) => (
               <div key={title} style={{ background: "var(--ds-bg)", border: "1px solid var(--ds-border)", borderRadius: 14, padding: "22px 26px" }}>
                 <h3 style={{ fontSize: 15, fontWeight: 700, color: "var(--ds-text-primary)", marginBottom: 8 }}>{title}</h3>
@@ -262,7 +262,7 @@ export default function RedesignPageView({ locale, page }: { locale: Locale; pag
             <div className="section-label"><span>{ui.relatedLabel}</span></div>
             <h2>{ui.relatedTitle}</h2>
           </div>
-          <div className="fade-up" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20, marginTop: 48 }}>
+          <div className="fade-up rd-stack" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20, marginTop: 48 }}>
             {related.map((r) => (
               <Link key={r.slug} href={`${prefix}/redesign/${r.slug}`} style={{ textDecoration: "none", background: "var(--ds-bg-light)", border: "1px solid var(--ds-border)", borderRadius: 14, padding: "22px 26px", display: "block" }}>
                 <h3 style={{ fontSize: 15, fontWeight: 700, color: "var(--ds-text-primary)", marginBottom: 8 }}>{r.navLabel}</h3>
@@ -270,7 +270,7 @@ export default function RedesignPageView({ locale, page }: { locale: Locale; pag
               </Link>
             ))}
           </div>
-          <div className="fade-up" style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 20, marginTop: 20 }}>
+          <div className="fade-up rd-stack" style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 20, marginTop: 20 }}>
             <Link href={ui.howHref ?? "/features/upload-and-redesign"} style={{ textDecoration: "none", background: "var(--ds-bg-light)", border: "1px solid var(--ds-border)", borderRadius: 14, padding: "22px 26px", display: "block" }}>
               <h3 style={{ fontSize: 15, fontWeight: 700, color: "var(--ds-text-primary)", marginBottom: 8 }}>{ui.relatedFeatureTitle}</h3>
               <p style={{ fontSize: 13, color: "var(--ds-text-secondary)", lineHeight: 1.6, margin: 0 }}>{ui.relatedFeatureBody}</p>

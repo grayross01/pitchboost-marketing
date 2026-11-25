@@ -1323,6 +1323,14 @@ body {
   color: white;
 }
 
+/* Rows of three and two cards that are laid out inline: the redesign pages' steps, reasons and related
+   pages (redesign-page-view.tsx), the industry pages' three cards and the deck builder's before and
+   after. Their columns cannot shrink below their words, so on a phone the row ran past the screen (78 to
+   108px on a redesign page, in every language). There they stack. */
+@media (max-width: 768px) {
+  .marketing .rd-stack { grid-template-columns: 1fr !important; }
+}
+
 /* The German footer: its words are too long for seven columns in a row (the row ran 41px past a 1440px
    page and 121px past a 1280px one), so beside the brand they take two rows, four then three, and a long
    word may hyphenate. Wide screens only: below 1025px the footer is two columns in every language. */

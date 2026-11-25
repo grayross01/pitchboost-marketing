@@ -246,7 +246,7 @@ export default function AIDeckBuilderPage() {
               A pitch deck, presentation, or proposal that sounds generic tells your prospect one thing: you send this to everyone. Buyers can tell when the materials weren&apos;t built for them, and so do the win rates.
             </p>
           </div>
-          <div className="fade-up" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24, marginTop: 48, maxWidth: 920, margin: "48px auto 0" }}>
+          <div className="fade-up rd-stack" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24, marginTop: 48, maxWidth: 920, margin: "48px auto 0" }}>
             <div style={{ background: "var(--ds-bg)", border: "1px solid var(--ds-border)", borderRadius: 16, padding: "28px 32px" }}>
               <h3 style={{ fontSize: 15, fontWeight: 700, color: "var(--ds-text-primary)", marginBottom: 20 }}>The generic approach</h3>
               <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
