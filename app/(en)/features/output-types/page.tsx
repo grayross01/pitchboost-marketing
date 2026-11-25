@@ -188,7 +188,7 @@ export default function OutputTypesPage() {
                     <span style={{ fontSize: 12, fontWeight: 600, color: "#1F6B6B", background: "rgba(31,107,107,0.08)", padding: "3px 10px", borderRadius: 100 }}>{when}</span>
                   </div>
                   <p style={{ fontSize: 14, color: "var(--ds-text-secondary)", lineHeight: 1.65, margin: "0 0 16px" }}>{description}</p>
-                  <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 8 }}>
+                  <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(260px, 100%), 1fr))", gap: 8 }}>
                     {bullets.map((b) => (
                       <div key={b} style={{ display: "flex", alignItems: "flex-start", gap: 10 }}>
                         <CheckIcon />

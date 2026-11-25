@@ -245,7 +245,7 @@ export default async function IndustryPage({ params }: Props) {
             <h2>{copy.materialsTitle}</h2>
             <p>{copy.materialsBody}</p>
           </div>
-          <div className="fade-up" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20, marginTop: 48 }}>
+          <div className="fade-up rd-stack" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20, marginTop: 48 }}>
             {industry.salesMaterials.map(({ name, description }) => (
               <div key={name} style={{ background: "var(--ds-bg)", border: "1px solid var(--ds-border)", borderRadius: 14, padding: "22px 26px" }}>
                 <h3 style={{ fontSize: 15, fontWeight: 700, color: "var(--ds-text-primary)", marginBottom: 8 }}>{name}</h3>

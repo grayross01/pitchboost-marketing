@@ -1293,26 +1293,32 @@ export function getRedesign(slug: string): RedesignPage | undefined {
   return REDESIGNS.find((r) => r.slug === slug);
 }
 
-// ---- locale access (Spanish, Brazilian Portuguese, French and Arabic live in generated siblings)
+// ---- locale access (Spanish, Brazilian Portuguese, French, Arabic and German live in siblings)
 import { REDESIGNS_ES, REDESIGN_STEPS_ES, HUB_ES } from "./redesigns.es";
 import { REDESIGNS_PT, REDESIGN_STEPS_PT, HUB_PT } from "./redesigns.pt";
 import { REDESIGNS_FR, REDESIGN_STEPS_FR, HUB_FR } from "./redesigns.fr";
 import { REDESIGNS_AR_PART_1 } from "./redesigns.ar.part1";
 import { REDESIGNS_AR_PART_2, REDESIGN_STEPS_AR, HUB_AR } from "./redesigns.ar.part2";
+import { REDESIGNS_DE, REDESIGN_STEPS_DE, HUB_DE } from "./redesigns.de";
 import { HUB_EN, type Locale, type RedesignHubCopy } from "./redesign-i18n";
 
 /** Arabic is written in two halves (pages 1-12, 13-25), together in the English order. */
 const REDESIGNS_AR: RedesignPage[] = [...REDESIGNS_AR_PART_1, ...REDESIGNS_AR_PART_2];
 
+/** Each language's pages, listed so that a language added to Locale has to say what it has (never English by default). */
+const PAGES: Record<Locale, RedesignPage[]> = { en: REDESIGNS, es: REDESIGNS_ES, pt: REDESIGNS_PT, fr: REDESIGNS_FR, ar: REDESIGNS_AR, de: REDESIGNS_DE };
+const STEPS: Record<Locale, { step: string; title: string; body: string }[]> = { en: REDESIGN_STEPS, es: REDESIGN_STEPS_ES, pt: REDESIGN_STEPS_PT, fr: REDESIGN_STEPS_FR, ar: REDESIGN_STEPS_AR, de: REDESIGN_STEPS_DE };
+const HUBS: Record<Locale, RedesignHubCopy> = { en: HUB_EN, es: HUB_ES, pt: HUB_PT, fr: HUB_FR, ar: HUB_AR, de: HUB_DE };
+
 export function getRedesigns(locale: Locale): RedesignPage[] {
-  return locale === "es" ? REDESIGNS_ES : locale === "pt" ? REDESIGNS_PT : locale === "fr" ? REDESIGNS_FR : locale === "ar" ? REDESIGNS_AR : REDESIGNS;
+  return PAGES[locale];
 }
 export function getRedesignFor(locale: Locale, slug: string): RedesignPage | undefined {
   return getRedesigns(locale).find((r) => r.slug === slug);
 }
 export function getRedesignSteps(locale: Locale): { step: string; title: string; body: string }[] {
-  return locale === "es" ? REDESIGN_STEPS_ES : locale === "pt" ? REDESIGN_STEPS_PT : locale === "fr" ? REDESIGN_STEPS_FR : locale === "ar" ? REDESIGN_STEPS_AR : REDESIGN_STEPS;
+  return STEPS[locale];
 }
 export function getHubCopy(locale: Locale): RedesignHubCopy {
-  return locale === "es" ? HUB_ES : locale === "pt" ? HUB_PT : locale === "fr" ? HUB_FR : locale === "ar" ? HUB_AR : HUB_EN;
+  return HUBS[locale];
 }

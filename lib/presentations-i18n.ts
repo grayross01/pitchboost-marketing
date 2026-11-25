@@ -3,21 +3,22 @@
  * hub and /presentations/[slug]): English at the root, Spanish under /es,
  * Brazilian Portuguese under /pt, as the redesign cluster does. Page copy is
  * data (lib/presentations*.ts); the strings here are the chrome around it,
- * plus the hub's own copy.
+ * plus the hub's own copy. German has no presentation pages yet, so these
+ * take only the languages that do (PresentationLocale, lib/locales.ts).
  */
 import { PRESENTATIONS, type PresentationPage } from "./presentations";
 import { PRESENTATIONS_ES } from "./presentations.es";
 import { PRESENTATIONS_PT } from "./presentations.pt";
 import { PRESENTATIONS_FR } from "./presentations.fr";
 import { PRESENTATIONS_AR } from "./presentations.ar";
-import type { Locale } from "./redesign-i18n";
+import { hasPresentations, type Locale, type PresentationLocale } from "./locales";
 import { PRESENTATION_UI_AR, PRESENTATION_HUB_AR } from "./i18n.ar";
 
-export function getPresentations(locale: Locale): PresentationPage[] {
+export function getPresentations(locale: PresentationLocale): PresentationPage[] {
   return locale === "es" ? PRESENTATIONS_ES : locale === "pt" ? PRESENTATIONS_PT : locale === "fr" ? PRESENTATIONS_FR : locale === "ar" ? PRESENTATIONS_AR : PRESENTATIONS;
 }
 
-export function getPresentationFor(locale: Locale, slug: string): PresentationPage | undefined {
+export function getPresentationFor(locale: PresentationLocale, slug: string): PresentationPage | undefined {
   return getPresentations(locale).find((p) => p.slug === slug);
 }
 
@@ -53,7 +54,7 @@ export interface PresentationUi {
   inEnglish: string;
 }
 
-export const PRESENTATION_UI: Record<Locale, PresentationUi> = {
+export const PRESENTATION_UI: Record<PresentationLocale, PresentationUi> = {
   en: {
     breadcrumbHome: "Home",
     breadcrumbHub: "AI presentation maker",
@@ -169,6 +170,14 @@ export const PRESENTATION_UI: Record<Locale, PresentationUi> = {
   ar: PRESENTATION_UI_AR,
 };
 
+/** The mark for a link to a page published only in English, in a language without presentation pages of its own. */
+const IN_ENGLISH_ELSEWHERE: Record<Exclude<Locale, PresentationLocale>, string> = { de: " (auf Englisch)" };
+
+/** The mark after a link that leads to a page published only in English (" (en inglés)"), in every language; empty in English. */
+export function inEnglishMark(locale: Locale): string {
+  return hasPresentations(locale) ? PRESENTATION_UI[locale].inEnglish : IN_ENGLISH_ELSEWHERE[locale];
+}
+
 type Item = { title: string; body: string };
 
 export interface PresentationHubCopy {
@@ -199,7 +208,7 @@ export interface PresentationHubCopy {
   ctaPlaceholder: string;
 }
 
-export const PRESENTATION_HUB: Record<Locale, PresentationHubCopy> = {
+export const PRESENTATION_HUB: Record<PresentationLocale, PresentationHubCopy> = {
   en: {
     title: "AI Presentation Maker: Make or Redesign Any Deck | PitchBoost",
     description:

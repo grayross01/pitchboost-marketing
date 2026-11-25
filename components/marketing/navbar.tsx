@@ -33,7 +33,7 @@ export default function MarketingNavbar() {
   const [mobileSection, setMobileSection] = useState<"features" | "industry" | null>(null);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const pathname = usePathname();
-  // The /es, /pt, /fr and /ar pages are in the visitor's language, and so is
+  // The /es, /pt, /fr, /ar and /de pages are in the visitor's language, and so is
   // the menu around them (its words are in lib/chrome-i18n.ts). A link leads to
   // the page in that language where the site has one, and to the English page,
   // marked hreflang="en", where it does not. Arabic reads right to left.

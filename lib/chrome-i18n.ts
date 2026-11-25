@@ -2,15 +2,16 @@
  * The words of the site's top menu (components/marketing/navbar.tsx) and its
  * footer (components/marketing/footer.tsx) in every language the site is
  * published in. English is the source, and what every page outside /es, /pt,
- * /fr and /ar shows, exactly as before; the pages under those four show the
- * menu and the footer in their own language.
+ * /fr, /ar and /de shows, exactly as before; the pages under those five show
+ * the menu and the footer in their own language.
  *
  * The names of the feature and industry pages are the site's data: English
  * takes them from lib/features.tsx and lib/industries.tsx, and the other
  * languages hold theirs here, under the same keys. The words follow the
- * translated pages and the app: presentación, apresentação, présentation and
- * عرض تقديمي for a deck, the redesign pages' names for upload and redesign and
- * for bulk rebuild, and the help center's own name in each language.
+ * translated pages and the app: presentación, apresentação, présentation,
+ * عرض تقديمي and Präsentation for a deck, the redesign pages' names for upload
+ * and redesign and for bulk rebuild, and the help center's own name in each
+ * language.
  *
  * The menu is drawn in the browser, so it reads MENU_COPY only; the footer is
  * drawn on the server and reads FOOTER_COPY as well.
@@ -18,7 +19,9 @@
 import { FEATURES, FEATURE_EXTRA_LINKS, FEATURE_GROUPS } from "./features";
 import { AUDIENCE_GROUPS, INDUSTRIES, INDUSTRY_GROUPS } from "./industries";
 import { localeDir } from "./locale-dir";
-import type { Locale } from "./redesign-i18n";
+import { hasPresentations, type Locale } from "./locales";
+
+export { localeOfPath } from "./locales";
 
 /** The names of the pages the menu and the footer list. */
 export interface PageNames {
@@ -73,6 +76,8 @@ export interface FooterCopy {
   company: { about: string; help: string; changelog: string; ideas: string; security: string; contact: string; privacy: string; terms: string };
   /** Follows "© 2026 PitchBoost." at the very bottom. */
   rights: string;
+  /** What a screen reader calls the list of languages at the bottom (each language is shown by its own name). */
+  language: string;
   /** One line under a column whose links all lead to pages published only in English. */
   inEnglish: string;
 }
@@ -330,6 +335,63 @@ export const MENU_COPY: Record<Locale, MenuCopy> = {
       audiences: { "/students": "الطلاب" },
     },
   },
+  de: {
+    features: "Funktionen",
+    presentations: "Präsentationen",
+    pricing: "Preise",
+    whoFor: "Für wen",
+    compare: "Vergleiche",
+    blog: "Blog",
+    everyone: "Alle Zielgruppen ansehen",
+    logIn: "Anmelden",
+    start: "Loslegen",
+    openMenu: "Menü öffnen",
+    closeMenu: "Menü schließen",
+    names: {
+      featureGroups: { Build: "Erstellen", "Brand & Content": "Marke und Inhalte", "Share & Scale": "Teilen und wachsen" },
+      features: {
+        "ai-deck-builder": "KI-Präsentationsgenerator",
+        "research-and-fact-checking": "Recherche und Faktencheck",
+        "upload-and-redesign": "Hochladen und neu gestalten",
+        "bulk-rebuild": "Viele Präsentationen auf einmal",
+        "output-types": "Dokumenttypen",
+        "templates-and-slides": "Vorlagen und gespeicherte Folien",
+        "brand-and-images": "Marke und Bildbibliothek",
+        "publishing-and-sharing": "Veröffentlichen und teilen",
+        "viewer-analytics": "Aufrufstatistiken",
+        "team-and-permissions": "Team und Berechtigungen",
+        "api-and-mcp": "API und MCP",
+      },
+      featureExtras: { "/chatgpt": "Funktioniert mit ChatGPT" },
+      industryGroups: {
+        "Sales & Revenue": "Vertrieb und Umsatz",
+        "Services & Professionals": "Dienstleistung und Beratung",
+        "Industry Verticals": "Branchen",
+        "Technical & Regulated": "Technik und regulierte Branchen",
+        Education: "Bildung",
+      },
+      industries: {
+        "b2b-sales": "B2B-Vertriebsteams",
+        saas: "SaaS und Technologie",
+        startups: "Start-ups",
+        "sponsorship-media": "Sponsoring und Mediavermarktung",
+        agencies: "Agenturen und Kreativstudios",
+        consultancies: "Unternehmensberatungen",
+        recruiting: "Recruiting und Personaldienstleister",
+        "training-coaching": "Training und Coaching",
+        "home-services": "Handwerk und Dienstleistungen rund ums Haus",
+        "commercial-real-estate": "Gewerbeimmobilien",
+        "real-estate-agents": "Immobilienmakler",
+        "real-estate-brokerages": "Maklerbüros und Teams",
+        "financial-advisors": "Finanzberater",
+        nonprofits: "Gemeinnützige Organisationen",
+        "life-sciences-healthcare": "Life Sciences und Gesundheit",
+        "engineering-consulting": "Ingenieurbüros",
+        manufacturing: "Industrie und Fertigung",
+      },
+      audiences: { "/students": "Studierende" },
+    },
+  },
 };
 
 export const FOOTER_COPY: Record<Locale, FooterCopy> = {
@@ -362,6 +424,7 @@ export const FOOTER_COPY: Record<Locale, FooterCopy> = {
       terms: "Terms of Service",
     },
     rights: "All rights reserved.",
+    language: "Language",
     inEnglish: "These pages are in English.",
   },
   es: {
@@ -393,6 +456,7 @@ export const FOOTER_COPY: Record<Locale, FooterCopy> = {
       terms: "Términos del servicio",
     },
     rights: "Todos los derechos reservados.",
+    language: "Idioma",
     inEnglish: "Estas páginas están en inglés.",
   },
   pt: {
@@ -424,6 +488,7 @@ export const FOOTER_COPY: Record<Locale, FooterCopy> = {
       terms: "Termos de serviço",
     },
     rights: "Todos os direitos reservados.",
+    language: "Idioma",
     inEnglish: "Estas páginas estão em inglês.",
   },
   fr: {
@@ -455,6 +520,7 @@ export const FOOTER_COPY: Record<Locale, FooterCopy> = {
       terms: "Conditions d'utilisation",
     },
     rights: "Tous droits réservés.",
+    language: "Langue",
     inEnglish: "Ces pages sont en anglais.",
   },
   ar: {
@@ -486,14 +552,73 @@ export const FOOTER_COPY: Record<Locale, FooterCopy> = {
       terms: "شروط الخدمة",
     },
     rights: "جميع الحقوق محفوظة.",
+    language: "اللغة",
     inEnglish: "هذه الصفحات بالإنجليزية.",
+  },
+  de: {
+    about: "KI-Präsentationen für alle, die präsentieren. Starte mit einem Prompt oder der Präsentation, die du schon hast, bekomm jede Folie im Design deiner Marke und sieh, wie sie ankommt.",
+    headings: { product: "Produkt", realEstate: "Immobilien", company: "Unternehmen" },
+    presentationMaker: "KI-Präsentationsgenerator",
+    viewAll: "Alle ansehen",
+    templates: "Vorlagen",
+    research: "Studien",
+    agencies: "Agenturen",
+    homeServices: "Handwerk",
+    realEstate: {
+      tools: "Kostenlose Tools",
+      openHouse: "Anmeldeliste für Besichtigungen",
+      netSheet: "Nettoerlös für Verkäufer",
+      closingTimeline: "Zeitplan bis zum Abschluss",
+      agents: "Immobilienmakler",
+      bestSoftware: "Beste Software für Akquise-Präsentationen",
+    },
+    versus: "PitchBoost vs. {name}",
+    company: {
+      about: "Über uns",
+      help: "Hilfe-Center",
+      changelog: "Neuigkeiten",
+      ideas: "Funktion vorschlagen",
+      security: "Sicherheit",
+      contact: "Kontakt",
+      privacy: "Datenschutz",
+      terms: "Nutzungsbedingungen",
+    },
+    rights: "Alle Rechte vorbehalten.",
+    language: "Sprache",
+    inEnglish: "Diese Seiten sind auf Englisch.",
   },
 };
 
-/** The pages every language has, at the same address under its prefix (app/(es)/es and its siblings). */
-const IN_EVERY_LANGUAGE = new Set(["/", "/ai-presentation-maker", "/redesign", "/help"]);
+/**
+ * The presentation pages' names, for a language that has none of its own yet
+ * (German): its footer lists the English presentation pages under these
+ * names, marked as English. The other languages name them from their own
+ * pages (lib/presentations.<language>.ts).
+ */
+export const PRESENTATION_NAMES: Partial<Record<Locale, Record<string, string>>> = {
+  de: {
+    "class-presentation": "Referate",
+    "lecture-slides": "Folien für Vorlesung und Unterricht",
+    "thesis-defense": "Verteidigung der Abschlussarbeit",
+    "research-presentation": "Forschungspräsentationen",
+    "training-presentation": "Schulung und Onboarding",
+    "report-presentation": "Berichte und Board-Updates",
+    "investor-update": "Investoren-Updates",
+    "conference-talk": "Konferenzvorträge",
+  },
+};
 
-/** Two English feature pages that, in another language, give way to that language's page on the same subject, as on the home page: the presentation maker for the deck builder, the redesign hub for upload and redesign. */
+/**
+ * Whether a language has this page of the menu's and the footer's, at the
+ * same address under its prefix (app/(es)/es and its siblings): the home
+ * page, the redesign hub and the help center everywhere, the presentation
+ * maker where the language has the presentation pages (lib/locales.ts).
+ */
+function inLanguage(locale: Locale, path: string): boolean {
+  return path === "/" || path === "/redesign" || path === "/help" || (path === "/ai-presentation-maker" && hasPresentations(locale));
+}
+
+/** Two English feature pages that, in another language, give way to that language's page on the same subject where it has one, as on the home page: the presentation maker for the deck builder, the redesign hub for upload and redesign. */
 const STAND_INS: Record<string, string> = {
   "/features/ai-deck-builder": "/ai-presentation-maker",
   "/features/upload-and-redesign": "/redesign",
@@ -510,18 +635,13 @@ export function chromeLink(locale: Locale, href: string): { href: string; hrefLa
   if (locale === "en" || !href.startsWith("/")) return { href, hrefLang: undefined };
   // /pricing is in English only; the home page in each language carries the same plans, in that language.
   if (href === "/pricing") return { href: `/${locale}#pricing`, hrefLang: undefined };
-  const path = STAND_INS[href] ?? href;
-  if (IN_EVERY_LANGUAGE.has(path)) return { href: path === "/" ? `/${locale}` : `/${locale}${path}`, hrefLang: undefined };
+  const standIn = STAND_INS[href];
+  const path = standIn && inLanguage(locale, standIn) ? standIn : href;
+  if (inLanguage(locale, path)) return { href: path === "/" ? `/${locale}` : `/${locale}${path}`, hrefLang: undefined };
   return { href, hrefLang: "en" };
 }
 
 /** The arrow after a "see more" link. It points the way the page reads. */
 export function chromeArrow(locale: Locale): string {
   return localeDir(locale) === "rtl" ? "←" : "→";
-}
-
-/** A page's language from its address: /es, /pt, /fr and /ar and every page under them; English everywhere else. */
-export function localeOfPath(pathname: string | null): Locale {
-  for (const locale of ["es", "pt", "fr", "ar"] as const) if (pathname === `/${locale}` || pathname?.startsWith(`/${locale}/`)) return locale;
-  return "en";
 }

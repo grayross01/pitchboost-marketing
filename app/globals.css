@@ -1323,10 +1323,34 @@ body {
   color: white;
 }
 
+/* Rows of three and two cards that are laid out inline: the redesign pages' steps, reasons and related
+   pages (redesign-page-view.tsx), the industry pages' three cards and the deck builder's before and
+   after. Their columns cannot shrink below their words, so on a phone the row ran past the screen (78 to
+   108px on a redesign page, in every language). There they stack. */
+@media (max-width: 768px) {
+  .marketing .rd-stack { grid-template-columns: 1fr !important; }
+}
+
+/* The German footer: its words are too long for seven columns in a row (the row ran 41px past a 1440px
+   page and 121px past a 1280px one), so beside the brand they take two rows, four then three, and a long
+   word may hyphenate. Wide screens only: below 1025px the footer is two columns in every language. */
+@media (min-width: 1025px) {
+  .marketing .footer-grid.footer-grid-two-rows { grid-template-columns: minmax(0, 1.6fr) repeat(4, minmax(0, 1fr)) !important; }
+  .marketing .footer-grid.footer-grid-two-rows .footer-brand { grid-row: span 2; }
+}
+.marketing .footer-grid.footer-grid-two-rows :is(a, p) { hyphens: auto; overflow-wrap: break-word; }
+
+/* The languages at the bottom of the footer (language-list.tsx): each by its own name, the page's own in white. */
+.marketing .footer-languages ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 14px; margin: 0; padding: 0; list-style: none; }
+.marketing .footer-languages a { color: rgba(255, 255, 255, 0.7); text-decoration: none; }
+.marketing .footer-languages a:hover { color: #fff; }
+.marketing .footer-languages a[aria-current] { color: #fff; font-weight: 600; }
+
 .marketing .footer-bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
   padding-top: 32px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   font-size: 0.85rem;
