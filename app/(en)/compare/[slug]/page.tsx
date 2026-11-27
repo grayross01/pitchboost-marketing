@@ -4,6 +4,8 @@ import { siteTitle } from "@/lib/site-title";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { COMPETITORS, getCompetitor } from "@/lib/competitors";
+import { comparisonModified, getComparisonTest } from "@/lib/comparison-tests";
+import ComparisonTestSection from "@/components/marketing/comparison-test";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.pitchboost.ai";
 const SIGNUP_URL = `${APP_URL}/signup`;
@@ -58,6 +60,7 @@ export default async function ComparePage({ params }: Props) {
   const { slug } = await params;
   const competitor = getCompetitor(slug);
   if (!competitor) notFound();
+  const test = getComparisonTest(competitor.slug);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -65,7 +68,7 @@ export default async function ComparePage({ params }: Props) {
     name: competitor.metaTitle,
     description: competitor.metaDescription,
     url: `https://pitchboost.ai/compare/${competitor.slug}`,
-    dateModified: competitor.updated ?? COMPETITORS_UPDATED,
+    dateModified: comparisonModified(competitor),
     publisher: { "@type": "Organization", name: "PitchBoost", url: "https://pitchboost.ai" },
   };
 
@@ -113,7 +116,11 @@ export default async function ComparePage({ params }: Props) {
           </p>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 16, flexWrap: "wrap" }}>
             <a href={SIGNUP_URL} className="btn btn-primary btn-lg">Try PitchBoost free</a>
-            <a href="#comparison" className="btn btn-ghost btn-lg">See the comparison</a>
+            {test ? (
+              <a href="#side-by-side" className="btn btn-ghost btn-lg">See the side-by-side test</a>
+            ) : (
+              <a href="#comparison" className="btn btn-ghost btn-lg">See the comparison</a>
+            )}
           </div>
         </div>
       </section>
@@ -133,6 +140,9 @@ export default async function ComparePage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {/* A real file through both tools, when we have run one. */}
+      {test && <ComparisonTestSection test={test} />}
 
       {/* ── Feature Comparison Table ── */}
       <section id="comparison" className="mkt-section" style={{ background: "var(--ds-bg-light)" }}>

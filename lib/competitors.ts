@@ -120,6 +120,10 @@ export const COMPETITORS: Competitor[] = [
         a: "No, and it does not try to. Gamma also makes documents and simple websites. PitchBoost only makes presentations, and puts that focus into redesigns that keep your content, PowerPoint exports that hold up, right-to-left languages and fact checking.",
       },
       {
+        q: "Does Gamma keep the numbers in my PowerPoint?",
+        a: "Mostly. In our side-by-side test on November 15, 2026, both of Gamma's import modes kept every word and every figure in a table. The chart was the trouble: Transform content lost the chart's data and drew a chart with quarterly revenue figures that were not in the deck, and Visual import turned the chart into a table and rounded one figure. PitchBoost rebuilt the chart from the original numbers. That was one run of each, and AI output varies, so check the charts whichever tool you use.",
+      },
+      {
         q: "How does PitchBoost compare to Gamma on price?",
         a: "Both have free plans. Gamma's free credits come once at signup and its paid plans start at $9 per seat a month, billed yearly. PitchBoost's Starter plan is $7 a month, Pro is $29, and a single deck can be finished for $9 once, with no subscription.",
       },
