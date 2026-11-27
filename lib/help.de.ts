@@ -31,7 +31,7 @@ export const HELP_ARTICLES_DE: HelpArticle[] = [
       },
       {
         "title": "Entscheiden, was mit einer langen Präsentation passiert",
-        "body": "Hat die Präsentation mehr Folien, als dein Tarif neu aufbaut, fragt PitchBoost, ob sie passend verdichtet werden soll oder ob nur die ersten Folien neu aufgebaut werden. Bei den meisten Präsentationen unter dem Limit entfällt dieser Schritt."
+        "body": "Hat die Präsentation mehr Folien, als dein Tarif öffnet, baut PitchBoost sie trotzdem neu auf und sperrt die übrigen Folien, bis du sie freischaltest. Oder du lässt sie passend verdichten. Bei den meisten Präsentationen unter dem Limit entfällt dieser Schritt."
       },
       {
         "title": "Neuaufbau starten, dann warten oder gehen",
@@ -53,7 +53,7 @@ export const HELP_ARTICLES_DE: HelpArticle[] = [
       {
         "heading": "Folienlimits nach Tarif",
         "paragraphs": [
-          "Der Free-Tarif baut bis zu 10 Folien neu auf, Starter bis zu 25 und Pro bis zu 60. Eine längere Präsentation lässt sich vor dem Neuaufbau passend verdichten, und die Teilen-Ansicht zeigt dir, wie viele Folien behalten wurden."
+          "Der Free-Tarif öffnet die ersten 10 Folien einer Präsentation, Starter bis zu 25 und Pro bis zu 60. Eine längere Präsentation wird trotzdem neu aufgebaut (im Free-Tarif bis zu 20 Folien), die übrigen Folien sind dann gesperrt. Oder sie lässt sich vor dem Neuaufbau passend verdichten. Die Teilen-Ansicht zeigt dir, welche Folien gesperrt sind und wie du sie öffnest."
         ]
       }
     ],
@@ -72,7 +72,7 @@ export const HELP_ARTICLES_DE: HelpArticle[] = [
       }
     ],
     "related": ["google-slides-and-keynote", "slide-limits-by-plan", "download-powerpoint-or-pdf", "how-long-does-a-deck-take"],
-    "updated": "2026-11-10"
+    "updated": "2026-11-25"
   },
 
   {
@@ -121,33 +121,33 @@ export const HELP_ARTICLES_DE: HelpArticle[] = [
     "slug": "slide-limits-by-plan",
     "category": "redesign",
     "title": "Wie viele Folien PitchBoost in jedem Tarif neu aufbaut",
-    "metaDescription": "Free baut bis zu 10 Folien neu auf, Starter bis zu 25, Pro und Business bis zu 60. Was mit längeren Präsentationen passiert: verdichten oder kürzen.",
-    "answer": "Der Free-Tarif baut Präsentationen mit bis zu 10 Folien neu auf, Starter bis zu 25, Pro und Business bis zu 60. Ist deine Präsentation länger, bietet PitchBoost an, sie passend zu verdichten (gleiche Geschichte, weniger Folien) oder nur die ersten Folien neu aufzubauen. Die Teilen-Ansicht zeigt, wie viele deiner ursprünglichen Folien behalten wurden und wie du den Rest neu aufbauen lässt: einmalig für diese Präsentation (9 $, für Präsentationen bis 25 Folien) oder mit einem kostenpflichtigen Tarif.",
+    "metaDescription": "Free öffnet die ersten 10 Folien einer Präsentation, Starter bis zu 25, Pro und Business bis zu 60. Längere Präsentationen werden trotzdem aufgebaut: Die übrigen Folien bleiben gesperrt, bis du sie freischaltest.",
+    "answer": "Der Free-Tarif öffnet die ersten 10 Folien einer Präsentation, Starter bis zu 25, Pro und Business bis zu 60. Eine längere Präsentation wird trotzdem neu aufgebaut, im Free-Tarif bis zu 20 Folien: Die Folien über deinem Limit sind fertig, aber gesperrt. Sie öffnen sich mit einem kostenpflichtigen Tarif oder mit einer einmaligen Zahlung für diese Präsentation (9 $ für Präsentationen bis 25 Folien, 19 $ bis 60). Wenn dir eine kürzere Präsentation lieber ist, kann PitchBoost sie stattdessen passend zu deinem Limit verdichten.",
     "sections": [
       {
         "heading": "Die Limits",
         "paragraphs": [
-          "Free: bis zu 10 Folien pro Präsentation, 150 Credits im Monat (genug für eine KI-Präsentation). Starter (7 $ im Monat): bis zu 25 Folien. Pro (29 $ im Monat) und Business (79 $ im Monat): bis zu 60 Folien. Das Limit gilt für die Präsentation, die PitchBoost erstellt, nicht für die Datei, die du hochlädst; eine Präsentation mit 45 Folien kannst du in jedem Tarif hochladen. Die Datei selbst darf bis zu 75 Folien haben."
+          "Free: Die ersten 10 Folien jeder Präsentation sind offen, eine Präsentation kann bis zu 20 Folien haben, 150 Credits im Monat (genug für eine KI-Präsentation). Starter (7 $ im Monat): bis zu 25 Folien. Pro (29 $ im Monat) und Business (79 $ im Monat): bis zu 60 Folien. Das Limit gilt für die Präsentation, die PitchBoost erstellt, nicht für die Datei, die du hochlädst; eine Präsentation mit 45 Folien kannst du in jedem Tarif hochladen. Die Datei selbst darf bis zu 75 Folien haben."
         ]
       },
       {
-        "heading": "Verdichten oder kürzen",
+        "heading": "Gesperrte Folien oder eine kürzere Präsentation",
         "paragraphs": [
-          "Liegt eine Präsentation über dem Limit, entscheidest du, bevor irgendetwas erstellt wird. Verdichten („Condense“) behält den roten Faden und legt die unwichtigsten Folien zusammen oder streicht sie, damit die ganze Geschichte hineinpasst. Kürzen („Rebuild the first N“) behält jede Folie bis zum Limit und lässt den Rest weg.",
-          "Für einen Pitch ist Verdichten meist die bessere Wahl: Die meisten überzeugenden Pitch-Decks haben 10 bis 15 Folien. Kürzen ist besser, wenn die Präsentation eine Abfolge ist (ein Schulungsmodul, ein Prozess Schritt für Schritt), bei der die Reihenfolge mehr zählt als die Länge."
+          "Liegt eine Präsentation über deinem Limit, baut PitchBoost sie trotzdem auf. Die Folien innerhalb deines Limits sind offen; die übrigen sind ebenfalls fertig und werden unscharf mit einem Schloss angezeigt. Der kostenlose Link zeigt allen die offenen Folien, und alle Folien, sobald du freischaltest. Freischalten kannst du in der Teilen-Ansicht: mit einem Tarif, dessen Limit die Präsentation abdeckt, oder mit einer einmaligen Zahlung für diese Präsentation, die auch die Downloads als PowerPoint, PDF und Google Slides bringt und das Badge entfernt.",
+          "Lieber eine kürzere Präsentation? Vor dem Aufbau kannst du stattdessen wählen, sie auf dein Limit zu verdichten („Condense“). Verdichten behält den roten Faden und schreibt Folien so um, dass alles hineinpasst. Das passt zu einem Pitch: Die meisten überzeugenden Pitch-Decks haben 10 bis 15 Folien. Behalte alle Folien, wenn die Präsentation eine Abfolge ist (ein Schulungsmodul, ein Prozess Schritt für Schritt), bei der die Reihenfolge mehr zählt als die Länge."
         ]
       },
       {
         "heading": "Sehr lange Präsentationen",
         "paragraphs": [
-          "PitchBoost nimmt PowerPoint-Dateien mit bis zu 75 Folien an und liest die ersten 60. Eine Präsentation mit 70 Folien kommt im Pro-Tarif also mit höchstens 60 Folien zurück, verdichtet oder gekürzt. Eine Datei mit mehr als 75 Folien wird schon beim Hochladen abgelehnt, mit einem entsprechenden Hinweis. Teile sehr lange Präsentationen in Module auf und lass jedes einzeln neu aufbauen."
+          "PitchBoost nimmt PowerPoint-Dateien mit bis zu 75 Folien an und liest die ersten 60. Eine Präsentation mit 70 Folien kommt im Pro-Tarif also mit höchstens 60 Folien zurück. Im Free-Tarif endet eine Präsentation bei 20 Folien: Aus einer längeren Datei baut PitchBoost die ersten 20 auf, oder du wechselst vorher den Tarif und es baut bis zum Limit dieses Tarifs neu auf. Eine Datei mit mehr als 75 Folien wird schon beim Hochladen abgelehnt, mit einem entsprechenden Hinweis. Teile sehr lange Präsentationen in Module auf und lass jedes einzeln neu aufbauen."
         ]
       }
     ],
     "faqs": [
       {
-        "q": "Baut ein Upgrade die fehlenden Folien automatisch neu auf?",
-        "a": "Nein. Öffne nach dem Upgrade den Deal und starte den Neuaufbau noch einmal; in der Teilen-Ansicht gibt es dafür einen Button. Die vollständige Präsentation ersetzt dann die verdichtete."
+        "q": "Öffnen sich gesperrte Folien bei einem Upgrade?",
+        "a": "Ja, sofort: Sie sind schon fertig. Anders ist es bei einer Präsentation, die verdichtet oder im Free-Tarif bei 20 Folien gekürzt wurde: Öffne nach dem Upgrade den Deal und starte den Neuaufbau noch einmal; in der Teilen-Ansicht gibt es dafür einen Button."
       },
       {
         "q": "Gilt das Limit auch für neue Präsentationen?",
@@ -159,7 +159,7 @@ export const HELP_ARTICLES_DE: HelpArticle[] = [
       }
     ],
     "related": ["redesign-a-powerpoint", "credits-and-plans", "download-powerpoint-or-pdf"],
-    "updated": "2026-10-27"
+    "updated": "2026-11-25"
   },
 
   {
@@ -186,7 +186,7 @@ export const HELP_ARTICLES_DE: HelpArticle[] = [
       {
         "heading": "Bearbeitbar oder originalgetreu",
         "paragraphs": [
-          "Die bearbeitbare PowerPoint-Datei sieht aus wie die Web-Präsentation: Das Design jeder Folie (Hintergrund, Bilder, Formen und Diagramme) kommt als ein Bild, und jedes Wort liegt darüber in einem echten PowerPoint-Textfeld, das du bearbeiten, verschieben oder umformatieren kannst. Die Datei bringt die Schriften der Präsentation mit, deshalb sieht sie in PowerPoint auch auf einem Rechner gleich aus, auf dem diese Schriften fehlen. Die originalgetreue Datei ist pixelgenau, weil jede Folie ein einziges hochaufgelöstes Bild ist; deshalb lässt sich ihr Text auch nicht bearbeiten. Im Zweifel nimm beide: Sind die Downloads einer Präsentation einmal freigeschaltet, kostet keine Datei extra."
+          "Die bearbeitbare PowerPoint-Datei sieht aus wie die Web-Präsentation: Jedes Wort ist ein echtes PowerPoint-Textfeld, das du bearbeiten, verschieben oder umformatieren kannst, und die meisten Kästen und Flächen sind echte Formen, deren Füllung, Kontur und Größe du ändern kannst. Der Rest des Foliendesigns (Fotos, Zeichnungen und Diagramme) kommt als Bild dahinter. Die Datei bringt die Schriften der Präsentation mit, deshalb sieht sie in PowerPoint auch auf einem Rechner gleich aus, auf dem diese Schriften fehlen. Die originalgetreue Datei ist pixelgenau, weil jede Folie ein einziges hochaufgelöstes Bild ist; deshalb lässt sich ihr Text auch nicht bearbeiten. Im Zweifel nimm beide: Sind die Downloads einer Präsentation einmal freigeschaltet, kostet keine Datei extra."
         ]
       },
       {
@@ -211,19 +211,19 @@ export const HELP_ARTICLES_DE: HelpArticle[] = [
       }
     ],
     "related": ["share-a-deck-link", "google-slides-and-keynote", "credits-and-plans"],
-    "updated": "2026-11-19"
+    "updated": "2026-11-27"
   },
 
   {
     "slug": "share-a-deck-link",
     "category": "sharing",
     "title": "So teilst du eine Präsentation als Link und siehst, wer sie öffnet",
-    "metaDescription": "Veröffentliche eine Präsentation, verschicke den nicht gelisteten Link und erfahre sofort, wenn er geöffnet wird. Was der Link erfasst, in jedem Tarif.",
-    "answer": "Klicke in der Teilen-Ansicht der Präsentation auf „Publish & copy link“. Das erstellt einen nicht gelisteten Link (wer ihn hat, kann die Präsentation ansehen; sonst findet sie niemand) und kopiert ihn in deine Zwischenablage. Sobald jemand den Link öffnet, schickt dir PitchBoost eine E-Mail. In jedem Tarif siehst du, welche Folien jede Person gelesen hat und wie lange.",
+    "metaDescription": "Jede fertige Präsentation hat einen nicht gelisteten Link. Verschicke ihn und erfahre sofort, wenn er geöffnet wird. Was der Link erfasst, in jedem Tarif.",
+    "answer": "Eine fertige Präsentation wird von selbst veröffentlicht: Öffne ihre Teilen-Ansicht und klicke auf „Copy link“. Der Link ist nicht gelistet (wer ihn hat, kann die Präsentation ansehen; sonst findet sie niemand). Sobald jemand den Link öffnet, schickt dir PitchBoost eine E-Mail. In jedem Tarif siehst du, welche Folien jede Person gelesen hat und wie lange.",
     "steps": [
       {
-        "title": "Präsentation veröffentlichen",
-        "body": "Klicke in der Teilen-Ansicht auf „Publish & copy link“. Bis dahin ist die Präsentation ein privater Entwurf, den nur du und dein Team sehen könnt."
+        "title": "Link kopieren",
+        "body": "Sobald eine Präsentation fertig ist, veröffentlicht PitchBoost sie als nicht gelisteten Link. Klicke in der Teilen-Ansicht auf „Copy link“. Bei einer Präsentation, die du privat gestellt hast, steht dort stattdessen „Publish & copy link“."
       },
       {
         "title": "Link verschicken oder Empfänger hinzufügen",
@@ -261,7 +261,7 @@ export const HELP_ARTICLES_DE: HelpArticle[] = [
       }
     ],
     "related": ["download-powerpoint-or-pdf", "credits-and-plans", "redesign-a-powerpoint"],
-    "updated": "2026-09-16"
+    "updated": "2026-11-25"
   },
 
   {
