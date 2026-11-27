@@ -186,7 +186,7 @@ export const HELP_ARTICLES_DE: HelpArticle[] = [
       {
         "heading": "Bearbeitbar oder originalgetreu",
         "paragraphs": [
-          "Die bearbeitbare PowerPoint-Datei sieht aus wie die Web-Präsentation: Das Design jeder Folie (Hintergrund, Bilder, Formen und Diagramme) kommt als ein Bild, und jedes Wort liegt darüber in einem echten PowerPoint-Textfeld, das du bearbeiten, verschieben oder umformatieren kannst. Die Datei bringt die Schriften der Präsentation mit, deshalb sieht sie in PowerPoint auch auf einem Rechner gleich aus, auf dem diese Schriften fehlen. Die originalgetreue Datei ist pixelgenau, weil jede Folie ein einziges hochaufgelöstes Bild ist; deshalb lässt sich ihr Text auch nicht bearbeiten. Im Zweifel nimm beide: Sind die Downloads einer Präsentation einmal freigeschaltet, kostet keine Datei extra."
+          "Die bearbeitbare PowerPoint-Datei sieht aus wie die Web-Präsentation: Jedes Wort ist ein echtes PowerPoint-Textfeld, das du bearbeiten, verschieben oder umformatieren kannst, und die meisten Kästen und Flächen sind echte Formen, deren Füllung, Kontur und Größe du ändern kannst. Der Rest des Foliendesigns (Fotos, Zeichnungen und Diagramme) kommt als Bild dahinter. Die Datei bringt die Schriften der Präsentation mit, deshalb sieht sie in PowerPoint auch auf einem Rechner gleich aus, auf dem diese Schriften fehlen. Die originalgetreue Datei ist pixelgenau, weil jede Folie ein einziges hochaufgelöstes Bild ist; deshalb lässt sich ihr Text auch nicht bearbeiten. Im Zweifel nimm beide: Sind die Downloads einer Präsentation einmal freigeschaltet, kostet keine Datei extra."
         ]
       },
       {
@@ -211,7 +211,7 @@ export const HELP_ARTICLES_DE: HelpArticle[] = [
       }
     ],
     "related": ["share-a-deck-link", "google-slides-and-keynote", "credits-and-plans"],
-    "updated": "2026-11-19"
+    "updated": "2026-11-27"
   },
 
   {

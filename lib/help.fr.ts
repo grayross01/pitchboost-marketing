@@ -186,7 +186,7 @@ export const HELP_ARTICLES_FR: HelpArticle[] = [
       {
         "heading": "Modifiable ou fidèle au rendu",
         "paragraphs": [
-          "Le PowerPoint modifiable ressemble à la présentation web : le design de chaque diapositive (arrière-plan, images, formes et graphiques) arrive sous forme d'une seule image, et chaque mot est placé par-dessus dans une vraie zone de texte PowerPoint que vous pouvez modifier, déplacer ou remettre en forme. Le fichier contient les polices de la présentation, si bien que PowerPoint l'affiche à l'identique sur un ordinateur qui ne les a jamais eues. Le fichier fidèle au rendu est identique au pixel près, car chaque diapositive est une seule image haute résolution, ce qui signifie aussi que son texte n'est pas modifiable. Dans le doute, prenez les deux ; une fois les téléchargements d'une présentation débloqués, chaque fichier ne coûte rien de plus."
+          "Le PowerPoint modifiable ressemble à la présentation web : chaque mot est une vraie zone de texte PowerPoint que vous pouvez modifier, déplacer ou remettre en forme, et la plupart des encadrés et panneaux sont de vraies formes dont vous pouvez changer le remplissage, le contour et la taille. Le reste du design de chaque diapositive (photos, dessins et graphiques) arrive sous forme d'image, derrière. Le fichier contient les polices de la présentation, si bien que PowerPoint l'affiche à l'identique sur un ordinateur qui ne les a jamais eues. Le fichier fidèle au rendu est identique au pixel près, car chaque diapositive est une seule image haute résolution, ce qui signifie aussi que son texte n'est pas modifiable. Dans le doute, prenez les deux ; une fois les téléchargements d'une présentation débloqués, chaque fichier ne coûte rien de plus."
         ]
       },
       {
@@ -211,7 +211,7 @@ export const HELP_ARTICLES_FR: HelpArticle[] = [
       }
     ],
     "related": ["share-a-deck-link", "google-slides-and-keynote", "credits-and-plans"],
-    "updated": "2026-11-19"
+    "updated": "2026-11-27"
   },
 
   {
