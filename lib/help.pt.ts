@@ -194,7 +194,7 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
       {
         "heading": "Editável versus aparência exata",
         "paragraphs": [
-          "O PowerPoint editável tem a aparência da apresentação web: o design de cada slide (fundo, imagens, formas e gráficos) vem como uma única imagem, e cada palavra fica por cima como uma caixa de texto real do PowerPoint que você pode editar, mover ou mudar de estilo. O arquivo leva dentro as fontes da apresentação, então o PowerPoint a mostra igual em um computador que nunca as teve. O arquivo de aparência exata é pixel a pixel idêntico porque cada slide é uma única imagem de alta resolução, o que também significa que o texto dele não pode ser editado. Em caso de dúvida, pegue os dois; depois que os downloads de uma apresentação estão liberados, cada arquivo não custa nada a mais."
+          "O PowerPoint editável tem a aparência da apresentação web: cada palavra é uma caixa de texto real do PowerPoint que você pode editar, mover ou mudar de estilo, e quase todas as caixas e painéis são formas reais cujo preenchimento, contorno e tamanho você pode alterar. O restante do design de cada slide (fotos, desenhos e gráficos) vem como uma imagem por trás. O arquivo leva dentro as fontes da apresentação, então o PowerPoint a mostra igual em um computador que nunca as teve. O arquivo de aparência exata é pixel a pixel idêntico porque cada slide é uma única imagem de alta resolução, o que também significa que o texto dele não pode ser editado. Em caso de dúvida, pegue os dois; depois que os downloads de uma apresentação estão liberados, cada arquivo não custa nada a mais."
         ]
       },
       {
@@ -223,7 +223,7 @@ export const HELP_ARTICLES_PT: HelpArticle[] = [
       "google-slides-and-keynote",
       "credits-and-plans"
     ],
-    "updated": "2026-11-19"
+    "updated": "2026-11-27"
   },
   {
     "slug": "share-a-deck-link",

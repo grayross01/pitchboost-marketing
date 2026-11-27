@@ -217,7 +217,7 @@ export const HELP_ARTICLES: HelpArticle[] = [
       {
         heading: "Editable versus exact-look",
         paragraphs: [
-          "The editable PowerPoint looks like the web deck: each slide's design (background, images, shapes and charts) comes in as one picture, and every word sits on top as a real PowerPoint text box you can edit, move or restyle. The file carries the deck's fonts inside it, so PowerPoint shows it the same on a computer that never had them. The exact-look file is pixel-identical because each slide is a single high-resolution image, which also means its text cannot be edited. When in doubt, take both; once a deck's downloads are unlocked, each file costs nothing extra.",
+          "The editable PowerPoint looks like the web deck: every word is a real PowerPoint text box you can edit, move or restyle, and most boxes and panels are real shapes whose fill, outline and size you can change. The rest of each slide's design (photos, drawings and charts) comes in as a picture behind them. The file carries the deck's fonts inside it, so PowerPoint shows it the same on a computer that never had them. The exact-look file is pixel-identical because each slide is a single high-resolution image, which also means its text cannot be edited. When in doubt, take both; once a deck's downloads are unlocked, each file costs nothing extra.",
         ],
       },
       {
@@ -242,7 +242,7 @@ export const HELP_ARTICLES: HelpArticle[] = [
       },
     ],
     related: ["share-a-deck-link", "google-slides-and-keynote", "credits-and-plans"],
-    updated: "2026-11-19",
+    updated: "2026-11-27",
   },
 
   {
